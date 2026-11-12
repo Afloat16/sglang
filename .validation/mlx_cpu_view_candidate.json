@@ -1,0 +1,35 @@
+{
+  "repository": "sgl-project/sglang",
+  "fork": "Afloat16/sglang",
+  "branch": "fix/mlx-import-lazy-cpu-views-20261112",
+  "base_commit": "bd4c1afc37b3919869ec88a1987649fa5ad0f870",
+  "base_tree": "ec7205880e90ab9dc251d7979b3ab7dce01ca924",
+  "files": [
+    "python/sglang/srt/utils/tensor_bridge.py",
+    "test/registered/unit/utils/test_tensor_bridge.py"
+  ],
+  "status": "pending_native_validation",
+  "scope": "Resolve lazy conjugate and negative bits for CPU Torch inputs; MPS borrow path unchanged; genuine native MLX CPU behavior not yet verified.",
+  "novelty": {
+    "history": [
+      {
+        "sha": "d90318b3e20fce682a74cbd2c9d6294b364b4eb9",
+        "title": "[MLX] Upgrade to Torch 2.13/MLX 0.32+ and redesign the Torch-MLX tensor bridge (#32984)"
+      },
+      {
+        "sha": "a3059641593b985387a6abbb70c19c4ddc53cf1e",
+        "title": "[MLX] Add native MLX execution backend for Apple Silicon Mac (#20342)"
+      }
+    ],
+    "relevant_patch_read": 32984,
+    "searches": [
+      "all-state PR tensor_bridge conjugate: 0",
+      "all-state issue tensor_bridge conjugate: 0",
+      "all-state PR resolve_conj: 0",
+      "all-state PR torch_to_mlx lazy: only 32984 original redesign, no resolution",
+      "all-state PR tensor bridge conj: 0"
+    ],
+    "personal_fork": "Only main, three newly submitted source branches and validation existed before fourth candidate; no preexisting bridge work."
+  },
+  "commit": "263b7a17607529c531a922031526cc1ac6a73594"
+}

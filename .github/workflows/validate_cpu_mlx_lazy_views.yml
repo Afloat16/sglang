@@ -1,0 +1,111 @@
+name: Validate native MLX CPU tensor view imports
+on:
+  push:
+    branches: [validation/cpu-mlx-lazy-views-20261112]
+permissions:
+  contents: read
+jobs:
+  native-cpu:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"
+      SGLANG_USE_CPU_ENGINE: "1"
+      HF_HUB_OFFLINE: "1"
+      HF_DATASETS_OFFLINE: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: 263b7a17607529c531a922031526cc1ac6a73594
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.12"
+      - name: Install official CPU CI build tools
+        run: |
+          python -m pip install uv
+          bash scripts/ci/utils/install_rust_protoc.sh
+      - name: Install SGLang and native MLX CPU
+        timeout-minutes: 40
+        env:
+          UV_SYSTEM_PYTHON: "1"
+        run: |
+          set -o pipefail
+          uv pip install -e "python[dev]" --index-strategy unsafe-best-match --prerelease allow 2>&1 | tee sglang-install.log
+          uv pip install "mlx[cpu]>=0.32" --index-strategy unsafe-best-match 2>&1 | tee mlx-install.log
+          python -m pip freeze > sglang-environment.txt
+      - name: Check native implementations and run existing and new bridge tests
+        run: |
+          python - <<'PY'
+          import inspect
+          from importlib.metadata import version
+          from pathlib import Path
+          import torch
+          import mlx.core as mx
+          import sglang.srt.utils.tensor_bridge as bridge
+          assert Path(inspect.getfile(bridge)).resolve() == Path("python/sglang/srt/utils/tensor_bridge.py").resolve()
+          assert not torch.cuda.is_available()
+          assert not torch.backends.mps.is_available()
+          assert mx.default_device() == mx.cpu
+          print("Native bridge:", inspect.getfile(bridge), "Torch:", torch.__version__, "MLX:", version("mlx"), mx.__file__)
+          PY
+          set -o pipefail
+          python -m pytest -q -p no:cacheprovider --junitxml=sglang-patched.xml test/registered/unit/utils/test_tensor_bridge.py 2>&1 | tee sglang-patched.log
+      - name: Restore exact upstream implementation
+        run: |
+          git show bd4c1afc37b3919869ec88a1987649fa5ad0f870:python/sglang/srt/utils/tensor_bridge.py > python/sglang/srt/utils/tensor_bridge.py
+          find python/sglang/srt/utils/__pycache__ -name 'tensor_bridge.*.pyc' -delete
+      - name: Verify native view regressions on original implementation
+        run: |
+          set +e
+          python -m pytest -q -p no:cacheprovider --junitxml=sglang-baseline.xml test/registered/unit/utils/test_tensor_bridge.py > sglang-baseline.log 2>&1
+          status=$?
+          set -e
+          cat sglang-baseline.log
+          test "$status" -eq 1
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          root = ET.parse("sglang-baseline.xml").getroot()
+          assert not root.findall(".//error"), "Baseline must fail tests, not imports."
+          failed = {case.attrib["name"] for case in root.findall(".//testcase") if case.find("failure") is not None}
+          assert any("test_cpu_conjugate_views_preserve_values_and_source" in x for x in failed), failed
+          print("Native baseline failures:", sorted(failed))
+          PY
+      - name: Restore exact patch
+        if: always()
+        run: git restore --source=HEAD -- python/sglang/srt/utils/tensor_bridge.py
+      - name: Run repository lint and formatting hooks
+        if: always()
+        run: |
+          set +e
+          python -m pre_commit run --files python/sglang/srt/utils/tensor_bridge.py test/registered/unit/utils/test_tensor_bridge.py > sglang-lint.log 2>&1
+          result=$?
+          set -e
+          cat sglang-lint.log
+          git diff > sglang-format.patch
+          cat sglang-format.patch
+          python - <<'PY'
+          from pathlib import Path
+          print("BEGIN_FORMATTED_TEST")
+          print(Path("test/registered/unit/utils/test_tensor_bridge.py").read_text())
+          print("END_FORMATTED_TEST")
+          PY
+          test "$result" -eq 0
+          git diff --check
+      - name: Save native validation evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: native-cpu-mlx-lazy-view-evidence
+          path: |
+            sglang-install.log
+            mlx-install.log
+            sglang-environment.txt
+            sglang-patched.log
+            sglang-patched.xml
+            sglang-baseline.log
+            sglang-baseline.xml
+            sglang-lint.log
+            sglang-format.patch
