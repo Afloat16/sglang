@@ -3,11 +3,11 @@
   "fork": "Afloat16/sglang",
   "base_commit": "bd4c1afc37b3919869ec88a1987649fa5ad0f870",
   "base_tree": "ec7205880e90ab9dc251d7979b3ab7dce01ca924",
-  "commit": "32f3a44a3199500551e0eef091f559138c0fac59",
-  "tree": "b098aa32be97cd1d1b01178833cada74a1d6d03c",
+  "commit": "1bebd197b303a59e00c56a7061a0ad9a43592f27",
+  "tree": "79199f435f77ce6386b3a4fd1d6449eb50042381",
   "branch": "fix/layernorm-converted-parameter-dtype-20261112",
   "status": "pending_native_validation",
-  "validation": "Native CI not run yet; no passing results claimed.",
+  "validation": "First native run passed forward/dispatch cases; training fixture compared parameters by registration order rather than name, now corrected. Final exact-SHA verification pending.",
   "files": [
     "python/sglang/srt/layers/layernorm.py",
     "test/registered/unit/layers/test_layernorm_dtype_conversion.py"
