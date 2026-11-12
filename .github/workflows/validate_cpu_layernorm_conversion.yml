@@ -1,0 +1,106 @@
+name: Validate native LayerNorm dtype conversion
+on:
+  push:
+    branches: [validation/cpu-layernorm-conversion-20261112]
+permissions:
+  contents: read
+jobs:
+  native-cpu:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"
+      SGLANG_USE_CPU_ENGINE: "1"
+      HF_HUB_OFFLINE: "1"
+      HF_DATASETS_OFFLINE: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: 32f3a44a3199500551e0eef091f559138c0fac59
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.12"
+      - name: Install official CPU CI build tools
+        run: |
+          python -m pip install uv
+          bash scripts/ci/utils/install_rust_protoc.sh
+      - name: Install official CPU CI package and dependencies
+        timeout-minutes: 40
+        env:
+          UV_SYSTEM_PYTHON: "1"
+        run: |
+          set -o pipefail
+          uv pip install -e "python[dev]" --index-strategy unsafe-best-match --prerelease allow 2>&1 | tee sglang-install.log
+          python -m pip freeze > sglang-environment.txt
+      - name: Check exact native implementation and run CPU tests
+        run: |
+          python - <<'PY'
+          import inspect
+          from pathlib import Path
+          import torch
+          import sglang.srt.layers.layernorm as layernorm
+          assert Path(inspect.getfile(layernorm)).resolve() == Path("python/sglang/srt/layers/layernorm.py").resolve()
+          assert not torch.cuda.is_available()
+          print("Native LayerNorm:", inspect.getfile(layernorm), "Torch:", torch.__version__)
+          PY
+          set -o pipefail
+          python -m pytest -q -p no:cacheprovider --junitxml=sglang-patched.xml test/registered/unit/layers/test_layernorm_dtype_conversion.py test/registered/unit/layers/test_layernorm_allreduce_fusion.py 2>&1 | tee sglang-patched.log
+      - name: Restore exact upstream implementation
+        run: |
+          git show bd4c1afc37b3919869ec88a1987649fa5ad0f870:python/sglang/srt/layers/layernorm.py > python/sglang/srt/layers/layernorm.py
+          find python/sglang/srt/layers/__pycache__ -name 'layernorm.*.pyc' -delete
+      - name: Confirm actual regression assertions fail on baseline
+        run: |
+          set +e
+          python -m pytest -q -p no:cacheprovider --junitxml=sglang-baseline.xml test/registered/unit/layers/test_layernorm_dtype_conversion.py > sglang-baseline.log 2>&1
+          status=$?
+          set -e
+          cat sglang-baseline.log
+          test "$status" -eq 1
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          root = ET.parse("sglang-baseline.xml").getroot()
+          assert not root.findall(".//error"), "Baseline must fail assertions, not imports."
+          failed = {case.attrib["name"] for case in root.findall(".//testcase") if case.find("failure") is not None}
+          required = {"test_standard_module_conversions", "test_mixed_input_dtype_after_conversion", "test_checkpoint_assignment_uses_assigned_parameter_dtype", "test_three_native_training_updates_match_pytorch"}
+          assert required <= failed, (required - failed, failed)
+          print("Confirmed original dtype conversion failures:", sorted(failed))
+          PY
+      - name: Restore exact patch
+        if: always()
+        run: git restore --source=HEAD -- python/sglang/srt/layers/layernorm.py
+      - name: Run repository formatting and lint hooks
+        if: always()
+        run: |
+          set +e
+          python -m pre_commit run --files python/sglang/srt/layers/layernorm.py test/registered/unit/layers/test_layernorm_dtype_conversion.py > sglang-lint.log 2>&1
+          result=$?
+          set -e
+          cat sglang-lint.log
+          git diff > sglang-format.patch
+          cat sglang-format.patch
+          python - <<'PY'
+          from pathlib import Path
+          print("BEGIN_FORMATTED_TEST")
+          print(Path("test/registered/unit/layers/test_layernorm_dtype_conversion.py").read_text())
+          print("END_FORMATTED_TEST")
+          PY
+          test "$result" -eq 0
+          git diff --check
+      - name: Save native validation evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: native-cpu-layernorm-conversion-evidence
+          path: |
+            sglang-install.log
+            sglang-environment.txt
+            sglang-patched.log
+            sglang-patched.xml
+            sglang-baseline.log
+            sglang-baseline.xml
+            sglang-lint.log
+            sglang-format.patch

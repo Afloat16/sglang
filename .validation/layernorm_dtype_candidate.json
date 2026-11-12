@@ -1,0 +1,53 @@
+{
+  "repository": "sgl-project/sglang",
+  "fork": "Afloat16/sglang",
+  "base_commit": "bd4c1afc37b3919869ec88a1987649fa5ad0f870",
+  "base_tree": "ec7205880e90ab9dc251d7979b3ab7dce01ca924",
+  "commit": "32f3a44a3199500551e0eef091f559138c0fac59",
+  "tree": "b098aa32be97cd1d1b01178833cada74a1d6d03c",
+  "branch": "fix/layernorm-converted-parameter-dtype-20261112",
+  "status": "pending_native_validation",
+  "validation": "Native CI not run yet; no passing results claimed.",
+  "files": [
+    "python/sglang/srt/layers/layernorm.py",
+    "test/registered/unit/layers/test_layernorm_dtype_conversion.py"
+  ],
+  "dedup": {
+    "upstream_history_entries": 132,
+    "actual_related_patches": [
+      12044,
+      14074,
+      15075,
+      13814,
+      22424
+    ],
+    "all_state_searches": "LayerNorm self.dtype / mixed dtype / dtype conversion / half / double",
+    "personal_prs": [
+      50152,
+      50164,
+      50179
+    ],
+    "fork_branches": [
+      {
+        "name": "fix/bounded-atomic-stop-regex-20261112",
+        "sha": "3e2b9ff667f11c0a4c3eb56fd857389b3d57c102"
+      },
+      {
+        "name": "fix/pooler-half-normalization-20261112",
+        "sha": "6cfa1c2b244d2a7b9816ade3d58927e5fb9914bd"
+      },
+      {
+        "name": "fix/schema-identifier-field-names-20261112",
+        "sha": "1093b07ba3410e4c963a17965e846e5e5662aac9"
+      },
+      {
+        "name": "main",
+        "sha": "721ef92c4c764bb3c2307378bf13609fc7be7e72"
+      },
+      {
+        "name": "validation/cpu-pooler-normalization-20261112",
+        "sha": "749c51ee2698245b14aed1e2c1edd3187b71c23f"
+      }
+    ]
+  }
+}
