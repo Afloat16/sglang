@@ -1,0 +1,42 @@
+{
+  "repository": "sgl-project/sglang",
+  "fork": "Afloat16/sglang",
+  "stars": 38809,
+  "archived": false,
+  "base_commit": "5792cf6e5e11aebc62d41cf19828f615a8fa7e0a",
+  "base_tree": "519fc5f34063d7b24486de0ba71c0877afa6ba58",
+  "branch": "fix/preprocess-retained-buffer-budget-20261113",
+  "files": [
+    "python/sglang/srt/multimodal/cache/preprocess_cache.py",
+    "test/registered/unit/multimodal/test_preprocess_retained_buffers.py"
+  ],
+  "commit": "57a8862391bf234f58eb1ccd11d3a540c576d921",
+  "status": "awaiting_native_validation",
+  "novelty": {
+    "classification": "genuinely-new",
+    "history_entries": 2,
+    "actual_patches_read": [
+      34398,
+      34404,
+      50202,
+      47786,
+      39120,
+      45203
+    ],
+    "all_state_queries": [
+      "\"estimate_cache_size_bytes\" numpy",
+      "\"preprocess_cache\" nbytes",
+      "memoryview cache",
+      "numpy cache base",
+      "preprocess view memory"
+    ],
+    "related_exclusions": {
+      "39120": "Separate GPU embedding-cache tensor compaction",
+      "45203": "Inline tensor IPC compaction; no CPU NumPy cache budget changes",
+      "47786": "Separate shared disk/SQLite preprocessing cache",
+      "50202": "Strong-reference temporary-provider IDs and Torch shared-storage deduplication only; ndarray.nbytes and memoryview len are unchanged"
+    },
+    "personal_fork": "23 existing branches inspected; all source heads belong to independent current-task fixes. No preexisting retained NumPy owner accounting branch."
+  },
+  "scope": "Charge the CPU backing owner retained by NumPy/memoryview values; conservatively decline an opaque array owner whose buffer size cannot be measured."
+}
