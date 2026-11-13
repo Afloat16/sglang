@@ -1,0 +1,42 @@
+{
+  "repository": "sgl-project/sglang",
+  "fork": "Afloat16/sglang",
+  "stars": 38809,
+  "archived": false,
+  "base_commit": "5792cf6e5e11aebc62d41cf19828f615a8fa7e0a",
+  "base_tree": "519fc5f34063d7b24486de0ba71c0877afa6ba58",
+  "branch": "fix/cpu-rope-offset-delegation-20261113",
+  "files": [
+    "python/sglang/srt/layers/rotary_embedding/base.py",
+    "python/sglang/srt/layers/rotary_embedding/rope_variant.py",
+    "test/registered/unit/layers/test_cpu_rope_offsets.py"
+  ],
+  "status": "pending_native_validation",
+  "novelty": {
+    "classification": "genuinely-new",
+    "modern_base_history_entries": 41,
+    "variant_history_entries": 8,
+    "legacy_history_entries": 122,
+    "actual_patches_read": [
+      2806,
+      2975,
+      19144,
+      9493,
+      11003,
+      11009,
+      44394,
+      31897,
+      48154
+    ],
+    "queries": [
+      "DeepseekScalingRotaryEmbedding offsets",
+      "forward_cpu offsets",
+      "rotary double offset",
+      "rope offsets twice",
+      "rotary offset CPU"
+    ],
+    "personal_fork": "All current task fork heads and seven actual PRs inspected; no CPU offset delegation repair."
+  },
+  "scope": "Apply offsets in the AMX branch only; the native fallback already applies them. Cover base/linear RoPE and DeepSeek CPU fallback together as one duplicated-delegation defect.",
+  "commit": "0cf0ffee088cb5f89a4153013a399504178b7924"
+}
