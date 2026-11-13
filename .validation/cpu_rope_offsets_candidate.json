@@ -38,5 +38,5 @@
     "personal_fork": "All current task fork heads and seven actual PRs inspected; no CPU offset delegation repair."
   },
   "scope": "Apply offsets in the AMX branch only; the native fallback already applies them. Cover base/linear RoPE and DeepSeek CPU fallback together as one duplicated-delegation defect.",
-  "commit": "0cf0ffee088cb5f89a4153013a399504178b7924"
+  "commit": "0828b0d8d3d097f50e15e7b27d6cca75bc955bb1"
 }
