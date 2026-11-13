@@ -1,0 +1,34 @@
+{
+  "repository": "sgl-project/sglang",
+  "fork": "Afloat16/sglang",
+  "stars": 38809,
+  "archived": false,
+  "base_commit": "5792cf6e5e11aebc62d41cf19828f615a8fa7e0a",
+  "base_tree": "519fc5f34063d7b24486de0ba71c0877afa6ba58",
+  "branch": "fix/msgpack-value-aware-pickle-fallback-20261113",
+  "files": [
+    "python/sglang/srt/utils/msgpack_utils.py",
+    "test/registered/unit/utils/test_msgpack_value_faithfulness.py"
+  ],
+  "status": "pending_native_validation",
+  "novelty": {
+    "classification": "genuinely_new",
+    "history_entries": 3,
+    "actual_patches_read": [
+      47445,
+      40107
+    ],
+    "queries": [
+      "msgpack structured",
+      "dtype.descr",
+      "msgpack large integer",
+      "msgpack object numpy",
+      "pickle_unfaithful_values",
+      "msgpack overflow"
+    ],
+    "difference": "47445 introduced the exact-type faithful whitelist and pickle fallback; 40107 preserves scalar ndarray shape. Neither validates MessagePack integer bounds or dtype metadata/object/record layout.",
+    "personal_history": "Current fork was created in this task; all previous branches inspected; no msgpack fidelity patch."
+  },
+  "scope": "Value-aware selection of existing pickle fallback for object-typed IPC fields, preserving large integers and arrays whose dtype cannot use the raw-buffer codec. No wire-ID changes.",
+  "commit": "b157c3866c7c7313c87a6b1cc59052e78b3121e4"
+}
