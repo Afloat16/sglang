@@ -31,5 +31,6 @@
     ],
     "personal_fork": "Only main, three newly submitted source branches and validation existed before fourth candidate; no preexisting bridge work."
   },
-  "commit": "263b7a17607529c531a922031526cc1ac6a73594"
+  "commit": "29d603230d76dd9cda6142e068277535f41b9f18",
+  "validation_note": "Previous exact native tests passed; source change is test formatting only (Python AST identical). Final exact-SHA workflow rerun pending."
 }
