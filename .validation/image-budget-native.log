@@ -1,0 +1,1869 @@
+﻿2026-11-13T10:19:43.5199812Z Current runner version: '2.338.2'
+2026-11-13T10:19:43.5217432Z ##[group]Runner Image Provisioner
+2026-11-13T10:19:43.5218344Z Hosted Compute Agent
+2026-11-13T10:19:43.5218822Z Version: 20261103.629
+2026-11-13T10:19:43.5219317Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-13T10:19:43.5219832Z Build Date: 2026-11-03T17:26:59Z
+2026-11-13T10:19:43.5220582Z Worker ID: {c0a61f54-6f83-4259-97ae-f8668a142c91}
+2026-11-13T10:19:43.5221134Z Region: us-west-2
+2026-11-13T10:19:43.5221528Z Cloud: AWS
+2026-11-13T10:19:43.5221915Z ##[endgroup]
+2026-11-13T10:19:43.5222924Z ##[group]Operating System
+2026-11-13T10:19:43.5223359Z Ubuntu
+2026-11-13T10:19:43.5223746Z 24.04.5
+2026-11-13T10:19:43.5224106Z LTS
+2026-11-13T10:19:43.5224479Z ##[endgroup]
+2026-11-13T10:19:43.5224856Z ##[group]Runner Image
+2026-11-13T10:19:43.5225295Z Image: ubuntu-24.04
+2026-11-13T10:19:43.5225717Z Version: 20261111.127.1
+2026-11-13T10:19:43.5226626Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261111.127/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-13T10:19:43.5227867Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261111.127
+2026-11-13T10:19:43.5228837Z ##[endgroup]
+2026-11-13T10:19:43.5229699Z ##[group]GITHUB_TOKEN Permissions
+2026-11-13T10:19:43.5231351Z Contents: read
+2026-11-13T10:19:43.5231813Z Metadata: read
+2026-11-13T10:19:43.5232206Z ##[endgroup]
+2026-11-13T10:19:43.5233888Z Secret source: Actions
+2026-11-13T10:19:43.5234540Z Cache mode: write
+2026-11-13T10:19:43.5235046Z Prepare workflow directory
+2026-11-13T10:19:43.5500652Z Prepare all required actions
+2026-11-13T10:19:43.5536307Z Getting action download info
+2026-11-13T10:19:43.9162947Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-13T10:19:45.7384230Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-13T10:19:45.8255586Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-11-13T10:19:46.0374809Z Complete job name: native-cpu
+2026-11-13T10:19:46.1054315Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-11-13T10:19:46.1055251Z with:
+2026-11-13T10:19:46.1055692Z   ref: b3d89f7039501223ecca64f402b986041952575c
+2026-11-13T10:19:46.1056357Z   fetch-depth: 2
+2026-11-13T10:19:46.1056906Z   persist-credentials: false
+2026-11-13T10:19:46.1057504Z   repository: Afloat16/sglang
+2026-11-13T10:19:46.1061003Z   token: ***
+2026-11-13T10:19:46.1061429Z   ssh-strict: true
+2026-11-13T10:19:46.1061945Z   ssh-user: git
+2026-11-13T10:19:46.1062353Z   clean: true
+2026-11-13T10:19:46.1062802Z   sparse-checkout-cone-mode: true
+2026-11-13T10:19:46.1063337Z   fetch-tags: false
+2026-11-13T10:19:46.1063911Z   show-progress: true
+2026-11-13T10:19:46.1064409Z   lfs: false
+2026-11-13T10:19:46.1064830Z   submodules: false
+2026-11-13T10:19:46.1065273Z   set-safe-directory: true
+2026-11-13T10:19:46.1065773Z   allow-unsafe-pr-checkout: false
+2026-11-13T10:19:46.1066551Z env:
+2026-11-13T10:19:46.1066968Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:19:46.1067549Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:19:46.1068429Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:19:46.1068916Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:19:46.1069376Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:19:46.1069843Z ##[endgroup]
+2026-11-13T10:19:49.1416210Z Syncing repository: Afloat16/sglang
+2026-11-13T10:19:49.1417600Z ##[group]Getting Git version info
+2026-11-13T10:19:49.1417987Z Working directory is '/home/runner/work/sglang/sglang'
+2026-11-13T10:19:49.1418971Z [command]/usr/bin/git version
+2026-11-13T10:19:49.4290764Z git version 2.56.1
+2026-11-13T10:19:49.4305482Z ##[endgroup]
+2026-11-13T10:19:49.4313817Z Temporarily overriding HOME='/home/runner/work/_temp/4a15444c-80e2-436d-a1de-f8b784fe6297' before making global git config changes
+2026-11-13T10:19:49.4314916Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T10:19:49.4330843Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sglang/sglang
+2026-11-13T10:19:49.4816895Z Deleting the contents of '/home/runner/work/sglang/sglang'
+2026-11-13T10:19:49.4819337Z ##[group]Determining repository object format
+2026-11-13T10:19:49.4820484Z ##[endgroup]
+2026-11-13T10:19:49.4820861Z ##[group]Initializing the repository
+2026-11-13T10:19:49.4823492Z [command]/usr/bin/git init /home/runner/work/sglang/sglang
+2026-11-13T10:19:49.4937596Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-13T10:19:49.4938260Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-13T10:19:49.4938791Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-13T10:19:49.4939115Z hint: call:
+2026-11-13T10:19:49.4939342Z hint:
+2026-11-13T10:19:49.4939651Z hint: 	git config --global init.defaultBranch <name>
+2026-11-13T10:19:49.4939967Z hint:
+2026-11-13T10:19:49.4940298Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-13T10:19:49.4940719Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-13T10:19:49.4941076Z hint:
+2026-11-13T10:19:49.4941312Z hint: 	git branch -m <name>
+2026-11-13T10:19:49.4941541Z hint:
+2026-11-13T10:19:49.4941849Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-13T10:19:49.4943921Z Initialized empty Git repository in /home/runner/work/sglang/sglang/.git/
+2026-11-13T10:19:49.4951563Z [command]/usr/bin/git remote add origin https://github.com/Afloat16/sglang
+2026-11-13T10:19:49.4991117Z ##[endgroup]
+2026-11-13T10:19:49.4991545Z ##[group]Disabling automatic garbage collection
+2026-11-13T10:19:49.4994127Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-13T10:19:49.5016279Z ##[endgroup]
+2026-11-13T10:19:49.5016886Z ##[group]Setting up auth
+2026-11-13T10:19:49.5017318Z Removing SSH command configuration
+2026-11-13T10:19:49.5021112Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T10:19:49.5046791Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T10:19:49.9993186Z Removing HTTP extra header
+2026-11-13T10:19:50.0000059Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T10:19:50.0026432Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T10:19:50.0186408Z Removing includeIf entries pointing to credentials config files
+2026-11-13T10:19:50.0187170Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T10:19:50.0210965Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T10:19:50.0360569Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-9fed322c-c6d3-4fba-bdbd-b506de006863.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-13T10:19:50.0387256Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sglang/sglang/.git.path /home/runner/work/_temp/git-credentials-9fed322c-c6d3-4fba-bdbd-b506de006863.config
+2026-11-13T10:19:50.0410016Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-9fed322c-c6d3-4fba-bdbd-b506de006863.config
+2026-11-13T10:19:50.0431549Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-9fed322c-c6d3-4fba-bdbd-b506de006863.config
+2026-11-13T10:19:50.0453381Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-9fed322c-c6d3-4fba-bdbd-b506de006863.config
+2026-11-13T10:19:50.0473011Z ##[endgroup]
+2026-11-13T10:19:50.0473659Z ##[group]Fetching the repository
+2026-11-13T10:19:50.0477335Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=2 origin b3d89f7039501223ecca64f402b986041952575c
+2026-11-13T10:19:58.0427888Z From https://github.com/Afloat16/sglang
+2026-11-13T10:19:58.0428603Z  * branch            b3d89f7039501223ecca64f402b986041952575c -> FETCH_HEAD
+2026-11-13T10:19:58.0436847Z [command]/usr/bin/git rev-parse --verify --quiet b3d89f7039501223ecca64f402b986041952575c^{object}
+2026-11-13T10:19:58.0458754Z b3d89f7039501223ecca64f402b986041952575c
+2026-11-13T10:19:58.0465764Z ##[endgroup]
+2026-11-13T10:19:58.0471876Z ##[group]Determining the checkout info
+2026-11-13T10:19:58.0472787Z ##[endgroup]
+2026-11-13T10:19:58.0473211Z [command]/usr/bin/git sparse-checkout disable
+2026-11-13T10:19:58.0522729Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-13T10:19:58.0546150Z ##[group]Checking out the ref
+2026-11-13T10:19:58.0549787Z [command]/usr/bin/git checkout --progress --force b3d89f7039501223ecca64f402b986041952575c
+2026-11-13T10:19:58.7458410Z Note: switching to 'b3d89f7039501223ecca64f402b986041952575c'.
+2026-11-13T10:19:58.7458728Z 
+2026-11-13T10:19:58.7459072Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-13T10:19:58.7459510Z changes and commit them, and you can discard any commits you make in this
+2026-11-13T10:19:58.7459909Z state without impacting any branches by switching back to a branch.
+2026-11-13T10:19:58.7460101Z 
+2026-11-13T10:19:58.7460430Z If you want to create a new branch to retain commits you create, you may
+2026-11-13T10:19:58.7460816Z do so (now or later) by using -c with the switch command. Example:
+2026-11-13T10:19:58.7461043Z 
+2026-11-13T10:19:58.7461136Z   git switch -c <new-branch-name>
+2026-11-13T10:19:58.7461379Z 
+2026-11-13T10:19:58.7461477Z Or undo this operation with:
+2026-11-13T10:19:58.7461686Z 
+2026-11-13T10:19:58.7461795Z   git switch -
+2026-11-13T10:19:58.7461891Z 
+2026-11-13T10:19:58.7462353Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-13T10:19:58.7462583Z 
+2026-11-13T10:19:58.7462793Z HEAD is now at b3d89f7 Respect dynamic image patch limits at extreme aspect ratios
+2026-11-13T10:19:58.7479159Z ##[endgroup]
+2026-11-13T10:19:58.7519566Z [command]/usr/bin/git log -1 --format=%H
+2026-11-13T10:19:58.7539729Z b3d89f7039501223ecca64f402b986041952575c
+2026-11-13T10:19:58.7545838Z ##[group]Removing auth
+2026-11-13T10:19:58.7546329Z Removing SSH command configuration
+2026-11-13T10:19:58.7549675Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T10:19:58.7572607Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T10:19:58.7737006Z Removing HTTP extra header
+2026-11-13T10:19:58.7739236Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T10:19:58.7764259Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T10:19:58.7925325Z Removing includeIf entries pointing to credentials config files
+2026-11-13T10:19:58.7927594Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T10:19:58.7949737Z includeif.gitdir:/home/runner/work/sglang/sglang/.git.path
+2026-11-13T10:19:58.7950553Z includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path
+2026-11-13T10:19:58.7951089Z includeif.gitdir:/github/workspace/.git.path
+2026-11-13T10:19:58.7951522Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-13T10:19:58.7955990Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sglang/sglang/.git.path
+2026-11-13T10:19:58.7976333Z /home/runner/work/_temp/git-credentials-9fed322c-c6d3-4fba-bdbd-b506de006863.config
+2026-11-13T10:19:58.7983588Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sglang/sglang/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-9fed322c\-c6d3\-4fba\-bdbd\-b506de006863\.config
+2026-11-13T10:19:58.8007449Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path
+2026-11-13T10:19:58.8030220Z /home/runner/work/_temp/git-credentials-9fed322c-c6d3-4fba-bdbd-b506de006863.config
+2026-11-13T10:19:58.8036143Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-9fed322c\-c6d3\-4fba\-bdbd\-b506de006863\.config
+2026-11-13T10:19:58.8061487Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-13T10:19:58.8079407Z /github/runner_temp/git-credentials-9fed322c-c6d3-4fba-bdbd-b506de006863.config
+2026-11-13T10:19:58.8084968Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-9fed322c\-c6d3\-4fba\-bdbd\-b506de006863\.config
+2026-11-13T10:19:58.8109684Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-13T10:19:58.8126370Z /github/runner_temp/git-credentials-9fed322c-c6d3-4fba-bdbd-b506de006863.config
+2026-11-13T10:19:58.8131189Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-9fed322c\-c6d3\-4fba\-bdbd\-b506de006863\.config
+2026-11-13T10:19:58.8154732Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T10:19:58.8309533Z Removing credentials config '/home/runner/work/_temp/git-credentials-9fed322c-c6d3-4fba-bdbd-b506de006863.config'
+2026-11-13T10:19:58.8314418Z ##[endgroup]
+2026-11-13T10:19:58.8501058Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-11-13T10:19:58.8501490Z with:
+2026-11-13T10:19:58.8501707Z   python-version: 3.12
+2026-11-13T10:19:58.8501976Z   check-latest: false
+2026-11-13T10:19:58.8503770Z   token: ***
+2026-11-13T10:19:58.8504008Z   update-environment: true
+2026-11-13T10:19:58.8504292Z   allow-prereleases: false
+2026-11-13T10:19:58.8504524Z   freethreaded: false
+2026-11-13T10:19:58.8504736Z env:
+2026-11-13T10:19:58.8504947Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:19:58.8505187Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:19:58.8505466Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:19:58.8505696Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:19:58.8505900Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:19:58.8506177Z ##[endgroup]
+2026-11-13T10:19:58.9551436Z ##[group]Installed versions
+2026-11-13T10:19:59.1051856Z (node:2240) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T10:19:59.1052767Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T10:19:59.1053259Z Successfully set up CPython (3.12.16)
+2026-11-13T10:19:59.1054014Z ##[endgroup]
+2026-11-13T10:19:59.1197580Z ##[group]Run python -m pip install uv pre-commit
+2026-11-13T10:19:59.1198518Z [36;1mpython -m pip install uv pre-commit[0m
+2026-11-13T10:19:59.1199022Z [36;1mbash scripts/ci/utils/install_rust_protoc.sh[0m
+2026-11-13T10:19:59.4907887Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:19:59.4908455Z env:
+2026-11-13T10:19:59.4908878Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:19:59.4909142Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:19:59.4909420Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:19:59.4909672Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:19:59.4909897Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:19:59.4910208Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:19:59.4910785Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:19:59.4911149Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:19:59.4911557Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:19:59.4911967Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:19:59.4912386Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:19:59.4912701Z ##[endgroup]
+2026-11-13T10:20:05.7338493Z Collecting uv
+2026-11-13T10:20:05.7854972Z   Downloading uv-0.13.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+2026-11-13T10:20:05.8113846Z Collecting pre-commit
+2026-11-13T10:20:05.8195053Z   Downloading pre_commit-4.7.0-py2.py3-none-any.whl.metadata (1.2 kB)
+2026-11-13T10:20:05.8326556Z Collecting cfgv>=2.0.0 (from pre-commit)
+2026-11-13T10:20:05.8402162Z   Downloading cfgv-3.5.0-py2.py3-none-any.whl.metadata (8.9 kB)
+2026-11-13T10:20:05.8662559Z Collecting identify>=1.0.0 (from pre-commit)
+2026-11-13T10:20:05.8738821Z   Downloading identify-2.6.20-py2.py3-none-any.whl.metadata (4.4 kB)
+2026-11-13T10:20:05.8891276Z Collecting nodeenv>=0.11.1 (from pre-commit)
+2026-11-13T10:20:05.8966955Z   Downloading nodeenv-1.12.0-py3-none-any.whl.metadata (49 kB)
+2026-11-13T10:20:05.9344034Z Collecting pyyaml>=5.1 (from pre-commit)
+2026-11-13T10:20:05.9421445Z   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-11-13T10:20:05.9707955Z Collecting virtualenv>=20.10.0 (from pre-commit)
+2026-11-13T10:20:05.9786699Z   Downloading virtualenv-21.15.6-py3-none-any.whl.metadata (4.1 kB)
+2026-11-13T10:20:05.9920961Z Collecting distlib<1,>=0.4.3 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:20:06.0003177Z   Downloading distlib-0.4.4-py2.py3-none-any.whl.metadata (5.3 kB)
+2026-11-13T10:20:06.0224798Z Collecting filelock<5,>=3.24.2 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:20:06.0300093Z   Downloading filelock-4.2.10-py3-none-any.whl.metadata (2.3 kB)
+2026-11-13T10:20:06.0443886Z Collecting packaging>=26.3 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:20:06.0521509Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-11-13T10:20:06.0692453Z Collecting platformdirs<5,>=4.4 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:20:06.0769940Z   Downloading platformdirs-4.14.5-py3-none-any.whl.metadata (5.7 kB)
+2026-11-13T10:20:06.0916912Z Collecting python-discovery>=1.6.1 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:20:06.0989651Z   Downloading python_discovery-1.9.5-py3-none-any.whl.metadata (4.2 kB)
+2026-11-13T10:20:06.1115864Z Downloading uv-0.13.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.4 MB)
+2026-11-13T10:20:06.4828650Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.4/17.4 MB 54.3 MB/s  0:00:00
+2026-11-13T10:20:06.4907015Z Downloading pre_commit-4.7.0-py2.py3-none-any.whl (226 kB)
+2026-11-13T10:20:06.5008317Z Downloading cfgv-3.5.0-py2.py3-none-any.whl (7.4 kB)
+2026-11-13T10:20:06.5094990Z Downloading identify-2.6.20-py2.py3-none-any.whl (99 kB)
+2026-11-13T10:20:06.5186371Z Downloading nodeenv-1.12.0-py3-none-any.whl (39 kB)
+2026-11-13T10:20:06.5276621Z Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-11-13T10:20:06.5341650Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 117.9 MB/s  0:00:00
+2026-11-13T10:20:06.5416443Z Downloading virtualenv-21.15.6-py3-none-any.whl (5.7 MB)
+2026-11-13T10:20:06.5812759Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.7/5.7 MB 144.2 MB/s  0:00:00
+2026-11-13T10:20:06.5886658Z Downloading distlib-0.4.4-py2.py3-none-any.whl (472 kB)
+2026-11-13T10:20:06.5995044Z Downloading filelock-4.2.10-py3-none-any.whl (218 kB)
+2026-11-13T10:20:06.6090244Z Downloading platformdirs-4.14.5-py3-none-any.whl (35 kB)
+2026-11-13T10:20:06.6178557Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-11-13T10:20:06.6274811Z Downloading python_discovery-1.9.5-py3-none-any.whl (44 kB)
+2026-11-13T10:20:07.2428695Z Installing collected packages: distlib, uv, pyyaml, platformdirs, packaging, nodeenv, identify, filelock, cfgv, python-discovery, virtualenv, pre-commit
+2026-11-13T10:20:07.8423901Z 
+2026-11-13T10:20:07.8437279Z Successfully installed cfgv-3.5.0 distlib-0.4.4 filelock-4.2.10 identify-2.6.20 nodeenv-1.12.0 packaging-26.3 platformdirs-4.14.5 pre-commit-4.7.0 python-discovery-1.9.5 pyyaml-6.0.3 uv-0.13.8 virtualenv-21.15.6
+2026-11-13T10:20:07.9107311Z +++ dirname scripts/ci/utils/install_rust_protoc.sh
+2026-11-13T10:20:07.9114125Z ++ cd scripts/ci/utils
+2026-11-13T10:20:07.9114735Z ++ pwd
+2026-11-13T10:20:07.9115230Z + SCRIPT_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T10:20:07.9117192Z ++ id -u
+2026-11-13T10:20:07.9134852Z + '[' 1001 = 0 ']'
+2026-11-13T10:20:07.9135111Z + command -v sudo
+2026-11-13T10:20:07.9135854Z + SUDO=sudo
+2026-11-13T10:20:07.9136371Z + sudo bash /home/runner/work/sglang/sglang/scripts/ci/utils/install_protoc.sh
+2026-11-13T10:20:07.9188697Z + command -v protoc
+2026-11-13T10:20:07.9189172Z + command -v protoc
+2026-11-13T10:20:07.9189527Z + echo 'protoc not found, installing...'
+2026-11-13T10:20:07.9190132Z protoc not found, installing...
+2026-11-13T10:20:07.9191316Z ++ uname -m
+2026-11-13T10:20:07.9197649Z + ARCH=x86_64
+2026-11-13T10:20:07.9198561Z + command -v apt-get
+2026-11-13T10:20:07.9198830Z + apt-get update
+2026-11-13T10:20:08.0850702Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [152 B]
+2026-11-13T10:20:08.1583868Z Get:5 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-11-13T10:20:08.1993661Z Hit:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble InRelease
+2026-11-13T10:20:08.2549225Z Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-11-13T10:20:08.2560859Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [767 kB]
+2026-11-13T10:20:08.3495010Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [697 kB]
+2026-11-13T10:20:08.3997297Z Get:8 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-11-13T10:20:08.4701597Z Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-11-13T10:20:08.6105397Z Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1450 kB]
+2026-11-13T10:20:08.8285340Z Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [315 kB]
+2026-11-13T10:20:08.8836491Z Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1713 kB]
+2026-11-13T10:20:08.9943746Z Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [345 kB]
+2026-11-13T10:20:09.0514663Z Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1883 kB]
+2026-11-13T10:20:09.1620382Z Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [430 kB]
+2026-11-13T10:20:09.2018307Z Get:16 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1195 kB]
+2026-11-13T10:20:09.2181896Z Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.6 kB]
+2026-11-13T10:20:10.1491566Z Get:17 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [238 kB]
+2026-11-13T10:20:10.3463094Z Get:18 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1228 kB]
+2026-11-13T10:20:10.6458400Z Get:19 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [248 kB]
+2026-11-13T10:20:10.8400984Z Get:20 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1788 kB]
+2026-11-13T10:20:11.1655119Z Get:21 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [411 kB]
+2026-11-13T10:20:18.7918686Z Fetched 13.1 MB in 3s (4097 kB/s)
+2026-11-13T10:20:19.6687873Z Reading package lists...
+2026-11-13T10:20:19.6827616Z + PROTOC_APT_PACKAGES=(wget unzip)
+2026-11-13T10:20:19.6936009Z + apt-get install -y --no-install-recommends wget unzip
+2026-11-13T10:20:19.6936377Z Reading package lists...
+2026-11-13T10:20:19.8807476Z Building dependency tree...
+2026-11-13T10:20:19.8813657Z Reading state information...
+2026-11-13T10:20:20.0447090Z wget is already the newest version (1.21.4-1ubuntu4.5).
+2026-11-13T10:20:20.0447751Z unzip is already the newest version (6.0-28ubuntu4.1).
+2026-11-13T10:20:20.0448386Z 0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+2026-11-13T10:20:20.0452277Z + '[' x86_64 = aarch64 ']'
+2026-11-13T10:20:20.0452776Z + '[' x86_64 = arm64 ']'
+2026-11-13T10:20:20.0453030Z + PROTOC_ARCH=x86_64
+2026-11-13T10:20:20.0453434Z + PROTOC_ZIP=protoc-32.0-linux-x86_64.zip
+2026-11-13T10:20:20.0456404Z + cd /tmp
+2026-11-13T10:20:20.0456952Z + wget https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-x86_64.zip
+2026-11-13T10:20:20.1477719Z --2026-11-13 10:20:20--  https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-x86_64.zip
+2026-11-13T10:20:20.1627099Z Resolving github.com (github.com)... 140.82.116.3
+2026-11-13T10:20:20.1716760Z Connecting to github.com (github.com)|140.82.116.3|:443... connected.
+2026-11-13T10:20:20.3876015Z HTTP request sent, awaiting response... 302 Found
+2026-11-13T10:20:20.3880748Z Location: https://release-assets.githubusercontent.com/github-production-release-asset/23357588/b8f467f9-efcf-428e-8da8-d051740d4252?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-13T11%3A12%3A30Z&rscd=attachment%3B+filename%3Dprotoc-32.0-linux-x86_64.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-13T10%3A11%3A34Z&ske=2026-11-13T11%3A12%3A30Z&sks=b&skv=2018-11-09&sig=74%2Bu9bdbcyqsyKyz18YWRVjrdA6Y5deBDmW%2F%2FQA77lw%3D&jwt=*** [following]
+2026-11-13T10:20:20.3884956Z --2026-11-13 10:20:20--  https://release-assets.githubusercontent.com/github-production-release-asset/23357588/b8f467f9-efcf-428e-8da8-d051740d4252?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-13T11%3A12%3A30Z&rscd=attachment%3B+filename%3Dprotoc-32.0-linux-x86_64.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-13T10%3A11%3A34Z&ske=2026-11-13T11%3A12%3A30Z&sks=b&skv=2018-11-09&sig=74%2Bu9bdbcyqsyKyz18YWRVjrdA6Y5deBDmW%2F%2FQA77lw%3D&jwt=***
+2026-11-13T10:20:20.3891778Z Resolving release-assets.githubusercontent.com (release-assets.githubusercontent.com)... 185.199.110.133, 185.199.111.133, 185.199.108.133, ...
+2026-11-13T10:20:20.3955992Z Connecting to release-assets.githubusercontent.com (release-assets.githubusercontent.com)|185.199.110.133|:443... connected.
+2026-11-13T10:20:20.4180300Z HTTP request sent, awaiting response... 200 OK
+2026-11-13T10:20:20.4180762Z Length: 3543178 (3.4M) [application/octet-stream]
+2026-11-13T10:20:20.4181883Z Saving to: ‘protoc-32.0-linux-x86_64.zip’
+2026-11-13T10:20:20.4182057Z 
+2026-11-13T10:20:20.4240984Z      0K .......... .......... .......... .......... ..........  1% 8.20M 0s
+2026-11-13T10:20:20.4262164Z     50K .......... .......... .......... .......... ..........  2% 22.1M 0s
+2026-11-13T10:20:20.4316436Z    100K .......... .......... .......... .......... ..........  4% 9.14M 0s
+2026-11-13T10:20:20.4331949Z    150K .......... .......... .......... .......... ..........  5% 32.5M 0s
+2026-11-13T10:20:20.4376155Z    200K .......... .......... .......... .......... ..........  7% 10.9M 0s
+2026-11-13T10:20:20.4381975Z    250K .......... .......... .......... .......... ..........  8%  114M 0s
+2026-11-13T10:20:20.4390122Z    300K .......... .......... .......... .......... .......... 10% 48.0M 0s
+2026-11-13T10:20:20.4395968Z    350K .......... .......... .......... .......... .......... 11% 97.6M 0s
+2026-11-13T10:20:20.4399405Z    400K .......... .......... .......... .......... .......... 13% 97.0M 0s
+2026-11-13T10:20:20.4435113Z    450K .......... .......... .......... .......... .......... 14% 14.3M 0s
+2026-11-13T10:20:20.4439098Z    500K .......... .......... .......... .......... .......... 15%  138M 0s
+2026-11-13T10:20:20.4449293Z    550K .......... .......... .......... .......... .......... 17% 47.6M 0s
+2026-11-13T10:20:20.4449694Z    600K .......... .......... .......... .......... .......... 18%  292M 0s
+2026-11-13T10:20:20.4453092Z    650K .......... .......... .......... .......... .......... 20%  139M 0s
+2026-11-13T10:20:20.4459925Z    700K .......... .......... .......... .......... .......... 21% 65.6M 0s
+2026-11-13T10:20:20.4474599Z    750K .......... .......... .......... .......... .......... 23% 33.2M 0s
+2026-11-13T10:20:20.4492553Z    800K .......... .......... .......... .......... .......... 24% 27.2M 0s
+2026-11-13T10:20:20.4494152Z    850K .......... .......... .......... .......... .......... 26%  478M 0s
+2026-11-13T10:20:20.4495999Z    900K .......... .......... .......... .......... .......... 27%  253M 0s
+2026-11-13T10:20:20.4498977Z    950K .......... .......... .......... .......... .......... 28%  152M 0s
+2026-11-13T10:20:20.4501335Z   1000K .......... .......... .......... .......... .......... 30%  189M 0s
+2026-11-13T10:20:20.4504285Z   1050K .......... .......... .......... .......... .......... 31%  611M 0s
+2026-11-13T10:20:20.4505269Z   1100K .......... .......... .......... .......... .......... 33%  162M 0s
+2026-11-13T10:20:20.4508820Z   1150K .......... .......... .......... .......... .......... 34%  136M 0s
+2026-11-13T10:20:20.4510101Z   1200K .......... .......... .......... .......... .......... 36%  376M 0s
+2026-11-13T10:20:20.4512630Z   1250K .......... .......... .......... .......... .......... 37%  188M 0s
+2026-11-13T10:20:20.4514799Z   1300K .......... .......... .......... .......... .......... 39%  230M 0s
+2026-11-13T10:20:20.4516841Z   1350K .......... .......... .......... .......... .......... 40%  251M 0s
+2026-11-13T10:20:20.4519675Z   1400K .......... .......... .......... .......... .......... 41%  209M 0s
+2026-11-13T10:20:20.4520976Z   1450K .......... .......... .......... .......... .......... 43%  487M 0s
+2026-11-13T10:20:20.4522358Z   1500K .......... .......... .......... .......... .......... 44%  210M 0s
+2026-11-13T10:20:20.4524054Z   1550K .......... .......... .......... .......... .......... 46%  294M 0s
+2026-11-13T10:20:20.4533010Z   1600K .......... .......... .......... .......... .......... 47% 55.7M 0s
+2026-11-13T10:20:20.4550521Z   1650K .......... .......... .......... .......... .......... 49% 28.0M 0s
+2026-11-13T10:20:20.4552356Z   1700K .......... .......... .......... .......... .......... 50%  233M 0s
+2026-11-13T10:20:20.4553938Z   1750K .......... .......... .......... .......... .......... 52%  334M 0s
+2026-11-13T10:20:20.4555037Z   1800K .......... .......... .......... .......... .......... 53%  399M 0s
+2026-11-13T10:20:20.4556303Z   1850K .......... .......... .......... .......... .......... 54%  388M 0s
+2026-11-13T10:20:20.4558871Z   1900K .......... .......... .......... .......... .......... 56%  196M 0s
+2026-11-13T10:20:20.4560043Z   1950K .......... .......... .......... .......... .......... 57%  406M 0s
+2026-11-13T10:20:20.4560501Z   2000K .......... .......... .......... .......... .......... 59%  820M 0s
+2026-11-13T10:20:20.4562135Z   2050K .......... .......... .......... .......... .......... 60%  294M 0s
+2026-11-13T10:20:20.4564857Z   2100K .......... .......... .......... .......... .......... 62%  194M 0s
+2026-11-13T10:20:20.4565391Z   2150K .......... .......... .......... .......... .......... 63%  678M 0s
+2026-11-13T10:20:20.4566162Z   2200K .......... .......... .......... .......... .......... 65%  608M 0s
+2026-11-13T10:20:20.4568593Z   2250K .......... .......... .......... .......... .......... 66%  561M 0s
+2026-11-13T10:20:20.4569210Z   2300K .......... .......... .......... .......... .......... 67%  219M 0s
+2026-11-13T10:20:20.4570349Z   2350K .......... .......... .......... .......... .......... 69%  503M 0s
+2026-11-13T10:20:20.4571843Z   2400K .......... .......... .......... .......... .......... 70%  307M 0s
+2026-11-13T10:20:20.4572601Z   2450K .......... .......... .......... .......... .......... 72%  714M 0s
+2026-11-13T10:20:20.4573457Z   2500K .......... .......... .......... .......... .......... 73%  605M 0s
+2026-11-13T10:20:20.4574656Z   2550K .......... .......... .......... .......... .......... 75%  418M 0s
+2026-11-13T10:20:20.4576046Z   2600K .......... .......... .......... .......... .......... 76%  474M 0s
+2026-11-13T10:20:20.4577327Z   2650K .......... .......... .......... .......... .......... 78%  692M 0s
+2026-11-13T10:20:20.4578386Z   2700K .......... .......... .......... .......... .......... 79%  393M 0s
+2026-11-13T10:20:20.4579036Z   2750K .......... .......... .......... .......... .......... 80%  379M 0s
+2026-11-13T10:20:20.4579955Z   2800K .......... .......... .......... .......... .......... 82%  428M 0s
+2026-11-13T10:20:20.4581258Z   2850K .......... .......... .......... .......... .......... 83%  547M 0s
+2026-11-13T10:20:20.4582321Z   2900K .......... .......... .......... .......... .......... 85%  692M 0s
+2026-11-13T10:20:20.4583555Z   2950K .......... .......... .......... .......... .......... 86%  538M 0s
+2026-11-13T10:20:20.4584362Z   3000K .......... .......... .......... .......... .......... 88%  597M 0s
+2026-11-13T10:20:20.4584848Z   3050K .......... .......... .......... .......... .......... 89%  360M 0s
+2026-11-13T10:20:20.4585967Z   3100K .......... .......... .......... .......... .......... 91%  418M 0s
+2026-11-13T10:20:20.4586917Z   3150K .......... .......... .......... .......... .......... 92%  507M 0s
+2026-11-13T10:20:20.4588319Z   3200K .......... .......... .......... .......... .......... 93%  840M 0s
+2026-11-13T10:20:20.4591183Z   3250K .......... .......... .......... .......... .......... 95%  136M 0s
+2026-11-13T10:20:20.4592544Z   3300K .......... .......... .......... .......... .......... 96%  310M 0s
+2026-11-13T10:20:20.4596341Z   3350K .......... .......... .......... .......... .......... 98%  161M 0s
+2026-11-13T10:20:20.4596874Z   3400K .......... .......... .......... .......... .......... 99%  454M 0s
+2026-11-13T10:20:20.4597256Z   3450K ..........                                            100%  569M=0.04s
+2026-11-13T10:20:20.4597466Z 
+2026-11-13T10:20:20.4597988Z 2026-11-13 10:20:20 (81.1 MB/s) - ‘protoc-32.0-linux-x86_64.zip’ saved [3543178/3543178]
+2026-11-13T10:20:20.4598494Z 
+2026-11-13T10:20:20.4606222Z + unzip -o protoc-32.0-linux-x86_64.zip -d /usr/local
+2026-11-13T10:20:20.5088199Z Archive:  protoc-32.0-linux-x86_64.zip
+2026-11-13T10:20:20.5698552Z   inflating: /usr/local/bin/protoc   
+2026-11-13T10:20:20.5702545Z    creating: /usr/local/include/google/
+2026-11-13T10:20:20.5703150Z    creating: /usr/local/include/google/protobuf/
+2026-11-13T10:20:20.5703587Z   inflating: /usr/local/include/google/protobuf/any.proto  
+2026-11-13T10:20:20.5704043Z   inflating: /usr/local/include/google/protobuf/api.proto  
+2026-11-13T10:20:20.5704487Z    creating: /usr/local/include/google/protobuf/compiler/
+2026-11-13T10:20:20.5704972Z   inflating: /usr/local/include/google/protobuf/compiler/plugin.proto  
+2026-11-13T10:20:20.5705443Z   inflating: /usr/local/include/google/protobuf/cpp_features.proto  
+2026-11-13T10:20:20.5707669Z   inflating: /usr/local/include/google/protobuf/descriptor.proto  
+2026-11-13T10:20:20.5708439Z   inflating: /usr/local/include/google/protobuf/duration.proto  
+2026-11-13T10:20:20.5709080Z   inflating: /usr/local/include/google/protobuf/empty.proto  
+2026-11-13T10:20:20.5709529Z   inflating: /usr/local/include/google/protobuf/field_mask.proto  
+2026-11-13T10:20:20.5710083Z   inflating: /usr/local/include/google/protobuf/go_features.proto  
+2026-11-13T10:20:20.5710580Z   inflating: /usr/local/include/google/protobuf/java_features.proto  
+2026-11-13T10:20:20.5711063Z   inflating: /usr/local/include/google/protobuf/source_context.proto  
+2026-11-13T10:20:20.5711515Z   inflating: /usr/local/include/google/protobuf/struct.proto  
+2026-11-13T10:20:20.5711936Z   inflating: /usr/local/include/google/protobuf/timestamp.proto  
+2026-11-13T10:20:20.5712477Z   inflating: /usr/local/include/google/protobuf/type.proto  
+2026-11-13T10:20:20.5713068Z   inflating: /usr/local/include/google/protobuf/wrappers.proto  
+2026-11-13T10:20:20.5713650Z   inflating: /usr/local/readme.txt   
+2026-11-13T10:20:20.5715984Z + rm -f protoc-32.0-linux-x86_64.zip
+2026-11-13T10:20:20.5727295Z + protoc --version
+2026-11-13T10:20:20.5735290Z libprotoc 32.0
+2026-11-13T10:20:20.5744645Z + bash /home/runner/work/sglang/sglang/scripts/ci/utils/install_rustup.sh
+2026-11-13T10:20:20.5760393Z +++ dirname /home/runner/work/sglang/sglang/scripts/ci/utils/install_rustup.sh
+2026-11-13T10:20:20.5767486Z ++ cd /home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T10:20:20.5767801Z ++ pwd
+2026-11-13T10:20:20.5768724Z + SCRIPT_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T10:20:20.5769216Z + RUST_WORKSPACE_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust
+2026-11-13T10:20:20.5771527Z ++ sed -n 's/^channel *= *"\([^"]*\)".*/\1/p' /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml
+2026-11-13T10:20:20.5783666Z + PINNED_CHANNEL=1.92
+2026-11-13T10:20:20.5783998Z + DEFAULT_CHANNEL=1.92
+2026-11-13T10:20:20.5785449Z + export PATH=/home/runner/.cargo/bin:/opt/hostedtoolcache/Python/3.12.16/x64/bin:/opt/hostedtoolcache/Python/3.12.16/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-11-13T10:20:20.5787376Z + PATH=/home/runner/.cargo/bin:/opt/hostedtoolcache/Python/3.12.16/x64/bin:/opt/hostedtoolcache/Python/3.12.16/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-11-13T10:20:20.5788850Z + '[' -n /home/runner/work/_temp/_runner_file_commands/add_path_bb737e05-91a4-4469-9f4c-41f8ef4431e1 ']'
+2026-11-13T10:20:20.5789393Z ++ dirname /home/runner/work/_temp/_runner_file_commands/add_path_bb737e05-91a4-4469-9f4c-41f8ef4431e1
+2026-11-13T10:20:20.5793489Z + mkdir -p /home/runner/work/_temp/_runner_file_commands
+2026-11-13T10:20:20.5802629Z + echo /home/runner/.cargo/bin
+2026-11-13T10:20:20.5802970Z + '[' -n '' ']'
+2026-11-13T10:20:20.5804559Z + command -v cargo
+2026-11-13T10:20:20.5804888Z + command -v rustc
+2026-11-13T10:20:20.5805153Z + rustc --version
+2026-11-13T10:20:24.4391787Z ++ rustc --version
+2026-11-13T10:20:24.4494660Z ++ cargo --version
+2026-11-13T10:20:25.1330299Z + echo 'rust already installed: rustc 1.99.1 (58cf8f9c3 2026-10-13), cargo 1.99.1 (5f94df478 2026-08-27)'
+2026-11-13T10:20:25.1330962Z rust already installed: rustc 1.99.1 (58cf8f9c3 2026-10-13), cargo 1.99.1 (5f94df478 2026-08-27)
+2026-11-13T10:20:25.1331820Z + install_workspace_pinned_toolchain
+2026-11-13T10:20:25.1332371Z + command -v rustup
+2026-11-13T10:20:25.1332958Z + local toolchain_file=/home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml
+2026-11-13T10:20:25.1333546Z + '[' '!' -f /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml ']'
+2026-11-13T10:20:25.1334289Z + cd /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust
+2026-11-13T10:20:25.1334665Z + rustup toolchain install
+2026-11-13T10:20:25.1443803Z info: syncing channel updates for 1.92-x86_64-unknown-linux-gnu
+2026-11-13T10:20:25.4265089Z info: latest update on 2025-12-11 for version 1.92.0 (ded5c06cf 2025-12-08)
+2026-11-13T10:20:25.4270584Z info: downloading 5 components
+2026-11-13T10:20:32.5777670Z info: the active toolchain `1.92-x86_64-unknown-linux-gnu` has been installed
+2026-11-13T10:20:32.5778727Z info: it's active because: overridden by '/home/runner/work/sglang/sglang/rust/rust-toolchain.toml'
+2026-11-13T10:20:32.5852470Z + return 0
+2026-11-13T10:20:32.5852791Z + export RUSTUP_TOOLCHAIN=1.92
+2026-11-13T10:20:32.5853336Z + RUSTUP_TOOLCHAIN=1.92
+2026-11-13T10:20:32.5853780Z + '[' -n /home/runner/work/_temp/_runner_file_commands/set_env_bb737e05-91a4-4469-9f4c-41f8ef4431e1 ']'
+2026-11-13T10:20:32.5856048Z ++ dirname /home/runner/work/_temp/_runner_file_commands/set_env_bb737e05-91a4-4469-9f4c-41f8ef4431e1
+2026-11-13T10:20:32.5864636Z + mkdir -p /home/runner/work/_temp/_runner_file_commands
+2026-11-13T10:20:32.5876262Z + echo RUSTUP_TOOLCHAIN=1.92
+2026-11-13T10:20:32.5876565Z + rustc --version
+2026-11-13T10:20:32.5963384Z rustc 1.92.0 (ded5c06cf 2025-12-08)
+2026-11-13T10:20:32.5968536Z + cargo --version
+2026-11-13T10:20:32.6027264Z cargo 1.92.0 (344c4567c 2025-10-21)
+2026-11-13T10:20:32.6072230Z ##[group]Run set -o pipefail
+2026-11-13T10:20:32.6072513Z [36;1mset -o pipefail[0m
+2026-11-13T10:20:32.6072944Z [36;1muv pip install -e "python[dev]" --index-strategy unsafe-best-match --prerelease allow 2>&1 | tee sglang-install.log[0m
+2026-11-13T10:20:32.6073456Z [36;1mpython -m pip freeze > sglang-environment.txt[0m
+2026-11-13T10:20:32.6100375Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:20:32.6100631Z env:
+2026-11-13T10:20:32.6100879Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:20:32.6101129Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:20:32.6101377Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:20:32.6101609Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:20:32.6101819Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:20:32.6102084Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:20:32.6102480Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:20:32.6102855Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:20:32.6103268Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:20:32.6103613Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:20:32.6103965Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:20:32.6104253Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:20:32.6104480Z   UV_SYSTEM_PYTHON: 1
+2026-11-13T10:20:32.6104713Z ##[endgroup]
+2026-11-13T10:20:32.6527464Z Using Python 3.12.16 environment at: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:20:57.0445835Z Resolved 270 packages in 24.39s
+2026-11-13T10:20:57.0599978Z    Building sglang @ file:///home/runner/work/sglang/sglang/python
+2026-11-13T10:20:57.0718960Z Downloading scikit-learn (8.7MiB)
+2026-11-13T10:20:57.0722387Z Downloading hf-xet (4.1MiB)
+2026-11-13T10:20:57.0722980Z Downloading nvidia-cuda-cccl (3.9MiB)
+2026-11-13T10:20:57.0729148Z Downloading fonttools (5.2MiB)
+2026-11-13T10:20:57.0743366Z Downloading pandas (11.8MiB)
+2026-11-13T10:20:57.0754477Z Downloading uvloop (4.3MiB)
+2026-11-13T10:20:57.0771541Z Downloading sgl-flash-mla (9.7MiB)
+2026-11-13T10:20:57.0772240Z Downloading zstandard (5.3MiB)
+2026-11-13T10:20:57.0772681Z Downloading cryptography (4.5MiB)
+2026-11-13T10:20:57.0773214Z Downloading lm-eval (8.4MiB)
+2026-11-13T10:20:57.0773610Z Downloading jedi (4.7MiB)
+2026-11-13T10:20:57.0781567Z Downloading modelscope (5.8MiB)
+2026-11-13T10:20:57.0782107Z Downloading onnxruntime (22.7MiB)
+2026-11-13T10:20:57.0784170Z Downloading grpcio (7.0MiB)
+2026-11-13T10:20:57.0784524Z Downloading pycountry (7.7MiB)
+2026-11-13T10:20:57.0784863Z Downloading numpy (15.8MiB)
+2026-11-13T10:20:57.0785168Z Downloading transformers (12.0MiB)
+2026-11-13T10:20:57.0785496Z Downloading scipy (33.7MiB)
+2026-11-13T10:20:57.0816625Z Downloading nvidia-mathdx (21.9MiB)
+2026-11-13T10:20:57.0875342Z Downloading mistral-common (6.3MiB)
+2026-11-13T10:20:57.0878675Z Downloading z3-solver (27.9MiB)
+2026-11-13T10:20:57.0883964Z Downloading llvmlite (53.7MiB)
+2026-11-13T10:20:57.0884634Z Downloading torchvision (7.2MiB)
+2026-11-13T10:20:57.0885131Z Downloading pyarrow (52.5MiB)
+2026-11-13T10:20:57.0885614Z Downloading nvidia-cuda-nvcc (44.8MiB)
+2026-11-13T10:20:57.0886156Z Downloading tilelang (48.2MiB)
+2026-11-13T10:20:57.0886624Z Downloading bitsandbytes (41.1MiB)
+2026-11-13T10:20:57.0887143Z Downloading nvidia-cutlass-dsl-libs-cu12 (87.5MiB)
+2026-11-13T10:20:57.0887878Z Downloading pillow (6.3MiB)
+2026-11-13T10:20:57.0888559Z Downloading polars-runtime-32 (51.4MiB)
+2026-11-13T10:20:57.0889074Z Downloading granian (5.1MiB)
+2026-11-13T10:20:57.0889515Z Downloading pymupdf (65.8MiB)
+2026-11-13T10:20:57.0889975Z Downloading nvidia-nvvm (71.7MiB)
+2026-11-13T10:20:57.0890487Z Downloading fastokens (3.6MiB)
+2026-11-13T10:20:57.0890991Z Downloading nvidia-cutlass-dsl-libs-cu13 (87.7MiB)
+2026-11-13T10:20:57.0927075Z Downloading nvshmem4py-cu13 (4.8MiB)
+2026-11-13T10:20:57.0933664Z Downloading sgl-deep-gemm (4.9MiB)
+2026-11-13T10:20:57.0934317Z Downloading matplotlib (9.4MiB)
+2026-11-13T10:20:57.0957570Z Downloading tml-renderers (4.5MiB)
+2026-11-13T10:20:57.0958588Z Downloading sgl-deep-ep (14.7MiB)
+2026-11-13T10:20:57.1011507Z Downloading nccl-extensions (24.0MiB)
+2026-11-13T10:20:57.1012058Z Downloading deepseek-recipe (12.3MiB)
+2026-11-13T10:20:57.1012624Z Downloading cuda-core (6.3MiB)
+2026-11-13T10:20:57.1013079Z Downloading av (39.3MiB)
+2026-11-13T10:20:57.1013539Z Downloading flashinfer-python (96.6MiB)
+2026-11-13T10:20:57.1014057Z Downloading instanttensor (7.0MiB)
+2026-11-13T10:20:57.1014534Z Downloading lxml (5.1MiB)
+2026-11-13T10:20:57.1014972Z Downloading torchcodec (9.5MiB)
+2026-11-13T10:20:57.1015444Z Downloading nvidia-cudnn-frontend (11.1MiB)
+2026-11-13T10:20:57.1015927Z Downloading sglang-kernel (355.7MiB)
+2026-11-13T10:20:58.4582406Z  Downloaded fastokens
+2026-11-13T10:20:58.4946419Z Downloading numba (3.6MiB)
+2026-11-13T10:20:58.5006738Z  Downloaded nvidia-cuda-cccl
+2026-11-13T10:20:58.5444575Z  Downloaded hf-xet
+2026-11-13T10:20:58.5464104Z Downloading nccl4py (3.5MiB)
+2026-11-13T10:20:58.5733729Z Downloading cython (3.3MiB)
+2026-11-13T10:20:58.7142238Z  Downloaded uvloop
+2026-11-13T10:20:58.7581534Z Downloading tokenizers (3.2MiB)
+2026-11-13T10:20:58.7724002Z  Downloaded cryptography
+2026-11-13T10:20:58.8033945Z  Downloaded tml-renderers
+2026-11-13T10:20:58.8113359Z Downloading llguidance (2.9MiB)
+2026-11-13T10:20:58.8330695Z  Downloaded jedi
+2026-11-13T10:20:58.8421715Z Downloading nvidia-cutlass-dsl-libs-base (2.9MiB)
+2026-11-13T10:20:58.8742989Z  Downloaded nvshmem4py-cu13
+2026-11-13T10:20:58.8876016Z Downloading openai-harmony (2.9MiB)
+2026-11-13T10:20:58.9126562Z Downloading py-spy (2.8MiB)
+2026-11-13T10:20:58.9495206Z  Downloaded sgl-deep-gemm
+2026-11-13T10:20:58.9829127Z Downloading apache-tvm-ffi (2.6MiB)
+2026-11-13T10:20:59.0445314Z  Downloaded granian
+2026-11-13T10:20:59.0528501Z  Downloaded fonttools
+2026-11-13T10:20:59.0768869Z Downloading torch-memory-saver (2.5MiB)
+2026-11-13T10:20:59.0809593Z  Downloaded lxml
+2026-11-13T10:20:59.0898532Z Downloading timm (2.4MiB)
+2026-11-13T10:20:59.1143485Z Downloading anthropic (2.3MiB)
+2026-11-13T10:20:59.1220681Z  Downloaded zstandard
+2026-11-13T10:20:59.1520871Z Downloading pycryptodomex (2.2MiB)
+2026-11-13T10:20:59.2806226Z  Downloaded modelscope
+2026-11-13T10:20:59.3129536Z Downloading pydantic-core (2.2MiB)
+2026-11-13T10:20:59.6329638Z  Downloaded pillow
+2026-11-13T10:20:59.6396245Z  Downloaded cuda-core
+2026-11-13T10:20:59.6525459Z Downloading aiohttp (1.8MiB)
+2026-11-13T10:20:59.6677554Z  Downloaded mistral-common
+2026-11-13T10:20:59.6997000Z Downloading torchaudio (1.7MiB)
+2026-11-13T10:20:59.7274044Z Downloading nltk (1.6MiB)
+2026-11-13T10:20:59.8089767Z  Downloaded instanttensor
+2026-11-13T10:20:59.8455692Z  Downloaded grpcio
+2026-11-13T10:20:59.8470545Z Downloading chardet (1.6MiB)
+2026-11-13T10:20:59.8582054Z  Downloaded torchvision
+2026-11-13T10:20:59.8664977Z  Downloaded cython
+2026-11-13T10:20:59.8747551Z Downloading nvidia-cutlass-dsl-libs-core (1.6MiB)
+2026-11-13T10:20:59.9072603Z  Downloaded numba
+2026-11-13T10:20:59.9075856Z Downloading auto-round (1.4MiB)
+2026-11-13T10:20:59.9087244Z Downloading kiwisolver (1.4MiB)
+2026-11-13T10:20:59.9112029Z  Downloaded nccl4py
+2026-11-13T10:20:59.9410122Z Downloading sentencepiece (1.3MiB)
+2026-11-13T10:20:59.9472755Z Downloading soundfile (1.3MiB)
+2026-11-13T10:20:59.9591958Z  Downloaded llguidance
+2026-11-13T10:20:59.9821626Z  Downloaded py-spy
+2026-11-13T10:20:59.9877054Z  Downloaded apache-tvm-ffi
+2026-11-13T10:20:59.9927106Z  Downloaded nvidia-cutlass-dsl-libs-base
+2026-11-13T10:20:59.9954220Z  Downloaded pycryptodomex
+2026-11-13T10:20:59.9958734Z Downloading xgrammar (1.2MiB)
+2026-11-13T10:21:00.0048524Z  Downloaded anthropic
+2026-11-13T10:21:00.0115284Z Downloading pygments (1.2MiB)
+2026-11-13T10:21:00.0153760Z  Downloaded openai-harmony
+2026-11-13T10:21:00.0190847Z  Downloaded timm
+2026-11-13T10:21:00.0208701Z Downloading tiktoken (1.1MiB)
+2026-11-13T10:21:00.0305980Z  Downloaded pycountry
+2026-11-13T10:21:00.0383865Z  Downloaded tokenizers
+2026-11-13T10:21:00.0488749Z  Downloaded torch-memory-saver
+2026-11-13T10:21:00.1631604Z    Building word2number==1.1
+2026-11-13T10:21:00.3457750Z  Downloaded pydantic-core
+2026-11-13T10:21:00.3534561Z    Building rouge-score==0.1.2
+2026-11-13T10:21:00.4038992Z    Building sqlitedict==2.1.0
+2026-11-13T10:21:00.4681774Z       Built word2number==1.1
+2026-11-13T10:21:00.4741924Z  Downloaded torchaudio
+2026-11-13T10:21:00.4874775Z  Downloaded aiohttp
+2026-11-13T10:21:00.5010353Z  Downloaded nltk
+2026-11-13T10:21:00.5289226Z  Downloaded lm-eval
+2026-11-13T10:21:00.5799368Z  Downloaded soundfile
+2026-11-13T10:21:00.5869946Z  Downloaded kiwisolver
+2026-11-13T10:21:00.5931221Z  Downloaded nvidia-cutlass-dsl-libs-core
+2026-11-13T10:21:00.5967129Z  Downloaded tiktoken
+2026-11-13T10:21:00.5999081Z  Downloaded auto-round
+2026-11-13T10:21:00.5999550Z  Downloaded chardet
+2026-11-13T10:21:00.6003591Z  Downloaded sentencepiece
+2026-11-13T10:21:00.6114056Z  Downloaded pygments
+2026-11-13T10:21:00.6259997Z  Downloaded scikit-learn
+2026-11-13T10:21:00.6277958Z  Downloaded xgrammar
+2026-11-13T10:21:00.7628834Z       Built rouge-score==0.1.2
+2026-11-13T10:21:00.7936385Z  Downloaded matplotlib
+2026-11-13T10:21:00.8304392Z       Built sqlitedict==2.1.0
+2026-11-13T10:21:00.9125069Z  Downloaded sgl-flash-mla
+2026-11-13T10:21:00.9131748Z  Downloaded torchcodec
+2026-11-13T10:21:01.0363057Z    Building antlr4-python3-runtime==4.9.3
+2026-11-13T10:21:01.3769765Z  Downloaded nvidia-cudnn-frontend
+2026-11-13T10:21:01.4718405Z  Downloaded pandas
+2026-11-13T10:21:01.5220330Z  Downloaded transformers
+2026-11-13T10:21:01.5221668Z       Built antlr4-python3-runtime==4.9.3
+2026-11-13T10:21:01.5523583Z  Downloaded deepseek-recipe
+2026-11-13T10:21:01.8579057Z  Downloaded sgl-deep-ep
+2026-11-13T10:21:02.0141515Z  Downloaded numpy
+2026-11-13T10:21:02.8389033Z  Downloaded nvidia-mathdx
+2026-11-13T10:21:02.9277154Z  Downloaded onnxruntime
+2026-11-13T10:21:03.0734174Z  Downloaded nccl-extensions
+2026-11-13T10:21:04.9067424Z  Downloaded z3-solver
+2026-11-13T10:21:06.2216766Z  Downloaded scipy
+2026-11-13T10:21:06.6346443Z  Downloaded av
+2026-11-13T10:21:06.8306313Z  Downloaded bitsandbytes
+2026-11-13T10:21:07.4436359Z  Downloaded nvidia-cuda-nvcc
+2026-11-13T10:21:08.5117085Z  Downloaded tilelang
+2026-11-13T10:21:09.7003566Z  Downloaded pyarrow
+2026-11-13T10:21:09.9019597Z  Downloaded llvmlite
+2026-11-13T10:21:09.9826731Z  Downloaded polars-runtime-32
+2026-11-13T10:21:10.2632063Z  Downloaded pymupdf
+2026-11-13T10:21:10.5825614Z  Downloaded nvidia-nvvm
+2026-11-13T10:21:11.9191753Z  Downloaded nvidia-cutlass-dsl-libs-cu13
+2026-11-13T10:21:12.1347019Z  Downloaded nvidia-cutlass-dsl-libs-cu12
+2026-11-13T10:21:18.1369794Z  Downloaded flashinfer-python
+2026-11-13T10:21:22.0159575Z  Downloaded sglang-kernel
+2026-11-13T10:33:35.2072728Z       Built sglang @ file:///home/runner/work/sglang/sglang/python
+2026-11-13T10:33:35.2082555Z Prepared 240 packages in 12m 38s
+2026-11-13T10:33:35.6364984Z Installed 267 packages in 428ms
+2026-11-13T10:33:35.6366137Z  + absl-py==2.5.1
+2026-11-13T10:33:35.6366472Z  + accelerate==1.15.0
+2026-11-13T10:33:35.6366805Z  + addict==2.4.0
+2026-11-13T10:33:35.6367247Z  + aiohappyeyeballs==2.7.1
+2026-11-13T10:33:35.6367586Z  + aiohttp==3.14.5
+2026-11-13T10:33:35.6367917Z  + aiosignal==1.4.0
+2026-11-13T10:33:35.6368464Z  + airportsdata==20261103
+2026-11-13T10:33:35.6368796Z  + annotated-doc==0.0.6
+2026-11-13T10:33:35.6369197Z  + annotated-types==0.8.0
+2026-11-13T10:33:35.6372161Z  + anthropic==2.8.0
+2026-11-13T10:33:35.6372562Z  + antlr4-python3-runtime==4.9.3
+2026-11-13T10:33:35.6372923Z  + anyio==4.16.0
+2026-11-13T10:33:35.6373281Z  + apache-tvm-ffi==0.1.11
+2026-11-13T10:33:35.6373621Z  + asttokens==3.0.2
+2026-11-13T10:33:35.6373893Z  + attrs==26.1.0
+2026-11-13T10:33:35.6374217Z  + auto-round==0.16.1
+2026-11-13T10:33:35.6374584Z  + av==16.1.0
+2026-11-13T10:33:35.6374960Z  + bitsandbytes==0.50.2
+2026-11-13T10:33:35.6375346Z  + blake3==1.0.11
+2026-11-13T10:33:35.6375652Z  + blobfile==3.0.0
+2026-11-13T10:33:35.6375996Z  + build==1.6.1
+2026-11-13T10:33:35.6376347Z  + certifi==2026.10.23
+2026-11-13T10:33:35.6376778Z  + cffi==2.1.1
+2026-11-13T10:33:35.6377060Z  + chardet==7.7.0
+2026-11-13T10:33:35.6377374Z  + charset-normalizer==3.5.2
+2026-11-13T10:33:35.6377710Z  + click==8.5.1
+2026-11-13T10:33:35.6377980Z  + cloudpickle==3.1.2
+2026-11-13T10:33:35.6378489Z  + colorama==0.4.6
+2026-11-13T10:33:35.6378794Z  + compressed-tensors==0.18.0
+2026-11-13T10:33:35.6379118Z  + contourpy==1.4.0
+2026-11-13T10:33:35.6379409Z  + coverage==7.17.3
+2026-11-13T10:33:35.6379694Z  + cryptography==50.0.2
+2026-11-13T10:33:35.6379997Z  + cuda-bindings==13.5.0
+2026-11-13T10:33:35.6380318Z  + cuda-core==1.2.2
+2026-11-13T10:33:35.6380642Z  + cuda-pathfinder==1.8.6
+2026-11-13T10:33:35.6380956Z  + cuda-python==13.5.0
+2026-11-13T10:33:35.6381239Z  + cuda-tile==1.8.1
+2026-11-13T10:33:35.6381524Z  + cuda-toolkit==13.0.3.0
+2026-11-13T10:33:35.6381840Z  + cycler==0.12.1
+2026-11-13T10:33:35.6382104Z  + cython==3.3.1
+2026-11-13T10:33:35.6382381Z  + dataproperty==0.37.0
+2026-11-13T10:33:35.6382676Z  + datasets==4.8.5
+2026-11-13T10:33:35.6382987Z  + deepseek-recipe==0.2.0
+2026-11-13T10:33:35.6383302Z  + defusedxml==0.8.0rc2
+2026-11-13T10:33:35.6383623Z  + diff-cover==11.0.1
+2026-11-13T10:33:35.6383898Z  + dill==0.4.1
+2026-11-13T10:33:35.6384168Z  + diskcache==5.6.3
+2026-11-13T10:33:35.6384461Z  + distro==1.9.0
+2026-11-13T10:33:35.6384757Z  + docstring-parser==0.18.0
+2026-11-13T10:33:35.6385059Z  + dominate==3.1.0
+2026-11-13T10:33:35.6385385Z  + easydict==1.14
+2026-11-13T10:33:35.6385725Z  + editdistance==0.8.1
+2026-11-13T10:33:35.6386074Z  + einops==0.9.0.dev0
+2026-11-13T10:33:35.6386440Z  + executing==2.3.0
+2026-11-13T10:33:35.6386746Z  + expecttest==0.3.0
+2026-11-13T10:33:35.6387039Z  + fastapi==0.162.5
+2026-11-13T10:33:35.6387367Z  + fastokens==0.3.6
+2026-11-13T10:33:35.6387700Z  + flashinfer-python==0.7.4
+2026-11-13T10:33:35.6388215Z  + flatbuffers==25.12.19
+2026-11-13T10:33:35.6388706Z  + fonttools==4.68.0
+2026-11-13T10:33:35.6389014Z  + frozenlist==1.8.0
+2026-11-13T10:33:35.6389382Z  + fsspec==2026.2.0
+2026-11-13T10:33:35.6389690Z  + gguf==0.19.0
+2026-11-13T10:33:35.6390007Z  + granian==2.8.8
+2026-11-13T10:33:35.6390328Z  + grpcio==1.85.1
+2026-11-13T10:33:35.6390660Z  + grpcio-health-checking==1.85.1
+2026-11-13T10:33:35.6391109Z  + grpcio-reflection==1.85.1
+2026-11-13T10:33:35.6391414Z  + h11==0.16.0
+2026-11-13T10:33:35.6391682Z  + hf-xet==1.8.0
+2026-11-13T10:33:35.6391958Z  + httpcore==1.0.9
+2026-11-13T10:33:35.6392242Z  + httpcore2==2.16.0
+2026-11-13T10:33:35.6392550Z  + httpx==0.28.1
+2026-11-13T10:33:35.6392813Z  + httpx2==2.16.0
+2026-11-13T10:33:35.6393086Z  + huggingface-hub==1.33.0
+2026-11-13T10:33:35.6393426Z  + humming-kernels==0.1.18
+2026-11-13T10:33:35.6393761Z  + idna==3.20
+2026-11-13T10:33:35.6394053Z  + iniconfig==2.3.1
+2026-11-13T10:33:35.6394334Z  + instanttensor==0.2.3
+2026-11-13T10:33:35.6394619Z  + interegular==0.3.3
+2026-11-13T10:33:35.6394923Z  + ipython==9.18.1
+2026-11-13T10:33:35.6395211Z  + ipython-pygments-lexers==1.1.1
+2026-11-13T10:33:35.6395995Z  + jedi==0.20.1
+2026-11-13T10:33:35.6396298Z  + jinja2==3.1.6
+2026-11-13T10:33:35.6396565Z  + jiter==0.19.0
+2026-11-13T10:33:35.6396841Z  + joblib==1.6.0
+2026-11-13T10:33:35.6397136Z  + jsonlines==4.0.0
+2026-11-13T10:33:35.6397441Z  + jsonschema==4.26.0
+2026-11-13T10:33:35.6397752Z  + jsonschema-specifications==2025.9.1
+2026-11-13T10:33:35.6398723Z  + kiwisolver==1.5.1
+2026-11-13T10:33:35.6399048Z  + lark==1.3.1
+2026-11-13T10:33:35.6399504Z  + latex2sympy2-extended==1.11.0
+2026-11-13T10:33:35.6399773Z  + llguidance==1.9.1
+2026-11-13T10:33:35.6399974Z  + llvmlite==0.47.0
+2026-11-13T10:33:35.6400214Z  + lm-eval==0.5.0.dev1
+2026-11-13T10:33:35.6400438Z  + logbook==1.10.1
+2026-11-13T10:33:35.6400690Z  + loguru==0.8.0
+2026-11-13T10:33:35.6400913Z  + lxml==7.0.0b1
+2026-11-13T10:33:35.6401118Z  + markdown-it-py==4.3.0
+2026-11-13T10:33:35.6401423Z  + markupsafe==3.0.4
+2026-11-13T10:33:35.6401645Z  + math-verify==0.9.0
+2026-11-13T10:33:35.6401931Z  + matplotlib==3.11.2
+2026-11-13T10:33:35.6402168Z  + matplotlib-inline==0.2.2
+2026-11-13T10:33:35.6402401Z  + mbstrdecoder==0.6.1
+2026-11-13T10:33:35.6402709Z  + mdurl==0.1.2
+2026-11-13T10:33:35.6402938Z  + mistral-common==1.13.1
+2026-11-13T10:33:35.6403195Z  + ml-dtypes==0.6.0
+2026-11-13T10:33:35.6403427Z  + modelscope==1.40.3
+2026-11-13T10:33:35.6403658Z  + modelscope-hub==0.7.1
+2026-11-13T10:33:35.6403912Z  + more-itertools==11.2.1
+2026-11-13T10:33:35.6404145Z  + mpmath==1.3.0
+2026-11-13T10:33:35.6404407Z  + msgfy==0.2.1
+2026-11-13T10:33:35.6404630Z  + msgspec==0.22.0
+2026-11-13T10:33:35.6404851Z  + multidict==7.2.1
+2026-11-13T10:33:35.6405088Z  + multiprocess==0.70.19
+2026-11-13T10:33:35.6405320Z  + narwhals==2.28.0
+2026-11-13T10:33:35.6405549Z  + nccl-extensions==0.2.0
+2026-11-13T10:33:35.6405804Z  + nccl4py==0.6.0
+2026-11-13T10:33:35.6406024Z  + nest-asyncio==1.6.0
+2026-11-13T10:33:35.6406243Z  + networkx==3.7
+2026-11-13T10:33:35.6406464Z  + ninja==1.13.2
+2026-11-13T10:33:35.6406709Z  + nltk==3.10.4
+2026-11-13T10:33:35.6406935Z  + numba==0.65.1
+2026-11-13T10:33:35.6407142Z  + numpy==2.3.5
+2026-11-13T10:33:35.6407361Z  + nvidia-cublas==13.1.1.3
+2026-11-13T10:33:35.6407620Z  + nvidia-cuda-cccl==13.3.5.0.6
+2026-11-13T10:33:35.6407896Z  + nvidia-cuda-crt==13.5.37
+2026-11-13T10:33:35.6408384Z  + nvidia-cuda-cupti==13.0.85
+2026-11-13T10:33:35.6408705Z  + nvidia-cuda-nvcc==13.5.37
+2026-11-13T10:33:35.6409048Z  + nvidia-cuda-nvrtc==13.0.88
+2026-11-13T10:33:35.6409311Z  + nvidia-cuda-runtime==13.0.96
+2026-11-13T10:33:35.6409597Z  + nvidia-cudnn-cu13==9.24.0.43
+2026-11-13T10:33:35.6409863Z  + nvidia-cudnn-frontend==1.32.3
+2026-11-13T10:33:35.6410112Z  + nvidia-cufft==12.0.0.61
+2026-11-13T10:33:35.6410334Z  + nvidia-cufile==1.15.1.6
+2026-11-13T10:33:35.6410616Z  + nvidia-curand==10.4.0.35
+2026-11-13T10:33:35.6410876Z  + nvidia-cusolver==12.0.4.66
+2026-11-13T10:33:35.6411127Z  + nvidia-cusparse==12.6.3.3
+2026-11-13T10:33:35.6411374Z  + nvidia-cusparselt-cu13==0.8.1
+2026-11-13T10:33:35.6411614Z  + nvidia-cutlass-dsl==4.8.0
+2026-11-13T10:33:35.6411901Z  + nvidia-cutlass-dsl-libs-base==4.8.0
+2026-11-13T10:33:35.6412195Z  + nvidia-cutlass-dsl-libs-core==4.8.0
+2026-11-13T10:33:35.6412469Z  + nvidia-cutlass-dsl-libs-cu12==4.8.0
+2026-11-13T10:33:35.6412748Z  + nvidia-cutlass-dsl-libs-cu13==4.8.0
+2026-11-13T10:33:35.6413020Z  + nvidia-mathdx==25.6.0
+2026-11-13T10:33:35.6413276Z  + nvidia-ml-py==13.615.71
+2026-11-13T10:33:35.6413524Z  + nvidia-nccl-cu13==2.30.7
+2026-11-13T10:33:35.6413766Z  + nvidia-nvjitlink==13.5.37
+2026-11-13T10:33:35.6414019Z  + nvidia-nvshmem-cu13==3.4.5
+2026-11-13T10:33:35.6414260Z  + nvidia-nvtx==13.0.85
+2026-11-13T10:33:35.6414498Z  + nvidia-nvvm==13.5.37
+2026-11-13T10:33:35.6414741Z  + nvshmem4py-cu13==0.4.1
+2026-11-13T10:33:35.6414962Z  + onnxruntime==1.31.1
+2026-11-13T10:33:35.6415209Z  + openai==2.8.0
+2026-11-13T10:33:35.6415457Z  + openai-harmony==0.0.4
+2026-11-13T10:33:35.6415709Z  + opentelemetry-api==1.45.2
+2026-11-13T10:33:35.6415957Z  + orjson==3.13.0
+2026-11-13T10:33:35.6416154Z  + outlines==0.1.11
+2026-11-13T10:33:35.6416393Z  + outlines-core==0.1.26
+2026-11-13T10:33:35.6416615Z  + pandas==2.3.3
+2026-11-13T10:33:35.6416835Z  + parameterized==0.9.0
+2026-11-13T10:33:35.6417084Z  + parso==0.8.7
+2026-11-13T10:33:35.6417315Z  + partial-json-parser==0.2.1.1.post7
+2026-11-13T10:33:35.6417599Z  + pathvalidate==3.3.1
+2026-11-13T10:33:35.6417846Z  + peft==0.21.3
+2026-11-13T10:33:35.6418239Z  + pexpect==4.9.0
+2026-11-13T10:33:35.6418499Z  + pillow==11.3.0
+2026-11-13T10:33:35.6418763Z  + pluggy==1.7.0
+2026-11-13T10:33:35.6419126Z  + polars==2.1.0
+2026-11-13T10:33:35.6419348Z  + polars-runtime-32==2.1.0
+2026-11-13T10:33:35.6419574Z  + portalocker==4.4.2
+2026-11-13T10:33:35.6419850Z  + prometheus-client==0.26.0
+2026-11-13T10:33:35.6420096Z  + prompt-toolkit==3.0.53
+2026-11-13T10:33:35.6420326Z  + propcache==0.5.4
+2026-11-13T10:33:35.6420581Z  + protobuf==7.37.0rc3
+2026-11-13T10:33:35.6420794Z  + psutil==7.2.2
+2026-11-13T10:33:35.6421045Z  + ptyprocess==0.7.0
+2026-11-13T10:33:35.6421264Z  + pure-eval==0.2.4
+2026-11-13T10:33:35.6421479Z  + py-cpuinfo==9.0.0
+2026-11-13T10:33:35.6421705Z  + py-spy==0.4.3
+2026-11-13T10:33:35.6421919Z  + pyarrow==26.0.1
+2026-11-13T10:33:35.6422226Z  + pybase64==1.5.2
+2026-11-13T10:33:35.6422445Z  + pycountry==26.2.16
+2026-11-13T10:33:35.6422654Z  + pycparser==3.12
+2026-11-13T10:33:35.6422929Z  + pycryptodomex==3.24.2
+2026-11-13T10:33:35.6423169Z  + pydantic==2.14.3
+2026-11-13T10:33:35.6423395Z  + pydantic-core==2.50.4
+2026-11-13T10:33:35.6423635Z  + pydantic-extra-types==2.11.1
+2026-11-13T10:33:35.6423900Z  + pygments==2.21.0
+2026-11-13T10:33:35.6424135Z  + pymupdf==2.1
+2026-11-13T10:33:35.6424370Z  + pymupdf-layout==2.1
+2026-11-13T10:33:35.6424591Z  + pymupdf4llm==2.1
+2026-11-13T10:33:35.6424817Z  + pyparsing==3.3.3
+2026-11-13T10:33:35.6425039Z  + pyproject-hooks==1.3.3
+2026-11-13T10:33:35.6425312Z  + pytablewriter==0.38.0
+2026-11-13T10:33:35.6425551Z  + pytest==9.2.0
+2026-11-13T10:33:35.6425767Z  + pytest-cov==7.1.0
+2026-11-13T10:33:35.6426004Z  + python-dateutil==2.9.0.post0
+2026-11-13T10:33:35.6426250Z  + python-multipart==0.0.33
+2026-11-13T10:33:35.6426489Z  + pytz==2026.6
+2026-11-13T10:33:35.6426711Z  + pyzmq==27.3.0
+2026-11-13T10:33:35.6426914Z  + quack-kernels==0.6.5
+2026-11-13T10:33:35.6427161Z  + referencing==0.37.0
+2026-11-13T10:33:35.6427385Z  + regex==2026.11.9
+2026-11-13T10:33:35.6427632Z  + requests==2.34.2
+2026-11-13T10:33:35.6427856Z  + rich==15.0.0
+2026-11-13T10:33:35.6428232Z  + rouge-score==0.1.2
+2026-11-13T10:33:35.6428599Z  + rpds-py==2026.9.1
+2026-11-13T10:33:35.6428833Z  + sacrebleu==2.6.0
+2026-11-13T10:33:35.6429066Z  + safetensors==0.9.0rc1
+2026-11-13T10:33:35.6429327Z  + scikit-learn==1.9.1
+2026-11-13T10:33:35.6429553Z  + scipy==1.18.1
+2026-11-13T10:33:35.6429800Z  + sentence-transformers==6.3.0
+2026-11-13T10:33:35.6430056Z  + sentencepiece==0.2.1
+2026-11-13T10:33:35.6430324Z  + setproctitle==1.3.8
+2026-11-13T10:33:35.6430577Z  + setuptools==84.2.1
+2026-11-13T10:33:35.6430813Z  + sgl-deep-ep==0.1.2.post1
+2026-11-13T10:33:35.6431070Z  + sgl-deep-gemm==0.2.8
+2026-11-13T10:33:35.6431301Z  + sgl-eval==0.1.3
+2026-11-13T10:33:35.6431524Z  + sgl-flash-mla==1.0.5
+2026-11-13T10:33:35.6431904Z  + sglang==0.0.0.dev2+gb3d89f703 (from file:///home/runner/work/sglang/sglang/python)
+2026-11-13T10:33:35.6432268Z  + sglang-kernel==0.4.10
+2026-11-13T10:33:35.6432497Z  + shellingham==1.5.4
+2026-11-13T10:33:35.6432759Z  + six==1.17.0
+2026-11-13T10:33:35.6432964Z  + smg-grpc-proto==0.5.0
+2026-11-13T10:33:35.6433242Z  + smg-grpc-servicer==0.16.0
+2026-11-13T10:33:35.6433475Z  + sniffio==1.3.1
+2026-11-13T10:33:35.6433694Z  + soundfile==0.13.1
+2026-11-13T10:33:35.6433922Z  + sqlitedict==2.1.0
+2026-11-13T10:33:35.6434139Z  + stack-data==0.6.3
+2026-11-13T10:33:35.6434383Z  + starlette==1.10.0
+2026-11-13T10:33:35.6434593Z  + sympy==1.14.0
+2026-11-13T10:33:35.6434790Z  + tabledata==0.0.26
+2026-11-13T10:33:35.6435054Z  + tabulate==0.10.0
+2026-11-13T10:33:35.6435264Z  + tenacity==9.2.1
+2026-11-13T10:33:35.6435508Z  + threadpoolctl==3.8.0
+2026-11-13T10:33:35.6435728Z  + tiktoken==0.14.0
+2026-11-13T10:33:35.6435924Z  + tilelang==0.1.12
+2026-11-13T10:33:35.6436154Z  + timm==1.0.25
+2026-11-13T10:33:35.6436366Z  + tml-renderers==0.1.0
+2026-11-13T10:33:35.6436595Z  + tokenizers==0.23.2
+2026-11-13T10:33:35.6436835Z  + torch==2.14.1
+2026-11-13T10:33:35.6437057Z  + torch-c-dlpack-ext==0.1.5
+2026-11-13T10:33:35.6437345Z  + torch-memory-saver==0.0.10
+2026-11-13T10:33:35.6437583Z  + torchaudio==2.11.0
+2026-11-13T10:33:35.6437905Z  + torchcodec==0.17.0
+2026-11-13T10:33:35.6438318Z  + torchvision==0.29.2
+2026-11-13T10:33:35.6438649Z  + tqdm==4.70.1
+2026-11-13T10:33:35.6438880Z  + traitlets==5.16.1
+2026-11-13T10:33:35.6439101Z  + transformers==5.19.0
+2026-11-13T10:33:35.6439326Z  + triton==3.8.0
+2026-11-13T10:33:35.6439566Z  + truststore==0.10.5
+2026-11-13T10:33:35.6439781Z  + typepy==0.3.1
+2026-11-13T10:33:35.6440113Z  + typer==0.29.1
+2026-11-13T10:33:35.6440325Z  + typing-extensions==4.16.0
+2026-11-13T10:33:35.6440573Z  + typing-inspection==0.4.5
+2026-11-13T10:33:35.6440821Z  + tzdata==2026.6
+2026-11-13T10:33:35.6441031Z  + urllib3==2.8.0
+2026-11-13T10:33:35.6441235Z  + uvicorn==0.54.0
+2026-11-13T10:33:35.6441452Z  + uvloop==0.23.0
+2026-11-13T10:33:35.6441742Z  + watchfiles==1.3.0
+2026-11-13T10:33:35.6442016Z  + wcwidth==0.9.4
+2026-11-13T10:33:35.6442222Z  + word2number==1.1
+2026-11-13T10:33:35.6442634Z  + xgrammar==0.2.7
+2026-11-13T10:33:35.6442865Z  + xxhash==4.1.0
+2026-11-13T10:33:35.6443066Z  + yarl==1.25.1
+2026-11-13T10:33:35.6443282Z  + z3-solver==4.15.4.0
+2026-11-13T10:33:35.6443497Z  + zstandard==0.25.0
+2026-11-13T10:33:36.3064709Z ##[group]Run python - <<'PY'
+2026-11-13T10:33:36.3065039Z [36;1mpython - <<'PY'[0m
+2026-11-13T10:33:36.3065289Z [36;1mimport inspect[0m
+2026-11-13T10:33:36.3065549Z [36;1mfrom pathlib import Path[0m
+2026-11-13T10:33:36.3065789Z [36;1mimport torch[0m
+2026-11-13T10:33:36.3066127Z [36;1mimport sglang.srt.multimodal.internvl_utils as common[0m
+2026-11-13T10:33:36.3066633Z [36;1massert Path(inspect.getfile(common)).resolve() == Path("python/sglang/srt/multimodal/internvl_utils.py").resolve()[0m
+2026-11-13T10:33:36.3067095Z [36;1massert not torch.cuda.is_available()[0m
+2026-11-13T10:33:36.3067524Z [36;1mprint("Native image sizing implementation:", inspect.getfile(common), "Torch:", torch.__version__)[0m
+2026-11-13T10:33:36.3067915Z [36;1mPY[0m
+2026-11-13T10:33:36.3068574Z [36;1mset -o pipefail[0m
+2026-11-13T10:33:36.3069245Z [36;1mpython -m pytest -q -p no:cacheprovider --junitxml=sglang-patched.xml test/registered/unit/multimodal/test_dynamic_image_patch_budget.py 2>&1 | tee sglang-patched.log[0m
+2026-11-13T10:33:36.3377108Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:33:36.3377431Z env:
+2026-11-13T10:33:36.3377661Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:33:36.3377934Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:33:36.3378379Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:33:36.3378605Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:33:36.3378858Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:33:36.3379142Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:36.3379523Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:33:36.3379947Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:36.3380279Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:36.3380632Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:36.3380967Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:33:36.3381266Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:33:36.3381549Z ##[endgroup]
+2026-11-13T10:33:43.3916980Z Native image sizing implementation: /home/runner/work/sglang/sglang/python/sglang/srt/multimodal/internvl_utils.py Torch: 2.14.1+cu130
+2026-11-13T10:33:46.7914157Z .......                                         [100%]
+2026-11-13T10:33:46.7914934Z 7 passed, 25 subtests passed in 2.11s
+2026-11-13T10:33:47.3196258Z ##[group]Run git show 5792cf6e5e11aebc62d41cf19828f615a8fa7e0a:python/sglang/srt/multimodal/internvl_utils.py > python/sglang/srt/multimodal/internvl_utils.py
+2026-11-13T10:33:47.3197128Z [36;1mgit show 5792cf6e5e11aebc62d41cf19828f615a8fa7e0a:python/sglang/srt/multimodal/internvl_utils.py > python/sglang/srt/multimodal/internvl_utils.py[0m
+2026-11-13T10:33:47.3197794Z [36;1mfind python/sglang/srt/multimodal/__pycache__ -name '*.pyc' -delete[0m
+2026-11-13T10:33:47.3225869Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:33:47.3226170Z env:
+2026-11-13T10:33:47.3226385Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:33:47.3226693Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:33:47.3227085Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:33:47.3227324Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:33:47.3227562Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:33:47.3227861Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:47.3228615Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:33:47.3229026Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:47.3229406Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:47.3229751Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:47.3230097Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:33:47.3230460Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:33:47.3230699Z ##[endgroup]
+2026-11-13T10:33:47.3353389Z ##[group]Run set +e
+2026-11-13T10:33:47.3353778Z [36;1mset +e[0m
+2026-11-13T10:33:47.3354616Z [36;1mpython -m pytest -q -p no:cacheprovider --junitxml=sglang-baseline.xml test/registered/unit/multimodal/test_dynamic_image_patch_budget.py > sglang-baseline.log 2>&1[0m
+2026-11-13T10:33:47.3355403Z [36;1mstatus=$?[0m
+2026-11-13T10:33:47.3355924Z [36;1mset -e[0m
+2026-11-13T10:33:47.3356256Z [36;1mcat sglang-baseline.log[0m
+2026-11-13T10:33:47.3356587Z [36;1mtest "$status" -eq 1[0m
+2026-11-13T10:33:47.3356915Z [36;1mpython - <<'PY'[0m
+2026-11-13T10:33:47.3357323Z [36;1mimport xml.etree.ElementTree as ET[0m
+2026-11-13T10:33:47.3357752Z [36;1mroot = ET.parse("sglang-baseline.xml").getroot()[0m
+2026-11-13T10:33:47.3358629Z [36;1massert not root.findall(".//error"), "Baseline must fail assertions, not imports."[0m
+2026-11-13T10:33:47.3359386Z [36;1mfailed = {case.attrib["name"] for case in root.findall(".//testcase") if case.find("failure") is not None}[0m
+2026-11-13T10:33:47.3361170Z [36;1mrequired = {"test_extreme_landscape_and_portrait_fit_the_patch_limit", "test_supported_downsampling_grids_keep_both_constraints", "test_non_grid_patch_limits_use_the_last_fitting_grid", "test_multiple_extreme_images_fit_the_prompt_token_budget", "test_real_resized_pixels_and_downsampled_grid_fit_the_budget"}[0m
+2026-11-13T10:33:47.3362591Z [36;1massert required <= failed, (required - failed, failed)[0m
+2026-11-13T10:33:47.3363193Z [36;1mprint("Confirmed original image patch-budget failures:", sorted(failed))[0m
+2026-11-13T10:33:47.3363729Z [36;1mPY[0m
+2026-11-13T10:33:47.3395627Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:33:47.3395990Z env:
+2026-11-13T10:33:47.3396409Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:33:47.3396791Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:33:47.3397172Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:33:47.3397513Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:33:47.3397822Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:33:47.3398478Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:47.3399057Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:33:47.3399623Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:47.3400152Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:47.3400661Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:47.3401198Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:33:47.3401675Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:33:47.3402035Z ##[endgroup]
+2026-11-13T10:33:50.3205276Z ..F....                                         [100%]
+2026-11-13T10:33:50.3205796Z =================================== FAILURES ===================================
+2026-11-13T10:33:50.3206574Z _ TestDynamicImagePatchBudget.test_extreme_landscape_and_portrait_fit_the_patch_limit (max_patches=4, portrait=False) _
+2026-11-13T10:33:50.3207062Z 
+2026-11-13T10:33:50.3207511Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_extreme_landscape_and_portrait_fit_the_patch_limit>
+2026-11-13T10:33:50.3208265Z 
+2026-11-13T10:33:50.3208486Z     def test_extreme_landscape_and_portrait_fit_the_patch_limit(self):
+2026-11-13T10:33:50.3209349Z         for max_patches in (4, 16, 64, 256):
+2026-11-13T10:33:50.3209643Z             for portrait in (False, True):
+2026-11-13T10:33:50.3209999Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3210356Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3210718Z                     result = compute_dynamic_image_size(*size, 16, 0.5, 4, max_patches)
+2026-11-13T10:33:50.3211130Z                     long_side = (max_patches // 2) * 16
+2026-11-13T10:33:50.3211398Z                     expected = (
+2026-11-13T10:33:50.3211694Z                         (32, long_side, max_patches // 4)
+2026-11-13T10:33:50.3211976Z                         if portrait
+2026-11-13T10:33:50.3212375Z                         else (long_side, 32, max_patches // 4)
+2026-11-13T10:33:50.3212686Z                     )
+2026-11-13T10:33:50.3212941Z >                   self.assertEqual(result, expected)
+2026-11-13T10:33:50.3213282Z E                   AssertionError: Tuples differ: (160, 32, 5) != (32, 32, 1)
+2026-11-13T10:33:50.3213624Z E                   
+2026-11-13T10:33:50.3213862Z E                   First differing element 0:
+2026-11-13T10:33:50.3214146Z E                   160
+2026-11-13T10:33:50.3214363Z E                   32
+2026-11-13T10:33:50.3214586Z E                   
+2026-11-13T10:33:50.3214814Z E                   - (160, 32, 5)
+2026-11-13T10:33:50.3215047Z E                   + (32, 32, 1)
+2026-11-13T10:33:50.3215227Z 
+2026-11-13T10:33:50.3215442Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:32: AssertionError
+2026-11-13T10:33:50.3215986Z _ TestDynamicImagePatchBudget.test_extreme_landscape_and_portrait_fit_the_patch_limit (max_patches=4, portrait=True) _
+2026-11-13T10:33:50.3216329Z 
+2026-11-13T10:33:50.3216690Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_extreme_landscape_and_portrait_fit_the_patch_limit>
+2026-11-13T10:33:50.3217055Z 
+2026-11-13T10:33:50.3217233Z     def test_extreme_landscape_and_portrait_fit_the_patch_limit(self):
+2026-11-13T10:33:50.3217545Z         for max_patches in (4, 16, 64, 256):
+2026-11-13T10:33:50.3217856Z             for portrait in (False, True):
+2026-11-13T10:33:50.3218405Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3218852Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3219251Z                     result = compute_dynamic_image_size(*size, 16, 0.5, 4, max_patches)
+2026-11-13T10:33:50.3219592Z                     long_side = (max_patches // 2) * 16
+2026-11-13T10:33:50.3219906Z                     expected = (
+2026-11-13T10:33:50.3220176Z                         (32, long_side, max_patches // 4)
+2026-11-13T10:33:50.3220460Z                         if portrait
+2026-11-13T10:33:50.3220740Z                         else (long_side, 32, max_patches // 4)
+2026-11-13T10:33:50.3221008Z                     )
+2026-11-13T10:33:50.3221291Z >                   self.assertEqual(result, expected)
+2026-11-13T10:33:50.3221650Z E                   AssertionError: Tuples differ: (32, 160, 5) != (32, 32, 1)
+2026-11-13T10:33:50.3221955Z E                   
+2026-11-13T10:33:50.3222195Z E                   First differing element 1:
+2026-11-13T10:33:50.3222456Z E                   160
+2026-11-13T10:33:50.3222700Z E                   32
+2026-11-13T10:33:50.3222915Z E                   
+2026-11-13T10:33:50.3223124Z E                   - (32, 160, 5)
+2026-11-13T10:33:50.3223386Z E                   + (32, 32, 1)
+2026-11-13T10:33:50.3223590Z 
+2026-11-13T10:33:50.3223779Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:32: AssertionError
+2026-11-13T10:33:50.3224387Z _ TestDynamicImagePatchBudget.test_extreme_landscape_and_portrait_fit_the_patch_limit (max_patches=16, portrait=False) _
+2026-11-13T10:33:50.3224717Z 
+2026-11-13T10:33:50.3225052Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_extreme_landscape_and_portrait_fit_the_patch_limit>
+2026-11-13T10:33:50.3225507Z 
+2026-11-13T10:33:50.3225671Z     def test_extreme_landscape_and_portrait_fit_the_patch_limit(self):
+2026-11-13T10:33:50.3226030Z         for max_patches in (4, 16, 64, 256):
+2026-11-13T10:33:50.3226299Z             for portrait in (False, True):
+2026-11-13T10:33:50.3226643Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3227027Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3227364Z                     result = compute_dynamic_image_size(*size, 16, 0.5, 4, max_patches)
+2026-11-13T10:33:50.3227726Z                     long_side = (max_patches // 2) * 16
+2026-11-13T10:33:50.3228165Z                     expected = (
+2026-11-13T10:33:50.3228634Z                         (32, long_side, max_patches // 4)
+2026-11-13T10:33:50.3228934Z                         if portrait
+2026-11-13T10:33:50.3229223Z                         else (long_side, 32, max_patches // 4)
+2026-11-13T10:33:50.3229521Z                     )
+2026-11-13T10:33:50.3229822Z >                   self.assertEqual(result, expected)
+2026-11-13T10:33:50.3230167Z E                   AssertionError: Tuples differ: (512, 32, 16) != (128, 32, 4)
+2026-11-13T10:33:50.3230492Z E                   
+2026-11-13T10:33:50.3230739Z E                   First differing element 0:
+2026-11-13T10:33:50.3231011Z E                   512
+2026-11-13T10:33:50.3231266Z E                   128
+2026-11-13T10:33:50.3231469Z E                   
+2026-11-13T10:33:50.3231710Z E                   - (512, 32, 16)
+2026-11-13T10:33:50.3231968Z E                   ?  -        ^^
+2026-11-13T10:33:50.3232241Z E                   
+2026-11-13T10:33:50.3232472Z E                   + (128, 32, 4)
+2026-11-13T10:33:50.3232700Z E                   ?    +      ^
+2026-11-13T10:33:50.3232843Z 
+2026-11-13T10:33:50.3233067Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:32: AssertionError
+2026-11-13T10:33:50.3233619Z _ TestDynamicImagePatchBudget.test_extreme_landscape_and_portrait_fit_the_patch_limit (max_patches=16, portrait=True) _
+2026-11-13T10:33:50.3233974Z 
+2026-11-13T10:33:50.3234341Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_extreme_landscape_and_portrait_fit_the_patch_limit>
+2026-11-13T10:33:50.3234778Z 
+2026-11-13T10:33:50.3234957Z     def test_extreme_landscape_and_portrait_fit_the_patch_limit(self):
+2026-11-13T10:33:50.3235278Z         for max_patches in (4, 16, 64, 256):
+2026-11-13T10:33:50.3235576Z             for portrait in (False, True):
+2026-11-13T10:33:50.3235901Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3236603Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3236993Z                     result = compute_dynamic_image_size(*size, 16, 0.5, 4, max_patches)
+2026-11-13T10:33:50.3237344Z                     long_side = (max_patches // 2) * 16
+2026-11-13T10:33:50.3237626Z                     expected = (
+2026-11-13T10:33:50.3237920Z                         (32, long_side, max_patches // 4)
+2026-11-13T10:33:50.3238383Z                         if portrait
+2026-11-13T10:33:50.3238691Z                         else (long_side, 32, max_patches // 4)
+2026-11-13T10:33:50.3238968Z                     )
+2026-11-13T10:33:50.3239228Z >                   self.assertEqual(result, expected)
+2026-11-13T10:33:50.3239555Z E                   AssertionError: Tuples differ: (32, 512, 16) != (32, 128, 4)
+2026-11-13T10:33:50.3239857Z E                   
+2026-11-13T10:33:50.3240129Z E                   First differing element 1:
+2026-11-13T10:33:50.3240411Z E                   512
+2026-11-13T10:33:50.3240642Z E                   128
+2026-11-13T10:33:50.3240858Z E                   
+2026-11-13T10:33:50.3241066Z E                   - (32, 512, 16)
+2026-11-13T10:33:50.3241347Z E                   ?      -    ^^
+2026-11-13T10:33:50.3241583Z E                   
+2026-11-13T10:33:50.3241800Z E                   + (32, 128, 4)
+2026-11-13T10:33:50.3242141Z E                   ?        +  ^
+2026-11-13T10:33:50.3242304Z 
+2026-11-13T10:33:50.3242494Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:32: AssertionError
+2026-11-13T10:33:50.3243103Z _ TestDynamicImagePatchBudget.test_extreme_landscape_and_portrait_fit_the_patch_limit (max_patches=64, portrait=False) _
+2026-11-13T10:33:50.3243431Z 
+2026-11-13T10:33:50.3243774Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_extreme_landscape_and_portrait_fit_the_patch_limit>
+2026-11-13T10:33:50.3244137Z 
+2026-11-13T10:33:50.3244313Z     def test_extreme_landscape_and_portrait_fit_the_patch_limit(self):
+2026-11-13T10:33:50.3244656Z         for max_patches in (4, 16, 64, 256):
+2026-11-13T10:33:50.3245050Z             for portrait in (False, True):
+2026-11-13T10:33:50.3245383Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3245750Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3246101Z                     result = compute_dynamic_image_size(*size, 16, 0.5, 4, max_patches)
+2026-11-13T10:33:50.3246449Z                     long_side = (max_patches // 2) * 16
+2026-11-13T10:33:50.3246740Z                     expected = (
+2026-11-13T10:33:50.3247012Z                         (32, long_side, max_patches // 4)
+2026-11-13T10:33:50.3247283Z                         if portrait
+2026-11-13T10:33:50.3247539Z                         else (long_side, 32, max_patches // 4)
+2026-11-13T10:33:50.3247833Z                     )
+2026-11-13T10:33:50.3248299Z >                   self.assertEqual(result, expected)
+2026-11-13T10:33:50.3248664Z E                   AssertionError: Tuples differ: (1440, 32, 45) != (512, 32, 16)
+2026-11-13T10:33:50.3248983Z E                   
+2026-11-13T10:33:50.3249206Z E                   First differing element 0:
+2026-11-13T10:33:50.3249482Z E                   1440
+2026-11-13T10:33:50.3249721Z E                   512
+2026-11-13T10:33:50.3249933Z E                   
+2026-11-13T10:33:50.3250161Z E                   - (1440, 32, 45)
+2026-11-13T10:33:50.3250403Z E                   + (512, 32, 16)
+2026-11-13T10:33:50.3250562Z 
+2026-11-13T10:33:50.3250794Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:32: AssertionError
+2026-11-13T10:33:50.3251357Z _ TestDynamicImagePatchBudget.test_extreme_landscape_and_portrait_fit_the_patch_limit (max_patches=64, portrait=True) _
+2026-11-13T10:33:50.3251690Z 
+2026-11-13T10:33:50.3252033Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_extreme_landscape_and_portrait_fit_the_patch_limit>
+2026-11-13T10:33:50.3252429Z 
+2026-11-13T10:33:50.3252576Z     def test_extreme_landscape_and_portrait_fit_the_patch_limit(self):
+2026-11-13T10:33:50.3252910Z         for max_patches in (4, 16, 64, 256):
+2026-11-13T10:33:50.3253192Z             for portrait in (False, True):
+2026-11-13T10:33:50.3253551Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3253898Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3254261Z                     result = compute_dynamic_image_size(*size, 16, 0.5, 4, max_patches)
+2026-11-13T10:33:50.3254608Z                     long_side = (max_patches // 2) * 16
+2026-11-13T10:33:50.3254885Z                     expected = (
+2026-11-13T10:33:50.3255161Z                         (32, long_side, max_patches // 4)
+2026-11-13T10:33:50.3255419Z                         if portrait
+2026-11-13T10:33:50.3255769Z                         else (long_side, 32, max_patches // 4)
+2026-11-13T10:33:50.3256075Z                     )
+2026-11-13T10:33:50.3256328Z >                   self.assertEqual(result, expected)
+2026-11-13T10:33:50.3256683Z E                   AssertionError: Tuples differ: (32, 1440, 45) != (32, 512, 16)
+2026-11-13T10:33:50.3256980Z E                   
+2026-11-13T10:33:50.3257237Z E                   First differing element 1:
+2026-11-13T10:33:50.3257644Z E                   1440
+2026-11-13T10:33:50.3257870Z E                   512
+2026-11-13T10:33:50.3258278Z E                   
+2026-11-13T10:33:50.3258503Z E                   - (32, 1440, 45)
+2026-11-13T10:33:50.3258793Z E                   + (32, 512, 16)
+2026-11-13T10:33:50.3258926Z 
+2026-11-13T10:33:50.3259145Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:32: AssertionError
+2026-11-13T10:33:50.3259715Z _ TestDynamicImagePatchBudget.test_extreme_landscape_and_portrait_fit_the_patch_limit (max_patches=256, portrait=False) _
+2026-11-13T10:33:50.3260082Z 
+2026-11-13T10:33:50.3260382Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_extreme_landscape_and_portrait_fit_the_patch_limit>
+2026-11-13T10:33:50.3260791Z 
+2026-11-13T10:33:50.3261002Z     def test_extreme_landscape_and_portrait_fit_the_patch_limit(self):
+2026-11-13T10:33:50.3261340Z         for max_patches in (4, 16, 64, 256):
+2026-11-13T10:33:50.3261642Z             for portrait in (False, True):
+2026-11-13T10:33:50.3261990Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3262343Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3262697Z                     result = compute_dynamic_image_size(*size, 16, 0.5, 4, max_patches)
+2026-11-13T10:33:50.3263051Z                     long_side = (max_patches // 2) * 16
+2026-11-13T10:33:50.3263322Z                     expected = (
+2026-11-13T10:33:50.3263590Z                         (32, long_side, max_patches // 4)
+2026-11-13T10:33:50.3263887Z                         if portrait
+2026-11-13T10:33:50.3264187Z                         else (long_side, 32, max_patches // 4)
+2026-11-13T10:33:50.3264476Z                     )
+2026-11-13T10:33:50.3264719Z >                   self.assertEqual(result, expected)
+2026-11-13T10:33:50.3265062Z E                   AssertionError: Tuples differ: (4096, 32, 128) != (2048, 32, 64)
+2026-11-13T10:33:50.3265401Z E                   
+2026-11-13T10:33:50.3265640Z E                   First differing element 0:
+2026-11-13T10:33:50.3265900Z E                   4096
+2026-11-13T10:33:50.3266181Z E                   2048
+2026-11-13T10:33:50.3266417Z E                   
+2026-11-13T10:33:50.3266677Z E                   - (4096, 32, 128)
+2026-11-13T10:33:50.3266923Z E                   + (2048, 32, 64)
+2026-11-13T10:33:50.3267056Z 
+2026-11-13T10:33:50.3267274Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:32: AssertionError
+2026-11-13T10:33:50.3267831Z _ TestDynamicImagePatchBudget.test_extreme_landscape_and_portrait_fit_the_patch_limit (max_patches=256, portrait=True) _
+2026-11-13T10:33:50.3268369Z 
+2026-11-13T10:33:50.3268789Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_extreme_landscape_and_portrait_fit_the_patch_limit>
+2026-11-13T10:33:50.3269210Z 
+2026-11-13T10:33:50.3269374Z     def test_extreme_landscape_and_portrait_fit_the_patch_limit(self):
+2026-11-13T10:33:50.3269749Z         for max_patches in (4, 16, 64, 256):
+2026-11-13T10:33:50.3270031Z             for portrait in (False, True):
+2026-11-13T10:33:50.3270370Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3270762Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3271129Z                     result = compute_dynamic_image_size(*size, 16, 0.5, 4, max_patches)
+2026-11-13T10:33:50.3271488Z                     long_side = (max_patches // 2) * 16
+2026-11-13T10:33:50.3271757Z                     expected = (
+2026-11-13T10:33:50.3272096Z                         (32, long_side, max_patches // 4)
+2026-11-13T10:33:50.3272382Z                         if portrait
+2026-11-13T10:33:50.3272674Z                         else (long_side, 32, max_patches // 4)
+2026-11-13T10:33:50.3272949Z                     )
+2026-11-13T10:33:50.3273184Z >                   self.assertEqual(result, expected)
+2026-11-13T10:33:50.3273543Z E                   AssertionError: Tuples differ: (32, 4096, 128) != (32, 2048, 64)
+2026-11-13T10:33:50.3273966Z E                   
+2026-11-13T10:33:50.3274208Z E                   First differing element 1:
+2026-11-13T10:33:50.3274482Z E                   4096
+2026-11-13T10:33:50.3274728Z E                   2048
+2026-11-13T10:33:50.3274991Z E                   
+2026-11-13T10:33:50.3275213Z E                   - (32, 4096, 128)
+2026-11-13T10:33:50.3275469Z E                   + (32, 2048, 64)
+2026-11-13T10:33:50.3275615Z 
+2026-11-13T10:33:50.3275838Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:32: AssertionError
+2026-11-13T10:33:50.3276335Z _ TestDynamicImagePatchBudget.test_multiple_extreme_images_fit_the_prompt_token_budget _
+2026-11-13T10:33:50.3276689Z 
+2026-11-13T10:33:50.3277096Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_multiple_extreme_images_fit_the_prompt_token_budget>
+2026-11-13T10:33:50.3277507Z 
+2026-11-13T10:33:50.3277691Z     def test_multiple_extreme_images_fit_the_prompt_token_budget(self):
+2026-11-13T10:33:50.3278171Z         sizes = [(16384, 16), (16, 16384)]
+2026-11-13T10:33:50.3278523Z         original_sizes = sizes.copy()
+2026-11-13T10:33:50.3278854Z         results = compute_budgeted_image_sizes(sizes, 128, 16, 0.5, 4, 512)
+2026-11-13T10:33:50.3279253Z >       self.assertEqual(results, [(2048, 32, 64), (32, 2048, 64)])
+2026-11-13T10:33:50.3279681Z E       AssertionError: Lists differ: [(4096, 32, 128), (32, 4096, 128)] != [(2048, 32, 64), (32, 2048, 64)]
+2026-11-13T10:33:50.3280034Z E       
+2026-11-13T10:33:50.3280305Z E       First differing element 0:
+2026-11-13T10:33:50.3280552Z E       (4096, 32, 128)
+2026-11-13T10:33:50.3280808Z E       (2048, 32, 64)
+2026-11-13T10:33:50.3281030Z E       
+2026-11-13T10:33:50.3281236Z E       - [(4096, 32, 128), (32, 4096, 128)]
+2026-11-13T10:33:50.3281525Z E       + [(2048, 32, 64), (32, 2048, 64)]
+2026-11-13T10:33:50.3281697Z 
+2026-11-13T10:33:50.3281890Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:66: AssertionError
+2026-11-13T10:33:50.3282468Z _ TestDynamicImagePatchBudget.test_non_grid_patch_limits_use_the_last_fitting_grid (max_patches=17, portrait=False) _
+2026-11-13T10:33:50.3282842Z 
+2026-11-13T10:33:50.3283177Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_non_grid_patch_limits_use_the_last_fitting_grid>
+2026-11-13T10:33:50.3283539Z 
+2026-11-13T10:33:50.3283700Z     def test_non_grid_patch_limits_use_the_last_fitting_grid(self):
+2026-11-13T10:33:50.3284049Z         for max_patches in (17, 63, 255):
+2026-11-13T10:33:50.3284325Z             for portrait in (False, True):
+2026-11-13T10:33:50.3284678Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3285060Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3285398Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:33:50.3285758Z                         *size, 16, 0.5, 4, max_patches
+2026-11-13T10:33:50.3286041Z                     )
+2026-11-13T10:33:50.3286296Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:33:50.3286651Z >                   self.assertEqual(patches, max_patches // 4 * 4)
+2026-11-13T10:33:50.3287009Z E                   AssertionError: 64 != 16
+2026-11-13T10:33:50.3287183Z 
+2026-11-13T10:33:50.3287378Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:58: AssertionError
+2026-11-13T10:33:50.3287911Z _ TestDynamicImagePatchBudget.test_non_grid_patch_limits_use_the_last_fitting_grid (max_patches=17, portrait=True) _
+2026-11-13T10:33:50.3288443Z 
+2026-11-13T10:33:50.3288774Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_non_grid_patch_limits_use_the_last_fitting_grid>
+2026-11-13T10:33:50.3289147Z 
+2026-11-13T10:33:50.3289309Z     def test_non_grid_patch_limits_use_the_last_fitting_grid(self):
+2026-11-13T10:33:50.3289633Z         for max_patches in (17, 63, 255):
+2026-11-13T10:33:50.3289909Z             for portrait in (False, True):
+2026-11-13T10:33:50.3290321Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3290654Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3290999Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:33:50.3291353Z                         *size, 16, 0.5, 4, max_patches
+2026-11-13T10:33:50.3291626Z                     )
+2026-11-13T10:33:50.3291885Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:33:50.3292179Z >                   self.assertEqual(patches, max_patches // 4 * 4)
+2026-11-13T10:33:50.3292498Z E                   AssertionError: 64 != 16
+2026-11-13T10:33:50.3292673Z 
+2026-11-13T10:33:50.3292901Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:58: AssertionError
+2026-11-13T10:33:50.3293439Z _ TestDynamicImagePatchBudget.test_non_grid_patch_limits_use_the_last_fitting_grid (max_patches=63, portrait=False) _
+2026-11-13T10:33:50.3293818Z 
+2026-11-13T10:33:50.3294144Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_non_grid_patch_limits_use_the_last_fitting_grid>
+2026-11-13T10:33:50.3294493Z 
+2026-11-13T10:33:50.3294631Z     def test_non_grid_patch_limits_use_the_last_fitting_grid(self):
+2026-11-13T10:33:50.3411625Z         for max_patches in (17, 63, 255):
+2026-11-13T10:33:50.3411982Z             for portrait in (False, True):
+2026-11-13T10:33:50.3412356Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3412754Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3413114Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:33:50.3413406Z                         *size, 16, 0.5, 4, max_patches
+2026-11-13T10:33:50.3413637Z                     )
+2026-11-13T10:33:50.3413826Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:33:50.3414096Z >                   self.assertEqual(patches, max_patches // 4 * 4)
+2026-11-13T10:33:50.3414346Z E                   AssertionError: 176 != 60
+2026-11-13T10:33:50.3414574Z 
+2026-11-13T10:33:50.3414763Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:58: AssertionError
+2026-11-13T10:33:50.3415252Z _ TestDynamicImagePatchBudget.test_non_grid_patch_limits_use_the_last_fitting_grid (max_patches=63, portrait=True) _
+2026-11-13T10:33:50.3415619Z 
+2026-11-13T10:33:50.3415898Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_non_grid_patch_limits_use_the_last_fitting_grid>
+2026-11-13T10:33:50.3416261Z 
+2026-11-13T10:33:50.3416390Z     def test_non_grid_patch_limits_use_the_last_fitting_grid(self):
+2026-11-13T10:33:50.3416651Z         for max_patches in (17, 63, 255):
+2026-11-13T10:33:50.3416850Z             for portrait in (False, True):
+2026-11-13T10:33:50.3417119Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3417412Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3417671Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:33:50.3417919Z                         *size, 16, 0.5, 4, max_patches
+2026-11-13T10:33:50.3418294Z                     )
+2026-11-13T10:33:50.3418496Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:33:50.3418740Z >                   self.assertEqual(patches, max_patches // 4 * 4)
+2026-11-13T10:33:50.3418980Z E                   AssertionError: 176 != 60
+2026-11-13T10:33:50.3419109Z 
+2026-11-13T10:33:50.3419288Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:58: AssertionError
+2026-11-13T10:33:50.3419779Z _ TestDynamicImagePatchBudget.test_non_grid_patch_limits_use_the_last_fitting_grid (max_patches=255, portrait=False) _
+2026-11-13T10:33:50.3420087Z 
+2026-11-13T10:33:50.3420365Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_non_grid_patch_limits_use_the_last_fitting_grid>
+2026-11-13T10:33:50.3420900Z 
+2026-11-13T10:33:50.3421015Z     def test_non_grid_patch_limits_use_the_last_fitting_grid(self):
+2026-11-13T10:33:50.3421278Z         for max_patches in (17, 63, 255):
+2026-11-13T10:33:50.3421482Z             for portrait in (False, True):
+2026-11-13T10:33:50.3421740Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3422018Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3422276Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:33:50.3422518Z                         *size, 16, 0.5, 4, max_patches
+2026-11-13T10:33:50.3422756Z                     )
+2026-11-13T10:33:50.3422981Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:33:50.3423224Z >                   self.assertEqual(patches, max_patches // 4 * 4)
+2026-11-13T10:33:50.3423469Z E                   AssertionError: 508 != 252
+2026-11-13T10:33:50.3423603Z 
+2026-11-13T10:33:50.3423779Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:58: AssertionError
+2026-11-13T10:33:50.3424256Z _ TestDynamicImagePatchBudget.test_non_grid_patch_limits_use_the_last_fitting_grid (max_patches=255, portrait=True) _
+2026-11-13T10:33:50.3424567Z 
+2026-11-13T10:33:50.3424845Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_non_grid_patch_limits_use_the_last_fitting_grid>
+2026-11-13T10:33:50.3425208Z 
+2026-11-13T10:33:50.3425324Z     def test_non_grid_patch_limits_use_the_last_fitting_grid(self):
+2026-11-13T10:33:50.3425568Z         for max_patches in (17, 63, 255):
+2026-11-13T10:33:50.3425773Z             for portrait in (False, True):
+2026-11-13T10:33:50.3426038Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:33:50.3426317Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:33:50.3426561Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:33:50.3426795Z                         *size, 16, 0.5, 4, max_patches
+2026-11-13T10:33:50.3426985Z                     )
+2026-11-13T10:33:50.3427160Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:33:50.3427402Z >                   self.assertEqual(patches, max_patches // 4 * 4)
+2026-11-13T10:33:50.3427629Z E                   AssertionError: 508 != 252
+2026-11-13T10:33:50.3427759Z 
+2026-11-13T10:33:50.3427930Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:58: AssertionError
+2026-11-13T10:33:50.3428660Z _ TestDynamicImagePatchBudget.test_real_resized_pixels_and_downsampled_grid_fit_the_budget (mode='RGB') _
+2026-11-13T10:33:50.3428947Z 
+2026-11-13T10:33:50.3429268Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_real_resized_pixels_and_downsampled_grid_fit_the_budget>
+2026-11-13T10:33:50.3429648Z 
+2026-11-13T10:33:50.3429785Z     def test_real_resized_pixels_and_downsampled_grid_fit_the_budget(self):
+2026-11-13T10:33:50.3430087Z         for mode, size in (("RGB", (16384, 1)), ("L", (1, 16384))):
+2026-11-13T10:33:50.3430320Z             with self.subTest(mode=mode):
+2026-11-13T10:33:50.3430544Z                 image = Image.new(mode, size, color=127)
+2026-11-13T10:33:50.3430766Z                 original = image.tobytes()
+2026-11-13T10:33:50.3431004Z                 ((width, height, tokens),) = compute_budgeted_image_sizes(
+2026-11-13T10:33:50.3431255Z                     [image.size], 64, 16, 0.5, 4, 256
+2026-11-13T10:33:50.3431441Z                 )
+2026-11-13T10:33:50.3431601Z                 pixels = resize_image_to_pixels(
+2026-11-13T10:33:50.3431833Z                     image, width, height, mean=(0, 0, 0), std=(1, 1, 1)
+2026-11-13T10:33:50.3432058Z                 )
+2026-11-13T10:33:50.3432261Z                 self.assertEqual(pixels.shape, (1, 3, height, width))
+2026-11-13T10:33:50.3432544Z >               self.assertLessEqual(pixels.numel(), 3 * 16 * 16 * 256)
+2026-11-13T10:33:50.3432899Z E               AssertionError: 393216 not less than or equal to 196608
+2026-11-13T10:33:50.3433064Z 
+2026-11-13T10:33:50.3433238Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:82: AssertionError
+2026-11-13T10:33:50.3433734Z _ TestDynamicImagePatchBudget.test_real_resized_pixels_and_downsampled_grid_fit_the_budget (mode='L') _
+2026-11-13T10:33:50.3434018Z 
+2026-11-13T10:33:50.3434328Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_real_resized_pixels_and_downsampled_grid_fit_the_budget>
+2026-11-13T10:33:50.3434711Z 
+2026-11-13T10:33:50.3434845Z     def test_real_resized_pixels_and_downsampled_grid_fit_the_budget(self):
+2026-11-13T10:33:50.3435142Z         for mode, size in (("RGB", (16384, 1)), ("L", (1, 16384))):
+2026-11-13T10:33:50.3435416Z             with self.subTest(mode=mode):
+2026-11-13T10:33:50.3435635Z                 image = Image.new(mode, size, color=127)
+2026-11-13T10:33:50.3435847Z                 original = image.tobytes()
+2026-11-13T10:33:50.3436087Z                 ((width, height, tokens),) = compute_budgeted_image_sizes(
+2026-11-13T10:33:50.3436333Z                     [image.size], 64, 16, 0.5, 4, 256
+2026-11-13T10:33:50.3436525Z                 )
+2026-11-13T10:33:50.3436694Z                 pixels = resize_image_to_pixels(
+2026-11-13T10:33:50.3436928Z                     image, width, height, mean=(0, 0, 0), std=(1, 1, 1)
+2026-11-13T10:33:50.3437144Z                 )
+2026-11-13T10:33:50.3437341Z                 self.assertEqual(pixels.shape, (1, 3, height, width))
+2026-11-13T10:33:50.3437631Z >               self.assertLessEqual(pixels.numel(), 3 * 16 * 16 * 256)
+2026-11-13T10:33:50.3437910Z E               AssertionError: 393216 not less than or equal to 196608
+2026-11-13T10:33:50.3438192Z 
+2026-11-13T10:33:50.3438416Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:82: AssertionError
+2026-11-13T10:33:50.3438905Z _ TestDynamicImagePatchBudget.test_supported_downsampling_grids_keep_both_constraints (ds=1, portrait=False) _
+2026-11-13T10:33:50.3439215Z 
+2026-11-13T10:33:50.3439516Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_supported_downsampling_grids_keep_both_constraints>
+2026-11-13T10:33:50.3439865Z 
+2026-11-13T10:33:50.3439992Z     def test_supported_downsampling_grids_keep_both_constraints(self):
+2026-11-13T10:33:50.3440285Z         for ds in (1, 2, 4):
+2026-11-13T10:33:50.3440509Z             for portrait in (False, True):
+2026-11-13T10:33:50.3440732Z                 with self.subTest(ds=ds, portrait=portrait):
+2026-11-13T10:33:50.3440997Z                     size = (1, 16384) if portrait else (16384, 1)
+2026-11-13T10:33:50.3441250Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:33:50.3441495Z                         *size, 16, 1 / ds, ds * ds, 256
+2026-11-13T10:33:50.3441691Z                     )
+2026-11-13T10:33:50.3441880Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:33:50.3442113Z >                   self.assertLessEqual(patches, 256)
+2026-11-13T10:33:50.3442364Z E                   AssertionError: 362 not less than or equal to 256
+2026-11-13T10:33:50.3442527Z 
+2026-11-13T10:33:50.3442700Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:43: AssertionError
+2026-11-13T10:33:50.3443174Z _ TestDynamicImagePatchBudget.test_supported_downsampling_grids_keep_both_constraints (ds=1, portrait=True) _
+2026-11-13T10:33:50.3443473Z 
+2026-11-13T10:33:50.3443768Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_supported_downsampling_grids_keep_both_constraints>
+2026-11-13T10:33:50.3444173Z 
+2026-11-13T10:33:50.3444298Z     def test_supported_downsampling_grids_keep_both_constraints(self):
+2026-11-13T10:33:50.3444557Z         for ds in (1, 2, 4):
+2026-11-13T10:33:50.3444742Z             for portrait in (False, True):
+2026-11-13T10:33:50.3444982Z                 with self.subTest(ds=ds, portrait=portrait):
+2026-11-13T10:33:50.3445219Z                     size = (1, 16384) if portrait else (16384, 1)
+2026-11-13T10:33:50.3445542Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:33:50.3445799Z                         *size, 16, 1 / ds, ds * ds, 256
+2026-11-13T10:33:50.3446011Z                     )
+2026-11-13T10:33:50.3446192Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:33:50.3446427Z >                   self.assertLessEqual(patches, 256)
+2026-11-13T10:33:50.3446677Z E                   AssertionError: 362 not less than or equal to 256
+2026-11-13T10:33:50.3446849Z 
+2026-11-13T10:33:50.3447024Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:43: AssertionError
+2026-11-13T10:33:50.3447524Z _ TestDynamicImagePatchBudget.test_supported_downsampling_grids_keep_both_constraints (ds=2, portrait=False) _
+2026-11-13T10:33:50.3447812Z 
+2026-11-13T10:33:50.3448254Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_supported_downsampling_grids_keep_both_constraints>
+2026-11-13T10:33:50.3448609Z 
+2026-11-13T10:33:50.3448734Z     def test_supported_downsampling_grids_keep_both_constraints(self):
+2026-11-13T10:33:50.3448995Z         for ds in (1, 2, 4):
+2026-11-13T10:33:50.3449183Z             for portrait in (False, True):
+2026-11-13T10:33:50.3449415Z                 with self.subTest(ds=ds, portrait=portrait):
+2026-11-13T10:33:50.3449674Z                     size = (1, 16384) if portrait else (16384, 1)
+2026-11-13T10:33:50.3449952Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:33:50.3450194Z                         *size, 16, 1 / ds, ds * ds, 256
+2026-11-13T10:33:50.3450382Z                     )
+2026-11-13T10:33:50.3450562Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:33:50.3450791Z >                   self.assertLessEqual(patches, 256)
+2026-11-13T10:33:50.3451027Z E                   AssertionError: 512 not less than or equal to 256
+2026-11-13T10:33:50.3451197Z 
+2026-11-13T10:33:50.3451366Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:43: AssertionError
+2026-11-13T10:33:50.3451859Z _ TestDynamicImagePatchBudget.test_supported_downsampling_grids_keep_both_constraints (ds=2, portrait=True) _
+2026-11-13T10:33:50.3452145Z 
+2026-11-13T10:33:50.3452437Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_supported_downsampling_grids_keep_both_constraints>
+2026-11-13T10:33:50.3452785Z 
+2026-11-13T10:33:50.3452919Z     def test_supported_downsampling_grids_keep_both_constraints(self):
+2026-11-13T10:33:50.3453159Z         for ds in (1, 2, 4):
+2026-11-13T10:33:50.3453338Z             for portrait in (False, True):
+2026-11-13T10:33:50.3453552Z                 with self.subTest(ds=ds, portrait=portrait):
+2026-11-13T10:33:50.3453795Z                     size = (1, 16384) if portrait else (16384, 1)
+2026-11-13T10:33:50.3454064Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:33:50.3454302Z                         *size, 16, 1 / ds, ds * ds, 256
+2026-11-13T10:33:50.3454509Z                     )
+2026-11-13T10:33:50.3454679Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:33:50.3454922Z >                   self.assertLessEqual(patches, 256)
+2026-11-13T10:33:50.3455180Z E                   AssertionError: 512 not less than or equal to 256
+2026-11-13T10:33:50.3455352Z 
+2026-11-13T10:33:50.3455517Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:43: AssertionError
+2026-11-13T10:33:50.3456085Z _ TestDynamicImagePatchBudget.test_supported_downsampling_grids_keep_both_constraints (ds=4, portrait=False) _
+2026-11-13T10:33:50.3456617Z 
+2026-11-13T10:33:50.3457004Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_supported_downsampling_grids_keep_both_constraints>
+2026-11-13T10:33:50.3457441Z 
+2026-11-13T10:33:50.3457619Z     def test_supported_downsampling_grids_keep_both_constraints(self):
+2026-11-13T10:33:50.3457901Z         for ds in (1, 2, 4):
+2026-11-13T10:33:50.3458277Z             for portrait in (False, True):
+2026-11-13T10:33:50.3458511Z                 with self.subTest(ds=ds, portrait=portrait):
+2026-11-13T10:33:50.3458764Z                     size = (1, 16384) if portrait else (16384, 1)
+2026-11-13T10:33:50.3459017Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:33:50.3459268Z                         *size, 16, 1 / ds, ds * ds, 256
+2026-11-13T10:33:50.3459488Z                     )
+2026-11-13T10:33:50.3459678Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:33:50.3459915Z >                   self.assertLessEqual(patches, 256)
+2026-11-13T10:33:50.3460166Z E                   AssertionError: 720 not less than or equal to 256
+2026-11-13T10:33:50.3460331Z 
+2026-11-13T10:33:50.3460599Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:43: AssertionError
+2026-11-13T10:33:50.3461070Z _ TestDynamicImagePatchBudget.test_supported_downsampling_grids_keep_both_constraints (ds=4, portrait=True) _
+2026-11-13T10:33:50.3461385Z 
+2026-11-13T10:33:50.3461680Z self = <test_dynamic_image_patch_budget.TestDynamicImagePatchBudget testMethod=test_supported_downsampling_grids_keep_both_constraints>
+2026-11-13T10:33:50.3462038Z 
+2026-11-13T10:33:50.3462182Z     def test_supported_downsampling_grids_keep_both_constraints(self):
+2026-11-13T10:33:50.3462446Z         for ds in (1, 2, 4):
+2026-11-13T10:33:50.3462638Z             for portrait in (False, True):
+2026-11-13T10:33:50.3462876Z                 with self.subTest(ds=ds, portrait=portrait):
+2026-11-13T10:33:50.3463129Z                     size = (1, 16384) if portrait else (16384, 1)
+2026-11-13T10:33:50.3463385Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:33:50.3463639Z                         *size, 16, 1 / ds, ds * ds, 256
+2026-11-13T10:33:50.3463851Z                     )
+2026-11-13T10:33:50.3464049Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:33:50.3464282Z >                   self.assertLessEqual(patches, 256)
+2026-11-13T10:33:50.3464534Z E                   AssertionError: 720 not less than or equal to 256
+2026-11-13T10:33:50.3464694Z 
+2026-11-13T10:33:50.3464866Z test/registered/unit/multimodal/test_dynamic_image_patch_budget.py:43: AssertionError
+2026-11-13T10:33:50.3465243Z =========================== short test summary info ============================
+2026-11-13T10:33:50.3465996Z SUBFAILED(max_patches=4, portrait=False) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_extreme_landscape_and_portrait_fit_the_patch_limit - AssertionError: Tuples differ: (160, 32, 5) != (32, 32, 1)
+2026-11-13T10:33:50.3466615Z 
+2026-11-13T10:33:50.3466685Z First differing element 0:
+2026-11-13T10:33:50.3466853Z 160
+2026-11-13T10:33:50.3466994Z 32
+2026-11-13T10:33:50.3467064Z 
+2026-11-13T10:33:50.3467121Z - (160, 32, 5)
+2026-11-13T10:33:50.3467261Z + (32, 32, 1)
+2026-11-13T10:33:50.3467864Z SUBFAILED(max_patches=4, portrait=True) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_extreme_landscape_and_portrait_fit_the_patch_limit - AssertionError: Tuples differ: (32, 160, 5) != (32, 32, 1)
+2026-11-13T10:33:50.3468645Z 
+2026-11-13T10:33:50.3468717Z First differing element 1:
+2026-11-13T10:33:50.3468876Z 160
+2026-11-13T10:33:50.3469008Z 32
+2026-11-13T10:33:50.3469088Z 
+2026-11-13T10:33:50.3469151Z - (32, 160, 5)
+2026-11-13T10:33:50.3469295Z + (32, 32, 1)
+2026-11-13T10:33:50.3469910Z SUBFAILED(max_patches=16, portrait=False) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_extreme_landscape_and_portrait_fit_the_patch_limit - AssertionError: Tuples differ: (512, 32, 16) != (128, 32, 4)
+2026-11-13T10:33:50.3470526Z 
+2026-11-13T10:33:50.3470600Z First differing element 0:
+2026-11-13T10:33:50.3470768Z 512
+2026-11-13T10:33:50.3470889Z 128
+2026-11-13T10:33:50.3470964Z 
+2026-11-13T10:33:50.3471016Z - (512, 32, 16)
+2026-11-13T10:33:50.3471149Z ?  -        ^^
+2026-11-13T10:33:50.3471286Z 
+2026-11-13T10:33:50.3471338Z + (128, 32, 4)
+2026-11-13T10:33:50.3471470Z ?    +      ^
+2026-11-13T10:33:50.3472071Z SUBFAILED(max_patches=16, portrait=True) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_extreme_landscape_and_portrait_fit_the_patch_limit - AssertionError: Tuples differ: (32, 512, 16) != (32, 128, 4)
+2026-11-13T10:33:50.3472665Z 
+2026-11-13T10:33:50.3472733Z First differing element 1:
+2026-11-13T10:33:50.3472886Z 512
+2026-11-13T10:33:50.3473009Z 128
+2026-11-13T10:33:50.3473079Z 
+2026-11-13T10:33:50.3473133Z - (32, 512, 16)
+2026-11-13T10:33:50.3473267Z ?      -    ^^
+2026-11-13T10:33:50.3473350Z 
+2026-11-13T10:33:50.3473402Z + (32, 128, 4)
+2026-11-13T10:33:50.3473537Z ?        +  ^
+2026-11-13T10:33:50.3474194Z SUBFAILED(max_patches=64, portrait=False) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_extreme_landscape_and_portrait_fit_the_patch_limit - AssertionError: Tuples differ: (1440, 32, 45) != (512, 32, 16)
+2026-11-13T10:33:50.3474795Z 
+2026-11-13T10:33:50.3474867Z First differing element 0:
+2026-11-13T10:33:50.3475023Z 1440
+2026-11-13T10:33:50.3475150Z 512
+2026-11-13T10:33:50.3475224Z 
+2026-11-13T10:33:50.3475278Z - (1440, 32, 45)
+2026-11-13T10:33:50.3475415Z + (512, 32, 16)
+2026-11-13T10:33:50.3476027Z SUBFAILED(max_patches=64, portrait=True) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_extreme_landscape_and_portrait_fit_the_patch_limit - AssertionError: Tuples differ: (32, 1440, 45) != (32, 512, 16)
+2026-11-13T10:33:50.3476610Z 
+2026-11-13T10:33:50.3476679Z First differing element 1:
+2026-11-13T10:33:50.3476840Z 1440
+2026-11-13T10:33:50.3476965Z 512
+2026-11-13T10:33:50.3477038Z 
+2026-11-13T10:33:50.3477094Z - (32, 1440, 45)
+2026-11-13T10:33:50.3477229Z + (32, 512, 16)
+2026-11-13T10:33:50.3477843Z SUBFAILED(max_patches=256, portrait=False) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_extreme_landscape_and_portrait_fit_the_patch_limit - AssertionError: Tuples differ: (4096, 32, 128) != (2048, 32, 64)
+2026-11-13T10:33:50.3478643Z 
+2026-11-13T10:33:50.3478720Z First differing element 0:
+2026-11-13T10:33:50.3478879Z 4096
+2026-11-13T10:33:50.3479008Z 2048
+2026-11-13T10:33:50.3479077Z 
+2026-11-13T10:33:50.3479143Z - (4096, 32, 128)
+2026-11-13T10:33:50.3479285Z + (2048, 32, 64)
+2026-11-13T10:33:50.3479917Z SUBFAILED(max_patches=256, portrait=True) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_extreme_landscape_and_portrait_fit_the_patch_limit - AssertionError: Tuples differ: (32, 4096, 128) != (32, 2048, 64)
+2026-11-13T10:33:50.3480536Z 
+2026-11-13T10:33:50.3480607Z First differing element 1:
+2026-11-13T10:33:50.3480765Z 4096
+2026-11-13T10:33:50.3480888Z 2048
+2026-11-13T10:33:50.3480960Z 
+2026-11-13T10:33:50.3481021Z - (32, 4096, 128)
+2026-11-13T10:33:50.3481162Z + (32, 2048, 64)
+2026-11-13T10:33:50.3481789Z FAILED test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_multiple_extreme_images_fit_the_prompt_token_budget - AssertionError: Lists differ: [(4096, 32, 128), (32, 4096, 128)] != [(2048, 32, 64), (32, 2048, 64)]
+2026-11-13T10:33:50.3482390Z 
+2026-11-13T10:33:50.3482455Z First differing element 0:
+2026-11-13T10:33:50.3482611Z (4096, 32, 128)
+2026-11-13T10:33:50.3482748Z (2048, 32, 64)
+2026-11-13T10:33:50.3482831Z 
+2026-11-13T10:33:50.3482893Z - [(4096, 32, 128), (32, 4096, 128)]
+2026-11-13T10:33:50.3483081Z + [(2048, 32, 64), (32, 2048, 64)]
+2026-11-13T10:33:50.3483665Z SUBFAILED(max_patches=17, portrait=False) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_non_grid_patch_limits_use_the_last_fitting_grid - AssertionError: 64 != 16
+2026-11-13T10:33:50.3484658Z SUBFAILED(max_patches=17, portrait=True) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_non_grid_patch_limits_use_the_last_fitting_grid - AssertionError: 64 != 16
+2026-11-13T10:33:50.3485687Z SUBFAILED(max_patches=63, portrait=False) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_non_grid_patch_limits_use_the_last_fitting_grid - AssertionError: 176 != 60
+2026-11-13T10:33:50.3486671Z SUBFAILED(max_patches=63, portrait=True) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_non_grid_patch_limits_use_the_last_fitting_grid - AssertionError: 176 != 60
+2026-11-13T10:33:50.3487706Z SUBFAILED(max_patches=255, portrait=False) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_non_grid_patch_limits_use_the_last_fitting_grid - AssertionError: 508 != 252
+2026-11-13T10:33:50.3488790Z SUBFAILED(max_patches=255, portrait=True) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_non_grid_patch_limits_use_the_last_fitting_grid - AssertionError: 508 != 252
+2026-11-13T10:33:50.3489807Z SUBFAILED(mode='RGB') test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_real_resized_pixels_and_downsampled_grid_fit_the_budget - AssertionError: 393216 not less than or equal to 196608
+2026-11-13T10:33:50.3490851Z SUBFAILED(mode='L') test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_real_resized_pixels_and_downsampled_grid_fit_the_budget - AssertionError: 393216 not less than or equal to 196608
+2026-11-13T10:33:50.3491900Z SUBFAILED(ds=1, portrait=False) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_supported_downsampling_grids_keep_both_constraints - AssertionError: 362 not less than or equal to 256
+2026-11-13T10:33:50.3492945Z SUBFAILED(ds=1, portrait=True) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_supported_downsampling_grids_keep_both_constraints - AssertionError: 362 not less than or equal to 256
+2026-11-13T10:33:50.3493984Z SUBFAILED(ds=2, portrait=False) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_supported_downsampling_grids_keep_both_constraints - AssertionError: 512 not less than or equal to 256
+2026-11-13T10:33:50.3495024Z SUBFAILED(ds=2, portrait=True) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_supported_downsampling_grids_keep_both_constraints - AssertionError: 512 not less than or equal to 256
+2026-11-13T10:33:50.3496092Z SUBFAILED(ds=4, portrait=False) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_supported_downsampling_grids_keep_both_constraints - AssertionError: 720 not less than or equal to 256
+2026-11-13T10:33:50.3497185Z SUBFAILED(ds=4, portrait=True) test/registered/unit/multimodal/test_dynamic_image_patch_budget.py::TestDynamicImagePatchBudget::test_supported_downsampling_grids_keep_both_constraints - AssertionError: 720 not less than or equal to 256
+2026-11-13T10:33:50.3497857Z 23 failed, 6 passed, 3 subtests passed in 2.13s
+2026-11-13T10:33:50.3498901Z Confirmed original image patch-budget failures: ['test_extreme_landscape_and_portrait_fit_the_patch_limit', 'test_multiple_extreme_images_fit_the_prompt_token_budget', 'test_non_grid_patch_limits_use_the_last_fitting_grid', 'test_real_resized_pixels_and_downsampled_grid_fit_the_budget', 'test_supported_downsampling_grids_keep_both_constraints']
+2026-11-13T10:33:50.3525011Z ##[group]Run git restore --source=HEAD -- python/sglang/srt/multimodal/internvl_utils.py
+2026-11-13T10:33:50.3525442Z [36;1mgit restore --source=HEAD -- python/sglang/srt/multimodal/internvl_utils.py[0m
+2026-11-13T10:33:50.3553342Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:33:50.3553558Z env:
+2026-11-13T10:33:50.3553715Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:33:50.3553901Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:33:50.3554202Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:33:50.3554372Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:33:50.3554529Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:33:50.3554752Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:50.3555059Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:33:50.3555357Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:50.3555632Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:50.3555956Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:50.3556228Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:33:50.3556463Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:33:50.3556635Z ##[endgroup]
+2026-11-13T10:33:50.3660457Z ##[group]Run set +e
+2026-11-13T10:33:50.3660655Z [36;1mset +e[0m
+2026-11-13T10:33:50.3661171Z [36;1mpython -m pre_commit run --files python/sglang/srt/multimodal/internvl_utils.py test/registered/unit/multimodal/test_dynamic_image_patch_budget.py > sglang-lint.log 2>&1[0m
+2026-11-13T10:33:50.3661692Z [36;1mresult=$?[0m
+2026-11-13T10:33:50.3661851Z [36;1mset -e[0m
+2026-11-13T10:33:50.3662012Z [36;1mcat sglang-lint.log[0m
+2026-11-13T10:33:50.3662213Z [36;1mgit diff > sglang-format.patch[0m
+2026-11-13T10:33:50.3662476Z [36;1mcat sglang-format.patch[0m
+2026-11-13T10:33:50.3662671Z [36;1mpython - <<'PY'[0m
+2026-11-13T10:33:50.3662857Z [36;1mfrom pathlib import Path[0m
+2026-11-13T10:33:50.3663069Z [36;1mprint("BEGIN_FORMATTED_TEST")[0m
+2026-11-13T10:33:50.3663393Z [36;1mprint(Path("test/registered/unit/multimodal/test_dynamic_image_patch_budget.py").read_text())[0m
+2026-11-13T10:33:50.3663734Z [36;1mprint("END_FORMATTED_TEST")[0m
+2026-11-13T10:33:50.3663954Z [36;1mPY[0m
+2026-11-13T10:33:50.3664109Z [36;1mtest "$result" -eq 0[0m
+2026-11-13T10:33:50.3664288Z [36;1mgit diff --check[0m
+2026-11-13T10:33:50.3685527Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:33:50.3685729Z env:
+2026-11-13T10:33:50.3685884Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:33:50.3686069Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:33:50.3686268Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:33:50.3686445Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:33:50.3686602Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:33:50.3686818Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:50.3687125Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:33:50.3687427Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:50.3687703Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:50.3687971Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:33:50.3688422Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:33:50.3688671Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:33:50.3688844Z ##[endgroup]
+2026-11-13T10:34:24.3196289Z [INFO] Initializing environment for https://github.com/pre-commit/pre-commit-hooks.
+2026-11-13T10:34:24.3196877Z [INFO] Initializing environment for https://github.com/PyCQA/isort.
+2026-11-13T10:34:24.3197325Z [INFO] Initializing environment for https://github.com/astral-sh/ruff-pre-commit.
+2026-11-13T10:34:24.3197840Z [INFO] Initializing environment for https://github.com/codespell-project/codespell.
+2026-11-13T10:34:24.3198535Z [INFO] Initializing environment for https://github.com/pre-commit/mirrors-clang-format.
+2026-11-13T10:34:24.3199124Z [INFO] Initializing environment for https://github.com/kynan/nbstripout.
+2026-11-13T10:34:24.3199652Z [INFO] Initializing environment for https://github.com/lycheeverse/lychee.git.
+2026-11-13T10:34:24.3200207Z [INFO] Installing environment for https://github.com/pre-commit/pre-commit-hooks.
+2026-11-13T10:34:24.3200711Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:34:24.3201058Z [INFO] This may take a few minutes...
+2026-11-13T10:34:24.3201427Z [INFO] Installing environment for https://github.com/PyCQA/isort.
+2026-11-13T10:34:24.3202202Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:34:24.3202534Z [INFO] This may take a few minutes...
+2026-11-13T10:34:24.3202941Z [INFO] Installing environment for https://github.com/astral-sh/ruff-pre-commit.
+2026-11-13T10:34:24.3203392Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:34:24.3203747Z [INFO] This may take a few minutes...
+2026-11-13T10:34:24.3204187Z [INFO] Installing environment for https://github.com/codespell-project/codespell.
+2026-11-13T10:34:24.3204667Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:34:24.3205001Z [INFO] This may take a few minutes...
+2026-11-13T10:34:24.3205381Z [INFO] Installing environment for https://github.com/pre-commit/mirrors-clang-format.
+2026-11-13T10:34:24.3206091Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:34:24.3206400Z [INFO] This may take a few minutes...
+2026-11-13T10:34:24.3206755Z [INFO] Installing environment for https://github.com/kynan/nbstripout.
+2026-11-13T10:34:24.3207141Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:34:24.3207435Z [INFO] This may take a few minutes...
+2026-11-13T10:34:24.3207851Z check for broken symlinks...............................................................(no files to check)Skipped
+2026-11-13T10:34:24.3208706Z detect destroyed symlinks...................................................................................Passed
+2026-11-13T10:34:24.3209321Z trim trailing whitespace....................................................................................Passed
+2026-11-13T10:34:24.3209881Z fix end of files............................................................................................Passed
+2026-11-13T10:34:24.3210419Z check yaml..............................................................................(no files to check)Skipped
+2026-11-13T10:34:24.3210961Z check toml..............................................................................(no files to check)Skipped
+2026-11-13T10:34:24.3211517Z check python ast............................................................................................Passed
+2026-11-13T10:34:24.3212088Z check for added large files.................................................................................Passed
+2026-11-13T10:34:24.3212663Z check for merge conflicts...................................................................................Passed
+2026-11-13T10:34:24.3213289Z check that scripts with shebangs are executable.............................................................Passed
+2026-11-13T10:34:24.3213895Z detect private key..........................................................................................Passed
+2026-11-13T10:34:24.3214455Z debug statements (python)...................................................................................Passed
+2026-11-13T10:34:24.3215012Z don't commit to branch......................................................................................Passed
+2026-11-13T10:34:24.3215553Z isort.......................................................................................................Passed
+2026-11-13T10:34:24.3216082Z ruff (legacy alias).........................................................................................Passed
+2026-11-13T10:34:24.3216616Z ruff format.................................................................................................Passed
+2026-11-13T10:34:24.3217166Z codespell...................................................................................................Passed
+2026-11-13T10:34:24.3217731Z clang-format............................................................................(no files to check)Skipped
+2026-11-13T10:34:24.3219052Z nbstripout..............................................................................(no files to check)Skipped
+2026-11-13T10:34:24.3219665Z forbid test/srt/ (use test/registered/ or test/manual/).................................(no files to check)Skipped
+2026-11-13T10:34:24.3220477Z forbid docs_new/ (renamed to docs/).....................................................(no files to check)Skipped
+2026-11-13T10:34:24.3221077Z check chinese characters in multimodal_gen..............................................(no files to check)Skipped
+2026-11-13T10:34:24.3221670Z sort CI_PERMISSIONS.json................................................................(no files to check)Skipped
+2026-11-13T10:34:24.3222303Z sort Cookbook vendor groups in docs/docs.json...........................................(no files to check)Skipped
+2026-11-13T10:34:24.3222987Z check for duplicate workflow job names..................................................(no files to check)Skipped
+2026-11-13T10:34:24.3223782Z check opt-in CI tiers match the workflows that gate on them.............................(no files to check)Skipped
+2026-11-13T10:34:24.3224491Z check rust-ext cache key prefix defaults match..........................................(no files to check)Skipped
+2026-11-13T10:34:24.3225236Z check Dockerfile sgl-deep-gemm/sgl-deep-ep versions match python/pyproject.toml.........(no files to check)Skipped
+2026-11-13T10:34:24.3225857Z reject bare pytest.main calls in __main__ blocks............................................................Passed
+2026-11-13T10:34:24.3226490Z regenerate python/sglang/cli/_commands/ from the Cookbook configs.......................(no files to check)Skipped
+2026-11-13T10:34:24.3227148Z validate registered test CI registries......................................................................Passed
+2026-11-13T10:34:24.3227808Z reject CI-registered tests inside the sglang package........................................................Passed
+2026-11-13T10:34:24.3228841Z reject importing a name through a module that only re-imports it............................................Passed
+2026-11-13T10:34:24.3229601Z reject srt domain imports in sglang.srt.utils and sglang.utils imports in the runtime.......................Passed
+2026-11-13T10:34:24.3230221Z rustfmt sgl-model-gateway (nightly).....................................................(no files to check)Skipped
+2026-11-13T10:34:24.3230778Z rustfmt sgl-router......................................................................(no files to check)Skipped
+2026-11-13T10:34:24.3231336Z clippy rust/ workspace (auto-fix).......................................................(no files to check)Skipped
+2026-11-13T10:34:24.3231870Z rustfmt rust/ workspace.................................................................(no files to check)Skipped
+2026-11-13T10:34:24.3474664Z BEGIN_FORMATTED_TEST
+2026-11-13T10:34:24.3475146Z """Dynamic-resolution budgets for images with a minimum-sized short side."""
+2026-11-13T10:34:24.3475387Z 
+2026-11-13T10:34:24.3475466Z import unittest
+2026-11-13T10:34:24.3475565Z 
+2026-11-13T10:34:24.3475647Z import torch
+2026-11-13T10:34:24.3475813Z import torch.nn.functional as F
+2026-11-13T10:34:24.3476002Z from PIL import Image
+2026-11-13T10:34:24.3476108Z 
+2026-11-13T10:34:24.3476214Z from sglang.srt.multimodal.internvl_utils import (
+2026-11-13T10:34:24.3476481Z     compute_budgeted_image_sizes,
+2026-11-13T10:34:24.3476674Z     compute_dynamic_image_size,
+2026-11-13T10:34:24.3476856Z     resize_image_to_pixels,
+2026-11-13T10:34:24.3477028Z )
+2026-11-13T10:34:24.3477210Z from sglang.test.ci.ci_register import register_cpu_ci
+2026-11-13T10:34:24.3477371Z 
+2026-11-13T10:34:24.3477482Z register_cpu_ci(est_time=3, suite="base-a-test-cpu")
+2026-11-13T10:34:24.3477691Z 
+2026-11-13T10:34:24.3477695Z 
+2026-11-13T10:34:24.3477808Z class TestDynamicImagePatchBudget(unittest.TestCase):
+2026-11-13T10:34:24.3478262Z     def test_extreme_landscape_and_portrait_fit_the_patch_limit(self):
+2026-11-13T10:34:24.3478550Z         for max_patches in (4, 16, 64, 256):
+2026-11-13T10:34:24.3478780Z             for portrait in (False, True):
+2026-11-13T10:34:24.3479057Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:34:24.3479360Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:34:24.3479892Z                     result = compute_dynamic_image_size(*size, 16, 0.5, 4, max_patches)
+2026-11-13T10:34:24.3480198Z                     long_side = (max_patches // 2) * 16
+2026-11-13T10:34:24.3480419Z                     expected = (
+2026-11-13T10:34:24.3480629Z                         (32, long_side, max_patches // 4)
+2026-11-13T10:34:24.3480851Z                         if portrait
+2026-11-13T10:34:24.3481071Z                         else (long_side, 32, max_patches // 4)
+2026-11-13T10:34:24.3481293Z                     )
+2026-11-13T10:34:24.3481479Z                     self.assertEqual(result, expected)
+2026-11-13T10:34:24.3481620Z 
+2026-11-13T10:34:24.3481760Z     def test_supported_downsampling_grids_keep_both_constraints(self):
+2026-11-13T10:34:24.3482107Z         for ds in (1, 2, 4):
+2026-11-13T10:34:24.3482297Z             for portrait in (False, True):
+2026-11-13T10:34:24.3482529Z                 with self.subTest(ds=ds, portrait=portrait):
+2026-11-13T10:34:24.3482786Z                     size = (1, 16384) if portrait else (16384, 1)
+2026-11-13T10:34:24.3483059Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:34:24.3483321Z                         *size, 16, 1 / ds, ds * ds, 256
+2026-11-13T10:34:24.3483520Z                     )
+2026-11-13T10:34:24.3483705Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:34:24.3483949Z                     self.assertLessEqual(patches, 256)
+2026-11-13T10:34:24.3484192Z                     self.assertGreaterEqual(patches, ds * ds)
+2026-11-13T10:34:24.3484437Z                     self.assertEqual(width % (16 * ds), 0)
+2026-11-13T10:34:24.3484672Z                     self.assertEqual(height % (16 * ds), 0)
+2026-11-13T10:34:24.3484928Z                     self.assertEqual(tokens, patches // (ds * ds))
+2026-11-13T10:34:24.3485097Z 
+2026-11-13T10:34:24.3485219Z     def test_non_grid_patch_limits_use_the_last_fitting_grid(self):
+2026-11-13T10:34:24.3485482Z         for max_patches in (17, 63, 255):
+2026-11-13T10:34:24.3485688Z             for portrait in (False, True):
+2026-11-13T10:34:24.3485950Z                 with self.subTest(max_patches=max_patches, portrait=portrait):
+2026-11-13T10:34:24.3486244Z                     size = (16, 16384) if portrait else (16384, 16)
+2026-11-13T10:34:24.3486507Z                     width, height, tokens = compute_dynamic_image_size(
+2026-11-13T10:34:24.3486755Z                         *size, 16, 0.5, 4, max_patches
+2026-11-13T10:34:24.3486950Z                     )
+2026-11-13T10:34:24.3487125Z                     patches = (width // 16) * (height // 16)
+2026-11-13T10:34:24.3487379Z                     self.assertEqual(patches, max_patches // 4 * 4)
+2026-11-13T10:34:24.3487635Z                     self.assertEqual(min(width, height), 32)
+2026-11-13T10:34:24.3487877Z                     self.assertEqual(tokens, patches // 4)
+2026-11-13T10:34:24.3488151Z 
+2026-11-13T10:34:24.3488294Z     def test_multiple_extreme_images_fit_the_prompt_token_budget(self):
+2026-11-13T10:34:24.3488562Z         sizes = [(16384, 16), (16, 16384)]
+2026-11-13T10:34:24.3488767Z         original_sizes = sizes.copy()
+2026-11-13T10:34:24.3489025Z         results = compute_budgeted_image_sizes(sizes, 128, 16, 0.5, 4, 512)
+2026-11-13T10:34:24.3489329Z         self.assertEqual(results, [(2048, 32, 64), (32, 2048, 64)])
+2026-11-13T10:34:24.3489630Z         self.assertEqual(sum(tokens for _, _, tokens in results), 128)
+2026-11-13T10:34:24.3489907Z         self.assertEqual(sizes, original_sizes)
+2026-11-13T10:34:24.3490049Z 
+2026-11-13T10:34:24.3490195Z     def test_real_resized_pixels_and_downsampled_grid_fit_the_budget(self):
+2026-11-13T10:34:24.3490515Z         for mode, size in (("RGB", (16384, 1)), ("L", (1, 16384))):
+2026-11-13T10:34:24.3490754Z             with self.subTest(mode=mode):
+2026-11-13T10:34:24.3490975Z                 image = Image.new(mode, size, color=127)
+2026-11-13T10:34:24.3491198Z                 original = image.tobytes()
+2026-11-13T10:34:24.3491442Z                 ((width, height, tokens),) = compute_budgeted_image_sizes(
+2026-11-13T10:34:24.3491760Z                     [image.size], 64, 16, 0.5, 4, 256
+2026-11-13T10:34:24.3491962Z                 )
+2026-11-13T10:34:24.3492126Z                 pixels = resize_image_to_pixels(
+2026-11-13T10:34:24.3492367Z                     image, width, height, mean=(0, 0, 0), std=(1, 1, 1)
+2026-11-13T10:34:24.3492592Z                 )
+2026-11-13T10:34:24.3492787Z                 self.assertEqual(pixels.shape, (1, 3, height, width))
+2026-11-13T10:34:24.3493068Z                 self.assertLessEqual(pixels.numel(), 3 * 16 * 16 * 256)
+2026-11-13T10:34:24.3493343Z                 patch_grid = pixels.unfold(2, 16, 16).unfold(3, 16, 16)
+2026-11-13T10:34:24.3493629Z                 patch_features = patch_grid.mean(dim=(-1, -2))
+2026-11-13T10:34:24.3493937Z                 shuffled = F.pixel_unshuffle(patch_features, 2)
+2026-11-13T10:34:24.3494249Z                 self.assertEqual(shuffled.shape[-2] * shuffled.shape[-1], tokens)
+2026-11-13T10:34:24.3494540Z                 self.assertLessEqual(tokens, 64)
+2026-11-13T10:34:24.3494785Z                 self.assertTrue(torch.isfinite(shuffled).all())
+2026-11-13T10:34:24.3495027Z                 self.assertEqual(image.size, size)
+2026-11-13T10:34:24.3495246Z                 self.assertEqual(image.mode, mode)
+2026-11-13T10:34:24.3495487Z                 self.assertEqual(image.tobytes(), original)
+2026-11-13T10:34:24.3495643Z 
+2026-11-13T10:34:24.3495746Z     def test_ordinary_dimensions_keep_existing_sizes(self):
+2026-11-13T10:34:24.3495967Z         cases = (
+2026-11-13T10:34:24.3496128Z             ((1024, 768, 4, 256), (288, 224, 63)),
+2026-11-13T10:34:24.3496323Z             ((128, 64, 4, 256), (128, 64, 8)),
+2026-11-13T10:34:24.3496516Z             ((16, 16, 64, 256), (128, 128, 16)),
+2026-11-13T10:34:24.3496704Z         )
+2026-11-13T10:34:24.3496894Z         for (width, height, minimum, maximum), expected in cases:
+2026-11-13T10:34:24.3497185Z             with self.subTest(size=(width, height), minimum=minimum):
+2026-11-13T10:34:24.3497447Z                 actual = compute_dynamic_image_size(
+2026-11-13T10:34:24.3497699Z                     width, height, 16, 0.5, minimum, maximum
+2026-11-13T10:34:24.3497901Z                 )
+2026-11-13T10:34:24.3498439Z                 self.assertEqual(actual, expected)
+2026-11-13T10:34:24.3498673Z                 transposed = compute_dynamic_image_size(
+2026-11-13T10:34:24.3498906Z                     height, width, 16, 0.5, minimum, maximum
+2026-11-13T10:34:24.3499110Z                 )
+2026-11-13T10:34:24.3499335Z                 self.assertEqual(transposed, (expected[1], expected[0], expected[2]))
+2026-11-13T10:34:24.3499546Z 
+2026-11-13T10:34:24.3499649Z     def test_empty_and_unconstrained_prompt_controls(self):
+2026-11-13T10:34:24.3499956Z         self.assertEqual(compute_budgeted_image_sizes([], 128, 16, 0.5, 4, 256), [])
+2026-11-13T10:34:24.3500234Z         self.assertEqual(
+2026-11-13T10:34:24.3500473Z             compute_budgeted_image_sizes([(128, 64), (64, 128)], 32, 16, 0.5, 4, 256),
+2026-11-13T10:34:24.3500747Z             [(128, 64, 8), (64, 128, 8)],
+2026-11-13T10:34:24.3500923Z         )
+2026-11-13T10:34:24.3500994Z 
+2026-11-13T10:34:24.3500998Z 
+2026-11-13T10:34:24.3501075Z if __name__ == "__main__":
+2026-11-13T10:34:24.3501244Z     unittest.main()
+2026-11-13T10:34:24.3501342Z 
+2026-11-13T10:34:24.3501404Z END_FORMATTED_TEST
+2026-11-13T10:34:24.3652276Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-11-13T10:34:24.3652583Z with:
+2026-11-13T10:34:24.3652763Z   name: native-image-patch-cap-evidence
+2026-11-13T10:34:24.3653294Z   path: sglang-install.log
+sglang-environment.txt
+sglang-patched.log
+sglang-patched.xml
+sglang-baseline.log
+sglang-baseline.xml
+sglang-lint.log
+sglang-format.patch
+
+2026-11-13T10:34:24.3653861Z   if-no-files-found: warn
+2026-11-13T10:34:24.3654044Z   compression-level: 6
+2026-11-13T10:34:24.3654206Z   overwrite: false
+2026-11-13T10:34:24.3654367Z   include-hidden-files: false
+2026-11-13T10:34:24.3654613Z   archive: true
+2026-11-13T10:34:24.3654758Z env:
+2026-11-13T10:34:24.3654901Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:34:24.3655078Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:34:24.3655271Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:34:24.3655440Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:34:24.3655596Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:34:24.3655861Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:34:24.3656170Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:34:24.3656470Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:34:24.3656749Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:34:24.3657022Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:34:24.3657308Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:34:24.3657548Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:34:24.3657718Z ##[endgroup]
+2026-11-13T10:34:24.4912231Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-13T10:34:24.4915576Z The least common ancestor is /home/runner/work/sglang/sglang. This will be the root directory of the artifact
+2026-11-13T10:34:24.4916411Z With the provided path, there will be 8 files uploaded
+2026-11-13T10:34:24.4917285Z Artifact name is valid!
+2026-11-13T10:34:24.4917677Z Root directory input is valid!
+2026-11-13T10:34:24.9247916Z Uploading artifact: native-image-patch-cap-evidence.zip
+2026-11-13T10:34:24.9275477Z Beginning upload of artifact content to blob storage
+2026-11-13T10:34:25.5414943Z Uploaded bytes 12918
+2026-11-13T10:34:25.6317931Z Finished uploading artifact content to blob storage!
+2026-11-13T10:34:25.6318845Z SHA256 digest of uploaded artifact is 149ab3794a67772e096bb2649b36af4bca53eae8db5269ca3272c0df2fa7ae32
+2026-11-13T10:34:25.6319374Z Finalizing artifact upload
+2026-11-13T10:34:26.1925302Z Artifact native-image-patch-cap-evidence successfully finalized. Artifact ID 14028404231
+2026-11-13T10:34:26.1926166Z Artifact native-image-patch-cap-evidence has been successfully uploaded! Final size is 12918 bytes. Artifact ID is 14028404231
+2026-11-13T10:34:26.1929098Z Artifact download URL: https://github.com/Afloat16/sglang/actions/runs/43408230323/artifacts/14028404231
+2026-11-13T10:34:26.2062635Z Post job cleanup.
+2026-11-13T10:34:26.3023703Z (node:17345) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T10:34:26.3024219Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T10:34:26.3148021Z Post job cleanup.
+2026-11-13T10:34:26.3841326Z [command]/usr/bin/git version
+2026-11-13T10:34:26.3881872Z git version 2.56.1
+2026-11-13T10:34:26.3905052Z Temporarily overriding HOME='/home/runner/work/_temp/0f7e3971-dd3a-480d-be37-d3f8db756f59' before making global git config changes
+2026-11-13T10:34:26.3905952Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T10:34:26.3909996Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sglang/sglang
+2026-11-13T10:34:26.3935371Z Removing SSH command configuration
+2026-11-13T10:34:26.3940388Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T10:34:26.3965824Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T10:34:26.4234284Z Removing HTTP extra header
+2026-11-13T10:34:26.4238703Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T10:34:26.4274282Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T10:34:26.4521736Z Removing includeIf entries pointing to credentials config files
+2026-11-13T10:34:26.4528503Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T10:34:26.4564898Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T10:34:26.4869919Z Cleaning up orphan processes
+2026-11-13T10:34:26.5183197Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
