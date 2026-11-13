@@ -3,8 +3,8 @@
   "fork": "Afloat16/sglang",
   "base_commit": "bd4c1afc37b3919869ec88a1987649fa5ad0f870",
   "base_tree": "ec7205880e90ab9dc251d7979b3ab7dce01ca924",
-  "commit": "32f2e8d6e96d37c61636552c6b34c80746d2ec93",
-  "tree": "7214b3e04dca6066639375216e0ddfa176528881",
+  "commit": "ea71bf744ee5b7902dbbe24639f008fd9bba68cb",
+  "tree": "5dcb75802153f29dd00abefaf614a44f3ba9d3d5",
   "branch": "fix/layernorm-converted-parameter-dtype-20261112",
   "status": "pending_native_validation",
   "validation": "First native run passed forward/dispatch cases; training fixture compared parameters by registration order rather than name, now corrected. Final exact-SHA verification pending.",
@@ -50,5 +50,5 @@
       }
     ]
   },
-  "validation_note": "Previous exact native tests passed; source change is test formatting only (Python AST identical). Final exact-SHA workflow rerun pending."
+  "validation_note": "Previous exact native tests passed; source change is test formatting only (Python AST identical). Final exact-SHA workflow rerun pending. Normalize the single trailing newline printed by the formatter log; semantics and production code unchanged."
 }
