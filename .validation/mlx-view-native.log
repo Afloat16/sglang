@@ -1,0 +1,2126 @@
+﻿2026-11-13T09:12:14.0865385Z Current runner version: '2.338.2'
+2026-11-13T09:12:14.0887248Z ##[group]Runner Image Provisioner
+2026-11-13T09:12:14.0887976Z Hosted Compute Agent
+2026-11-13T09:12:14.0888469Z Version: 20261028.624
+2026-11-13T09:12:14.0889078Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-13T09:12:14.0889762Z Build Date: 2026-10-28T21:51:42Z
+2026-11-13T09:12:14.0890758Z Worker ID: {e5b13202-72ee-4d26-8d31-12d89c50500d}
+2026-11-13T09:12:14.0891357Z Region: westus2
+2026-11-13T09:12:14.0891812Z Cloud: Azure
+2026-11-13T09:12:14.0892331Z ##[endgroup]
+2026-11-13T09:12:14.0893818Z ##[group]Operating System
+2026-11-13T09:12:14.0894413Z Ubuntu
+2026-11-13T09:12:14.0894890Z 24.04.5
+2026-11-13T09:12:14.0895339Z LTS
+2026-11-13T09:12:14.0895822Z ##[endgroup]
+2026-11-13T09:12:14.0896333Z ##[group]Runner Image
+2026-11-13T09:12:14.0896913Z Image: ubuntu-24.04
+2026-11-13T09:12:14.0897417Z Version: 20261101.360.1
+2026-11-13T09:12:14.0898536Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-13T09:12:14.0899808Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-13T09:12:14.0900687Z ##[endgroup]
+2026-11-13T09:12:14.0901636Z ##[group]GITHUB_TOKEN Permissions
+2026-11-13T09:12:14.0903587Z Contents: read
+2026-11-13T09:12:14.0904162Z Metadata: read
+2026-11-13T09:12:14.0904651Z ##[endgroup]
+2026-11-13T09:12:14.0906793Z Secret source: Actions
+2026-11-13T09:12:14.0907625Z Cache mode: write
+2026-11-13T09:12:14.0908294Z Prepare workflow directory
+2026-11-13T09:12:14.1229444Z Prepare all required actions
+2026-11-13T09:12:14.1283893Z Getting action download info
+2026-11-13T09:12:14.4702799Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-13T09:12:14.6003838Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-13T09:12:14.7270794Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-11-13T09:12:14.9172942Z Complete job name: native-cpu
+2026-11-13T09:12:14.9862706Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-11-13T09:12:14.9863759Z with:
+2026-11-13T09:12:14.9864159Z   ref: 29d603230d76dd9cda6142e068277535f41b9f18
+2026-11-13T09:12:14.9864634Z   fetch-depth: 2
+2026-11-13T09:12:14.9865008Z   persist-credentials: false
+2026-11-13T09:12:14.9865418Z   repository: Afloat16/sglang
+2026-11-13T09:12:14.9868324Z   token: ***
+2026-11-13T09:12:14.9868684Z   ssh-strict: true
+2026-11-13T09:12:14.9869046Z   ssh-user: git
+2026-11-13T09:12:14.9869396Z   clean: true
+2026-11-13T09:12:14.9869759Z   sparse-checkout-cone-mode: true
+2026-11-13T09:12:14.9870184Z   fetch-tags: false
+2026-11-13T09:12:14.9870544Z   show-progress: true
+2026-11-13T09:12:14.9870904Z   lfs: false
+2026-11-13T09:12:14.9871244Z   submodules: false
+2026-11-13T09:12:14.9871630Z   set-safe-directory: true
+2026-11-13T09:12:14.9872046Z   allow-unsafe-pr-checkout: false
+2026-11-13T09:12:14.9872674Z env:
+2026-11-13T09:12:14.9873013Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:12:14.9873568Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:12:14.9874003Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:12:14.9874388Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:12:14.9874740Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:12:14.9875107Z ##[endgroup]
+2026-11-13T09:12:15.6647500Z Syncing repository: Afloat16/sglang
+2026-11-13T09:12:15.6649314Z ##[group]Getting Git version info
+2026-11-13T09:12:15.6649889Z Working directory is '/home/runner/work/sglang/sglang'
+2026-11-13T09:12:15.6650747Z [command]/usr/bin/git version
+2026-11-13T09:12:15.6711027Z git version 2.56.0
+2026-11-13T09:12:15.6726561Z ##[endgroup]
+2026-11-13T09:12:15.6736667Z Temporarily overriding HOME='/home/runner/work/_temp/e0e13e8e-f0d1-46c5-84ed-8be4a2794438' before making global git config changes
+2026-11-13T09:12:15.6738528Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T09:12:15.6741212Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sglang/sglang
+2026-11-13T09:12:15.9964686Z Deleting the contents of '/home/runner/work/sglang/sglang'
+2026-11-13T09:12:15.9966424Z ##[group]Determining repository object format
+2026-11-13T09:12:15.9967575Z ##[endgroup]
+2026-11-13T09:12:15.9968517Z ##[group]Initializing the repository
+2026-11-13T09:12:15.9969377Z [command]/usr/bin/git init /home/runner/work/sglang/sglang
+2026-11-13T09:12:16.2995689Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-13T09:12:16.2997277Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-13T09:12:16.2998467Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-13T09:12:16.2999440Z hint: call:
+2026-11-13T09:12:16.3000462Z hint:
+2026-11-13T09:12:16.3001475Z hint: 	git config --global init.defaultBranch <name>
+2026-11-13T09:12:16.3002577Z hint:
+2026-11-13T09:12:16.3003758Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-13T09:12:16.3005573Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-13T09:12:16.3007040Z hint:
+2026-11-13T09:12:16.3007814Z hint: 	git branch -m <name>
+2026-11-13T09:12:16.3008669Z hint:
+2026-11-13T09:12:16.3009874Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-13T09:12:16.3011863Z Initialized empty Git repository in /home/runner/work/sglang/sglang/.git/
+2026-11-13T09:12:16.3015763Z [command]/usr/bin/git remote add origin https://github.com/Afloat16/sglang
+2026-11-13T09:12:16.3070605Z ##[endgroup]
+2026-11-13T09:12:16.3072171Z ##[group]Disabling automatic garbage collection
+2026-11-13T09:12:16.3073653Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-13T09:12:16.3113898Z ##[endgroup]
+2026-11-13T09:12:16.3115546Z ##[group]Setting up auth
+2026-11-13T09:12:16.3116588Z Removing SSH command configuration
+2026-11-13T09:12:16.3118194Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T09:12:16.3157938Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T09:12:16.3496013Z Removing HTTP extra header
+2026-11-13T09:12:16.3499834Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T09:12:16.3537207Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T09:12:16.3738457Z Removing includeIf entries pointing to credentials config files
+2026-11-13T09:12:16.3741451Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T09:12:16.3788108Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T09:12:16.4001615Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-51fed72f-6dc9-4fc7-80c0-4244d47137a4.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-13T09:12:16.4046846Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sglang/sglang/.git.path /home/runner/work/_temp/git-credentials-51fed72f-6dc9-4fc7-80c0-4244d47137a4.config
+2026-11-13T09:12:16.4091128Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-51fed72f-6dc9-4fc7-80c0-4244d47137a4.config
+2026-11-13T09:12:16.4129055Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-51fed72f-6dc9-4fc7-80c0-4244d47137a4.config
+2026-11-13T09:12:16.4167749Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-51fed72f-6dc9-4fc7-80c0-4244d47137a4.config
+2026-11-13T09:12:16.4204281Z ##[endgroup]
+2026-11-13T09:12:16.4205513Z ##[group]Fetching the repository
+2026-11-13T09:12:16.4209171Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=2 origin 29d603230d76dd9cda6142e068277535f41b9f18
+2026-11-13T09:12:24.9988267Z From https://github.com/Afloat16/sglang
+2026-11-13T09:12:24.9988792Z  * branch            29d603230d76dd9cda6142e068277535f41b9f18 -> FETCH_HEAD
+2026-11-13T09:12:24.9996150Z [command]/usr/bin/git rev-parse --verify --quiet 29d603230d76dd9cda6142e068277535f41b9f18^{object}
+2026-11-13T09:12:25.0030066Z 29d603230d76dd9cda6142e068277535f41b9f18
+2026-11-13T09:12:25.0034246Z ##[endgroup]
+2026-11-13T09:12:25.0034827Z ##[group]Determining the checkout info
+2026-11-13T09:12:25.0035434Z ##[endgroup]
+2026-11-13T09:12:25.0038013Z [command]/usr/bin/git sparse-checkout disable
+2026-11-13T09:12:25.0091472Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-13T09:12:25.0128968Z ##[group]Checking out the ref
+2026-11-13T09:12:25.0132172Z [command]/usr/bin/git checkout --progress --force 29d603230d76dd9cda6142e068277535f41b9f18
+2026-11-13T09:12:25.8532797Z Note: switching to '29d603230d76dd9cda6142e068277535f41b9f18'.
+2026-11-13T09:12:25.8533443Z 
+2026-11-13T09:12:25.8533721Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-13T09:12:25.8534439Z changes and commit them, and you can discard any commits you make in this
+2026-11-13T09:12:25.8535059Z state without impacting any branches by switching back to a branch.
+2026-11-13T09:12:25.8535406Z 
+2026-11-13T09:12:25.8535640Z If you want to create a new branch to retain commits you create, you may
+2026-11-13T09:12:25.8536205Z do so (now or later) by using -c with the switch command. Example:
+2026-11-13T09:12:25.8536544Z 
+2026-11-13T09:12:25.8536679Z   git switch -c <new-branch-name>
+2026-11-13T09:12:25.8537018Z 
+2026-11-13T09:12:25.8537144Z Or undo this operation with:
+2026-11-13T09:12:25.8537353Z 
+2026-11-13T09:12:25.8537465Z   git switch -
+2026-11-13T09:12:25.8537620Z 
+2026-11-13T09:12:25.8538428Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-13T09:12:25.8538831Z 
+2026-11-13T09:12:25.8539112Z HEAD is now at 29d6032 Resolve lazy CPU tensor views before importing into MLX
+2026-11-13T09:12:25.8564602Z ##[endgroup]
+2026-11-13T09:12:25.8615054Z [command]/usr/bin/git log -1 --format=%H
+2026-11-13T09:12:25.8648625Z 29d603230d76dd9cda6142e068277535f41b9f18
+2026-11-13T09:12:25.8656272Z ##[group]Removing auth
+2026-11-13T09:12:25.8656611Z Removing SSH command configuration
+2026-11-13T09:12:25.8659244Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T09:12:25.8696789Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T09:12:25.8923985Z Removing HTTP extra header
+2026-11-13T09:12:25.8927612Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T09:12:25.8966180Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T09:12:25.9186372Z Removing includeIf entries pointing to credentials config files
+2026-11-13T09:12:25.9188965Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T09:12:25.9221447Z includeif.gitdir:/home/runner/work/sglang/sglang/.git.path
+2026-11-13T09:12:25.9222082Z includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path
+2026-11-13T09:12:25.9222468Z includeif.gitdir:/github/workspace/.git.path
+2026-11-13T09:12:25.9222759Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-13T09:12:25.9230237Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sglang/sglang/.git.path
+2026-11-13T09:12:25.9262815Z /home/runner/work/_temp/git-credentials-51fed72f-6dc9-4fc7-80c0-4244d47137a4.config
+2026-11-13T09:12:25.9270998Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sglang/sglang/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-51fed72f\-6dc9\-4fc7\-80c0\-4244d47137a4\.config
+2026-11-13T09:12:25.9312604Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path
+2026-11-13T09:12:25.9347960Z /home/runner/work/_temp/git-credentials-51fed72f-6dc9-4fc7-80c0-4244d47137a4.config
+2026-11-13T09:12:25.9430779Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-51fed72f\-6dc9\-4fc7\-80c0\-4244d47137a4\.config
+2026-11-13T09:12:25.9433429Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-13T09:12:25.9435928Z /github/runner_temp/git-credentials-51fed72f-6dc9-4fc7-80c0-4244d47137a4.config
+2026-11-13T09:12:25.9445120Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-51fed72f\-6dc9\-4fc7\-80c0\-4244d47137a4\.config
+2026-11-13T09:12:25.9487485Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-13T09:12:25.9517477Z /github/runner_temp/git-credentials-51fed72f-6dc9-4fc7-80c0-4244d47137a4.config
+2026-11-13T09:12:25.9523559Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-51fed72f\-6dc9\-4fc7\-80c0\-4244d47137a4\.config
+2026-11-13T09:12:25.9562620Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T09:12:25.9783928Z Removing credentials config '/home/runner/work/_temp/git-credentials-51fed72f-6dc9-4fc7-80c0-4244d47137a4.config'
+2026-11-13T09:12:25.9793540Z ##[endgroup]
+2026-11-13T09:12:26.0007334Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-11-13T09:12:26.0007686Z with:
+2026-11-13T09:12:26.0007868Z   python-version: 3.12
+2026-11-13T09:12:26.0008062Z   check-latest: false
+2026-11-13T09:12:26.0009879Z   token: ***
+2026-11-13T09:12:26.0010067Z   update-environment: true
+2026-11-13T09:12:26.0010275Z   allow-prereleases: false
+2026-11-13T09:12:26.0010467Z   freethreaded: false
+2026-11-13T09:12:26.0010648Z env:
+2026-11-13T09:12:26.0010817Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:12:26.0011025Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:12:26.0011254Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:12:26.0011445Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:12:26.0011630Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:12:26.0011817Z ##[endgroup]
+2026-11-13T09:12:26.2110811Z ##[group]Installed versions
+2026-11-13T09:12:26.2206219Z (node:2221) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T09:12:26.2207232Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T09:12:26.2225762Z Successfully set up CPython (3.12.16)
+2026-11-13T09:12:26.2226657Z ##[endgroup]
+2026-11-13T09:12:26.2354547Z ##[group]Run python -m pip install uv pre-commit
+2026-11-13T09:12:26.2354944Z [36;1mpython -m pip install uv pre-commit[0m
+2026-11-13T09:12:26.2355244Z [36;1mbash scripts/ci/utils/install_rust_protoc.sh[0m
+2026-11-13T09:12:26.2385215Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:12:26.2385453Z env:
+2026-11-13T09:12:26.2385630Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:12:26.2385840Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:12:26.2386056Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:12:26.2386238Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:12:26.2386407Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:12:26.2386644Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:12:26.2387234Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:12:26.2387576Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:12:26.2387876Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:12:26.2388229Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:12:26.2388531Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:12:26.2388789Z ##[endgroup]
+2026-11-13T09:12:28.3036805Z Collecting uv
+2026-11-13T09:12:28.3567162Z   Downloading uv-0.13.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+2026-11-13T09:12:28.3855661Z Collecting pre-commit
+2026-11-13T09:12:28.3920539Z   Downloading pre_commit-4.7.0-py2.py3-none-any.whl.metadata (1.2 kB)
+2026-11-13T09:12:28.4057627Z Collecting cfgv>=2.0.0 (from pre-commit)
+2026-11-13T09:12:28.4122720Z   Downloading cfgv-3.5.0-py2.py3-none-any.whl.metadata (8.9 kB)
+2026-11-13T09:12:28.4414746Z Collecting identify>=1.0.0 (from pre-commit)
+2026-11-13T09:12:28.4479971Z   Downloading identify-2.6.20-py2.py3-none-any.whl.metadata (4.4 kB)
+2026-11-13T09:12:28.4633474Z Collecting nodeenv>=0.11.1 (from pre-commit)
+2026-11-13T09:12:28.4698840Z   Downloading nodeenv-1.12.0-py3-none-any.whl.metadata (49 kB)
+2026-11-13T09:12:28.6128479Z Collecting pyyaml>=5.1 (from pre-commit)
+2026-11-13T09:12:28.6197107Z   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-11-13T09:12:28.6539630Z Collecting virtualenv>=20.10.0 (from pre-commit)
+2026-11-13T09:12:28.6605679Z   Downloading virtualenv-21.15.6-py3-none-any.whl.metadata (4.1 kB)
+2026-11-13T09:12:28.6748673Z Collecting distlib<1,>=0.4.3 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:12:28.6816167Z   Downloading distlib-0.4.4-py2.py3-none-any.whl.metadata (5.3 kB)
+2026-11-13T09:12:28.7031826Z Collecting filelock<5,>=3.24.2 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:12:28.7098477Z   Downloading filelock-4.2.10-py3-none-any.whl.metadata (2.3 kB)
+2026-11-13T09:12:28.7240853Z Collecting packaging>=26.3 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:12:28.7306761Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-11-13T09:12:28.7496177Z Collecting platformdirs<5,>=4.4 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:12:28.7563739Z   Downloading platformdirs-4.14.5-py3-none-any.whl.metadata (5.7 kB)
+2026-11-13T09:12:28.7701833Z Collecting python-discovery>=1.6.1 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:12:28.7767634Z   Downloading python_discovery-1.9.5-py3-none-any.whl.metadata (4.2 kB)
+2026-11-13T09:12:28.7893277Z Downloading uv-0.13.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.4 MB)
+2026-11-13T09:12:29.0304558Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.4/17.4 MB 74.3 MB/s  0:00:00
+2026-11-13T09:12:29.0376377Z Downloading pre_commit-4.7.0-py2.py3-none-any.whl (226 kB)
+2026-11-13T09:12:29.0463750Z Downloading cfgv-3.5.0-py2.py3-none-any.whl (7.4 kB)
+2026-11-13T09:12:29.0544138Z Downloading identify-2.6.20-py2.py3-none-any.whl (99 kB)
+2026-11-13T09:12:29.0624842Z Downloading nodeenv-1.12.0-py3-none-any.whl (39 kB)
+2026-11-13T09:12:29.0738446Z Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-11-13T09:12:29.1649511Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 6.1 MB/s  0:00:00
+2026-11-13T09:12:29.1718026Z Downloading virtualenv-21.15.6-py3-none-any.whl (5.7 MB)
+2026-11-13T09:12:29.2145308Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.7/5.7 MB 132.5 MB/s  0:00:00
+2026-11-13T09:12:29.2214263Z Downloading distlib-0.4.4-py2.py3-none-any.whl (472 kB)
+2026-11-13T09:12:29.2327824Z Downloading filelock-4.2.10-py3-none-any.whl (218 kB)
+2026-11-13T09:12:29.2464621Z Downloading platformdirs-4.14.5-py3-none-any.whl (35 kB)
+2026-11-13T09:12:29.2547248Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-11-13T09:12:29.2635485Z Downloading python_discovery-1.9.5-py3-none-any.whl (44 kB)
+2026-11-13T09:12:29.6531885Z Installing collected packages: distlib, uv, pyyaml, platformdirs, packaging, nodeenv, identify, filelock, cfgv, python-discovery, virtualenv, pre-commit
+2026-11-13T09:12:30.3042953Z 
+2026-11-13T09:12:30.3056239Z Successfully installed cfgv-3.5.0 distlib-0.4.4 filelock-4.2.10 identify-2.6.20 nodeenv-1.12.0 packaging-26.3 platformdirs-4.14.5 pre-commit-4.7.0 python-discovery-1.9.5 pyyaml-6.0.3 uv-0.13.8 virtualenv-21.15.6
+2026-11-13T09:12:30.3062894Z 
+2026-11-13T09:12:30.3063282Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+2026-11-13T09:12:30.3063754Z [notice] To update, run: pip install --upgrade pip
+2026-11-13T09:12:30.3642474Z +++ dirname scripts/ci/utils/install_rust_protoc.sh
+2026-11-13T09:12:30.3650674Z ++ cd scripts/ci/utils
+2026-11-13T09:12:30.3650918Z ++ pwd
+2026-11-13T09:12:30.3652986Z + SCRIPT_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T09:12:30.3655581Z ++ id -u
+2026-11-13T09:12:30.3670663Z + '[' 1001 = 0 ']'
+2026-11-13T09:12:30.3670928Z + command -v sudo
+2026-11-13T09:12:30.3671444Z + SUDO=sudo
+2026-11-13T09:12:30.3671917Z + sudo bash /home/runner/work/sglang/sglang/scripts/ci/utils/install_protoc.sh
+2026-11-13T09:12:30.3733676Z + command -v protoc
+2026-11-13T09:12:30.3734304Z + command -v protoc
+2026-11-13T09:12:30.3734667Z + echo 'protoc not found, installing...'
+2026-11-13T09:12:30.3736328Z protoc not found, installing...
+2026-11-13T09:12:30.3737588Z ++ uname -m
+2026-11-13T09:12:30.3745966Z + ARCH=x86_64
+2026-11-13T09:12:30.3746379Z + command -v apt-get
+2026-11-13T09:12:30.3746798Z + apt-get update
+2026-11-13T09:12:30.4305830Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-13T09:12:30.4679813Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-11-13T09:12:30.4697112Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-11-13T09:12:30.4723970Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-11-13T09:12:30.4753891Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-11-13T09:12:30.4772561Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-11-13T09:12:30.5867520Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [697 kB]
+2026-11-13T09:12:30.6004252Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.6 kB]
+2026-11-13T09:12:30.6028225Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [767 kB]
+2026-11-13T09:12:30.6296043Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1450 kB]
+2026-11-13T09:12:30.6374447Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [315 kB]
+2026-11-13T09:12:30.6395465Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1713 kB]
+2026-11-13T09:12:30.6474100Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [345 kB]
+2026-11-13T09:12:30.6499392Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1883 kB]
+2026-11-13T09:12:30.6598269Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [430 kB]
+2026-11-13T09:12:30.6623503Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [50.7 kB]
+2026-11-13T09:12:30.6639244Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.6 kB]
+2026-11-13T09:12:30.7262236Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1195 kB]
+2026-11-13T09:12:30.7315600Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [238 kB]
+2026-11-13T09:12:30.7820070Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1228 kB]
+2026-11-13T09:12:30.7870984Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [248 kB]
+2026-11-13T09:12:30.7892623Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1788 kB]
+2026-11-13T09:12:30.7964599Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [411 kB]
+2026-11-13T09:12:30.7990270Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [45.4 kB]
+2026-11-13T09:12:30.8004188Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.4 kB]
+2026-11-13T09:12:34.4130919Z Fetched 13.2 MB in 1s (11.9 MB/s)
+2026-11-13T09:12:35.3532450Z Reading package lists...
+2026-11-13T09:12:35.3692084Z + PROTOC_APT_PACKAGES=(wget unzip)
+2026-11-13T09:12:35.3692719Z + apt-get install -y --no-install-recommends wget unzip
+2026-11-13T09:12:35.3815614Z Reading package lists...
+2026-11-13T09:12:35.5895005Z Building dependency tree...
+2026-11-13T09:12:35.5901419Z Reading state information...
+2026-11-13T09:12:35.7407219Z wget is already the newest version (1.21.4-1ubuntu4.5).
+2026-11-13T09:12:35.7407638Z unzip is already the newest version (6.0-28ubuntu4.1).
+2026-11-13T09:12:35.7407957Z 0 upgraded, 0 newly installed, 0 to remove and 54 not upgraded.
+2026-11-13T09:12:35.7414549Z + '[' x86_64 = aarch64 ']'
+2026-11-13T09:12:35.7414886Z + '[' x86_64 = arm64 ']'
+2026-11-13T09:12:35.7415152Z + PROTOC_ARCH=x86_64
+2026-11-13T09:12:35.7415454Z + PROTOC_ZIP=protoc-32.0-linux-x86_64.zip
+2026-11-13T09:12:35.7417416Z + cd /tmp
+2026-11-13T09:12:35.7418045Z + wget https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-x86_64.zip
+2026-11-13T09:12:35.7507188Z --2026-11-13 09:12:35--  https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-x86_64.zip
+2026-11-13T09:12:35.7684651Z Resolving github.com (github.com)... 4.149.173.80
+2026-11-13T09:12:35.7718783Z Connecting to github.com (github.com)|4.149.173.80|:443... connected.
+2026-11-13T09:12:35.9236097Z HTTP request sent, awaiting response... 302 Found
+2026-11-13T09:12:35.9241510Z Location: https://release-assets.githubusercontent.com/github-production-release-asset/23357588/b8f467f9-efcf-428e-8da8-d051740d4252?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-13T10%3A10%3A04Z&rscd=attachment%3B+filename%3Dprotoc-32.0-linux-x86_64.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-13T09%3A09%3A13Z&ske=2026-11-13T10%3A10%3A04Z&sks=b&skv=2018-11-09&sig=BNHDdotzbBS0tFPwfOIvI82g2XMefQEjxAzX7HlQ%2BVc%3D&jwt=*** [following]
+2026-11-13T09:12:35.9246405Z --2026-11-13 09:12:35--  https://release-assets.githubusercontent.com/github-production-release-asset/23357588/b8f467f9-efcf-428e-8da8-d051740d4252?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-13T10%3A10%3A04Z&rscd=attachment%3B+filename%3Dprotoc-32.0-linux-x86_64.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-13T09%3A09%3A13Z&ske=2026-11-13T10%3A10%3A04Z&sks=b&skv=2018-11-09&sig=BNHDdotzbBS0tFPwfOIvI82g2XMefQEjxAzX7HlQ%2BVc%3D&jwt=***
+2026-11-13T09:12:35.9270710Z Resolving release-assets.githubusercontent.com (release-assets.githubusercontent.com)... 185.199.111.133, 185.199.108.133, 185.199.109.133, ...
+2026-11-13T09:12:35.9325778Z Connecting to release-assets.githubusercontent.com (release-assets.githubusercontent.com)|185.199.111.133|:443... connected.
+2026-11-13T09:12:35.9557669Z HTTP request sent, awaiting response... 200 OK
+2026-11-13T09:12:35.9558094Z Length: 3543178 (3.4M) [application/octet-stream]
+2026-11-13T09:12:35.9559792Z Saving to: ‘protoc-32.0-linux-x86_64.zip’
+2026-11-13T09:12:35.9566337Z 
+2026-11-13T09:12:35.9610277Z      0K .......... .......... .......... .......... ..........  1% 9.56M 0s
+2026-11-13T09:12:35.9632946Z     50K .......... .......... .......... .......... ..........  2% 21.5M 0s
+2026-11-13T09:12:35.9661256Z    100K .......... .......... .......... .......... ..........  4% 17.3M 0s
+2026-11-13T09:12:35.9682685Z    150K .......... .......... .......... .......... ..........  5% 22.7M 0s
+2026-11-13T09:12:35.9684024Z    200K .......... .......... .......... .......... ..........  7%  317M 0s
+2026-11-13T09:12:35.9710390Z    250K .......... .......... .......... .......... ..........  8% 18.8M 0s
+2026-11-13T09:12:35.9713507Z    300K .......... .......... .......... .......... .......... 10%  156M 0s
+2026-11-13T09:12:35.9721456Z    350K .......... .......... .......... .......... .......... 11% 65.5M 0s
+2026-11-13T09:12:35.9733966Z    400K .......... .......... .......... .......... .......... 13% 37.0M 0s
+2026-11-13T09:12:35.9736059Z    450K .......... .......... .......... .......... .......... 14%  222M 0s
+2026-11-13T09:12:35.9739498Z    500K .......... .......... .......... .......... .......... 15%  143M 0s
+2026-11-13T09:12:35.9742388Z    550K .......... .......... .......... .......... .......... 17%  179M 0s
+2026-11-13T09:12:35.9763074Z    600K .......... .......... .......... .......... .......... 18% 23.8M 0s
+2026-11-13T09:12:35.9765753Z    650K .......... .......... .......... .......... .......... 20%  165M 0s
+2026-11-13T09:12:35.9770577Z    700K .......... .......... .......... .......... .......... 21%  102M 0s
+2026-11-13T09:12:35.9772670Z    750K .......... .......... .......... .......... .......... 23%  226M 0s
+2026-11-13T09:12:35.9774399Z    800K .......... .......... .......... .......... .......... 24%  284M 0s
+2026-11-13T09:12:35.9776881Z    850K .......... .......... .......... .......... .......... 26%  217M 0s
+2026-11-13T09:12:35.9786407Z    900K .......... .......... .......... .......... .......... 27% 51.7M 0s
+2026-11-13T09:12:35.9788033Z    950K .......... .......... .......... .......... .......... 28%  325M 0s
+2026-11-13T09:12:35.9788939Z   1000K .......... .......... .......... .......... .......... 30%  427M 0s
+2026-11-13T09:12:35.9792123Z   1050K .......... .......... .......... .......... .......... 31%  148M 0s
+2026-11-13T09:12:35.9794153Z   1100K .......... .......... .......... .......... .......... 33%  271M 0s
+2026-11-13T09:12:35.9796060Z   1150K .......... .......... .......... .......... .......... 34%  243M 0s
+2026-11-13T09:12:35.9797507Z   1200K .......... .......... .......... .......... .......... 36%  327M 0s
+2026-11-13T09:12:35.9809710Z   1250K .......... .......... .......... .......... .......... 37% 40.7M 0s
+2026-11-13T09:12:35.9815844Z   1300K .......... .......... .......... .......... .......... 39% 83.2M 0s
+2026-11-13T09:12:35.9817989Z   1350K .......... .......... .......... .......... .......... 40%  198M 0s
+2026-11-13T09:12:35.9819526Z   1400K .......... .......... .......... .......... .......... 41%  268M 0s
+2026-11-13T09:12:35.9821071Z   1450K .......... .......... .......... .......... .......... 43%  329M 0s
+2026-11-13T09:12:35.9823335Z   1500K .......... .......... .......... .......... .......... 44%  261M 0s
+2026-11-13T09:12:35.9824595Z   1550K .......... .......... .......... .......... .......... 46%  287M 0s
+2026-11-13T09:12:35.9827624Z   1600K .......... .......... .......... .......... .......... 47%  328M 0s
+2026-11-13T09:12:35.9829474Z   1650K .......... .......... .......... .......... .......... 49%  432M 0s
+2026-11-13T09:12:35.9830231Z   1700K .......... .......... .......... .......... .......... 50%  283M 0s
+2026-11-13T09:12:35.9830682Z   1750K .......... .......... .......... .......... .......... 52%  388M 0s
+2026-11-13T09:12:35.9831737Z   1800K .......... .......... .......... .......... .......... 53%  381M 0s
+2026-11-13T09:12:35.9838364Z   1850K .......... .......... .......... .......... .......... 54% 78.6M 0s
+2026-11-13T09:12:35.9839366Z   1900K .......... .......... .......... .......... .......... 56%  360M 0s
+2026-11-13T09:12:35.9841298Z   1950K .......... .......... .......... .......... .......... 57%  382M 0s
+2026-11-13T09:12:35.9842125Z   2000K .......... .......... .......... .......... .......... 59%  273M 0s
+2026-11-13T09:12:35.9843864Z   2050K .......... .......... .......... .......... .......... 60%  397M 0s
+2026-11-13T09:12:35.9845035Z   2100K .......... .......... .......... .......... .......... 62%  347M 0s
+2026-11-13T09:12:35.9846155Z   2150K .......... .......... .......... .......... .......... 63%  384M 0s
+2026-11-13T09:12:35.9848918Z   2200K .......... .......... .......... .......... .......... 65%  222M 0s
+2026-11-13T09:12:35.9850270Z   2250K .......... .......... .......... .......... .......... 66%  334M 0s
+2026-11-13T09:12:35.9851477Z   2300K .......... .......... .......... .......... .......... 67%  261M 0s
+2026-11-13T09:12:35.9852658Z   2350K .......... .......... .......... .......... .......... 69%  405M 0s
+2026-11-13T09:12:35.9853954Z   2400K .......... .......... .......... .......... .......... 70%  388M 0s
+2026-11-13T09:12:35.9855158Z   2450K .......... .......... .......... .......... .......... 72%  412M 0s
+2026-11-13T09:12:35.9856385Z   2500K .......... .......... .......... .......... .......... 73%  407M 0s
+2026-11-13T09:12:35.9860448Z   2550K .......... .......... .......... .......... .......... 75%  127M 0s
+2026-11-13T09:12:35.9866198Z   2600K .......... .......... .......... .......... .......... 76%  129M 0s
+2026-11-13T09:12:35.9867986Z   2650K .......... .......... .......... .......... .......... 78%  350M 0s
+2026-11-13T09:12:35.9868320Z   2700K .......... .......... .......... .......... .......... 79%  277M 0s
+2026-11-13T09:12:35.9869303Z   2750K .......... .......... .......... .......... .......... 80%  369M 0s
+2026-11-13T09:12:35.9870241Z   2800K .......... .......... .......... .......... .......... 82%  357M 0s
+2026-11-13T09:12:35.9871932Z   2850K .......... .......... .......... .......... .......... 83%  382M 0s
+2026-11-13T09:12:35.9873803Z   2900K .......... .......... .......... .......... .......... 85%  363M 0s
+2026-11-13T09:12:35.9874952Z   2950K .......... .......... .......... .......... .......... 86%  261M 0s
+2026-11-13T09:12:35.9875986Z   3000K .......... .......... .......... .......... .......... 88%  448M 0s
+2026-11-13T09:12:35.9876786Z   3050K .......... .......... .......... .......... .......... 89%  359M 0s
+2026-11-13T09:12:35.9877985Z   3100K .......... .......... .......... .......... .......... 91%  399M 0s
+2026-11-13T09:12:35.9879425Z   3150K .......... .......... .......... .......... .......... 92%  363M 0s
+2026-11-13T09:12:35.9880802Z   3200K .......... .......... .......... .......... .......... 93%  383M 0s
+2026-11-13T09:12:35.9882068Z   3250K .......... .......... .......... .......... .......... 95%  378M 0s
+2026-11-13T09:12:35.9883784Z   3300K .......... .......... .......... .......... .......... 96%  324M 0s
+2026-11-13T09:12:35.9885310Z   3350K .......... .......... .......... .......... .......... 98%  264M 0s
+2026-11-13T09:12:35.9886440Z   3400K .......... .......... .......... .......... .......... 99%  423M 0s
+2026-11-13T09:12:35.9887032Z   3450K ..........                                            100%  250M=0.03s
+2026-11-13T09:12:35.9887327Z 
+2026-11-13T09:12:35.9888397Z 2026-11-13 09:12:35 (103 MB/s) - ‘protoc-32.0-linux-x86_64.zip’ saved [3543178/3543178]
+2026-11-13T09:12:35.9888756Z 
+2026-11-13T09:12:35.9900954Z + unzip -o protoc-32.0-linux-x86_64.zip -d /usr/local
+2026-11-13T09:12:35.9920202Z Archive:  protoc-32.0-linux-x86_64.zip
+2026-11-13T09:12:36.0527137Z   inflating: /usr/local/bin/protoc   
+2026-11-13T09:12:36.0529167Z    creating: /usr/local/include/google/
+2026-11-13T09:12:36.0529574Z    creating: /usr/local/include/google/protobuf/
+2026-11-13T09:12:36.0530828Z   inflating: /usr/local/include/google/protobuf/any.proto  
+2026-11-13T09:12:36.0531794Z   inflating: /usr/local/include/google/protobuf/api.proto  
+2026-11-13T09:12:36.0532525Z    creating: /usr/local/include/google/protobuf/compiler/
+2026-11-13T09:12:36.0533709Z   inflating: /usr/local/include/google/protobuf/compiler/plugin.proto  
+2026-11-13T09:12:36.0534459Z   inflating: /usr/local/include/google/protobuf/cpp_features.proto  
+2026-11-13T09:12:36.0538377Z   inflating: /usr/local/include/google/protobuf/descriptor.proto  
+2026-11-13T09:12:36.0539107Z   inflating: /usr/local/include/google/protobuf/duration.proto  
+2026-11-13T09:12:36.0539813Z   inflating: /usr/local/include/google/protobuf/empty.proto  
+2026-11-13T09:12:36.0541005Z   inflating: /usr/local/include/google/protobuf/field_mask.proto  
+2026-11-13T09:12:36.0541676Z   inflating: /usr/local/include/google/protobuf/go_features.proto  
+2026-11-13T09:12:36.0542578Z   inflating: /usr/local/include/google/protobuf/java_features.proto  
+2026-11-13T09:12:36.0543401Z   inflating: /usr/local/include/google/protobuf/source_context.proto  
+2026-11-13T09:12:36.0544293Z   inflating: /usr/local/include/google/protobuf/struct.proto  
+2026-11-13T09:12:36.0545332Z   inflating: /usr/local/include/google/protobuf/timestamp.proto  
+2026-11-13T09:12:36.0546368Z   inflating: /usr/local/include/google/protobuf/type.proto  
+2026-11-13T09:12:36.0547285Z   inflating: /usr/local/include/google/protobuf/wrappers.proto  
+2026-11-13T09:12:36.0547839Z   inflating: /usr/local/readme.txt   
+2026-11-13T09:12:36.0551960Z + rm -f protoc-32.0-linux-x86_64.zip
+2026-11-13T09:12:36.0569138Z + protoc --version
+2026-11-13T09:12:36.0577734Z libprotoc 32.0
+2026-11-13T09:12:36.0591127Z + bash /home/runner/work/sglang/sglang/scripts/ci/utils/install_rustup.sh
+2026-11-13T09:12:36.0610024Z +++ dirname /home/runner/work/sglang/sglang/scripts/ci/utils/install_rustup.sh
+2026-11-13T09:12:36.0618983Z ++ cd /home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T09:12:36.0619361Z ++ pwd
+2026-11-13T09:12:36.0621460Z + SCRIPT_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T09:12:36.0622063Z + RUST_WORKSPACE_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust
+2026-11-13T09:12:36.0625384Z ++ sed -n 's/^channel *= *"\([^"]*\)".*/\1/p' /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml
+2026-11-13T09:12:36.0640697Z + PINNED_CHANNEL=1.92
+2026-11-13T09:12:36.0641002Z + DEFAULT_CHANNEL=1.92
+2026-11-13T09:12:36.0642682Z + export PATH=/home/runner/.cargo/bin:/opt/hostedtoolcache/Python/3.12.16/x64/bin:/opt/hostedtoolcache/Python/3.12.16/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-11-13T09:12:36.0645361Z + PATH=/home/runner/.cargo/bin:/opt/hostedtoolcache/Python/3.12.16/x64/bin:/opt/hostedtoolcache/Python/3.12.16/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-11-13T09:12:36.0646961Z + '[' -n /home/runner/work/_temp/_runner_file_commands/add_path_ccbed6b9-1505-4df3-8b0b-747ea63be9a4 ']'
+2026-11-13T09:12:36.0647477Z ++ dirname /home/runner/work/_temp/_runner_file_commands/add_path_ccbed6b9-1505-4df3-8b0b-747ea63be9a4
+2026-11-13T09:12:36.0654515Z + mkdir -p /home/runner/work/_temp/_runner_file_commands
+2026-11-13T09:12:36.0666699Z + echo /home/runner/.cargo/bin
+2026-11-13T09:12:36.0667263Z + '[' -n '' ']'
+2026-11-13T09:12:36.0669029Z + command -v cargo
+2026-11-13T09:12:36.0669408Z + command -v rustc
+2026-11-13T09:12:36.0669709Z + rustc --version
+2026-11-13T09:12:36.0825934Z ++ rustc --version
+2026-11-13T09:12:36.0945782Z ++ cargo --version
+2026-11-13T09:12:36.9832851Z + echo 'rust already installed: rustc 1.99.1 (58cf8f9c3 2026-10-13), cargo 1.99.1 (5f94df478 2026-08-27)'
+2026-11-13T09:12:36.9833700Z rust already installed: rustc 1.99.1 (58cf8f9c3 2026-10-13), cargo 1.99.1 (5f94df478 2026-08-27)
+2026-11-13T09:12:36.9834261Z + install_workspace_pinned_toolchain
+2026-11-13T09:12:36.9834597Z + command -v rustup
+2026-11-13T09:12:36.9835028Z + local toolchain_file=/home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml
+2026-11-13T09:12:36.9835546Z + '[' '!' -f /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml ']'
+2026-11-13T09:12:36.9837109Z + cd /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust
+2026-11-13T09:12:36.9837816Z + rustup toolchain install
+2026-11-13T09:12:37.0922076Z info: syncing channel updates for 1.92-x86_64-unknown-linux-gnu
+2026-11-13T09:12:37.3871517Z info: latest update on 2025-12-11 for version 1.92.0 (ded5c06cf 2025-12-08)
+2026-11-13T09:12:37.3881382Z info: downloading 5 components
+2026-11-13T09:12:44.5236565Z info: the active toolchain `1.92-x86_64-unknown-linux-gnu` has been installed
+2026-11-13T09:12:44.5237113Z info: it's active because: overridden by '/home/runner/work/sglang/sglang/rust/rust-toolchain.toml'
+2026-11-13T09:12:44.5429790Z + return 0
+2026-11-13T09:12:44.5430093Z + export RUSTUP_TOOLCHAIN=1.92
+2026-11-13T09:12:44.5430435Z + RUSTUP_TOOLCHAIN=1.92
+2026-11-13T09:12:44.5430800Z + '[' -n /home/runner/work/_temp/_runner_file_commands/set_env_ccbed6b9-1505-4df3-8b0b-747ea63be9a4 ']'
+2026-11-13T09:12:44.5435275Z ++ dirname /home/runner/work/_temp/_runner_file_commands/set_env_ccbed6b9-1505-4df3-8b0b-747ea63be9a4
+2026-11-13T09:12:44.5447122Z + mkdir -p /home/runner/work/_temp/_runner_file_commands
+2026-11-13T09:12:44.5459468Z + echo RUSTUP_TOOLCHAIN=1.92
+2026-11-13T09:12:44.5459794Z + rustc --version
+2026-11-13T09:12:44.5563996Z rustc 1.92.0 (ded5c06cf 2025-12-08)
+2026-11-13T09:12:44.5572158Z + cargo --version
+2026-11-13T09:12:44.5646018Z cargo 1.92.0 (344c4567c 2025-10-21)
+2026-11-13T09:12:44.5696888Z ##[group]Run set -o pipefail
+2026-11-13T09:12:44.5697135Z [36;1mset -o pipefail[0m
+2026-11-13T09:12:44.5697567Z [36;1muv pip install -e "python[dev]" --index-strategy unsafe-best-match --prerelease allow 2>&1 | tee sglang-install.log[0m
+2026-11-13T09:12:44.5698131Z [36;1muv pip install "mlx[cpu]>=0.32" --index-strategy unsafe-best-match 2>&1 | tee mlx-install.log[0m
+2026-11-13T09:12:44.5698519Z [36;1mpython -m pip freeze > sglang-environment.txt[0m
+2026-11-13T09:12:44.5718143Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:12:44.5718347Z env:
+2026-11-13T09:12:44.5718521Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:12:44.5718725Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:12:44.5718968Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:12:44.5719151Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:12:44.5719320Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:12:44.5719552Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:12:44.5719933Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:12:44.5720283Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:12:44.5720585Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:12:44.5720882Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:12:44.5721181Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:12:44.5721438Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:12:44.5721619Z   UV_SYSTEM_PYTHON: 1
+2026-11-13T09:12:44.5721796Z ##[endgroup]
+2026-11-13T09:12:44.6206896Z Using Python 3.12.16 environment at: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:13:23.3169097Z Resolved 270 packages in 38.69s
+2026-11-13T09:13:23.3405628Z    Building sglang @ file:///home/runner/work/sglang/sglang/python
+2026-11-13T09:13:23.3530048Z Downloading matplotlib (9.4MiB)
+2026-11-13T09:13:23.3531081Z Downloading scikit-learn (8.7MiB)
+2026-11-13T09:13:23.3544250Z Downloading pillow (6.3MiB)
+2026-11-13T09:13:23.3544656Z Downloading jedi (4.7MiB)
+2026-11-13T09:13:23.3544980Z Downloading uvloop (4.3MiB)
+2026-11-13T09:13:23.3545282Z Downloading hf-xet (4.1MiB)
+2026-11-13T09:13:23.3545601Z Downloading nvidia-cuda-cccl (3.9MiB)
+2026-11-13T09:13:23.3573318Z Downloading grpcio (7.0MiB)
+2026-11-13T09:13:23.3573823Z Downloading cryptography (4.5MiB)
+2026-11-13T09:13:23.3574260Z Downloading torchcodec (9.5MiB)
+2026-11-13T09:13:23.3574659Z Downloading numpy (15.8MiB)
+2026-11-13T09:13:23.3575032Z Downloading zstandard (5.3MiB)
+2026-11-13T09:13:23.3612382Z Downloading pyarrow (52.5MiB)
+2026-11-13T09:13:23.3641784Z Downloading pycountry (7.7MiB)
+2026-11-13T09:13:23.3642143Z Downloading fonttools (5.2MiB)
+2026-11-13T09:13:23.3645867Z Downloading scipy (33.7MiB)
+2026-11-13T09:13:23.3661460Z Downloading llvmlite (53.7MiB)
+2026-11-13T09:13:23.3666631Z Downloading nvidia-mathdx (21.9MiB)
+2026-11-13T09:13:23.3699625Z Downloading torchvision (7.2MiB)
+2026-11-13T09:13:23.4112148Z Downloading pandas (11.8MiB)
+2026-11-13T09:13:23.4153795Z Downloading nvshmem4py-cu13 (4.8MiB)
+2026-11-13T09:13:23.4181506Z Downloading onnxruntime (22.7MiB)
+2026-11-13T09:13:23.4218789Z Downloading pymupdf (65.8MiB)
+2026-11-13T09:13:23.4219226Z Downloading fastokens (3.6MiB)
+2026-11-13T09:13:23.4219624Z Downloading granian (5.1MiB)
+2026-11-13T09:13:23.4219989Z Downloading tilelang (48.2MiB)
+2026-11-13T09:13:23.4220371Z Downloading nccl-extensions (24.0MiB)
+2026-11-13T09:13:23.4220763Z Downloading lm-eval (8.4MiB)
+2026-11-13T09:13:23.4243302Z Downloading transformers (12.0MiB)
+2026-11-13T09:13:23.4253074Z Downloading z3-solver (27.9MiB)
+2026-11-13T09:13:23.4261495Z Downloading mistral-common (6.3MiB)
+2026-11-13T09:13:23.4267231Z Downloading sgl-deep-gemm (4.9MiB)
+2026-11-13T09:13:23.4267889Z Downloading modelscope (5.8MiB)
+2026-11-13T09:13:23.4268287Z Downloading cuda-core (6.3MiB)
+2026-11-13T09:13:23.4269598Z Downloading flashinfer-python (96.6MiB)
+2026-11-13T09:13:23.4271845Z Downloading av (39.3MiB)
+2026-11-13T09:13:23.4274818Z Downloading polars-runtime-32 (51.4MiB)
+2026-11-13T09:13:23.4279673Z Downloading nvidia-cutlass-dsl-libs-cu13 (87.7MiB)
+2026-11-13T09:13:23.4286369Z Downloading instanttensor (7.0MiB)
+2026-11-13T09:13:23.4290642Z Downloading deepseek-recipe (12.3MiB)
+2026-11-13T09:13:23.4291509Z Downloading lxml (5.1MiB)
+2026-11-13T09:13:23.4291934Z Downloading tml-renderers (4.5MiB)
+2026-11-13T09:13:23.4293492Z Downloading sglang-kernel (355.7MiB)
+2026-11-13T09:13:23.4295363Z Downloading nvidia-cudnn-frontend (11.1MiB)
+2026-11-13T09:13:23.4297123Z Downloading sgl-flash-mla (9.7MiB)
+2026-11-13T09:13:23.4298913Z Downloading nvidia-cutlass-dsl-libs-cu12 (87.5MiB)
+2026-11-13T09:13:23.4300647Z Downloading bitsandbytes (41.1MiB)
+2026-11-13T09:13:23.4302534Z Downloading nvidia-nvvm (71.7MiB)
+2026-11-13T09:13:23.4308658Z Downloading sgl-deep-ep (14.7MiB)
+2026-11-13T09:13:23.4309020Z Downloading nvidia-cuda-nvcc (44.8MiB)
+2026-11-13T09:13:24.3737266Z  Downloaded fastokens
+2026-11-13T09:13:24.3845415Z Downloading numba (3.6MiB)
+2026-11-13T09:13:24.4480212Z  Downloaded nvidia-cuda-cccl
+2026-11-13T09:13:24.4686647Z  Downloaded hf-xet
+2026-11-13T09:13:24.4728555Z Downloading nccl4py (3.5MiB)
+2026-11-13T09:13:24.4958937Z Downloading cython (3.3MiB)
+2026-11-13T09:13:24.5855174Z  Downloaded uvloop
+2026-11-13T09:13:24.6176952Z Downloading tokenizers (3.2MiB)
+2026-11-13T09:13:24.6567499Z  Downloaded cryptography
+2026-11-13T09:13:24.6843538Z  Downloaded jedi
+2026-11-13T09:13:24.6946238Z Downloading llguidance (2.9MiB)
+2026-11-13T09:13:24.7034712Z  Downloaded tml-renderers
+2026-11-13T09:13:24.7264563Z Downloading nvidia-cutlass-dsl-libs-base (2.9MiB)
+2026-11-13T09:13:24.7351720Z Downloading openai-harmony (2.9MiB)
+2026-11-13T09:13:24.8188124Z  Downloaded nvshmem4py-cu13
+2026-11-13T09:13:24.8654284Z Downloading py-spy (2.8MiB)
+2026-11-13T09:13:24.8747963Z  Downloaded sgl-deep-gemm
+2026-11-13T09:13:24.8786954Z  Downloaded fonttools
+2026-11-13T09:13:24.8814498Z  Downloaded granian
+2026-11-13T09:13:24.8918315Z  Downloaded lxml
+2026-11-13T09:13:24.9132397Z Downloading apache-tvm-ffi (2.6MiB)
+2026-11-13T09:13:24.9134736Z Downloading torch-memory-saver (2.5MiB)
+2026-11-13T09:13:24.9135946Z Downloading timm (2.4MiB)
+2026-11-13T09:13:24.9252169Z  Downloaded zstandard
+2026-11-13T09:13:24.9850801Z Downloading anthropic (2.3MiB)
+2026-11-13T09:13:24.9851857Z Downloading pycryptodomex (2.2MiB)
+2026-11-13T09:13:25.3528632Z  Downloaded pillow
+2026-11-13T09:13:25.3732199Z  Downloaded cuda-core
+2026-11-13T09:13:25.4010973Z  Downloaded mistral-common
+2026-11-13T09:13:25.4134208Z Downloading pydantic-core (2.2MiB)
+2026-11-13T09:13:25.4277393Z  Downloaded modelscope
+2026-11-13T09:13:25.4644366Z Downloading aiohttp (1.8MiB)
+2026-11-13T09:13:25.4645840Z Downloading torchaudio (1.7MiB)
+2026-11-13T09:13:25.4655341Z Downloading nltk (1.6MiB)
+2026-11-13T09:13:25.6554492Z  Downloaded grpcio
+2026-11-13T09:13:25.7221524Z Downloading chardet (1.6MiB)
+2026-11-13T09:13:25.7452970Z  Downloaded cython
+2026-11-13T09:13:25.7462360Z  Downloaded torchvision
+2026-11-13T09:13:25.7525272Z  Downloaded numba
+2026-11-13T09:13:25.7611426Z  Downloaded instanttensor
+2026-11-13T09:13:25.8335528Z Downloading nvidia-cutlass-dsl-libs-core (1.6MiB)
+2026-11-13T09:13:25.8337133Z Downloading kiwisolver (1.4MiB)
+2026-11-13T09:13:25.8338781Z Downloading sentencepiece (1.3MiB)
+2026-11-13T09:13:25.8340612Z Downloading auto-round (1.4MiB)
+2026-11-13T09:13:25.8391140Z  Downloaded nccl4py
+2026-11-13T09:13:25.8425602Z  Downloaded llguidance
+2026-11-13T09:13:25.8582338Z  Downloaded pycryptodomex
+2026-11-13T09:13:25.8715913Z  Downloaded timm
+2026-11-13T09:13:25.8789331Z  Downloaded pycountry
+2026-11-13T09:13:25.8837710Z  Downloaded openai-harmony
+2026-11-13T09:13:25.8948838Z Downloading pygments (1.2MiB)
+2026-11-13T09:13:25.8963873Z Downloading soundfile (1.3MiB)
+2026-11-13T09:13:25.9021442Z  Downloaded nvidia-cutlass-dsl-libs-base
+2026-11-13T09:13:25.9030697Z Downloading xgrammar (1.2MiB)
+2026-11-13T09:13:25.9032163Z Downloading tiktoken (1.1MiB)
+2026-11-13T09:13:25.9155332Z  Downloaded anthropic
+2026-11-13T09:13:25.9328165Z  Downloaded torch-memory-saver
+2026-11-13T09:13:25.9380143Z  Downloaded tokenizers
+2026-11-13T09:13:25.9533745Z  Downloaded apache-tvm-ffi
+2026-11-13T09:13:25.9556076Z  Downloaded py-spy
+2026-11-13T09:13:26.0418894Z    Building word2number==1.1
+2026-11-13T09:13:26.1155022Z  Downloaded nltk
+2026-11-13T09:13:26.1353544Z  Downloaded torchaudio
+2026-11-13T09:13:26.1671782Z  Downloaded aiohttp
+2026-11-13T09:13:26.1702552Z    Building rouge-score==0.1.2
+2026-11-13T09:13:26.1703765Z    Building sqlitedict==2.1.0
+2026-11-13T09:13:26.2090646Z  Downloaded lm-eval
+2026-11-13T09:13:26.3027789Z  Downloaded pydantic-core
+2026-11-13T09:13:26.3524267Z  Downloaded chardet
+2026-11-13T09:13:26.3574945Z  Downloaded tiktoken
+2026-11-13T09:13:26.3663950Z  Downloaded kiwisolver
+2026-11-13T09:13:26.3695098Z  Downloaded sentencepiece
+2026-11-13T09:13:26.3719546Z  Downloaded scikit-learn
+2026-11-13T09:13:26.4004572Z  Downloaded pygments
+2026-11-13T09:13:26.4033657Z  Downloaded xgrammar
+2026-11-13T09:13:26.4078682Z  Downloaded auto-round
+2026-11-13T09:13:26.4197316Z  Downloaded soundfile
+2026-11-13T09:13:26.4391873Z  Downloaded nvidia-cutlass-dsl-libs-core
+2026-11-13T09:13:26.5332200Z       Built word2number==1.1
+2026-11-13T09:13:26.5471723Z  Downloaded torchcodec
+2026-11-13T09:13:26.5552496Z  Downloaded matplotlib
+2026-11-13T09:13:26.7602176Z       Built sqlitedict==2.1.0
+2026-11-13T09:13:26.7763637Z       Built rouge-score==0.1.2
+2026-11-13T09:13:26.9643265Z  Downloaded sgl-flash-mla
+2026-11-13T09:13:27.2770990Z    Building antlr4-python3-runtime==4.9.3
+2026-11-13T09:13:27.4037327Z  Downloaded nvidia-cudnn-frontend
+2026-11-13T09:13:27.6517643Z  Downloaded pandas
+2026-11-13T09:13:27.7098087Z  Downloaded transformers
+2026-11-13T09:13:27.8001613Z  Downloaded deepseek-recipe
+2026-11-13T09:13:27.8330225Z       Built antlr4-python3-runtime==4.9.3
+2026-11-13T09:13:28.3770016Z  Downloaded sgl-deep-ep
+2026-11-13T09:13:28.5162008Z  Downloaded numpy
+2026-11-13T09:13:29.4695676Z  Downloaded nvidia-mathdx
+2026-11-13T09:13:29.5800977Z  Downloaded onnxruntime
+2026-11-13T09:13:29.7550701Z  Downloaded nccl-extensions
+2026-11-13T09:13:30.2049955Z  Downloaded z3-solver
+2026-11-13T09:13:31.2296122Z  Downloaded scipy
+2026-11-13T09:13:33.7492300Z  Downloaded av
+2026-11-13T09:13:34.0609417Z  Downloaded bitsandbytes
+2026-11-13T09:13:34.5700727Z  Downloaded nvidia-cuda-nvcc
+2026-11-13T09:13:35.1369879Z  Downloaded tilelang
+2026-11-13T09:13:36.0776937Z  Downloaded pyarrow
+2026-11-13T09:13:37.1149307Z  Downloaded llvmlite
+2026-11-13T09:13:37.4459509Z  Downloaded polars-runtime-32
+2026-11-13T09:13:38.0771234Z  Downloaded pymupdf
+2026-11-13T09:13:38.8165004Z  Downloaded nvidia-nvvm
+2026-11-13T09:13:40.2993454Z  Downloaded nvidia-cutlass-dsl-libs-cu12
+2026-11-13T09:13:40.3592250Z  Downloaded nvidia-cutlass-dsl-libs-cu13
+2026-11-13T09:13:48.3478123Z  Downloaded flashinfer-python
+2026-11-13T09:13:51.6578416Z  Downloaded sglang-kernel
+2026-11-13T09:26:36.9283332Z       Built sglang @ file:///home/runner/work/sglang/sglang/python
+2026-11-13T09:26:36.9293771Z Prepared 240 packages in 13m 13s
+2026-11-13T09:26:38.8348467Z Installed 267 packages in 1.90s
+2026-11-13T09:26:38.8350193Z  + absl-py==2.5.1
+2026-11-13T09:26:38.8350481Z  + accelerate==1.15.0
+2026-11-13T09:26:38.8350756Z  + addict==2.4.0
+2026-11-13T09:26:38.8351027Z  + aiohappyeyeballs==2.7.1
+2026-11-13T09:26:38.8351322Z  + aiohttp==3.14.5
+2026-11-13T09:26:38.8351576Z  + aiosignal==1.4.0
+2026-11-13T09:26:38.8351851Z  + airportsdata==20261103
+2026-11-13T09:26:38.8352138Z  + annotated-doc==0.0.6
+2026-11-13T09:26:38.8352460Z  + annotated-types==0.8.0
+2026-11-13T09:26:38.8352742Z  + anthropic==2.8.0
+2026-11-13T09:26:38.8353021Z  + antlr4-python3-runtime==4.9.3
+2026-11-13T09:26:38.8353458Z  + anyio==4.16.0
+2026-11-13T09:26:38.8353719Z  + apache-tvm-ffi==0.1.11
+2026-11-13T09:26:38.8354026Z  + asttokens==3.0.2
+2026-11-13T09:26:38.8354277Z  + attrs==26.1.0
+2026-11-13T09:26:38.8354529Z  + auto-round==0.16.1
+2026-11-13T09:26:38.8354785Z  + av==16.1.0
+2026-11-13T09:26:38.8355060Z  + bitsandbytes==0.50.2
+2026-11-13T09:26:38.8355352Z  + blake3==1.0.11
+2026-11-13T09:26:38.8355924Z  + blobfile==3.0.0
+2026-11-13T09:26:38.8356175Z  + build==1.6.1
+2026-11-13T09:26:38.8356424Z  + certifi==2026.10.23
+2026-11-13T09:26:38.8356679Z  + cffi==2.1.1
+2026-11-13T09:26:38.8356919Z  + chardet==7.7.0
+2026-11-13T09:26:38.8357186Z  + charset-normalizer==3.5.2
+2026-11-13T09:26:38.8357479Z  + click==8.5.1
+2026-11-13T09:26:38.8359009Z  + cloudpickle==3.1.2
+2026-11-13T09:26:38.8359261Z  + colorama==0.4.6
+2026-11-13T09:26:38.8359506Z  + compressed-tensors==0.18.0
+2026-11-13T09:26:38.8359796Z  + contourpy==1.4.0
+2026-11-13T09:26:38.8360026Z  + coverage==7.17.3
+2026-11-13T09:26:38.8360270Z  + cryptography==50.0.2
+2026-11-13T09:26:38.8360539Z  + cuda-bindings==13.5.0
+2026-11-13T09:26:38.8361536Z  + cuda-core==1.2.2
+2026-11-13T09:26:38.8361807Z  + cuda-pathfinder==1.8.6
+2026-11-13T09:26:38.8362093Z  + cuda-python==13.5.0
+2026-11-13T09:26:38.8362341Z  + cuda-tile==1.8.1
+2026-11-13T09:26:38.8362582Z  + cuda-toolkit==13.0.3.0
+2026-11-13T09:26:38.8362838Z  + cycler==0.12.1
+2026-11-13T09:26:38.8363069Z  + cython==3.3.1
+2026-11-13T09:26:38.8363453Z  + dataproperty==0.37.0
+2026-11-13T09:26:38.8363797Z  + datasets==4.8.5
+2026-11-13T09:26:38.8364087Z  + deepseek-recipe==0.2.0
+2026-11-13T09:26:38.8364356Z  + defusedxml==0.8.0rc2
+2026-11-13T09:26:38.8364665Z  + diff-cover==11.0.1
+2026-11-13T09:26:38.8364919Z  + dill==0.4.1
+2026-11-13T09:26:38.8365158Z  + diskcache==5.6.3
+2026-11-13T09:26:38.8365497Z  + distro==1.9.0
+2026-11-13T09:26:38.8365765Z  + docstring-parser==0.18.0
+2026-11-13T09:26:38.8366045Z  + dominate==3.1.0
+2026-11-13T09:26:38.8366276Z  + easydict==1.14
+2026-11-13T09:26:38.8366525Z  + editdistance==0.8.1
+2026-11-13T09:26:38.8366777Z  + einops==0.9.0.dev0
+2026-11-13T09:26:38.8367022Z  + executing==2.3.0
+2026-11-13T09:26:38.8367262Z  + expecttest==0.3.0
+2026-11-13T09:26:38.8367528Z  + fastapi==0.162.5
+2026-11-13T09:26:38.8367764Z  + fastokens==0.3.6
+2026-11-13T09:26:38.8368019Z  + flashinfer-python==0.7.4
+2026-11-13T09:26:38.8368295Z  + flatbuffers==25.12.19
+2026-11-13T09:26:38.8368551Z  + fonttools==4.68.0
+2026-11-13T09:26:38.8368800Z  + frozenlist==1.8.0
+2026-11-13T09:26:38.8369058Z  + fsspec==2026.2.0
+2026-11-13T09:26:38.8369291Z  + gguf==0.19.0
+2026-11-13T09:26:38.8369521Z  + granian==2.8.8
+2026-11-13T09:26:38.8369745Z  + grpcio==1.85.1
+2026-11-13T09:26:38.8369999Z  + grpcio-health-checking==1.85.1
+2026-11-13T09:26:38.8370336Z  + grpcio-reflection==1.85.1
+2026-11-13T09:26:38.8370618Z  + h11==0.16.0
+2026-11-13T09:26:38.8370837Z  + hf-xet==1.8.0
+2026-11-13T09:26:38.8371076Z  + httpcore==1.0.9
+2026-11-13T09:26:38.8371319Z  + httpcore2==2.16.0
+2026-11-13T09:26:38.8371563Z  + httpx==0.28.1
+2026-11-13T09:26:38.8371805Z  + httpx2==2.16.0
+2026-11-13T09:26:38.8372058Z  + huggingface-hub==1.33.0
+2026-11-13T09:26:38.8372340Z  + humming-kernels==0.1.18
+2026-11-13T09:26:38.8372842Z  + idna==3.20
+2026-11-13T09:26:38.8373067Z  + iniconfig==2.3.1
+2026-11-13T09:26:38.8373448Z  + instanttensor==0.2.3
+2026-11-13T09:26:38.8373713Z  + interegular==0.3.3
+2026-11-13T09:26:38.8373963Z  + ipython==9.18.1
+2026-11-13T09:26:38.8374226Z  + ipython-pygments-lexers==1.1.1
+2026-11-13T09:26:38.8374520Z  + jedi==0.20.1
+2026-11-13T09:26:38.8374757Z  + jinja2==3.1.6
+2026-11-13T09:26:38.8374985Z  + jiter==0.19.0
+2026-11-13T09:26:38.8375211Z  + joblib==1.6.0
+2026-11-13T09:26:38.8375439Z  + jsonlines==4.0.0
+2026-11-13T09:26:38.8375677Z  + jsonschema==4.26.0
+2026-11-13T09:26:38.8375956Z  + jsonschema-specifications==2025.9.1
+2026-11-13T09:26:38.8376276Z  + kiwisolver==1.5.1
+2026-11-13T09:26:38.8376516Z  + lark==1.3.1
+2026-11-13T09:26:38.8376763Z  + latex2sympy2-extended==1.11.0
+2026-11-13T09:26:38.8377058Z  + llguidance==1.9.1
+2026-11-13T09:26:38.8377299Z  + llvmlite==0.47.0
+2026-11-13T09:26:38.8377547Z  + lm-eval==0.5.0.dev1
+2026-11-13T09:26:38.8377799Z  + logbook==1.10.1
+2026-11-13T09:26:38.8378039Z  + loguru==0.8.0
+2026-11-13T09:26:38.8378266Z  + lxml==7.0.0b1
+2026-11-13T09:26:38.8378510Z  + markdown-it-py==4.3.0
+2026-11-13T09:26:38.8378788Z  + markupsafe==3.0.4
+2026-11-13T09:26:38.8379030Z  + math-verify==0.9.0
+2026-11-13T09:26:38.8379281Z  + matplotlib==3.11.2
+2026-11-13T09:26:38.8379684Z  + matplotlib-inline==0.2.2
+2026-11-13T09:26:38.8379968Z  + mbstrdecoder==0.6.1
+2026-11-13T09:26:38.8380220Z  + mdurl==0.1.2
+2026-11-13T09:26:38.8380458Z  + mistral-common==1.13.1
+2026-11-13T09:26:38.8380726Z  + ml-dtypes==0.6.0
+2026-11-13T09:26:38.8380970Z  + modelscope==1.40.3
+2026-11-13T09:26:38.8381220Z  + modelscope-hub==0.7.1
+2026-11-13T09:26:38.8381492Z  + more-itertools==11.2.1
+2026-11-13T09:26:38.8381758Z  + mpmath==1.3.0
+2026-11-13T09:26:38.8381992Z  + msgfy==0.2.1
+2026-11-13T09:26:38.8382222Z  + msgspec==0.22.0
+2026-11-13T09:26:38.8382462Z  + multidict==7.2.1
+2026-11-13T09:26:38.8382715Z  + multiprocess==0.70.19
+2026-11-13T09:26:38.8382978Z  + narwhals==2.28.0
+2026-11-13T09:26:38.8383343Z  + nccl-extensions==0.2.0
+2026-11-13T09:26:38.8383606Z  + nccl4py==0.6.0
+2026-11-13T09:26:38.8383850Z  + nest-asyncio==1.6.0
+2026-11-13T09:26:38.8384100Z  + networkx==3.7
+2026-11-13T09:26:38.8384329Z  + ninja==1.13.2
+2026-11-13T09:26:38.8384557Z  + nltk==3.10.4
+2026-11-13T09:26:38.8384783Z  + numba==0.65.1
+2026-11-13T09:26:38.8385011Z  + numpy==2.3.5
+2026-11-13T09:26:38.8385256Z  + nvidia-cublas==13.1.1.3
+2026-11-13T09:26:38.8385533Z  + nvidia-cuda-cccl==13.3.5.0.6
+2026-11-13T09:26:38.8385829Z  + nvidia-cuda-crt==13.5.37
+2026-11-13T09:26:38.8386115Z  + nvidia-cuda-cupti==13.0.85
+2026-11-13T09:26:38.8386411Z  + nvidia-cuda-nvcc==13.5.37
+2026-11-13T09:26:38.8386829Z  + nvidia-cuda-nvrtc==13.0.88
+2026-11-13T09:26:38.8387128Z  + nvidia-cuda-runtime==13.0.96
+2026-11-13T09:26:38.8387423Z  + nvidia-cudnn-cu13==9.24.0.43
+2026-11-13T09:26:38.8387726Z  + nvidia-cudnn-frontend==1.32.3
+2026-11-13T09:26:38.8388047Z  + nvidia-cufft==12.0.0.61
+2026-11-13T09:26:38.8388320Z  + nvidia-cufile==1.15.1.6
+2026-11-13T09:26:38.8388594Z  + nvidia-curand==10.4.0.35
+2026-11-13T09:26:38.8388872Z  + nvidia-cusolver==12.0.4.66
+2026-11-13T09:26:38.8389160Z  + nvidia-cusparse==12.6.3.3
+2026-11-13T09:26:38.8389462Z  + nvidia-cusparselt-cu13==0.8.1
+2026-11-13T09:26:38.8389770Z  + nvidia-cutlass-dsl==4.8.0
+2026-11-13T09:26:38.8390083Z  + nvidia-cutlass-dsl-libs-base==4.8.0
+2026-11-13T09:26:38.8390430Z  + nvidia-cutlass-dsl-libs-core==4.8.0
+2026-11-13T09:26:38.8390765Z  + nvidia-cutlass-dsl-libs-cu12==4.8.0
+2026-11-13T09:26:38.8391095Z  + nvidia-cutlass-dsl-libs-cu13==4.8.0
+2026-11-13T09:26:38.8391414Z  + nvidia-mathdx==25.6.0
+2026-11-13T09:26:38.8391683Z  + nvidia-ml-py==13.615.71
+2026-11-13T09:26:38.8391953Z  + nvidia-nccl-cu13==2.30.7
+2026-11-13T09:26:38.8392242Z  + nvidia-nvjitlink==13.5.37
+2026-11-13T09:26:38.8392533Z  + nvidia-nvshmem-cu13==3.4.5
+2026-11-13T09:26:38.8392819Z  + nvidia-nvtx==13.0.85
+2026-11-13T09:26:38.8393080Z  + nvidia-nvvm==13.5.37
+2026-11-13T09:26:38.8393449Z  + nvshmem4py-cu13==0.4.1
+2026-11-13T09:26:38.8393718Z  + onnxruntime==1.31.1
+2026-11-13T09:26:38.8394115Z  + openai==2.8.0
+2026-11-13T09:26:38.8394366Z  + openai-harmony==0.0.4
+2026-11-13T09:26:38.8394644Z  + opentelemetry-api==1.45.2
+2026-11-13T09:26:38.8394925Z  + orjson==3.13.0
+2026-11-13T09:26:38.8395165Z  + outlines==0.1.11
+2026-11-13T09:26:38.8395417Z  + outlines-core==0.1.26
+2026-11-13T09:26:38.8395678Z  + pandas==2.3.3
+2026-11-13T09:26:38.8395925Z  + parameterized==0.9.0
+2026-11-13T09:26:38.8396178Z  + parso==0.8.7
+2026-11-13T09:26:38.8396436Z  + partial-json-parser==0.2.1.1.post7
+2026-11-13T09:26:38.8396754Z  + pathvalidate==3.3.1
+2026-11-13T09:26:38.8397009Z  + peft==0.21.2
+2026-11-13T09:26:38.8397238Z  + pexpect==4.9.0
+2026-11-13T09:26:38.8397475Z  + pillow==11.3.0
+2026-11-13T09:26:38.8397702Z  + pluggy==1.7.0
+2026-11-13T09:26:38.8397937Z  + polars==2.1.0
+2026-11-13T09:26:38.8398177Z  + polars-runtime-32==2.1.0
+2026-11-13T09:26:38.8398450Z  + portalocker==4.4.2
+2026-11-13T09:26:38.8398713Z  + prometheus-client==0.26.0
+2026-11-13T09:26:38.8399005Z  + prompt-toolkit==3.0.53
+2026-11-13T09:26:38.8399277Z  + propcache==0.5.4
+2026-11-13T09:26:38.8399522Z  + protobuf==7.37.0rc3
+2026-11-13T09:26:38.8399770Z  + psutil==7.2.2
+2026-11-13T09:26:38.8400012Z  + ptyprocess==0.7.0
+2026-11-13T09:26:38.8400275Z  + pure-eval==0.2.4
+2026-11-13T09:26:38.8400641Z  + py-cpuinfo==9.0.0
+2026-11-13T09:26:38.8400886Z  + py-spy==0.4.3
+2026-11-13T09:26:38.8401123Z  + pyarrow==26.0.1
+2026-11-13T09:26:38.8401361Z  + pybase64==1.5.2
+2026-11-13T09:26:38.8401603Z  + pycountry==26.2.16
+2026-11-13T09:26:38.8401851Z  + pycparser==3.12
+2026-11-13T09:26:38.8402095Z  + pycryptodomex==3.24.2
+2026-11-13T09:26:38.8402361Z  + pydantic==2.14.3
+2026-11-13T09:26:38.8402612Z  + pydantic-core==2.50.4
+2026-11-13T09:26:38.8402896Z  + pydantic-extra-types==2.11.1
+2026-11-13T09:26:38.8403299Z  + pygments==2.21.0
+2026-11-13T09:26:38.8403540Z  + pymupdf==2.1
+2026-11-13T09:26:38.8403790Z  + pymupdf-layout==2.1
+2026-11-13T09:26:38.8404049Z  + pymupdf4llm==2.1
+2026-11-13T09:26:38.8404299Z  + pyparsing==3.3.3
+2026-11-13T09:26:38.8404565Z  + pyproject-hooks==1.3.3
+2026-11-13T09:26:38.8404841Z  + pytablewriter==0.38.0
+2026-11-13T09:26:38.8405097Z  + pytest==9.2.0
+2026-11-13T09:26:38.8405347Z  + pytest-cov==7.1.0
+2026-11-13T09:26:38.8405609Z  + python-dateutil==2.9.0.post0
+2026-11-13T09:26:38.8405913Z  + python-multipart==0.0.33
+2026-11-13T09:26:38.8406190Z  + pytz==2026.6
+2026-11-13T09:26:38.8406422Z  + pyzmq==27.3.0
+2026-11-13T09:26:38.8406659Z  + quack-kernels==0.6.5
+2026-11-13T09:26:38.8406923Z  + referencing==0.37.0
+2026-11-13T09:26:38.8407175Z  + regex==2026.11.9
+2026-11-13T09:26:38.8407414Z  + requests==2.34.2
+2026-11-13T09:26:38.8407653Z  + rich==15.0.0
+2026-11-13T09:26:38.8407898Z  + rouge-score==0.1.2
+2026-11-13T09:26:38.8408153Z  + rpds-py==2026.9.1
+2026-11-13T09:26:38.8408398Z  + sacrebleu==2.6.0
+2026-11-13T09:26:38.8408643Z  + safetensors==0.9.0rc1
+2026-11-13T09:26:38.8408908Z  + scikit-learn==1.9.1
+2026-11-13T09:26:38.8409156Z  + scipy==1.18.1
+2026-11-13T09:26:38.8409413Z  + sentence-transformers==6.3.0
+2026-11-13T09:26:38.8409717Z  + sentencepiece==0.2.1
+2026-11-13T09:26:38.8409991Z  + setproctitle==1.3.8
+2026-11-13T09:26:38.8410247Z  + setuptools==84.2.1
+2026-11-13T09:26:38.8410562Z  + sgl-deep-ep==0.1.2.post1
+2026-11-13T09:26:38.8410842Z  + sgl-deep-gemm==0.2.7
+2026-11-13T09:26:38.8411106Z  + sgl-eval==0.1.3
+2026-11-13T09:26:38.8411365Z  + sgl-flash-mla==1.0.4
+2026-11-13T09:26:38.8412003Z  + sglang==0.0.0.dev2+g29d603230 (from file:///home/runner/work/sglang/sglang/python)
+2026-11-13T09:26:38.8412523Z  + sglang-kernel==0.4.10
+2026-11-13T09:26:38.8412788Z  + shellingham==1.5.4
+2026-11-13T09:26:38.8413034Z  + six==1.17.0
+2026-11-13T09:26:38.8413377Z  + smg-grpc-proto==0.5.0
+2026-11-13T09:26:38.8413659Z  + smg-grpc-servicer==0.16.0
+2026-11-13T09:26:38.8413933Z  + sniffio==1.3.1
+2026-11-13T09:26:38.8414175Z  + soundfile==0.13.1
+2026-11-13T09:26:38.8414415Z  + sqlitedict==2.1.0
+2026-11-13T09:26:38.8414655Z  + stack-data==0.6.3
+2026-11-13T09:26:38.8414912Z  + starlette==1.10.0
+2026-11-13T09:26:38.8415332Z  + sympy==1.14.0
+2026-11-13T09:26:38.8415872Z  + tabledata==0.0.26
+2026-11-13T09:26:38.8416312Z  + tabulate==0.10.0
+2026-11-13T09:26:38.8416763Z  + tenacity==9.2.1
+2026-11-13T09:26:38.8417173Z  + threadpoolctl==3.8.0
+2026-11-13T09:26:38.8417638Z  + tiktoken==0.14.0
+2026-11-13T09:26:38.8418029Z  + tilelang==0.1.12
+2026-11-13T09:26:38.8418536Z  + timm==1.0.25
+2026-11-13T09:26:38.8418930Z  + tml-renderers==0.1.0
+2026-11-13T09:26:38.8419359Z  + tokenizers==0.23.2
+2026-11-13T09:26:38.8419776Z  + torch==2.14.1
+2026-11-13T09:26:38.8760486Z  + torch-c-dlpack-ext==0.1.5
+2026-11-13T09:26:38.8760810Z  + torch-memory-saver==0.0.10
+2026-11-13T09:26:38.8761120Z  + torchaudio==2.11.0
+2026-11-13T09:26:38.8761363Z  + torchcodec==0.17.0
+2026-11-13T09:26:38.8761600Z  + torchvision==0.29.2
+2026-11-13T09:26:38.8761849Z  + tqdm==4.70.1
+2026-11-13T09:26:38.8762085Z  + traitlets==5.16.1
+2026-11-13T09:26:38.8762335Z  + transformers==5.19.0
+2026-11-13T09:26:38.8762591Z  + triton==3.8.0
+2026-11-13T09:26:38.8762758Z  + truststore==0.10.5
+2026-11-13T09:26:38.8762949Z  + typepy==0.3.1
+2026-11-13T09:26:38.8763271Z  + typer==0.29.1
+2026-11-13T09:26:38.8763470Z  + typing-extensions==4.16.0
+2026-11-13T09:26:38.8763679Z  + typing-inspection==0.4.5
+2026-11-13T09:26:38.8763864Z  + tzdata==2026.6
+2026-11-13T09:26:38.8764017Z  + urllib3==2.8.0
+2026-11-13T09:26:38.8764441Z  + uvicorn==0.54.0
+2026-11-13T09:26:38.8764664Z  + uvloop==0.23.0
+2026-11-13T09:26:38.8764832Z  + watchfiles==1.3.0
+2026-11-13T09:26:38.8764997Z  + wcwidth==0.9.4
+2026-11-13T09:26:38.8765149Z  + word2number==1.1
+2026-11-13T09:26:38.8765306Z  + xgrammar==0.2.7
+2026-11-13T09:26:38.8765455Z  + xxhash==4.1.0
+2026-11-13T09:26:38.8765611Z  + yarl==1.25.1
+2026-11-13T09:26:38.8765771Z  + z3-solver==4.15.4.0
+2026-11-13T09:26:38.8765946Z  + zstandard==0.25.0
+2026-11-13T09:26:39.3686854Z Using Python 3.12.16 environment at: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:39.5602056Z Resolved 2 packages in 186ms
+2026-11-13T09:26:39.5675582Z Downloading mlx-cpu (10.0MiB)
+2026-11-13T09:26:39.6464596Z  Downloaded mlx-cpu
+2026-11-13T09:26:39.6465443Z Prepared 2 packages in 86ms
+2026-11-13T09:26:39.6519657Z Installed 2 packages in 5ms
+2026-11-13T09:26:39.6520413Z  + mlx==0.32.4
+2026-11-13T09:26:39.6521753Z  + mlx-cpu==0.32.4
+2026-11-13T09:26:40.5570574Z ##[group]Run python - <<'PY'
+2026-11-13T09:26:40.5570856Z [36;1mpython - <<'PY'[0m
+2026-11-13T09:26:40.5571054Z [36;1mimport inspect[0m
+2026-11-13T09:26:40.5571279Z [36;1mfrom importlib.metadata import version[0m
+2026-11-13T09:26:40.5571545Z [36;1mfrom pathlib import Path[0m
+2026-11-13T09:26:40.5571756Z [36;1mimport torch[0m
+2026-11-13T09:26:40.5571945Z [36;1mimport mlx.core as mx[0m
+2026-11-13T09:26:40.5572186Z [36;1mimport sglang.srt.utils.tensor_bridge as bridge[0m
+2026-11-13T09:26:40.5572636Z [36;1massert Path(inspect.getfile(bridge)).resolve() == Path("python/sglang/srt/utils/tensor_bridge.py").resolve()[0m
+2026-11-13T09:26:40.5573060Z [36;1massert not torch.cuda.is_available()[0m
+2026-11-13T09:26:40.5573569Z [36;1massert not torch.backends.mps.is_available()[0m
+2026-11-13T09:26:40.5573850Z [36;1massert mx.default_device() == mx.cpu[0m
+2026-11-13T09:26:40.5574296Z [36;1mprint("Native bridge:", inspect.getfile(bridge), "Torch:", torch.__version__, "MLX:", version("mlx"), mx.__file__)[0m
+2026-11-13T09:26:40.5574695Z [36;1mPY[0m
+2026-11-13T09:26:40.5574865Z [36;1mset -o pipefail[0m
+2026-11-13T09:26:40.5575355Z [36;1mpython -m pytest -q -p no:cacheprovider --junitxml=sglang-patched.xml test/registered/unit/utils/test_tensor_bridge.py 2>&1 | tee sglang-patched.log[0m
+2026-11-13T09:26:40.6119573Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:26:40.6119844Z env:
+2026-11-13T09:26:40.6120021Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:26:40.6120235Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:26:40.6120457Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:26:40.6120641Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:26:40.6120815Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:26:40.6121049Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:40.6121584Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:26:40.6121922Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:40.6122253Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:40.6122548Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:40.6122873Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:26:40.6123300Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:26:40.6123497Z ##[endgroup]
+2026-11-13T09:26:46.4423249Z Native bridge: /home/runner/work/sglang/sglang/python/sglang/srt/utils/tensor_bridge.py Torch: 2.14.1+cu130 MLX: 0.32.4 /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/mlx/core.cpython-312-x86_64-linux-gnu.so
+2026-11-13T09:26:53.1892586Z .............ssssssssssssssssssssssssss                       [100%]
+2026-11-13T09:26:53.1893017Z 13 passed, 26 skipped, 11 subtests passed in 5.73s
+2026-11-13T09:26:53.7098672Z ##[group]Run git show bd4c1afc37b3919869ec88a1987649fa5ad0f870:python/sglang/srt/utils/tensor_bridge.py > python/sglang/srt/utils/tensor_bridge.py
+2026-11-13T09:26:53.7099496Z [36;1mgit show bd4c1afc37b3919869ec88a1987649fa5ad0f870:python/sglang/srt/utils/tensor_bridge.py > python/sglang/srt/utils/tensor_bridge.py[0m
+2026-11-13T09:26:53.7100083Z [36;1mfind python/sglang/srt/utils/__pycache__ -name 'tensor_bridge.*.pyc' -delete[0m
+2026-11-13T09:26:53.7118992Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:26:53.7119200Z env:
+2026-11-13T09:26:53.7119364Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:26:53.7119574Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:26:53.7119793Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:26:53.7119979Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:26:53.7120161Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:26:53.7120407Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:53.7120776Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:26:53.7121104Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:53.7121410Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:53.7121701Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:53.7122011Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:26:53.7122279Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:26:53.7122465Z ##[endgroup]
+2026-11-13T09:26:53.7236272Z ##[group]Run set +e
+2026-11-13T09:26:53.7236476Z [36;1mset +e[0m
+2026-11-13T09:26:53.7236959Z [36;1mpython -m pytest -q -p no:cacheprovider --junitxml=sglang-baseline.xml test/registered/unit/utils/test_tensor_bridge.py > sglang-baseline.log 2>&1[0m
+2026-11-13T09:26:53.7237478Z [36;1mstatus=$?[0m
+2026-11-13T09:26:53.7237647Z [36;1mset -e[0m
+2026-11-13T09:26:53.7237821Z [36;1mcat sglang-baseline.log[0m
+2026-11-13T09:26:53.7238029Z [36;1mtest "$status" -eq 1[0m
+2026-11-13T09:26:53.7238235Z [36;1mpython - <<'PY'[0m
+2026-11-13T09:26:53.7238446Z [36;1mimport xml.etree.ElementTree as ET[0m
+2026-11-13T09:26:53.7238743Z [36;1mroot = ET.parse("sglang-baseline.xml").getroot()[0m
+2026-11-13T09:26:53.7239098Z [36;1massert not root.findall(".//error"), "Baseline must fail tests, not imports."[0m
+2026-11-13T09:26:53.7239581Z [36;1mfailed = {case.attrib["name"] for case in root.findall(".//testcase") if case.find("failure") is not None}[0m
+2026-11-13T09:26:53.7240126Z [36;1massert any("test_cpu_conjugate_views_preserve_values_and_source" in x for x in failed), failed[0m
+2026-11-13T09:26:53.7240534Z [36;1mprint("Native baseline failures:", sorted(failed))[0m
+2026-11-13T09:26:53.7240785Z [36;1mPY[0m
+2026-11-13T09:26:53.7257241Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:26:53.7257447Z env:
+2026-11-13T09:26:53.7257611Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:26:53.7257815Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:26:53.7258036Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:26:53.7258222Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:26:53.7258401Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:26:53.7258796Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:53.7259131Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:26:53.7259451Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:53.7259745Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:53.7260035Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:53.7260324Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:26:53.7260582Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:26:53.7260776Z ##[endgroup]
+2026-11-13T09:26:58.3940982Z .F.F.........ssssssssssssssssssssssssss                       [100%]
+2026-11-13T09:26:58.3941535Z =================================== FAILURES ===================================
+2026-11-13T09:26:58.3942113Z __________ TestTensorBridgeCpu.test_cpu_calls_accept_lazy_view_inputs __________
+2026-11-13T09:26:58.3942409Z 
+2026-11-13T09:26:58.3942639Z self = <test_tensor_bridge.TestTensorBridgeCpu testMethod=test_cpu_calls_accept_lazy_view_inputs>
+2026-11-13T09:26:58.3942976Z 
+2026-11-13T09:26:58.3943091Z     def test_cpu_calls_accept_lazy_view_inputs(self):
+2026-11-13T09:26:58.3943590Z         import mlx.core as mx
+2026-11-13T09:26:58.3943785Z     
+2026-11-13T09:26:58.3944071Z         source = torch.tensor([1 + 2j, -3 + 4j, 0.5 - 1j], dtype=torch.complex64)
+2026-11-13T09:26:58.3944433Z         with mx.stream(mx.cpu):
+2026-11-13T09:26:58.3944757Z             product = mlx_call(lambda x: x * mx.conj(x), source.conj(), device="cpu")
+2026-11-13T09:26:58.3945177Z             first, second = mlx_call_multi(
+2026-11-13T09:26:58.3945516Z                 lambda x: (x + 2, x * 3), source.conj().imag, device="cpu"
+2026-11-13T09:26:58.3945785Z             )
+2026-11-13T09:26:58.3945962Z         torch.testing.assert_close(
+2026-11-13T09:26:58.3946270Z             product, torch.tensor([5, 25, 1.25], dtype=torch.complex64), rtol=0, atol=0
+2026-11-13T09:26:58.3946590Z         )
+2026-11-13T09:26:58.3946772Z >       torch.testing.assert_close(
+2026-11-13T09:26:58.3947024Z             first, torch.tensor([0.0, -2.0, 3.0]), rtol=0, atol=0
+2026-11-13T09:26:58.3947267Z         )
+2026-11-13T09:26:58.3947453Z E       AssertionError: Tensor-likes are not equal!
+2026-11-13T09:26:58.3947685Z E       
+2026-11-13T09:26:58.3947848Z E       Mismatched elements: 3 / 3 (100.0%)
+2026-11-13T09:26:58.3948437Z E       Greatest absolute difference: 8.0 at index (1,)
+2026-11-13T09:26:58.3948706Z E       Greatest relative difference: inf at index (0,)
+2026-11-13T09:26:58.3948871Z 
+2026-11-13T09:26:58.3949022Z test/registered/unit/utils/test_tensor_bridge.py:186: AssertionError
+2026-11-13T09:26:58.3949428Z ___ TestTensorBridgeCpu.test_cpu_conjugate_views_preserve_values_and_source ____
+2026-11-13T09:26:58.3949680Z 
+2026-11-13T09:26:58.3949938Z self = <test_tensor_bridge.TestTensorBridgeCpu testMethod=test_cpu_conjugate_views_preserve_values_and_source>
+2026-11-13T09:26:58.3950263Z 
+2026-11-13T09:26:58.3950407Z     def test_cpu_conjugate_views_preserve_values_and_source(self):
+2026-11-13T09:26:58.3950682Z         import mlx.core as mx
+2026-11-13T09:26:58.3950903Z     
+2026-11-13T09:26:58.3951109Z         real = torch.arange(12, dtype=torch.float32).reshape(3, 4)
+2026-11-13T09:26:58.3951367Z         imaginary = real + 0.5
+2026-11-13T09:26:58.3951614Z         source = torch.complex(real, imaginary).requires_grad_()
+2026-11-13T09:26:58.3951878Z         tensor = source.conj().T
+2026-11-13T09:26:58.3952104Z         expected = torch.complex(real.T, -imaginary.T)
+2026-11-13T09:26:58.3952362Z         pointer = tensor.data_ptr()
+2026-11-13T09:26:58.3952566Z         with mx.stream(mx.cpu):
+2026-11-13T09:26:58.3952774Z             array = torch_to_mlx(tensor)
+2026-11-13T09:26:58.3953009Z             actual = mlx_to_torch(array, device="cpu")
+2026-11-13T09:26:58.3953333Z     
+2026-11-13T09:26:58.3953547Z >       torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+2026-11-13T09:26:58.3953846Z E       AssertionError: Tensor-likes are not equal!
+2026-11-13T09:26:58.3954230Z E       
+2026-11-13T09:26:58.3954397Z E       Mismatched elements: 12 / 12 (100.0%)
+2026-11-13T09:26:58.3954656Z E       Greatest absolute difference: 23.0 at index (3, 2)
+2026-11-13T09:26:58.3954928Z E       Greatest relative difference: 2.0 at index (0, 0)
+2026-11-13T09:26:58.3955101Z 
+2026-11-13T09:26:58.3955260Z test/registered/unit/utils/test_tensor_bridge.py:144: AssertionError
+2026-11-13T09:26:58.3955680Z _ TestTensorBridgeCpu.test_cpu_lazy_view_import_owns_independent_storage (negative=False) _
+2026-11-13T09:26:58.3955955Z 
+2026-11-13T09:26:58.3956213Z self = <test_tensor_bridge.TestTensorBridgeCpu testMethod=test_cpu_lazy_view_import_owns_independent_storage>
+2026-11-13T09:26:58.3956527Z 
+2026-11-13T09:26:58.3956662Z     def test_cpu_lazy_view_import_owns_independent_storage(self):
+2026-11-13T09:26:58.3956928Z         import mlx.core as mx
+2026-11-13T09:26:58.3957109Z     
+2026-11-13T09:26:58.3957272Z         for negative in (False, True):
+2026-11-13T09:26:58.3957506Z             with self.subTest(negative=negative):
+2026-11-13T09:26:58.3957816Z                 source = torch.tensor([1 + 2j, -3 + 4j], dtype=torch.complex64)
+2026-11-13T09:26:58.3958171Z                 tensor = source.conj().imag if negative else source.conj()
+2026-11-13T09:26:58.3958453Z                 expected = (
+2026-11-13T09:26:58.3958667Z                     torch.tensor([-2.0, -4.0])
+2026-11-13T09:26:58.3958896Z                     if negative
+2026-11-13T09:26:58.3959151Z                     else torch.tensor([1 - 2j, -3 - 4j], dtype=torch.complex64)
+2026-11-13T09:26:58.3959421Z                 )
+2026-11-13T09:26:58.3959595Z                 with mx.stream(mx.cpu):
+2026-11-13T09:26:58.3959828Z                     array = torch_to_mlx(tensor)
+2026-11-13T09:26:58.3960086Z                     source.zero_()
+2026-11-13T09:26:58.3960316Z                     actual = mlx_to_torch(array, device="cpu")
+2026-11-13T09:26:58.3960622Z >               torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+2026-11-13T09:26:58.3960942Z E               AssertionError: Tensor-likes are not equal!
+2026-11-13T09:26:58.3961187Z E               
+2026-11-13T09:26:58.3961372Z E               Mismatched elements: 2 / 2 (100.0%)
+2026-11-13T09:26:58.3961637Z E               Greatest absolute difference: 8.0 at index (1,)
+2026-11-13T09:26:58.3962101Z E               Greatest relative difference: 1.7888543605804443 at index (0,)
+2026-11-13T09:26:58.3962307Z 
+2026-11-13T09:26:58.3962465Z test/registered/unit/utils/test_tensor_bridge.py:209: AssertionError
+2026-11-13T09:26:58.3962898Z _ TestTensorBridgeCpu.test_cpu_lazy_view_import_owns_independent_storage (negative=True) _
+2026-11-13T09:26:58.3963295Z 
+2026-11-13T09:26:58.3963609Z self = <test_tensor_bridge.TestTensorBridgeCpu testMethod=test_cpu_lazy_view_import_owns_independent_storage>
+2026-11-13T09:26:58.3963951Z 
+2026-11-13T09:26:58.3964081Z     def test_cpu_lazy_view_import_owns_independent_storage(self):
+2026-11-13T09:26:58.3964353Z         import mlx.core as mx
+2026-11-13T09:26:58.3964549Z     
+2026-11-13T09:26:58.3964708Z         for negative in (False, True):
+2026-11-13T09:26:58.3964936Z             with self.subTest(negative=negative):
+2026-11-13T09:26:58.3965241Z                 source = torch.tensor([1 + 2j, -3 + 4j], dtype=torch.complex64)
+2026-11-13T09:26:58.3965577Z                 tensor = source.conj().imag if negative else source.conj()
+2026-11-13T09:26:58.3965849Z                 expected = (
+2026-11-13T09:26:58.3966051Z                     torch.tensor([-2.0, -4.0])
+2026-11-13T09:26:58.3966272Z                     if negative
+2026-11-13T09:26:58.3966525Z                     else torch.tensor([1 - 2j, -3 - 4j], dtype=torch.complex64)
+2026-11-13T09:26:58.3966800Z                 )
+2026-11-13T09:26:58.3966972Z                 with mx.stream(mx.cpu):
+2026-11-13T09:26:58.3967195Z                     array = torch_to_mlx(tensor)
+2026-11-13T09:26:58.3967419Z                     source.zero_()
+2026-11-13T09:26:58.3967645Z                     actual = mlx_to_torch(array, device="cpu")
+2026-11-13T09:26:58.3968100Z >               torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+2026-11-13T09:26:58.3968410Z E               AssertionError: Tensor-likes are not equal!
+2026-11-13T09:26:58.3968645Z E               
+2026-11-13T09:26:58.3968822Z E               Mismatched elements: 2 / 2 (100.0%)
+2026-11-13T09:26:58.3969091Z E               Greatest absolute difference: 8.0 at index (1,)
+2026-11-13T09:26:58.3969364Z E               Greatest relative difference: 2.0 at index (0,)
+2026-11-13T09:26:58.3969531Z 
+2026-11-13T09:26:58.3969690Z test/registered/unit/utils/test_tensor_bridge.py:209: AssertionError
+2026-11-13T09:26:58.3970112Z _ TestTensorBridgeCpu.test_cpu_negative_views_keep_values_and_precision (dtype=torch.float32) _
+2026-11-13T09:26:58.3970402Z 
+2026-11-13T09:26:58.3970644Z self = <test_tensor_bridge.TestTensorBridgeCpu testMethod=test_cpu_negative_views_keep_values_and_precision>
+2026-11-13T09:26:58.3970963Z 
+2026-11-13T09:26:58.3971088Z     def test_cpu_negative_views_keep_values_and_precision(self):
+2026-11-13T09:26:58.3971354Z         import mlx.core as mx
+2026-11-13T09:26:58.3971545Z     
+2026-11-13T09:26:58.3971727Z         for dtype in (torch.float32, torch.float64):
+2026-11-13T09:26:58.3971971Z             with self.subTest(dtype=dtype):
+2026-11-13T09:26:58.3972196Z                 imaginary = torch.tensor(
+2026-11-13T09:26:58.3972445Z                     [0.25, -1.5, 3.25, 7.0, -2.5, 9.5], dtype=dtype
+2026-11-13T09:26:58.3972679Z                 )
+2026-11-13T09:26:58.3972911Z                 source = torch.complex(torch.ones_like(imaginary), imaginary)
+2026-11-13T09:26:58.3973341Z                 tensor = source.conj().imag[1::2]
+2026-11-13T09:26:58.3973574Z                 self.assertTrue(tensor.is_neg())
+2026-11-13T09:26:58.3973820Z                 self.assertFalse(tensor.is_contiguous())
+2026-11-13T09:26:58.3974092Z                 expected = -imaginary[1::2]
+2026-11-13T09:26:58.3974309Z                 with mx.stream(mx.cpu):
+2026-11-13T09:26:58.3974581Z                     actual = mlx_to_torch(torch_to_mlx(tensor), device="cpu")
+2026-11-13T09:26:58.3974915Z >               torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+2026-11-13T09:26:58.3975220Z E               AssertionError: Tensor-likes are not equal!
+2026-11-13T09:26:58.3975450Z E               
+2026-11-13T09:26:58.3975742Z E               Mismatched elements: 3 / 3 (100.0%)
+2026-11-13T09:26:58.3976008Z E               Greatest absolute difference: 19.0 at index (2,)
+2026-11-13T09:26:58.3976289Z E               Greatest relative difference: 2.0 at index (0,)
+2026-11-13T09:26:58.3976466Z 
+2026-11-13T09:26:58.3976618Z test/registered/unit/utils/test_tensor_bridge.py:169: AssertionError
+2026-11-13T09:26:58.3977038Z _ TestTensorBridgeCpu.test_cpu_negative_views_keep_values_and_precision (dtype=torch.float64) _
+2026-11-13T09:26:58.3977320Z 
+2026-11-13T09:26:58.3977567Z self = <test_tensor_bridge.TestTensorBridgeCpu testMethod=test_cpu_negative_views_keep_values_and_precision>
+2026-11-13T09:26:58.3977889Z 
+2026-11-13T09:26:58.3978012Z     def test_cpu_negative_views_keep_values_and_precision(self):
+2026-11-13T09:26:58.3978278Z         import mlx.core as mx
+2026-11-13T09:26:58.3978461Z     
+2026-11-13T09:26:58.3978638Z         for dtype in (torch.float32, torch.float64):
+2026-11-13T09:26:58.3978889Z             with self.subTest(dtype=dtype):
+2026-11-13T09:26:58.3979114Z                 imaginary = torch.tensor(
+2026-11-13T09:26:58.3979356Z                     [0.25, -1.5, 3.25, 7.0, -2.5, 9.5], dtype=dtype
+2026-11-13T09:26:58.3979588Z                 )
+2026-11-13T09:26:58.3979816Z                 source = torch.complex(torch.ones_like(imaginary), imaginary)
+2026-11-13T09:26:58.3980107Z                 tensor = source.conj().imag[1::2]
+2026-11-13T09:26:58.3980342Z                 self.assertTrue(tensor.is_neg())
+2026-11-13T09:26:58.3980590Z                 self.assertFalse(tensor.is_contiguous())
+2026-11-13T09:26:58.3980832Z                 expected = -imaginary[1::2]
+2026-11-13T09:26:58.3981165Z                 with mx.stream(mx.cpu):
+2026-11-13T09:26:58.3981421Z                     actual = mlx_to_torch(torch_to_mlx(tensor), device="cpu")
+2026-11-13T09:26:58.3981741Z >               torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+2026-11-13T09:26:58.3982052Z E               AssertionError: Tensor-likes are not equal!
+2026-11-13T09:26:58.3982290Z E               
+2026-11-13T09:26:58.3982466Z E               Mismatched elements: 3 / 3 (100.0%)
+2026-11-13T09:26:58.3982724Z E               Greatest absolute difference: 19.0 at index (2,)
+2026-11-13T09:26:58.3983002Z E               Greatest relative difference: 2.0 at index (0,)
+2026-11-13T09:26:58.3983270Z 
+2026-11-13T09:26:58.3983422Z test/registered/unit/utils/test_tensor_bridge.py:169: AssertionError
+2026-11-13T09:26:58.3983808Z ___ TestTensorBridgeCpu.test_cpu_scalar_conjugate_and_empty_views (shape=()) ___
+2026-11-13T09:26:58.3984044Z 
+2026-11-13T09:26:58.3984271Z self = <test_tensor_bridge.TestTensorBridgeCpu testMethod=test_cpu_scalar_conjugate_and_empty_views>
+2026-11-13T09:26:58.3984567Z 
+2026-11-13T09:26:58.3984682Z     def test_cpu_scalar_conjugate_and_empty_views(self):
+2026-11-13T09:26:58.3984929Z         import mlx.core as mx
+2026-11-13T09:26:58.3985110Z     
+2026-11-13T09:26:58.3985265Z         for shape in ((), (0, 2)):
+2026-11-13T09:26:58.3985475Z             with self.subTest(shape=shape):
+2026-11-13T09:26:58.3985742Z                 source = torch.full(shape, 2 + 3j, dtype=torch.complex64)
+2026-11-13T09:26:58.3986021Z                 tensor = source.conj()
+2026-11-13T09:26:58.3986230Z                 with mx.stream(mx.cpu):
+2026-11-13T09:26:58.3986442Z                     array = torch_to_mlx(tensor)
+2026-11-13T09:26:58.3986655Z                     mx.eval(array)
+2026-11-13T09:26:58.3986867Z                 self.assertEqual(array.shape, shape)
+2026-11-13T09:26:58.3987121Z                 self.assertEqual(array.dtype, mx.complex64)
+2026-11-13T09:26:58.3987433Z >               self.assertEqual(array.tolist(), (2 - 3j) if shape == () else [])
+2026-11-13T09:26:58.3987732Z E               AssertionError: (2+3j) != (2-3j)
+2026-11-13T09:26:58.3987880Z 
+2026-11-13T09:26:58.3988029Z test/registered/unit/utils/test_tensor_bridge.py:224: AssertionError
+2026-11-13T09:26:58.3988347Z =========================== short test summary info ============================
+2026-11-13T09:26:58.3989037Z FAILED test/registered/unit/utils/test_tensor_bridge.py::TestTensorBridgeCpu::test_cpu_calls_accept_lazy_view_inputs - AssertionError: Tensor-likes are not equal!
+2026-11-13T09:26:58.3989492Z 
+2026-11-13T09:26:58.3989581Z Mismatched elements: 3 / 3 (100.0%)
+2026-11-13T09:26:58.3989808Z Greatest absolute difference: 8.0 at index (1,)
+2026-11-13T09:26:58.3990057Z Greatest relative difference: inf at index (0,)
+2026-11-13T09:26:58.3990623Z FAILED test/registered/unit/utils/test_tensor_bridge.py::TestTensorBridgeCpu::test_cpu_conjugate_views_preserve_values_and_source - AssertionError: Tensor-likes are not equal!
+2026-11-13T09:26:58.3991112Z 
+2026-11-13T09:26:58.3991200Z Mismatched elements: 12 / 12 (100.0%)
+2026-11-13T09:26:58.3991433Z Greatest absolute difference: 23.0 at index (3, 2)
+2026-11-13T09:26:58.3991688Z Greatest relative difference: 2.0 at index (0, 0)
+2026-11-13T09:26:58.3992308Z SUBFAILED(negative=False) test/registered/unit/utils/test_tensor_bridge.py::TestTensorBridgeCpu::test_cpu_lazy_view_import_owns_independent_storage - AssertionError: Tensor-likes are not equal!
+2026-11-13T09:26:58.3992833Z 
+2026-11-13T09:26:58.3992911Z Mismatched elements: 2 / 2 (100.0%)
+2026-11-13T09:26:58.3993229Z Greatest absolute difference: 8.0 at index (1,)
+2026-11-13T09:26:58.3993511Z Greatest relative difference: 1.7888543605804443 at index (0,)
+2026-11-13T09:26:58.3994158Z SUBFAILED(negative=True) test/registered/unit/utils/test_tensor_bridge.py::TestTensorBridgeCpu::test_cpu_lazy_view_import_owns_independent_storage - AssertionError: Tensor-likes are not equal!
+2026-11-13T09:26:58.3994672Z 
+2026-11-13T09:26:58.3994752Z Mismatched elements: 2 / 2 (100.0%)
+2026-11-13T09:26:58.3995073Z Greatest absolute difference: 8.0 at index (1,)
+2026-11-13T09:26:58.3995317Z Greatest relative difference: 2.0 at index (0,)
+2026-11-13T09:26:58.3995942Z SUBFAILED(dtype=torch.float32) test/registered/unit/utils/test_tensor_bridge.py::TestTensorBridgeCpu::test_cpu_negative_views_keep_values_and_precision - AssertionError: Tensor-likes are not equal!
+2026-11-13T09:26:58.3996490Z 
+2026-11-13T09:26:58.3996567Z Mismatched elements: 3 / 3 (100.0%)
+2026-11-13T09:26:58.3996780Z Greatest absolute difference: 19.0 at index (2,)
+2026-11-13T09:26:58.3997028Z Greatest relative difference: 2.0 at index (0,)
+2026-11-13T09:26:58.3997636Z SUBFAILED(dtype=torch.float64) test/registered/unit/utils/test_tensor_bridge.py::TestTensorBridgeCpu::test_cpu_negative_views_keep_values_and_precision - AssertionError: Tensor-likes are not equal!
+2026-11-13T09:26:58.3998157Z 
+2026-11-13T09:26:58.3998238Z Mismatched elements: 3 / 3 (100.0%)
+2026-11-13T09:26:58.3998453Z Greatest absolute difference: 19.0 at index (2,)
+2026-11-13T09:26:58.3998693Z Greatest relative difference: 2.0 at index (0,)
+2026-11-13T09:26:58.3999237Z SUBFAILED(shape=()) test/registered/unit/utils/test_tensor_bridge.py::TestTensorBridgeCpu::test_cpu_scalar_conjugate_and_empty_views - AssertionError: (2+3j) != (2-3j)
+2026-11-13T09:26:58.3999803Z 7 failed, 11 passed, 26 skipped, 6 subtests passed in 3.83s
+2026-11-13T09:26:58.4195419Z Native baseline failures: ['test_cpu_calls_accept_lazy_view_inputs', 'test_cpu_conjugate_views_preserve_values_and_source', 'test_cpu_lazy_view_import_owns_independent_storage', 'test_cpu_negative_views_keep_values_and_precision', 'test_cpu_scalar_conjugate_and_empty_views']
+2026-11-13T09:26:58.4281176Z ##[group]Run git restore --source=HEAD -- python/sglang/srt/utils/tensor_bridge.py
+2026-11-13T09:26:58.4281640Z [36;1mgit restore --source=HEAD -- python/sglang/srt/utils/tensor_bridge.py[0m
+2026-11-13T09:26:58.4300485Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:26:58.4300692Z env:
+2026-11-13T09:26:58.4300872Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:26:58.4301081Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:26:58.4301295Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:26:58.4301474Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:26:58.4301641Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:26:58.4301873Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:58.4302211Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:26:58.4302530Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:58.4302825Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:58.4303325Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:58.4303633Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:26:58.4303897Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:26:58.4304081Z ##[endgroup]
+2026-11-13T09:26:58.4415533Z ##[group]Run set +e
+2026-11-13T09:26:58.4415729Z [36;1mset +e[0m
+2026-11-13T09:26:58.4416214Z [36;1mpython -m pre_commit run --files python/sglang/srt/utils/tensor_bridge.py test/registered/unit/utils/test_tensor_bridge.py > sglang-lint.log 2>&1[0m
+2026-11-13T09:26:58.4416725Z [36;1mresult=$?[0m
+2026-11-13T09:26:58.4416893Z [36;1mset -e[0m
+2026-11-13T09:26:58.4417068Z [36;1mcat sglang-lint.log[0m
+2026-11-13T09:26:58.4417279Z [36;1mgit diff > sglang-format.patch[0m
+2026-11-13T09:26:58.4417505Z [36;1mcat sglang-format.patch[0m
+2026-11-13T09:26:58.4417713Z [36;1mpython - <<'PY'[0m
+2026-11-13T09:26:58.4417907Z [36;1mfrom pathlib import Path[0m
+2026-11-13T09:26:58.4418122Z [36;1mprint("BEGIN_FORMATTED_TEST")[0m
+2026-11-13T09:26:58.4418443Z [36;1mprint(Path("test/registered/unit/utils/test_tensor_bridge.py").read_text())[0m
+2026-11-13T09:26:58.4418786Z [36;1mprint("END_FORMATTED_TEST")[0m
+2026-11-13T09:26:58.4418989Z [36;1mPY[0m
+2026-11-13T09:26:58.4419176Z [36;1mtest "$result" -eq 0[0m
+2026-11-13T09:26:58.4419374Z [36;1mgit diff --check[0m
+2026-11-13T09:26:58.4436284Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:26:58.4436635Z env:
+2026-11-13T09:26:58.4436804Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:26:58.4437002Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:26:58.4437215Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:26:58.4437394Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:26:58.4437570Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:26:58.4437799Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:58.4438146Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:26:58.4438479Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:58.4438774Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:58.4439065Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:26:58.4439356Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:26:58.4439621Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:26:58.4439813Z ##[endgroup]
+2026-11-13T09:27:42.3534508Z [INFO] Initializing environment for https://github.com/pre-commit/pre-commit-hooks.
+2026-11-13T09:27:42.3535130Z [INFO] Initializing environment for https://github.com/PyCQA/isort.
+2026-11-13T09:27:42.3535776Z [INFO] Initializing environment for https://github.com/astral-sh/ruff-pre-commit.
+2026-11-13T09:27:42.3536472Z [INFO] Initializing environment for https://github.com/codespell-project/codespell.
+2026-11-13T09:27:42.3536998Z [INFO] Initializing environment for https://github.com/pre-commit/mirrors-clang-format.
+2026-11-13T09:27:42.3537443Z [INFO] Initializing environment for https://github.com/kynan/nbstripout.
+2026-11-13T09:27:42.3537844Z [INFO] Initializing environment for https://github.com/lycheeverse/lychee.git.
+2026-11-13T09:27:42.3538260Z [INFO] Installing environment for https://github.com/pre-commit/pre-commit-hooks.
+2026-11-13T09:27:42.3538626Z [INFO] Once installed this environment will be reused.
+2026-11-13T09:27:42.3538893Z [INFO] This may take a few minutes...
+2026-11-13T09:27:42.3539172Z [INFO] Installing environment for https://github.com/PyCQA/isort.
+2026-11-13T09:27:42.3539490Z [INFO] Once installed this environment will be reused.
+2026-11-13T09:27:42.3539745Z [INFO] This may take a few minutes...
+2026-11-13T09:27:42.3540048Z [INFO] Installing environment for https://github.com/astral-sh/ruff-pre-commit.
+2026-11-13T09:27:42.3540391Z [INFO] Once installed this environment will be reused.
+2026-11-13T09:27:42.3540632Z [INFO] This may take a few minutes...
+2026-11-13T09:27:42.3540935Z [INFO] Installing environment for https://github.com/codespell-project/codespell.
+2026-11-13T09:27:42.3541280Z [INFO] Once installed this environment will be reused.
+2026-11-13T09:27:42.3541523Z [INFO] This may take a few minutes...
+2026-11-13T09:27:42.3541831Z [INFO] Installing environment for https://github.com/pre-commit/mirrors-clang-format.
+2026-11-13T09:27:42.3542517Z [INFO] Once installed this environment will be reused.
+2026-11-13T09:27:42.3542767Z [INFO] This may take a few minutes...
+2026-11-13T09:27:42.3543043Z [INFO] Installing environment for https://github.com/kynan/nbstripout.
+2026-11-13T09:27:42.3543538Z [INFO] Once installed this environment will be reused.
+2026-11-13T09:27:42.3543780Z [INFO] This may take a few minutes...
+2026-11-13T09:27:42.3544123Z check for broken symlinks...............................................................(no files to check)Skipped
+2026-11-13T09:27:42.3544617Z detect destroyed symlinks...................................................................................Passed
+2026-11-13T09:27:42.3545114Z trim trailing whitespace....................................................................................Passed
+2026-11-13T09:27:42.3545579Z fix end of files............................................................................................Passed
+2026-11-13T09:27:42.3546018Z check yaml..............................................................................(no files to check)Skipped
+2026-11-13T09:27:42.3546446Z check toml..............................................................................(no files to check)Skipped
+2026-11-13T09:27:42.3547019Z check python ast............................................................................................Passed
+2026-11-13T09:27:42.3547456Z check for added large files.................................................................................Passed
+2026-11-13T09:27:42.3547923Z check for merge conflicts...................................................................................Passed
+2026-11-13T09:27:42.3548419Z check that scripts with shebangs are executable.............................................................Passed
+2026-11-13T09:27:42.3548888Z detect private key..........................................................................................Passed
+2026-11-13T09:27:42.3549324Z debug statements (python)...................................................................................Passed
+2026-11-13T09:27:42.3549757Z don't commit to branch......................................................................................Passed
+2026-11-13T09:27:42.3550202Z isort.......................................................................................................Passed
+2026-11-13T09:27:42.3550610Z ruff (legacy alias).........................................................................................Passed
+2026-11-13T09:27:42.3551021Z ruff format.................................................................................................Passed
+2026-11-13T09:27:42.3551444Z codespell...................................................................................................Passed
+2026-11-13T09:27:42.3551884Z clang-format............................................................................(no files to check)Skipped
+2026-11-13T09:27:42.3552325Z nbstripout..............................................................................(no files to check)Skipped
+2026-11-13T09:27:42.3552807Z forbid test/srt/ (use test/registered/ or test/manual/).................................(no files to check)Skipped
+2026-11-13T09:27:42.3553541Z forbid docs_new/ (renamed to docs/).....................................................(no files to check)Skipped
+2026-11-13T09:27:42.3554032Z check chinese characters in multimodal_gen..............................................(no files to check)Skipped
+2026-11-13T09:27:42.3554522Z sort CI_PERMISSIONS.json................................................................(no files to check)Skipped
+2026-11-13T09:27:42.3555016Z sort Cookbook vendor groups in docs/docs.json...........................................(no files to check)Skipped
+2026-11-13T09:27:42.3555513Z check for duplicate workflow job names..................................................(no files to check)Skipped
+2026-11-13T09:27:42.3556009Z check opt-in CI tiers match the workflows that gate on them.............................(no files to check)Skipped
+2026-11-13T09:27:42.3556654Z check rust-ext cache key prefix defaults match..........................................(no files to check)Skipped
+2026-11-13T09:27:42.3557233Z check Dockerfile sgl-deep-gemm/sgl-deep-ep versions match python/pyproject.toml.........(no files to check)Skipped
+2026-11-13T09:27:42.3557773Z reject bare pytest.main calls in __main__ blocks............................................................Passed
+2026-11-13T09:27:42.3558293Z regenerate python/sglang/cli/_commands/ from the Cookbook configs.......................(no files to check)Skipped
+2026-11-13T09:27:42.3558812Z validate registered test CI registries......................................................................Passed
+2026-11-13T09:27:42.3559316Z reject CI-registered tests inside the sglang package........................................................Passed
+2026-11-13T09:27:42.3559840Z reject importing a name through a module that only re-imports it............................................Passed
+2026-11-13T09:27:42.3560381Z reject srt domain imports in sglang.srt.utils and sglang.utils imports in the runtime.......................Passed
+2026-11-13T09:27:42.3561006Z rustfmt sgl-model-gateway (nightly).....................................................(no files to check)Skipped
+2026-11-13T09:27:42.3561469Z rustfmt sgl-router......................................................................(no files to check)Skipped
+2026-11-13T09:27:42.3561918Z clippy rust/ workspace (auto-fix).......................................................(no files to check)Skipped
+2026-11-13T09:27:42.3562375Z rustfmt rust/ workspace.................................................................(no files to check)Skipped
+2026-11-13T09:27:42.3921926Z BEGIN_FORMATTED_TEST
+2026-11-13T09:27:42.3922489Z """Correctness and sharing tests for the PyTorch/MLX tensor bridge."""
+2026-11-13T09:27:42.3922895Z 
+2026-11-13T09:27:42.3922999Z import gc
+2026-11-13T09:27:42.3923398Z import os
+2026-11-13T09:27:42.3923637Z import subprocess
+2026-11-13T09:27:42.3923937Z import sys
+2026-11-13T09:27:42.3924187Z import unittest
+2026-11-13T09:27:42.3924578Z from importlib.metadata import PackageNotFoundError, version
+2026-11-13T09:27:42.3925066Z from unittest import mock
+2026-11-13T09:27:42.3925266Z 
+2026-11-13T09:27:42.3925365Z import torch
+2026-11-13T09:27:42.3925646Z from packaging.version import Version
+2026-11-13T09:27:42.3925895Z 
+2026-11-13T09:27:42.3926046Z from sglang.srt.utils.tensor_bridge import (
+2026-11-13T09:27:42.3926411Z     MlxTensorView,
+2026-11-13T09:27:42.3926694Z     borrow_torch_tensors,
+2026-11-13T09:27:42.3926961Z     mlx_call,
+2026-11-13T09:27:42.3927180Z     mlx_call_multi,
+2026-11-13T09:27:42.3927420Z     mlx_to_torch,
+2026-11-13T09:27:42.3927657Z     torch_to_mlx,
+2026-11-13T09:27:42.3927888Z )
+2026-11-13T09:27:42.3928168Z from sglang.test.ci.ci_register import register_mlx_ci
+2026-11-13T09:27:42.3928428Z 
+2026-11-13T09:27:42.3928622Z register_mlx_ci(est_time=2, suite="stage-a-unit-test-mlx")
+2026-11-13T09:27:42.3928937Z 
+2026-11-13T09:27:42.3928942Z 
+2026-11-13T09:27:42.3929222Z def _has_stable_version_at_least(distribution: str, minimum: Version) -> bool:
+2026-11-13T09:27:42.3929726Z     try:
+2026-11-13T09:27:42.3930012Z         installed = Version(version(distribution))
+2026-11-13T09:27:42.3930441Z     except (PackageNotFoundError, ValueError):
+2026-11-13T09:27:42.3930812Z         return False
+2026-11-13T09:27:42.3931185Z     return not installed.is_prerelease and installed >= minimum
+2026-11-13T09:27:42.3931518Z 
+2026-11-13T09:27:42.3931524Z 
+2026-11-13T09:27:42.3931732Z _HAS_MLX = _has_stable_version_at_least("mlx", Version("0.32.0"))
+2026-11-13T09:27:42.3932184Z _HAS_SUPPORTED_RUNTIME = (
+2026-11-13T09:27:42.3932469Z     _HAS_MLX
+2026-11-13T09:27:42.3932731Z     and torch.backends.mps.is_available()
+2026-11-13T09:27:42.3933278Z     and not Version(torch.__version__).is_prerelease
+2026-11-13T09:27:42.3933694Z     and Version(torch.__version__).release[:2] == (2, 13)
+2026-11-13T09:27:42.3934053Z )
+2026-11-13T09:27:42.3934178Z 
+2026-11-13T09:27:42.3934493Z 
+2026-11-13T09:27:42.3934662Z class TestTensorBridgeImport(unittest.TestCase):
+2026-11-13T09:27:42.3935120Z     def test_import_does_not_eagerly_import_mlx(self):
+2026-11-13T09:27:42.3935519Z         script = """
+2026-11-13T09:27:42.3935785Z import sys
+2026-11-13T09:27:42.3936158Z from sglang.srt.utils.tensor_bridge import mlx_to_torch, torch_to_mlx
+2026-11-13T09:27:42.3936660Z assert mlx_to_torch is not None and torch_to_mlx is not None
+2026-11-13T09:27:42.3937242Z assert not any(name == "mlx" or name.startswith("mlx.") for name in sys.modules)
+2026-11-13T09:27:42.3937711Z """
+2026-11-13T09:27:42.3937949Z         env = os.environ.copy()
+2026-11-13T09:27:42.3938274Z         env.pop("SGLANG_USE_MLX", None)
+2026-11-13T09:27:42.3938622Z         completed = subprocess.run(
+2026-11-13T09:27:42.3938966Z             [sys.executable, "-c", script],
+2026-11-13T09:27:42.3939323Z             capture_output=True,
+2026-11-13T09:27:42.3939628Z             text=True,
+2026-11-13T09:27:42.3939890Z             timeout=30,
+2026-11-13T09:27:42.3940296Z             check=False,
+2026-11-13T09:27:42.3940577Z             env=env,
+2026-11-13T09:27:42.3940998Z         )
+2026-11-13T09:27:42.3941237Z         self.assertEqual(
+2026-11-13T09:27:42.3941540Z             completed.returncode,
+2026-11-13T09:27:42.3941842Z             0,
+2026-11-13T09:27:42.3942197Z             msg=f"stdout={completed.stdout}\nstderr={completed.stderr}",
+2026-11-13T09:27:42.3942638Z         )
+2026-11-13T09:27:42.3942774Z 
+2026-11-13T09:27:42.3942780Z 
+2026-11-13T09:27:42.3942954Z @unittest.skipUnless(_HAS_MLX, "requires MLX >= 0.32")
+2026-11-13T09:27:42.3943574Z class TestTensorBridgeCpu(unittest.TestCase):
+2026-11-13T09:27:42.3944015Z     def test_mlx_call_multi_preserves_cpu_float64(self):
+2026-11-13T09:27:42.3944428Z         import mlx.core as mx
+2026-11-13T09:27:42.3944623Z 
+2026-11-13T09:27:42.3944847Z         source = torch.tensor([1.25, -2.5, 4.0, 8.0], dtype=torch.float64)
+2026-11-13T09:27:42.3945414Z         with mock.patch.object(mx, "eval", wraps=mx.eval) as evaluate:
+2026-11-13T09:27:42.3945871Z             first, second = mlx_call_multi(
+2026-11-13T09:27:42.3946223Z                 lambda x: (x + 1, x * 2),
+2026-11-13T09:27:42.3946549Z                 source,
+2026-11-13T09:27:42.3946816Z                 device="cpu",
+2026-11-13T09:27:42.3947102Z             )
+2026-11-13T09:27:42.3947250Z 
+2026-11-13T09:27:42.3947386Z         evaluate.assert_called_once()
+2026-11-13T09:27:42.3947749Z         self.assertEqual(first.dtype, torch.float64)
+2026-11-13T09:27:42.3948180Z         self.assertEqual(second.dtype, torch.float64)
+2026-11-13T09:27:42.3948609Z         torch.testing.assert_close(first, source + 1)
+2026-11-13T09:27:42.3949029Z         torch.testing.assert_close(second, source * 2)
+2026-11-13T09:27:42.3949297Z 
+2026-11-13T09:27:42.3949536Z     def test_mlx_call_multi_materializes_cpu_negative_strides_safely(self):
+2026-11-13T09:27:42.3950024Z         import mlx.core as mx
+2026-11-13T09:27:42.3950220Z 
+2026-11-13T09:27:42.3950374Z         source = torch.arange(8, dtype=torch.float32)
+2026-11-13T09:27:42.3950861Z         with mock.patch.object(mx, "eval", wraps=mx.eval) as evaluate:
+2026-11-13T09:27:42.3951340Z             first, reversed_ = mlx_call_multi(
+2026-11-13T09:27:42.3951789Z                 lambda x: (x + 1, x[::-1]), source, device="cpu"
+2026-11-13T09:27:42.3952164Z             )
+2026-11-13T09:27:42.3952295Z 
+2026-11-13T09:27:42.3952535Z         # The ordinary graph is evaluated once; all negative-stride results
+2026-11-13T09:27:42.3953326Z         # share one additional materialization boundary before DLPack export.
+2026-11-13T09:27:42.3953793Z         self.assertEqual(evaluate.call_count, 2)
+2026-11-13T09:27:42.3954193Z         torch.testing.assert_close(first, source + 1)
+2026-11-13T09:27:42.3954648Z         torch.testing.assert_close(reversed_, source.flip(0))
+2026-11-13T09:27:42.3954939Z 
+2026-11-13T09:27:42.3955151Z     def test_mlx_call_multi_rejects_invalid_target_before_work(self):
+2026-11-13T09:27:42.3955768Z         operation = mock.Mock()
+2026-11-13T09:27:42.3956188Z         with self.assertRaisesRegex(ValueError, "CPU and MPS targets"):
+2026-11-13T09:27:42.3956649Z             mlx_call_multi(
+2026-11-13T09:27:42.3956927Z                 operation,
+2026-11-13T09:27:42.3957203Z                 torch.ones(1),
+2026-11-13T09:27:42.3957482Z                 device="cuda",
+2026-11-13T09:27:42.3957747Z             )
+2026-11-13T09:27:42.3958003Z         operation.assert_not_called()
+2026-11-13T09:27:42.3958235Z 
+2026-11-13T09:27:42.3958430Z     def test_mlx_call_rejects_invalid_target_before_work(self):
+2026-11-13T09:27:42.3958854Z         operation = mock.Mock()
+2026-11-13T09:27:42.3959266Z         with self.assertRaisesRegex(ValueError, "CPU and MPS targets"):
+2026-11-13T09:27:42.3959705Z             mlx_call(
+2026-11-13T09:27:42.3959960Z                 operation,
+2026-11-13T09:27:42.3960235Z                 torch.ones(1),
+2026-11-13T09:27:42.3960510Z                 device="cuda",
+2026-11-13T09:27:42.3960764Z             )
+2026-11-13T09:27:42.3960995Z         operation.assert_not_called()
+2026-11-13T09:27:42.3961147Z 
+2026-11-13T09:27:42.3961269Z     def test_mlx_call_multi_rejects_non_mlx_outputs(self):
+2026-11-13T09:27:42.3961731Z         with self.assertRaisesRegex(TypeError, "outputs must be MLX arrays"):
+2026-11-13T09:27:42.3962031Z             mlx_call_multi(
+2026-11-13T09:27:42.3962235Z                 lambda _x: (torch.ones(1),),
+2026-11-13T09:27:42.3962455Z                 torch.ones(1),
+2026-11-13T09:27:42.3962645Z                 device="cpu",
+2026-11-13T09:27:42.3962827Z             )
+2026-11-13T09:27:42.3962923Z 
+2026-11-13T09:27:42.3963054Z     def test_cpu_conjugate_views_preserve_values_and_source(self):
+2026-11-13T09:27:42.3963525Z         import mlx.core as mx
+2026-11-13T09:27:42.3963654Z 
+2026-11-13T09:27:42.3963779Z         real = torch.arange(12, dtype=torch.float32).reshape(3, 4)
+2026-11-13T09:27:42.3964030Z         imaginary = real + 0.5
+2026-11-13T09:27:42.3964278Z         source = torch.complex(real, imaginary).requires_grad_()
+2026-11-13T09:27:42.3964545Z         tensor = source.conj().T
+2026-11-13T09:27:42.3964790Z         expected = torch.complex(real.T, -imaginary.T)
+2026-11-13T09:27:42.3965056Z         pointer = tensor.data_ptr()
+2026-11-13T09:27:42.3965269Z         with mx.stream(mx.cpu):
+2026-11-13T09:27:42.3965473Z             array = torch_to_mlx(tensor)
+2026-11-13T09:27:42.3965704Z             actual = mlx_to_torch(array, device="cpu")
+2026-11-13T09:27:42.3965867Z 
+2026-11-13T09:27:42.3966005Z         torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+2026-11-13T09:27:42.3966311Z         self.assertEqual(actual.dtype, torch.complex64)
+2026-11-13T09:27:42.3966583Z         self.assertFalse(actual.requires_grad)
+2026-11-13T09:27:42.3966820Z         self.assertTrue(tensor.is_conj())
+2026-11-13T09:27:42.3967059Z         self.assertEqual(tensor.data_ptr(), pointer)
+2026-11-13T09:27:42.3967308Z         self.assertTrue(source.requires_grad)
+2026-11-13T09:27:42.3967538Z         self.assertIsNone(source.grad)
+2026-11-13T09:27:42.3967811Z         torch.testing.assert_close(source.real, real, rtol=0, atol=0)
+2026-11-13T09:27:42.3968152Z         torch.testing.assert_close(source.imag, imaginary, rtol=0, atol=0)
+2026-11-13T09:27:42.3968379Z 
+2026-11-13T09:27:42.3968510Z     def test_cpu_negative_views_keep_values_and_precision(self):
+2026-11-13T09:27:42.3968778Z         import mlx.core as mx
+2026-11-13T09:27:42.3968896Z 
+2026-11-13T09:27:42.3968999Z         for dtype in (torch.float32, torch.float64):
+2026-11-13T09:27:42.3969239Z             with self.subTest(dtype=dtype):
+2026-11-13T09:27:42.3969461Z                 imaginary = torch.tensor(
+2026-11-13T09:27:42.3969698Z                     [0.25, -1.5, 3.25, 7.0, -2.5, 9.5], dtype=dtype
+2026-11-13T09:27:42.3969927Z                 )
+2026-11-13T09:27:42.3970158Z                 source = torch.complex(torch.ones_like(imaginary), imaginary)
+2026-11-13T09:27:42.3970460Z                 tensor = source.conj().imag[1::2]
+2026-11-13T09:27:42.3970809Z                 self.assertTrue(tensor.is_neg())
+2026-11-13T09:27:42.3971067Z                 self.assertFalse(tensor.is_contiguous())
+2026-11-13T09:27:42.3971324Z                 expected = -imaginary[1::2]
+2026-11-13T09:27:42.3971547Z                 with mx.stream(mx.cpu):
+2026-11-13T09:27:42.3971808Z                     actual = mlx_to_torch(torch_to_mlx(tensor), device="cpu")
+2026-11-13T09:27:42.3972133Z                 torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+2026-11-13T09:27:42.3972433Z                 self.assertEqual(actual.dtype, dtype)
+2026-11-13T09:27:42.3972675Z                 self.assertTrue(tensor.is_neg())
+2026-11-13T09:27:42.3972981Z                 torch.testing.assert_close(source.imag, imaginary, rtol=0, atol=0)
+2026-11-13T09:27:42.3973358Z 
+2026-11-13T09:27:42.3973475Z     def test_cpu_calls_accept_lazy_view_inputs(self):
+2026-11-13T09:27:42.3973728Z         import mlx.core as mx
+2026-11-13T09:27:42.3973851Z 
+2026-11-13T09:27:42.3974015Z         source = torch.tensor([1 + 2j, -3 + 4j, 0.5 - 1j], dtype=torch.complex64)
+2026-11-13T09:27:42.3974310Z         with mx.stream(mx.cpu):
+2026-11-13T09:27:42.3974591Z             product = mlx_call(lambda x: x * mx.conj(x), source.conj(), device="cpu")
+2026-11-13T09:27:42.3975015Z             first, second = mlx_call_multi(
+2026-11-13T09:27:42.3975288Z                 lambda x: (x + 2, x * 3), source.conj().imag, device="cpu"
+2026-11-13T09:27:42.3975547Z             )
+2026-11-13T09:27:42.3975720Z         torch.testing.assert_close(
+2026-11-13T09:27:42.3976018Z             product, torch.tensor([5, 25, 1.25], dtype=torch.complex64), rtol=0, atol=0
+2026-11-13T09:27:42.3976314Z         )
+2026-11-13T09:27:42.3976475Z         torch.testing.assert_close(
+2026-11-13T09:27:42.3976717Z             first, torch.tensor([0.0, -2.0, 3.0]), rtol=0, atol=0
+2026-11-13T09:27:42.3976952Z         )
+2026-11-13T09:27:42.3977108Z         torch.testing.assert_close(
+2026-11-13T09:27:42.3977358Z             second, torch.tensor([-6.0, -12.0, 3.0]), rtol=0, atol=0
+2026-11-13T09:27:42.3977612Z         )
+2026-11-13T09:27:42.3977692Z 
+2026-11-13T09:27:42.3977826Z     def test_cpu_lazy_view_import_owns_independent_storage(self):
+2026-11-13T09:27:42.3978096Z         import mlx.core as mx
+2026-11-13T09:27:42.3978215Z 
+2026-11-13T09:27:42.3978304Z         for negative in (False, True):
+2026-11-13T09:27:42.3978530Z             with self.subTest(negative=negative):
+2026-11-13T09:27:42.3978819Z                 source = torch.tensor([1 + 2j, -3 + 4j], dtype=torch.complex64)
+2026-11-13T09:27:42.3979147Z                 tensor = source.conj().imag if negative else source.conj()
+2026-11-13T09:27:42.3979411Z                 expected = (
+2026-11-13T09:27:42.3979612Z                     torch.tensor([-2.0, -4.0])
+2026-11-13T09:27:42.3979834Z                     if negative
+2026-11-13T09:27:42.3980078Z                     else torch.tensor([1 - 2j, -3 - 4j], dtype=torch.complex64)
+2026-11-13T09:27:42.3980337Z                 )
+2026-11-13T09:27:42.3980509Z                 with mx.stream(mx.cpu):
+2026-11-13T09:27:42.3980733Z                     array = torch_to_mlx(tensor)
+2026-11-13T09:27:42.3980950Z                     source.zero_()
+2026-11-13T09:27:42.3981182Z                     actual = mlx_to_torch(array, device="cpu")
+2026-11-13T09:27:42.3981489Z                 torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+2026-11-13T09:27:42.3981828Z                 self.assertEqual(torch.count_nonzero(source).item(), 0)
+2026-11-13T09:27:42.3982024Z 
+2026-11-13T09:27:42.3982138Z     def test_cpu_scalar_conjugate_and_empty_views(self):
+2026-11-13T09:27:42.3982388Z         import mlx.core as mx
+2026-11-13T09:27:42.3982504Z 
+2026-11-13T09:27:42.3982583Z         for shape in ((), (0, 2)):
+2026-11-13T09:27:42.3982816Z             with self.subTest(shape=shape):
+2026-11-13T09:27:42.3983082Z                 source = torch.full(shape, 2 + 3j, dtype=torch.complex64)
+2026-11-13T09:27:42.3983501Z                 tensor = source.conj()
+2026-11-13T09:27:42.3983716Z                 with mx.stream(mx.cpu):
+2026-11-13T09:27:42.3984044Z                     array = torch_to_mlx(tensor)
+2026-11-13T09:27:42.3984273Z                     mx.eval(array)
+2026-11-13T09:27:42.3984493Z                 self.assertEqual(array.shape, shape)
+2026-11-13T09:27:42.3984750Z                 self.assertEqual(array.dtype, mx.complex64)
+2026-11-13T09:27:42.3985067Z                 self.assertEqual(array.tolist(), (2 - 3j) if shape == () else [])
+2026-11-13T09:27:42.3985464Z                 self.assertTrue(tensor.is_conj())
+2026-11-13T09:27:42.3985619Z 
+2026-11-13T09:27:42.3985737Z     def test_cpu_ordinary_input_dtypes_remain_unchanged(self):
+2026-11-13T09:27:42.3985990Z         import mlx.core as mx
+2026-11-13T09:27:42.3986111Z 
+2026-11-13T09:27:42.3986181Z         for dtype in (
+2026-11-13T09:27:42.3986435Z             torch.float16,
+2026-11-13T09:27:42.3986619Z             torch.bfloat16,
+2026-11-13T09:27:42.3986800Z             torch.float32,
+2026-11-13T09:27:42.3986973Z             torch.float64,
+2026-11-13T09:27:42.3987156Z             torch.complex64,
+2026-11-13T09:27:42.3987334Z         ):
+2026-11-13T09:27:42.3987502Z             with self.subTest(dtype=dtype):
+2026-11-13T09:27:42.3987863Z                 source = torch.tensor([1, -2, 0.25], dtype=dtype)
+2026-11-13T09:27:42.3988117Z                 with mx.stream(mx.cpu):
+2026-11-13T09:27:42.3988377Z                     actual = mlx_to_torch(torch_to_mlx(source), device="cpu")
+2026-11-13T09:27:42.3988686Z                 self.assertEqual(actual.dtype, dtype)
+2026-11-13T09:27:42.3988983Z                 torch.testing.assert_close(actual, source, rtol=0, atol=0)
+2026-11-13T09:27:42.3989184Z 
+2026-11-13T09:27:42.3989349Z     def test_cpu_conjugate_complex128_still_requires_explicit_narrowing(self):
+2026-11-13T09:27:42.3989707Z         tensor = torch.tensor([1 + 2j], dtype=torch.complex128).conj()
+2026-11-13T09:27:42.3990023Z         with self.assertRaisesRegex(ValueError, "complex128"):
+2026-11-13T09:27:42.3990415Z             torch_to_mlx(tensor)
+2026-11-13T09:27:42.3990614Z 
+2026-11-13T09:27:42.3990625Z 
+2026-11-13T09:27:42.3990890Z @unittest.skipUnless(_HAS_SUPPORTED_RUNTIME, "requires MLX >= 0.32 and Torch MPS")
+2026-11-13T09:27:42.3991460Z class TestTensorBridgeMetalSharing(unittest.TestCase):
+2026-11-13T09:27:42.3991924Z     def test_common_inference_dtypes_round_trip_losslessly(self):
+2026-11-13T09:27:42.3992320Z         import mlx.core as mx
+2026-11-13T09:27:42.3992494Z 
+2026-11-13T09:27:42.3992593Z         cases = [
+2026-11-13T09:27:42.3992867Z             (torch.float32, mx.float32, [0.0, 1.0, -2.0]),
+2026-11-13T09:27:42.3993414Z             (torch.float16, mx.float16, [0.0, 1.0, -2.0]),
+2026-11-13T09:27:42.3993796Z             (torch.bfloat16, mx.bfloat16, [0.0, 1.0, -2.0]),
+2026-11-13T09:27:42.3994159Z             (torch.int32, mx.int32, [0, 1, -2]),
+2026-11-13T09:27:42.3994521Z             (torch.bool, mx.bool_, [False, True, False]),
+2026-11-13T09:27:42.3994854Z         ]
+2026-11-13T09:27:42.3995108Z         for torch_dtype, mlx_dtype, values in cases:
+2026-11-13T09:27:42.3995478Z             with self.subTest(dtype=torch_dtype):
+2026-11-13T09:27:42.3995909Z                 source = torch.tensor(values, device="mps", dtype=torch_dtype)
+2026-11-13T09:27:42.3996342Z                 array = torch_to_mlx(source)
+2026-11-13T09:27:42.3996673Z                 round_tripped = mlx_to_torch(array)
+2026-11-13T09:27:42.3996910Z 
+2026-11-13T09:27:42.3997051Z                 self.assertEqual(array.dtype, mlx_dtype)
+2026-11-13T09:27:42.3997462Z                 self.assertEqual(round_tripped.dtype, torch_dtype)
+2026-11-13T09:27:42.3997913Z                 self.assertEqual(round_tripped.device.type, "mps")
+2026-11-13T09:27:42.3998395Z                 self.assertTrue(torch.equal(round_tripped.cpu(), source.cpu()))
+2026-11-13T09:27:42.3998719Z 
+2026-11-13T09:27:42.3998877Z     def test_torch_mps_to_mlx_is_an_explicit_copy(self):
+2026-11-13T09:27:42.3999231Z         import mlx.core as mx
+2026-11-13T09:27:42.3999402Z 
+2026-11-13T09:27:42.3999594Z         tensor = torch.arange(24, device="mps", dtype=torch.float32)
+2026-11-13T09:27:42.4000270Z         tensor = tensor.to(torch.bfloat16).reshape(4, 6).T
+2026-11-13T09:27:42.4000640Z         expected = tensor.cpu().clone()
+2026-11-13T09:27:42.4000961Z         array = torch_to_mlx(tensor)
+2026-11-13T09:27:42.4001156Z 
+2026-11-13T09:27:42.4001254Z         tensor.zero_()
+2026-11-13T09:27:42.4001508Z         torch.mps.synchronize()
+2026-11-13T09:27:42.4001781Z         mx.eval(array)
+2026-11-13T09:27:42.4002077Z         round_tripped = mlx_to_torch(array, device="cpu")
+2026-11-13T09:27:42.4002509Z         self.assertTrue(torch.equal(round_tripped, expected))
+2026-11-13T09:27:42.4002787Z 
+2026-11-13T09:27:42.4002875Z         del tensor
+2026-11-13T09:27:42.4003296Z         gc.collect()
+2026-11-13T09:27:42.4003610Z         self.assertTrue(torch.equal(round_tripped, expected))
+2026-11-13T09:27:42.4003889Z 
+2026-11-13T09:27:42.4004068Z     def test_mlx_to_torch_mps_shares_storage_and_lifetime(self):
+2026-11-13T09:27:42.4004480Z         import mlx.core as mx
+2026-11-13T09:27:42.4004659Z 
+2026-11-13T09:27:42.4004860Z         array = mx.arange(16, dtype=mx.float32).reshape(4, 4)[:, 1:3]
+2026-11-13T09:27:42.4005421Z         tensor = mlx_to_torch(array)
+2026-11-13T09:27:42.4005627Z 
+2026-11-13T09:27:42.4005788Z         self.assertEqual(tensor.device.type, "mps")
+2026-11-13T09:27:42.4006153Z         tensor.zero_()
+2026-11-13T09:27:42.4006437Z         torch.mps.synchronize()
+2026-11-13T09:27:42.4006770Z         self.assertTrue(mx.all(array == 0).item())
+2026-11-13T09:27:42.4007029Z 
+2026-11-13T09:27:42.4007122Z         del array
+2026-11-13T09:27:42.4007362Z         gc.collect()
+2026-11-13T09:27:42.4007707Z         self.assertEqual(torch.count_nonzero(tensor).item(), 0)
+2026-11-13T09:27:42.4007983Z 
+2026-11-13T09:27:42.4008180Z     def test_mps_round_trip_uses_independent_input_storage(self):
+2026-11-13T09:27:42.4008658Z         tensor = torch.arange(16, device="mps", dtype=torch.float32)
+2026-11-13T09:27:42.4008945Z 
+2026-11-13T09:27:42.4009114Z         round_tripped = mlx_to_torch(torch_to_mlx(tensor))
+2026-11-13T09:27:42.4009371Z 
+2026-11-13T09:27:42.4009582Z         self.assertNotEqual(round_tripped.data_ptr(), tensor.data_ptr())
+2026-11-13T09:27:42.4009919Z 
+2026-11-13T09:27:42.4010077Z     def test_mlx_call_keeps_zero_copy_borrows_alive(self):
+2026-11-13T09:27:42.4010442Z         import mlx.core as mx
+2026-11-13T09:27:42.4010620Z 
+2026-11-13T09:27:42.4010807Z         tensor = torch.randn(2, 8, device="mps", dtype=torch.float32)
+2026-11-13T09:27:42.4011274Z         weight = torch.randn(8, device="mps", dtype=torch.float32)
+2026-11-13T09:27:42.4011663Z         before = tensor.cpu().clone()
+2026-11-13T09:27:42.4011976Z         weight_before = weight.cpu().clone()
+2026-11-13T09:27:42.4012431Z         reference = torch.nn.functional.rms_norm(before, (8,), weight_before, 1e-6)
+2026-11-13T09:27:42.4013011Z         result = mlx_call(lambda x, w: mx.fast.rms_norm(x, w, 1e-6), tensor, weight)
+2026-11-13T09:27:42.4013507Z 
+2026-11-13T09:27:42.4013616Z         torch.mps.synchronize()
+2026-11-13T09:27:42.4013961Z         self.assertTrue(torch.equal(tensor.cpu(), before))
+2026-11-13T09:27:42.4014409Z         self.assertTrue(torch.equal(weight.cpu(), weight_before))
+2026-11-13T09:27:42.4014892Z         self.assertNotEqual(result.data_ptr(), tensor.data_ptr())
+2026-11-13T09:27:42.4015175Z 
+2026-11-13T09:27:42.4015282Z         del tensor, weight
+2026-11-13T09:27:42.4015535Z         gc.collect()
+2026-11-13T09:27:42.4015837Z         torch.testing.assert_close(result.cpu(), reference)
+2026-11-13T09:27:42.4016106Z 
+2026-11-13T09:27:42.4016277Z     def test_persistent_view_keeps_torch_storage_alive(self):
+2026-11-13T09:27:42.4016660Z         import mlx.core as mx
+2026-11-13T09:27:42.4016841Z 
+2026-11-13T09:27:42.4017075Z         source = torch.arange(16, device="mps", dtype=torch.float32).reshape(4, 4)
+2026-11-13T09:27:42.4017529Z         view = MlxTensorView(source)
+2026-11-13T09:27:42.4017849Z         self.assertTrue(view.matches(source))
+2026-11-13T09:27:42.4018154Z         del source
+2026-11-13T09:27:42.4018532Z         gc.collect()
+2026-11-13T09:27:42.4018668Z 
+2026-11-13T09:27:42.4018837Z         result = mlx_call(lambda x: x + 1, view, device="mps")
+2026-11-13T09:27:42.4019216Z         torch.testing.assert_close(
+2026-11-13T09:27:42.4019630Z             result.cpu(), torch.arange(1, 17, dtype=torch.float32).reshape(4, 4)
+2026-11-13T09:27:42.4020045Z         )
+2026-11-13T09:27:42.4020352Z         # The view is still the owner after the result has been exported.
+2026-11-13T09:27:42.4020806Z         self.assertEqual(view.array.shape, (4, 4))
+2026-11-13T09:27:42.4021213Z         mx.eval(view.array)
+2026-11-13T09:27:42.4021376Z 
+2026-11-13T09:27:42.4021574Z     def test_mlx_call_synchronizes_persistent_view_producers(self):
+2026-11-13T09:27:42.4022056Z         source = torch.zeros(8, device="mps", dtype=torch.float32)
+2026-11-13T09:27:42.4022443Z         view = MlxTensorView(source)
+2026-11-13T09:27:42.4022736Z         source.fill_(3)
+2026-11-13T09:27:42.4022998Z         with mock.patch.object(
+2026-11-13T09:27:42.4023470Z             torch.mps, "synchronize", wraps=torch.mps.synchronize
+2026-11-13T09:27:42.4023859Z         ) as synchronize:
+2026-11-13T09:27:42.4024330Z             result = mlx_call(lambda x: x + 1, view, device="mps")
+2026-11-13T09:27:42.4024724Z         synchronize.assert_called_once_with()
+2026-11-13T09:27:42.4025145Z         torch.testing.assert_close(result.cpu(), torch.full((8,), 4.0))
+2026-11-13T09:27:42.4025451Z 
+2026-11-13T09:27:42.4025645Z     def test_batch_borrow_syncs_once_and_preserves_sources(self):
+2026-11-13T09:27:42.4026119Z         first = torch.randn(4, 8, device="mps", dtype=torch.bfloat16)
+2026-11-13T09:27:42.4026594Z         second = torch.randn(8, 8, device="mps", dtype=torch.bfloat16)
+2026-11-13T09:27:42.4027002Z         first_before = first.cpu().clone()
+2026-11-13T09:27:42.4027330Z         second_before = second.cpu().clone()
+2026-11-13T09:27:42.4027659Z         with mock.patch.object(
+2026-11-13T09:27:42.4028005Z             torch.mps, "synchronize", wraps=torch.mps.synchronize
+2026-11-13T09:27:42.4028389Z         ) as synchronize:
+2026-11-13T09:27:42.4028684Z             views = borrow_torch_tensors(first, second)
+2026-11-13T09:27:42.4029056Z         synchronize.assert_called_once_with()
+2026-11-13T09:27:42.4029450Z         self.assertTrue(torch.equal(first.cpu(), first_before))
+2026-11-13T09:27:42.4029902Z         self.assertTrue(torch.equal(second.cpu(), second_before))
+2026-11-13T09:27:42.4030310Z         self.assertTrue(views[0].matches(first))
+2026-11-13T09:27:42.4030666Z         self.assertTrue(views[1].matches(second))
+2026-11-13T09:27:42.4030899Z 
+2026-11-13T09:27:42.4031079Z     def test_invalid_batch_borrow_does_not_synchronize(self):
+2026-11-13T09:27:42.4031474Z         mps_tensor = torch.ones(1, device="mps")
+2026-11-13T09:27:42.4031799Z         cpu_tensor = torch.ones(1)
+2026-11-13T09:27:42.4032186Z         with mock.patch.object(torch.mps, "synchronize") as synchronize:
+2026-11-13T09:27:42.4032719Z             with self.assertRaisesRegex(ValueError, "requires MPS tensors"):
+2026-11-13T09:27:42.4048893Z                 borrow_torch_tensors(mps_tensor, cpu_tensor)
+2026-11-13T09:27:42.4049328Z         synchronize.assert_not_called()
+2026-11-13T09:27:42.4049554Z 
+2026-11-13T09:27:42.4049760Z     def test_mlx_call_borrows_noncontiguous_view_for_call_scope(self):
+2026-11-13T09:27:42.4050184Z         import mlx.core as mx
+2026-11-13T09:27:42.4050361Z 
+2026-11-13T09:27:42.4050555Z         base = torch.randn(4, 6, device="mps", dtype=torch.bfloat16)
+2026-11-13T09:27:42.4050944Z         tensor = base.T
+2026-11-13T09:27:42.4051286Z         weight = torch.randn(4, device="mps", dtype=torch.bfloat16)
+2026-11-13T09:27:42.4051689Z         base_before = base.cpu().clone()
+2026-11-13T09:27:42.4052007Z         tensor_before = tensor.cpu().clone()
+2026-11-13T09:27:42.4052230Z 
+2026-11-13T09:27:42.4052468Z         result = mlx_call(lambda x, w: mx.fast.rms_norm(x, w, 1e-6), tensor, weight)
+2026-11-13T09:27:42.4052825Z 
+2026-11-13T09:27:42.4052937Z         torch.mps.synchronize()
+2026-11-13T09:27:42.4053628Z         self.assertTrue(torch.equal(base.cpu(), base_before))
+2026-11-13T09:27:42.4054037Z         reference = torch.nn.functional.rms_norm(
+2026-11-13T09:27:42.4054409Z             tensor_before, (4,), weight.cpu(), 1e-6
+2026-11-13T09:27:42.4054721Z         )
+2026-11-13T09:27:42.4054997Z         torch.testing.assert_close(result.cpu(), reference)
+2026-11-13T09:27:42.4055265Z 
+2026-11-13T09:27:42.4055430Z     def test_mlx_call_multi_fences_and_evaluates_once(self):
+2026-11-13T09:27:42.4055927Z         """A multi-output island must not evaluate each result independently."""
+2026-11-13T09:27:42.4056361Z         import mlx.core as mx
+2026-11-13T09:27:42.4056537Z 
+2026-11-13T09:27:42.4056723Z         source = torch.arange(8, device="mps", dtype=torch.float32)
+2026-11-13T09:27:42.4057124Z         source_before = source.cpu().clone()
+2026-11-13T09:27:42.4057424Z         captured = {}
+2026-11-13T09:27:42.4057657Z         events = []
+2026-11-13T09:27:42.4057930Z         real_synchronize = torch.mps.synchronize
+2026-11-13T09:27:42.4058259Z         real_eval = mx.eval
+2026-11-13T09:27:42.4058573Z         real_from_dlpack = torch.utils.dlpack.from_dlpack
+2026-11-13T09:27:42.4058970Z 
+2026-11-13T09:27:42.4059082Z         def synchronize_then_record():
+2026-11-13T09:27:42.4059388Z             real_synchronize()
+2026-11-13T09:27:42.4059677Z             events.append("fence returned")
+2026-11-13T09:27:42.4059902Z 
+2026-11-13T09:27:42.4060010Z         def operation(x):
+2026-11-13T09:27:42.4060276Z             events.append("operation")
+2026-11-13T09:27:42.4060586Z             captured["arrays"] = (x + 1, x * 2)
+2026-11-13T09:27:42.4060911Z             return list(captured["arrays"])
+2026-11-13T09:27:42.4061133Z 
+2026-11-13T09:27:42.4061247Z         def evaluate_and_record(*arrays):
+2026-11-13T09:27:42.4061558Z             events.append("eval")
+2026-11-13T09:27:42.4061848Z             return real_eval(*arrays)
+2026-11-13T09:27:42.4062050Z 
+2026-11-13T09:27:42.4062176Z         def import_and_record(*args, **kwargs):
+2026-11-13T09:27:42.4062508Z             events.append("dlpack")
+2026-11-13T09:27:42.4062826Z             return real_from_dlpack(*args, **kwargs)
+2026-11-13T09:27:42.4063058Z 
+2026-11-13T09:27:42.4063273Z         with (
+2026-11-13T09:27:42.4063510Z             mock.patch.object(
+2026-11-13T09:27:42.4063884Z                 torch.mps, "synchronize", side_effect=synchronize_then_record
+2026-11-13T09:27:42.4064291Z             ) as synchronize,
+2026-11-13T09:27:42.4064700Z             mock.patch.object(mx, "eval", side_effect=evaluate_and_record) as evaluate,
+2026-11-13T09:27:42.4065155Z             mock.patch.object(
+2026-11-13T09:27:42.4065430Z                 torch.utils.dlpack,
+2026-11-13T09:27:42.4065726Z                 "from_dlpack",
+2026-11-13T09:27:42.4066011Z                 side_effect=import_and_record,
+2026-11-13T09:27:42.4066323Z             ) as from_dlpack,
+2026-11-13T09:27:42.4066573Z         ):
+2026-11-13T09:27:42.4066803Z             first, second = mlx_call_multi(
+2026-11-13T09:27:42.4067125Z                 operation,
+2026-11-13T09:27:42.4067366Z                 source,
+2026-11-13T09:27:42.4067608Z                 device="mps",
+2026-11-13T09:27:42.4067862Z             )
+2026-11-13T09:27:42.4067992Z 
+2026-11-13T09:27:42.4068112Z         synchronize.assert_called_once_with()
+2026-11-13T09:27:42.4068445Z         self.assertEqual(
+2026-11-13T09:27:42.4068686Z             events,
+2026-11-13T09:27:42.4068997Z             ["fence returned", "operation", "eval", "dlpack", "dlpack"],
+2026-11-13T09:27:42.4069372Z         )
+2026-11-13T09:27:42.4069605Z         evaluate.assert_called_once()
+2026-11-13T09:27:42.4069966Z         self.assertEqual(len(evaluate.call_args.args), 2)
+2026-11-13T09:27:42.4070358Z         self.assertEqual(from_dlpack.call_count, 2)
+2026-11-13T09:27:42.4070780Z         torch.testing.assert_close(first.cpu(), source_before + 1)
+2026-11-13T09:27:42.4071251Z         torch.testing.assert_close(second.cpu(), source_before * 2)
+2026-11-13T09:27:42.4071815Z         self.assertEqual(first.device.type, "mps")
+2026-11-13T09:27:42.4072210Z         self.assertEqual(second.device.type, "mps")
+2026-11-13T09:27:42.4072459Z 
+2026-11-13T09:27:42.4072686Z         # Mutation through the Torch result remains visible from the original
+2026-11-13T09:27:42.4073357Z         # MLX result allocation, proving that the positive-stride export did
+2026-11-13T09:27:42.4073788Z         # not insert a copy.
+2026-11-13T09:27:42.4074058Z         first.fill_(7)
+2026-11-13T09:27:42.4074317Z         torch.mps.synchronize()
+2026-11-13T09:27:42.4074676Z         self.assertTrue(mx.all(captured["arrays"][0] == 7).item())
+2026-11-13T09:27:42.4074968Z 
+2026-11-13T09:27:42.4075207Z     def test_mlx_call_multi_keeps_borrowed_inputs_alive_until_all_exports(self):
+2026-11-13T09:27:42.4075739Z         source = torch.arange(8, device="mps", dtype=torch.float32)
+2026-11-13T09:27:42.4076128Z         view = MlxTensorView(source)
+2026-11-13T09:27:42.4076426Z         expected = source.cpu()
+2026-11-13T09:27:42.4076595Z 
+2026-11-13T09:27:42.4076721Z         first, second = mlx_call_multi(
+2026-11-13T09:27:42.4077139Z             lambda x: (x + 3, x - 3),
+2026-11-13T09:27:42.4077580Z             view,
+2026-11-13T09:27:42.4077812Z             device="mps",
+2026-11-13T09:27:42.4078060Z         )
+2026-11-13T09:27:42.4078276Z         del source, view
+2026-11-13T09:27:42.4078530Z         gc.collect()
+2026-11-13T09:27:42.4078679Z 
+2026-11-13T09:27:42.4078857Z         torch.testing.assert_close(first.cpu(), expected + 3)
+2026-11-13T09:27:42.4079305Z         torch.testing.assert_close(second.cpu(), expected - 3)
+2026-11-13T09:27:42.4079586Z 
+2026-11-13T09:27:42.4079753Z     def test_concurrent_bridge_calls_are_serialized(self):
+2026-11-13T09:27:42.4095244Z         """Concurrent bridge entry points must not race Metal command buffers."""
+2026-11-13T09:27:42.4095596Z         script = """
+2026-11-13T09:27:42.4095900Z from concurrent.futures import ThreadPoolExecutor
+2026-11-13T09:27:42.4096228Z import torch
+2026-11-13T09:27:42.4096445Z from sglang.srt.utils.tensor_bridge import mlx_call
+2026-11-13T09:27:42.4096693Z 
+2026-11-13T09:27:42.4096843Z source = torch.arange(8, device="mps", dtype=torch.float32)
+2026-11-13T09:27:42.4097054Z 
+2026-11-13T09:27:42.4097142Z def worker(iterations):
+2026-11-13T09:27:42.4097335Z     for _ in range(iterations):
+2026-11-13T09:27:42.4097582Z         result = mlx_call(lambda x: x + 1, source, device="mps")
+2026-11-13T09:27:42.4097860Z         assert result.device.type == "mps"
+2026-11-13T09:27:42.4098079Z         del result
+2026-11-13T09:27:42.4098244Z     return True
+2026-11-13T09:27:42.4098344Z 
+2026-11-13T09:27:42.4098440Z with ThreadPoolExecutor(max_workers=2) as pool:
+2026-11-13T09:27:42.4098732Z     futures = [pool.submit(worker, 64), pool.submit(worker, 64)]
+2026-11-13T09:27:42.4099041Z     assert all(future.result() for future in futures)
+2026-11-13T09:27:42.4099274Z """
+2026-11-13T09:27:42.4099435Z         completed = subprocess.run(
+2026-11-13T09:27:42.4099658Z             [sys.executable, "-c", script],
+2026-11-13T09:27:42.4099897Z             capture_output=True,
+2026-11-13T09:27:42.4100093Z             text=True,
+2026-11-13T09:27:42.4100268Z             timeout=30,
+2026-11-13T09:27:42.4100442Z             check=False,
+2026-11-13T09:27:42.4100616Z         )
+2026-11-13T09:27:42.4100780Z         self.assertEqual(
+2026-11-13T09:27:42.4100981Z             completed.returncode,
+2026-11-13T09:27:42.4101182Z             0,
+2026-11-13T09:27:42.4101413Z             msg=f"stdout={completed.stdout}\nstderr={completed.stderr}",
+2026-11-13T09:27:42.4101680Z         )
+2026-11-13T09:27:42.4101761Z 
+2026-11-13T09:27:42.4101891Z     def test_mlx_call_multi_rejects_non_sequence_output(self):
+2026-11-13T09:27:42.4102199Z         source = torch.ones(2, device="mps", dtype=torch.float32)
+2026-11-13T09:27:42.4102536Z         with self.assertRaisesRegex(TypeError, "non-empty tuple or list"):
+2026-11-13T09:27:42.4102859Z             mlx_call_multi(lambda x: x + 1, source, device="mps")
+2026-11-13T09:27:42.4103038Z 
+2026-11-13T09:27:42.4103635Z     def test_mlx_call_multi_cpu_input_does_not_fence_mps(self):
+2026-11-13T09:27:42.4103975Z         source = torch.arange(8, dtype=torch.float32)
+2026-11-13T09:27:42.4104152Z 
+2026-11-13T09:27:42.4104300Z         with mock.patch.object(torch.mps, "synchronize") as synchronize:
+2026-11-13T09:27:42.4104591Z             (result,) = mlx_call_multi(
+2026-11-13T09:27:42.4104808Z                 lambda x: (x + 1,),
+2026-11-13T09:27:42.4105004Z                 source,
+2026-11-13T09:27:42.4105181Z                 device="mps",
+2026-11-13T09:27:42.4105364Z             )
+2026-11-13T09:27:42.4105458Z 
+2026-11-13T09:27:42.4105541Z         synchronize.assert_not_called()
+2026-11-13T09:27:42.4105795Z         torch.testing.assert_close(result.cpu(), source + 1)
+2026-11-13T09:27:42.4105980Z 
+2026-11-13T09:27:42.4106120Z     def test_mlx_call_multi_sync_failure_precedes_graph_build(self):
+2026-11-13T09:27:42.4106403Z         source = torch.ones(1, device="mps")
+2026-11-13T09:27:42.4106623Z         operation = mock.Mock()
+2026-11-13T09:27:42.4106751Z 
+2026-11-13T09:27:42.4106825Z         with (
+2026-11-13T09:27:42.4107001Z             mock.patch.object(
+2026-11-13T09:27:42.4107297Z                 torch.mps,
+2026-11-13T09:27:42.4107527Z                 "synchronize",
+2026-11-13T09:27:42.4107960Z                 side_effect=RuntimeError("producer fence failed"),
+2026-11-13T09:27:42.4108276Z             ),
+2026-11-13T09:27:42.4108523Z             self.assertRaisesRegex(RuntimeError, "producer fence failed"),
+2026-11-13T09:27:42.4108803Z         ):
+2026-11-13T09:27:42.4109012Z             mlx_call_multi(
+2026-11-13T09:27:42.4109370Z                 operation,
+2026-11-13T09:27:42.4109678Z                 source,
+2026-11-13T09:27:42.4109972Z                 device="mps",
+2026-11-13T09:27:42.4110280Z             )
+2026-11-13T09:27:42.4110436Z 
+2026-11-13T09:27:42.4110570Z         operation.assert_not_called()
+2026-11-13T09:27:42.4110817Z 
+2026-11-13T09:27:42.4111007Z     def test_mlx_call_multi_propagates_operation_failure(self):
+2026-11-13T09:27:42.4111437Z         source = torch.ones(1, device="mps")
+2026-11-13T09:27:42.4111686Z 
+2026-11-13T09:27:42.4111814Z         def operation(_source):
+2026-11-13T09:27:42.4112153Z             raise RuntimeError("graph build failed")
+2026-11-13T09:27:42.4112402Z 
+2026-11-13T09:27:42.4112637Z         with self.assertRaisesRegex(RuntimeError, "graph build failed"):
+2026-11-13T09:27:42.4113077Z             mlx_call_multi(
+2026-11-13T09:27:42.4113530Z                 operation,
+2026-11-13T09:27:42.4113788Z                 source,
+2026-11-13T09:27:42.4114047Z                 device="mps",
+2026-11-13T09:27:42.4114319Z             )
+2026-11-13T09:27:42.4114451Z 
+2026-11-13T09:27:42.4114681Z     def test_bridge_detaches_autograd_and_synchronizes_producers(self):
+2026-11-13T09:27:42.4115153Z         import mlx.core as mx
+2026-11-13T09:27:42.4115346Z 
+2026-11-13T09:27:42.4115556Z         tensor = torch.arange(8, device="mps", dtype=torch.float32)
+2026-11-13T09:27:42.4115908Z         tensor.requires_grad_()
+2026-11-13T09:27:42.4116198Z         with mock.patch.object(
+2026-11-13T09:27:42.4116568Z             torch.mps, "synchronize", wraps=torch.mps.synchronize
+2026-11-13T09:27:42.4116908Z         ) as synchronize:
+2026-11-13T09:27:42.4117159Z             array = torch_to_mlx(tensor)
+2026-11-13T09:27:42.4117464Z         synchronize.assert_called_once_with()
+2026-11-13T09:27:42.4117717Z 
+2026-11-13T09:27:42.4117923Z         with mock.patch.object(mx, "eval", wraps=mx.eval) as evaluate:
+2026-11-13T09:27:42.4118340Z             round_tripped = mlx_to_torch(array)
+2026-11-13T09:27:42.4118597Z         evaluate.assert_called_once_with(array)
+2026-11-13T09:27:42.4118853Z         self.assertFalse(round_tripped.requires_grad)
+2026-11-13T09:27:42.4119027Z 
+2026-11-13T09:27:42.4119131Z     def test_torch_cpu_input_is_an_explicit_copy(self):
+2026-11-13T09:27:42.4119373Z         import mlx.core as mx
+2026-11-13T09:27:42.4119495Z 
+2026-11-13T09:27:42.4119592Z         tensor = torch.arange(8, dtype=torch.bfloat16)
+2026-11-13T09:27:42.4119995Z         array = torch_to_mlx(tensor)
+2026-11-13T09:27:42.4120214Z         tensor.zero_()
+2026-11-13T09:27:42.4120447Z         mx.eval(array)
+2026-11-13T09:27:42.4120587Z 
+2026-11-13T09:27:42.4120739Z         self.assertEqual(
+2026-11-13T09:27:42.4121101Z             array.astype(mx.float32).tolist(),
+2026-11-13T09:27:42.4121472Z             [float(value) for value in range(8)],
+2026-11-13T09:27:42.4121885Z         )
+2026-11-13T09:27:42.4122018Z 
+2026-11-13T09:27:42.4122209Z     def test_torch_cpu_float64_does_not_silently_downcast(self):
+2026-11-13T09:27:42.4122627Z         import mlx.core as mx
+2026-11-13T09:27:42.4122784Z 
+2026-11-13T09:27:42.4122903Z         tensor = torch.tensor([1.25, -2.5], dtype=torch.float64)
+2026-11-13T09:27:42.4123339Z         array = torch_to_mlx(tensor)
+2026-11-13T09:27:42.4123551Z         mx.eval(array)
+2026-11-13T09:27:42.4123753Z         self.assertEqual(array.dtype, mx.float64)
+2026-11-13T09:27:42.4124012Z         round_tripped = mlx_to_torch(array, device="cpu")
+2026-11-13T09:27:42.4124317Z         self.assertEqual(round_tripped.dtype, torch.float64)
+2026-11-13T09:27:42.4124601Z         torch.testing.assert_close(round_tripped, tensor)
+2026-11-13T09:27:42.4124967Z 
+2026-11-13T09:27:42.4125102Z     def test_unsupported_cpu_dtype_fails_instead_of_narrowing(self):
+2026-11-13T09:27:42.4125428Z         tensor = torch.tensor([1 + 2j], dtype=torch.complex128)
+2026-11-13T09:27:42.4125739Z         with self.assertRaisesRegex(ValueError, "complex128"):
+2026-11-13T09:27:42.4126001Z             torch_to_mlx(tensor)
+2026-11-13T09:27:42.4126121Z 
+2026-11-13T09:27:42.4126242Z     def test_cpu_float64_export_is_materialized_on_cpu(self):
+2026-11-13T09:27:42.4126496Z         import mlx.core as mx
+2026-11-13T09:27:42.4126610Z 
+2026-11-13T09:27:42.4126695Z         with mx.stream(mx.cpu):
+2026-11-13T09:27:42.4126914Z             array = mx.array([1.25, -2.5], dtype=mx.float64)
+2026-11-13T09:27:42.4127170Z         tensor = mlx_to_torch(array, device="cpu")
+2026-11-13T09:27:42.4127430Z         self.assertEqual(tensor.device.type, "cpu")
+2026-11-13T09:27:42.4127692Z         self.assertEqual(tensor.dtype, torch.float64)
+2026-11-13T09:27:42.4127955Z         torch.testing.assert_close(
+2026-11-13T09:27:42.4128206Z             tensor, torch.tensor([1.25, -2.5], dtype=torch.float64)
+2026-11-13T09:27:42.4128456Z         )
+2026-11-13T09:27:42.4128538Z 
+2026-11-13T09:27:42.4128687Z     def test_cpu_float64_positive_stride_export_remains_zero_copy(self):
+2026-11-13T09:27:42.4128971Z         import mlx.core as mx
+2026-11-13T09:27:42.4129100Z 
+2026-11-13T09:27:42.4129171Z         with mx.stream(mx.cpu):
+2026-11-13T09:27:42.4129372Z             base = mx.arange(8).astype(mx.float64)
+2026-11-13T09:27:42.4129616Z             array = base[::2]
+2026-11-13T09:27:42.4129816Z         tensor = mlx_to_torch(array, device="cpu")
+2026-11-13T09:27:42.4130063Z         self.assertEqual(tensor.stride(), (2,))
+2026-11-13T09:27:42.4130388Z 
+2026-11-13T09:27:42.4130475Z         tensor.fill_(11)
+2026-11-13T09:27:42.4130674Z         torch.testing.assert_close(
+2026-11-13T09:27:42.4130957Z             torch.utils.dlpack.from_dlpack(array.__dlpack__(dl_device=(1, 0))),
+2026-11-13T09:27:42.4131382Z             torch.full((4,), 11, dtype=torch.float64),
+2026-11-13T09:27:42.4131604Z         )
+2026-11-13T09:27:42.4131693Z 
+2026-11-13T09:27:42.4131812Z     def test_cpu_export_consumes_the_dlpack_capsule_once(self):
+2026-11-13T09:27:42.4132244Z         """A DLPack capsule is single-use and must not be imported twice."""
+2026-11-13T09:27:42.4132538Z         import mlx.core as mx
+2026-11-13T09:27:42.4132697Z 
+2026-11-13T09:27:42.4132822Z         with mx.stream(mx.cpu):
+2026-11-13T09:27:42.4133058Z             array = mx.array([1.25, -2.5], dtype=mx.float32)
+2026-11-13T09:27:42.4133412Z 
+2026-11-13T09:27:42.4133496Z         with mock.patch.object(
+2026-11-13T09:27:42.4133683Z             torch.utils.dlpack,
+2026-11-13T09:27:42.4133875Z             "from_dlpack",
+2026-11-13T09:27:42.4134163Z             wraps=torch.utils.dlpack.from_dlpack,
+2026-11-13T09:27:42.4134530Z         ) as from_dlpack:
+2026-11-13T09:27:42.4134734Z             tensor = mlx_to_torch(array, device="cpu")
+2026-11-13T09:27:42.4134993Z 
+2026-11-13T09:27:42.4135093Z         self.assertEqual(from_dlpack.call_count, 1)
+2026-11-13T09:27:42.4135332Z         torch.testing.assert_close(
+2026-11-13T09:27:42.4135619Z             tensor, torch.tensor([1.25, -2.5], dtype=torch.float32)
+2026-11-13T09:27:42.4135915Z         )
+2026-11-13T09:27:42.4136005Z 
+2026-11-13T09:27:42.4136106Z     def test_explicit_cpu_target_shares_storage(self):
+2026-11-13T09:27:42.4136343Z         import mlx.core as mx
+2026-11-13T09:27:42.4136463Z 
+2026-11-13T09:27:42.4136599Z         array = mx.arange(16, dtype=mx.float32).reshape(4, 4)[:, ::2]
+2026-11-13T09:27:42.4136874Z         tensor = mlx_to_torch(array, device="cpu")
+2026-11-13T09:27:42.4137022Z 
+2026-11-13T09:27:42.4137123Z         self.assertEqual(tensor.device.type, "cpu")
+2026-11-13T09:27:42.4137371Z         self.assertEqual(tensor.stride(), (4, 2))
+2026-11-13T09:27:42.4137601Z         tensor.zero_()
+2026-11-13T09:27:42.4137792Z         self.assertTrue(mx.all(array == 0).item())
+2026-11-13T09:27:42.4138055Z 
+2026-11-13T09:27:42.4138118Z         del array
+2026-11-13T09:27:42.4138279Z         gc.collect()
+2026-11-13T09:27:42.4138494Z         self.assertEqual(torch.count_nonzero(tensor).item(), 0)
+2026-11-13T09:27:42.4138681Z 
+2026-11-13T09:27:42.4138826Z     def test_negative_stride_views_materialize_without_aborting(self):
+2026-11-13T09:27:42.4139099Z         script = """
+2026-11-13T09:27:42.4139267Z import mlx.core as mx
+2026-11-13T09:27:42.4139437Z import torch
+2026-11-13T09:27:42.4139663Z from sglang.srt.utils.tensor_bridge import mlx_call, mlx_to_torch
+2026-11-13T09:27:42.4139865Z 
+2026-11-13T09:27:42.4139979Z expected = torch.arange(15, -1, -1, dtype=torch.float32)
+2026-11-13T09:27:42.4140233Z for target in ("cpu", "mps"):
+2026-11-13T09:27:42.4140442Z     array = mx.arange(16, dtype=mx.float32)[::-1]
+2026-11-13T09:27:42.4140694Z     tensor = mlx_to_torch(array, device=target)
+2026-11-13T09:27:42.4140970Z     torch.testing.assert_close(tensor.cpu(), expected)
+2026-11-13T09:27:42.4141222Z     tensor.zero_()
+2026-11-13T09:27:42.4141391Z     if target == "mps":
+2026-11-13T09:27:42.4141575Z         torch.mps.synchronize()
+2026-11-13T09:27:42.4141854Z     assert mx.array_equal(array, mx.arange(16, dtype=mx.float32)[::-1]).item()
+2026-11-13T09:27:42.4142080Z 
+2026-11-13T09:27:42.4142151Z with mx.stream(mx.cpu):
+2026-11-13T09:27:42.4142350Z     array = mx.arange(16).astype(mx.float64)[::-1]
+2026-11-13T09:27:42.4142593Z tensor = mlx_to_torch(array, device="cpu")
+2026-11-13T09:27:42.4142816Z torch.testing.assert_close(
+2026-11-13T09:27:42.4143042Z     tensor, torch.arange(15, -1, -1, dtype=torch.float64)
+2026-11-13T09:27:42.4143669Z )
+2026-11-13T09:27:42.4143809Z try:
+2026-11-13T09:27:42.4143970Z     mlx_to_torch(array, device="mps")
+2026-11-13T09:27:42.4144182Z except ValueError as exc:
+2026-11-13T09:27:42.4144374Z     assert "float64" in str(exc)
+2026-11-13T09:27:42.4144567Z else:
+2026-11-13T09:27:42.4144799Z     raise AssertionError("float64 MLX export to MPS must fail explicitly")
+2026-11-13T09:27:42.4145031Z 
+2026-11-13T09:27:42.4145155Z source = torch.arange(16, device="mps", dtype=torch.float32)
+2026-11-13T09:27:42.4145460Z result = mlx_call(lambda x: x[::-1], source, device="mps")
+2026-11-13T09:27:42.4145747Z torch.testing.assert_close(result.cpu(), expected)
+2026-11-13T09:27:42.4145970Z """
+2026-11-13T09:27:42.4146125Z         completed = subprocess.run(
+2026-11-13T09:27:42.4146338Z             [sys.executable, "-c", script],
+2026-11-13T09:27:42.4146555Z             capture_output=True,
+2026-11-13T09:27:42.4146744Z             text=True,
+2026-11-13T09:27:42.4146912Z             timeout=30,
+2026-11-13T09:27:42.4147081Z             check=False,
+2026-11-13T09:27:42.4147247Z         )
+2026-11-13T09:27:42.4147400Z         self.assertEqual(
+2026-11-13T09:27:42.4147584Z             completed.returncode,
+2026-11-13T09:27:42.4147774Z             0,
+2026-11-13T09:27:42.4148113Z             msg=f"stdout={completed.stdout}\nstderr={completed.stderr}",
+2026-11-13T09:27:42.4148382Z         )
+2026-11-13T09:27:42.4148466Z 
+2026-11-13T09:27:42.4148469Z 
+2026-11-13T09:27:42.4148547Z if __name__ == "__main__":
+2026-11-13T09:27:42.4148725Z     unittest.main()
+2026-11-13T09:27:42.4148828Z 
+2026-11-13T09:27:42.4148892Z END_FORMATTED_TEST
+2026-11-13T09:27:42.4206689Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-11-13T09:27:42.4207006Z with:
+2026-11-13T09:27:42.4207188Z   name: native-cpu-mlx-lazy-view-evidence
+2026-11-13T09:27:42.4207781Z   path: sglang-install.log
+mlx-install.log
+sglang-environment.txt
+sglang-patched.log
+sglang-patched.xml
+sglang-baseline.log
+sglang-baseline.xml
+sglang-lint.log
+sglang-format.patch
+
+2026-11-13T09:27:42.4208351Z   if-no-files-found: warn
+2026-11-13T09:27:42.4208539Z   compression-level: 6
+2026-11-13T09:27:42.4208711Z   overwrite: false
+2026-11-13T09:27:42.4208886Z   include-hidden-files: false
+2026-11-13T09:27:42.4209082Z   archive: true
+2026-11-13T09:27:42.4209237Z env:
+2026-11-13T09:27:42.4209388Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:27:42.4209701Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:27:42.4209909Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:27:42.4210087Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:27:42.4210250Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:27:42.4210499Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:27:42.4210827Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:27:42.4211146Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:27:42.4211438Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:27:42.4211722Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:27:42.4212015Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:27:42.4212274Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:27:42.4212450Z ##[endgroup]
+2026-11-13T09:27:42.5526559Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-13T09:27:42.5528910Z The least common ancestor is /home/runner/work/sglang/sglang. This will be the root directory of the artifact
+2026-11-13T09:27:42.5529663Z With the provided path, there will be 9 files uploaded
+2026-11-13T09:27:42.5532925Z Artifact name is valid!
+2026-11-13T09:27:42.5533439Z Root directory input is valid!
+2026-11-13T09:27:42.9715695Z Uploading artifact: native-cpu-mlx-lazy-view-evidence.zip
+2026-11-13T09:27:42.9745742Z Beginning upload of artifact content to blob storage
+2026-11-13T09:27:43.3713981Z Uploaded bytes 14000
+2026-11-13T09:27:43.4502035Z Finished uploading artifact content to blob storage!
+2026-11-13T09:27:43.4502755Z SHA256 digest of uploaded artifact is 9e09e568719d927d3619b7c5037203c881fd21daf81c828063bb306be1ab27dd
+2026-11-13T09:27:43.4503540Z Finalizing artifact upload
+2026-11-13T09:27:44.0001581Z Artifact native-cpu-mlx-lazy-view-evidence successfully finalized. Artifact ID 14024788980
+2026-11-13T09:27:44.0002706Z Artifact native-cpu-mlx-lazy-view-evidence has been successfully uploaded! Final size is 14000 bytes. Artifact ID is 14024788980
+2026-11-13T09:27:44.0005625Z Artifact download URL: https://github.com/Afloat16/sglang/actions/runs/43399327572/artifacts/14024788980
+2026-11-13T09:27:44.0184994Z Post job cleanup.
+2026-11-13T09:27:44.1271463Z (node:17401) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T09:27:44.1272352Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T09:27:44.1465941Z Post job cleanup.
+2026-11-13T09:27:44.2221057Z [command]/usr/bin/git version
+2026-11-13T09:27:44.2262105Z git version 2.56.0
+2026-11-13T09:27:44.2293873Z Temporarily overriding HOME='/home/runner/work/_temp/ecdae25e-5f92-4a04-99e3-3a2badc95cc5' before making global git config changes
+2026-11-13T09:27:44.2295116Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T09:27:44.2301095Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sglang/sglang
+2026-11-13T09:27:44.2335229Z Removing SSH command configuration
+2026-11-13T09:27:44.2341856Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T09:27:44.2381281Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T09:27:44.2725465Z Removing HTTP extra header
+2026-11-13T09:27:44.2731825Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T09:27:44.2792753Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T09:27:44.3105450Z Removing includeIf entries pointing to credentials config files
+2026-11-13T09:27:44.3111932Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T09:27:44.3181953Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T09:27:44.3535087Z Cleaning up orphan processes
+2026-11-13T09:27:44.3958016Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
