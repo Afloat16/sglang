@@ -1,0 +1,1775 @@
+﻿2026-11-13T10:45:12.6359158Z Current runner version: '2.338.2'
+2026-11-13T10:45:12.6377116Z ##[group]Runner Image Provisioner
+2026-11-13T10:45:12.6377674Z Hosted Compute Agent
+2026-11-13T10:45:12.6378101Z Version: 20261103.629
+2026-11-13T10:45:12.6378494Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-13T10:45:12.6378957Z Build Date: 2026-11-03T17:26:59Z
+2026-11-13T10:45:12.6379707Z Worker ID: {ee2748fa-7bba-4931-beb7-a8b20770a489}
+2026-11-13T10:45:12.6380122Z Region: westus3
+2026-11-13T10:45:12.6380443Z Cloud: Azure
+2026-11-13T10:45:12.6380815Z ##[endgroup]
+2026-11-13T10:45:12.6381620Z ##[group]Operating System
+2026-11-13T10:45:12.6382007Z Ubuntu
+2026-11-13T10:45:12.6382367Z 24.04.5
+2026-11-13T10:45:12.6382666Z LTS
+2026-11-13T10:45:12.6383019Z ##[endgroup]
+2026-11-13T10:45:12.6383378Z ##[group]Runner Image
+2026-11-13T10:45:12.6383752Z Image: ubuntu-24.04
+2026-11-13T10:45:12.6384107Z Version: 20261111.370.1
+2026-11-13T10:45:12.6384901Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261111.370/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-13T10:45:12.6385809Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261111.370
+2026-11-13T10:45:12.6386486Z ##[endgroup]
+2026-11-13T10:45:12.6387173Z ##[group]GITHUB_TOKEN Permissions
+2026-11-13T10:45:12.6388355Z Contents: read
+2026-11-13T10:45:12.6388771Z Metadata: read
+2026-11-13T10:45:12.6389160Z ##[endgroup]
+2026-11-13T10:45:12.6390778Z Secret source: Actions
+2026-11-13T10:45:12.6391399Z Cache mode: write
+2026-11-13T10:45:12.6391909Z Prepare workflow directory
+2026-11-13T10:45:12.6644878Z Prepare all required actions
+2026-11-13T10:45:12.6676701Z Getting action download info
+2026-11-13T10:45:12.9646350Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-13T10:45:13.0755595Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-13T10:45:13.1632563Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-11-13T10:45:13.3217088Z Complete job name: native-cpu
+2026-11-13T10:45:13.3745887Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-11-13T10:45:13.3746570Z with:
+2026-11-13T10:45:13.3746825Z   ref: 57a8862391bf234f58eb1ccd11d3a540c576d921
+2026-11-13T10:45:13.3747136Z   fetch-depth: 2
+2026-11-13T10:45:13.3747380Z   persist-credentials: false
+2026-11-13T10:45:13.3747653Z   repository: Afloat16/sglang
+2026-11-13T10:45:13.3749854Z   token: ***
+2026-11-13T10:45:13.3750076Z   ssh-strict: true
+2026-11-13T10:45:13.3750305Z   ssh-user: git
+2026-11-13T10:45:13.3750532Z   clean: true
+2026-11-13T10:45:13.3750772Z   sparse-checkout-cone-mode: true
+2026-11-13T10:45:13.3751048Z   fetch-tags: false
+2026-11-13T10:45:13.3751285Z   show-progress: true
+2026-11-13T10:45:13.3751520Z   lfs: false
+2026-11-13T10:45:13.3751739Z   submodules: false
+2026-11-13T10:45:13.3751990Z   set-safe-directory: true
+2026-11-13T10:45:13.3752259Z   allow-unsafe-pr-checkout: false
+2026-11-13T10:45:13.3752598Z env:
+2026-11-13T10:45:13.3752852Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:45:13.3753137Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:45:13.3753422Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:45:13.3753674Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:45:13.3753908Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:45:13.3754154Z ##[endgroup]
+2026-11-13T10:45:13.6052489Z Syncing repository: Afloat16/sglang
+2026-11-13T10:45:13.6053860Z ##[group]Getting Git version info
+2026-11-13T10:45:13.6054394Z Working directory is '/home/runner/work/sglang/sglang'
+2026-11-13T10:45:13.6055188Z [command]/usr/bin/git version
+2026-11-13T10:45:13.6161379Z git version 2.56.1
+2026-11-13T10:45:13.6175711Z ##[endgroup]
+2026-11-13T10:45:13.6186395Z Temporarily overriding HOME='/home/runner/work/_temp/b4b7d18e-8c1d-4d83-9b21-e0657d86db11' before making global git config changes
+2026-11-13T10:45:13.6187755Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T10:45:13.6192049Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sglang/sglang
+2026-11-13T10:45:13.6243056Z Deleting the contents of '/home/runner/work/sglang/sglang'
+2026-11-13T10:45:13.6245833Z ##[group]Determining repository object format
+2026-11-13T10:45:13.6247276Z ##[endgroup]
+2026-11-13T10:45:13.6247657Z ##[group]Initializing the repository
+2026-11-13T10:45:13.6250969Z [command]/usr/bin/git init /home/runner/work/sglang/sglang
+2026-11-13T10:45:13.6366998Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-13T10:45:13.6367763Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-13T10:45:13.6368263Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-13T10:45:13.6368651Z hint: call:
+2026-11-13T10:45:13.6368863Z hint:
+2026-11-13T10:45:13.6369155Z hint: 	git config --global init.defaultBranch <name>
+2026-11-13T10:45:13.6369532Z hint:
+2026-11-13T10:45:13.6369836Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-13T10:45:13.6370491Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-13T10:45:13.6370879Z hint:
+2026-11-13T10:45:13.6371105Z hint: 	git branch -m <name>
+2026-11-13T10:45:13.6371355Z hint:
+2026-11-13T10:45:13.6371682Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-13T10:45:13.6375549Z Initialized empty Git repository in /home/runner/work/sglang/sglang/.git/
+2026-11-13T10:45:13.6385929Z [command]/usr/bin/git remote add origin https://github.com/Afloat16/sglang
+2026-11-13T10:45:13.6436361Z ##[endgroup]
+2026-11-13T10:45:13.6437004Z ##[group]Disabling automatic garbage collection
+2026-11-13T10:45:13.6439085Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-13T10:45:13.6474094Z ##[endgroup]
+2026-11-13T10:45:13.6475333Z ##[group]Setting up auth
+2026-11-13T10:45:13.6475913Z Removing SSH command configuration
+2026-11-13T10:45:13.6478615Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T10:45:13.6520711Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T10:45:13.6868829Z Removing HTTP extra header
+2026-11-13T10:45:13.6873205Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T10:45:13.6912969Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T10:45:13.7115252Z Removing includeIf entries pointing to credentials config files
+2026-11-13T10:45:13.7119346Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T10:45:13.7160003Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T10:45:13.7360496Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-c3688a32-4c2d-455b-8a8f-191b13fb8d92.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-13T10:45:13.7407325Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sglang/sglang/.git.path /home/runner/work/_temp/git-credentials-c3688a32-4c2d-455b-8a8f-191b13fb8d92.config
+2026-11-13T10:45:13.7871391Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-c3688a32-4c2d-455b-8a8f-191b13fb8d92.config
+2026-11-13T10:45:13.8870278Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-c3688a32-4c2d-455b-8a8f-191b13fb8d92.config
+2026-11-13T10:45:13.8913017Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-c3688a32-4c2d-455b-8a8f-191b13fb8d92.config
+2026-11-13T10:45:13.8948022Z ##[endgroup]
+2026-11-13T10:45:13.8948439Z ##[group]Fetching the repository
+2026-11-13T10:45:13.8952958Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=2 origin 57a8862391bf234f58eb1ccd11d3a540c576d921
+2026-11-13T10:45:21.8633461Z From https://github.com/Afloat16/sglang
+2026-11-13T10:45:21.8635191Z  * branch            57a8862391bf234f58eb1ccd11d3a540c576d921 -> FETCH_HEAD
+2026-11-13T10:45:21.8641352Z [command]/usr/bin/git rev-parse --verify --quiet 57a8862391bf234f58eb1ccd11d3a540c576d921^{object}
+2026-11-13T10:45:21.8680010Z 57a8862391bf234f58eb1ccd11d3a540c576d921
+2026-11-13T10:45:21.8683942Z ##[endgroup]
+2026-11-13T10:45:21.8684711Z ##[group]Determining the checkout info
+2026-11-13T10:45:21.8685586Z ##[endgroup]
+2026-11-13T10:45:21.8687054Z [command]/usr/bin/git sparse-checkout disable
+2026-11-13T10:45:21.8748346Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-13T10:45:21.8784956Z ##[group]Checking out the ref
+2026-11-13T10:45:21.8787470Z [command]/usr/bin/git checkout --progress --force 57a8862391bf234f58eb1ccd11d3a540c576d921
+2026-11-13T10:45:22.6049028Z Note: switching to '57a8862391bf234f58eb1ccd11d3a540c576d921'.
+2026-11-13T10:45:22.6049503Z 
+2026-11-13T10:45:22.6049741Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-13T10:45:22.6050203Z changes and commit them, and you can discard any commits you make in this
+2026-11-13T10:45:22.6050659Z state without impacting any branches by switching back to a branch.
+2026-11-13T10:45:22.6050947Z 
+2026-11-13T10:45:22.6051134Z If you want to create a new branch to retain commits you create, you may
+2026-11-13T10:45:22.6051580Z do so (now or later) by using -c with the switch command. Example:
+2026-11-13T10:45:22.6051808Z 
+2026-11-13T10:45:22.6051932Z   git switch -c <new-branch-name>
+2026-11-13T10:45:22.6052188Z 
+2026-11-13T10:45:22.6058143Z Or undo this operation with:
+2026-11-13T10:45:22.6058336Z 
+2026-11-13T10:45:22.6058435Z   git switch -
+2026-11-13T10:45:22.6058563Z 
+2026-11-13T10:45:22.6059039Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-13T10:45:22.6059313Z 
+2026-11-13T10:45:22.6059547Z HEAD is now at 57a8862 Account for retained array buffers in preprocessing cache budgets
+2026-11-13T10:45:22.6079265Z ##[endgroup]
+2026-11-13T10:45:22.6128805Z [command]/usr/bin/git log -1 --format=%H
+2026-11-13T10:45:22.6161497Z 57a8862391bf234f58eb1ccd11d3a540c576d921
+2026-11-13T10:45:22.6168129Z ##[group]Removing auth
+2026-11-13T10:45:22.6168421Z Removing SSH command configuration
+2026-11-13T10:45:22.6170545Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T10:45:22.6208182Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T10:45:22.6404120Z Removing HTTP extra header
+2026-11-13T10:45:22.6406828Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T10:45:22.6444831Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T10:45:22.6639486Z Removing includeIf entries pointing to credentials config files
+2026-11-13T10:45:22.6641878Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T10:45:22.6674843Z includeif.gitdir:/home/runner/work/sglang/sglang/.git.path
+2026-11-13T10:45:22.6675503Z includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path
+2026-11-13T10:45:22.6675895Z includeif.gitdir:/github/workspace/.git.path
+2026-11-13T10:45:22.6677635Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-13T10:45:22.6682675Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sglang/sglang/.git.path
+2026-11-13T10:45:22.6714046Z /home/runner/work/_temp/git-credentials-c3688a32-4c2d-455b-8a8f-191b13fb8d92.config
+2026-11-13T10:45:22.6721887Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sglang/sglang/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-c3688a32\-4c2d\-455b\-8a8f\-191b13fb8d92\.config
+2026-11-13T10:45:22.6762426Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path
+2026-11-13T10:45:22.6791690Z /home/runner/work/_temp/git-credentials-c3688a32-4c2d-455b-8a8f-191b13fb8d92.config
+2026-11-13T10:45:22.6798390Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-c3688a32\-4c2d\-455b\-8a8f\-191b13fb8d92\.config
+2026-11-13T10:45:22.6837260Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-13T10:45:22.6866619Z /github/runner_temp/git-credentials-c3688a32-4c2d-455b-8a8f-191b13fb8d92.config
+2026-11-13T10:45:22.6929911Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-c3688a32\-4c2d\-455b\-8a8f\-191b13fb8d92\.config
+2026-11-13T10:45:22.6931278Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-13T10:45:22.6939354Z /github/runner_temp/git-credentials-c3688a32-4c2d-455b-8a8f-191b13fb8d92.config
+2026-11-13T10:45:22.6946122Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-c3688a32\-4c2d\-455b\-8a8f\-191b13fb8d92\.config
+2026-11-13T10:45:22.6986997Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T10:45:22.7179456Z Removing credentials config '/home/runner/work/_temp/git-credentials-c3688a32-4c2d-455b-8a8f-191b13fb8d92.config'
+2026-11-13T10:45:22.7188342Z ##[endgroup]
+2026-11-13T10:45:22.7369786Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-11-13T10:45:22.7370055Z with:
+2026-11-13T10:45:22.7370202Z   python-version: 3.12
+2026-11-13T10:45:22.7370359Z   check-latest: false
+2026-11-13T10:45:22.7371824Z   token: ***
+2026-11-13T10:45:22.7371971Z   update-environment: true
+2026-11-13T10:45:22.7372136Z   allow-prereleases: false
+2026-11-13T10:45:22.7372295Z   freethreaded: false
+2026-11-13T10:45:22.7372440Z env:
+2026-11-13T10:45:22.7372580Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:45:22.7372794Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:45:22.7373009Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:45:22.7373162Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:45:22.7373312Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:45:22.7373463Z ##[endgroup]
+2026-11-13T10:45:22.8176509Z ##[group]Installed versions
+2026-11-13T10:45:22.8277069Z (node:2231) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T10:45:22.8277823Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T10:45:22.8278223Z Successfully set up CPython (3.12.16)
+2026-11-13T10:45:22.8278697Z ##[endgroup]
+2026-11-13T10:45:22.8409645Z ##[group]Run python -m pip install uv pre-commit
+2026-11-13T10:45:22.8410112Z [36;1mpython -m pip install uv pre-commit[0m
+2026-11-13T10:45:22.8410465Z [36;1mbash scripts/ci/utils/install_rust_protoc.sh[0m
+2026-11-13T10:45:22.8445749Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:45:22.8446200Z env:
+2026-11-13T10:45:22.8446423Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:45:22.8446684Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:45:22.8446996Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:45:22.8447232Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:45:22.8447451Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:45:22.8447742Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:45:22.8448354Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:45:22.8448740Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:45:22.8449090Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:45:22.8449487Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:45:22.8449847Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:45:22.8450157Z ##[endgroup]
+2026-11-13T10:45:25.4429567Z Collecting uv
+2026-11-13T10:45:25.4858252Z   Downloading uv-0.13.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+2026-11-13T10:45:25.5049400Z Collecting pre-commit
+2026-11-13T10:45:25.5080865Z   Downloading pre_commit-4.7.0-py2.py3-none-any.whl.metadata (1.2 kB)
+2026-11-13T10:45:25.5165371Z Collecting cfgv>=2.0.0 (from pre-commit)
+2026-11-13T10:45:25.5194304Z   Downloading cfgv-3.5.0-py2.py3-none-any.whl.metadata (8.9 kB)
+2026-11-13T10:45:25.5376719Z Collecting identify>=1.0.0 (from pre-commit)
+2026-11-13T10:45:25.5408966Z   Downloading identify-2.6.20-py2.py3-none-any.whl.metadata (4.4 kB)
+2026-11-13T10:45:25.5500006Z Collecting nodeenv>=0.11.1 (from pre-commit)
+2026-11-13T10:45:25.5530269Z   Downloading nodeenv-1.12.0-py3-none-any.whl.metadata (49 kB)
+2026-11-13T10:45:25.5783201Z Collecting pyyaml>=5.1 (from pre-commit)
+2026-11-13T10:45:25.5815107Z   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-11-13T10:45:25.6036235Z Collecting virtualenv>=20.10.0 (from pre-commit)
+2026-11-13T10:45:25.6067503Z   Downloading virtualenv-21.15.6-py3-none-any.whl.metadata (4.1 kB)
+2026-11-13T10:45:25.6162565Z Collecting distlib<1,>=0.4.3 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:45:25.6198471Z   Downloading distlib-0.4.4-py2.py3-none-any.whl.metadata (5.3 kB)
+2026-11-13T10:45:25.6337469Z Collecting filelock<5,>=3.24.2 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:45:25.6373033Z   Downloading filelock-4.2.10-py3-none-any.whl.metadata (2.3 kB)
+2026-11-13T10:45:25.6466915Z Collecting packaging>=26.3 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:45:25.6496949Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-11-13T10:45:25.6622402Z Collecting platformdirs<5,>=4.4 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:45:25.6652736Z   Downloading platformdirs-4.14.5-py3-none-any.whl.metadata (5.7 kB)
+2026-11-13T10:45:25.6754618Z Collecting python-discovery>=1.6.1 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:45:25.6784970Z   Downloading python_discovery-1.9.5-py3-none-any.whl.metadata (4.2 kB)
+2026-11-13T10:45:25.6981533Z Downloading uv-0.13.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.4 MB)
+2026-11-13T10:45:25.8294085Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.4/17.4 MB 139.4 MB/s  0:00:00
+2026-11-13T10:45:25.8331006Z Downloading pre_commit-4.7.0-py2.py3-none-any.whl (226 kB)
+2026-11-13T10:45:25.8381027Z Downloading cfgv-3.5.0-py2.py3-none-any.whl (7.4 kB)
+2026-11-13T10:45:25.8428508Z Downloading identify-2.6.20-py2.py3-none-any.whl (99 kB)
+2026-11-13T10:45:25.8481225Z Downloading nodeenv-1.12.0-py3-none-any.whl (39 kB)
+2026-11-13T10:45:25.8525307Z Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-11-13T10:45:25.8564803Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 220.3 MB/s  0:00:00
+2026-11-13T10:45:25.8594635Z Downloading virtualenv-21.15.6-py3-none-any.whl (5.7 MB)
+2026-11-13T10:45:25.8934646Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.7/5.7 MB 166.7 MB/s  0:00:00
+2026-11-13T10:45:25.8967024Z Downloading distlib-0.4.4-py2.py3-none-any.whl (472 kB)
+2026-11-13T10:45:25.9243552Z Downloading filelock-4.2.10-py3-none-any.whl (218 kB)
+2026-11-13T10:45:25.9291339Z Downloading platformdirs-4.14.5-py3-none-any.whl (35 kB)
+2026-11-13T10:45:25.9333482Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-11-13T10:45:25.9380010Z Downloading python_discovery-1.9.5-py3-none-any.whl (44 kB)
+2026-11-13T10:45:26.1751859Z Installing collected packages: distlib, uv, pyyaml, platformdirs, packaging, nodeenv, identify, filelock, cfgv, python-discovery, virtualenv, pre-commit
+2026-11-13T10:45:26.6680140Z 
+2026-11-13T10:45:26.6691288Z Successfully installed cfgv-3.5.0 distlib-0.4.4 filelock-4.2.10 identify-2.6.20 nodeenv-1.12.0 packaging-26.3 platformdirs-4.14.5 pre-commit-4.7.0 python-discovery-1.9.5 pyyaml-6.0.3 uv-0.13.8 virtualenv-21.15.6
+2026-11-13T10:45:26.7262094Z +++ dirname scripts/ci/utils/install_rust_protoc.sh
+2026-11-13T10:45:26.7269545Z ++ cd scripts/ci/utils
+2026-11-13T10:45:26.7269712Z ++ pwd
+2026-11-13T10:45:26.7271522Z + SCRIPT_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T10:45:26.7273946Z ++ id -u
+2026-11-13T10:45:26.7290527Z + '[' 1001 = 0 ']'
+2026-11-13T10:45:26.7291075Z + command -v sudo
+2026-11-13T10:45:26.7291397Z + SUDO=sudo
+2026-11-13T10:45:26.7291760Z + sudo bash /home/runner/work/sglang/sglang/scripts/ci/utils/install_protoc.sh
+2026-11-13T10:45:26.7345044Z + command -v protoc
+2026-11-13T10:45:26.7345330Z + command -v protoc
+2026-11-13T10:45:26.7345598Z + echo 'protoc not found, installing...'
+2026-11-13T10:45:26.7345854Z protoc not found, installing...
+2026-11-13T10:45:26.7348515Z ++ uname -m
+2026-11-13T10:45:26.7355587Z + ARCH=x86_64
+2026-11-13T10:45:26.7356251Z + command -v apt-get
+2026-11-13T10:45:26.7356542Z + apt-get update
+2026-11-13T10:45:26.7813798Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-13T10:45:26.8158562Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-11-13T10:45:26.8357284Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-11-13T10:45:26.8367799Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-11-13T10:45:26.8401444Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-11-13T10:45:26.8415804Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-11-13T10:45:26.8719419Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [697 kB]
+2026-11-13T10:45:26.8862573Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [767 kB]
+2026-11-13T10:45:26.9484970Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1450 kB]
+2026-11-13T10:45:26.9535652Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [315 kB]
+2026-11-13T10:45:26.9557690Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1713 kB]
+2026-11-13T10:45:26.9609742Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [345 kB]
+2026-11-13T10:45:26.9625883Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1883 kB]
+2026-11-13T10:45:26.9702715Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [430 kB]
+2026-11-13T10:45:26.9720193Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.6 kB]
+2026-11-13T10:45:27.0236125Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1195 kB]
+2026-11-13T10:45:27.0272462Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [238 kB]
+2026-11-13T10:45:27.0291150Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1228 kB]
+2026-11-13T10:45:27.0732682Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [248 kB]
+2026-11-13T10:45:27.0753603Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1788 kB]
+2026-11-13T10:45:27.0802099Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [411 kB]
+2026-11-13T10:45:31.7889346Z Fetched 13.1 MB in 1s (13.6 MB/s)
+2026-11-13T10:45:32.5198390Z Reading package lists...
+2026-11-13T10:45:32.5353792Z + PROTOC_APT_PACKAGES=(wget unzip)
+2026-11-13T10:45:32.5354654Z + apt-get install -y --no-install-recommends wget unzip
+2026-11-13T10:45:32.5465620Z Reading package lists...
+2026-11-13T10:45:32.7558290Z Building dependency tree...
+2026-11-13T10:45:32.7564207Z Reading state information...
+2026-11-13T10:45:32.9123046Z wget is already the newest version (1.21.4-1ubuntu4.5).
+2026-11-13T10:45:32.9123454Z unzip is already the newest version (6.0-28ubuntu4.1).
+2026-11-13T10:45:32.9123786Z 0 upgraded, 0 newly installed, 0 to remove and 20 not upgraded.
+2026-11-13T10:45:32.9130829Z + '[' x86_64 = aarch64 ']'
+2026-11-13T10:45:32.9131070Z + '[' x86_64 = arm64 ']'
+2026-11-13T10:45:32.9132699Z + PROTOC_ARCH=x86_64
+2026-11-13T10:45:32.9132873Z + PROTOC_ZIP=protoc-32.0-linux-x86_64.zip
+2026-11-13T10:45:32.9133603Z + cd /tmp
+2026-11-13T10:45:32.9134295Z + wget https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-x86_64.zip
+2026-11-13T10:45:32.9892261Z --2026-11-13 10:45:32--  https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-x86_64.zip
+2026-11-13T10:45:33.0066199Z Resolving github.com (github.com)... 140.82.113.4
+2026-11-13T10:45:33.0565177Z Connecting to github.com (github.com)|140.82.113.4|:443... connected.
+2026-11-13T10:45:33.2095227Z HTTP request sent, awaiting response... 302 Found
+2026-11-13T10:45:33.2099202Z Location: https://release-assets.githubusercontent.com/github-production-release-asset/23357588/b8f467f9-efcf-428e-8da8-d051740d4252?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-13T11%3A40%3A20Z&rscd=attachment%3B+filename%3Dprotoc-32.0-linux-x86_64.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-13T10%3A39%3A25Z&ske=2026-11-13T11%3A40%3A20Z&sks=b&skv=2018-11-09&sig=h%2Bs31R4TO%2BFljO3jwwVLCTCr%2BS%2Foo9GDLx1mbfDXKoc%3D&jwt=*** [following]
+2026-11-13T10:45:33.2102350Z --2026-11-13 10:45:33--  https://release-assets.githubusercontent.com/github-production-release-asset/23357588/b8f467f9-efcf-428e-8da8-d051740d4252?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-13T11%3A40%3A20Z&rscd=attachment%3B+filename%3Dprotoc-32.0-linux-x86_64.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-13T10%3A39%3A25Z&ske=2026-11-13T11%3A40%3A20Z&sks=b&skv=2018-11-09&sig=h%2Bs31R4TO%2BFljO3jwwVLCTCr%2BS%2Foo9GDLx1mbfDXKoc%3D&jwt=***
+2026-11-13T10:45:33.2131161Z Resolving release-assets.githubusercontent.com (release-assets.githubusercontent.com)... 185.199.111.133, 185.199.108.133, 185.199.109.133, ...
+2026-11-13T10:45:33.2212504Z Connecting to release-assets.githubusercontent.com (release-assets.githubusercontent.com)|185.199.111.133|:443... connected.
+2026-11-13T10:45:33.2493488Z HTTP request sent, awaiting response... 200 OK
+2026-11-13T10:45:33.2493946Z Length: 3543178 (3.4M) [application/octet-stream]
+2026-11-13T10:45:33.2495131Z Saving to: ‘protoc-32.0-linux-x86_64.zip’
+2026-11-13T10:45:33.2502941Z 
+2026-11-13T10:45:33.2589437Z      0K .......... .......... .......... .......... ..........  1% 5.17M 1s
+2026-11-13T10:45:33.2608665Z     50K .......... .......... .......... .......... ..........  2% 25.3M 0s
+2026-11-13T10:45:33.2680580Z    100K .......... .......... .......... .......... ..........  4% 6.80M 0s
+2026-11-13T10:45:33.2698507Z    150K .......... .......... .......... .......... ..........  5% 27.9M 0s
+2026-11-13T10:45:33.2707783Z    200K .......... .......... .......... .......... ..........  7% 49.9M 0s
+2026-11-13T10:45:33.2768193Z    250K .......... .......... .......... .......... ..........  8% 8.08M 0s
+2026-11-13T10:45:33.2769671Z    300K .......... .......... .......... .......... .......... 10%  315M 0s
+2026-11-13T10:45:33.2777325Z    350K .......... .......... .......... .......... .......... 11% 70.8M 0s
+2026-11-13T10:45:33.2785529Z    400K .......... .......... .......... .......... .......... 13% 54.4M 0s
+2026-11-13T10:45:33.2787024Z    450K .......... .......... .......... .......... .......... 14%  305M 0s
+2026-11-13T10:45:33.2793903Z    500K .......... .......... .......... .......... .......... 15% 71.9M 0s
+2026-11-13T10:45:33.2830258Z    550K .......... .......... .......... .......... .......... 17% 13.5M 0s
+2026-11-13T10:45:33.2848547Z    600K .......... .......... .......... .......... .......... 18% 27.5M 0s
+2026-11-13T10:45:33.2849292Z    650K .......... .......... .......... .......... .......... 20%  342M 0s
+2026-11-13T10:45:33.2856075Z    700K .......... .......... .......... .......... .......... 21% 74.8M 0s
+2026-11-13T10:45:33.2862244Z    750K .......... .......... .......... .......... .......... 23% 82.1M 0s
+2026-11-13T10:45:33.2867945Z    800K .......... .......... .......... .......... .......... 24% 80.2M 0s
+2026-11-13T10:45:33.2873249Z    850K .......... .......... .......... .......... .......... 26% 91.3M 0s
+2026-11-13T10:45:33.2877466Z    900K .......... .......... .......... .......... .......... 27%  128M 0s
+2026-11-13T10:45:33.2878074Z    950K .......... .......... .......... .......... .......... 28%  469M 0s
+2026-11-13T10:45:33.2882742Z   1000K .......... .......... .......... .......... .......... 30%  107M 0s
+2026-11-13T10:45:33.2887307Z   1050K .......... .......... .......... .......... .......... 31%  108M 0s
+2026-11-13T10:45:33.2890507Z   1100K .......... .......... .......... .......... .......... 33%  151M 0s
+2026-11-13T10:45:33.2909874Z   1150K .......... .......... .......... .......... .......... 34% 26.1M 0s
+2026-11-13T10:45:33.2911645Z   1200K .......... .......... .......... .......... .......... 36%  190M 0s
+2026-11-13T10:45:33.2913284Z   1250K .......... .......... .......... .......... .......... 37%  302M 0s
+2026-11-13T10:45:33.2928706Z   1300K .......... .......... .......... .......... .......... 39% 32.5M 0s
+2026-11-13T10:45:33.2930177Z   1350K .......... .......... .......... .......... .......... 40%  265M 0s
+2026-11-13T10:45:33.2934100Z   1400K .......... .......... .......... .......... .......... 41%  132M 0s
+2026-11-13T10:45:33.2935530Z   1450K .......... .......... .......... .......... .......... 43%  312M 0s
+2026-11-13T10:45:33.2936917Z   1500K .......... .......... .......... .......... .......... 44%  334M 0s
+2026-11-13T10:45:33.2942175Z   1550K .......... .......... .......... .......... .......... 46%  115M 0s
+2026-11-13T10:45:33.2943406Z   1600K .......... .......... .......... .......... .......... 47%  245M 0s
+2026-11-13T10:45:33.2947600Z   1650K .......... .......... .......... .......... .......... 49%  132M 0s
+2026-11-13T10:45:33.2948107Z   1700K .......... .......... .......... .......... .......... 50%  394M 0s
+2026-11-13T10:45:33.2949356Z   1750K .......... .......... .......... .......... .......... 52%  379M 0s
+2026-11-13T10:45:33.2953502Z   1800K .......... .......... .......... .......... .......... 53%  123M 0s
+2026-11-13T10:45:33.2956270Z   1850K .......... .......... .......... .......... .......... 54%  234M 0s
+2026-11-13T10:45:33.2957469Z   1900K .......... .......... .......... .......... .......... 56%  320M 0s
+2026-11-13T10:45:33.2960017Z   1950K .......... .......... .......... .......... .......... 57%  480M 0s
+2026-11-13T10:45:33.2961430Z   2000K .......... .......... .......... .......... .......... 59%  141M 0s
+2026-11-13T10:45:33.2962504Z   2050K .......... .......... .......... .......... .......... 60%  435M 0s
+2026-11-13T10:45:33.2966173Z   2100K .......... .......... .......... .......... .......... 62%  197M 0s
+2026-11-13T10:45:33.2966911Z   2150K .......... .......... .......... .......... .......... 63%  456M 0s
+2026-11-13T10:45:33.2967334Z   2200K .......... .......... .......... .......... .......... 65%  403M 0s
+2026-11-13T10:45:33.2970368Z   2250K .......... .......... .......... .......... .......... 66%  199M 0s
+2026-11-13T10:45:33.2971028Z   2300K .......... .......... .......... .......... .......... 67%  411M 0s
+2026-11-13T10:45:33.2989156Z   2350K .......... .......... .......... .......... .......... 69% 28.7M 0s
+2026-11-13T10:45:33.2990067Z   2400K .......... .......... .......... .......... .......... 70%  246M 0s
+2026-11-13T10:45:33.2991032Z   2450K .......... .......... .......... .......... .......... 72%  424M 0s
+2026-11-13T10:45:33.2992603Z   2500K .......... .......... .......... .......... .......... 73%  352M 0s
+2026-11-13T10:45:33.2994143Z   2550K .......... .......... .......... .......... .......... 75%  305M 0s
+2026-11-13T10:45:33.2995407Z   2600K .......... .......... .......... .......... .......... 76%  449M 0s
+2026-11-13T10:45:33.3006804Z   2650K .......... .......... .......... .......... .......... 78% 44.6M 0s
+2026-11-13T10:45:33.3009608Z   2700K .......... .......... .......... .......... .......... 79%  180M 0s
+2026-11-13T10:45:33.3010993Z   2750K .......... .......... .......... .......... .......... 80%  401M 0s
+2026-11-13T10:45:33.3011316Z   2800K .......... .......... .......... .......... .......... 82%  370M 0s
+2026-11-13T10:45:33.3013814Z   2850K .......... .......... .......... .......... .......... 83%  331M 0s
+2026-11-13T10:45:33.3015033Z   2900K .......... .......... .......... .......... .......... 85%  351M 0s
+2026-11-13T10:45:33.3016756Z   2950K .......... .......... .......... .......... .......... 86%  396M 0s
+2026-11-13T10:45:33.3017608Z   3000K .......... .......... .......... .......... .......... 88%  257M 0s
+2026-11-13T10:45:33.3019355Z   3050K .......... .......... .......... .......... .......... 89%  421M 0s
+2026-11-13T10:45:33.3020445Z   3100K .......... .......... .......... .......... .......... 91%  465M 0s
+2026-11-13T10:45:33.3021391Z   3150K .......... .......... .......... .......... .......... 92%  410M 0s
+2026-11-13T10:45:33.3022620Z   3200K .......... .......... .......... .......... .......... 93%  358M 0s
+2026-11-13T10:45:33.3023926Z   3250K .......... .......... .......... .......... .......... 95%  371M 0s
+2026-11-13T10:45:33.3024664Z   3300K .......... .......... .......... .......... .......... 96%  452M 0s
+2026-11-13T10:45:33.3025881Z   3350K .......... .......... .......... .......... .......... 98%  461M 0s
+2026-11-13T10:45:33.3026912Z   3400K .......... .......... .......... .......... .......... 99%  399M 0s
+2026-11-13T10:45:33.3027378Z   3450K ..........                                            100%  252M=0.05s
+2026-11-13T10:45:33.3027585Z 
+2026-11-13T10:45:33.3028759Z 2026-11-13 10:45:33 (63.5 MB/s) - ‘protoc-32.0-linux-x86_64.zip’ saved [3543178/3543178]
+2026-11-13T10:45:33.3029028Z 
+2026-11-13T10:45:33.3050152Z + unzip -o protoc-32.0-linux-x86_64.zip -d /usr/local
+2026-11-13T10:45:33.3189301Z Archive:  protoc-32.0-linux-x86_64.zip
+2026-11-13T10:45:33.3748420Z   inflating: /usr/local/bin/protoc   
+2026-11-13T10:45:33.3751279Z    creating: /usr/local/include/google/
+2026-11-13T10:45:33.3751537Z    creating: /usr/local/include/google/protobuf/
+2026-11-13T10:45:33.3752837Z   inflating: /usr/local/include/google/protobuf/any.proto  
+2026-11-13T10:45:33.3753893Z   inflating: /usr/local/include/google/protobuf/api.proto  
+2026-11-13T10:45:33.3754222Z    creating: /usr/local/include/google/protobuf/compiler/
+2026-11-13T10:45:33.3755451Z   inflating: /usr/local/include/google/protobuf/compiler/plugin.proto  
+2026-11-13T10:45:33.3756187Z   inflating: /usr/local/include/google/protobuf/cpp_features.proto  
+2026-11-13T10:45:33.3759843Z   inflating: /usr/local/include/google/protobuf/descriptor.proto  
+2026-11-13T10:45:33.3760487Z   inflating: /usr/local/include/google/protobuf/duration.proto  
+2026-11-13T10:45:33.3761347Z   inflating: /usr/local/include/google/protobuf/empty.proto  
+2026-11-13T10:45:33.3762193Z   inflating: /usr/local/include/google/protobuf/field_mask.proto  
+2026-11-13T10:45:33.3762778Z   inflating: /usr/local/include/google/protobuf/go_features.proto  
+2026-11-13T10:45:33.3763523Z   inflating: /usr/local/include/google/protobuf/java_features.proto  
+2026-11-13T10:45:33.3764170Z   inflating: /usr/local/include/google/protobuf/source_context.proto  
+2026-11-13T10:45:33.3764887Z   inflating: /usr/local/include/google/protobuf/struct.proto  
+2026-11-13T10:45:33.3765806Z   inflating: /usr/local/include/google/protobuf/timestamp.proto  
+2026-11-13T10:45:33.3766865Z   inflating: /usr/local/include/google/protobuf/type.proto  
+2026-11-13T10:45:33.3767655Z   inflating: /usr/local/include/google/protobuf/wrappers.proto  
+2026-11-13T10:45:33.3768073Z   inflating: /usr/local/readme.txt   
+2026-11-13T10:45:33.3772287Z + rm -f protoc-32.0-linux-x86_64.zip
+2026-11-13T10:45:33.3789275Z + protoc --version
+2026-11-13T10:45:33.3797436Z libprotoc 32.0
+2026-11-13T10:45:33.3809900Z + bash /home/runner/work/sglang/sglang/scripts/ci/utils/install_rustup.sh
+2026-11-13T10:45:33.3826496Z +++ dirname /home/runner/work/sglang/sglang/scripts/ci/utils/install_rustup.sh
+2026-11-13T10:45:33.3834486Z ++ cd /home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T10:45:33.3834752Z ++ pwd
+2026-11-13T10:45:33.3836993Z + SCRIPT_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T10:45:33.3837391Z + RUST_WORKSPACE_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust
+2026-11-13T10:45:33.3840258Z ++ sed -n 's/^channel *= *"\([^"]*\)".*/\1/p' /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml
+2026-11-13T10:45:33.3855024Z + PINNED_CHANNEL=1.92
+2026-11-13T10:45:33.3855237Z + DEFAULT_CHANNEL=1.92
+2026-11-13T10:45:33.3856518Z + export PATH=/home/runner/.cargo/bin:/opt/hostedtoolcache/Python/3.12.16/x64/bin:/opt/hostedtoolcache/Python/3.12.16/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-11-13T10:45:33.3858337Z + PATH=/home/runner/.cargo/bin:/opt/hostedtoolcache/Python/3.12.16/x64/bin:/opt/hostedtoolcache/Python/3.12.16/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-11-13T10:45:33.3859321Z + '[' -n /home/runner/work/_temp/_runner_file_commands/add_path_bb3a8a16-f05b-48f5-993f-3584b8aa3fd3 ']'
+2026-11-13T10:45:33.3859686Z ++ dirname /home/runner/work/_temp/_runner_file_commands/add_path_bb3a8a16-f05b-48f5-993f-3584b8aa3fd3
+2026-11-13T10:45:33.3867341Z + mkdir -p /home/runner/work/_temp/_runner_file_commands
+2026-11-13T10:45:33.3878530Z + echo /home/runner/.cargo/bin
+2026-11-13T10:45:33.3879088Z + '[' -n '' ']'
+2026-11-13T10:45:33.3880462Z + command -v cargo
+2026-11-13T10:45:33.3880728Z + command -v rustc
+2026-11-13T10:45:33.3880970Z + rustc --version
+2026-11-13T10:45:33.3992413Z ++ rustc --version
+2026-11-13T10:45:33.4097966Z ++ cargo --version
+2026-11-13T10:45:34.1568482Z + echo 'rust already installed: rustc 1.99.1 (58cf8f9c3 2026-10-13), cargo 1.99.1 (5f94df478 2026-08-27)'
+2026-11-13T10:45:34.1568908Z + install_workspace_pinned_toolchain
+2026-11-13T10:45:34.1569065Z + command -v rustup
+2026-11-13T10:45:34.1569296Z rust already installed: rustc 1.99.1 (58cf8f9c3 2026-10-13), cargo 1.99.1 (5f94df478 2026-08-27)
+2026-11-13T10:45:34.1569673Z + local toolchain_file=/home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml
+2026-11-13T10:45:34.1570043Z + '[' '!' -f /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml ']'
+2026-11-13T10:45:34.1572618Z + cd /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust
+2026-11-13T10:45:34.1573271Z + rustup toolchain install
+2026-11-13T10:45:34.2180205Z info: syncing channel updates for 1.92-x86_64-unknown-linux-gnu
+2026-11-13T10:45:34.4316592Z info: latest update on 2025-12-11 for version 1.92.0 (ded5c06cf 2025-12-08)
+2026-11-13T10:45:34.4318264Z info: downloading 5 components
+2026-11-13T10:45:41.2736411Z info: the active toolchain `1.92-x86_64-unknown-linux-gnu` has been installed
+2026-11-13T10:45:41.2736999Z info: it's active because: overridden by '/home/runner/work/sglang/sglang/rust/rust-toolchain.toml'
+2026-11-13T10:45:41.2881843Z + return 0
+2026-11-13T10:45:41.2882101Z + export RUSTUP_TOOLCHAIN=1.92
+2026-11-13T10:45:41.2882593Z + RUSTUP_TOOLCHAIN=1.92
+2026-11-13T10:45:41.2882976Z + '[' -n /home/runner/work/_temp/_runner_file_commands/set_env_bb3a8a16-f05b-48f5-993f-3584b8aa3fd3 ']'
+2026-11-13T10:45:41.2886538Z ++ dirname /home/runner/work/_temp/_runner_file_commands/set_env_bb3a8a16-f05b-48f5-993f-3584b8aa3fd3
+2026-11-13T10:45:41.2897299Z + mkdir -p /home/runner/work/_temp/_runner_file_commands
+2026-11-13T10:45:41.2909096Z + echo RUSTUP_TOOLCHAIN=1.92
+2026-11-13T10:45:41.2909386Z + rustc --version
+2026-11-13T10:45:41.3004469Z rustc 1.92.0 (ded5c06cf 2025-12-08)
+2026-11-13T10:45:41.3011656Z + cargo --version
+2026-11-13T10:45:41.3080759Z cargo 1.92.0 (344c4567c 2025-10-21)
+2026-11-13T10:45:41.3129206Z ##[group]Run set -o pipefail
+2026-11-13T10:45:41.3129387Z [36;1mset -o pipefail[0m
+2026-11-13T10:45:41.3129696Z [36;1muv pip install -e "python[dev]" --index-strategy unsafe-best-match --prerelease allow 2>&1 | tee sglang-install.log[0m
+2026-11-13T10:45:41.3130034Z [36;1mpython -m pip freeze > sglang-environment.txt[0m
+2026-11-13T10:45:41.3148822Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:45:41.3148963Z env:
+2026-11-13T10:45:41.3149084Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:45:41.3149230Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:45:41.3149383Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:45:41.3149515Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:45:41.3149637Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:45:41.3149808Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:45:41.3150050Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:45:41.3150292Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:45:41.3150544Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:45:41.3150765Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:45:41.3150988Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:45:41.3151195Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:45:41.3151325Z   UV_SYSTEM_PYTHON: 1
+2026-11-13T10:45:41.3151456Z ##[endgroup]
+2026-11-13T10:45:41.3557202Z Using Python 3.12.16 environment at: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:46:12.3307989Z Resolved 270 packages in 30.97s
+2026-11-13T10:46:12.3518177Z    Building sglang @ file:///home/runner/work/sglang/sglang/python
+2026-11-13T10:46:12.3609176Z Downloading scipy (33.7MiB)
+2026-11-13T10:46:12.3609808Z Downloading onnxruntime (22.7MiB)
+2026-11-13T10:46:12.3617686Z Downloading numpy (15.8MiB)
+2026-11-13T10:46:12.3618275Z Downloading pandas (11.8MiB)
+2026-11-13T10:46:12.3620696Z Downloading matplotlib (9.4MiB)
+2026-11-13T10:46:12.3621032Z Downloading scikit-learn (8.7MiB)
+2026-11-13T10:46:12.3626648Z Downloading pycountry (7.7MiB)
+2026-11-13T10:46:12.3633778Z Downloading pillow (6.3MiB)
+2026-11-13T10:46:12.3634473Z Downloading grpcio (7.0MiB)
+2026-11-13T10:46:12.3649287Z Downloading zstandard (5.3MiB)
+2026-11-13T10:46:12.3649517Z Downloading fonttools (5.2MiB)
+2026-11-13T10:46:12.3649740Z Downloading granian (5.1MiB)
+2026-11-13T10:46:12.3649994Z Downloading nvshmem4py-cu13 (4.8MiB)
+2026-11-13T10:46:12.3650246Z Downloading jedi (4.7MiB)
+2026-11-13T10:46:12.3650454Z Downloading cryptography (4.5MiB)
+2026-11-13T10:46:12.3652269Z Downloading uvloop (4.3MiB)
+2026-11-13T10:46:12.3666807Z Downloading hf-xet (4.1MiB)
+2026-11-13T10:46:12.3698208Z Downloading torchvision (7.2MiB)
+2026-11-13T10:46:12.3698610Z Downloading nvidia-cuda-cccl (3.9MiB)
+2026-11-13T10:46:12.3703718Z Downloading cuda-core (6.3MiB)
+2026-11-13T10:46:12.3718489Z Downloading modelscope (5.8MiB)
+2026-11-13T10:46:12.3719009Z Downloading nvidia-cutlass-dsl-libs-cu12 (87.5MiB)
+2026-11-13T10:46:12.3719451Z Downloading bitsandbytes (41.1MiB)
+2026-11-13T10:46:12.3739814Z Downloading nvidia-nvvm (71.7MiB)
+2026-11-13T10:46:12.3740202Z Downloading lm-eval (8.4MiB)
+2026-11-13T10:46:12.3740544Z Downloading nvidia-mathdx (21.9MiB)
+2026-11-13T10:46:12.3740964Z Downloading tilelang (48.2MiB)
+2026-11-13T10:46:12.3758363Z Downloading nvidia-cudnn-frontend (11.1MiB)
+2026-11-13T10:46:12.3765723Z Downloading nvidia-cuda-nvcc (44.8MiB)
+2026-11-13T10:46:12.3766291Z Downloading nccl-extensions (24.0MiB)
+2026-11-13T10:46:12.3766562Z Downloading lxml (5.1MiB)
+2026-11-13T10:46:12.3766780Z Downloading torchcodec (9.5MiB)
+2026-11-13T10:46:12.3767014Z Downloading sgl-deep-ep (14.7MiB)
+2026-11-13T10:46:12.3767256Z Downloading deepseek-recipe (12.3MiB)
+2026-11-13T10:46:12.3768168Z Downloading tml-renderers (4.5MiB)
+2026-11-13T10:46:12.3770102Z Downloading pymupdf (65.8MiB)
+2026-11-13T10:46:12.3773259Z Downloading pyarrow (52.5MiB)
+2026-11-13T10:46:12.3792174Z Downloading instanttensor (7.0MiB)
+2026-11-13T10:46:12.3792671Z Downloading polars-runtime-32 (51.4MiB)
+2026-11-13T10:46:12.3792921Z Downloading transformers (12.0MiB)
+2026-11-13T10:46:12.3793175Z Downloading nvidia-cutlass-dsl-libs-cu13 (87.7MiB)
+2026-11-13T10:46:12.3793442Z Downloading llvmlite (53.7MiB)
+2026-11-13T10:46:12.3793664Z Downloading sgl-flash-mla (9.7MiB)
+2026-11-13T10:46:12.3793908Z Downloading flashinfer-python (96.6MiB)
+2026-11-13T10:46:12.3794162Z Downloading sglang-kernel (355.7MiB)
+2026-11-13T10:46:12.3794417Z Downloading z3-solver (27.9MiB)
+2026-11-13T10:46:12.3794692Z Downloading sgl-deep-gemm (4.9MiB)
+2026-11-13T10:46:12.3826587Z Downloading fastokens (3.6MiB)
+2026-11-13T10:46:12.3826994Z Downloading av (39.3MiB)
+2026-11-13T10:46:12.3827458Z Downloading mistral-common (6.3MiB)
+2026-11-13T10:46:13.8690283Z  Downloaded fastokens
+2026-11-13T10:46:13.8829399Z Downloading numba (3.6MiB)
+2026-11-13T10:46:14.0182763Z  Downloaded hf-xet
+2026-11-13T10:46:14.0214682Z Downloading nccl4py (3.5MiB)
+2026-11-13T10:46:14.3165352Z  Downloaded uvloop
+2026-11-13T10:46:14.3230261Z Downloading cython (3.3MiB)
+2026-11-13T10:46:14.4773903Z  Downloaded cryptography
+2026-11-13T10:46:14.4868828Z  Downloaded nvidia-cuda-cccl
+2026-11-13T10:46:14.5179975Z  Downloaded tml-renderers
+2026-11-13T10:46:14.5370769Z Downloading tokenizers (3.2MiB)
+2026-11-13T10:46:14.5487126Z Downloading llguidance (2.9MiB)
+2026-11-13T10:46:14.5617751Z Downloading nvidia-cutlass-dsl-libs-base (2.9MiB)
+2026-11-13T10:46:14.7064357Z  Downloaded nvshmem4py-cu13
+2026-11-13T10:46:14.7229832Z Downloading openai-harmony (2.9MiB)
+2026-11-13T10:46:14.7373421Z  Downloaded lxml
+2026-11-13T10:46:14.7508136Z  Downloaded sgl-deep-gemm
+2026-11-13T10:46:14.7512628Z Downloading py-spy (2.8MiB)
+2026-11-13T10:46:14.8048783Z  Downloaded zstandard
+2026-11-13T10:46:14.8283365Z  Downloaded fonttools
+2026-11-13T10:46:14.8294269Z  Downloaded granian
+2026-11-13T10:46:14.8502271Z Downloading apache-tvm-ffi (2.6MiB)
+2026-11-13T10:46:14.8571942Z Downloading torch-memory-saver (2.5MiB)
+2026-11-13T10:46:14.8733785Z Downloading anthropic (2.3MiB)
+2026-11-13T10:46:14.8980697Z Downloading timm (2.4MiB)
+2026-11-13T10:46:15.2976449Z  Downloaded mistral-common
+2026-11-13T10:46:15.3113516Z Downloading pycryptodomex (2.2MiB)
+2026-11-13T10:46:15.3182079Z  Downloaded cuda-core
+2026-11-13T10:46:15.3438442Z  Downloaded pillow
+2026-11-13T10:46:15.3714251Z Downloading aiohttp (1.8MiB)
+2026-11-13T10:46:15.3715038Z Downloading pydantic-core (2.2MiB)
+2026-11-13T10:46:15.4359134Z  Downloaded modelscope
+2026-11-13T10:46:15.4524556Z Downloading torchaudio (1.7MiB)
+2026-11-13T10:46:15.5972526Z  Downloaded instanttensor
+2026-11-13T10:46:15.6095567Z Downloading nltk (1.6MiB)
+2026-11-13T10:46:15.6467756Z  Downloaded grpcio
+2026-11-13T10:46:15.6596351Z Downloading chardet (1.6MiB)
+2026-11-13T10:46:15.7181681Z  Downloaded torchvision
+2026-11-13T10:46:15.7601085Z Downloading nvidia-cutlass-dsl-libs-core (1.6MiB)
+2026-11-13T10:46:15.7900014Z  Downloaded jedi
+2026-11-13T10:46:15.8336690Z  Downloaded llguidance
+2026-11-13T10:46:15.8386654Z  Downloaded numba
+2026-11-13T10:46:15.8513895Z Downloading auto-round (1.4MiB)
+2026-11-13T10:46:15.8886940Z  Downloaded nccl4py
+2026-11-13T10:46:15.8903557Z Downloading sentencepiece (1.3MiB)
+2026-11-13T10:46:15.8997094Z  Downloaded pycountry
+2026-11-13T10:46:15.9014548Z  Downloaded nvidia-cutlass-dsl-libs-base
+2026-11-13T10:46:15.9044049Z  Downloaded cython
+2026-11-13T10:46:15.9056661Z Downloading kiwisolver (1.4MiB)
+2026-11-13T10:46:15.9208591Z Downloading tiktoken (1.1MiB)
+2026-11-13T10:46:15.9209081Z Downloading pygments (1.2MiB)
+2026-11-13T10:46:15.9218140Z Downloading soundfile (1.3MiB)
+2026-11-13T10:46:15.9222699Z Downloading xgrammar (1.2MiB)
+2026-11-13T10:46:15.9481492Z  Downloaded tokenizers
+2026-11-13T10:46:15.9511958Z  Downloaded py-spy
+2026-11-13T10:46:15.9752837Z  Downloaded openai-harmony
+2026-11-13T10:46:15.9825456Z  Downloaded torch-memory-saver
+2026-11-13T10:46:16.0034711Z  Downloaded apache-tvm-ffi
+2026-11-13T10:46:16.0280502Z  Downloaded timm
+2026-11-13T10:46:16.1174873Z    Building word2number==1.1
+2026-11-13T10:46:16.2831429Z  Downloaded aiohttp
+2026-11-13T10:46:16.3196265Z  Downloaded torchaudio
+2026-11-13T10:46:16.3380856Z  Downloaded scikit-learn
+2026-11-13T10:46:16.3397453Z    Building rouge-score==0.1.2
+2026-11-13T10:46:16.3546840Z  Downloaded pydantic-core
+2026-11-13T10:46:16.3639556Z  Downloaded nltk
+2026-11-13T10:46:16.3729011Z  Downloaded chardet
+2026-11-13T10:46:16.3764151Z  Downloaded pycryptodomex
+2026-11-13T10:46:16.3779853Z    Building sqlitedict==2.1.0
+2026-11-13T10:46:16.3781947Z  Downloaded nvidia-cutlass-dsl-libs-core
+2026-11-13T10:46:16.3782244Z  Downloaded xgrammar
+2026-11-13T10:46:16.4020786Z  Downloaded tiktoken
+2026-11-13T10:46:16.4036662Z  Downloaded pygments
+2026-11-13T10:46:16.4370346Z  Downloaded sentencepiece
+2026-11-13T10:46:16.5780249Z       Built word2number==1.1
+2026-11-13T10:46:16.5812299Z  Downloaded soundfile
+2026-11-13T10:46:16.5856572Z  Downloaded auto-round
+2026-11-13T10:46:16.6219702Z  Downloaded kiwisolver
+2026-11-13T10:46:16.7101162Z  Downloaded sgl-flash-mla
+2026-11-13T10:46:16.7179161Z  Downloaded torchcodec
+2026-11-13T10:46:16.7179496Z  Downloaded matplotlib
+2026-11-13T10:46:16.8107645Z       Built sqlitedict==2.1.0
+2026-11-13T10:46:16.8529281Z       Built rouge-score==0.1.2
+2026-11-13T10:46:17.1780186Z  Downloaded anthropic
+2026-11-13T10:46:17.2877612Z    Building antlr4-python3-runtime==4.9.3
+2026-11-13T10:46:17.4698322Z  Downloaded nvidia-cudnn-frontend
+2026-11-13T10:46:17.5555155Z  Downloaded deepseek-recipe
+2026-11-13T10:46:17.5575737Z  Downloaded transformers
+2026-11-13T10:46:17.8299513Z  Downloaded pandas
+2026-11-13T10:46:17.8868603Z       Built antlr4-python3-runtime==4.9.3
+2026-11-13T10:46:18.0256822Z  Downloaded sgl-deep-ep
+2026-11-13T10:46:18.0811205Z  Downloaded numpy
+2026-11-13T10:46:18.2916161Z  Downloaded lm-eval
+2026-11-13T10:46:18.5821961Z  Downloaded onnxruntime
+2026-11-13T10:46:20.1216066Z  Downloaded nccl-extensions
+2026-11-13T10:46:20.1397608Z  Downloaded nvidia-mathdx
+2026-11-13T10:46:20.7369365Z  Downloaded z3-solver
+2026-11-13T10:46:22.3011680Z  Downloaded scipy
+2026-11-13T10:46:23.4984951Z  Downloaded bitsandbytes
+2026-11-13T10:46:24.0030944Z  Downloaded av
+2026-11-13T10:46:25.9562863Z  Downloaded tilelang
+2026-11-13T10:46:26.0255061Z  Downloaded nvidia-cuda-nvcc
+2026-11-13T10:46:26.6783378Z  Downloaded pyarrow
+2026-11-13T10:46:27.1269482Z  Downloaded polars-runtime-32
+2026-11-13T10:46:27.4598566Z  Downloaded llvmlite
+2026-11-13T10:46:27.7789327Z  Downloaded pymupdf
+2026-11-13T10:46:28.4340496Z  Downloaded nvidia-nvvm
+2026-11-13T10:46:30.7297421Z  Downloaded nvidia-cutlass-dsl-libs-cu13
+2026-11-13T10:46:30.9866265Z  Downloaded nvidia-cutlass-dsl-libs-cu12
+2026-11-13T10:46:39.4300452Z  Downloaded flashinfer-python
+2026-11-13T10:46:44.0547301Z  Downloaded sglang-kernel
+2026-11-13T10:57:33.4106218Z       Built sglang @ file:///home/runner/work/sglang/sglang/python
+2026-11-13T10:57:33.4117408Z Prepared 240 packages in 11m 21s
+2026-11-13T10:57:34.7876082Z Installed 267 packages in 1.37s
+2026-11-13T10:57:34.7879320Z  + absl-py==2.5.1
+2026-11-13T10:57:34.7879623Z  + accelerate==1.15.0
+2026-11-13T10:57:34.7879867Z  + addict==2.4.0
+2026-11-13T10:57:34.7880105Z  + aiohappyeyeballs==2.7.1
+2026-11-13T10:57:34.7880356Z  + aiohttp==3.14.5
+2026-11-13T10:57:34.7880583Z  + aiosignal==1.4.0
+2026-11-13T10:57:34.7880821Z  + airportsdata==20261103
+2026-11-13T10:57:34.7881062Z  + annotated-doc==0.0.6
+2026-11-13T10:57:34.7881299Z  + annotated-types==0.8.0
+2026-11-13T10:57:34.7881787Z  + anthropic==2.8.0
+2026-11-13T10:57:34.7881997Z  + antlr4-python3-runtime==4.9.3
+2026-11-13T10:57:34.7882255Z  + anyio==4.16.0
+2026-11-13T10:57:34.7882458Z  + apache-tvm-ffi==0.1.11
+2026-11-13T10:57:34.7882661Z  + asttokens==3.0.2
+2026-11-13T10:57:34.7884884Z  + attrs==26.1.0
+2026-11-13T10:57:34.7886621Z  + auto-round==0.16.1
+2026-11-13T10:57:34.7887186Z  + av==16.1.0
+2026-11-13T10:57:34.7887478Z  + bitsandbytes==0.50.2
+2026-11-13T10:57:34.7887777Z  + blake3==1.0.11
+2026-11-13T10:57:34.7888063Z  + blobfile==3.0.0
+2026-11-13T10:57:34.7888349Z  + build==1.6.1
+2026-11-13T10:57:34.7888641Z  + certifi==2026.10.23
+2026-11-13T10:57:34.7889125Z  + cffi==2.1.1
+2026-11-13T10:57:34.7889410Z  + chardet==7.7.0
+2026-11-13T10:57:34.7889710Z  + charset-normalizer==3.5.2
+2026-11-13T10:57:34.7890025Z  + click==8.5.1
+2026-11-13T10:57:34.7890316Z  + cloudpickle==3.1.2
+2026-11-13T10:57:34.7890612Z  + colorama==0.4.6
+2026-11-13T10:57:34.7890913Z  + compressed-tensors==0.18.0
+2026-11-13T10:57:34.7891241Z  + contourpy==1.4.0
+2026-11-13T10:57:34.7891536Z  + coverage==7.17.3
+2026-11-13T10:57:34.7891831Z  + cryptography==50.0.2
+2026-11-13T10:57:34.7892147Z  + cuda-bindings==13.5.0
+2026-11-13T10:57:34.7892456Z  + cuda-core==1.2.2
+2026-11-13T10:57:34.7892753Z  + cuda-pathfinder==1.8.6
+2026-11-13T10:57:34.7893069Z  + cuda-python==13.5.0
+2026-11-13T10:57:34.7893371Z  + cuda-tile==1.8.1
+2026-11-13T10:57:34.7893666Z  + cuda-toolkit==13.0.3.0
+2026-11-13T10:57:34.7893969Z  + cycler==0.12.1
+2026-11-13T10:57:34.7894254Z  + cython==3.3.1
+2026-11-13T10:57:34.7894548Z  + dataproperty==0.37.0
+2026-11-13T10:57:34.7894855Z  + datasets==4.8.5
+2026-11-13T10:57:34.7895157Z  + deepseek-recipe==0.2.0
+2026-11-13T10:57:34.7895469Z  + defusedxml==0.8.0rc2
+2026-11-13T10:57:34.7895778Z  + diff-cover==11.0.1
+2026-11-13T10:57:34.7896170Z  + dill==0.4.1
+2026-11-13T10:57:34.7896453Z  + diskcache==5.6.3
+2026-11-13T10:57:34.7896743Z  + distro==1.9.0
+2026-11-13T10:57:34.7897053Z  + docstring-parser==0.18.0
+2026-11-13T10:57:34.7897370Z  + dominate==3.1.0
+2026-11-13T10:57:34.7897661Z  + easydict==1.14
+2026-11-13T10:57:34.7897951Z  + editdistance==0.8.1
+2026-11-13T10:57:34.7898257Z  + einops==0.9.0.dev0
+2026-11-13T10:57:34.7898554Z  + executing==2.3.0
+2026-11-13T10:57:34.7898846Z  + expecttest==0.3.0
+2026-11-13T10:57:34.7899143Z  + fastapi==0.162.5
+2026-11-13T10:57:34.7899434Z  + fastokens==0.3.6
+2026-11-13T10:57:34.7899742Z  + flashinfer-python==0.7.4
+2026-11-13T10:57:34.7900063Z  + flatbuffers==25.12.19
+2026-11-13T10:57:34.7900371Z  + fonttools==4.68.0
+2026-11-13T10:57:34.7900668Z  + frozenlist==1.8.0
+2026-11-13T10:57:34.7900959Z  + fsspec==2026.2.0
+2026-11-13T10:57:34.7901243Z  + gguf==0.19.0
+2026-11-13T10:57:34.7901530Z  + granian==2.8.8
+2026-11-13T10:57:34.7901815Z  + grpcio==1.85.1
+2026-11-13T10:57:34.7902122Z  + grpcio-health-checking==1.85.1
+2026-11-13T10:57:34.7902470Z  + grpcio-reflection==1.85.1
+2026-11-13T10:57:34.7902785Z  + h11==0.16.0
+2026-11-13T10:57:34.7903071Z  + hf-xet==1.8.0
+2026-11-13T10:57:34.7903357Z  + httpcore==1.0.9
+2026-11-13T10:57:34.7903650Z  + httpcore2==2.16.0
+2026-11-13T10:57:34.7903942Z  + httpx==0.28.1
+2026-11-13T10:57:34.7904225Z  + httpx2==2.16.0
+2026-11-13T10:57:34.7904521Z  + huggingface-hub==1.33.0
+2026-11-13T10:57:34.7904842Z  + humming-kernels==0.1.18
+2026-11-13T10:57:34.7905150Z  + idna==3.20
+2026-11-13T10:57:34.7905432Z  + iniconfig==2.3.1
+2026-11-13T10:57:34.7905734Z  + instanttensor==0.2.3
+2026-11-13T10:57:34.7906438Z  + interegular==0.3.3
+2026-11-13T10:57:34.7906625Z  + ipython==9.18.1
+2026-11-13T10:57:34.7906827Z  + ipython-pygments-lexers==1.1.1
+2026-11-13T10:57:34.7907034Z  + jedi==0.20.1
+2026-11-13T10:57:34.7907151Z  + jinja2==3.1.6
+2026-11-13T10:57:34.7907298Z  + jiter==0.19.0
+2026-11-13T10:57:34.7907476Z  + joblib==1.6.0
+2026-11-13T10:57:34.7907653Z  + jsonlines==4.0.0
+2026-11-13T10:57:34.7907844Z  + jsonschema==4.26.0
+2026-11-13T10:57:34.7908056Z  + jsonschema-specifications==2025.9.1
+2026-11-13T10:57:34.7908296Z  + kiwisolver==1.5.1
+2026-11-13T10:57:34.7908478Z  + lark==1.3.1
+2026-11-13T10:57:34.7908668Z  + latex2sympy2-extended==1.11.0
+2026-11-13T10:57:34.7909027Z  + llguidance==1.9.1
+2026-11-13T10:57:34.7909210Z  + llvmlite==0.47.0
+2026-11-13T10:57:34.7909391Z  + lm-eval==0.5.0.dev1
+2026-11-13T10:57:34.7909580Z  + logbook==1.10.1
+2026-11-13T10:57:34.7909757Z  + loguru==0.8.0
+2026-11-13T10:57:34.7909930Z  + lxml==7.0.0b1
+2026-11-13T10:57:34.7910113Z  + markdown-it-py==4.3.0
+2026-11-13T10:57:34.7910315Z  + markupsafe==3.0.4
+2026-11-13T10:57:34.7910502Z  + math-verify==0.9.0
+2026-11-13T10:57:34.7910694Z  + matplotlib==3.11.2
+2026-11-13T10:57:34.7910892Z  + matplotlib-inline==0.2.2
+2026-11-13T10:57:34.7911055Z  + mbstrdecoder==0.6.1
+2026-11-13T10:57:34.7911265Z  + mdurl==0.1.2
+2026-11-13T10:57:34.7911382Z  + mistral-common==1.13.1
+2026-11-13T10:57:34.7911508Z  + ml-dtypes==0.6.0
+2026-11-13T10:57:34.7911625Z  + modelscope==1.40.3
+2026-11-13T10:57:34.7911751Z  + modelscope-hub==0.7.1
+2026-11-13T10:57:34.7911880Z  + more-itertools==11.2.1
+2026-11-13T10:57:34.7912006Z  + mpmath==1.3.0
+2026-11-13T10:57:34.7912118Z  + msgfy==0.2.1
+2026-11-13T10:57:34.7912237Z  + msgspec==0.22.0
+2026-11-13T10:57:34.7912349Z  + multidict==7.2.1
+2026-11-13T10:57:34.7912467Z  + multiprocess==0.70.19
+2026-11-13T10:57:34.7912590Z  + narwhals==2.28.0
+2026-11-13T10:57:34.7912733Z  + nccl-extensions==0.2.0
+2026-11-13T10:57:34.7912859Z  + nccl4py==0.6.0
+2026-11-13T10:57:34.7912972Z  + nest-asyncio==1.6.0
+2026-11-13T10:57:34.7913092Z  + networkx==3.7
+2026-11-13T10:57:34.7913203Z  + ninja==1.13.2
+2026-11-13T10:57:34.7913311Z  + nltk==3.10.4
+2026-11-13T10:57:34.7913419Z  + numba==0.65.1
+2026-11-13T10:57:34.7913526Z  + numpy==2.3.5
+2026-11-13T10:57:34.7913647Z  + nvidia-cublas==13.1.1.3
+2026-11-13T10:57:34.7913788Z  + nvidia-cuda-cccl==13.3.5.0.6
+2026-11-13T10:57:34.7913930Z  + nvidia-cuda-crt==13.5.37
+2026-11-13T10:57:34.7914067Z  + nvidia-cuda-cupti==13.0.85
+2026-11-13T10:57:34.7914208Z  + nvidia-cuda-nvcc==13.5.37
+2026-11-13T10:57:34.7914358Z  + nvidia-cuda-nvrtc==13.0.88
+2026-11-13T10:57:34.7914501Z  + nvidia-cuda-runtime==13.0.96
+2026-11-13T10:57:34.7914642Z  + nvidia-cudnn-cu13==9.24.0.43
+2026-11-13T10:57:34.7914789Z  + nvidia-cudnn-frontend==1.32.3
+2026-11-13T10:57:34.7914933Z  + nvidia-cufft==12.0.0.61
+2026-11-13T10:57:34.7915064Z  + nvidia-cufile==1.15.1.6
+2026-11-13T10:57:34.7915194Z  + nvidia-curand==10.4.0.35
+2026-11-13T10:57:34.7915327Z  + nvidia-cusolver==12.0.4.66
+2026-11-13T10:57:34.7915465Z  + nvidia-cusparse==12.6.3.3
+2026-11-13T10:57:34.7915606Z  + nvidia-cusparselt-cu13==0.8.1
+2026-11-13T10:57:34.7915751Z  + nvidia-cutlass-dsl==4.8.0
+2026-11-13T10:57:34.7915903Z  + nvidia-cutlass-dsl-libs-base==4.8.0
+2026-11-13T10:57:34.7916274Z  + nvidia-cutlass-dsl-libs-core==4.8.0
+2026-11-13T10:57:34.7916535Z  + nvidia-cutlass-dsl-libs-cu12==4.8.0
+2026-11-13T10:57:34.7916786Z  + nvidia-cutlass-dsl-libs-cu13==4.8.0
+2026-11-13T10:57:34.7917026Z  + nvidia-mathdx==25.6.0
+2026-11-13T10:57:34.7917232Z  + nvidia-ml-py==13.615.71
+2026-11-13T10:57:34.7917443Z  + nvidia-nccl-cu13==2.30.7
+2026-11-13T10:57:34.7917657Z  + nvidia-nvjitlink==13.5.37
+2026-11-13T10:57:34.7917877Z  + nvidia-nvshmem-cu13==3.4.5
+2026-11-13T10:57:34.7918101Z  + nvidia-nvtx==13.0.85
+2026-11-13T10:57:34.7918297Z  + nvidia-nvvm==13.5.37
+2026-11-13T10:57:34.7918493Z  + nvshmem4py-cu13==0.4.1
+2026-11-13T10:57:34.7918691Z  + onnxruntime==1.31.1
+2026-11-13T10:57:34.7918861Z  + openai==2.8.0
+2026-11-13T10:57:34.7918981Z  + openai-harmony==0.0.4
+2026-11-13T10:57:34.7919113Z  + opentelemetry-api==1.45.2
+2026-11-13T10:57:34.7919243Z  + orjson==3.13.0
+2026-11-13T10:57:34.7919356Z  + outlines==0.1.11
+2026-11-13T10:57:34.7919476Z  + outlines-core==0.1.26
+2026-11-13T10:57:34.7919600Z  + pandas==2.3.3
+2026-11-13T10:57:34.7919719Z  + parameterized==0.9.0
+2026-11-13T10:57:34.7919881Z  + parso==0.8.7
+2026-11-13T10:57:34.7920014Z  + partial-json-parser==0.2.1.1.post7
+2026-11-13T10:57:34.7920167Z  + pathvalidate==3.3.1
+2026-11-13T10:57:34.7920289Z  + peft==0.21.3
+2026-11-13T10:57:34.7920403Z  + pexpect==4.9.0
+2026-11-13T10:57:34.7920517Z  + pillow==11.3.0
+2026-11-13T10:57:34.7920628Z  + pluggy==1.7.0
+2026-11-13T10:57:34.7920845Z  + polars==2.1.0
+2026-11-13T10:57:34.7920963Z  + polars-runtime-32==2.1.0
+2026-11-13T10:57:34.7921097Z  + portalocker==4.4.2
+2026-11-13T10:57:34.7921225Z  + prometheus-client==0.26.0
+2026-11-13T10:57:34.7921364Z  + prompt-toolkit==3.0.53
+2026-11-13T10:57:34.7921495Z  + propcache==0.5.4
+2026-11-13T10:57:34.7921612Z  + protobuf==7.37.0rc3
+2026-11-13T10:57:34.7921734Z  + psutil==7.2.2
+2026-11-13T10:57:34.7921850Z  + ptyprocess==0.7.0
+2026-11-13T10:57:34.7921970Z  + pure-eval==0.2.4
+2026-11-13T10:57:34.7922090Z  + py-cpuinfo==9.0.0
+2026-11-13T10:57:34.7922209Z  + py-spy==0.4.3
+2026-11-13T10:57:34.7922323Z  + pyarrow==26.0.1
+2026-11-13T10:57:34.7922524Z  + pybase64==1.5.2
+2026-11-13T10:57:34.7922642Z  + pycountry==26.2.16
+2026-11-13T10:57:34.7922763Z  + pycparser==3.12
+2026-11-13T10:57:34.7922884Z  + pycryptodomex==3.24.2
+2026-11-13T10:57:34.7923036Z  + pydantic==2.14.3
+2026-11-13T10:57:34.7923156Z  + pydantic-core==2.50.4
+2026-11-13T10:57:34.7923291Z  + pydantic-extra-types==2.11.1
+2026-11-13T10:57:34.7923433Z  + pygments==2.21.0
+2026-11-13T10:57:34.7923548Z  + pymupdf==2.1
+2026-11-13T10:57:34.7923666Z  + pymupdf-layout==2.1
+2026-11-13T10:57:34.7923790Z  + pymupdf4llm==2.1
+2026-11-13T10:57:34.7923909Z  + pyparsing==3.3.3
+2026-11-13T10:57:34.7924029Z  + pyproject-hooks==1.3.3
+2026-11-13T10:57:34.7924163Z  + pytablewriter==0.38.0
+2026-11-13T10:57:34.7924288Z  + pytest==9.2.0
+2026-11-13T10:57:34.7924403Z  + pytest-cov==7.1.0
+2026-11-13T10:57:34.7924531Z  + python-dateutil==2.9.0.post0
+2026-11-13T10:57:34.7924677Z  + python-multipart==0.0.33
+2026-11-13T10:57:34.7924808Z  + pytz==2026.6
+2026-11-13T10:57:34.7924919Z  + pyzmq==27.3.0
+2026-11-13T10:57:34.7925040Z  + quack-kernels==0.6.5
+2026-11-13T10:57:34.7925168Z  + referencing==0.37.0
+2026-11-13T10:57:34.7925293Z  + regex==2026.11.9
+2026-11-13T10:57:34.7925407Z  + requests==2.34.2
+2026-11-13T10:57:34.7925523Z  + rich==15.0.0
+2026-11-13T10:57:34.7925638Z  + rouge-score==0.1.2
+2026-11-13T10:57:34.7925760Z  + rpds-py==2026.9.1
+2026-11-13T10:57:34.7925878Z  + sacrebleu==2.6.0
+2026-11-13T10:57:34.7926159Z  + safetensors==0.9.0rc1
+2026-11-13T10:57:34.7926325Z  + scikit-learn==1.9.1
+2026-11-13T10:57:34.7926476Z  + scipy==1.18.1
+2026-11-13T10:57:34.7926673Z  + sentence-transformers==6.3.0
+2026-11-13T10:57:34.7926895Z  + sentencepiece==0.2.1
+2026-11-13T10:57:34.7927094Z  + setproctitle==1.3.8
+2026-11-13T10:57:34.7927290Z  + setuptools==84.2.1
+2026-11-13T10:57:34.7927486Z  + sgl-deep-ep==0.1.2.post1
+2026-11-13T10:57:34.7927651Z  + sgl-deep-gemm==0.2.8
+2026-11-13T10:57:34.7927775Z  + sgl-eval==0.1.3
+2026-11-13T10:57:34.7927894Z  + sgl-flash-mla==1.0.5
+2026-11-13T10:57:34.7928113Z  + sglang==0.0.0.dev2+g57a886239 (from file:///home/runner/work/sglang/sglang/python)
+2026-11-13T10:57:34.7928349Z  + sglang-kernel==0.4.10
+2026-11-13T10:57:34.7928480Z  + shellingham==1.5.4
+2026-11-13T10:57:34.7928602Z  + six==1.17.0
+2026-11-13T10:57:34.7928719Z  + smg-grpc-proto==0.5.0
+2026-11-13T10:57:34.7928857Z  + smg-grpc-servicer==0.16.0
+2026-11-13T10:57:34.7928990Z  + sniffio==1.3.1
+2026-11-13T10:57:34.7929110Z  + soundfile==0.13.1
+2026-11-13T10:57:34.7929230Z  + sqlitedict==2.1.0
+2026-11-13T10:57:34.7929349Z  + stack-data==0.6.3
+2026-11-13T10:57:34.7929468Z  + starlette==1.10.0
+2026-11-13T10:57:34.7929584Z  + sympy==1.14.0
+2026-11-13T10:57:34.7929697Z  + tabledata==0.0.26
+2026-11-13T10:57:34.7929813Z  + tabulate==0.10.0
+2026-11-13T10:57:34.7929927Z  + tenacity==9.2.1
+2026-11-13T10:57:34.7930046Z  + threadpoolctl==3.8.0
+2026-11-13T10:57:34.7930170Z  + tiktoken==0.14.0
+2026-11-13T10:57:34.7930288Z  + tilelang==0.1.12
+2026-11-13T10:57:34.7930401Z  + timm==1.0.25
+2026-11-13T10:57:34.7930517Z  + tml-renderers==0.1.0
+2026-11-13T10:57:34.7930645Z  + tokenizers==0.23.2
+2026-11-13T10:57:34.7930765Z  + torch==2.14.1
+2026-11-13T10:57:34.7930887Z  + torch-c-dlpack-ext==0.1.5
+2026-11-13T10:57:34.7931030Z  + torch-memory-saver==0.0.10
+2026-11-13T10:57:34.7931167Z  + torchaudio==2.11.0
+2026-11-13T10:57:34.7931289Z  + torchcodec==0.17.0
+2026-11-13T10:57:34.7931408Z  + torchvision==0.29.2
+2026-11-13T10:57:34.7931527Z  + tqdm==4.70.1
+2026-11-13T10:57:34.7931745Z  + traitlets==5.16.1
+2026-11-13T10:57:34.7931867Z  + transformers==5.19.0
+2026-11-13T10:57:34.7931989Z  + triton==3.8.0
+2026-11-13T10:57:34.7932104Z  + truststore==0.10.5
+2026-11-13T10:57:34.7932222Z  + typepy==0.3.1
+2026-11-13T10:57:34.7932335Z  + typer==0.29.1
+2026-11-13T10:57:34.7932455Z  + typing-extensions==4.16.0
+2026-11-13T10:57:34.7932596Z  + typing-inspection==0.4.5
+2026-11-13T10:57:34.7932730Z  + tzdata==2026.6
+2026-11-13T10:57:34.7932842Z  + urllib3==2.8.0
+2026-11-13T10:57:34.7932955Z  + uvicorn==0.54.0
+2026-11-13T10:57:34.7933069Z  + uvloop==0.23.0
+2026-11-13T10:57:34.7933265Z  + watchfiles==1.3.0
+2026-11-13T10:57:34.7933384Z  + wcwidth==0.9.4
+2026-11-13T10:57:34.7933497Z  + word2number==1.1
+2026-11-13T10:57:34.7933614Z  + xgrammar==0.2.7
+2026-11-13T10:57:34.7933728Z  + xxhash==4.1.0
+2026-11-13T10:57:34.7933838Z  + yarl==1.25.1
+2026-11-13T10:57:34.7933954Z  + z3-solver==4.15.4.0
+2026-11-13T10:57:34.7934076Z  + zstandard==0.25.0
+2026-11-13T10:57:35.7543417Z ##[group]Run python - <<'PY'
+2026-11-13T10:57:35.7543615Z [36;1mpython - <<'PY'[0m
+2026-11-13T10:57:35.7543755Z [36;1mimport inspect[0m
+2026-11-13T10:57:35.7543891Z [36;1mfrom pathlib import Path[0m
+2026-11-13T10:57:35.7544034Z [36;1mimport torch[0m
+2026-11-13T10:57:35.7544222Z [36;1mimport sglang.srt.multimodal.cache.preprocess_cache as common[0m
+2026-11-13T10:57:35.7544599Z [36;1massert Path(inspect.getfile(common)).resolve() == Path("python/sglang/srt/multimodal/cache/preprocess_cache.py").resolve()[0m
+2026-11-13T10:57:35.7544924Z [36;1massert not torch.cuda.is_available()[0m
+2026-11-13T10:57:35.7545185Z [36;1mprint("Native cache implementation:", inspect.getfile(common), "Torch:", torch.__version__)[0m
+2026-11-13T10:57:35.7545435Z [36;1mPY[0m
+2026-11-13T10:57:35.7545556Z [36;1mset -o pipefail[0m
+2026-11-13T10:57:35.7546273Z [36;1mpython -m pytest -q -p no:cacheprovider --junitxml=sglang-patched.xml test/registered/unit/multimodal/test_preprocess_retained_buffers.py test/registered/unit/multimodal/test_preprocess_cache.py 2>&1 | tee sglang-patched.log[0m
+2026-11-13T10:57:35.7705250Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:57:35.7705398Z env:
+2026-11-13T10:57:35.7705520Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:57:35.7705659Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:57:35.7705808Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:57:35.7706010Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:57:35.7706129Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:57:35.7706292Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:57:35.7706532Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:57:35.7706763Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:57:35.7706972Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:57:35.7707181Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:57:35.7707391Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:57:35.7707580Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:57:35.7707714Z ##[endgroup]
+2026-11-13T10:57:40.8188148Z Native cache implementation: /home/runner/work/sglang/sglang/python/sglang/srt/multimodal/cache/preprocess_cache.py Torch: 2.14.1+cu130
+2026-11-13T10:57:55.4680591Z ...................................s.         [100%]
+2026-11-13T10:57:55.4680965Z 36 passed, 1 skipped, 27 subtests passed in 13.29s
+2026-11-13T10:57:56.7634324Z ##[group]Run git show 5792cf6e5e11aebc62d41cf19828f615a8fa7e0a:python/sglang/srt/multimodal/cache/preprocess_cache.py > python/sglang/srt/multimodal/cache/preprocess_cache.py
+2026-11-13T10:57:56.7634994Z [36;1mgit show 5792cf6e5e11aebc62d41cf19828f615a8fa7e0a:python/sglang/srt/multimodal/cache/preprocess_cache.py > python/sglang/srt/multimodal/cache/preprocess_cache.py[0m
+2026-11-13T10:57:56.7635453Z [36;1mfind python/sglang/srt/multimodal/cache/__pycache__ -name '*.pyc' -delete[0m
+2026-11-13T10:57:56.7653374Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:57:56.7653512Z env:
+2026-11-13T10:57:56.7653762Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:57:56.7653902Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:57:56.7654053Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:57:56.7654180Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:57:56.7654300Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:57:56.7654466Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:57:56.7654734Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:57:56.7654965Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:57:56.7655175Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:57:56.7655388Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:57:56.7655601Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:57:56.7655781Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:57:56.7655909Z ##[endgroup]
+2026-11-13T10:57:56.7764923Z ##[group]Run set +e
+2026-11-13T10:57:56.7765061Z [36;1mset +e[0m
+2026-11-13T10:57:56.7765436Z [36;1mpython -m pytest -q -p no:cacheprovider --junitxml=sglang-baseline.xml test/registered/unit/multimodal/test_preprocess_retained_buffers.py > sglang-baseline.log 2>&1[0m
+2026-11-13T10:57:56.7765826Z [36;1mstatus=$?[0m
+2026-11-13T10:57:56.7766140Z [36;1mset -e[0m
+2026-11-13T10:57:56.7766278Z [36;1mcat sglang-baseline.log[0m
+2026-11-13T10:57:56.7766426Z [36;1mtest "$status" -eq 1[0m
+2026-11-13T10:57:56.7766566Z [36;1mpython - <<'PY'[0m
+2026-11-13T10:57:56.7766713Z [36;1mimport xml.etree.ElementTree as ET[0m
+2026-11-13T10:57:56.7766909Z [36;1mroot = ET.parse("sglang-baseline.xml").getroot()[0m
+2026-11-13T10:57:56.7767170Z [36;1massert not root.findall(".//error"), "Baseline must fail assertions, not imports."[0m
+2026-11-13T10:57:56.7767521Z [36;1mfailed = {case.attrib["name"] for case in root.findall(".//testcase") if case.find("failure") is not None}[0m
+2026-11-13T10:57:56.7768308Z [36;1mrequired = {"test_numpy_views_count_the_retained_allocation", "test_memoryviews_count_owner_bytes_instead_of_elements", "test_small_views_cannot_bypass_cache_admission", "test_byte_budget_eviction_releases_retained_numpy_owner", "test_singleflight_completion_uses_retained_buffer_admission", "test_unmeasurable_array_owner_is_not_admitted"}[0m
+2026-11-13T10:57:56.7769009Z [36;1massert required <= failed, (required - failed, failed)[0m
+2026-11-13T10:57:56.7769282Z [36;1mprint("Confirmed original retained-buffer accounting failures:", sorted(failed))[0m
+2026-11-13T10:57:56.7769513Z [36;1mPY[0m
+2026-11-13T10:57:56.7784290Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:57:56.7784426Z env:
+2026-11-13T10:57:56.7784538Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:57:56.7784678Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:57:56.7784827Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:57:56.7784954Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:57:56.7785073Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:57:56.7785241Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:57:56.7785476Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:57:56.7785711Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:57:56.7785924Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:57:56.7786293Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:57:56.7786503Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:57:56.7786705Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:57:56.7786831Z ##[endgroup]
+2026-11-13T10:58:01.5668875Z ..F...FF.F                                             [100%]
+2026-11-13T10:58:01.5669270Z =================================== FAILURES ===================================
+2026-11-13T10:58:01.5669727Z _ TestPreprocessRetainedBuffers.test_array_views_of_external_buffers_count_the_full_buffer (owner='bytearray') _
+2026-11-13T10:58:01.5670093Z 
+2026-11-13T10:58:01.5670497Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_array_views_of_external_buffers_count_the_full_buffer>
+2026-11-13T10:58:01.5671295Z 
+2026-11-13T10:58:01.5671459Z     def test_array_views_of_external_buffers_count_the_full_buffer(self):
+2026-11-13T10:58:01.5671694Z         owners = [
+2026-11-13T10:58:01.5671886Z             bytearray(4096),
+2026-11-13T10:58:01.5672120Z             array.array("I", range(1024)),
+2026-11-13T10:58:01.5672370Z             (ctypes.c_uint32 * 1024)(*range(1024)),
+2026-11-13T10:58:01.5672606Z         ]
+2026-11-13T10:58:01.5672753Z         for owner in owners:
+2026-11-13T10:58:01.5672937Z             value = np.frombuffer(owner, dtype=np.uint8, count=4, offset=16)
+2026-11-13T10:58:01.5673162Z             with self.subTest(owner=type(owner).__name__):
+2026-11-13T10:58:01.5673336Z >               self.assertEqual(
+2026-11-13T10:58:01.5673521Z                     estimate_cache_size_bytes(value), memoryview(owner).nbytes
+2026-11-13T10:58:01.5673961Z                 )
+2026-11-13T10:58:01.5674087Z E               AssertionError: 4 != 4096
+2026-11-13T10:58:01.5674187Z 
+2026-11-13T10:58:01.5674329Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:89: AssertionError
+2026-11-13T10:58:01.5674693Z _ TestPreprocessRetainedBuffers.test_array_views_of_external_buffers_count_the_full_buffer (owner='array') _
+2026-11-13T10:58:01.5674916Z 
+2026-11-13T10:58:01.5675152Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_array_views_of_external_buffers_count_the_full_buffer>
+2026-11-13T10:58:01.5675434Z 
+2026-11-13T10:58:01.5675538Z     def test_array_views_of_external_buffers_count_the_full_buffer(self):
+2026-11-13T10:58:01.5675736Z         owners = [
+2026-11-13T10:58:01.5675856Z             bytearray(4096),
+2026-11-13T10:58:01.5676131Z             array.array("I", range(1024)),
+2026-11-13T10:58:01.5676296Z             (ctypes.c_uint32 * 1024)(*range(1024)),
+2026-11-13T10:58:01.5676449Z         ]
+2026-11-13T10:58:01.5676566Z         for owner in owners:
+2026-11-13T10:58:01.5676745Z             value = np.frombuffer(owner, dtype=np.uint8, count=4, offset=16)
+2026-11-13T10:58:01.5676968Z             with self.subTest(owner=type(owner).__name__):
+2026-11-13T10:58:01.5677140Z >               self.assertEqual(
+2026-11-13T10:58:01.5677322Z                     estimate_cache_size_bytes(value), memoryview(owner).nbytes
+2026-11-13T10:58:01.5677504Z                 )
+2026-11-13T10:58:01.5677628Z E               AssertionError: 4 != 4096
+2026-11-13T10:58:01.5677728Z 
+2026-11-13T10:58:01.5677858Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:89: AssertionError
+2026-11-13T10:58:01.5678238Z _ TestPreprocessRetainedBuffers.test_array_views_of_external_buffers_count_the_full_buffer (owner='c_uint_Array_1024') _
+2026-11-13T10:58:01.5678483Z 
+2026-11-13T10:58:01.5678714Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_array_views_of_external_buffers_count_the_full_buffer>
+2026-11-13T10:58:01.5678996Z 
+2026-11-13T10:58:01.5679099Z     def test_array_views_of_external_buffers_count_the_full_buffer(self):
+2026-11-13T10:58:01.5679294Z         owners = [
+2026-11-13T10:58:01.5679411Z             bytearray(4096),
+2026-11-13T10:58:01.5679550Z             array.array("I", range(1024)),
+2026-11-13T10:58:01.5679710Z             (ctypes.c_uint32 * 1024)(*range(1024)),
+2026-11-13T10:58:01.5679860Z         ]
+2026-11-13T10:58:01.5680032Z         for owner in owners:
+2026-11-13T10:58:01.5680210Z             value = np.frombuffer(owner, dtype=np.uint8, count=4, offset=16)
+2026-11-13T10:58:01.5680427Z             with self.subTest(owner=type(owner).__name__):
+2026-11-13T10:58:01.5680597Z >               self.assertEqual(
+2026-11-13T10:58:01.5680779Z                     estimate_cache_size_bytes(value), memoryview(owner).nbytes
+2026-11-13T10:58:01.5680961Z                 )
+2026-11-13T10:58:01.5681082Z E               AssertionError: 4 != 4096
+2026-11-13T10:58:01.5681180Z 
+2026-11-13T10:58:01.5681312Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:89: AssertionError
+2026-11-13T10:58:01.5681664Z _ TestPreprocessRetainedBuffers.test_broadcast_and_stride_trick_wrappers_reach_the_owner (shape=(10000,)) _
+2026-11-13T10:58:01.5681990Z 
+2026-11-13T10:58:01.5682219Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_broadcast_and_stride_trick_wrappers_reach_the_owner>
+2026-11-13T10:58:01.5682493Z 
+2026-11-13T10:58:01.5682596Z     def test_broadcast_and_stride_trick_wrappers_reach_the_owner(self):
+2026-11-13T10:58:01.5682807Z         owner = np.arange(32, dtype=np.int16)
+2026-11-13T10:58:01.5682957Z         values = [
+2026-11-13T10:58:01.5683087Z             np.broadcast_to(owner[:1], (10000,)),
+2026-11-13T10:58:01.5683256Z             np.lib.stride_tricks.as_strided(
+2026-11-13T10:58:01.5683440Z                 owner, shape=(3, 2), strides=(8, 2), writeable=False
+2026-11-13T10:58:01.5683616Z             ),
+2026-11-13T10:58:01.5683901Z             np.lib.stride_tricks.sliding_window_view(owner, 3)[1:2],
+2026-11-13T10:58:01.5684077Z         ]
+2026-11-13T10:58:01.5684187Z         for value in values:
+2026-11-13T10:58:01.5684339Z             with self.subTest(shape=value.shape):
+2026-11-13T10:58:01.5684552Z >               self.assertEqual(estimate_cache_size_bytes(value), owner.nbytes)
+2026-11-13T10:58:01.5684760Z E               AssertionError: 20000 != 64
+2026-11-13T10:58:01.5684865Z 
+2026-11-13T10:58:01.5684995Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:63: AssertionError
+2026-11-13T10:58:01.5685344Z _ TestPreprocessRetainedBuffers.test_broadcast_and_stride_trick_wrappers_reach_the_owner (shape=(3, 2)) _
+2026-11-13T10:58:01.5685562Z 
+2026-11-13T10:58:01.5685791Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_broadcast_and_stride_trick_wrappers_reach_the_owner>
+2026-11-13T10:58:01.5686239Z 
+2026-11-13T10:58:01.5686341Z     def test_broadcast_and_stride_trick_wrappers_reach_the_owner(self):
+2026-11-13T10:58:01.5686554Z         owner = np.arange(32, dtype=np.int16)
+2026-11-13T10:58:01.5686702Z         values = [
+2026-11-13T10:58:01.5686836Z             np.broadcast_to(owner[:1], (10000,)),
+2026-11-13T10:58:01.5686999Z             np.lib.stride_tricks.as_strided(
+2026-11-13T10:58:01.5687179Z                 owner, shape=(3, 2), strides=(8, 2), writeable=False
+2026-11-13T10:58:01.5687349Z             ),
+2026-11-13T10:58:01.5687496Z             np.lib.stride_tricks.sliding_window_view(owner, 3)[1:2],
+2026-11-13T10:58:01.5687669Z         ]
+2026-11-13T10:58:01.5687777Z         for value in values:
+2026-11-13T10:58:01.5687923Z             with self.subTest(shape=value.shape):
+2026-11-13T10:58:01.5688131Z >               self.assertEqual(estimate_cache_size_bytes(value), owner.nbytes)
+2026-11-13T10:58:01.5688336Z E               AssertionError: 12 != 64
+2026-11-13T10:58:01.5688435Z 
+2026-11-13T10:58:01.5688565Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:63: AssertionError
+2026-11-13T10:58:01.5688915Z _ TestPreprocessRetainedBuffers.test_broadcast_and_stride_trick_wrappers_reach_the_owner (shape=(1, 3)) _
+2026-11-13T10:58:01.5689135Z 
+2026-11-13T10:58:01.5689362Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_broadcast_and_stride_trick_wrappers_reach_the_owner>
+2026-11-13T10:58:01.5689638Z 
+2026-11-13T10:58:01.5689738Z     def test_broadcast_and_stride_trick_wrappers_reach_the_owner(self):
+2026-11-13T10:58:01.5689945Z         owner = np.arange(32, dtype=np.int16)
+2026-11-13T10:58:01.5690093Z         values = [
+2026-11-13T10:58:01.5690219Z             np.broadcast_to(owner[:1], (10000,)),
+2026-11-13T10:58:01.5690384Z             np.lib.stride_tricks.as_strided(
+2026-11-13T10:58:01.5690562Z                 owner, shape=(3, 2), strides=(8, 2), writeable=False
+2026-11-13T10:58:01.5690729Z             ),
+2026-11-13T10:58:01.5690877Z             np.lib.stride_tricks.sliding_window_view(owner, 3)[1:2],
+2026-11-13T10:58:01.5691051Z         ]
+2026-11-13T10:58:01.5691162Z         for value in values:
+2026-11-13T10:58:01.5691307Z             with self.subTest(shape=value.shape):
+2026-11-13T10:58:01.5691615Z >               self.assertEqual(estimate_cache_size_bytes(value), owner.nbytes)
+2026-11-13T10:58:01.5691818Z E               AssertionError: 6 != 64
+2026-11-13T10:58:01.5691917Z 
+2026-11-13T10:58:01.5692046Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:63: AssertionError
+2026-11-13T10:58:01.5692368Z _ TestPreprocessRetainedBuffers.test_byte_budget_eviction_releases_retained_numpy_owner _
+2026-11-13T10:58:01.5692566Z 
+2026-11-13T10:58:01.5692797Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_byte_budget_eviction_releases_retained_numpy_owner>
+2026-11-13T10:58:01.5693070Z 
+2026-11-13T10:58:01.5693169Z     def test_byte_budget_eviction_releases_retained_numpy_owner(self):
+2026-11-13T10:58:01.5693377Z         owner = np.arange(4096, dtype=np.float32)
+2026-11-13T10:58:01.5693623Z         reference = weakref.ref(owner)
+2026-11-13T10:58:01.5693819Z         cache = MultimodalPreprocessCache(max_size_bytes=owner.nbytes)
+2026-11-13T10:58:01.5694045Z         self.assertTrue(cache.put("first", owner[:1]))
+2026-11-13T10:58:01.5694205Z         del owner
+2026-11-13T10:58:01.5694319Z         gc.collect()
+2026-11-13T10:58:01.5694456Z         self.assertIsNotNone(reference())
+2026-11-13T10:58:01.5694601Z     
+2026-11-13T10:58:01.5694722Z         other = np.arange(4096, dtype=np.float32)
+2026-11-13T10:58:01.5694932Z         self.assertTrue(cache.put("second", other[-1:]))
+2026-11-13T10:58:01.5695096Z         gc.collect()
+2026-11-13T10:58:01.5695248Z >       self.assertIsNone(reference())
+2026-11-13T10:58:01.5695470Z E       AssertionError: array([0.000e+00, 1.000e+00, 2.000e+00, ..., 4.093e+03, 4.094e+03,
+2026-11-13T10:58:01.5695722Z E              4.095e+03], shape=(4096,), dtype=float32) is not None
+2026-11-13T10:58:01.5695849Z 
+2026-11-13T10:58:01.5697964Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:135: AssertionError
+2026-11-13T10:58:01.5698348Z _ TestPreprocessRetainedBuffers.test_memoryviews_count_owner_bytes_instead_of_elements (format='B', shape=(4,)) _
+2026-11-13T10:58:01.5698590Z 
+2026-11-13T10:58:01.5698816Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_memoryviews_count_owner_bytes_instead_of_elements>
+2026-11-13T10:58:01.5699092Z 
+2026-11-13T10:58:01.5699188Z     def test_memoryviews_count_owner_bytes_instead_of_elements(self):
+2026-11-13T10:58:01.5699390Z         owner = bytearray(4096)
+2026-11-13T10:58:01.5699524Z         values = [
+2026-11-13T10:58:01.5699646Z             memoryview(owner)[3:7],
+2026-11-13T10:58:01.5699801Z             memoryview(owner).cast("I")[3:4],
+2026-11-13T10:58:01.5699977Z             memoryview(owner).cast("I", shape=(16, 64)),
+2026-11-13T10:58:01.5700278Z             memoryview(owner)[::-3],
+2026-11-13T10:58:01.5700423Z             memoryview(owner)[0:0],
+2026-11-13T10:58:01.5700557Z         ]
+2026-11-13T10:58:01.5700671Z         for value in values:
+2026-11-13T10:58:01.5700845Z             with self.subTest(format=value.format, shape=value.shape):
+2026-11-13T10:58:01.5701087Z >               self.assertEqual(estimate_cache_size_bytes(value), len(owner))
+2026-11-13T10:58:01.5701290Z E               AssertionError: 4 != 4096
+2026-11-13T10:58:01.5701388Z 
+2026-11-13T10:58:01.5701521Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:77: AssertionError
+2026-11-13T10:58:01.5701886Z _ TestPreprocessRetainedBuffers.test_memoryviews_count_owner_bytes_instead_of_elements (format='I', shape=(1,)) _
+2026-11-13T10:58:01.5702122Z 
+2026-11-13T10:58:01.5702344Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_memoryviews_count_owner_bytes_instead_of_elements>
+2026-11-13T10:58:01.5702617Z 
+2026-11-13T10:58:01.5702713Z     def test_memoryviews_count_owner_bytes_instead_of_elements(self):
+2026-11-13T10:58:01.5702910Z         owner = bytearray(4096)
+2026-11-13T10:58:01.5703045Z         values = [
+2026-11-13T10:58:01.5703168Z             memoryview(owner)[3:7],
+2026-11-13T10:58:01.5703318Z             memoryview(owner).cast("I")[3:4],
+2026-11-13T10:58:01.5703606Z             memoryview(owner).cast("I", shape=(16, 64)),
+2026-11-13T10:58:01.5703778Z             memoryview(owner)[::-3],
+2026-11-13T10:58:01.5703920Z             memoryview(owner)[0:0],
+2026-11-13T10:58:01.5704051Z         ]
+2026-11-13T10:58:01.5704159Z         for value in values:
+2026-11-13T10:58:01.5704329Z             with self.subTest(format=value.format, shape=value.shape):
+2026-11-13T10:58:01.5704565Z >               self.assertEqual(estimate_cache_size_bytes(value), len(owner))
+2026-11-13T10:58:01.5704766Z E               AssertionError: 1 != 4096
+2026-11-13T10:58:01.5704862Z 
+2026-11-13T10:58:01.5704994Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:77: AssertionError
+2026-11-13T10:58:01.5705439Z _ TestPreprocessRetainedBuffers.test_memoryviews_count_owner_bytes_instead_of_elements (format='I', shape=(16, 64)) _
+2026-11-13T10:58:01.5705681Z 
+2026-11-13T10:58:01.5705906Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_memoryviews_count_owner_bytes_instead_of_elements>
+2026-11-13T10:58:01.5706372Z 
+2026-11-13T10:58:01.5706467Z     def test_memoryviews_count_owner_bytes_instead_of_elements(self):
+2026-11-13T10:58:01.5706665Z         owner = bytearray(4096)
+2026-11-13T10:58:01.5706798Z         values = [
+2026-11-13T10:58:01.5706918Z             memoryview(owner)[3:7],
+2026-11-13T10:58:01.5707069Z             memoryview(owner).cast("I")[3:4],
+2026-11-13T10:58:01.5707241Z             memoryview(owner).cast("I", shape=(16, 64)),
+2026-11-13T10:58:01.5707410Z             memoryview(owner)[::-3],
+2026-11-13T10:58:01.5707554Z             memoryview(owner)[0:0],
+2026-11-13T10:58:01.5707686Z         ]
+2026-11-13T10:58:01.5707794Z         for value in values:
+2026-11-13T10:58:01.5707966Z             with self.subTest(format=value.format, shape=value.shape):
+2026-11-13T10:58:01.5708206Z >               self.assertEqual(estimate_cache_size_bytes(value), len(owner))
+2026-11-13T10:58:01.5708407Z E               AssertionError: 16 != 4096
+2026-11-13T10:58:01.5708508Z 
+2026-11-13T10:58:01.5708641Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:77: AssertionError
+2026-11-13T10:58:01.5709008Z _ TestPreprocessRetainedBuffers.test_memoryviews_count_owner_bytes_instead_of_elements (format='B', shape=(1366,)) _
+2026-11-13T10:58:01.5709246Z 
+2026-11-13T10:58:01.5709468Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_memoryviews_count_owner_bytes_instead_of_elements>
+2026-11-13T10:58:01.5709740Z 
+2026-11-13T10:58:01.5709835Z     def test_memoryviews_count_owner_bytes_instead_of_elements(self):
+2026-11-13T10:58:01.5710027Z         owner = bytearray(4096)
+2026-11-13T10:58:01.5710160Z         values = [
+2026-11-13T10:58:01.5710280Z             memoryview(owner)[3:7],
+2026-11-13T10:58:01.5710432Z             memoryview(owner).cast("I")[3:4],
+2026-11-13T10:58:01.5710605Z             memoryview(owner).cast("I", shape=(16, 64)),
+2026-11-13T10:58:01.5711975Z             memoryview(owner)[::-3],
+2026-11-13T10:58:01.5712207Z             memoryview(owner)[0:0],
+2026-11-13T10:58:01.5712401Z         ]
+2026-11-13T10:58:01.5712565Z         for value in values:
+2026-11-13T10:58:01.5712816Z             with self.subTest(format=value.format, shape=value.shape):
+2026-11-13T10:58:01.5713156Z >               self.assertEqual(estimate_cache_size_bytes(value), len(owner))
+2026-11-13T10:58:01.5713468Z E               AssertionError: 1366 != 4096
+2026-11-13T10:58:01.5713621Z 
+2026-11-13T10:58:01.5713831Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:77: AssertionError
+2026-11-13T10:58:01.5714408Z _ TestPreprocessRetainedBuffers.test_memoryviews_count_owner_bytes_instead_of_elements (format='B', shape=(0,)) _
+2026-11-13T10:58:01.5714783Z 
+2026-11-13T10:58:01.5715143Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_memoryviews_count_owner_bytes_instead_of_elements>
+2026-11-13T10:58:01.5715636Z 
+2026-11-13T10:58:01.5715787Z     def test_memoryviews_count_owner_bytes_instead_of_elements(self):
+2026-11-13T10:58:01.5716463Z         owner = bytearray(4096)
+2026-11-13T10:58:01.5716665Z         values = [
+2026-11-13T10:58:01.5716849Z             memoryview(owner)[3:7],
+2026-11-13T10:58:01.5717086Z             memoryview(owner).cast("I")[3:4],
+2026-11-13T10:58:01.5717353Z             memoryview(owner).cast("I", shape=(16, 64)),
+2026-11-13T10:58:01.5717631Z             memoryview(owner)[::-3],
+2026-11-13T10:58:01.5717859Z             memoryview(owner)[0:0],
+2026-11-13T10:58:01.5718065Z         ]
+2026-11-13T10:58:01.5718228Z         for value in values:
+2026-11-13T10:58:01.5718497Z             with self.subTest(format=value.format, shape=value.shape):
+2026-11-13T10:58:01.5718870Z >               self.assertEqual(estimate_cache_size_bytes(value), len(owner))
+2026-11-13T10:58:01.5719326Z E               AssertionError: 0 != 4096
+2026-11-13T10:58:01.5719483Z 
+2026-11-13T10:58:01.5719695Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:77: AssertionError
+2026-11-13T10:58:01.5720264Z _ TestPreprocessRetainedBuffers.test_numpy_views_count_the_retained_allocation (shape=(1,), strides=(4,)) _
+2026-11-13T10:58:01.5720617Z 
+2026-11-13T10:58:01.5720966Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_numpy_views_count_the_retained_allocation>
+2026-11-13T10:58:01.5721370Z 
+2026-11-13T10:58:01.5721505Z     def test_numpy_views_count_the_retained_allocation(self):
+2026-11-13T10:58:01.5721795Z         owner = np.arange(8192, dtype=np.float32)
+2026-11-13T10:58:01.5722047Z         original = owner.copy()
+2026-11-13T10:58:01.5722248Z         views = [
+2026-11-13T10:58:01.5722412Z             owner[:1],
+2026-11-13T10:58:01.5722543Z             owner[17:43:3],
+2026-11-13T10:58:01.5722683Z             owner[::-4],
+2026-11-13T10:58:01.5722833Z             owner.reshape(64, 128).T[1:3, ::2],
+2026-11-13T10:58:01.5722985Z             owner[:0],
+2026-11-13T10:58:01.5723099Z         ]
+2026-11-13T10:58:01.5723210Z         for value in views:
+2026-11-13T10:58:01.5723389Z             with self.subTest(shape=value.shape, strides=value.strides):
+2026-11-13T10:58:01.5723644Z >               self.assertEqual(estimate_cache_size_bytes(value), original.nbytes)
+2026-11-13T10:58:01.5723862Z E               AssertionError: 4 != 32768
+2026-11-13T10:58:01.5723962Z 
+2026-11-13T10:58:01.5724097Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:48: AssertionError
+2026-11-13T10:58:01.5724451Z _ TestPreprocessRetainedBuffers.test_numpy_views_count_the_retained_allocation (shape=(9,), strides=(12,)) _
+2026-11-13T10:58:01.5724680Z 
+2026-11-13T10:58:01.5724890Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_numpy_views_count_the_retained_allocation>
+2026-11-13T10:58:01.5725153Z 
+2026-11-13T10:58:01.5725242Z     def test_numpy_views_count_the_retained_allocation(self):
+2026-11-13T10:58:01.5725438Z         owner = np.arange(8192, dtype=np.float32)
+2026-11-13T10:58:01.5725607Z         original = owner.copy()
+2026-11-13T10:58:01.5725746Z         views = [
+2026-11-13T10:58:01.5725860Z             owner[:1],
+2026-11-13T10:58:01.5726159Z             owner[17:43:3],
+2026-11-13T10:58:01.5726293Z             owner[::-4],
+2026-11-13T10:58:01.5726433Z             owner.reshape(64, 128).T[1:3, ::2],
+2026-11-13T10:58:01.5726583Z             owner[:0],
+2026-11-13T10:58:01.5726697Z         ]
+2026-11-13T10:58:01.5726806Z         for value in views:
+2026-11-13T10:58:01.5726979Z             with self.subTest(shape=value.shape, strides=value.strides):
+2026-11-13T10:58:01.5727231Z >               self.assertEqual(estimate_cache_size_bytes(value), original.nbytes)
+2026-11-13T10:58:01.5727445Z E               AssertionError: 36 != 32768
+2026-11-13T10:58:01.5727545Z 
+2026-11-13T10:58:01.5727680Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:48: AssertionError
+2026-11-13T10:58:01.5728046Z _ TestPreprocessRetainedBuffers.test_numpy_views_count_the_retained_allocation (shape=(2048,), strides=(-16,)) _
+2026-11-13T10:58:01.5728404Z 
+2026-11-13T10:58:01.5728616Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_numpy_views_count_the_retained_allocation>
+2026-11-13T10:58:01.5728878Z 
+2026-11-13T10:58:01.5728962Z     def test_numpy_views_count_the_retained_allocation(self):
+2026-11-13T10:58:01.5729156Z         owner = np.arange(8192, dtype=np.float32)
+2026-11-13T10:58:01.5729318Z         original = owner.copy()
+2026-11-13T10:58:01.5729451Z         views = [
+2026-11-13T10:58:01.5729562Z             owner[:1],
+2026-11-13T10:58:01.5729680Z             owner[17:43:3],
+2026-11-13T10:58:01.5729811Z             owner[::-4],
+2026-11-13T10:58:01.5729950Z             owner.reshape(64, 128).T[1:3, ::2],
+2026-11-13T10:58:01.5730100Z             owner[:0],
+2026-11-13T10:58:01.5730214Z         ]
+2026-11-13T10:58:01.5730321Z         for value in views:
+2026-11-13T10:58:01.5730575Z             with self.subTest(shape=value.shape, strides=value.strides):
+2026-11-13T10:58:01.5730827Z >               self.assertEqual(estimate_cache_size_bytes(value), original.nbytes)
+2026-11-13T10:58:01.5731043Z E               AssertionError: 8192 != 32768
+2026-11-13T10:58:01.5731147Z 
+2026-11-13T10:58:01.5731278Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:48: AssertionError
+2026-11-13T10:58:01.5731643Z _ TestPreprocessRetainedBuffers.test_numpy_views_count_the_retained_allocation (shape=(2, 32), strides=(4, 1024)) _
+2026-11-13T10:58:01.5731879Z 
+2026-11-13T10:58:01.5732090Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_numpy_views_count_the_retained_allocation>
+2026-11-13T10:58:01.5732352Z 
+2026-11-13T10:58:01.5732436Z     def test_numpy_views_count_the_retained_allocation(self):
+2026-11-13T10:58:01.5732629Z         owner = np.arange(8192, dtype=np.float32)
+2026-11-13T10:58:01.5732796Z         original = owner.copy()
+2026-11-13T10:58:01.5732929Z         views = [
+2026-11-13T10:58:01.5733040Z             owner[:1],
+2026-11-13T10:58:01.5733163Z             owner[17:43:3],
+2026-11-13T10:58:01.5733292Z             owner[::-4],
+2026-11-13T10:58:01.5733428Z             owner.reshape(64, 128).T[1:3, ::2],
+2026-11-13T10:58:01.5733714Z             owner[:0],
+2026-11-13T10:58:01.5733831Z         ]
+2026-11-13T10:58:01.5733938Z         for value in views:
+2026-11-13T10:58:01.5734111Z             with self.subTest(shape=value.shape, strides=value.strides):
+2026-11-13T10:58:01.5734360Z >               self.assertEqual(estimate_cache_size_bytes(value), original.nbytes)
+2026-11-13T10:58:01.5734574Z E               AssertionError: 256 != 32768
+2026-11-13T10:58:01.5734675Z 
+2026-11-13T10:58:01.5734806Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:48: AssertionError
+2026-11-13T10:58:01.5735163Z _ TestPreprocessRetainedBuffers.test_numpy_views_count_the_retained_allocation (shape=(0,), strides=(4,)) _
+2026-11-13T10:58:01.5735390Z 
+2026-11-13T10:58:01.5735601Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_numpy_views_count_the_retained_allocation>
+2026-11-13T10:58:01.5735868Z 
+2026-11-13T10:58:01.5736089Z     def test_numpy_views_count_the_retained_allocation(self):
+2026-11-13T10:58:01.5736289Z         owner = np.arange(8192, dtype=np.float32)
+2026-11-13T10:58:01.5736449Z         original = owner.copy()
+2026-11-13T10:58:01.5736580Z         views = [
+2026-11-13T10:58:01.5736690Z             owner[:1],
+2026-11-13T10:58:01.5736810Z             owner[17:43:3],
+2026-11-13T10:58:01.5736938Z             owner[::-4],
+2026-11-13T10:58:01.5737074Z             owner.reshape(64, 128).T[1:3, ::2],
+2026-11-13T10:58:01.5737222Z             owner[:0],
+2026-11-13T10:58:01.5737344Z         ]
+2026-11-13T10:58:01.5737452Z         for value in views:
+2026-11-13T10:58:01.5737625Z             with self.subTest(shape=value.shape, strides=value.strides):
+2026-11-13T10:58:01.5737877Z >               self.assertEqual(estimate_cache_size_bytes(value), original.nbytes)
+2026-11-13T10:58:01.5738090Z E               AssertionError: 0 != 32768
+2026-11-13T10:58:01.5738337Z 
+2026-11-13T10:58:01.5738470Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:48: AssertionError
+2026-11-13T10:58:01.5738784Z _ TestPreprocessRetainedBuffers.test_shared_numpy_and_buffer_owners_are_counted_once _
+2026-11-13T10:58:01.5738972Z 
+2026-11-13T10:58:01.5739194Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_shared_numpy_and_buffer_owners_are_counted_once>
+2026-11-13T10:58:01.5739465Z 
+2026-11-13T10:58:01.5739556Z     def test_shared_numpy_and_buffer_owners_are_counted_once(self):
+2026-11-13T10:58:01.5749709Z         owner = np.arange(4096, dtype=np.float32)
+2026-11-13T10:58:01.5750078Z         values = _Artifact(owner[:1], owner[31:37], memoryview(owner), owner, owner[:0])
+2026-11-13T10:58:01.5750475Z >       self.assertEqual(estimate_cache_size_bytes(values), owner.nbytes)
+2026-11-13T10:58:01.5750938Z E       AssertionError: 20508 != 16384
+2026-11-13T10:58:01.5751046Z 
+2026-11-13T10:58:01.5751230Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:100: AssertionError
+2026-11-13T10:58:01.5751665Z _ TestPreprocessRetainedBuffers.test_singleflight_completion_uses_retained_buffer_admission _
+2026-11-13T10:58:01.5751872Z 
+2026-11-13T10:58:01.5752118Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_singleflight_completion_uses_retained_buffer_admission>
+2026-11-13T10:58:01.5752408Z 
+2026-11-13T10:58:01.5752517Z     def test_singleflight_completion_uses_retained_buffer_admission(self):
+2026-11-13T10:58:01.5752741Z         owner = np.arange(2048, dtype=np.float32)
+2026-11-13T10:58:01.5752938Z         cache = MultimodalPreprocessCache(max_size_bytes=128)
+2026-11-13T10:58:01.5753143Z         (miss,) = cache.lookup_or_claim_many(["image"])
+2026-11-13T10:58:01.5753315Z         value = owner[:2]
+2026-11-13T10:58:01.5753463Z         cache.complete_miss(miss, value)
+2026-11-13T10:58:01.5753633Z         self.assertIs(miss.future.result(), value)
+2026-11-13T10:58:01.5753823Z         self.assertEqual(cache.stats()["inflight"], 0)
+2026-11-13T10:58:01.5754019Z >       self.assertEqual(cache.stats()["size_bytes"], 0)
+2026-11-13T10:58:01.5754193Z E       AssertionError: 8 != 0
+2026-11-13T10:58:01.5754284Z 
+2026-11-13T10:58:01.5754416Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:150: AssertionError
+2026-11-13T10:58:01.5754771Z _ TestPreprocessRetainedBuffers.test_small_views_cannot_bypass_cache_admission (use_memoryview=False) _
+2026-11-13T10:58:01.5754989Z 
+2026-11-13T10:58:01.5755202Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_small_views_cannot_bypass_cache_admission>
+2026-11-13T10:58:01.5755465Z 
+2026-11-13T10:58:01.5755550Z     def test_small_views_cannot_bypass_cache_admission(self):
+2026-11-13T10:58:01.5755743Z         for use_memoryview in (False, True):
+2026-11-13T10:58:01.5755929Z             with self.subTest(use_memoryview=use_memoryview):
+2026-11-13T10:58:01.5756283Z                 owner = np.arange(16384, dtype=np.float32)
+2026-11-13T10:58:01.5756460Z                 reference = weakref.ref(owner)
+2026-11-13T10:58:01.5756622Z                 value = owner[:1]
+2026-11-13T10:58:01.5756767Z                 if use_memoryview:
+2026-11-13T10:58:01.5756917Z                     value = memoryview(value)
+2026-11-13T10:58:01.5757107Z                 cache = MultimodalPreprocessCache(max_size_bytes=1024)
+2026-11-13T10:58:01.5757318Z >               self.assertFalse(cache.put("image", value))
+2026-11-13T10:58:01.5757504Z E               AssertionError: True is not false
+2026-11-13T10:58:01.5757611Z 
+2026-11-13T10:58:01.5757743Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:116: AssertionError
+2026-11-13T10:58:01.5758087Z _ TestPreprocessRetainedBuffers.test_small_views_cannot_bypass_cache_admission (use_memoryview=True) _
+2026-11-13T10:58:01.5758301Z 
+2026-11-13T10:58:01.5758516Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_small_views_cannot_bypass_cache_admission>
+2026-11-13T10:58:01.5758878Z 
+2026-11-13T10:58:01.5758962Z     def test_small_views_cannot_bypass_cache_admission(self):
+2026-11-13T10:58:01.5759151Z         for use_memoryview in (False, True):
+2026-11-13T10:58:01.5759332Z             with self.subTest(use_memoryview=use_memoryview):
+2026-11-13T10:58:01.5759526Z                 owner = np.arange(16384, dtype=np.float32)
+2026-11-13T10:58:01.5759699Z                 reference = weakref.ref(owner)
+2026-11-13T10:58:01.5759856Z                 value = owner[:1]
+2026-11-13T10:58:01.5759998Z                 if use_memoryview:
+2026-11-13T10:58:01.5760147Z                     value = memoryview(value)
+2026-11-13T10:58:01.5760336Z                 cache = MultimodalPreprocessCache(max_size_bytes=1024)
+2026-11-13T10:58:01.5760545Z >               self.assertFalse(cache.put("image", value))
+2026-11-13T10:58:01.5760805Z E               AssertionError: True is not false
+2026-11-13T10:58:01.5760918Z 
+2026-11-13T10:58:01.5761050Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:116: AssertionError
+2026-11-13T10:58:01.5761363Z _ TestPreprocessRetainedBuffers.test_unmeasurable_array_owner_is_not_admitted __
+2026-11-13T10:58:01.5761543Z 
+2026-11-13T10:58:01.5761757Z self = <test_preprocess_retained_buffers.TestPreprocessRetainedBuffers testMethod=test_unmeasurable_array_owner_is_not_admitted>
+2026-11-13T10:58:01.5762015Z 
+2026-11-13T10:58:01.5762102Z     def test_unmeasurable_array_owner_is_not_admitted(self):
+2026-11-13T10:58:01.5762322Z         owner = _OpaqueArrayOwner(np.arange(4096, dtype=np.float32))
+2026-11-13T10:58:01.5762517Z         value = np.asarray(owner)[:1]
+2026-11-13T10:58:01.5762691Z >       self.assertIsNone(estimate_cache_size_bytes(value))
+2026-11-13T10:58:01.5762870Z E       AssertionError: 4 is not None
+2026-11-13T10:58:01.5762968Z 
+2026-11-13T10:58:01.5763108Z test/registered/unit/multimodal/test_preprocess_retained_buffers.py:156: AssertionError
+2026-11-13T10:58:01.5763373Z =========================== short test summary info ============================
+2026-11-13T10:58:01.5763889Z SUBFAILED(owner='bytearray') test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_array_views_of_external_buffers_count_the_full_buffer - AssertionError: 4 != 4096
+2026-11-13T10:58:01.5764646Z SUBFAILED(owner='array') test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_array_views_of_external_buffers_count_the_full_buffer - AssertionError: 4 != 4096
+2026-11-13T10:58:01.5765405Z SUBFAILED(owner='c_uint_Array_1024') test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_array_views_of_external_buffers_count_the_full_buffer - AssertionError: 4 != 4096
+2026-11-13T10:58:01.5766299Z SUBFAILED(shape=(10000,)) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_broadcast_and_stride_trick_wrappers_reach_the_owner - AssertionError: 20000 != 64
+2026-11-13T10:58:01.5767032Z SUBFAILED(shape=(3, 2)) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_broadcast_and_stride_trick_wrappers_reach_the_owner - AssertionError: 12 != 64
+2026-11-13T10:58:01.5767745Z SUBFAILED(shape=(1, 3)) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_broadcast_and_stride_trick_wrappers_reach_the_owner - AssertionError: 6 != 64
+2026-11-13T10:58:01.5768531Z FAILED test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_byte_budget_eviction_releases_retained_numpy_owner - AssertionError: array([0.000e+00, 1.000e+00, 2.000e+00, ..., 4.093e+03, 4.094e+03,
+2026-11-13T10:58:01.5769080Z        4.095e+03], shape=(4096,), dtype=float32) is not None
+2026-11-13T10:58:01.5769558Z SUBFAILED(format='B', shape=(4,)) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_memoryviews_count_owner_bytes_instead_of_elements - AssertionError: 4 != 4096
+2026-11-13T10:58:01.5770396Z SUBFAILED(format='I', shape=(1,)) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_memoryviews_count_owner_bytes_instead_of_elements - AssertionError: 1 != 4096
+2026-11-13T10:58:01.5771202Z SUBFAILED(format='I', shape=(16, 64)) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_memoryviews_count_owner_bytes_instead_of_elements - AssertionError: 16 != 4096
+2026-11-13T10:58:01.5771966Z SUBFAILED(format='B', shape=(1366,)) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_memoryviews_count_owner_bytes_instead_of_elements - AssertionError: 1366 != 4096
+2026-11-13T10:58:01.5772805Z SUBFAILED(format='B', shape=(0,)) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_memoryviews_count_owner_bytes_instead_of_elements - AssertionError: 0 != 4096
+2026-11-13T10:58:01.5773548Z SUBFAILED(shape=(1,), strides=(4,)) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_numpy_views_count_the_retained_allocation - AssertionError: 4 != 32768
+2026-11-13T10:58:01.5774278Z SUBFAILED(shape=(9,), strides=(12,)) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_numpy_views_count_the_retained_allocation - AssertionError: 36 != 32768
+2026-11-13T10:58:01.5775063Z SUBFAILED(shape=(2048,), strides=(-16,)) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_numpy_views_count_the_retained_allocation - AssertionError: 8192 != 32768
+2026-11-13T10:58:01.5775824Z SUBFAILED(shape=(2, 32), strides=(4, 1024)) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_numpy_views_count_the_retained_allocation - AssertionError: 256 != 32768
+2026-11-13T10:58:01.5776688Z SUBFAILED(shape=(0,), strides=(4,)) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_numpy_views_count_the_retained_allocation - AssertionError: 0 != 32768
+2026-11-13T10:58:01.5777389Z FAILED test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_shared_numpy_and_buffer_owners_are_counted_once - AssertionError: 20508 != 16384
+2026-11-13T10:58:01.5778069Z FAILED test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_singleflight_completion_uses_retained_buffer_admission - AssertionError: 8 != 0
+2026-11-13T10:58:01.5778788Z SUBFAILED(use_memoryview=False) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_small_views_cannot_bypass_cache_admission - AssertionError: True is not false
+2026-11-13T10:58:01.5779535Z SUBFAILED(use_memoryview=True) test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_small_views_cannot_bypass_cache_admission - AssertionError: True is not false
+2026-11-13T10:58:01.5780235Z FAILED test/registered/unit/multimodal/test_preprocess_retained_buffers.py::TestPreprocessRetainedBuffers::test_unmeasurable_array_owner_is_not_admitted - AssertionError: 4 is not None
+2026-11-13T10:58:01.5780641Z 22 failed, 6 passed in 4.13s
+2026-11-13T10:58:01.5914962Z Confirmed original retained-buffer accounting failures: ['test_array_views_of_external_buffers_count_the_full_buffer', 'test_broadcast_and_stride_trick_wrappers_reach_the_owner', 'test_byte_budget_eviction_releases_retained_numpy_owner', 'test_memoryviews_count_owner_bytes_instead_of_elements', 'test_numpy_views_count_the_retained_allocation', 'test_shared_numpy_and_buffer_owners_are_counted_once', 'test_singleflight_completion_uses_retained_buffer_admission', 'test_small_views_cannot_bypass_cache_admission', 'test_unmeasurable_array_owner_is_not_admitted']
+2026-11-13T10:58:01.5975660Z ##[group]Run git restore --source=HEAD -- python/sglang/srt/multimodal/cache/preprocess_cache.py
+2026-11-13T10:58:01.5976269Z [36;1mgit restore --source=HEAD -- python/sglang/srt/multimodal/cache/preprocess_cache.py[0m
+2026-11-13T10:58:01.5993609Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:58:01.5993744Z env:
+2026-11-13T10:58:01.5993857Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:58:01.5993995Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:58:01.5994144Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:58:01.5994270Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:58:01.5994391Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:58:01.5994556Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:58:01.5994794Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:58:01.5995023Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:58:01.5995232Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:58:01.5995466Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:58:01.5995681Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:58:01.5995866Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:58:01.5996091Z ##[endgroup]
+2026-11-13T10:58:01.6093830Z ##[group]Run set +e
+2026-11-13T10:58:01.6093985Z [36;1mset +e[0m
+2026-11-13T10:58:01.6094379Z [36;1mpython -m pre_commit run --files python/sglang/srt/multimodal/cache/preprocess_cache.py test/registered/unit/multimodal/test_preprocess_retained_buffers.py > sglang-lint.log 2>&1[0m
+2026-11-13T10:58:01.6094793Z [36;1mresult=$?[0m
+2026-11-13T10:58:01.6094908Z [36;1mset -e[0m
+2026-11-13T10:58:01.6095026Z [36;1mcat sglang-lint.log[0m
+2026-11-13T10:58:01.6095177Z [36;1mgit diff > sglang-format.patch[0m
+2026-11-13T10:58:01.6095337Z [36;1mcat sglang-format.patch[0m
+2026-11-13T10:58:01.6095482Z [36;1mpython - <<'PY'[0m
+2026-11-13T10:58:01.6095623Z [36;1mfrom pathlib import Path[0m
+2026-11-13T10:58:01.6095777Z [36;1mprint("BEGIN_FORMATTED_TEST")[0m
+2026-11-13T10:58:01.6096239Z [36;1mprint(Path("test/registered/unit/multimodal/test_preprocess_retained_buffers.py").read_text())[0m
+2026-11-13T10:58:01.6096508Z [36;1mprint("END_FORMATTED_TEST")[0m
+2026-11-13T10:58:01.6096678Z [36;1mPY[0m
+2026-11-13T10:58:01.6096796Z [36;1mtest "$result" -eq 0[0m
+2026-11-13T10:58:01.6096934Z [36;1mgit diff --check[0m
+2026-11-13T10:58:01.6112821Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:58:01.6112957Z env:
+2026-11-13T10:58:01.6113069Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:58:01.6113208Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:58:01.6113356Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:58:01.6113484Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:58:01.6113607Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:58:01.6113774Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:58:01.6114013Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:58:01.6114244Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:58:01.6114453Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:58:01.6114665Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:58:01.6114881Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:58:01.6115061Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:58:01.6115195Z ##[endgroup]
+2026-11-13T10:58:33.3583026Z [INFO] Initializing environment for https://github.com/pre-commit/pre-commit-hooks.
+2026-11-13T10:58:33.3583398Z [INFO] Initializing environment for https://github.com/PyCQA/isort.
+2026-11-13T10:58:33.3583679Z [INFO] Initializing environment for https://github.com/astral-sh/ruff-pre-commit.
+2026-11-13T10:58:33.3583984Z [INFO] Initializing environment for https://github.com/codespell-project/codespell.
+2026-11-13T10:58:33.3584291Z [INFO] Initializing environment for https://github.com/pre-commit/mirrors-clang-format.
+2026-11-13T10:58:33.3584584Z [INFO] Initializing environment for https://github.com/kynan/nbstripout.
+2026-11-13T10:58:33.3584856Z [INFO] Initializing environment for https://github.com/lycheeverse/lychee.git.
+2026-11-13T10:58:33.3585469Z [INFO] Installing environment for https://github.com/pre-commit/pre-commit-hooks.
+2026-11-13T10:58:33.3585728Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:58:33.3585908Z [INFO] This may take a few minutes...
+2026-11-13T10:58:33.3586321Z [INFO] Installing environment for https://github.com/PyCQA/isort.
+2026-11-13T10:58:33.3586646Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:58:33.3586914Z [INFO] This may take a few minutes...
+2026-11-13T10:58:33.3587252Z [INFO] Installing environment for https://github.com/astral-sh/ruff-pre-commit.
+2026-11-13T10:58:33.3587676Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:58:33.3587973Z [INFO] This may take a few minutes...
+2026-11-13T10:58:33.3588454Z [INFO] Installing environment for https://github.com/codespell-project/codespell.
+2026-11-13T10:58:33.3588734Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:58:33.3588912Z [INFO] This may take a few minutes...
+2026-11-13T10:58:33.3589131Z [INFO] Installing environment for https://github.com/pre-commit/mirrors-clang-format.
+2026-11-13T10:58:33.3589596Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:58:33.3589767Z [INFO] This may take a few minutes...
+2026-11-13T10:58:33.3589965Z [INFO] Installing environment for https://github.com/kynan/nbstripout.
+2026-11-13T10:58:33.3590188Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:58:33.3590356Z [INFO] This may take a few minutes...
+2026-11-13T10:58:33.3590596Z check for broken symlinks...............................................................(no files to check)Skipped
+2026-11-13T10:58:33.3590934Z detect destroyed symlinks...................................................................................Passed
+2026-11-13T10:58:33.3591266Z trim trailing whitespace....................................................................................Passed
+2026-11-13T10:58:33.3591582Z fix end of files............................................................................................Passed
+2026-11-13T10:58:33.3591884Z check yaml..............................................................................(no files to check)Skipped
+2026-11-13T10:58:33.3592174Z check toml..............................................................................(no files to check)Skipped
+2026-11-13T10:58:33.3592468Z check python ast............................................................................................Passed
+2026-11-13T10:58:33.3592771Z check for added large files.................................................................................Passed
+2026-11-13T10:58:33.3593131Z check for merge conflicts...................................................................................Passed
+2026-11-13T10:58:33.3593473Z check that scripts with shebangs are executable.............................................................Passed
+2026-11-13T10:58:33.3593807Z detect private key..........................................................................................Passed
+2026-11-13T10:58:33.3594113Z debug statements (python)...................................................................................Passed
+2026-11-13T10:58:33.3594417Z don't commit to branch......................................................................................Passed
+2026-11-13T10:58:33.3594711Z isort.......................................................................................................Passed
+2026-11-13T10:58:33.3594997Z ruff (legacy alias).........................................................................................Passed
+2026-11-13T10:58:33.3595285Z ruff format.................................................................................................Passed
+2026-11-13T10:58:33.3595583Z codespell...................................................................................................Passed
+2026-11-13T10:58:33.3596142Z clang-format............................................................................(no files to check)Skipped
+2026-11-13T10:58:33.3596457Z nbstripout..............................................................................(no files to check)Skipped
+2026-11-13T10:58:33.3596796Z forbid test/srt/ (use test/registered/ or test/manual/).................................(no files to check)Skipped
+2026-11-13T10:58:33.3597139Z forbid docs_new/ (renamed to docs/).....................................................(no files to check)Skipped
+2026-11-13T10:58:33.3597472Z check chinese characters in multimodal_gen..............................................(no files to check)Skipped
+2026-11-13T10:58:33.3597812Z sort CI_PERMISSIONS.json................................................................(no files to check)Skipped
+2026-11-13T10:58:33.3598153Z sort Cookbook vendor groups in docs/docs.json...........................................(no files to check)Skipped
+2026-11-13T10:58:33.3598493Z check for duplicate workflow job names..................................................(no files to check)Skipped
+2026-11-13T10:58:33.3598952Z check opt-in CI tiers match the workflows that gate on them.............................(no files to check)Skipped
+2026-11-13T10:58:33.3599309Z check rust-ext cache key prefix defaults match..........................................(no files to check)Skipped
+2026-11-13T10:58:33.3599690Z check Dockerfile sgl-deep-gemm/sgl-deep-ep versions match python/pyproject.toml.........(no files to check)Skipped
+2026-11-13T10:58:33.3600063Z reject bare pytest.main calls in __main__ blocks............................................................Passed
+2026-11-13T10:58:33.3600430Z regenerate python/sglang/cli/_commands/ from the Cookbook configs.......................(no files to check)Skipped
+2026-11-13T10:58:33.3600793Z validate registered test CI registries......................................................................Passed
+2026-11-13T10:58:33.3601148Z reject CI-registered tests inside the sglang package........................................................Passed
+2026-11-13T10:58:33.3601522Z reject importing a name through a module that only re-imports it............................................Passed
+2026-11-13T10:58:33.3601899Z reject srt domain imports in sglang.srt.utils and sglang.utils imports in the runtime.......................Passed
+2026-11-13T10:58:33.3602264Z rustfmt sgl-model-gateway (nightly).....................................................(no files to check)Skipped
+2026-11-13T10:58:33.3602592Z rustfmt sgl-router......................................................................(no files to check)Skipped
+2026-11-13T10:58:33.3602913Z clippy rust/ workspace (auto-fix).......................................................(no files to check)Skipped
+2026-11-13T10:58:33.3603236Z rustfmt rust/ workspace.................................................................(no files to check)Skipped
+2026-11-13T10:58:33.3863062Z BEGIN_FORMATTED_TEST
+2026-11-13T10:58:33.3863464Z """Retained-buffer accounting for multimodal preprocessing cache values."""
+2026-11-13T10:58:33.3863736Z 
+2026-11-13T10:58:33.3863813Z import array
+2026-11-13T10:58:33.3863982Z import ctypes
+2026-11-13T10:58:33.3864177Z import gc
+2026-11-13T10:58:33.3864342Z import unittest
+2026-11-13T10:58:33.3864517Z import weakref
+2026-11-13T10:58:33.3864616Z 
+2026-11-13T10:58:33.3864696Z import numpy as np
+2026-11-13T10:58:33.3864878Z import torch
+2026-11-13T10:58:33.3864977Z 
+2026-11-13T10:58:33.3865125Z from sglang.srt.multimodal.cache.preprocess_cache import (
+2026-11-13T10:58:33.3865452Z     MultimodalPreprocessCache,
+2026-11-13T10:58:33.3865677Z     estimate_cache_size_bytes,
+2026-11-13T10:58:33.3865881Z )
+2026-11-13T10:58:33.3866224Z from sglang.test.ci.ci_register import register_cpu_ci
+2026-11-13T10:58:33.3866419Z 
+2026-11-13T10:58:33.3866540Z register_cpu_ci(est_time=3, suite="base-a-test-cpu")
+2026-11-13T10:58:33.3866724Z 
+2026-11-13T10:58:33.3866727Z 
+2026-11-13T10:58:33.3866802Z class _Artifact:
+2026-11-13T10:58:33.3867161Z     def __init__(self, *items):
+2026-11-13T10:58:33.3867303Z         self.items = items
+2026-11-13T10:58:33.3867385Z 
+2026-11-13T10:58:33.3867440Z     def cache_size_items(self):
+2026-11-13T10:58:33.3867579Z         return self.items
+2026-11-13T10:58:33.3867660Z 
+2026-11-13T10:58:33.3867663Z 
+2026-11-13T10:58:33.3867719Z class _OpaqueArrayOwner:
+2026-11-13T10:58:33.3867854Z     def __init__(self, data):
+2026-11-13T10:58:33.3867990Z         self.data = data
+2026-11-13T10:58:33.3868145Z         self.__array_interface__ = data.__array_interface__
+2026-11-13T10:58:33.3868270Z 
+2026-11-13T10:58:33.3868272Z 
+2026-11-13T10:58:33.3868365Z class TestPreprocessRetainedBuffers(unittest.TestCase):
+2026-11-13T10:58:33.3868583Z     def test_numpy_views_count_the_retained_allocation(self):
+2026-11-13T10:58:33.3868779Z         owner = np.arange(8192, dtype=np.float32)
+2026-11-13T10:58:33.3868943Z         original = owner.copy()
+2026-11-13T10:58:33.3869076Z         views = [
+2026-11-13T10:58:33.3869192Z             owner[:1],
+2026-11-13T10:58:33.3869317Z             owner[17:43:3],
+2026-11-13T10:58:33.3869482Z             owner[::-4],
+2026-11-13T10:58:33.3869621Z             owner.reshape(64, 128).T[1:3, ::2],
+2026-11-13T10:58:33.3869861Z             owner[:0],
+2026-11-13T10:58:33.3869977Z         ]
+2026-11-13T10:58:33.3870087Z         for value in views:
+2026-11-13T10:58:33.3870264Z             with self.subTest(shape=value.shape, strides=value.strides):
+2026-11-13T10:58:33.3870519Z                 self.assertEqual(estimate_cache_size_bytes(value), original.nbytes)
+2026-11-13T10:58:33.3870786Z                 self.assertTrue(np.shares_memory(value, owner) or value.size == 0)
+2026-11-13T10:58:33.3871016Z         np.testing.assert_array_equal(owner, original)
+2026-11-13T10:58:33.3871133Z 
+2026-11-13T10:58:33.3871236Z     def test_broadcast_and_stride_trick_wrappers_reach_the_owner(self):
+2026-11-13T10:58:33.3871444Z         owner = np.arange(32, dtype=np.int16)
+2026-11-13T10:58:33.3871595Z         values = [
+2026-11-13T10:58:33.3871724Z             np.broadcast_to(owner[:1], (10000,)),
+2026-11-13T10:58:33.3871891Z             np.lib.stride_tricks.as_strided(
+2026-11-13T10:58:33.3872075Z                 owner, shape=(3, 2), strides=(8, 2), writeable=False
+2026-11-13T10:58:33.3872245Z             ),
+2026-11-13T10:58:33.3872394Z             np.lib.stride_tricks.sliding_window_view(owner, 3)[1:2],
+2026-11-13T10:58:33.3872570Z         ]
+2026-11-13T10:58:33.3872681Z         for value in values:
+2026-11-13T10:58:33.3872826Z             with self.subTest(shape=value.shape):
+2026-11-13T10:58:33.3873036Z                 self.assertEqual(estimate_cache_size_bytes(value), owner.nbytes)
+2026-11-13T10:58:33.3873258Z                 self.assertFalse(value.flags.writeable)
+2026-11-13T10:58:33.3873374Z 
+2026-11-13T10:58:33.3873470Z     def test_memoryviews_count_owner_bytes_instead_of_elements(self):
+2026-11-13T10:58:33.3873662Z         owner = bytearray(4096)
+2026-11-13T10:58:33.3873791Z         values = [
+2026-11-13T10:58:33.3873915Z             memoryview(owner)[3:7],
+2026-11-13T10:58:33.3874069Z             memoryview(owner).cast("I")[3:4],
+2026-11-13T10:58:33.3874242Z             memoryview(owner).cast("I", shape=(16, 64)),
+2026-11-13T10:58:33.3874413Z             memoryview(owner)[::-3],
+2026-11-13T10:58:33.3874557Z             memoryview(owner)[0:0],
+2026-11-13T10:58:33.3874689Z         ]
+2026-11-13T10:58:33.3874799Z         for value in values:
+2026-11-13T10:58:33.3874970Z             with self.subTest(format=value.format, shape=value.shape):
+2026-11-13T10:58:33.3875204Z                 self.assertEqual(estimate_cache_size_bytes(value), len(owner))
+2026-11-13T10:58:33.3875416Z         self.assertEqual(owner, bytearray(4096))
+2026-11-13T10:58:33.3875526Z 
+2026-11-13T10:58:33.3875629Z     def test_array_views_of_external_buffers_count_the_full_buffer(self):
+2026-11-13T10:58:33.3875863Z         owners = [
+2026-11-13T10:58:33.3876130Z             bytearray(4096),
+2026-11-13T10:58:33.3876288Z             array.array("I", range(1024)),
+2026-11-13T10:58:33.3876548Z             (ctypes.c_uint32 * 1024)(*range(1024)),
+2026-11-13T10:58:33.3876698Z         ]
+2026-11-13T10:58:33.3876807Z         for owner in owners:
+2026-11-13T10:58:33.3876992Z             value = np.frombuffer(owner, dtype=np.uint8, count=4, offset=16)
+2026-11-13T10:58:33.3877210Z             with self.subTest(owner=type(owner).__name__):
+2026-11-13T10:58:33.3877382Z                 self.assertEqual(
+2026-11-13T10:58:33.3877567Z                     estimate_cache_size_bytes(value), memoryview(owner).nbytes
+2026-11-13T10:58:33.3877752Z                 )
+2026-11-13T10:58:33.3877870Z                 self.assertEqual(
+2026-11-13T10:58:33.3878032Z                     estimate_cache_size_bytes(memoryview(value)),
+2026-11-13T10:58:33.3878216Z                     memoryview(owner).nbytes,
+2026-11-13T10:58:33.3878359Z                 )
+2026-11-13T10:58:33.3878426Z 
+2026-11-13T10:58:33.3878521Z     def test_shared_numpy_and_buffer_owners_are_counted_once(self):
+2026-11-13T10:58:33.3878727Z         owner = np.arange(4096, dtype=np.float32)
+2026-11-13T10:58:33.3878952Z         values = _Artifact(owner[:1], owner[31:37], memoryview(owner), owner, owner[:0])
+2026-11-13T10:58:33.3879309Z         self.assertEqual(estimate_cache_size_bytes(values), owner.nbytes)
+2026-11-13T10:58:33.3879533Z         independent = np.arange(4096, dtype=np.float32)
+2026-11-13T10:58:33.3879698Z         self.assertEqual(
+2026-11-13T10:58:33.3879860Z             estimate_cache_size_bytes([values, independent[:1]]),
+2026-11-13T10:58:33.3880050Z             owner.nbytes + independent.nbytes,
+2026-11-13T10:58:33.3880200Z         )
+2026-11-13T10:58:33.3880257Z 
+2026-11-13T10:58:33.3880344Z     def test_small_views_cannot_bypass_cache_admission(self):
+2026-11-13T10:58:33.3880531Z         for use_memoryview in (False, True):
+2026-11-13T10:58:33.3880708Z             with self.subTest(use_memoryview=use_memoryview):
+2026-11-13T10:58:33.3880897Z                 owner = np.arange(16384, dtype=np.float32)
+2026-11-13T10:58:33.3881073Z                 reference = weakref.ref(owner)
+2026-11-13T10:58:33.3881228Z                 value = owner[:1]
+2026-11-13T10:58:33.3881367Z                 if use_memoryview:
+2026-11-13T10:58:33.3881516Z                     value = memoryview(value)
+2026-11-13T10:58:33.3881729Z                 cache = MultimodalPreprocessCache(max_size_bytes=1024)
+2026-11-13T10:58:33.3881940Z                 self.assertFalse(cache.put("image", value))
+2026-11-13T10:58:33.3882135Z                 self.assertEqual(cache.stats()["size_bytes"], 0)
+2026-11-13T10:58:33.3882316Z                 self.assertEqual(len(cache), 0)
+2026-11-13T10:58:33.3882473Z                 del owner, value
+2026-11-13T10:58:33.3882607Z                 gc.collect()
+2026-11-13T10:58:33.3882748Z                 self.assertIsNone(reference())
+2026-11-13T10:58:33.3882851Z 
+2026-11-13T10:58:33.3882947Z     def test_byte_budget_eviction_releases_retained_numpy_owner(self):
+2026-11-13T10:58:33.3883151Z         owner = np.arange(4096, dtype=np.float32)
+2026-11-13T10:58:33.3883320Z         reference = weakref.ref(owner)
+2026-11-13T10:58:33.3883509Z         cache = MultimodalPreprocessCache(max_size_bytes=owner.nbytes)
+2026-11-13T10:58:33.3883725Z         self.assertTrue(cache.put("first", owner[:1]))
+2026-11-13T10:58:33.3883882Z         del owner
+2026-11-13T10:58:33.3883995Z         gc.collect()
+2026-11-13T10:58:33.3884124Z         self.assertIsNotNone(reference())
+2026-11-13T10:58:33.3884226Z 
+2026-11-13T10:58:33.3884289Z         other = np.arange(4096, dtype=np.float32)
+2026-11-13T10:58:33.3884467Z         self.assertTrue(cache.put("second", other[-1:]))
+2026-11-13T10:58:33.3884630Z         gc.collect()
+2026-11-13T10:58:33.3884760Z         self.assertIsNone(reference())
+2026-11-13T10:58:33.3884911Z         self.assertNotIn("first", cache)
+2026-11-13T10:58:33.3885062Z         self.assertIn("second", cache)
+2026-11-13T10:58:33.3885241Z         self.assertEqual(cache.stats()["size_bytes"], other.nbytes)
+2026-11-13T10:58:33.3885448Z         self.assertEqual(cache.stats()["evictions"], 1)
+2026-11-13T10:58:33.3885723Z         np.testing.assert_array_equal(cache.get("second"), other[-1:])
+2026-11-13T10:58:33.3885862Z 
+2026-11-13T10:58:33.3886114Z     def test_singleflight_completion_uses_retained_buffer_admission(self):
+2026-11-13T10:58:33.3886344Z         owner = np.arange(2048, dtype=np.float32)
+2026-11-13T10:58:33.3886536Z         cache = MultimodalPreprocessCache(max_size_bytes=128)
+2026-11-13T10:58:33.3886736Z         (miss,) = cache.lookup_or_claim_many(["image"])
+2026-11-13T10:58:33.3886896Z         value = owner[:2]
+2026-11-13T10:58:33.3887030Z         cache.complete_miss(miss, value)
+2026-11-13T10:58:33.3887192Z         self.assertIs(miss.future.result(), value)
+2026-11-13T10:58:33.3887375Z         self.assertEqual(cache.stats()["inflight"], 0)
+2026-11-13T10:58:33.3887559Z         self.assertEqual(cache.stats()["size_bytes"], 0)
+2026-11-13T10:58:33.3887729Z         self.assertNotIn("image", cache)
+2026-11-13T10:58:33.3887827Z 
+2026-11-13T10:58:33.3887909Z     def test_unmeasurable_array_owner_is_not_admitted(self):
+2026-11-13T10:58:33.3888125Z         owner = _OpaqueArrayOwner(np.arange(4096, dtype=np.float32))
+2026-11-13T10:58:33.3888399Z         value = np.asarray(owner)[:1]
+2026-11-13T10:58:33.3888573Z         self.assertIsNone(estimate_cache_size_bytes(value))
+2026-11-13T10:58:33.3888781Z         cache = MultimodalPreprocessCache(max_size_bytes=1024)
+2026-11-13T10:58:33.3888976Z         self.assertFalse(cache.put("image", value))
+2026-11-13T10:58:33.3889089Z 
+2026-11-13T10:58:33.3889190Z     def test_ordinary_values_and_explicit_size_keep_their_contract(self):
+2026-11-13T10:58:33.3889524Z         owner = np.arange(16, dtype=np.float32)
+2026-11-13T10:58:33.3889785Z         tensor = torch.arange(32, dtype=torch.float32)
+2026-11-13T10:58:33.3890110Z         self.assertEqual(estimate_cache_size_bytes(owner), owner.nbytes)
+2026-11-13T10:58:33.3890478Z         self.assertEqual(estimate_cache_size_bytes(b"abc"), 3)
+2026-11-13T10:58:33.3890880Z         self.assertEqual(estimate_cache_size_bytes(bytearray(b"abcd")), 4)
+2026-11-13T10:58:33.3891329Z         self.assertEqual(
+2026-11-13T10:58:33.3891579Z             estimate_cache_size_bytes(tensor), tensor.untyped_storage().nbytes()
+2026-11-13T10:58:33.3891778Z         )
+2026-11-13T10:58:33.3891952Z         self.assertIsNone(estimate_cache_size_bytes(torch.empty(1, device="meta")))
+2026-11-13T10:58:33.3892198Z         cache = MultimodalPreprocessCache(max_size_bytes=4)
+2026-11-13T10:58:33.3892370Z         value = owner[:1]
+2026-11-13T10:58:33.3892539Z         self.assertTrue(cache.put("explicit", value, size_bytes=4))
+2026-11-13T10:58:33.3892742Z         self.assertIs(cache.get("explicit"), value)
+2026-11-13T10:58:33.3892853Z 
+2026-11-13T10:58:33.3892855Z 
+2026-11-13T10:58:33.3892913Z if __name__ == "__main__":
+2026-11-13T10:58:33.3893047Z     unittest.main(verbosity=2)
+2026-11-13T10:58:33.3893132Z 
+2026-11-13T10:58:33.3893182Z END_FORMATTED_TEST
+2026-11-13T10:58:33.4052988Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-11-13T10:58:33.4053221Z with:
+2026-11-13T10:58:33.4053358Z   name: native-retained-buffer-budget-evidence
+2026-11-13T10:58:33.4053762Z   path: sglang-install.log
+sglang-environment.txt
+sglang-patched.log
+sglang-patched.xml
+sglang-baseline.log
+sglang-baseline.xml
+sglang-lint.log
+sglang-format.patch
+
+2026-11-13T10:58:33.4054145Z   if-no-files-found: warn
+2026-11-13T10:58:33.4054276Z   compression-level: 6
+2026-11-13T10:58:33.4054398Z   overwrite: false
+2026-11-13T10:58:33.4054522Z   include-hidden-files: false
+2026-11-13T10:58:33.4054655Z   archive: true
+2026-11-13T10:58:33.4054764Z env:
+2026-11-13T10:58:33.4054876Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:58:33.4055009Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:58:33.4055154Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:58:33.4055275Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:58:33.4055390Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:58:33.4055572Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:58:33.4055803Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:58:33.4056357Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:58:33.4056563Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:58:33.4056768Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:58:33.4056976Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:58:33.4057265Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:58:33.4057450Z ##[endgroup]
+2026-11-13T10:58:33.5149952Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-13T10:58:33.5152450Z The least common ancestor is /home/runner/work/sglang/sglang. This will be the root directory of the artifact
+2026-11-13T10:58:33.5152999Z With the provided path, there will be 8 files uploaded
+2026-11-13T10:58:33.5153636Z Artifact name is valid!
+2026-11-13T10:58:33.5153982Z Root directory input is valid!
+2026-11-13T10:58:33.8394420Z Uploading artifact: native-retained-buffer-budget-evidence.zip
+2026-11-13T10:58:33.8418426Z Beginning upload of artifact content to blob storage
+2026-11-13T10:58:34.1449708Z Uploaded bytes 13798
+2026-11-13T10:58:34.2130076Z Finished uploading artifact content to blob storage!
+2026-11-13T10:58:34.2130623Z SHA256 digest of uploaded artifact is 45187303ce211a99f3f4208ec54abb5a9df8a1d4fa30f4321eff5e3acabfee3b
+2026-11-13T10:58:34.2130992Z Finalizing artifact upload
+2026-11-13T10:58:34.7000421Z Artifact native-retained-buffer-budget-evidence successfully finalized. Artifact ID 14029739037
+2026-11-13T10:58:34.7000975Z Artifact native-retained-buffer-budget-evidence has been successfully uploaded! Final size is 13798 bytes. Artifact ID is 14029739037
+2026-11-13T10:58:34.7003851Z Artifact download URL: https://github.com/Afloat16/sglang/actions/runs/43411501586/artifacts/14029739037
+2026-11-13T10:58:34.7152936Z Post job cleanup.
+2026-11-13T10:58:34.7951407Z (node:17346) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T10:58:34.7951928Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T10:58:34.8110802Z Post job cleanup.
+2026-11-13T10:58:34.8680021Z [command]/usr/bin/git version
+2026-11-13T10:58:34.8721787Z git version 2.56.1
+2026-11-13T10:58:34.8776687Z Temporarily overriding HOME='/home/runner/work/_temp/9c7535a1-f886-44e2-854f-d3fc36352930' before making global git config changes
+2026-11-13T10:58:34.8777355Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T10:58:34.8780053Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sglang/sglang
+2026-11-13T10:58:34.8810016Z Removing SSH command configuration
+2026-11-13T10:58:34.8814284Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T10:58:34.8842902Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T10:58:34.9055462Z Removing HTTP extra header
+2026-11-13T10:58:34.9061756Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T10:58:34.9094591Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T10:58:34.9348172Z Removing includeIf entries pointing to credentials config files
+2026-11-13T10:58:34.9353914Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T10:58:34.9397028Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T10:58:34.9782958Z Cleaning up orphan processes
+2026-11-13T10:58:35.0150325Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
