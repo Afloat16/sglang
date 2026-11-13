@@ -1,0 +1,1835 @@
+﻿2026-11-13T09:17:01.8967810Z Current runner version: '2.338.2'
+2026-11-13T09:17:01.8992285Z ##[group]Runner Image Provisioner
+2026-11-13T09:17:01.8993229Z Hosted Compute Agent
+2026-11-13T09:17:01.8993903Z Version: 20261028.624
+2026-11-13T09:17:01.8994617Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-13T09:17:01.8995817Z Build Date: 2026-10-28T21:51:42Z
+2026-11-13T09:17:01.8996536Z Worker ID: {848b0476-65ce-4aad-947e-1983d35fcfe9}
+2026-11-13T09:17:01.8997285Z Region: westus3
+2026-11-13T09:17:01.8997868Z Cloud: Azure
+2026-11-13T09:17:01.8998722Z ##[endgroup]
+2026-11-13T09:17:01.9000365Z ##[group]Operating System
+2026-11-13T09:17:01.9001024Z Ubuntu
+2026-11-13T09:17:01.9001852Z 24.04.5
+2026-11-13T09:17:01.9002681Z LTS
+2026-11-13T09:17:01.9003302Z ##[endgroup]
+2026-11-13T09:17:01.9003925Z ##[group]Runner Image
+2026-11-13T09:17:01.9004540Z Image: ubuntu-24.04
+2026-11-13T09:17:01.9005102Z Version: 20261101.360.1
+2026-11-13T09:17:01.9006501Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-13T09:17:01.9008101Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-13T09:17:01.9009081Z ##[endgroup]
+2026-11-13T09:17:01.9010211Z ##[group]GITHUB_TOKEN Permissions
+2026-11-13T09:17:01.9012633Z Contents: read
+2026-11-13T09:17:01.9013249Z Metadata: read
+2026-11-13T09:17:01.9013951Z ##[endgroup]
+2026-11-13T09:17:01.9016338Z Secret source: Actions
+2026-11-13T09:17:01.9017443Z Cache mode: write
+2026-11-13T09:17:01.9018152Z Prepare workflow directory
+2026-11-13T09:17:01.9470097Z Prepare all required actions
+2026-11-13T09:17:01.9518738Z Getting action download info
+2026-11-13T09:17:02.2662510Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-13T09:17:02.3533734Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-13T09:17:02.4343672Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-11-13T09:17:02.6183527Z Complete job name: native-cpu
+2026-11-13T09:17:02.7078195Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-11-13T09:17:02.7079263Z with:
+2026-11-13T09:17:02.7079749Z   ref: 968253dd7b1ecdbf43fb4c507d76ba1142a60597
+2026-11-13T09:17:02.7080343Z   fetch-depth: 2
+2026-11-13T09:17:02.7080800Z   persist-credentials: false
+2026-11-13T09:17:02.7081317Z   repository: Afloat16/sglang
+2026-11-13T09:17:02.7085439Z   token: ***
+2026-11-13T09:17:02.7085875Z   ssh-strict: true
+2026-11-13T09:17:02.7086307Z   ssh-user: git
+2026-11-13T09:17:02.7086734Z   clean: true
+2026-11-13T09:17:02.7087180Z   sparse-checkout-cone-mode: true
+2026-11-13T09:17:02.7087705Z   fetch-tags: false
+2026-11-13T09:17:02.7088195Z   show-progress: true
+2026-11-13T09:17:02.7088639Z   lfs: false
+2026-11-13T09:17:02.7089048Z   submodules: false
+2026-11-13T09:17:02.7089517Z   set-safe-directory: true
+2026-11-13T09:17:02.7090022Z   allow-unsafe-pr-checkout: false
+2026-11-13T09:17:02.7090797Z env:
+2026-11-13T09:17:02.7091253Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:17:02.7092171Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:17:02.7093096Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:17:02.7093602Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:17:02.7094229Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:17:02.7094699Z ##[endgroup]
+2026-11-13T09:17:02.9821231Z Syncing repository: Afloat16/sglang
+2026-11-13T09:17:02.9824186Z ##[group]Getting Git version info
+2026-11-13T09:17:02.9825480Z Working directory is '/home/runner/work/sglang/sglang'
+2026-11-13T09:17:02.9827370Z [command]/usr/bin/git version
+2026-11-13T09:17:02.9914230Z git version 2.56.0
+2026-11-13T09:17:02.9960934Z ##[endgroup]
+2026-11-13T09:17:02.9993229Z Temporarily overriding HOME='/home/runner/work/_temp/18169a53-c864-4d5e-a8f9-42b4ecd0ee45' before making global git config changes
+2026-11-13T09:17:02.9995613Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T09:17:02.9997044Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sglang/sglang
+2026-11-13T09:17:03.0067905Z Deleting the contents of '/home/runner/work/sglang/sglang'
+2026-11-13T09:17:03.0072553Z ##[group]Determining repository object format
+2026-11-13T09:17:03.0074719Z ##[endgroup]
+2026-11-13T09:17:03.0076334Z ##[group]Initializing the repository
+2026-11-13T09:17:03.0081000Z [command]/usr/bin/git init /home/runner/work/sglang/sglang
+2026-11-13T09:17:03.0198661Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-13T09:17:03.0200674Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-13T09:17:03.0202780Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-13T09:17:03.0203890Z hint: call:
+2026-11-13T09:17:03.0204620Z hint:
+2026-11-13T09:17:03.0205188Z hint: 	git config --global init.defaultBranch <name>
+2026-11-13T09:17:03.0205884Z hint:
+2026-11-13T09:17:03.0206579Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-13T09:17:03.0208285Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-13T09:17:03.0209634Z hint:
+2026-11-13T09:17:03.0210435Z hint: 	git branch -m <name>
+2026-11-13T09:17:03.0211252Z hint:
+2026-11-13T09:17:03.0212759Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-13T09:17:03.0214634Z Initialized empty Git repository in /home/runner/work/sglang/sglang/.git/
+2026-11-13T09:17:03.0225677Z [command]/usr/bin/git remote add origin https://github.com/Afloat16/sglang
+2026-11-13T09:17:03.0281485Z ##[endgroup]
+2026-11-13T09:17:03.0282932Z ##[group]Disabling automatic garbage collection
+2026-11-13T09:17:03.0292775Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-13T09:17:03.0340451Z ##[endgroup]
+2026-11-13T09:17:03.0342074Z ##[group]Setting up auth
+2026-11-13T09:17:03.0343121Z Removing SSH command configuration
+2026-11-13T09:17:03.0348330Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T09:17:03.0395494Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T09:17:03.0798232Z Removing HTTP extra header
+2026-11-13T09:17:03.0806825Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T09:17:03.0858988Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T09:17:03.1100192Z Removing includeIf entries pointing to credentials config files
+2026-11-13T09:17:03.1105813Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T09:17:03.1151236Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T09:17:03.1401229Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-15d50ed4-242c-4e89-ae1e-03fc27039f02.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-13T09:17:03.1451118Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sglang/sglang/.git.path /home/runner/work/_temp/git-credentials-15d50ed4-242c-4e89-ae1e-03fc27039f02.config
+2026-11-13T09:17:03.1494368Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-15d50ed4-242c-4e89-ae1e-03fc27039f02.config
+2026-11-13T09:17:03.1538253Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-15d50ed4-242c-4e89-ae1e-03fc27039f02.config
+2026-11-13T09:17:03.1580861Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-15d50ed4-242c-4e89-ae1e-03fc27039f02.config
+2026-11-13T09:17:03.1622272Z ##[endgroup]
+2026-11-13T09:17:03.1623627Z ##[group]Fetching the repository
+2026-11-13T09:17:03.1628745Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=2 origin 968253dd7b1ecdbf43fb4c507d76ba1142a60597
+2026-11-13T09:17:10.9813229Z From https://github.com/Afloat16/sglang
+2026-11-13T09:17:10.9815328Z  * branch            968253dd7b1ecdbf43fb4c507d76ba1142a60597 -> FETCH_HEAD
+2026-11-13T09:17:10.9819015Z [command]/usr/bin/git rev-parse --verify --quiet 968253dd7b1ecdbf43fb4c507d76ba1142a60597^{object}
+2026-11-13T09:17:10.9860321Z 968253dd7b1ecdbf43fb4c507d76ba1142a60597
+2026-11-13T09:17:10.9865713Z ##[endgroup]
+2026-11-13T09:17:10.9867128Z ##[group]Determining the checkout info
+2026-11-13T09:17:10.9869181Z ##[endgroup]
+2026-11-13T09:17:10.9870316Z [command]/usr/bin/git sparse-checkout disable
+2026-11-13T09:17:10.9938457Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-13T09:17:10.9988797Z ##[group]Checking out the ref
+2026-11-13T09:17:10.9992434Z [command]/usr/bin/git checkout --progress --force 968253dd7b1ecdbf43fb4c507d76ba1142a60597
+2026-11-13T09:17:12.0233175Z Updating files:  97% (12166/12495)
+2026-11-13T09:17:12.0320459Z Updating files:  98% (12246/12495)
+2026-11-13T09:17:12.0390716Z Updating files:  99% (12371/12495)
+2026-11-13T09:17:12.0391250Z Updating files: 100% (12495/12495)
+2026-11-13T09:17:12.0392123Z Updating files: 100% (12495/12495), done.
+2026-11-13T09:17:12.0520457Z Note: switching to '968253dd7b1ecdbf43fb4c507d76ba1142a60597'.
+2026-11-13T09:17:12.0521023Z 
+2026-11-13T09:17:12.0521433Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-13T09:17:12.0522536Z changes and commit them, and you can discard any commits you make in this
+2026-11-13T09:17:12.0523094Z state without impacting any branches by switching back to a branch.
+2026-11-13T09:17:12.0523475Z 
+2026-11-13T09:17:12.0523746Z If you want to create a new branch to retain commits you create, you may
+2026-11-13T09:17:12.0524521Z do so (now or later) by using -c with the switch command. Example:
+2026-11-13T09:17:12.0524843Z 
+2026-11-13T09:17:12.0524992Z   git switch -c <new-branch-name>
+2026-11-13T09:17:12.0525207Z 
+2026-11-13T09:17:12.0525361Z Or undo this operation with:
+2026-11-13T09:17:12.0525556Z 
+2026-11-13T09:17:12.0525703Z   git switch -
+2026-11-13T09:17:12.0525865Z 
+2026-11-13T09:17:12.0526188Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-13T09:17:12.0526568Z 
+2026-11-13T09:17:12.0526858Z HEAD is now at 968253d Fix DynamicGradMode policy changes across context lifetimes
+2026-11-13T09:17:12.0556057Z ##[endgroup]
+2026-11-13T09:17:12.0613967Z [command]/usr/bin/git log -1 --format=%H
+2026-11-13T09:17:12.0652156Z 968253dd7b1ecdbf43fb4c507d76ba1142a60597
+2026-11-13T09:17:12.0662905Z ##[group]Removing auth
+2026-11-13T09:17:12.0663511Z Removing SSH command configuration
+2026-11-13T09:17:12.0667561Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T09:17:12.0711805Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T09:17:12.0973320Z Removing HTTP extra header
+2026-11-13T09:17:12.0976188Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T09:17:12.1019989Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T09:17:12.1277736Z Removing includeIf entries pointing to credentials config files
+2026-11-13T09:17:12.1281311Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T09:17:12.1319491Z includeif.gitdir:/home/runner/work/sglang/sglang/.git.path
+2026-11-13T09:17:12.1320422Z includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path
+2026-11-13T09:17:12.1320960Z includeif.gitdir:/github/workspace/.git.path
+2026-11-13T09:17:12.1321419Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-13T09:17:12.1332122Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sglang/sglang/.git.path
+2026-11-13T09:17:12.1369907Z /home/runner/work/_temp/git-credentials-15d50ed4-242c-4e89-ae1e-03fc27039f02.config
+2026-11-13T09:17:12.1380901Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sglang/sglang/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-15d50ed4\-242c\-4e89\-ae1e\-03fc27039f02\.config
+2026-11-13T09:17:12.1429897Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path
+2026-11-13T09:17:12.1519770Z /home/runner/work/_temp/git-credentials-15d50ed4-242c-4e89-ae1e-03fc27039f02.config
+2026-11-13T09:17:12.1522879Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-15d50ed4\-242c\-4e89\-ae1e\-03fc27039f02\.config
+2026-11-13T09:17:12.1544730Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-13T09:17:12.1579269Z /github/runner_temp/git-credentials-15d50ed4-242c-4e89-ae1e-03fc27039f02.config
+2026-11-13T09:17:12.1587387Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-15d50ed4\-242c\-4e89\-ae1e\-03fc27039f02\.config
+2026-11-13T09:17:12.1635046Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-13T09:17:12.1669501Z /github/runner_temp/git-credentials-15d50ed4-242c-4e89-ae1e-03fc27039f02.config
+2026-11-13T09:17:12.1677410Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-15d50ed4\-242c\-4e89\-ae1e\-03fc27039f02\.config
+2026-11-13T09:17:12.1723519Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T09:17:12.1980168Z Removing credentials config '/home/runner/work/_temp/git-credentials-15d50ed4-242c-4e89-ae1e-03fc27039f02.config'
+2026-11-13T09:17:12.1990158Z ##[endgroup]
+2026-11-13T09:17:12.2272514Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-11-13T09:17:12.2273054Z with:
+2026-11-13T09:17:12.2273318Z   python-version: 3.12
+2026-11-13T09:17:12.2273611Z   check-latest: false
+2026-11-13T09:17:12.2276430Z   token: ***
+2026-11-13T09:17:12.2276709Z   update-environment: true
+2026-11-13T09:17:12.2277015Z   allow-prereleases: false
+2026-11-13T09:17:12.2277311Z   freethreaded: false
+2026-11-13T09:17:12.2277574Z env:
+2026-11-13T09:17:12.2277817Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:17:12.2278163Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:17:12.2278492Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:17:12.2278794Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:17:12.2279060Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:17:12.2279334Z ##[endgroup]
+2026-11-13T09:17:12.3672581Z ##[group]Installed versions
+2026-11-13T09:17:12.3788307Z (node:2434) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T09:17:12.3790254Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T09:17:12.3792571Z Successfully set up CPython (3.12.16)
+2026-11-13T09:17:12.3794399Z ##[endgroup]
+2026-11-13T09:17:12.3990942Z ##[group]Run python -m pip install uv pre-commit
+2026-11-13T09:17:12.3991896Z [36;1mpython -m pip install uv pre-commit[0m
+2026-11-13T09:17:12.3992483Z [36;1mbash scripts/ci/utils/install_rust_protoc.sh[0m
+2026-11-13T09:17:12.4033562Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:17:12.4033851Z env:
+2026-11-13T09:17:12.4034308Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:17:12.4034583Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:17:12.4034864Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:17:12.4035104Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:17:12.4035341Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:17:12.4035678Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:17:12.4036145Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:17:12.4036585Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:17:12.4036970Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:17:12.4037399Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:17:12.4037811Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:17:12.4038145Z ##[endgroup]
+2026-11-13T09:17:13.7074302Z Collecting uv
+2026-11-13T09:17:13.7752361Z   Downloading uv-0.13.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+2026-11-13T09:17:13.8081142Z Collecting pre-commit
+2026-11-13T09:17:13.8179226Z   Downloading pre_commit-4.7.0-py2.py3-none-any.whl.metadata (1.2 kB)
+2026-11-13T09:17:13.8295268Z Collecting cfgv>=2.0.0 (from pre-commit)
+2026-11-13T09:17:13.8395389Z   Downloading cfgv-3.5.0-py2.py3-none-any.whl.metadata (8.9 kB)
+2026-11-13T09:17:13.8765250Z Collecting identify>=1.0.0 (from pre-commit)
+2026-11-13T09:17:13.8864866Z   Downloading identify-2.6.20-py2.py3-none-any.whl.metadata (4.4 kB)
+2026-11-13T09:17:13.9011258Z Collecting nodeenv>=0.11.1 (from pre-commit)
+2026-11-13T09:17:13.9112384Z   Downloading nodeenv-1.12.0-py3-none-any.whl.metadata (49 kB)
+2026-11-13T09:17:13.9602568Z Collecting pyyaml>=5.1 (from pre-commit)
+2026-11-13T09:17:13.9704584Z   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-11-13T09:17:14.0104112Z Collecting virtualenv>=20.10.0 (from pre-commit)
+2026-11-13T09:17:14.0205632Z   Downloading virtualenv-21.15.6-py3-none-any.whl.metadata (4.1 kB)
+2026-11-13T09:17:14.0337304Z Collecting distlib<1,>=0.4.3 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:17:14.0438321Z   Downloading distlib-0.4.4-py2.py3-none-any.whl.metadata (5.3 kB)
+2026-11-13T09:17:14.0663559Z Collecting filelock<5,>=3.24.2 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:17:14.0764896Z   Downloading filelock-4.2.10-py3-none-any.whl.metadata (2.3 kB)
+2026-11-13T09:17:14.0902263Z Collecting packaging>=26.3 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:17:14.1001921Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-11-13T09:17:14.1196489Z Collecting platformdirs<5,>=4.4 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:17:14.1296583Z   Downloading platformdirs-4.14.5-py3-none-any.whl.metadata (5.7 kB)
+2026-11-13T09:17:14.1422340Z Collecting python-discovery>=1.6.1 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:17:14.1523144Z   Downloading python_discovery-1.9.5-py3-none-any.whl.metadata (4.2 kB)
+2026-11-13T09:17:14.1700610Z Downloading uv-0.13.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.4 MB)
+2026-11-13T09:17:14.2680293Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.4/17.4 MB 208.2 MB/s  0:00:00
+2026-11-13T09:17:14.2789678Z Downloading pre_commit-4.7.0-py2.py3-none-any.whl (226 kB)
+2026-11-13T09:17:14.2917948Z Downloading cfgv-3.5.0-py2.py3-none-any.whl (7.4 kB)
+2026-11-13T09:17:14.3040161Z Downloading identify-2.6.20-py2.py3-none-any.whl (99 kB)
+2026-11-13T09:17:14.3159667Z Downloading nodeenv-1.12.0-py3-none-any.whl (39 kB)
+2026-11-13T09:17:14.3281421Z Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-11-13T09:17:14.3336672Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 175.6 MB/s  0:00:00
+2026-11-13T09:17:14.3434263Z Downloading virtualenv-21.15.6-py3-none-any.whl (5.7 MB)
+2026-11-13T09:17:14.3610480Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.7/5.7 MB 352.7 MB/s  0:00:00
+2026-11-13T09:17:14.3714236Z Downloading distlib-0.4.4-py2.py3-none-any.whl (472 kB)
+2026-11-13T09:17:14.3842810Z Downloading filelock-4.2.10-py3-none-any.whl (218 kB)
+2026-11-13T09:17:14.3963852Z Downloading platformdirs-4.14.5-py3-none-any.whl (35 kB)
+2026-11-13T09:17:14.4081594Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-11-13T09:17:14.4201252Z Downloading python_discovery-1.9.5-py3-none-any.whl (44 kB)
+2026-11-13T09:17:14.5269431Z Installing collected packages: distlib, uv, pyyaml, platformdirs, packaging, nodeenv, identify, filelock, cfgv, python-discovery, virtualenv, pre-commit
+2026-11-13T09:17:15.3193785Z 
+2026-11-13T09:17:15.3212092Z Successfully installed cfgv-3.5.0 distlib-0.4.4 filelock-4.2.10 identify-2.6.20 nodeenv-1.12.0 packaging-26.3 platformdirs-4.14.5 pre-commit-4.7.0 python-discovery-1.9.5 pyyaml-6.0.3 uv-0.13.8 virtualenv-21.15.6
+2026-11-13T09:17:15.3221081Z 
+2026-11-13T09:17:15.3221767Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+2026-11-13T09:17:15.3222793Z [notice] To update, run: pip install --upgrade pip
+2026-11-13T09:17:15.3868322Z +++ dirname scripts/ci/utils/install_rust_protoc.sh
+2026-11-13T09:17:15.3878442Z ++ cd scripts/ci/utils
+2026-11-13T09:17:15.3879120Z ++ pwd
+2026-11-13T09:17:15.3903392Z + SCRIPT_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T09:17:15.3906209Z ++ id -u
+2026-11-13T09:17:15.3928930Z + '[' 1001 = 0 ']'
+2026-11-13T09:17:15.3929583Z + command -v sudo
+2026-11-13T09:17:15.3932406Z + SUDO=sudo
+2026-11-13T09:17:15.3932797Z + sudo bash /home/runner/work/sglang/sglang/scripts/ci/utils/install_protoc.sh
+2026-11-13T09:17:15.4001413Z + command -v protoc
+2026-11-13T09:17:15.4002276Z + command -v protoc
+2026-11-13T09:17:15.4002859Z + echo 'protoc not found, installing...'
+2026-11-13T09:17:15.4004900Z protoc not found, installing...
+2026-11-13T09:17:15.4006247Z ++ uname -m
+2026-11-13T09:17:15.4015897Z + ARCH=x86_64
+2026-11-13T09:17:15.4016486Z + command -v apt-get
+2026-11-13T09:17:15.4017077Z + apt-get update
+2026-11-13T09:17:15.4655384Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-13T09:17:15.4912772Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-11-13T09:17:15.5016607Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-11-13T09:17:15.5030943Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-11-13T09:17:15.5074476Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-11-13T09:17:15.5102533Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-11-13T09:17:15.5763712Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [697 kB]
+2026-11-13T09:17:15.5969987Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.6 kB]
+2026-11-13T09:17:15.6019672Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [767 kB]
+2026-11-13T09:17:15.6977627Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1450 kB]
+2026-11-13T09:17:15.7054286Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [315 kB]
+2026-11-13T09:17:15.7103305Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1713 kB]
+2026-11-13T09:17:15.7161057Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [345 kB]
+2026-11-13T09:17:15.7192858Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1883 kB]
+2026-11-13T09:17:15.7298794Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [430 kB]
+2026-11-13T09:17:15.7304655Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [50.7 kB]
+2026-11-13T09:17:15.7317435Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.6 kB]
+2026-11-13T09:17:15.8097442Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1195 kB]
+2026-11-13T09:17:15.8159442Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [238 kB]
+2026-11-13T09:17:15.8600009Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1228 kB]
+2026-11-13T09:17:15.8661182Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [248 kB]
+2026-11-13T09:17:15.8687026Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1788 kB]
+2026-11-13T09:17:15.8773500Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [411 kB]
+2026-11-13T09:17:15.8812211Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [45.4 kB]
+2026-11-13T09:17:15.8822029Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.4 kB]
+2026-11-13T09:17:19.3319335Z Fetched 13.2 MB in 1s (10.0 MB/s)
+2026-11-13T09:17:20.5075833Z Reading package lists...
+2026-11-13T09:17:20.5251949Z + PROTOC_APT_PACKAGES=(wget unzip)
+2026-11-13T09:17:20.5252797Z + apt-get install -y --no-install-recommends wget unzip
+2026-11-13T09:17:20.5396225Z Reading package lists...
+2026-11-13T09:17:20.7740431Z Building dependency tree...
+2026-11-13T09:17:20.7748442Z Reading state information...
+2026-11-13T09:17:20.9409037Z wget is already the newest version (1.21.4-1ubuntu4.5).
+2026-11-13T09:17:20.9409507Z unzip is already the newest version (6.0-28ubuntu4.1).
+2026-11-13T09:17:20.9409941Z 0 upgraded, 0 newly installed, 0 to remove and 54 not upgraded.
+2026-11-13T09:17:20.9417479Z + '[' x86_64 = aarch64 ']'
+2026-11-13T09:17:20.9417883Z + '[' x86_64 = arm64 ']'
+2026-11-13T09:17:20.9418269Z + PROTOC_ARCH=x86_64
+2026-11-13T09:17:20.9418757Z + PROTOC_ZIP=protoc-32.0-linux-x86_64.zip
+2026-11-13T09:17:20.9420750Z + cd /tmp
+2026-11-13T09:17:20.9421373Z + wget https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-x86_64.zip
+2026-11-13T09:17:20.9685717Z --2026-11-13 09:17:20--  https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-x86_64.zip
+2026-11-13T09:17:20.9905202Z Resolving github.com (github.com)... 140.82.114.4
+2026-11-13T09:17:21.0437797Z Connecting to github.com (github.com)|140.82.114.4|:443... connected.
+2026-11-13T09:17:21.2076452Z HTTP request sent, awaiting response... 302 Found
+2026-11-13T09:17:21.2085482Z Location: https://release-assets.githubusercontent.com/github-production-release-asset/23357588/b8f467f9-efcf-428e-8da8-d051740d4252?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-13T10%3A10%3A58Z&rscd=attachment%3B+filename%3Dprotoc-32.0-linux-x86_64.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-13T09%3A10%3A37Z&ske=2026-11-13T10%3A10%3A58Z&sks=b&skv=2018-11-09&sig=4HUNjDh4do9WZh2XycA1Jm1wzf4y0K%2BRNKCpD3viOQ0%3D&jwt=*** [following]
+2026-11-13T09:17:21.2094528Z --2026-11-13 09:17:21--  https://release-assets.githubusercontent.com/github-production-release-asset/23357588/b8f467f9-efcf-428e-8da8-d051740d4252?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-13T10%3A10%3A58Z&rscd=attachment%3B+filename%3Dprotoc-32.0-linux-x86_64.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-13T09%3A10%3A37Z&ske=2026-11-13T10%3A10%3A58Z&sks=b&skv=2018-11-09&sig=4HUNjDh4do9WZh2XycA1Jm1wzf4y0K%2BRNKCpD3viOQ0%3D&jwt=***
+2026-11-13T09:17:21.2098706Z Resolving release-assets.githubusercontent.com (release-assets.githubusercontent.com)... 185.199.111.133, 185.199.108.133, 185.199.109.133, ...
+2026-11-13T09:17:21.2189575Z Connecting to release-assets.githubusercontent.com (release-assets.githubusercontent.com)|185.199.111.133|:443... connected.
+2026-11-13T09:17:21.2514235Z HTTP request sent, awaiting response... 200 OK
+2026-11-13T09:17:21.2515109Z Length: 3543178 (3.4M) [application/octet-stream]
+2026-11-13T09:17:21.2516594Z Saving to: ‘protoc-32.0-linux-x86_64.zip’
+2026-11-13T09:17:21.2522571Z 
+2026-11-13T09:17:21.2605869Z      0K .......... .......... .......... .......... ..........  1% 5.45M 1s
+2026-11-13T09:17:21.2636836Z     50K .......... .......... .......... .......... ..........  2% 15.5M 0s
+2026-11-13T09:17:21.2684325Z    100K .......... .......... .......... .......... ..........  4% 10.3M 0s
+2026-11-13T09:17:21.2695843Z    150K .......... .......... .......... .......... ..........  5% 41.6M 0s
+2026-11-13T09:17:21.2706655Z    200K .......... .......... .......... .......... ..........  7% 44.6M 0s
+2026-11-13T09:17:21.2751564Z    250K .......... .......... .......... .......... ..........  8% 10.9M 0s
+2026-11-13T09:17:21.2758815Z    300K .......... .......... .......... .......... .......... 10% 70.9M 0s
+2026-11-13T09:17:21.2774660Z    350K .......... .......... .......... .......... .......... 11% 65.3M 0s
+2026-11-13T09:17:21.2775760Z    400K .......... .......... .......... .......... .......... 13% 47.5M 0s
+2026-11-13T09:17:21.2785809Z    450K .......... .......... .......... .......... .......... 14% 50.2M 0s
+2026-11-13T09:17:21.2795732Z    500K .......... .......... .......... .......... .......... 15% 49.5M 0s
+2026-11-13T09:17:21.2798273Z    550K .......... .......... .......... .......... .......... 17%  211M 0s
+2026-11-13T09:17:21.2831719Z    600K .......... .......... .......... .......... .......... 18% 14.6M 0s
+2026-11-13T09:17:21.2838055Z    650K .......... .......... .......... .......... .......... 20% 73.0M 0s
+2026-11-13T09:17:21.2844850Z    700K .......... .......... .......... .......... .......... 21% 71.5M 0s
+2026-11-13T09:17:21.2847731Z    750K .......... .......... .......... .......... .......... 23%  180M 0s
+2026-11-13T09:17:21.2853769Z    800K .......... .......... .......... .......... .......... 24% 81.0M 0s
+2026-11-13T09:17:21.2857039Z    850K .......... .......... .......... .......... .......... 26%  172M 0s
+2026-11-13T09:17:21.2858052Z    900K .......... .......... .......... .......... .......... 27%  285M 0s
+2026-11-13T09:17:21.2864868Z    950K .......... .......... .......... .......... .......... 28% 78.8M 0s
+2026-11-13T09:17:21.2866180Z   1000K .......... .......... .......... .......... .......... 30%  256M 0s
+2026-11-13T09:17:21.2874307Z   1050K .......... .......... .......... .......... .......... 31% 61.1M 0s
+2026-11-13T09:17:21.2877040Z   1100K .......... .......... .......... .......... .......... 33%  182M 0s
+2026-11-13T09:17:21.2878623Z   1150K .......... .......... .......... .......... .......... 34%  287M 0s
+2026-11-13T09:17:21.2880915Z   1200K .......... .......... .......... .......... .......... 36%  255M 0s
+2026-11-13T09:17:21.2909053Z   1250K .......... .......... .......... .......... .......... 37% 17.6M 0s
+2026-11-13T09:17:21.2911824Z   1300K .......... .......... .......... .......... .......... 39%  206M 0s
+2026-11-13T09:17:21.2917983Z   1350K .......... .......... .......... .......... .......... 40% 74.9M 0s
+2026-11-13T09:17:21.2919042Z   1400K .......... .......... .......... .......... .......... 41%  250M 0s
+2026-11-13T09:17:21.2924666Z   1450K .......... .......... .......... .......... .......... 43% 99.1M 0s
+2026-11-13T09:17:21.2925845Z   1500K .......... .......... .......... .......... .......... 44%  301M 0s
+2026-11-13T09:17:21.2927892Z   1550K .......... .......... .......... .......... .......... 46%  241M 0s
+2026-11-13T09:17:21.2929886Z   1600K .......... .......... .......... .......... .......... 47%  249M 0s
+2026-11-13T09:17:21.2931463Z   1650K .......... .......... .......... .......... .......... 49%  267M 0s
+2026-11-13T09:17:21.2934656Z   1700K .......... .......... .......... .......... .......... 50%  187M 0s
+2026-11-13T09:17:21.2935342Z   1750K .......... .......... .......... .......... .......... 52%  371M 0s
+2026-11-13T09:17:21.2938151Z   1800K .......... .......... .......... .......... .......... 53%  221M 0s
+2026-11-13T09:17:21.2940413Z   1850K .......... .......... .......... .......... .......... 54%  306M 0s
+2026-11-13T09:17:21.2941271Z   1900K .......... .......... .......... .......... .......... 56%  241M 0s
+2026-11-13T09:17:21.2944139Z   1950K .......... .......... .......... .......... .......... 57%  176M 0s
+2026-11-13T09:17:21.2947384Z   2000K .......... .......... .......... .......... .......... 59%  206M 0s
+2026-11-13T09:17:21.2949099Z   2050K .......... .......... .......... .......... .......... 60%  368M 0s
+2026-11-13T09:17:21.2951363Z   2100K .......... .......... .......... .......... .......... 62%  219M 0s
+2026-11-13T09:17:21.2952427Z   2150K .......... .......... .......... .......... .......... 63%  379M 0s
+2026-11-13T09:17:21.2956344Z   2200K .......... .......... .......... .......... .......... 65%  111M 0s
+2026-11-13T09:17:21.2966504Z   2250K .......... .......... .......... .......... .......... 66%  309M 0s
+2026-11-13T09:17:21.2967212Z   2300K .......... .......... .......... .......... .......... 67%  248M 0s
+2026-11-13T09:17:21.2967902Z   2350K .......... .......... .......... .......... .......... 69%  351M 0s
+2026-11-13T09:17:21.2968600Z   2400K .......... .......... .......... .......... .......... 70%  386M 0s
+2026-11-13T09:17:21.2969302Z   2450K .......... .......... .......... .......... .......... 72%  321M 0s
+2026-11-13T09:17:21.2969987Z   2500K .......... .......... .......... .......... .......... 73%  346M 0s
+2026-11-13T09:17:21.2970617Z   2550K .......... .......... .......... .......... .......... 75%  378M 0s
+2026-11-13T09:17:21.2989198Z   2600K .......... .......... .......... .......... .......... 76% 22.1M 0s
+2026-11-13T09:17:21.2991142Z   2650K .......... .......... .......... .......... .......... 78%  206M 0s
+2026-11-13T09:17:21.2997317Z   2700K .......... .......... .......... .......... .......... 79% 82.8M 0s
+2026-11-13T09:17:21.2999122Z   2750K .......... .......... .......... .......... .......... 80%  274M 0s
+2026-11-13T09:17:21.2999684Z   2800K .......... .......... .......... .......... .......... 82%  316M 0s
+2026-11-13T09:17:21.3001441Z   2850K .......... .......... .......... .......... .......... 83%  319M 0s
+2026-11-13T09:17:21.3003335Z   2900K .......... .......... .......... .......... .......... 85%  245M 0s
+2026-11-13T09:17:21.3005491Z   2950K .......... .......... .......... .......... .......... 86%  209M 0s
+2026-11-13T09:17:21.3007270Z   3000K .......... .......... .......... .......... .......... 88%  292M 0s
+2026-11-13T09:17:21.3010377Z   3050K .......... .......... .......... .......... .......... 89%  320M 0s
+2026-11-13T09:17:21.3011454Z   3100K .......... .......... .......... .......... .......... 91%  306M 0s
+2026-11-13T09:17:21.3013426Z   3150K .......... .......... .......... .......... .......... 92%  289M 0s
+2026-11-13T09:17:21.3014157Z   3200K .......... .......... .......... .......... .......... 93%  239M 0s
+2026-11-13T09:17:21.3015841Z   3250K .......... .......... .......... .......... .......... 95%  310M 0s
+2026-11-13T09:17:21.3017557Z   3300K .......... .......... .......... .......... .......... 96%  289M 0s
+2026-11-13T09:17:21.3019513Z   3350K .......... .......... .......... .......... .......... 98%  229M 0s
+2026-11-13T09:17:21.3020934Z   3400K .......... .......... .......... .......... .......... 99%  320M 0s
+2026-11-13T09:17:21.3021884Z   3450K ..........                                            100%  217M=0.05s
+2026-11-13T09:17:21.3022301Z 
+2026-11-13T09:17:21.3023203Z 2026-11-13 09:17:21 (66.8 MB/s) - ‘protoc-32.0-linux-x86_64.zip’ saved [3543178/3543178]
+2026-11-13T09:17:21.3023629Z 
+2026-11-13T09:17:21.3035175Z + unzip -o protoc-32.0-linux-x86_64.zip -d /usr/local
+2026-11-13T09:17:21.3056306Z Archive:  protoc-32.0-linux-x86_64.zip
+2026-11-13T09:17:21.3749866Z   inflating: /usr/local/bin/protoc   
+2026-11-13T09:17:21.3753230Z    creating: /usr/local/include/google/
+2026-11-13T09:17:21.3753906Z    creating: /usr/local/include/google/protobuf/
+2026-11-13T09:17:21.3755653Z   inflating: /usr/local/include/google/protobuf/any.proto  
+2026-11-13T09:17:21.3756913Z   inflating: /usr/local/include/google/protobuf/api.proto  
+2026-11-13T09:17:21.3757707Z    creating: /usr/local/include/google/protobuf/compiler/
+2026-11-13T09:17:21.3759137Z   inflating: /usr/local/include/google/protobuf/compiler/plugin.proto  
+2026-11-13T09:17:21.3760347Z   inflating: /usr/local/include/google/protobuf/cpp_features.proto  
+2026-11-13T09:17:21.3765073Z   inflating: /usr/local/include/google/protobuf/descriptor.proto  
+2026-11-13T09:17:21.3765994Z   inflating: /usr/local/include/google/protobuf/duration.proto  
+2026-11-13T09:17:21.3766926Z   inflating: /usr/local/include/google/protobuf/empty.proto  
+2026-11-13T09:17:21.3768440Z   inflating: /usr/local/include/google/protobuf/field_mask.proto  
+2026-11-13T09:17:21.3769459Z   inflating: /usr/local/include/google/protobuf/go_features.proto  
+2026-11-13T09:17:21.3770645Z   inflating: /usr/local/include/google/protobuf/java_features.proto  
+2026-11-13T09:17:21.3771875Z   inflating: /usr/local/include/google/protobuf/source_context.proto  
+2026-11-13T09:17:21.3773000Z   inflating: /usr/local/include/google/protobuf/struct.proto  
+2026-11-13T09:17:21.3774349Z   inflating: /usr/local/include/google/protobuf/timestamp.proto  
+2026-11-13T09:17:21.3775695Z   inflating: /usr/local/include/google/protobuf/type.proto  
+2026-11-13T09:17:21.3776884Z   inflating: /usr/local/include/google/protobuf/wrappers.proto  
+2026-11-13T09:17:21.3777549Z   inflating: /usr/local/readme.txt   
+2026-11-13T09:17:21.3782567Z + rm -f protoc-32.0-linux-x86_64.zip
+2026-11-13T09:17:21.3801165Z + protoc --version
+2026-11-13T09:17:21.3811881Z libprotoc 32.0
+2026-11-13T09:17:21.3826028Z + bash /home/runner/work/sglang/sglang/scripts/ci/utils/install_rustup.sh
+2026-11-13T09:17:21.3847147Z +++ dirname /home/runner/work/sglang/sglang/scripts/ci/utils/install_rustup.sh
+2026-11-13T09:17:21.3858014Z ++ cd /home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T09:17:21.3858557Z ++ pwd
+2026-11-13T09:17:21.3860724Z + SCRIPT_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T09:17:21.3861957Z + RUST_WORKSPACE_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust
+2026-11-13T09:17:21.3865249Z ++ sed -n 's/^channel *= *"\([^"]*\)".*/\1/p' /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml
+2026-11-13T09:17:21.3883280Z + PINNED_CHANNEL=1.92
+2026-11-13T09:17:21.3883694Z + DEFAULT_CHANNEL=1.92
+2026-11-13T09:17:21.3886058Z + export PATH=/home/runner/.cargo/bin:/opt/hostedtoolcache/Python/3.12.16/x64/bin:/opt/hostedtoolcache/Python/3.12.16/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-11-13T09:17:21.3889363Z + PATH=/home/runner/.cargo/bin:/opt/hostedtoolcache/Python/3.12.16/x64/bin:/opt/hostedtoolcache/Python/3.12.16/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-11-13T09:17:21.3890900Z + '[' -n /home/runner/work/_temp/_runner_file_commands/add_path_78073aef-a5c7-4549-816f-97cf75dbcb89 ']'
+2026-11-13T09:17:21.3891830Z ++ dirname /home/runner/work/_temp/_runner_file_commands/add_path_78073aef-a5c7-4549-816f-97cf75dbcb89
+2026-11-13T09:17:21.3898682Z + mkdir -p /home/runner/work/_temp/_runner_file_commands
+2026-11-13T09:17:21.3913318Z + echo /home/runner/.cargo/bin
+2026-11-13T09:17:21.3913986Z + '[' -n '' ']'
+2026-11-13T09:17:21.3916264Z + command -v cargo
+2026-11-13T09:17:21.3916640Z + command -v rustc
+2026-11-13T09:17:21.3917021Z + rustc --version
+2026-11-13T09:17:21.4052918Z ++ rustc --version
+2026-11-13T09:17:21.4180695Z ++ cargo --version
+2026-11-13T09:17:22.0282164Z + echo 'rust already installed: rustc 1.99.1 (58cf8f9c3 2026-10-13), cargo 1.99.1 (5f94df478 2026-08-27)'
+2026-11-13T09:17:22.0283083Z rust already installed: rustc 1.99.1 (58cf8f9c3 2026-10-13), cargo 1.99.1 (5f94df478 2026-08-27)
+2026-11-13T09:17:22.0284101Z + install_workspace_pinned_toolchain
+2026-11-13T09:17:22.0284794Z + command -v rustup
+2026-11-13T09:17:22.0285724Z + local toolchain_file=/home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml
+2026-11-13T09:17:22.0287100Z + '[' '!' -f /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml ']'
+2026-11-13T09:17:22.0288029Z + cd /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust
+2026-11-13T09:17:22.0288633Z + rustup toolchain install
+2026-11-13T09:17:22.0392356Z info: syncing channel updates for 1.92-x86_64-unknown-linux-gnu
+2026-11-13T09:17:22.2331060Z info: latest update on 2025-12-11 for version 1.92.0 (ded5c06cf 2025-12-08)
+2026-11-13T09:17:22.2336098Z info: downloading 5 components
+2026-11-13T09:17:30.4449140Z info: the active toolchain `1.92-x86_64-unknown-linux-gnu` has been installed
+2026-11-13T09:17:30.4449979Z info: it's active because: overridden by '/home/runner/work/sglang/sglang/rust/rust-toolchain.toml'
+2026-11-13T09:17:30.4549292Z + return 0
+2026-11-13T09:17:30.4549656Z + export RUSTUP_TOOLCHAIN=1.92
+2026-11-13T09:17:30.4550040Z + RUSTUP_TOOLCHAIN=1.92
+2026-11-13T09:17:30.4550510Z + '[' -n /home/runner/work/_temp/_runner_file_commands/set_env_78073aef-a5c7-4549-816f-97cf75dbcb89 ']'
+2026-11-13T09:17:30.4555568Z ++ dirname /home/runner/work/_temp/_runner_file_commands/set_env_78073aef-a5c7-4549-816f-97cf75dbcb89
+2026-11-13T09:17:30.4567547Z + mkdir -p /home/runner/work/_temp/_runner_file_commands
+2026-11-13T09:17:30.4581318Z + echo RUSTUP_TOOLCHAIN=1.92
+2026-11-13T09:17:30.4582031Z + rustc --version
+2026-11-13T09:17:30.4696603Z rustc 1.92.0 (ded5c06cf 2025-12-08)
+2026-11-13T09:17:30.4705373Z + cargo --version
+2026-11-13T09:17:30.4789494Z cargo 1.92.0 (344c4567c 2025-10-21)
+2026-11-13T09:17:30.4850420Z ##[group]Run set -o pipefail
+2026-11-13T09:17:30.4850730Z [36;1mset -o pipefail[0m
+2026-11-13T09:17:30.4851275Z [36;1muv pip install -e "python[dev]" --index-strategy unsafe-best-match --prerelease allow 2>&1 | tee sglang-install.log[0m
+2026-11-13T09:17:30.4852320Z [36;1mpython -m pip freeze > sglang-environment.txt[0m
+2026-11-13T09:17:30.4875068Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:17:30.4875316Z env:
+2026-11-13T09:17:30.4875516Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:17:30.4875765Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:17:30.4876022Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:17:30.4876243Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:17:30.4876445Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:17:30.4876734Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:17:30.4877166Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:17:30.4877596Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:17:30.4878026Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:17:30.4878415Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:17:30.4878798Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:17:30.4879135Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:17:30.4879356Z   UV_SYSTEM_PYTHON: 1
+2026-11-13T09:17:30.4879565Z ##[endgroup]
+2026-11-13T09:17:30.5464711Z Using Python 3.12.16 environment at: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:17:52.7055550Z Resolved 270 packages in 22.15s
+2026-11-13T09:17:52.7334782Z    Building sglang @ file:///home/runner/work/sglang/sglang/python
+2026-11-13T09:17:52.7427800Z Downloading onnxruntime (22.7MiB)
+2026-11-13T09:17:52.7429264Z Downloading numpy (15.8MiB)
+2026-11-13T09:17:52.7434629Z Downloading pandas (11.8MiB)
+2026-11-13T09:17:52.7436158Z Downloading matplotlib (9.4MiB)
+2026-11-13T09:17:52.7438044Z Downloading scikit-learn (8.7MiB)
+2026-11-13T09:17:52.7440967Z Downloading pycountry (7.7MiB)
+2026-11-13T09:17:52.7443828Z Downloading grpcio (7.0MiB)
+2026-11-13T09:17:52.7445489Z Downloading mistral-common (6.3MiB)
+2026-11-13T09:17:52.7446870Z Downloading zstandard (5.3MiB)
+2026-11-13T09:17:52.7448901Z Downloading fonttools (5.2MiB)
+2026-11-13T09:17:52.7464498Z Downloading jedi (4.7MiB)
+2026-11-13T09:17:52.7466570Z Downloading cryptography (4.5MiB)
+2026-11-13T09:17:52.7467554Z Downloading uvloop (4.3MiB)
+2026-11-13T09:17:52.7469495Z Downloading hf-xet (4.1MiB)
+2026-11-13T09:17:52.7564962Z Downloading z3-solver (27.9MiB)
+2026-11-13T09:17:52.7565840Z Downloading pillow (6.3MiB)
+2026-11-13T09:17:52.7566528Z Downloading cuda-core (6.3MiB)
+2026-11-13T09:17:52.7584470Z Downloading pymupdf (65.8MiB)
+2026-11-13T09:17:52.7586693Z Downloading llvmlite (53.7MiB)
+2026-11-13T09:17:52.7589757Z Downloading pyarrow (52.5MiB)
+2026-11-13T09:17:52.7592485Z Downloading sgl-deep-ep (14.7MiB)
+2026-11-13T09:17:52.7594947Z Downloading fastokens (3.6MiB)
+2026-11-13T09:17:52.7597760Z Downloading nvidia-mathdx (21.9MiB)
+2026-11-13T09:17:52.7605986Z Downloading tml-renderers (4.5MiB)
+2026-11-13T09:17:52.7608214Z Downloading transformers (12.0MiB)
+2026-11-13T09:17:52.7611067Z Downloading modelscope (5.8MiB)
+2026-11-13T09:17:52.7613955Z Downloading lxml (5.1MiB)
+2026-11-13T09:17:52.7616735Z Downloading lm-eval (8.4MiB)
+2026-11-13T09:17:52.7619196Z Downloading nvshmem4py-cu13 (4.8MiB)
+2026-11-13T09:17:52.7622129Z Downloading polars-runtime-32 (51.4MiB)
+2026-11-13T09:17:52.7624721Z Downloading scipy (33.7MiB)
+2026-11-13T09:17:52.7636266Z Downloading nvidia-cuda-cccl (3.9MiB)
+2026-11-13T09:17:52.7645698Z Downloading tilelang (48.2MiB)
+2026-11-13T09:17:52.7646408Z Downloading torchcodec (9.5MiB)
+2026-11-13T09:17:52.7671361Z Downloading nvidia-cutlass-dsl-libs-cu12 (87.5MiB)
+2026-11-13T09:17:52.7677632Z Downloading granian (5.1MiB)
+2026-11-13T09:17:52.7702713Z Downloading nvidia-nvvm (71.7MiB)
+2026-11-13T09:17:52.7772109Z Downloading bitsandbytes (41.1MiB)
+2026-11-13T09:17:52.7794772Z Downloading deepseek-recipe (12.3MiB)
+2026-11-13T09:17:52.7820643Z Downloading av (39.3MiB)
+2026-11-13T09:17:52.7823208Z Downloading flashinfer-python (96.6MiB)
+2026-11-13T09:17:52.7882988Z Downloading nvidia-cutlass-dsl-libs-cu13 (87.7MiB)
+2026-11-13T09:17:52.7886466Z Downloading nvidia-cuda-nvcc (44.8MiB)
+2026-11-13T09:17:52.7890095Z Downloading nccl-extensions (24.0MiB)
+2026-11-13T09:17:52.7895224Z Downloading nvidia-cudnn-frontend (11.1MiB)
+2026-11-13T09:17:52.7903644Z Downloading torchvision (7.2MiB)
+2026-11-13T09:17:52.7929455Z Downloading instanttensor (7.0MiB)
+2026-11-13T09:17:52.7930018Z Downloading sgl-flash-mla (9.7MiB)
+2026-11-13T09:17:52.7930491Z Downloading sgl-deep-gemm (4.9MiB)
+2026-11-13T09:17:52.7959445Z Downloading sglang-kernel (355.7MiB)
+2026-11-13T09:17:53.7450387Z  Downloaded fastokens
+2026-11-13T09:17:53.7938766Z Downloading numba (3.6MiB)
+2026-11-13T09:17:53.8254184Z  Downloaded nvidia-cuda-cccl
+2026-11-13T09:17:53.8586895Z Downloading nccl4py (3.5MiB)
+2026-11-13T09:17:53.8775949Z  Downloaded hf-xet
+2026-11-13T09:17:53.9014791Z Downloading cython (3.3MiB)
+2026-11-13T09:17:53.9611143Z  Downloaded uvloop
+2026-11-13T09:17:53.9638847Z  Downloaded tml-renderers
+2026-11-13T09:17:53.9804215Z Downloading tokenizers (3.2MiB)
+2026-11-13T09:17:53.9870189Z Downloading llguidance (2.9MiB)
+2026-11-13T09:17:54.0022562Z  Downloaded cryptography
+2026-11-13T09:17:54.0342331Z Downloading nvidia-cutlass-dsl-libs-base (2.9MiB)
+2026-11-13T09:17:54.0804281Z  Downloaded nvshmem4py-cu13
+2026-11-13T09:17:54.0862160Z  Downloaded sgl-deep-gemm
+2026-11-13T09:17:54.1041940Z Downloading py-spy (2.8MiB)
+2026-11-13T09:17:54.1107130Z Downloading openai-harmony (2.9MiB)
+2026-11-13T09:17:54.1643245Z  Downloaded lxml
+2026-11-13T09:17:54.1772258Z  Downloaded granian
+2026-11-13T09:17:54.1792430Z  Downloaded jedi
+2026-11-13T09:17:54.1802379Z  Downloaded fonttools
+2026-11-13T09:17:54.1937297Z Downloading apache-tvm-ffi (2.6MiB)
+2026-11-13T09:17:54.1979578Z Downloading torch-memory-saver (2.5MiB)
+2026-11-13T09:17:54.2014005Z Downloading timm (2.4MiB)
+2026-11-13T09:17:54.2092479Z Downloading anthropic (2.3MiB)
+2026-11-13T09:17:54.2402457Z  Downloaded zstandard
+2026-11-13T09:17:54.2964514Z Downloading pycryptodomex (2.2MiB)
+2026-11-13T09:17:54.3437060Z  Downloaded modelscope
+2026-11-13T09:17:54.3865363Z Downloading pydantic-core (2.2MiB)
+2026-11-13T09:17:54.5172300Z  Downloaded mistral-common
+2026-11-13T09:17:54.5192550Z  Downloaded cuda-core
+2026-11-13T09:17:54.5222556Z  Downloaded pillow
+2026-11-13T09:17:54.5392926Z Downloading torchaudio (1.7MiB)
+2026-11-13T09:17:54.5414802Z Downloading aiohttp (1.8MiB)
+2026-11-13T09:17:54.5487561Z Downloading nltk (1.6MiB)
+2026-11-13T09:17:54.9074348Z  Downloaded torchvision
+2026-11-13T09:17:54.9119798Z  Downloaded instanttensor
+2026-11-13T09:17:54.9202133Z  Downloaded grpcio
+2026-11-13T09:17:54.9526582Z Downloading nvidia-cutlass-dsl-libs-core (1.6MiB)
+2026-11-13T09:17:54.9581262Z Downloading chardet (1.6MiB)
+2026-11-13T09:17:54.9662162Z  Downloaded numba
+2026-11-13T09:17:54.9720817Z Downloading auto-round (1.4MiB)
+2026-11-13T09:17:54.9732476Z  Downloaded cython
+2026-11-13T09:17:54.9762824Z  Downloaded nvidia-cutlass-dsl-libs-base
+2026-11-13T09:17:54.9887774Z Downloading kiwisolver (1.4MiB)
+2026-11-13T09:17:54.9973490Z Downloading sentencepiece (1.3MiB)
+2026-11-13T09:17:54.9989016Z  Downloaded llguidance
+2026-11-13T09:17:55.0092515Z Downloading soundfile (1.3MiB)
+2026-11-13T09:17:55.0182391Z  Downloaded nccl4py
+2026-11-13T09:17:55.0351889Z  Downloaded timm
+2026-11-13T09:17:55.0372321Z Downloading xgrammar (1.2MiB)
+2026-11-13T09:17:55.0382961Z  Downloaded torch-memory-saver
+2026-11-13T09:17:55.0383710Z  Downloaded pycryptodomex
+2026-11-13T09:17:55.0418201Z  Downloaded apache-tvm-ffi
+2026-11-13T09:17:55.0581844Z Downloading tiktoken (1.1MiB)
+2026-11-13T09:17:55.0583866Z Downloading pygments (1.2MiB)
+2026-11-13T09:17:55.0630736Z  Downloaded tokenizers
+2026-11-13T09:17:55.0640442Z  Downloaded py-spy
+2026-11-13T09:17:55.0653997Z  Downloaded pycountry
+2026-11-13T09:17:55.0868003Z  Downloaded openai-harmony
+2026-11-13T09:17:55.0960727Z  Downloaded anthropic
+2026-11-13T09:17:55.1290063Z    Building word2number==1.1
+2026-11-13T09:17:55.1708843Z  Downloaded pydantic-core
+2026-11-13T09:17:55.1788469Z    Building rouge-score==0.1.2
+2026-11-13T09:17:55.3594012Z    Building sqlitedict==2.1.0
+2026-11-13T09:17:55.3923725Z  Downloaded nltk
+2026-11-13T09:17:55.3952518Z  Downloaded torchaudio
+2026-11-13T09:17:55.4692560Z  Downloaded aiohttp
+2026-11-13T09:17:55.6492734Z  Downloaded kiwisolver
+2026-11-13T09:17:55.6770509Z  Downloaded chardet
+2026-11-13T09:17:55.6802703Z  Downloaded scikit-learn
+2026-11-13T09:17:55.6862385Z  Downloaded sentencepiece
+2026-11-13T09:17:55.6862942Z  Downloaded soundfile
+2026-11-13T09:17:55.6922208Z       Built rouge-score==0.1.2
+2026-11-13T09:17:55.7092795Z  Downloaded tiktoken
+2026-11-13T09:17:55.7153202Z  Downloaded auto-round
+2026-11-13T09:17:55.7154591Z  Downloaded xgrammar
+2026-11-13T09:17:55.7190488Z  Downloaded pygments
+2026-11-13T09:17:55.7262244Z  Downloaded nvidia-cutlass-dsl-libs-core
+2026-11-13T09:17:55.7377859Z       Built word2number==1.1
+2026-11-13T09:17:56.0489285Z  Downloaded matplotlib
+2026-11-13T09:17:56.0528004Z  Downloaded sgl-flash-mla
+2026-11-13T09:17:56.0528726Z  Downloaded torchcodec
+2026-11-13T09:17:56.2175372Z       Built sqlitedict==2.1.0
+2026-11-13T09:17:56.3279625Z  Downloaded lm-eval
+2026-11-13T09:17:56.3299077Z    Building antlr4-python3-runtime==4.9.3
+2026-11-13T09:17:56.4637582Z  Downloaded nvidia-cudnn-frontend
+2026-11-13T09:17:56.6803557Z  Downloaded pandas
+2026-11-13T09:17:56.6835563Z  Downloaded transformers
+2026-11-13T09:17:56.7093272Z  Downloaded deepseek-recipe
+2026-11-13T09:17:56.9538992Z       Built antlr4-python3-runtime==4.9.3
+2026-11-13T09:17:57.0223067Z  Downloaded sgl-deep-ep
+2026-11-13T09:17:57.1417645Z  Downloaded numpy
+2026-11-13T09:17:57.5632751Z  Downloaded nvidia-mathdx
+2026-11-13T09:17:57.6995366Z  Downloaded onnxruntime
+2026-11-13T09:17:57.7342673Z  Downloaded nccl-extensions
+2026-11-13T09:17:57.9789392Z  Downloaded z3-solver
+2026-11-13T09:17:58.2661377Z  Downloaded scipy
+2026-11-13T09:17:58.5204004Z  Downloaded av
+2026-11-13T09:17:58.5614451Z  Downloaded bitsandbytes
+2026-11-13T09:17:58.7244312Z  Downloaded nvidia-cuda-nvcc
+2026-11-13T09:17:58.9227080Z  Downloaded tilelang
+2026-11-13T09:17:58.9781794Z  Downloaded polars-runtime-32
+2026-11-13T09:17:59.0583000Z  Downloaded llvmlite
+2026-11-13T09:17:59.1213919Z  Downloaded pyarrow
+2026-11-13T09:17:59.2912617Z  Downloaded pymupdf
+2026-11-13T09:17:59.3517678Z  Downloaded nvidia-nvvm
+2026-11-13T09:17:59.5548133Z  Downloaded nvidia-cutlass-dsl-libs-cu13
+2026-11-13T09:17:59.7917113Z  Downloaded nvidia-cutlass-dsl-libs-cu12
+2026-11-13T09:18:01.4041280Z  Downloaded flashinfer-python
+2026-11-13T09:18:05.6589468Z  Downloaded sglang-kernel
+2026-11-13T09:33:40.0804367Z       Built sglang @ file:///home/runner/work/sglang/sglang/python
+2026-11-13T09:33:40.0818940Z Prepared 240 packages in 15m 47s
+2026-11-13T09:33:41.0949883Z Installed 267 packages in 1.01s
+2026-11-13T09:33:41.0952396Z  + absl-py==2.5.1
+2026-11-13T09:33:41.0952895Z  + accelerate==1.15.0
+2026-11-13T09:33:41.0953363Z  + addict==2.4.0
+2026-11-13T09:33:41.0953795Z  + aiohappyeyeballs==2.7.1
+2026-11-13T09:33:41.0954255Z  + aiohttp==3.14.5
+2026-11-13T09:33:41.0954662Z  + aiosignal==1.4.0
+2026-11-13T09:33:41.0955027Z  + airportsdata==20261103
+2026-11-13T09:33:41.0956046Z  + annotated-doc==0.0.6
+2026-11-13T09:33:41.0956518Z  + annotated-types==0.8.0
+2026-11-13T09:33:41.0958822Z  + anthropic==2.8.0
+2026-11-13T09:33:41.0959260Z  + antlr4-python3-runtime==4.9.3
+2026-11-13T09:33:41.0959685Z  + anyio==4.16.0
+2026-11-13T09:33:41.0960041Z  + apache-tvm-ffi==0.1.11
+2026-11-13T09:33:41.0960423Z  + asttokens==3.0.2
+2026-11-13T09:33:41.0960756Z  + attrs==26.1.0
+2026-11-13T09:33:41.0961087Z  + auto-round==0.16.1
+2026-11-13T09:33:41.0961432Z  + av==16.1.0
+2026-11-13T09:33:41.0962001Z  + bitsandbytes==0.50.2
+2026-11-13T09:33:41.0962368Z  + blake3==1.0.11
+2026-11-13T09:33:41.0962690Z  + blobfile==3.0.0
+2026-11-13T09:33:41.0963005Z  + build==1.6.1
+2026-11-13T09:33:41.0963331Z  + certifi==2026.10.23
+2026-11-13T09:33:41.0963941Z  + cffi==2.1.1
+2026-11-13T09:33:41.0964309Z  + chardet==7.7.0
+2026-11-13T09:33:41.0964673Z  + charset-normalizer==3.5.2
+2026-11-13T09:33:41.0965043Z  + click==8.5.1
+2026-11-13T09:33:41.0965339Z  + cloudpickle==3.1.2
+2026-11-13T09:33:41.0965666Z  + colorama==0.4.6
+2026-11-13T09:33:41.0966018Z  + compressed-tensors==0.18.0
+2026-11-13T09:33:41.0966380Z  + contourpy==1.4.0
+2026-11-13T09:33:41.0966722Z  + coverage==7.17.3
+2026-11-13T09:33:41.0967044Z  + cryptography==50.0.2
+2026-11-13T09:33:41.0967402Z  + cuda-bindings==13.5.0
+2026-11-13T09:33:41.0972592Z  + cuda-core==1.2.2
+2026-11-13T09:33:41.0973100Z  + cuda-pathfinder==1.8.6
+2026-11-13T09:33:41.0973703Z  + cuda-python==13.5.0
+2026-11-13T09:33:41.0974326Z  + cuda-tile==1.8.1
+2026-11-13T09:33:41.0974684Z  + cuda-toolkit==13.0.3.0
+2026-11-13T09:33:41.0975060Z  + cycler==0.12.1
+2026-11-13T09:33:41.0975396Z  + cython==3.3.1
+2026-11-13T09:33:41.0975754Z  + dataproperty==0.37.0
+2026-11-13T09:33:41.0976131Z  + datasets==4.8.5
+2026-11-13T09:33:41.0976504Z  + deepseek-recipe==0.2.0
+2026-11-13T09:33:41.0976895Z  + defusedxml==0.8.0rc2
+2026-11-13T09:33:41.0977275Z  + diff-cover==11.0.1
+2026-11-13T09:33:41.0977626Z  + dill==0.4.1
+2026-11-13T09:33:41.0977964Z  + diskcache==5.6.3
+2026-11-13T09:33:41.0978302Z  + distro==1.9.0
+2026-11-13T09:33:41.0978671Z  + docstring-parser==0.18.0
+2026-11-13T09:33:41.0979065Z  + dominate==3.1.0
+2026-11-13T09:33:41.0979411Z  + easydict==1.14
+2026-11-13T09:33:41.0979764Z  + editdistance==0.8.1
+2026-11-13T09:33:41.0980133Z  + einops==0.9.0.dev0
+2026-11-13T09:33:41.0980487Z  + executing==2.3.0
+2026-11-13T09:33:41.0980835Z  + expecttest==0.3.0
+2026-11-13T09:33:41.0981216Z  + fastapi==0.162.5
+2026-11-13T09:33:41.0981559Z  + fastokens==0.3.6
+2026-11-13T09:33:41.0982134Z  + flashinfer-python==0.7.4
+2026-11-13T09:33:41.0982545Z  + flatbuffers==25.12.19
+2026-11-13T09:33:41.0982932Z  + fonttools==4.68.0
+2026-11-13T09:33:41.0983288Z  + frozenlist==1.8.0
+2026-11-13T09:33:41.0983636Z  + fsspec==2026.2.0
+2026-11-13T09:33:41.0983974Z  + gguf==0.19.0
+2026-11-13T09:33:41.0984309Z  + granian==2.8.8
+2026-11-13T09:33:41.0984642Z  + grpcio==1.85.1
+2026-11-13T09:33:41.0985014Z  + grpcio-health-checking==1.85.1
+2026-11-13T09:33:41.0985472Z  + grpcio-reflection==1.85.1
+2026-11-13T09:33:41.0985867Z  + h11==0.16.0
+2026-11-13T09:33:41.0986197Z  + hf-xet==1.8.0
+2026-11-13T09:33:41.0986535Z  + httpcore==1.0.9
+2026-11-13T09:33:41.0986884Z  + httpcore2==2.16.0
+2026-11-13T09:33:41.0987480Z  + httpx==0.28.1
+2026-11-13T09:33:41.0987813Z  + httpx2==2.16.0
+2026-11-13T09:33:41.0988177Z  + huggingface-hub==1.33.0
+2026-11-13T09:33:41.0988585Z  + humming-kernels==0.1.18
+2026-11-13T09:33:41.0988963Z  + idna==3.20
+2026-11-13T09:33:41.0989286Z  + iniconfig==2.3.1
+2026-11-13T09:33:41.0989651Z  + instanttensor==0.2.3
+2026-11-13T09:33:41.0990027Z  + interegular==0.3.3
+2026-11-13T09:33:41.0990385Z  + ipython==9.18.1
+2026-11-13T09:33:41.0990777Z  + ipython-pygments-lexers==1.1.1
+2026-11-13T09:33:41.0991210Z  + jedi==0.20.1
+2026-11-13T09:33:41.0991534Z  + jinja2==3.1.6
+2026-11-13T09:33:41.0992090Z  + jiter==0.19.0
+2026-11-13T09:33:41.0992423Z  + joblib==1.6.0
+2026-11-13T09:33:41.0992758Z  + jsonlines==4.0.0
+2026-11-13T09:33:41.0993112Z  + jsonschema==4.26.0
+2026-11-13T09:33:41.0993517Z  + jsonschema-specifications==2025.9.1
+2026-11-13T09:33:41.0993984Z  + kiwisolver==1.5.1
+2026-11-13T09:33:41.0994350Z  + lark==1.3.1
+2026-11-13T09:33:41.0994707Z  + latex2sympy2-extended==1.11.0
+2026-11-13T09:33:41.0995146Z  + llguidance==1.9.1
+2026-11-13T09:33:41.0995500Z  + llvmlite==0.47.0
+2026-11-13T09:33:41.0995848Z  + lm-eval==0.5.0.dev1
+2026-11-13T09:33:41.0996198Z  + logbook==1.10.1
+2026-11-13T09:33:41.0996552Z  + loguru==0.8.0
+2026-11-13T09:33:41.0996877Z  + lxml==7.0.0b1
+2026-11-13T09:33:41.0997225Z  + markdown-it-py==4.3.0
+2026-11-13T09:33:41.0997625Z  + markupsafe==3.0.4
+2026-11-13T09:33:41.0997991Z  + math-verify==0.9.0
+2026-11-13T09:33:41.0998364Z  + matplotlib==3.11.2
+2026-11-13T09:33:41.0998752Z  + matplotlib-inline==0.2.2
+2026-11-13T09:33:41.0999160Z  + mbstrdecoder==0.6.1
+2026-11-13T09:33:41.0999683Z  + mdurl==0.1.2
+2026-11-13T09:33:41.1000043Z  + mistral-common==1.13.1
+2026-11-13T09:33:41.1000432Z  + ml-dtypes==0.6.0
+2026-11-13T09:33:41.1001087Z  + modelscope==1.40.3
+2026-11-13T09:33:41.1001486Z  + modelscope-hub==0.7.1
+2026-11-13T09:33:41.1002159Z  + more-itertools==11.2.1
+2026-11-13T09:33:41.1002547Z  + mpmath==1.3.0
+2026-11-13T09:33:41.1002879Z  + msgfy==0.2.1
+2026-11-13T09:33:41.1003219Z  + msgspec==0.22.0
+2026-11-13T09:33:41.1003560Z  + multidict==7.2.1
+2026-11-13T09:33:41.1003916Z  + multiprocess==0.70.19
+2026-11-13T09:33:41.1004295Z  + narwhals==2.28.0
+2026-11-13T09:33:41.1004652Z  + nccl-extensions==0.2.0
+2026-11-13T09:33:41.1005029Z  + nccl4py==0.6.0
+2026-11-13T09:33:41.1005382Z  + nest-asyncio==1.6.0
+2026-11-13T09:33:41.1005741Z  + networkx==3.7
+2026-11-13T09:33:41.1006071Z  + ninja==1.13.2
+2026-11-13T09:33:41.1006411Z  + nltk==3.10.4
+2026-11-13T09:33:41.1006739Z  + numba==0.65.1
+2026-11-13T09:33:41.1007073Z  + numpy==2.3.5
+2026-11-13T09:33:41.1007422Z  + nvidia-cublas==13.1.1.3
+2026-11-13T09:33:41.1007832Z  + nvidia-cuda-cccl==13.3.5.0.6
+2026-11-13T09:33:41.1008255Z  + nvidia-cuda-crt==13.5.37
+2026-11-13T09:33:41.1008673Z  + nvidia-cuda-cupti==13.0.85
+2026-11-13T09:33:41.1009096Z  + nvidia-cuda-nvcc==13.5.37
+2026-11-13T09:33:41.1009508Z  + nvidia-cuda-nvrtc==13.0.88
+2026-11-13T09:33:41.1009930Z  + nvidia-cuda-runtime==13.0.96
+2026-11-13T09:33:41.1010355Z  + nvidia-cudnn-cu13==9.24.0.43
+2026-11-13T09:33:41.1010807Z  + nvidia-cudnn-frontend==1.32.3
+2026-11-13T09:33:41.1011240Z  + nvidia-cufft==12.0.0.61
+2026-11-13T09:33:41.1011828Z  + nvidia-cufile==1.15.1.6
+2026-11-13T09:33:41.1012244Z  + nvidia-curand==10.4.0.35
+2026-11-13T09:33:41.1012651Z  + nvidia-cusolver==12.0.4.66
+2026-11-13T09:33:41.1013068Z  + nvidia-cusparse==12.6.3.3
+2026-11-13T09:33:41.1013491Z  + nvidia-cusparselt-cu13==0.8.1
+2026-11-13T09:33:41.1013937Z  + nvidia-cutlass-dsl==4.8.0
+2026-11-13T09:33:41.1014382Z  + nvidia-cutlass-dsl-libs-base==4.8.0
+2026-11-13T09:33:41.1014890Z  + nvidia-cutlass-dsl-libs-core==4.8.0
+2026-11-13T09:33:41.1015428Z  + nvidia-cutlass-dsl-libs-cu12==4.8.0
+2026-11-13T09:33:41.1015916Z  + nvidia-cutlass-dsl-libs-cu13==4.8.0
+2026-11-13T09:33:41.1016377Z  + nvidia-mathdx==25.6.0
+2026-11-13T09:33:41.1016763Z  + nvidia-ml-py==13.615.71
+2026-11-13T09:33:41.1017160Z  + nvidia-nccl-cu13==2.30.7
+2026-11-13T09:33:41.1017567Z  + nvidia-nvjitlink==13.5.37
+2026-11-13T09:33:41.1017982Z  + nvidia-nvshmem-cu13==3.4.5
+2026-11-13T09:33:41.1018653Z  + nvidia-nvtx==13.0.85
+2026-11-13T09:33:41.1019027Z  + nvidia-nvvm==13.5.37
+2026-11-13T09:33:41.1019412Z  + nvshmem4py-cu13==0.4.1
+2026-11-13T09:33:41.1019795Z  + onnxruntime==1.31.1
+2026-11-13T09:33:41.1020154Z  + openai==2.8.0
+2026-11-13T09:33:41.1020503Z  + openai-harmony==0.0.4
+2026-11-13T09:33:41.1020901Z  + opentelemetry-api==1.45.2
+2026-11-13T09:33:41.1021296Z  + orjson==3.13.0
+2026-11-13T09:33:41.1021804Z  + outlines==0.1.11
+2026-11-13T09:33:41.1022168Z  + outlines-core==0.1.26
+2026-11-13T09:33:41.1022542Z  + pandas==2.3.3
+2026-11-13T09:33:41.1022890Z  + parameterized==0.9.0
+2026-11-13T09:33:41.1023260Z  + parso==0.8.7
+2026-11-13T09:33:41.1023655Z  + partial-json-parser==0.2.1.1.post7
+2026-11-13T09:33:41.1024109Z  + pathvalidate==3.3.1
+2026-11-13T09:33:41.1024468Z  + peft==0.21.2
+2026-11-13T09:33:41.1024797Z  + pexpect==4.9.0
+2026-11-13T09:33:41.1025147Z  + pillow==11.3.0
+2026-11-13T09:33:41.1025476Z  + pluggy==1.7.0
+2026-11-13T09:33:41.1025809Z  + polars==2.1.0
+2026-11-13T09:33:41.1026170Z  + polars-runtime-32==2.1.0
+2026-11-13T09:33:41.1026570Z  + portalocker==4.4.2
+2026-11-13T09:33:41.1026954Z  + prometheus-client==0.26.0
+2026-11-13T09:33:41.1027373Z  + prompt-toolkit==3.0.53
+2026-11-13T09:33:41.1027761Z  + propcache==0.5.4
+2026-11-13T09:33:41.1028121Z  + protobuf==7.37.0rc3
+2026-11-13T09:33:41.1028483Z  + psutil==7.2.2
+2026-11-13T09:33:41.1028827Z  + ptyprocess==0.7.0
+2026-11-13T09:33:41.1029187Z  + pure-eval==0.2.4
+2026-11-13T09:33:41.1029537Z  + py-cpuinfo==9.0.0
+2026-11-13T09:33:41.1029891Z  + py-spy==0.4.3
+2026-11-13T09:33:41.1030227Z  + pyarrow==26.0.1
+2026-11-13T09:33:41.1030743Z  + pybase64==1.5.2
+2026-11-13T09:33:41.1031099Z  + pycountry==26.2.16
+2026-11-13T09:33:41.1031464Z  + pycparser==3.12
+2026-11-13T09:33:41.1032975Z  + pycryptodomex==3.24.2
+2026-11-13T09:33:41.1033392Z  + pydantic==2.14.3
+2026-11-13T09:33:41.1033757Z  + pydantic-core==2.50.4
+2026-11-13T09:33:41.1034181Z  + pydantic-extra-types==2.11.1
+2026-11-13T09:33:41.1039136Z  + pygments==2.21.0
+2026-11-13T09:33:41.1039394Z  + pymupdf==2.1
+2026-11-13T09:33:41.1039660Z  + pymupdf-layout==2.1
+2026-11-13T09:33:41.1039893Z  + pymupdf4llm==2.1
+2026-11-13T09:33:41.1040102Z  + pyparsing==3.3.3
+2026-11-13T09:33:41.1040484Z  + pyproject-hooks==1.3.3
+2026-11-13T09:33:41.1040824Z  + pytablewriter==0.38.0
+2026-11-13T09:33:41.1041310Z  + pytest==9.2.0
+2026-11-13T09:33:41.1042065Z  + pytest-cov==7.1.0
+2026-11-13T09:33:41.1042398Z  + python-dateutil==2.9.0.post0
+2026-11-13T09:33:41.1042894Z  + python-multipart==0.0.33
+2026-11-13T09:33:41.1043224Z  + pytz==2026.6
+2026-11-13T09:33:41.1043911Z  + pyzmq==27.3.0
+2026-11-13T09:33:41.1044495Z  + quack-kernels==0.6.5
+2026-11-13T09:33:41.1059068Z  + referencing==0.37.0
+2026-11-13T09:33:41.1059310Z  + regex==2026.11.9
+2026-11-13T09:33:41.1059518Z  + requests==2.34.2
+2026-11-13T09:33:41.1059715Z  + rich==15.0.0
+2026-11-13T09:33:41.1059927Z  + rouge-score==0.1.2
+2026-11-13T09:33:41.1060141Z  + rpds-py==2026.9.1
+2026-11-13T09:33:41.1060344Z  + sacrebleu==2.6.0
+2026-11-13T09:33:41.1060560Z  + safetensors==0.9.0rc1
+2026-11-13T09:33:41.1060789Z  + scikit-learn==1.9.1
+2026-11-13T09:33:41.1061002Z  + scipy==1.18.1
+2026-11-13T09:33:41.1061217Z  + sentence-transformers==6.3.0
+2026-11-13T09:33:41.1061464Z  + sentencepiece==0.2.1
+2026-11-13T09:33:41.1062060Z  + setproctitle==1.3.8
+2026-11-13T09:33:41.1062309Z  + setuptools==84.2.1
+2026-11-13T09:33:41.1062544Z  + sgl-deep-ep==0.1.2.post1
+2026-11-13T09:33:41.1062782Z  + sgl-deep-gemm==0.2.8
+2026-11-13T09:33:41.1062990Z  + sgl-eval==0.1.3
+2026-11-13T09:33:41.1063200Z  + sgl-flash-mla==1.0.5
+2026-11-13T09:33:41.1063566Z  + sglang==0.0.0.dev2+g968253dd7 (from file:///home/runner/work/sglang/sglang/python)
+2026-11-13T09:33:41.1063989Z  + sglang-kernel==0.4.10
+2026-11-13T09:33:41.1064210Z  + shellingham==1.5.4
+2026-11-13T09:33:41.1064416Z  + six==1.17.0
+2026-11-13T09:33:41.1064614Z  + smg-grpc-proto==0.5.0
+2026-11-13T09:33:41.1064852Z  + smg-grpc-servicer==0.16.0
+2026-11-13T09:33:41.1065080Z  + sniffio==1.3.1
+2026-11-13T09:33:41.1065279Z  + soundfile==0.13.1
+2026-11-13T09:33:41.1065699Z  + sqlitedict==2.1.0
+2026-11-13T09:33:41.1065902Z  + stack-data==0.6.3
+2026-11-13T09:33:41.1066103Z  + starlette==1.10.0
+2026-11-13T09:33:41.1066292Z  + sympy==1.14.0
+2026-11-13T09:33:41.1066482Z  + tabledata==0.0.26
+2026-11-13T09:33:41.1066676Z  + tabulate==0.10.0
+2026-11-13T09:33:41.1066871Z  + tenacity==9.2.1
+2026-11-13T09:33:41.1067071Z  + threadpoolctl==3.8.0
+2026-11-13T09:33:41.1067280Z  + tiktoken==0.14.0
+2026-11-13T09:33:41.1067470Z  + tilelang==0.1.12
+2026-11-13T09:33:41.1067659Z  + timm==1.0.25
+2026-11-13T09:33:41.1067853Z  + tml-renderers==0.1.0
+2026-11-13T09:33:41.1068068Z  + tokenizers==0.23.2
+2026-11-13T09:33:41.1068268Z  + torch==2.14.1
+2026-11-13T09:33:41.1068482Z  + torch-c-dlpack-ext==0.1.5
+2026-11-13T09:33:41.1068722Z  + torch-memory-saver==0.0.10
+2026-11-13T09:33:41.1068953Z  + torchaudio==2.11.0
+2026-11-13T09:33:41.1069159Z  + torchcodec==0.17.0
+2026-11-13T09:33:41.1069363Z  + torchvision==0.29.2
+2026-11-13T09:33:41.1069568Z  + tqdm==4.70.1
+2026-11-13T09:33:41.1069761Z  + traitlets==5.16.1
+2026-11-13T09:33:41.1069962Z  + transformers==5.19.0
+2026-11-13T09:33:41.1070163Z  + triton==3.8.0
+2026-11-13T09:33:41.1070355Z  + truststore==0.10.5
+2026-11-13T09:33:41.1070552Z  + typepy==0.3.1
+2026-11-13T09:33:41.1070743Z  + typer==0.29.1
+2026-11-13T09:33:41.1070944Z  + typing-extensions==4.16.0
+2026-11-13T09:33:41.1071177Z  + typing-inspection==0.4.5
+2026-11-13T09:33:41.1071398Z  + tzdata==2026.6
+2026-11-13T09:33:41.1071787Z  + urllib3==2.8.0
+2026-11-13T09:33:41.1072072Z  + uvicorn==0.54.0
+2026-11-13T09:33:41.1072267Z  + uvloop==0.23.0
+2026-11-13T09:33:41.1072591Z  + watchfiles==1.3.0
+2026-11-13T09:33:41.1072798Z  + wcwidth==0.9.4
+2026-11-13T09:33:41.1072985Z  + word2number==1.1
+2026-11-13T09:33:41.1073174Z  + xgrammar==0.2.7
+2026-11-13T09:33:41.1073366Z  + xxhash==4.1.0
+2026-11-13T09:33:41.1073548Z  + yarl==1.25.1
+2026-11-13T09:33:41.1073736Z  + z3-solver==4.15.4.0
+2026-11-13T09:33:41.1073934Z  + zstandard==0.25.0
+2026-11-13T09:33:42.1992651Z ##[group]Run python - <<'PY'
+2026-11-13T09:33:42.1992983Z [36;1mpython - <<'PY'[0m
+2026-11-13T09:33:42.1993217Z [36;1mimport inspect[0m
+2026-11-13T09:33:42.1993458Z [36;1mfrom pathlib import Path[0m
+2026-11-13T09:33:42.1993710Z [36;1mimport torch[0m
+2026-11-13T09:33:42.1993963Z [36;1mimport sglang.srt.utils.common as common[0m
+2026-11-13T09:33:42.1994490Z [36;1massert Path(inspect.getfile(common)).resolve() == Path("python/sglang/srt/utils/common.py").resolve()[0m
+2026-11-13T09:33:42.1995005Z [36;1massert not torch.cuda.is_available()[0m
+2026-11-13T09:33:42.1995468Z [36;1mprint("Native DynamicGradMode:", inspect.getfile(common), "Torch:", torch.__version__)[0m
+2026-11-13T09:33:42.1995903Z [36;1mPY[0m
+2026-11-13T09:33:42.1996103Z [36;1mset -o pipefail[0m
+2026-11-13T09:33:42.1996781Z [36;1mpython -m pytest -q -p no:cacheprovider --junitxml=sglang-patched.xml test/registered/unit/utils/test_dynamic_grad_mode_policy.py 2>&1 | tee sglang-patched.log[0m
+2026-11-13T09:33:42.2490057Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:33:42.2490497Z env:
+2026-11-13T09:33:42.2490747Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:33:42.2490998Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:33:42.2491274Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:33:42.2491500Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:33:42.2491879Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:33:42.2492173Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:42.2492609Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:33:42.2493084Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:42.2493465Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:42.2493841Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:42.2494252Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:33:42.2494585Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:33:42.2494814Z ##[endgroup]
+2026-11-13T09:33:47.1347882Z Native DynamicGradMode: /home/runner/work/sglang/sglang/python/sglang/srt/utils/common.py Torch: 2.14.1+cu130
+2026-11-13T09:33:54.8864098Z ...........                                      [100%]
+2026-11-13T09:33:54.8864795Z 11 passed, 24 subtests passed in 6.61s
+2026-11-13T09:33:55.6055907Z ##[group]Run git show 5792cf6e5e11aebc62d41cf19828f615a8fa7e0a:python/sglang/srt/utils/common.py > python/sglang/srt/utils/common.py
+2026-11-13T09:33:55.6056871Z [36;1mgit show 5792cf6e5e11aebc62d41cf19828f615a8fa7e0a:python/sglang/srt/utils/common.py > python/sglang/srt/utils/common.py[0m
+2026-11-13T09:33:55.6057566Z [36;1mfind python/sglang/srt/utils/__pycache__ -name 'common.*.pyc' -delete[0m
+2026-11-13T09:33:55.6079342Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:33:55.6079585Z env:
+2026-11-13T09:33:55.6079780Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:33:55.6080028Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:33:55.6080289Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:33:55.6080510Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:33:55.6080716Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:33:55.6081030Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:55.6081465Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:33:55.6082337Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:55.6082732Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:55.6083103Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:55.6083485Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:33:55.6083811Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:33:55.6084031Z ##[endgroup]
+2026-11-13T09:33:55.6214947Z ##[group]Run set +e
+2026-11-13T09:33:55.6215201Z [36;1mset +e[0m
+2026-11-13T09:33:55.6215857Z [36;1mpython -m pytest -q -p no:cacheprovider --junitxml=sglang-baseline.xml test/registered/unit/utils/test_dynamic_grad_mode_policy.py > sglang-baseline.log 2>&1[0m
+2026-11-13T09:33:55.6216558Z [36;1mstatus=$?[0m
+2026-11-13T09:33:55.6216756Z [36;1mset -e[0m
+2026-11-13T09:33:55.6216972Z [36;1mcat sglang-baseline.log[0m
+2026-11-13T09:33:55.6217224Z [36;1mtest "$status" -eq 1[0m
+2026-11-13T09:33:55.6217458Z [36;1mpython - <<'PY'[0m
+2026-11-13T09:33:55.6217704Z [36;1mimport xml.etree.ElementTree as ET[0m
+2026-11-13T09:33:55.6218043Z [36;1mroot = ET.parse("sglang-baseline.xml").getroot()[0m
+2026-11-13T09:33:55.6218503Z [36;1massert not root.findall(".//error"), "Baseline must fail assertions, not imports."[0m
+2026-11-13T09:33:55.6219142Z [36;1mfailed = {case.attrib["name"] for case in root.findall(".//testcase") if case.find("failure") is not None}[0m
+2026-11-13T09:33:55.6220043Z [36;1mrequired = {"test_decorator_created_before_enabling_inference", "test_exit_uses_policy_selected_on_entry", "test_native_model_inference_then_training_updates"}[0m
+2026-11-13T09:33:55.6220788Z [36;1massert required <= failed, (required - failed, failed)[0m
+2026-11-13T09:33:55.6221244Z [36;1mprint("Confirmed original context lifecycle failures:", sorted(failed))[0m
+2026-11-13T09:33:55.6221949Z [36;1mPY[0m
+2026-11-13T09:33:55.6241304Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:33:55.6241748Z env:
+2026-11-13T09:33:55.6242028Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:33:55.6242280Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:33:55.6242546Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:33:55.6242766Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:33:55.6242966Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:33:55.6243245Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:55.6243672Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:33:55.6244090Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:55.6244461Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:55.6244834Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:55.6245231Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:33:55.6245602Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:33:55.6245990Z ##[endgroup]
+2026-11-13T09:33:59.9239914Z ........F..                                      [100%]
+2026-11-13T09:33:59.9240598Z =================================== FAILURES ===================================
+2026-11-13T09:33:59.9241496Z _ TestDynamicGradModePolicy.test_context_constructed_before_policy_change (initial=False) _
+2026-11-13T09:33:59.9242396Z 
+2026-11-13T09:33:59.9243070Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_context_constructed_before_policy_change>
+2026-11-13T09:33:59.9244068Z 
+2026-11-13T09:33:59.9244399Z     def test_context_constructed_before_policy_change(self):
+2026-11-13T09:33:59.9244977Z         for initial in (False, True):
+2026-11-13T09:33:59.9245409Z             with self.subTest(initial=initial):
+2026-11-13T09:33:59.9245922Z                 DynamicGradMode.set_inference_mode(initial)
+2026-11-13T09:33:59.9246478Z                 context = DynamicGradMode()
+2026-11-13T09:33:59.9246929Z                 DynamicGradMode.set_inference_mode(not initial)
+2026-11-13T09:33:59.9247294Z >               with context:
+2026-11-13T09:33:59.9247544Z                      ^^^^^^^
+2026-11-13T09:33:59.9247698Z 
+2026-11-13T09:33:59.9247899Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:77: 
+2026-11-13T09:33:59.9248351Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9248620Z 
+2026-11-13T09:33:59.9248849Z self = <sglang.srt.utils.common.DynamicGradMode object at 0x7ff6e8911700>
+2026-11-13T09:33:59.9249190Z 
+2026-11-13T09:33:59.9249297Z     def __enter__(self) -> None:
+2026-11-13T09:33:59.9249926Z         if _ENABLE_TORCH_INFERENCE_MODE:
+2026-11-13T09:33:59.9250345Z >           self._inference_mode_context = torch._C._InferenceMode(self.mode)
+2026-11-13T09:33:59.9250796Z                                                                    ^^^^^^^^^
+2026-11-13T09:33:59.9251244Z E           AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9251791Z 
+2026-11-13T09:33:59.9252013Z python/sglang/srt/utils/common.py:217: AttributeError
+2026-11-13T09:33:59.9252586Z _ TestDynamicGradModePolicy.test_decorator_created_before_enabling_inference (bare=False) _
+2026-11-13T09:33:59.9253020Z 
+2026-11-13T09:33:59.9253456Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_decorator_created_before_enabling_inference>
+2026-11-13T09:33:59.9254020Z 
+2026-11-13T09:33:59.9254205Z     def test_decorator_created_before_enabling_inference(self):
+2026-11-13T09:33:59.9254598Z         for bare in (False, True):
+2026-11-13T09:33:59.9254897Z             with self.subTest(bare=bare):
+2026-11-13T09:33:59.9255259Z                 DynamicGradMode.set_inference_mode(False)
+2026-11-13T09:33:59.9255584Z     
+2026-11-13T09:33:59.9255790Z                 def create():
+2026-11-13T09:33:59.9256068Z                     self.assert_policy(True)
+2026-11-13T09:33:59.9256383Z                     return torch.ones(2)
+2026-11-13T09:33:59.9256658Z     
+2026-11-13T09:33:59.9256863Z                 decorated = (
+2026-11-13T09:33:59.9257245Z                     DynamicGradMode(create) if bare else DynamicGradMode()(create)
+2026-11-13T09:33:59.9257651Z                 )
+2026-11-13T09:33:59.9257918Z                 DynamicGradMode.set_inference_mode(True)
+2026-11-13T09:33:59.9258253Z >               output = decorated()
+2026-11-13T09:33:59.9258524Z                          ^^^^^^^^^^^
+2026-11-13T09:33:59.9258700Z 
+2026-11-13T09:33:59.9258890Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:50: 
+2026-11-13T09:33:59.9259348Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9260025Z /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/torch/utils/_contextlib.py:123: in decorate_context
+2026-11-13T09:33:59.9260640Z     with ctx_factory():
+2026-11-13T09:33:59.9260870Z          ^^^^^^^^^^^^^
+2026-11-13T09:33:59.9261154Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9263831Z 
+2026-11-13T09:33:59.9264099Z self = <sglang.srt.utils.common.DynamicGradMode object at 0x7ff6e8911970>
+2026-11-13T09:33:59.9264435Z 
+2026-11-13T09:33:59.9264552Z     def clone(self) -> DynamicGradMode:
+2026-11-13T09:33:59.9264821Z         r"""
+2026-11-13T09:33:59.9265031Z         Create a copy of this class
+2026-11-13T09:33:59.9265277Z         """
+2026-11-13T09:33:59.9265480Z         if _ENABLE_TORCH_INFERENCE_MODE:
+2026-11-13T09:33:59.9265770Z >           return self.__class__(self.mode)
+2026-11-13T09:33:59.9266042Z                                   ^^^^^^^^^
+2026-11-13T09:33:59.9266411Z E           AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9266701Z 
+2026-11-13T09:33:59.9266852Z python/sglang/srt/utils/common.py:234: AttributeError
+2026-11-13T09:33:59.9267366Z _ TestDynamicGradModePolicy.test_decorator_created_before_enabling_inference (bare=True) _
+2026-11-13T09:33:59.9267741Z 
+2026-11-13T09:33:59.9268121Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_decorator_created_before_enabling_inference>
+2026-11-13T09:33:59.9268608Z 
+2026-11-13T09:33:59.9268769Z     def test_decorator_created_before_enabling_inference(self):
+2026-11-13T09:33:59.9269117Z         for bare in (False, True):
+2026-11-13T09:33:59.9269382Z             with self.subTest(bare=bare):
+2026-11-13T09:33:59.9269697Z                 DynamicGradMode.set_inference_mode(False)
+2026-11-13T09:33:59.9269984Z     
+2026-11-13T09:33:59.9270170Z                 def create():
+2026-11-13T09:33:59.9270419Z                     self.assert_policy(True)
+2026-11-13T09:33:59.9270865Z                     return torch.ones(2)
+2026-11-13T09:33:59.9271126Z     
+2026-11-13T09:33:59.9271312Z                 decorated = (
+2026-11-13T09:33:59.9271956Z                     DynamicGradMode(create) if bare else DynamicGradMode()(create)
+2026-11-13T09:33:59.9272333Z                 )
+2026-11-13T09:33:59.9272581Z                 DynamicGradMode.set_inference_mode(True)
+2026-11-13T09:33:59.9272892Z >               output = decorated()
+2026-11-13T09:33:59.9273140Z                          ^^^^^^^^^^^
+2026-11-13T09:33:59.9273294Z 
+2026-11-13T09:33:59.9273475Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:50: 
+2026-11-13T09:33:59.9273881Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9274481Z /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/torch/utils/_contextlib.py:123: in decorate_context
+2026-11-13T09:33:59.9275029Z     with ctx_factory():
+2026-11-13T09:33:59.9275244Z          ^^^^^^^^^^^^^
+2026-11-13T09:33:59.9275522Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9275758Z 
+2026-11-13T09:33:59.9275968Z self = <sglang.srt.utils.common.DynamicGradMode object at 0x7ff6e8911f70>
+2026-11-13T09:33:59.9276260Z 
+2026-11-13T09:33:59.9276371Z     def clone(self) -> DynamicGradMode:
+2026-11-13T09:33:59.9276628Z         r"""
+2026-11-13T09:33:59.9276826Z         Create a copy of this class
+2026-11-13T09:33:59.9277067Z         """
+2026-11-13T09:33:59.9277264Z         if _ENABLE_TORCH_INFERENCE_MODE:
+2026-11-13T09:33:59.9277537Z >           return self.__class__(self.mode)
+2026-11-13T09:33:59.9277869Z                                   ^^^^^^^^^
+2026-11-13T09:33:59.9278223Z E           AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9278504Z 
+2026-11-13T09:33:59.9278643Z python/sglang/srt/utils/common.py:234: AttributeError
+2026-11-13T09:33:59.9279191Z _ TestDynamicGradModePolicy.test_exception_exit_preserves_original_error_and_grad_state (initial=False) _
+2026-11-13T09:33:59.9279611Z 
+2026-11-13T09:33:59.9280024Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_exception_exit_preserves_original_error_and_grad_state>
+2026-11-13T09:33:59.9280542Z 
+2026-11-13T09:33:59.9280727Z     def test_exception_exit_preserves_original_error_and_grad_state(self):
+2026-11-13T09:33:59.9281103Z         for initial in (False, True):
+2026-11-13T09:33:59.9281552Z             with self.subTest(initial=initial):
+2026-11-13T09:33:59.9282153Z                 with torch.inference_mode(False), torch.enable_grad():
+2026-11-13T09:33:59.9282531Z                     DynamicGradMode.set_inference_mode(initial)
+2026-11-13T09:33:59.9282883Z                     error = RuntimeError("model forward failed")
+2026-11-13T09:33:59.9283239Z                     with self.assertRaises(RuntimeError) as caught:
+2026-11-13T09:33:59.9283570Z                         with DynamicGradMode():
+2026-11-13T09:33:59.9283907Z                             DynamicGradMode.set_inference_mode(not initial)
+2026-11-13T09:33:59.9284236Z >                           raise error
+2026-11-13T09:33:59.9284529Z E                           RuntimeError: model forward failed
+2026-11-13T09:33:59.9284739Z 
+2026-11-13T09:33:59.9284954Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:101: RuntimeError
+2026-11-13T09:33:59.9285259Z 
+2026-11-13T09:33:59.9285439Z During handling of the above exception, another exception occurred:
+2026-11-13T09:33:59.9285705Z 
+2026-11-13T09:33:59.9286125Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_exception_exit_preserves_original_error_and_grad_state>
+2026-11-13T09:33:59.9286637Z 
+2026-11-13T09:33:59.9286822Z     def test_exception_exit_preserves_original_error_and_grad_state(self):
+2026-11-13T09:33:59.9287198Z         for initial in (False, True):
+2026-11-13T09:33:59.9287471Z             with self.subTest(initial=initial):
+2026-11-13T09:33:59.9287822Z                 with torch.inference_mode(False), torch.enable_grad():
+2026-11-13T09:33:59.9288329Z                     DynamicGradMode.set_inference_mode(initial)
+2026-11-13T09:33:59.9288697Z                     error = RuntimeError("model forward failed")
+2026-11-13T09:33:59.9289056Z                     with self.assertRaises(RuntimeError) as caught:
+2026-11-13T09:33:59.9289383Z >                       with DynamicGradMode():
+2026-11-13T09:33:59.9289663Z                              ^^^^^^^^^^^^^^^^^
+2026-11-13T09:33:59.9289845Z 
+2026-11-13T09:33:59.9290013Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:99: 
+2026-11-13T09:33:59.9290517Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9290762Z 
+2026-11-13T09:33:59.9290954Z     def __exit__(self, exc_type: Any, exc_value: Any, traceback: Any) -> None:
+2026-11-13T09:33:59.9291343Z         if _ENABLE_TORCH_INFERENCE_MODE:
+2026-11-13T09:33:59.9292024Z >           self._inference_mode_context.__exit__(exc_type, exc_value, traceback)
+2026-11-13T09:33:59.9292408Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T09:33:59.9292825Z E           AttributeError: 'DynamicGradMode' object has no attribute '_inference_mode_context'
+2026-11-13T09:33:59.9293180Z 
+2026-11-13T09:33:59.9293322Z python/sglang/srt/utils/common.py:225: AttributeError
+2026-11-13T09:33:59.9293865Z _ TestDynamicGradModePolicy.test_exception_exit_preserves_original_error_and_grad_state (initial=True) _
+2026-11-13T09:33:59.9294282Z 
+2026-11-13T09:33:59.9294700Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_exception_exit_preserves_original_error_and_grad_state>
+2026-11-13T09:33:59.9295211Z 
+2026-11-13T09:33:59.9295404Z     def test_exception_exit_preserves_original_error_and_grad_state(self):
+2026-11-13T09:33:59.9295785Z         for initial in (False, True):
+2026-11-13T09:33:59.9296065Z             with self.subTest(initial=initial):
+2026-11-13T09:33:59.9296411Z                 with torch.inference_mode(False), torch.enable_grad():
+2026-11-13T09:33:59.9296800Z                     DynamicGradMode.set_inference_mode(initial)
+2026-11-13T09:33:59.9297154Z                     error = RuntimeError("model forward failed")
+2026-11-13T09:33:59.9297512Z                     with self.assertRaises(RuntimeError) as caught:
+2026-11-13T09:33:59.9297844Z                         with DynamicGradMode():
+2026-11-13T09:33:59.9298181Z                             DynamicGradMode.set_inference_mode(not initial)
+2026-11-13T09:33:59.9298664Z >                           raise error
+2026-11-13T09:33:59.9298952Z E                           RuntimeError: model forward failed
+2026-11-13T09:33:59.9299168Z 
+2026-11-13T09:33:59.9299377Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:101: RuntimeError
+2026-11-13T09:33:59.9299686Z 
+2026-11-13T09:33:59.9299861Z During handling of the above exception, another exception occurred:
+2026-11-13T09:33:59.9300130Z 
+2026-11-13T09:33:59.9300548Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_exception_exit_preserves_original_error_and_grad_state>
+2026-11-13T09:33:59.9301061Z 
+2026-11-13T09:33:59.9301250Z     def test_exception_exit_preserves_original_error_and_grad_state(self):
+2026-11-13T09:33:59.9301892Z         for initial in (False, True):
+2026-11-13T09:33:59.9302185Z             with self.subTest(initial=initial):
+2026-11-13T09:33:59.9302522Z                 with torch.inference_mode(False), torch.enable_grad():
+2026-11-13T09:33:59.9302900Z                     DynamicGradMode.set_inference_mode(initial)
+2026-11-13T09:33:59.9303242Z                     error = RuntimeError("model forward failed")
+2026-11-13T09:33:59.9303595Z                     with self.assertRaises(RuntimeError) as caught:
+2026-11-13T09:33:59.9303920Z >                       with DynamicGradMode():
+2026-11-13T09:33:59.9304204Z                              ^^^^^^^^^^^^^^^^^
+2026-11-13T09:33:59.9304376Z 
+2026-11-13T09:33:59.9304547Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:99: 
+2026-11-13T09:33:59.9305105Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9305345Z 
+2026-11-13T09:33:59.9305535Z     def __exit__(self, exc_type: Any, exc_value: Any, traceback: Any) -> None:
+2026-11-13T09:33:59.9305906Z         if _ENABLE_TORCH_INFERENCE_MODE:
+2026-11-13T09:33:59.9306278Z             self._inference_mode_context.__exit__(exc_type, exc_value, traceback)
+2026-11-13T09:33:59.9306644Z         else:
+2026-11-13T09:33:59.9306856Z >           torch.set_grad_enabled(self.prev)
+2026-11-13T09:33:59.9307143Z                                    ^^^^^^^^^
+2026-11-13T09:33:59.9307495Z E           AttributeError: 'DynamicGradMode' object has no attribute 'prev'
+2026-11-13T09:33:59.9307775Z 
+2026-11-13T09:33:59.9307919Z python/sglang/srt/utils/common.py:227: AttributeError
+2026-11-13T09:33:59.9308384Z _ TestDynamicGradModePolicy.test_exit_uses_policy_selected_on_entry (initial=False) _
+2026-11-13T09:33:59.9308731Z 
+2026-11-13T09:33:59.9309079Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_exit_uses_policy_selected_on_entry>
+2026-11-13T09:33:59.9309529Z 
+2026-11-13T09:33:59.9309657Z     def test_exit_uses_policy_selected_on_entry(self):
+2026-11-13T09:33:59.9309965Z         for initial in (False, True):
+2026-11-13T09:33:59.9310243Z             with self.subTest(initial=initial):
+2026-11-13T09:33:59.9310581Z                 with torch.inference_mode(False), torch.enable_grad():
+2026-11-13T09:33:59.9310956Z                     DynamicGradMode.set_inference_mode(initial)
+2026-11-13T09:33:59.9311273Z >                   with DynamicGradMode():
+2026-11-13T09:33:59.9311775Z                          ^^^^^^^^^^^^^^^^^
+2026-11-13T09:33:59.9312099Z 
+2026-11-13T09:33:59.9312278Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:86: 
+2026-11-13T09:33:59.9312675Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9312912Z 
+2026-11-13T09:33:59.9313117Z self = <sglang.srt.utils.common.DynamicGradMode object at 0x7ff6e8912c30>
+2026-11-13T09:33:59.9313541Z exc_type = None, exc_value = None, traceback = None
+2026-11-13T09:33:59.9313751Z 
+2026-11-13T09:33:59.9313941Z     def __exit__(self, exc_type: Any, exc_value: Any, traceback: Any) -> None:
+2026-11-13T09:33:59.9314345Z         if _ENABLE_TORCH_INFERENCE_MODE:
+2026-11-13T09:33:59.9314712Z >           self._inference_mode_context.__exit__(exc_type, exc_value, traceback)
+2026-11-13T09:33:59.9315225Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T09:33:59.9315632Z E           AttributeError: 'DynamicGradMode' object has no attribute '_inference_mode_context'
+2026-11-13T09:33:59.9315988Z 
+2026-11-13T09:33:59.9316126Z python/sglang/srt/utils/common.py:225: AttributeError
+2026-11-13T09:33:59.9316593Z _ TestDynamicGradModePolicy.test_exit_uses_policy_selected_on_entry (initial=True) _
+2026-11-13T09:33:59.9316930Z 
+2026-11-13T09:33:59.9317279Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_exit_uses_policy_selected_on_entry>
+2026-11-13T09:33:59.9317723Z 
+2026-11-13T09:33:59.9317860Z     def test_exit_uses_policy_selected_on_entry(self):
+2026-11-13T09:33:59.9318165Z         for initial in (False, True):
+2026-11-13T09:33:59.9318438Z             with self.subTest(initial=initial):
+2026-11-13T09:33:59.9318776Z                 with torch.inference_mode(False), torch.enable_grad():
+2026-11-13T09:33:59.9319153Z                     DynamicGradMode.set_inference_mode(initial)
+2026-11-13T09:33:59.9319476Z >                   with DynamicGradMode():
+2026-11-13T09:33:59.9319744Z                          ^^^^^^^^^^^^^^^^^
+2026-11-13T09:33:59.9319909Z 
+2026-11-13T09:33:59.9320082Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:86: 
+2026-11-13T09:33:59.9320478Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9320707Z 
+2026-11-13T09:33:59.9320915Z self = <sglang.srt.utils.common.DynamicGradMode object at 0x7ff7b444c350>
+2026-11-13T09:33:59.9321327Z exc_type = None, exc_value = None, traceback = None
+2026-11-13T09:33:59.9321868Z 
+2026-11-13T09:33:59.9322208Z     def __exit__(self, exc_type: Any, exc_value: Any, traceback: Any) -> None:
+2026-11-13T09:33:59.9322603Z         if _ENABLE_TORCH_INFERENCE_MODE:
+2026-11-13T09:33:59.9322992Z             self._inference_mode_context.__exit__(exc_type, exc_value, traceback)
+2026-11-13T09:33:59.9323354Z         else:
+2026-11-13T09:33:59.9323565Z >           torch.set_grad_enabled(self.prev)
+2026-11-13T09:33:59.9323845Z                                    ^^^^^^^^^
+2026-11-13T09:33:59.9324203Z E           AttributeError: 'DynamicGradMode' object has no attribute 'prev'
+2026-11-13T09:33:59.9324488Z 
+2026-11-13T09:33:59.9324626Z python/sglang/srt/utils/common.py:227: AttributeError
+2026-11-13T09:33:59.9325161Z _ TestDynamicGradModePolicy.test_explicit_false_mode_survives_cloning_and_policy_change (initial=False) _
+2026-11-13T09:33:59.9325581Z 
+2026-11-13T09:33:59.9325990Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_explicit_false_mode_survives_cloning_and_policy_change>
+2026-11-13T09:33:59.9326512Z 
+2026-11-13T09:33:59.9326703Z     def test_explicit_false_mode_survives_cloning_and_policy_change(self):
+2026-11-13T09:33:59.9327151Z         for initial in (False, True):
+2026-11-13T09:33:59.9327691Z             with self.subTest(initial=initial):
+2026-11-13T09:33:59.9328148Z                 DynamicGradMode.set_inference_mode(initial)
+2026-11-13T09:33:59.9328582Z                 context = DynamicGradMode(False)
+2026-11-13T09:33:59.9340355Z                 clone = context.clone()
+2026-11-13T09:33:59.9340985Z                 decorated = context(lambda: (torch.is_grad_enabled(), torch.ones(2)))
+2026-11-13T09:33:59.9341842Z                 DynamicGradMode.set_inference_mode(True)
+2026-11-13T09:33:59.9342224Z >               with clone:
+2026-11-13T09:33:59.9342516Z                      ^^^^^
+2026-11-13T09:33:59.9342672Z 
+2026-11-13T09:33:59.9342859Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:113: 
+2026-11-13T09:33:59.9343282Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9343523Z 
+2026-11-13T09:33:59.9343736Z self = <sglang.srt.utils.common.DynamicGradMode object at 0x7ff6e8912f00>
+2026-11-13T09:33:59.9344039Z 
+2026-11-13T09:33:59.9344138Z     def __enter__(self) -> None:
+2026-11-13T09:33:59.9344403Z         if _ENABLE_TORCH_INFERENCE_MODE:
+2026-11-13T09:33:59.9344773Z >           self._inference_mode_context = torch._C._InferenceMode(self.mode)
+2026-11-13T09:33:59.9345400Z                                                                    ^^^^^^^^^
+2026-11-13T09:33:59.9345805Z E           AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9346078Z 
+2026-11-13T09:33:59.9346227Z python/sglang/srt/utils/common.py:217: AttributeError
+2026-11-13T09:33:59.9346688Z _ TestDynamicGradModePolicy.test_native_model_inference_then_training_updates __
+2026-11-13T09:33:59.9347017Z 
+2026-11-13T09:33:59.9347405Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_native_model_inference_then_training_updates>
+2026-11-13T09:33:59.9347887Z 
+2026-11-13T09:33:59.9348047Z     def test_native_model_inference_then_training_updates(self):
+2026-11-13T09:33:59.9348419Z         DynamicGradMode.set_inference_mode(False)
+2026-11-13T09:33:59.9348757Z         model = nn.Linear(3, 2, dtype=torch.float64)
+2026-11-13T09:33:59.9349060Z         with torch.no_grad():
+2026-11-13T09:33:59.9349434Z             model.weight.copy_(torch.arange(6, dtype=torch.float64).reshape(2, 3) / 8)
+2026-11-13T09:33:59.9349960Z             model.bias.copy_(torch.tensor([0.2, -0.3], dtype=torch.float64))
+2026-11-13T09:33:59.9350346Z         reference = copy.deepcopy(model)
+2026-11-13T09:33:59.9350691Z         optimizer = torch.optim.SGD(model.parameters(), lr=0.05)
+2026-11-13T09:33:59.9351131Z         reference_optimizer = torch.optim.SGD(reference.parameters(), lr=0.05)
+2026-11-13T09:33:59.9351898Z         inputs = torch.tensor([[1.0, -2.0, 0.5], [-1.5, 0.2, 2.0]], dtype=torch.float64)
+2026-11-13T09:33:59.9352516Z         target = torch.tensor([[0.1, -0.4], [0.5, 0.7]], dtype=torch.float64)
+2026-11-13T09:33:59.9352876Z     
+2026-11-13T09:33:59.9353065Z         @DynamicGradMode()
+2026-11-13T09:33:59.9353292Z         def predict():
+2026-11-13T09:33:59.9353510Z             return model(inputs)
+2026-11-13T09:33:59.9353736Z     
+2026-11-13T09:33:59.9353934Z         for inference in (True, False, True):
+2026-11-13T09:33:59.9354260Z             DynamicGradMode.set_inference_mode(inference)
+2026-11-13T09:33:59.9354566Z >           actual = predict()
+2026-11-13T09:33:59.9354793Z                      ^^^^^^^^^
+2026-11-13T09:33:59.9354943Z 
+2026-11-13T09:33:59.9355120Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:153: 
+2026-11-13T09:33:59.9355532Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9356134Z /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/torch/utils/_contextlib.py:123: in decorate_context
+2026-11-13T09:33:59.9356677Z     with ctx_factory():
+2026-11-13T09:33:59.9356891Z          ^^^^^^^^^^^^^
+2026-11-13T09:33:59.9357145Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9357383Z 
+2026-11-13T09:33:59.9357584Z self = <sglang.srt.utils.common.DynamicGradMode object at 0x7ff6e64cbbf0>
+2026-11-13T09:33:59.9357885Z 
+2026-11-13T09:33:59.9357989Z     def clone(self) -> DynamicGradMode:
+2026-11-13T09:33:59.9358253Z         r"""
+2026-11-13T09:33:59.9358459Z         Create a copy of this class
+2026-11-13T09:33:59.9358696Z         """
+2026-11-13T09:33:59.9358894Z         if _ENABLE_TORCH_INFERENCE_MODE:
+2026-11-13T09:33:59.9359168Z >           return self.__class__(self.mode)
+2026-11-13T09:33:59.9359433Z                                   ^^^^^^^^^
+2026-11-13T09:33:59.9359788Z E           AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9360077Z 
+2026-11-13T09:33:59.9360214Z python/sglang/srt/utils/common.py:234: AttributeError
+2026-11-13T09:33:59.9360734Z _ TestDynamicGradModePolicy.test_one_decorator_supports_repeated_policy_changes (inference=True) _
+2026-11-13T09:33:59.9361132Z 
+2026-11-13T09:33:59.9361527Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_one_decorator_supports_repeated_policy_changes>
+2026-11-13T09:33:59.9362270Z 
+2026-11-13T09:33:59.9362440Z     def test_one_decorator_supports_repeated_policy_changes(self):
+2026-11-13T09:33:59.9363075Z         DynamicGradMode.set_inference_mode(False)
+2026-11-13T09:33:59.9363356Z     
+2026-11-13T09:33:59.9363545Z         @DynamicGradMode()
+2026-11-13T09:33:59.9363767Z         def create():
+2026-11-13T09:33:59.9364016Z             return torch.is_grad_enabled(), torch.ones(2)
+2026-11-13T09:33:59.9364301Z     
+2026-11-13T09:33:59.9364544Z         for inference in (False, True, False, True, True, False):
+2026-11-13T09:33:59.9364899Z             with self.subTest(inference=inference):
+2026-11-13T09:33:59.9365238Z                 DynamicGradMode.set_inference_mode(inference)
+2026-11-13T09:33:59.9365562Z >               enabled, output = create()
+2026-11-13T09:33:59.9365824Z                                   ^^^^^^^^
+2026-11-13T09:33:59.9365986Z 
+2026-11-13T09:33:59.9366159Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:130: 
+2026-11-13T09:33:59.9366551Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9367141Z /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/torch/utils/_contextlib.py:123: in decorate_context
+2026-11-13T09:33:59.9367672Z     with ctx_factory():
+2026-11-13T09:33:59.9367890Z          ^^^^^^^^^^^^^
+2026-11-13T09:33:59.9368146Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9368374Z 
+2026-11-13T09:33:59.9368582Z self = <sglang.srt.utils.common.DynamicGradMode object at 0x7ff6e5bfe1b0>
+2026-11-13T09:33:59.9368873Z 
+2026-11-13T09:33:59.9368981Z     def clone(self) -> DynamicGradMode:
+2026-11-13T09:33:59.9369237Z         r"""
+2026-11-13T09:33:59.9369625Z         Create a copy of this class
+2026-11-13T09:33:59.9369869Z         """
+2026-11-13T09:33:59.9370068Z         if _ENABLE_TORCH_INFERENCE_MODE:
+2026-11-13T09:33:59.9370343Z >           return self.__class__(self.mode)
+2026-11-13T09:33:59.9370614Z                                   ^^^^^^^^^
+2026-11-13T09:33:59.9370964Z E           AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9371248Z 
+2026-11-13T09:33:59.9371388Z python/sglang/srt/utils/common.py:234: AttributeError
+2026-11-13T09:33:59.9372204Z _ TestDynamicGradModePolicy.test_one_decorator_supports_repeated_policy_changes (inference=True) _
+2026-11-13T09:33:59.9372607Z 
+2026-11-13T09:33:59.9372996Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_one_decorator_supports_repeated_policy_changes>
+2026-11-13T09:33:59.9373491Z 
+2026-11-13T09:33:59.9373658Z     def test_one_decorator_supports_repeated_policy_changes(self):
+2026-11-13T09:33:59.9374039Z         DynamicGradMode.set_inference_mode(False)
+2026-11-13T09:33:59.9374325Z     
+2026-11-13T09:33:59.9374512Z         @DynamicGradMode()
+2026-11-13T09:33:59.9374736Z         def create():
+2026-11-13T09:33:59.9374988Z             return torch.is_grad_enabled(), torch.ones(2)
+2026-11-13T09:33:59.9375277Z     
+2026-11-13T09:33:59.9375524Z         for inference in (False, True, False, True, True, False):
+2026-11-13T09:33:59.9375874Z             with self.subTest(inference=inference):
+2026-11-13T09:33:59.9376209Z                 DynamicGradMode.set_inference_mode(inference)
+2026-11-13T09:33:59.9376527Z >               enabled, output = create()
+2026-11-13T09:33:59.9376786Z                                   ^^^^^^^^
+2026-11-13T09:33:59.9376956Z 
+2026-11-13T09:33:59.9377132Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:130: 
+2026-11-13T09:33:59.9377529Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9378121Z /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/torch/utils/_contextlib.py:123: in decorate_context
+2026-11-13T09:33:59.9378651Z     with ctx_factory():
+2026-11-13T09:33:59.9378861Z          ^^^^^^^^^^^^^
+2026-11-13T09:33:59.9379111Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9379343Z 
+2026-11-13T09:33:59.9379541Z self = <sglang.srt.utils.common.DynamicGradMode object at 0x7ff6e5bfe1b0>
+2026-11-13T09:33:59.9379985Z 
+2026-11-13T09:33:59.9380092Z     def clone(self) -> DynamicGradMode:
+2026-11-13T09:33:59.9380346Z         r"""
+2026-11-13T09:33:59.9380546Z         Create a copy of this class
+2026-11-13T09:33:59.9380784Z         """
+2026-11-13T09:33:59.9380981Z         if _ENABLE_TORCH_INFERENCE_MODE:
+2026-11-13T09:33:59.9381261Z >           return self.__class__(self.mode)
+2026-11-13T09:33:59.9381525Z                                   ^^^^^^^^^
+2026-11-13T09:33:59.9382176Z E           AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9382459Z 
+2026-11-13T09:33:59.9382606Z python/sglang/srt/utils/common.py:234: AttributeError
+2026-11-13T09:33:59.9383117Z _ TestDynamicGradModePolicy.test_one_decorator_supports_repeated_policy_changes (inference=True) _
+2026-11-13T09:33:59.9383509Z 
+2026-11-13T09:33:59.9383893Z self = <test_dynamic_grad_mode_policy.TestDynamicGradModePolicy testMethod=test_one_decorator_supports_repeated_policy_changes>
+2026-11-13T09:33:59.9384389Z 
+2026-11-13T09:33:59.9384553Z     def test_one_decorator_supports_repeated_policy_changes(self):
+2026-11-13T09:33:59.9384927Z         DynamicGradMode.set_inference_mode(False)
+2026-11-13T09:33:59.9385199Z     
+2026-11-13T09:33:59.9385380Z         @DynamicGradMode()
+2026-11-13T09:33:59.9385596Z         def create():
+2026-11-13T09:33:59.9385843Z             return torch.is_grad_enabled(), torch.ones(2)
+2026-11-13T09:33:59.9386120Z     
+2026-11-13T09:33:59.9386355Z         for inference in (False, True, False, True, True, False):
+2026-11-13T09:33:59.9386696Z             with self.subTest(inference=inference):
+2026-11-13T09:33:59.9387197Z                 DynamicGradMode.set_inference_mode(inference)
+2026-11-13T09:33:59.9387521Z >               enabled, output = create()
+2026-11-13T09:33:59.9387782Z                                   ^^^^^^^^
+2026-11-13T09:33:59.9387943Z 
+2026-11-13T09:33:59.9388120Z test/registered/unit/utils/test_dynamic_grad_mode_policy.py:130: 
+2026-11-13T09:33:59.9388518Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9389112Z /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/torch/utils/_contextlib.py:123: in decorate_context
+2026-11-13T09:33:59.9389641Z     with ctx_factory():
+2026-11-13T09:33:59.9389846Z          ^^^^^^^^^^^^^
+2026-11-13T09:33:59.9390100Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T09:33:59.9390332Z 
+2026-11-13T09:33:59.9390529Z self = <sglang.srt.utils.common.DynamicGradMode object at 0x7ff6e5bfe1b0>
+2026-11-13T09:33:59.9390827Z 
+2026-11-13T09:33:59.9390939Z     def clone(self) -> DynamicGradMode:
+2026-11-13T09:33:59.9391189Z         r"""
+2026-11-13T09:33:59.9391388Z         Create a copy of this class
+2026-11-13T09:33:59.9391948Z         """
+2026-11-13T09:33:59.9392154Z         if _ENABLE_TORCH_INFERENCE_MODE:
+2026-11-13T09:33:59.9392431Z >           return self.__class__(self.mode)
+2026-11-13T09:33:59.9392691Z                                   ^^^^^^^^^
+2026-11-13T09:33:59.9393048Z E           AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9393331Z 
+2026-11-13T09:33:59.9393465Z python/sglang/srt/utils/common.py:234: AttributeError
+2026-11-13T09:33:59.9393830Z =========================== short test summary info ============================
+2026-11-13T09:33:59.9394888Z SUBFAILED(initial=False) test/registered/unit/utils/test_dynamic_grad_mode_policy.py::TestDynamicGradModePolicy::test_context_constructed_before_policy_change - AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9396449Z SUBFAILED(bare=False) test/registered/unit/utils/test_dynamic_grad_mode_policy.py::TestDynamicGradModePolicy::test_decorator_created_before_enabling_inference - AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9397952Z SUBFAILED(bare=True) test/registered/unit/utils/test_dynamic_grad_mode_policy.py::TestDynamicGradModePolicy::test_decorator_created_before_enabling_inference - AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9399721Z SUBFAILED(initial=False) test/registered/unit/utils/test_dynamic_grad_mode_policy.py::TestDynamicGradModePolicy::test_exception_exit_preserves_original_error_and_grad_state - AttributeError: 'DynamicGradMode' object has no attribute '_inference_mode_context'
+2026-11-13T09:33:59.9401419Z SUBFAILED(initial=True) test/registered/unit/utils/test_dynamic_grad_mode_policy.py::TestDynamicGradModePolicy::test_exception_exit_preserves_original_error_and_grad_state - AttributeError: 'DynamicGradMode' object has no attribute 'prev'
+2026-11-13T09:33:59.9403474Z SUBFAILED(initial=False) test/registered/unit/utils/test_dynamic_grad_mode_policy.py::TestDynamicGradModePolicy::test_exit_uses_policy_selected_on_entry - AttributeError: 'DynamicGradMode' object has no attribute '_inference_mode_context'
+2026-11-13T09:33:59.9405015Z SUBFAILED(initial=True) test/registered/unit/utils/test_dynamic_grad_mode_policy.py::TestDynamicGradModePolicy::test_exit_uses_policy_selected_on_entry - AttributeError: 'DynamicGradMode' object has no attribute 'prev'
+2026-11-13T09:33:59.9406551Z SUBFAILED(initial=False) test/registered/unit/utils/test_dynamic_grad_mode_policy.py::TestDynamicGradModePolicy::test_explicit_false_mode_survives_cloning_and_policy_change - AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9408217Z FAILED test/registered/unit/utils/test_dynamic_grad_mode_policy.py::TestDynamicGradModePolicy::test_native_model_inference_then_training_updates - AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9409747Z SUBFAILED(inference=True) test/registered/unit/utils/test_dynamic_grad_mode_policy.py::TestDynamicGradModePolicy::test_one_decorator_supports_repeated_policy_changes - AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9411317Z SUBFAILED(inference=True) test/registered/unit/utils/test_dynamic_grad_mode_policy.py::TestDynamicGradModePolicy::test_one_decorator_supports_repeated_policy_changes - AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9413215Z SUBFAILED(inference=True) test/registered/unit/utils/test_dynamic_grad_mode_policy.py::TestDynamicGradModePolicy::test_one_decorator_supports_repeated_policy_changes - AttributeError: 'DynamicGradMode' object has no attribute 'mode'
+2026-11-13T09:33:59.9414214Z 12 failed, 10 passed, 13 subtests passed in 3.28s
+2026-11-13T09:33:59.9559953Z Confirmed original context lifecycle failures: ['test_context_constructed_before_policy_change', 'test_decorator_created_before_enabling_inference', 'test_exception_exit_preserves_original_error_and_grad_state', 'test_exit_uses_policy_selected_on_entry', 'test_explicit_false_mode_survives_cloning_and_policy_change', 'test_native_model_inference_then_training_updates', 'test_one_decorator_supports_repeated_policy_changes']
+2026-11-13T09:33:59.9637903Z ##[group]Run git restore --source=HEAD -- python/sglang/srt/utils/common.py
+2026-11-13T09:33:59.9638469Z [36;1mgit restore --source=HEAD -- python/sglang/srt/utils/common.py[0m
+2026-11-13T09:33:59.9659714Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:33:59.9659952Z env:
+2026-11-13T09:33:59.9660146Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:33:59.9660391Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:33:59.9660658Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:33:59.9660883Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:33:59.9661093Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:33:59.9661380Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:59.9662117Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:33:59.9662547Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:59.9662918Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:59.9663328Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:59.9663703Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:33:59.9664201Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:33:59.9664420Z ##[endgroup]
+2026-11-13T09:33:59.9794809Z ##[group]Run set +e
+2026-11-13T09:33:59.9795067Z [36;1mset +e[0m
+2026-11-13T09:33:59.9795680Z [36;1mpython -m pre_commit run --files python/sglang/srt/utils/common.py test/registered/unit/utils/test_dynamic_grad_mode_policy.py > sglang-lint.log 2>&1[0m
+2026-11-13T09:33:59.9796338Z [36;1mresult=$?[0m
+2026-11-13T09:33:59.9796536Z [36;1mset -e[0m
+2026-11-13T09:33:59.9796737Z [36;1mcat sglang-lint.log[0m
+2026-11-13T09:33:59.9796995Z [36;1mgit diff > sglang-format.patch[0m
+2026-11-13T09:33:59.9797280Z [36;1mcat sglang-format.patch[0m
+2026-11-13T09:33:59.9797530Z [36;1mpython - <<'PY'[0m
+2026-11-13T09:33:59.9797762Z [36;1mfrom pathlib import Path[0m
+2026-11-13T09:33:59.9798024Z [36;1mprint("BEGIN_FORMATTED_TEST")[0m
+2026-11-13T09:33:59.9798457Z [36;1mprint(Path("test/registered/unit/utils/test_dynamic_grad_mode_policy.py").read_text())[0m
+2026-11-13T09:33:59.9798926Z [36;1mprint("END_FORMATTED_TEST")[0m
+2026-11-13T09:33:59.9799183Z [36;1mPY[0m
+2026-11-13T09:33:59.9799407Z [36;1mtest "$result" -eq 0[0m
+2026-11-13T09:33:59.9799652Z [36;1mgit diff --check[0m
+2026-11-13T09:33:59.9819890Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:33:59.9820135Z env:
+2026-11-13T09:33:59.9820330Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:33:59.9820582Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:33:59.9820851Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:33:59.9821069Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:33:59.9821280Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:33:59.9821814Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:59.9822258Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:33:59.9822693Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:59.9823086Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:59.9823494Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:33:59.9823895Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:33:59.9824237Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:33:59.9824460Z ##[endgroup]
+2026-11-13T09:34:50.4937237Z [INFO] Initializing environment for https://github.com/pre-commit/pre-commit-hooks.
+2026-11-13T09:34:50.4938755Z [INFO] Initializing environment for https://github.com/PyCQA/isort.
+2026-11-13T09:34:50.4943548Z [INFO] Initializing environment for https://github.com/astral-sh/ruff-pre-commit.
+2026-11-13T09:34:50.4944579Z [INFO] Initializing environment for https://github.com/codespell-project/codespell.
+2026-11-13T09:34:50.4945790Z [INFO] Initializing environment for https://github.com/pre-commit/mirrors-clang-format.
+2026-11-13T09:34:50.4946940Z [INFO] Initializing environment for https://github.com/kynan/nbstripout.
+2026-11-13T09:34:50.4948000Z [INFO] Initializing environment for https://github.com/lycheeverse/lychee.git.
+2026-11-13T09:34:50.4949128Z [INFO] Installing environment for https://github.com/pre-commit/pre-commit-hooks.
+2026-11-13T09:34:50.4949863Z [INFO] Once installed this environment will be reused.
+2026-11-13T09:34:50.4950287Z [INFO] This may take a few minutes...
+2026-11-13T09:34:50.4950748Z [INFO] Installing environment for https://github.com/PyCQA/isort.
+2026-11-13T09:34:50.4951274Z [INFO] Once installed this environment will be reused.
+2026-11-13T09:34:50.4951952Z [INFO] This may take a few minutes...
+2026-11-13T09:34:50.4952475Z [INFO] Installing environment for https://github.com/astral-sh/ruff-pre-commit.
+2026-11-13T09:34:50.4952969Z [INFO] Once installed this environment will be reused.
+2026-11-13T09:34:50.4953275Z [INFO] This may take a few minutes...
+2026-11-13T09:34:50.4953688Z [INFO] Installing environment for https://github.com/codespell-project/codespell.
+2026-11-13T09:34:50.4954151Z [INFO] Once installed this environment will be reused.
+2026-11-13T09:34:50.4954457Z [INFO] This may take a few minutes...
+2026-11-13T09:34:50.4954852Z [INFO] Installing environment for https://github.com/pre-commit/mirrors-clang-format.
+2026-11-13T09:34:50.4955849Z [INFO] Once installed this environment will be reused.
+2026-11-13T09:34:50.4956202Z [INFO] This may take a few minutes...
+2026-11-13T09:34:50.4956555Z [INFO] Installing environment for https://github.com/kynan/nbstripout.
+2026-11-13T09:34:50.4956981Z [INFO] Once installed this environment will be reused.
+2026-11-13T09:34:50.4957284Z [INFO] This may take a few minutes...
+2026-11-13T09:34:50.4957715Z check for broken symlinks...............................................................(no files to check)Skipped
+2026-11-13T09:34:50.4958359Z detect destroyed symlinks...................................................................................Passed
+2026-11-13T09:34:50.4958980Z trim trailing whitespace....................................................................................Passed
+2026-11-13T09:34:50.4959553Z fix end of files............................................................................................Passed
+2026-11-13T09:34:50.4960104Z check yaml..............................................................................(no files to check)Skipped
+2026-11-13T09:34:50.4960643Z check toml..............................................................................(no files to check)Skipped
+2026-11-13T09:34:50.4961181Z check python ast............................................................................................Passed
+2026-11-13T09:34:50.4962005Z check for added large files.................................................................................Passed
+2026-11-13T09:34:50.4962600Z check for merge conflicts...................................................................................Passed
+2026-11-13T09:34:50.4963230Z check that scripts with shebangs are executable.............................................................Passed
+2026-11-13T09:34:50.4963860Z detect private key..........................................................................................Passed
+2026-11-13T09:34:50.4964437Z debug statements (python)...................................................................................Passed
+2026-11-13T09:34:50.4965011Z don't commit to branch......................................................................................Passed
+2026-11-13T09:34:50.4965555Z isort.......................................................................................................Passed
+2026-11-13T09:34:50.4966079Z ruff (legacy alias).........................................................................................Passed
+2026-11-13T09:34:50.4966624Z ruff format.................................................................................................Passed
+2026-11-13T09:34:50.4967170Z codespell...................................................................................................Passed
+2026-11-13T09:34:50.4967733Z clang-format............................................................................(no files to check)Skipped
+2026-11-13T09:34:50.4968314Z nbstripout..............................................................................(no files to check)Skipped
+2026-11-13T09:34:50.4968930Z forbid test/srt/ (use test/registered/ or test/manual/).................................(no files to check)Skipped
+2026-11-13T09:34:50.4969550Z forbid docs_new/ (renamed to docs/).....................................................(no files to check)Skipped
+2026-11-13T09:34:50.4970167Z check chinese characters in multimodal_gen..............................................(no files to check)Skipped
+2026-11-13T09:34:50.4970807Z sort CI_PERMISSIONS.json................................................................(no files to check)Skipped
+2026-11-13T09:34:50.4971440Z sort Cookbook vendor groups in docs/docs.json...........................................(no files to check)Skipped
+2026-11-13T09:34:50.4972378Z check for duplicate workflow job names..................................................(no files to check)Skipped
+2026-11-13T09:34:50.4973185Z check opt-in CI tiers match the workflows that gate on them.............................(no files to check)Skipped
+2026-11-13T09:34:50.4974091Z check rust-ext cache key prefix defaults match..........................................(no files to check)Skipped
+2026-11-13T09:34:50.4975347Z check Dockerfile sgl-deep-gemm/sgl-deep-ep versions match python/pyproject.toml.........(no files to check)Skipped
+2026-11-13T09:34:50.4976544Z reject bare pytest.main calls in __main__ blocks............................................................Passed
+2026-11-13T09:34:50.4977711Z regenerate python/sglang/cli/_commands/ from the Cookbook configs.......................(no files to check)Skipped
+2026-11-13T09:34:50.4978881Z validate registered test CI registries......................................................................Passed
+2026-11-13T09:34:50.4980040Z reject CI-registered tests inside the sglang package........................................................Passed
+2026-11-13T09:34:50.4981204Z reject importing a name through a module that only re-imports it............................................Passed
+2026-11-13T09:34:50.4982628Z reject srt domain imports in sglang.srt.utils and sglang.utils imports in the runtime.......................Passed
+2026-11-13T09:34:50.4983766Z rustfmt sgl-model-gateway (nightly).....................................................(no files to check)Skipped
+2026-11-13T09:34:50.4984804Z rustfmt sgl-router......................................................................(no files to check)Skipped
+2026-11-13T09:34:50.4985814Z clippy rust/ workspace (auto-fix).......................................................(no files to check)Skipped
+2026-11-13T09:34:50.4986830Z rustfmt rust/ workspace.................................................................(no files to check)Skipped
+2026-11-13T09:34:50.5342603Z BEGIN_FORMATTED_TEST
+2026-11-13T09:34:50.5343554Z """Dynamic grad contexts follow policy at entry and restore the caller."""
+2026-11-13T09:34:50.5344110Z 
+2026-11-13T09:34:50.5344496Z import copy
+2026-11-13T09:34:50.5345027Z import unittest
+2026-11-13T09:34:50.5345384Z 
+2026-11-13T09:34:50.5345878Z import torch
+2026-11-13T09:34:50.5346521Z from torch import nn
+2026-11-13T09:34:50.5346987Z 
+2026-11-13T09:34:50.5347409Z from sglang.srt.utils import common
+2026-11-13T09:34:50.5348271Z from sglang.srt.utils.common import DynamicGradMode
+2026-11-13T09:34:50.5349105Z from sglang.test.ci.ci_register import register_cpu_ci
+2026-11-13T09:34:50.5349548Z 
+2026-11-13T09:34:50.5349851Z register_cpu_ci(est_time=5, suite="base-a-test-cpu")
+2026-11-13T09:34:50.5350283Z 
+2026-11-13T09:34:50.5350417Z 
+2026-11-13T09:34:50.5350734Z class TestDynamicGradModePolicy(unittest.TestCase):
+2026-11-13T09:34:50.5351276Z     def setUp(self):
+2026-11-13T09:34:50.5352249Z         self.original_policy = common._ENABLE_TORCH_INFERENCE_MODE
+2026-11-13T09:34:50.5353022Z         self.inference_guard = torch.inference_mode(False)
+2026-11-13T09:34:50.5353604Z         self.inference_guard.__enter__()
+2026-11-13T09:34:50.5354123Z         self.grad_guard = torch.enable_grad()
+2026-11-13T09:34:50.5354625Z         self.grad_guard.__enter__()
+2026-11-13T09:34:50.5354927Z 
+2026-11-13T09:34:50.5355076Z     def tearDown(self):
+2026-11-13T09:34:50.5355598Z         DynamicGradMode.set_inference_mode(self.original_policy)
+2026-11-13T09:34:50.5356250Z         self.grad_guard.__exit__(None, None, None)
+2026-11-13T09:34:50.5356798Z         self.inference_guard.__exit__(None, None, None)
+2026-11-13T09:34:50.5357167Z 
+2026-11-13T09:34:50.5357330Z     def assert_policy(self, inference):
+2026-11-13T09:34:50.5357803Z         self.assertFalse(torch.is_grad_enabled())
+2026-11-13T09:34:50.5358514Z         self.assertEqual(torch.is_inference_mode_enabled(), inference)
+2026-11-13T09:34:50.5358937Z 
+2026-11-13T09:34:50.5359104Z     def assert_caller_restored(self):
+2026-11-13T09:34:50.5359612Z         self.assertTrue(torch.is_grad_enabled())
+2026-11-13T09:34:50.5360216Z         self.assertFalse(torch.is_inference_mode_enabled())
+2026-11-13T09:34:50.5360888Z 
+2026-11-13T09:34:50.5361142Z     def test_decorator_created_before_enabling_inference(self):
+2026-11-13T09:34:50.5362017Z         for bare in (False, True):
+2026-11-13T09:34:50.5362501Z             with self.subTest(bare=bare):
+2026-11-13T09:34:50.5363046Z                 DynamicGradMode.set_inference_mode(False)
+2026-11-13T09:34:50.5363430Z 
+2026-11-13T09:34:50.5363585Z                 def create():
+2026-11-13T09:34:50.5364012Z                     self.assert_policy(True)
+2026-11-13T09:34:50.5364489Z                     return torch.ones(2)
+2026-11-13T09:34:50.5364789Z 
+2026-11-13T09:34:50.5364940Z                 decorated = (
+2026-11-13T09:34:50.5365526Z                     DynamicGradMode(create) if bare else DynamicGradMode()(create)
+2026-11-13T09:34:50.5366151Z                 )
+2026-11-13T09:34:50.5366562Z                 DynamicGradMode.set_inference_mode(True)
+2026-11-13T09:34:50.5367086Z                 output = decorated()
+2026-11-13T09:34:50.5367582Z                 self.assertTrue(output.is_inference())
+2026-11-13T09:34:50.5368130Z                 self.assert_caller_restored()
+2026-11-13T09:34:50.5368464Z 
+2026-11-13T09:34:50.5368745Z     def test_decorator_created_before_disabling_inference(self):
+2026-11-13T09:34:50.5369333Z         for bare in (False, True):
+2026-11-13T09:34:50.5369769Z             with self.subTest(bare=bare):
+2026-11-13T09:34:50.5370285Z                 DynamicGradMode.set_inference_mode(True)
+2026-11-13T09:34:50.5370664Z 
+2026-11-13T09:34:50.5370804Z                 def create():
+2026-11-13T09:34:50.5371230Z                     self.assert_policy(False)
+2026-11-13T09:34:50.5371938Z                     return torch.ones(2)
+2026-11-13T09:34:50.5372252Z 
+2026-11-13T09:34:50.5372405Z                 decorated = (
+2026-11-13T09:34:50.5372964Z                     DynamicGradMode(create) if bare else DynamicGradMode()(create)
+2026-11-13T09:34:50.5373584Z                 )
+2026-11-13T09:34:50.5374060Z                 DynamicGradMode.set_inference_mode(False)
+2026-11-13T09:34:50.5374597Z                 output = decorated()
+2026-11-13T09:34:50.5375097Z                 self.assertFalse(output.is_inference())
+2026-11-13T09:34:50.5375613Z                 self.assert_caller_restored()
+2026-11-13T09:34:50.5375945Z 
+2026-11-13T09:34:50.5376204Z     def test_context_constructed_before_policy_change(self):
+2026-11-13T09:34:50.5376767Z         for initial in (False, True):
+2026-11-13T09:34:50.5377235Z             with self.subTest(initial=initial):
+2026-11-13T09:34:50.5377777Z                 DynamicGradMode.set_inference_mode(initial)
+2026-11-13T09:34:50.5378306Z                 context = DynamicGradMode()
+2026-11-13T09:34:50.5378845Z                 DynamicGradMode.set_inference_mode(not initial)
+2026-11-13T09:34:50.5379383Z                 with context:
+2026-11-13T09:34:50.5379813Z                     self.assert_policy(not initial)
+2026-11-13T09:34:50.5380336Z                 self.assert_caller_restored()
+2026-11-13T09:34:50.5380665Z 
+2026-11-13T09:34:50.5380893Z     def test_exit_uses_policy_selected_on_entry(self):
+2026-11-13T09:34:50.5381430Z         for initial in (False, True):
+2026-11-13T09:34:50.5382122Z             with self.subTest(initial=initial):
+2026-11-13T09:34:50.5382719Z                 with torch.inference_mode(False), torch.enable_grad():
+2026-11-13T09:34:50.5383391Z                     DynamicGradMode.set_inference_mode(initial)
+2026-11-13T09:34:50.5383952Z                     with DynamicGradMode():
+2026-11-13T09:34:50.5384446Z                         self.assert_policy(initial)
+2026-11-13T09:34:50.5385021Z                         DynamicGradMode.set_inference_mode(not initial)
+2026-11-13T09:34:50.5385607Z                         self.assert_policy(initial)
+2026-11-13T09:34:50.5386106Z                     self.assert_caller_restored()
+2026-11-13T09:34:50.5386438Z 
+2026-11-13T09:34:50.5386764Z     def test_exception_exit_preserves_original_error_and_grad_state(self):
+2026-11-13T09:34:50.5387412Z         for initial in (False, True):
+2026-11-13T09:34:50.5387877Z             with self.subTest(initial=initial):
+2026-11-13T09:34:50.5388790Z                 with torch.inference_mode(False), torch.enable_grad():
+2026-11-13T09:34:50.5389438Z                     DynamicGradMode.set_inference_mode(initial)
+2026-11-13T09:34:50.5390035Z                     error = RuntimeError("model forward failed")
+2026-11-13T09:34:50.5390648Z                     with self.assertRaises(RuntimeError) as caught:
+2026-11-13T09:34:50.5391206Z                         with DynamicGradMode():
+2026-11-13T09:34:50.5391998Z                             DynamicGradMode.set_inference_mode(not initial)
+2026-11-13T09:34:50.5392383Z                             raise error
+2026-11-13T09:34:50.5392682Z                     self.assertIs(caught.exception, error)
+2026-11-13T09:34:50.5392999Z                     self.assert_caller_restored()
+2026-11-13T09:34:50.5393189Z 
+2026-11-13T09:34:50.5393384Z     def test_explicit_false_mode_survives_cloning_and_policy_change(self):
+2026-11-13T09:34:50.5393765Z         for initial in (False, True):
+2026-11-13T09:34:50.5394318Z             with self.subTest(initial=initial):
+2026-11-13T09:34:50.5394888Z                 DynamicGradMode.set_inference_mode(initial)
+2026-11-13T09:34:50.5395456Z                 context = DynamicGradMode(False)
+2026-11-13T09:34:50.5395921Z                 clone = context.clone()
+2026-11-13T09:34:50.5396555Z                 decorated = context(lambda: (torch.is_grad_enabled(), torch.ones(2)))
+2026-11-13T09:34:50.5397290Z                 DynamicGradMode.set_inference_mode(True)
+2026-11-13T09:34:50.5397805Z                 with clone:
+2026-11-13T09:34:50.5398321Z                     self.assert_caller_restored()
+2026-11-13T09:34:50.5398859Z                 enabled, output = decorated()
+2026-11-13T09:34:50.5399363Z                 self.assertTrue(enabled)
+2026-11-13T09:34:50.5399884Z                 self.assertFalse(output.is_inference())
+2026-11-13T09:34:50.5400424Z                 self.assert_caller_restored()
+2026-11-13T09:34:50.5400780Z 
+2026-11-13T09:34:50.5401099Z     def test_one_decorator_supports_repeated_policy_changes(self):
+2026-11-13T09:34:50.5402014Z         DynamicGradMode.set_inference_mode(False)
+2026-11-13T09:34:50.5402394Z 
+2026-11-13T09:34:50.5402562Z         @DynamicGradMode()
+2026-11-13T09:34:50.5402945Z         def create():
+2026-11-13T09:34:50.5403371Z             return torch.is_grad_enabled(), torch.ones(2)
+2026-11-13T09:34:50.5403734Z 
+2026-11-13T09:34:50.5403974Z         for inference in (False, True, False, True, True, False):
+2026-11-13T09:34:50.5404579Z             with self.subTest(inference=inference):
+2026-11-13T09:34:50.5405162Z                 DynamicGradMode.set_inference_mode(inference)
+2026-11-13T09:34:50.5405738Z                 enabled, output = create()
+2026-11-13T09:34:50.5406226Z                 self.assertFalse(enabled)
+2026-11-13T09:34:50.5406795Z                 self.assertEqual(output.is_inference(), inference)
+2026-11-13T09:34:50.5407390Z                 self.assert_caller_restored()
+2026-11-13T09:34:50.5407715Z 
+2026-11-13T09:34:50.5408003Z     def test_native_model_inference_then_training_updates(self):
+2026-11-13T09:34:50.5408644Z         DynamicGradMode.set_inference_mode(False)
+2026-11-13T09:34:50.5409200Z         model = nn.Linear(3, 2, dtype=torch.float64)
+2026-11-13T09:34:50.5409707Z         with torch.no_grad():
+2026-11-13T09:34:50.5410335Z             model.weight.copy_(torch.arange(6, dtype=torch.float64).reshape(2, 3) / 8)
+2026-11-13T09:34:50.5411225Z             model.bias.copy_(torch.tensor([0.2, -0.3], dtype=torch.float64))
+2026-11-13T09:34:50.5412145Z         reference = copy.deepcopy(model)
+2026-11-13T09:34:50.5412844Z         optimizer = torch.optim.SGD(model.parameters(), lr=0.05)
+2026-11-13T09:34:50.5413637Z         reference_optimizer = torch.optim.SGD(reference.parameters(), lr=0.05)
+2026-11-13T09:34:50.5414500Z         inputs = torch.tensor([[1.0, -2.0, 0.5], [-1.5, 0.2, 2.0]], dtype=torch.float64)
+2026-11-13T09:34:50.5415313Z         target = torch.tensor([[0.1, -0.4], [0.5, 0.7]], dtype=torch.float64)
+2026-11-13T09:34:50.5416005Z 
+2026-11-13T09:34:50.5416158Z         @DynamicGradMode()
+2026-11-13T09:34:50.5416692Z         def predict():
+2026-11-13T09:34:50.5417078Z             return model(inputs)
+2026-11-13T09:34:50.5417343Z 
+2026-11-13T09:34:50.5417525Z         for inference in (True, False, True):
+2026-11-13T09:34:50.5418071Z             DynamicGradMode.set_inference_mode(inference)
+2026-11-13T09:34:50.5418590Z             actual = predict()
+2026-11-13T09:34:50.5419093Z             with torch.inference_mode(inference), torch.no_grad():
+2026-11-13T09:34:50.5419672Z                 expected = reference(inputs)
+2026-11-13T09:34:50.5420270Z             torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+2026-11-13T09:34:50.5420924Z             self.assertFalse(actual.requires_grad)
+2026-11-13T09:34:50.5421501Z             self.assertEqual(actual.is_inference(), inference)
+2026-11-13T09:34:50.5422301Z             self.assertTrue(model.training)
+2026-11-13T09:34:50.5422789Z             self.assert_caller_restored()
+2026-11-13T09:34:50.5423265Z             optimizer.zero_grad()
+2026-11-13T09:34:50.5423710Z             reference_optimizer.zero_grad()
+2026-11-13T09:34:50.5424260Z             (model(inputs) - target).square().mean().backward()
+2026-11-13T09:34:50.5424903Z             (reference(inputs) - target).square().mean().backward()
+2026-11-13T09:34:50.5425649Z             for left, right in zip(model.parameters(), reference.parameters()):
+2026-11-13T09:34:50.5426336Z                 self.assertTrue(left.requires_grad)
+2026-11-13T09:34:50.5427004Z                 torch.testing.assert_close(left.grad, right.grad, rtol=0, atol=0)
+2026-11-13T09:34:50.5427657Z             optimizer.step()
+2026-11-13T09:34:50.5428090Z             reference_optimizer.step()
+2026-11-13T09:34:50.5428712Z             for left, right in zip(model.parameters(), reference.parameters()):
+2026-11-13T09:34:50.5429468Z                 torch.testing.assert_close(left, right, rtol=0, atol=0)
+2026-11-13T09:34:50.5429908Z 
+2026-11-13T09:34:50.5430255Z     def test_nested_context_preserves_outer_grad_and_inference_states(self):
+2026-11-13T09:34:50.5430973Z         for outer in ("enabled", "no_grad", "inference"):
+2026-11-13T09:34:50.5431498Z             for selected in (False, True):
+2026-11-13T09:34:50.5432427Z                 with self.subTest(outer=outer, selected=selected):
+2026-11-13T09:34:50.5432997Z                     outer_context = {
+2026-11-13T09:34:50.5433468Z                         "enabled": torch.enable_grad,
+2026-11-13T09:34:50.5433972Z                         "no_grad": torch.no_grad,
+2026-11-13T09:34:50.5434493Z                         "inference": torch.inference_mode,
+2026-11-13T09:34:50.5434985Z                     }[outer]()
+2026-11-13T09:34:50.5435379Z                     with outer_context:
+2026-11-13T09:34:50.5435814Z                         before = (
+2026-11-13T09:34:50.5436282Z                             torch.is_grad_enabled(),
+2026-11-13T09:34:50.5436830Z                             torch.is_inference_mode_enabled(),
+2026-11-13T09:34:50.5437330Z                         )
+2026-11-13T09:34:50.5437777Z                         DynamicGradMode.set_inference_mode(selected)
+2026-11-13T09:34:50.5438317Z                         with DynamicGradMode():
+2026-11-13T09:34:50.5438838Z                             self.assertFalse(torch.is_grad_enabled())
+2026-11-13T09:34:50.5439389Z                             self.assertEqual(
+2026-11-13T09:34:50.5439966Z                                 torch.is_inference_mode_enabled(), selected or before[1]
+2026-11-13T09:34:50.5440540Z                             )
+2026-11-13T09:34:50.5440922Z                         self.assertEqual(
+2026-11-13T09:34:50.5441333Z                             (
+2026-11-13T09:34:50.5441964Z                                 torch.is_grad_enabled(),
+2026-11-13T09:34:50.5442477Z                                 torch.is_inference_mode_enabled(),
+2026-11-13T09:34:50.5442960Z                             ),
+2026-11-13T09:34:50.5443326Z                             before,
+2026-11-13T09:34:50.5443906Z                         )
+2026-11-13T09:34:50.5525284Z                     self.assert_caller_restored()
+2026-11-13T09:34:50.5525733Z 
+2026-11-13T09:34:50.5526006Z     def test_false_mode_keeps_existing_no_grad_fallback(self):
+2026-11-13T09:34:50.5526609Z         DynamicGradMode.set_inference_mode(False)
+2026-11-13T09:34:50.5526933Z         with DynamicGradMode(False):
+2026-11-13T09:34:50.5527215Z             self.assert_policy(False)
+2026-11-13T09:34:50.5527475Z         self.assert_caller_restored()
+2026-11-13T09:34:50.5527639Z 
+2026-11-13T09:34:50.5527815Z     def test_invalid_policy_value_retains_existing_selection(self):
+2026-11-13T09:34:50.5528201Z         DynamicGradMode.set_inference_mode(True)
+2026-11-13T09:34:50.5528555Z         with self.assertLogs(common.logger, level="WARNING"):
+2026-11-13T09:34:50.5528914Z             DynamicGradMode.set_inference_mode("false")
+2026-11-13T09:34:50.5529216Z         with DynamicGradMode():
+2026-11-13T09:34:50.5529467Z             self.assert_policy(True)
+2026-11-13T09:34:50.5529736Z         self.assert_caller_restored()
+2026-11-13T09:34:50.5529932Z 
+2026-11-13T09:34:50.5529937Z 
+2026-11-13T09:34:50.5530035Z if __name__ == "__main__":
+2026-11-13T09:34:50.5530256Z     unittest.main()
+2026-11-13T09:34:50.5530377Z 
+2026-11-13T09:34:50.5530464Z END_FORMATTED_TEST
+2026-11-13T09:34:50.5683357Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-11-13T09:34:50.5683791Z with:
+2026-11-13T09:34:50.5684011Z   name: native-cpu-grad-policy-evidence
+2026-11-13T09:34:50.5684799Z   path: sglang-install.log
+sglang-environment.txt
+sglang-patched.log
+sglang-patched.xml
+sglang-baseline.log
+sglang-baseline.xml
+sglang-lint.log
+sglang-format.patch
+
+2026-11-13T09:34:50.5685523Z   if-no-files-found: warn
+2026-11-13T09:34:50.5685755Z   compression-level: 6
+2026-11-13T09:34:50.5685968Z   overwrite: false
+2026-11-13T09:34:50.5686180Z   include-hidden-files: false
+2026-11-13T09:34:50.5686408Z   archive: true
+2026-11-13T09:34:50.5686640Z env:
+2026-11-13T09:34:50.5686841Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:34:50.5687071Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:34:50.5687321Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:34:50.5687539Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:34:50.5687735Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:34:50.5688056Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:34:50.5688511Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:34:50.5688928Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:34:50.5689299Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:34:50.5689669Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:34:50.5690045Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:34:50.5690368Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:34:50.5690581Z ##[endgroup]
+2026-11-13T09:34:50.7343569Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-13T09:34:50.7347369Z The least common ancestor is /home/runner/work/sglang/sglang. This will be the root directory of the artifact
+2026-11-13T09:34:50.7348390Z With the provided path, there will be 8 files uploaded
+2026-11-13T09:34:50.7349241Z Artifact name is valid!
+2026-11-13T09:34:50.7349677Z Root directory input is valid!
+2026-11-13T09:34:51.0786382Z Uploading artifact: native-cpu-grad-policy-evidence.zip
+2026-11-13T09:34:51.0828230Z Beginning upload of artifact content to blob storage
+2026-11-13T09:34:51.3605010Z Uploaded bytes 12988
+2026-11-13T09:34:51.4230415Z Finished uploading artifact content to blob storage!
+2026-11-13T09:34:51.4231773Z SHA256 digest of uploaded artifact is 33fdfa47abd152aea24c47208c0796500eb8b97d4dff5b1ae0b6febeaa8845fe
+2026-11-13T09:34:51.4232737Z Finalizing artifact upload
+2026-11-13T09:34:51.9110380Z Artifact native-cpu-grad-policy-evidence successfully finalized. Artifact ID 14025926299
+2026-11-13T09:34:51.9112047Z Artifact native-cpu-grad-policy-evidence has been successfully uploaded! Final size is 12988 bytes. Artifact ID is 14025926299
+2026-11-13T09:34:51.9115651Z Artifact download URL: https://github.com/Afloat16/sglang/actions/runs/43400001300/artifacts/14025926299
+2026-11-13T09:34:51.9308746Z Post job cleanup.
+2026-11-13T09:34:52.0592661Z (node:17577) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T09:34:52.0593632Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T09:34:52.0820138Z Post job cleanup.
+2026-11-13T09:34:52.1834680Z [command]/usr/bin/git version
+2026-11-13T09:34:52.1886048Z git version 2.56.0
+2026-11-13T09:34:52.1928294Z Temporarily overriding HOME='/home/runner/work/_temp/ca424c24-d4a9-4eb7-823f-7071521e129d' before making global git config changes
+2026-11-13T09:34:52.1929975Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T09:34:52.1935076Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sglang/sglang
+2026-11-13T09:34:52.1980594Z Removing SSH command configuration
+2026-11-13T09:34:52.1989423Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T09:34:52.2036134Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T09:34:52.2333792Z Removing HTTP extra header
+2026-11-13T09:34:52.2341485Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T09:34:52.2385874Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T09:34:52.2678093Z Removing includeIf entries pointing to credentials config files
+2026-11-13T09:34:52.2684757Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T09:34:52.2734270Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T09:34:52.3175603Z Cleaning up orphan processes
+2026-11-13T09:34:52.3641550Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
