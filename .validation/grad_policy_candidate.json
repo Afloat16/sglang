@@ -1,0 +1,105 @@
+{
+  "repository": "sgl-project/sglang",
+  "fork": "Afloat16/sglang",
+  "stars": 38809,
+  "archived": false,
+  "base_commit": "5792cf6e5e11aebc62d41cf19828f615a8fa7e0a",
+  "base_tree": "519fc5f34063d7b24486de0ba71c0877afa6ba58",
+  "branch": "fix/dynamic-grad-policy-lifecycle-20261113",
+  "commit": "968253dd7b1ecdbf43fb4c507d76ba1142a60597",
+  "tree": "1ef16f172298ed3460e89c1e13713cc521e65d43",
+  "files": [
+    "python/sglang/srt/utils/common.py",
+    "test/registered/unit/utils/test_dynamic_grad_mode_policy.py"
+  ],
+  "status": "pending_native_validation",
+  "novelty": {
+    "all_state_pr_search": [
+      {
+        "number": 49964,
+        "title": "[Fix] kimi_k25: Run the vision projection under the caller's grad mode",
+        "state": "open"
+      },
+      {
+        "number": 45058,
+        "title": "[Fix] scheduler: Preserve async readback grad mode and failures",
+        "state": "closed"
+      },
+      {
+        "number": 38214,
+        "title": "[Fix] glm: Precompile vision kernels before KV allocation to avoid first-image OOMs",
+        "state": "closed"
+      },
+      {
+        "number": 45474,
+        "title": "[Perf] [NVIDIA] speculative: Move the host work between Qwen3.5 MTP decode graphs into the graphs (1/2)",
+        "state": "closed"
+      },
+      {
+        "number": 43854,
+        "title": "Fix autograd retention in CUDA graph capture tail hooks",
+        "state": "closed"
+      },
+      {
+        "number": 15639,
+        "title": "Dynamic grad instead of no_grad",
+        "state": "closed"
+      },
+      {
+        "number": 14379,
+        "title": "Add FP8 Blockwise GEMM Backend Flag `--fp8-gemm-backend`",
+        "state": "closed"
+      }
+    ],
+    "actual_patches_read": [
+      15639,
+      45058,
+      49964,
+      14379
+    ],
+    "related_difference": "15639 changes how the global flag is read but retains conditional construction, clone, and exit; other PRs change call sites, not DynamicGradMode lifecycle.",
+    "setter_search_count": 0,
+    "clone_query": [
+      49120
+    ],
+    "personal_fork_branches": [
+      {
+        "name": "fix/bounded-atomic-stop-regex-20261112",
+        "sha": "3e2b9ff667f11c0a4c3eb56fd857389b3d57c102"
+      },
+      {
+        "name": "fix/layernorm-converted-parameter-dtype-20261112",
+        "sha": "32f2e8d6e96d37c61636552c6b34c80746d2ec93"
+      },
+      {
+        "name": "fix/mlx-import-lazy-cpu-views-20261112",
+        "sha": "29d603230d76dd9cda6142e068277535f41b9f18"
+      },
+      {
+        "name": "fix/pooler-half-normalization-20261112",
+        "sha": "6cfa1c2b244d2a7b9816ade3d58927e5fb9914bd"
+      },
+      {
+        "name": "fix/schema-identifier-field-names-20261112",
+        "sha": "1093b07ba3410e4c963a17965e846e5e5662aac9"
+      },
+      {
+        "name": "main",
+        "sha": "721ef92c4c764bb3c2307378bf13609fc7be7e72"
+      },
+      {
+        "name": "validation/cpu-layernorm-conversion-20261112",
+        "sha": "b417aa74178eb247786892a8889224e8015babf2"
+      },
+      {
+        "name": "validation/cpu-mlx-lazy-views-20261112",
+        "sha": "e9c4f35243bf861b20a22814a8526caaca310b08"
+      },
+      {
+        "name": "validation/cpu-pooler-normalization-20261112",
+        "sha": "749c51ee2698245b14aed1e2c1edd3187b71c23f"
+      }
+    ]
+  },
+  "scope": "Capture the active PyTorch grad context at entry; retain explicit mode across construction and cloning. No thread-global setter redesign or GPU execution claim."
+}
