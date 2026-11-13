@@ -1,0 +1,2050 @@
+﻿2026-11-13T09:49:31.1135906Z Current runner version: '2.338.2'
+2026-11-13T09:49:31.1154016Z ##[group]Runner Image Provisioner
+2026-11-13T09:49:31.1154643Z Hosted Compute Agent
+2026-11-13T09:49:31.1155153Z Version: 20261103.629
+2026-11-13T09:49:31.1155599Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-13T09:49:31.1156360Z Build Date: 2026-11-03T17:26:59Z
+2026-11-13T09:49:31.1156847Z Worker ID: {69dc19f2-c8d8-4be8-8124-1045d872de06}
+2026-11-13T09:49:31.1157462Z Region: us-west-2
+2026-11-13T09:49:31.1157876Z Cloud: AWS
+2026-11-13T09:49:31.1158247Z ##[endgroup]
+2026-11-13T09:49:31.1159512Z ##[group]Operating System
+2026-11-13T09:49:31.1159957Z Ubuntu
+2026-11-13T09:49:31.1160334Z 24.04.5
+2026-11-13T09:49:31.1160700Z LTS
+2026-11-13T09:49:31.1161053Z ##[endgroup]
+2026-11-13T09:49:31.1161413Z ##[group]Runner Image
+2026-11-13T09:49:31.1161879Z Image: ubuntu-24.04
+2026-11-13T09:49:31.1162289Z Version: 20261111.127.1
+2026-11-13T09:49:31.1163177Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261111.127/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-13T09:49:31.1164253Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261111.127
+2026-11-13T09:49:31.1164975Z ##[endgroup]
+2026-11-13T09:49:31.1165746Z ##[group]GITHUB_TOKEN Permissions
+2026-11-13T09:49:31.1167278Z Contents: read
+2026-11-13T09:49:31.1167677Z Metadata: read
+2026-11-13T09:49:31.1168179Z ##[endgroup]
+2026-11-13T09:49:31.1170236Z Secret source: Actions
+2026-11-13T09:49:31.1170942Z Cache mode: write
+2026-11-13T09:49:31.1171433Z Prepare workflow directory
+2026-11-13T09:49:31.1435663Z Prepare all required actions
+2026-11-13T09:49:31.1472045Z Getting action download info
+2026-11-13T09:49:31.5033564Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-13T09:49:33.8687847Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-13T09:49:34.0003652Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-11-13T09:49:34.2477916Z Complete job name: native-cpu
+2026-11-13T09:49:34.3218020Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-11-13T09:49:34.3219876Z with:
+2026-11-13T09:49:34.3220569Z   ref: b157c3866c7c7313c87a6b1cc59052e78b3121e4
+2026-11-13T09:49:34.3221331Z   fetch-depth: 2
+2026-11-13T09:49:34.3222078Z   persist-credentials: false
+2026-11-13T09:49:34.3222846Z   repository: Afloat16/sglang
+2026-11-13T09:49:34.3228015Z   token: ***
+2026-11-13T09:49:34.3228938Z   ssh-strict: true
+2026-11-13T09:49:34.3229588Z   ssh-user: git
+2026-11-13T09:49:34.3230357Z   clean: true
+2026-11-13T09:49:34.3231049Z   sparse-checkout-cone-mode: true
+2026-11-13T09:49:34.3231777Z   fetch-tags: false
+2026-11-13T09:49:34.3232410Z   show-progress: true
+2026-11-13T09:49:34.3233074Z   lfs: false
+2026-11-13T09:49:34.3233703Z   submodules: false
+2026-11-13T09:49:34.3234375Z   set-safe-directory: true
+2026-11-13T09:49:34.3235112Z   allow-unsafe-pr-checkout: false
+2026-11-13T09:49:34.3236066Z env:
+2026-11-13T09:49:34.3236673Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:49:34.3237497Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:49:34.3238262Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:49:34.3239219Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:49:34.3239870Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:49:34.3240609Z ##[endgroup]
+2026-11-13T09:49:38.4809281Z Syncing repository: Afloat16/sglang
+2026-11-13T09:49:38.4811112Z ##[group]Getting Git version info
+2026-11-13T09:49:38.4811544Z Working directory is '/home/runner/work/sglang/sglang'
+2026-11-13T09:49:38.4812251Z [command]/usr/bin/git version
+2026-11-13T09:49:38.7101625Z git version 2.56.1
+2026-11-13T09:49:38.7120814Z ##[endgroup]
+2026-11-13T09:49:38.7133540Z Temporarily overriding HOME='/home/runner/work/_temp/5fa13d6f-43cd-4348-8bed-64d30a392976' before making global git config changes
+2026-11-13T09:49:38.7134460Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T09:49:38.7136983Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sglang/sglang
+2026-11-13T09:49:38.7530534Z Deleting the contents of '/home/runner/work/sglang/sglang'
+2026-11-13T09:49:38.7532989Z ##[group]Determining repository object format
+2026-11-13T09:49:38.7533946Z ##[endgroup]
+2026-11-13T09:49:38.7534480Z ##[group]Initializing the repository
+2026-11-13T09:49:38.7537424Z [command]/usr/bin/git init /home/runner/work/sglang/sglang
+2026-11-13T09:49:38.8672574Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-13T09:49:38.8673248Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-13T09:49:38.8673800Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-13T09:49:38.8674274Z hint: call:
+2026-11-13T09:49:38.8674517Z hint:
+2026-11-13T09:49:38.8674887Z hint: 	git config --global init.defaultBranch <name>
+2026-11-13T09:49:38.8675277Z hint:
+2026-11-13T09:49:38.8675626Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-13T09:49:38.8676104Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-13T09:49:38.8676524Z hint:
+2026-11-13T09:49:38.8676852Z hint: 	git branch -m <name>
+2026-11-13T09:49:38.8677128Z hint:
+2026-11-13T09:49:38.8677473Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-13T09:49:38.8685590Z Initialized empty Git repository in /home/runner/work/sglang/sglang/.git/
+2026-11-13T09:49:38.8695461Z [command]/usr/bin/git remote add origin https://github.com/Afloat16/sglang
+2026-11-13T09:49:38.8743484Z ##[endgroup]
+2026-11-13T09:49:38.8743989Z ##[group]Disabling automatic garbage collection
+2026-11-13T09:49:38.8746729Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-13T09:49:38.8772042Z ##[endgroup]
+2026-11-13T09:49:38.8772704Z ##[group]Setting up auth
+2026-11-13T09:49:38.8773298Z Removing SSH command configuration
+2026-11-13T09:49:38.8776739Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T09:49:38.8807427Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T09:49:39.2013620Z Removing HTTP extra header
+2026-11-13T09:49:39.2019052Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T09:49:39.2060112Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T09:49:39.2205404Z Removing includeIf entries pointing to credentials config files
+2026-11-13T09:49:39.2216593Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T09:49:39.2241523Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T09:49:39.2390152Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-27488526-5ce0-481f-9b0b-0343805a562a.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-13T09:49:39.2417799Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sglang/sglang/.git.path /home/runner/work/_temp/git-credentials-27488526-5ce0-481f-9b0b-0343805a562a.config
+2026-11-13T09:49:39.2440196Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-27488526-5ce0-481f-9b0b-0343805a562a.config
+2026-11-13T09:49:39.2463826Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-27488526-5ce0-481f-9b0b-0343805a562a.config
+2026-11-13T09:49:39.2486327Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-27488526-5ce0-481f-9b0b-0343805a562a.config
+2026-11-13T09:49:39.2507857Z ##[endgroup]
+2026-11-13T09:49:39.2508383Z ##[group]Fetching the repository
+2026-11-13T09:49:39.2514097Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=2 origin b157c3866c7c7313c87a6b1cc59052e78b3121e4
+2026-11-13T09:49:46.9567585Z From https://github.com/Afloat16/sglang
+2026-11-13T09:49:46.9568548Z  * branch            b157c3866c7c7313c87a6b1cc59052e78b3121e4 -> FETCH_HEAD
+2026-11-13T09:49:46.9604263Z [command]/usr/bin/git rev-parse --verify --quiet b157c3866c7c7313c87a6b1cc59052e78b3121e4^{object}
+2026-11-13T09:49:46.9605147Z b157c3866c7c7313c87a6b1cc59052e78b3121e4
+2026-11-13T09:49:46.9606369Z ##[endgroup]
+2026-11-13T09:49:46.9606933Z ##[group]Determining the checkout info
+2026-11-13T09:49:46.9607531Z ##[endgroup]
+2026-11-13T09:49:46.9607871Z [command]/usr/bin/git sparse-checkout disable
+2026-11-13T09:49:46.9670743Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-13T09:49:46.9689276Z ##[group]Checking out the ref
+2026-11-13T09:49:46.9692352Z [command]/usr/bin/git checkout --progress --force b157c3866c7c7313c87a6b1cc59052e78b3121e4
+2026-11-13T09:49:47.6932024Z Note: switching to 'b157c3866c7c7313c87a6b1cc59052e78b3121e4'.
+2026-11-13T09:49:47.6932524Z 
+2026-11-13T09:49:47.6932733Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-13T09:49:47.6933211Z changes and commit them, and you can discard any commits you make in this
+2026-11-13T09:49:47.6934145Z state without impacting any branches by switching back to a branch.
+2026-11-13T09:49:47.6934426Z 
+2026-11-13T09:49:47.6934644Z If you want to create a new branch to retain commits you create, you may
+2026-11-13T09:49:47.6935129Z do so (now or later) by using -c with the switch command. Example:
+2026-11-13T09:49:47.6935404Z 
+2026-11-13T09:49:47.6935538Z   git switch -c <new-branch-name>
+2026-11-13T09:49:47.6935792Z 
+2026-11-13T09:49:47.6935903Z Or undo this operation with:
+2026-11-13T09:49:47.6936138Z 
+2026-11-13T09:49:47.6936220Z   git switch -
+2026-11-13T09:49:47.6936418Z 
+2026-11-13T09:49:47.6936973Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-13T09:49:47.6937342Z 
+2026-11-13T09:49:47.6937605Z HEAD is now at b157c38 Select msgpack pickle fallback using value representation
+2026-11-13T09:49:47.6955580Z ##[endgroup]
+2026-11-13T09:49:47.6997773Z [command]/usr/bin/git log -1 --format=%H
+2026-11-13T09:49:47.7020160Z b157c3866c7c7313c87a6b1cc59052e78b3121e4
+2026-11-13T09:49:47.7029317Z ##[group]Removing auth
+2026-11-13T09:49:47.7029808Z Removing SSH command configuration
+2026-11-13T09:49:47.7030326Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T09:49:47.7052387Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T09:49:47.7221345Z Removing HTTP extra header
+2026-11-13T09:49:47.7223134Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T09:49:47.7246070Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T09:49:47.7408081Z Removing includeIf entries pointing to credentials config files
+2026-11-13T09:49:47.7410942Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T09:49:47.7434091Z includeif.gitdir:/home/runner/work/sglang/sglang/.git.path
+2026-11-13T09:49:47.7434930Z includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path
+2026-11-13T09:49:47.7435531Z includeif.gitdir:/github/workspace/.git.path
+2026-11-13T09:49:47.7436035Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-13T09:49:47.7439667Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sglang/sglang/.git.path
+2026-11-13T09:49:47.7457097Z /home/runner/work/_temp/git-credentials-27488526-5ce0-481f-9b0b-0343805a562a.config
+2026-11-13T09:49:47.7463737Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sglang/sglang/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-27488526\-5ce0\-481f\-9b0b\-0343805a562a\.config
+2026-11-13T09:49:47.7487476Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path
+2026-11-13T09:49:47.7509769Z /home/runner/work/_temp/git-credentials-27488526-5ce0-481f-9b0b-0343805a562a.config
+2026-11-13T09:49:47.7515991Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-27488526\-5ce0\-481f\-9b0b\-0343805a562a\.config
+2026-11-13T09:49:47.7540800Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-13T09:49:47.7559145Z /github/runner_temp/git-credentials-27488526-5ce0-481f-9b0b-0343805a562a.config
+2026-11-13T09:49:47.7563862Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-27488526\-5ce0\-481f\-9b0b\-0343805a562a\.config
+2026-11-13T09:49:47.7587781Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-13T09:49:47.7604356Z /github/runner_temp/git-credentials-27488526-5ce0-481f-9b0b-0343805a562a.config
+2026-11-13T09:49:47.7608126Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-27488526\-5ce0\-481f\-9b0b\-0343805a562a\.config
+2026-11-13T09:49:47.7631505Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T09:49:47.7786860Z Removing credentials config '/home/runner/work/_temp/git-credentials-27488526-5ce0-481f-9b0b-0343805a562a.config'
+2026-11-13T09:49:47.7792804Z ##[endgroup]
+2026-11-13T09:49:47.7977835Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-11-13T09:49:47.7978225Z with:
+2026-11-13T09:49:47.7978682Z   python-version: 3.12
+2026-11-13T09:49:47.7978928Z   check-latest: false
+2026-11-13T09:49:47.7980964Z   token: ***
+2026-11-13T09:49:47.7981187Z   update-environment: true
+2026-11-13T09:49:47.7981449Z   allow-prereleases: false
+2026-11-13T09:49:47.7981687Z   freethreaded: false
+2026-11-13T09:49:47.7981915Z env:
+2026-11-13T09:49:47.7982153Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:49:47.7982393Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:49:47.7982665Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:49:47.7982900Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:49:47.7983124Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:49:47.7983357Z ##[endgroup]
+2026-11-13T09:49:47.8968374Z ##[group]Installed versions
+2026-11-13T09:49:48.1131574Z (node:2242) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T09:49:48.1132397Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T09:49:48.1132836Z Successfully set up CPython (3.12.16)
+2026-11-13T09:49:48.1133442Z ##[endgroup]
+2026-11-13T09:49:48.1283612Z ##[group]Run python -m pip install uv pre-commit
+2026-11-13T09:49:48.1283997Z [36;1mpython -m pip install uv pre-commit[0m
+2026-11-13T09:49:48.1284399Z [36;1mbash scripts/ci/utils/install_rust_protoc.sh[0m
+2026-11-13T09:49:48.2498206Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:49:48.2498899Z env:
+2026-11-13T09:49:48.2499175Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:49:48.2499433Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:49:48.2499730Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:49:48.2499970Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:49:48.2500195Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:49:48.2500508Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:49:48.2501066Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:49:48.2501457Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:49:48.2501821Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:49:48.2502311Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:49:48.2502650Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:49:48.2502958Z ##[endgroup]
+2026-11-13T09:49:52.9867223Z Collecting uv
+2026-11-13T09:49:53.0381435Z   Downloading uv-0.13.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+2026-11-13T09:49:53.0644330Z Collecting pre-commit
+2026-11-13T09:49:53.0722933Z   Downloading pre_commit-4.7.0-py2.py3-none-any.whl.metadata (1.2 kB)
+2026-11-13T09:49:53.0858726Z Collecting cfgv>=2.0.0 (from pre-commit)
+2026-11-13T09:49:53.0935623Z   Downloading cfgv-3.5.0-py2.py3-none-any.whl.metadata (8.9 kB)
+2026-11-13T09:49:53.1202851Z Collecting identify>=1.0.0 (from pre-commit)
+2026-11-13T09:49:53.1283985Z   Downloading identify-2.6.20-py2.py3-none-any.whl.metadata (4.4 kB)
+2026-11-13T09:49:53.1430081Z Collecting nodeenv>=0.11.1 (from pre-commit)
+2026-11-13T09:49:53.1504900Z   Downloading nodeenv-1.12.0-py3-none-any.whl.metadata (49 kB)
+2026-11-13T09:49:53.1859310Z Collecting pyyaml>=5.1 (from pre-commit)
+2026-11-13T09:49:53.1936675Z   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-11-13T09:49:53.2245438Z Collecting virtualenv>=20.10.0 (from pre-commit)
+2026-11-13T09:49:53.2323470Z   Downloading virtualenv-21.15.6-py3-none-any.whl.metadata (4.1 kB)
+2026-11-13T09:49:53.2460027Z Collecting distlib<1,>=0.4.3 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:49:53.2534887Z   Downloading distlib-0.4.4-py2.py3-none-any.whl.metadata (5.3 kB)
+2026-11-13T09:49:53.2729464Z Collecting filelock<5,>=3.24.2 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:49:53.2804149Z   Downloading filelock-4.2.10-py3-none-any.whl.metadata (2.3 kB)
+2026-11-13T09:49:53.2946686Z Collecting packaging>=26.3 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:49:53.3024189Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-11-13T09:49:53.3201595Z Collecting platformdirs<5,>=4.4 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:49:53.3275499Z   Downloading platformdirs-4.14.5-py3-none-any.whl.metadata (5.7 kB)
+2026-11-13T09:49:53.3420639Z Collecting python-discovery>=1.6.1 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T09:49:53.3497305Z   Downloading python_discovery-1.9.5-py3-none-any.whl.metadata (4.2 kB)
+2026-11-13T09:49:53.3621260Z Downloading uv-0.13.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.4 MB)
+2026-11-13T09:49:53.4776382Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.4/17.4 MB 266.1 MB/s  0:00:00
+2026-11-13T09:49:53.4854197Z Downloading pre_commit-4.7.0-py2.py3-none-any.whl (226 kB)
+2026-11-13T09:49:53.4947577Z Downloading cfgv-3.5.0-py2.py3-none-any.whl (7.4 kB)
+2026-11-13T09:49:53.5043115Z Downloading identify-2.6.20-py2.py3-none-any.whl (99 kB)
+2026-11-13T09:49:53.5134013Z Downloading nodeenv-1.12.0-py3-none-any.whl (39 kB)
+2026-11-13T09:49:53.5233263Z Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-11-13T09:49:53.5273158Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 225.8 MB/s  0:00:00
+2026-11-13T09:49:53.5349211Z Downloading virtualenv-21.15.6-py3-none-any.whl (5.7 MB)
+2026-11-13T09:49:53.5511398Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.7/5.7 MB 375.0 MB/s  0:00:00
+2026-11-13T09:49:53.5586748Z Downloading distlib-0.4.4-py2.py3-none-any.whl (472 kB)
+2026-11-13T09:49:53.5682199Z Downloading filelock-4.2.10-py3-none-any.whl (218 kB)
+2026-11-13T09:49:53.5771156Z Downloading platformdirs-4.14.5-py3-none-any.whl (35 kB)
+2026-11-13T09:49:53.5859679Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-11-13T09:49:53.5959089Z Downloading python_discovery-1.9.5-py3-none-any.whl (44 kB)
+2026-11-13T09:49:54.0170971Z Installing collected packages: distlib, uv, pyyaml, platformdirs, packaging, nodeenv, identify, filelock, cfgv, python-discovery, virtualenv, pre-commit
+2026-11-13T09:49:54.6530794Z 
+2026-11-13T09:49:54.6543912Z Successfully installed cfgv-3.5.0 distlib-0.4.4 filelock-4.2.10 identify-2.6.20 nodeenv-1.12.0 packaging-26.3 platformdirs-4.14.5 pre-commit-4.7.0 python-discovery-1.9.5 pyyaml-6.0.3 uv-0.13.8 virtualenv-21.15.6
+2026-11-13T09:49:54.7248894Z +++ dirname scripts/ci/utils/install_rust_protoc.sh
+2026-11-13T09:49:54.7255604Z ++ cd scripts/ci/utils
+2026-11-13T09:49:54.7256456Z ++ pwd
+2026-11-13T09:49:54.7257342Z + SCRIPT_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T09:49:54.7260458Z ++ id -u
+2026-11-13T09:49:54.7280270Z + '[' 1001 = 0 ']'
+2026-11-13T09:49:54.7280591Z + command -v sudo
+2026-11-13T09:49:54.7282254Z + SUDO=sudo
+2026-11-13T09:49:54.7282689Z + sudo bash /home/runner/work/sglang/sglang/scripts/ci/utils/install_protoc.sh
+2026-11-13T09:49:54.7338173Z + command -v protoc
+2026-11-13T09:49:54.7339048Z protoc not found, installing...
+2026-11-13T09:49:54.7339546Z + command -v protoc
+2026-11-13T09:49:54.7340140Z + echo 'protoc not found, installing...'
+2026-11-13T09:49:54.7341469Z ++ uname -m
+2026-11-13T09:49:54.7350062Z + ARCH=x86_64
+2026-11-13T09:49:54.7350488Z + command -v apt-get
+2026-11-13T09:49:54.7350849Z + apt-get update
+2026-11-13T09:49:54.9736983Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [152 B]
+2026-11-13T09:49:55.0407921Z Get:5 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-11-13T09:49:55.0745567Z Hit:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble InRelease
+2026-11-13T09:49:55.1231117Z Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-11-13T09:49:55.1817746Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [767 kB]
+2026-11-13T09:49:55.2567543Z Get:7 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-11-13T09:49:55.2714506Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [697 kB]
+2026-11-13T09:49:55.3085033Z Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-11-13T09:49:55.4456704Z Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1450 kB]
+2026-11-13T09:49:55.6336803Z Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [315 kB]
+2026-11-13T09:49:55.6841471Z Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1713 kB]
+2026-11-13T09:49:55.7812147Z Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [345 kB]
+2026-11-13T09:49:55.8305023Z Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1883 kB]
+2026-11-13T09:49:55.9285536Z Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [430 kB]
+2026-11-13T09:49:55.9778338Z Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.6 kB]
+2026-11-13T09:49:56.0270872Z Get:16 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1195 kB]
+2026-11-13T09:49:56.9309471Z Get:17 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [238 kB]
+2026-11-13T09:49:57.1181224Z Get:18 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1228 kB]
+2026-11-13T09:49:57.3863580Z Get:19 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [248 kB]
+2026-11-13T09:49:57.5647167Z Get:20 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1788 kB]
+2026-11-13T09:49:57.8631686Z Get:21 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [411 kB]
+2026-11-13T09:50:09.1513871Z Fetched 13.1 MB in 3s (4355 kB/s)
+2026-11-13T09:50:10.0676280Z Reading package lists...
+2026-11-13T09:50:10.0812857Z + PROTOC_APT_PACKAGES=(wget unzip)
+2026-11-13T09:50:10.0921873Z + apt-get install -y --no-install-recommends wget unzip
+2026-11-13T09:50:10.0922272Z Reading package lists...
+2026-11-13T09:50:10.2832765Z Building dependency tree...
+2026-11-13T09:50:10.2839133Z Reading state information...
+2026-11-13T09:50:10.4507460Z wget is already the newest version (1.21.4-1ubuntu4.5).
+2026-11-13T09:50:10.4508001Z unzip is already the newest version (6.0-28ubuntu4.1).
+2026-11-13T09:50:10.4508558Z 0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+2026-11-13T09:50:10.4509765Z + '[' x86_64 = aarch64 ']'
+2026-11-13T09:50:10.4510063Z + '[' x86_64 = arm64 ']'
+2026-11-13T09:50:10.4510307Z + PROTOC_ARCH=x86_64
+2026-11-13T09:50:10.4510594Z + PROTOC_ZIP=protoc-32.0-linux-x86_64.zip
+2026-11-13T09:50:10.4512654Z + cd /tmp
+2026-11-13T09:50:10.4513199Z + wget https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-x86_64.zip
+2026-11-13T09:50:10.5534597Z --2026-11-13 09:50:10--  https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-x86_64.zip
+2026-11-13T09:50:10.5682363Z Resolving github.com (github.com)... 20.29.134.23
+2026-11-13T09:50:10.5825847Z Connecting to github.com (github.com)|20.29.134.23|:443... connected.
+2026-11-13T09:50:10.8230109Z HTTP request sent, awaiting response... 302 Found
+2026-11-13T09:50:10.8234309Z Location: https://release-assets.githubusercontent.com/github-production-release-asset/23357588/b8f467f9-efcf-428e-8da8-d051740d4252?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-13T10%3A39%3A57Z&rscd=attachment%3B+filename%3Dprotoc-32.0-linux-x86_64.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-13T09%3A39%3A45Z&ske=2026-11-13T10%3A39%3A57Z&sks=b&skv=2018-11-09&sig=R0pasQilNW%2Bh3f%2F6m7cXL5Rgd%2BXbBbfZnWY4lP3skaI%3D&jwt=*** [following]
+2026-11-13T09:50:10.8239302Z --2026-11-13 09:50:10--  https://release-assets.githubusercontent.com/github-production-release-asset/23357588/b8f467f9-efcf-428e-8da8-d051740d4252?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-13T10%3A39%3A57Z&rscd=attachment%3B+filename%3Dprotoc-32.0-linux-x86_64.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-13T09%3A39%3A45Z&ske=2026-11-13T10%3A39%3A57Z&sks=b&skv=2018-11-09&sig=R0pasQilNW%2Bh3f%2F6m7cXL5Rgd%2BXbBbfZnWY4lP3skaI%3D&jwt=***
+2026-11-13T09:50:10.8243426Z Resolving release-assets.githubusercontent.com (release-assets.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+2026-11-13T09:50:10.8311916Z Connecting to release-assets.githubusercontent.com (release-assets.githubusercontent.com)|185.199.108.133|:443... connected.
+2026-11-13T09:50:10.8581571Z HTTP request sent, awaiting response... 200 OK
+2026-11-13T09:50:10.8582134Z Length: 3543178 (3.4M) [application/octet-stream]
+2026-11-13T09:50:10.8590407Z Saving to: ‘protoc-32.0-linux-x86_64.zip’
+2026-11-13T09:50:10.8590630Z 
+2026-11-13T09:50:10.8644964Z      0K .......... .......... .......... .......... ..........  1% 7.86M 0s
+2026-11-13T09:50:10.8660173Z     50K .......... .......... .......... .......... ..........  2% 28.4M 0s
+2026-11-13T09:50:10.8708951Z    100K .......... .......... .......... .......... ..........  4% 10.1M 0s
+2026-11-13T09:50:10.8727421Z    150K .......... .......... .......... .......... ..........  5% 26.6M 0s
+2026-11-13T09:50:10.8766879Z    200K .......... .......... .......... .......... ..........  7% 12.3M 0s
+2026-11-13T09:50:10.8773199Z    250K .......... .......... .......... .......... ..........  8% 77.4M 0s
+2026-11-13T09:50:10.8780527Z    300K .......... .......... .......... .......... .......... 10% 69.3M 0s
+2026-11-13T09:50:10.8788664Z    350K .......... .......... .......... .......... .......... 11% 62.4M 0s
+2026-11-13T09:50:10.8814557Z    400K .......... .......... .......... .......... .......... 13% 18.3M 0s
+2026-11-13T09:50:10.8828556Z    450K .......... .......... .......... .......... .......... 14% 35.5M 0s
+2026-11-13T09:50:10.8836175Z    500K .......... .......... .......... .......... .......... 15% 63.1M 0s
+2026-11-13T09:50:10.8845874Z    550K .......... .......... .......... .......... .......... 17% 51.4M 0s
+2026-11-13T09:50:10.8847466Z    600K .......... .......... .......... .......... .......... 18%  252M 0s
+2026-11-13T09:50:10.8874735Z    650K .......... .......... .......... .......... .......... 20% 18.4M 0s
+2026-11-13T09:50:10.8875176Z    700K .......... .......... .......... .......... .......... 21%  476M 0s
+2026-11-13T09:50:10.8886435Z    750K .......... .......... .......... .......... .......... 23% 44.6M 0s
+2026-11-13T09:50:10.8887013Z    800K .......... .......... .......... .......... .......... 24%  470M 0s
+2026-11-13T09:50:10.8890364Z    850K .......... .......... .......... .......... .......... 26%  172M 0s
+2026-11-13T09:50:10.8894110Z    900K .......... .......... .......... .......... .......... 27%  130M 0s
+2026-11-13T09:50:10.8894504Z    950K .......... .......... .......... .......... .......... 28%  503M 0s
+2026-11-13T09:50:10.8897420Z   1000K .......... .......... .......... .......... .......... 30%  182M 0s
+2026-11-13T09:50:10.8900542Z   1050K .......... .......... .......... .......... .......... 31%  165M 0s
+2026-11-13T09:50:10.8902847Z   1100K .......... .......... .......... .......... .......... 33%  219M 0s
+2026-11-13T09:50:10.8904578Z   1150K .......... .......... .......... .......... .......... 34%  251M 0s
+2026-11-13T09:50:10.8905692Z   1200K .......... .......... .......... .......... .......... 36%  355M 0s
+2026-11-13T09:50:10.8909204Z   1250K .......... .......... .......... .......... .......... 37%  166M 0s
+2026-11-13T09:50:10.8911351Z   1300K .......... .......... .......... .......... .......... 39%  184M 0s
+2026-11-13T09:50:10.8933081Z   1350K .......... .......... .......... .......... .......... 40% 22.8M 0s
+2026-11-13T09:50:10.8934290Z   1400K .......... .......... .......... .......... .......... 41%  715M 0s
+2026-11-13T09:50:10.8935799Z   1450K .......... .......... .......... .......... .......... 43%  256M 0s
+2026-11-13T09:50:10.8937537Z   1500K .......... .......... .......... .......... .......... 44%  259M 0s
+2026-11-13T09:50:10.8945157Z   1550K .......... .......... .......... .......... .......... 46% 64.4M 0s
+2026-11-13T09:50:10.8945741Z   1600K .......... .......... .......... .......... .......... 47%  636M 0s
+2026-11-13T09:50:10.8947342Z   1650K .......... .......... .......... .......... .......... 49%  386M 0s
+2026-11-13T09:50:10.8948624Z   1700K .......... .......... .......... .......... .......... 50%  312M 0s
+2026-11-13T09:50:10.8949537Z   1750K .......... .......... .......... .......... .......... 52%  456M 0s
+2026-11-13T09:50:10.8951956Z   1800K .......... .......... .......... .......... .......... 53%  238M 0s
+2026-11-13T09:50:10.8953325Z   1850K .......... .......... .......... .......... .......... 54%  294M 0s
+2026-11-13T09:50:10.8954380Z   1900K .......... .......... .......... .......... .......... 56%  473M 0s
+2026-11-13T09:50:10.8956345Z   1950K .......... .......... .......... .......... .......... 57%  299M 0s
+2026-11-13T09:50:10.8957321Z   2000K .......... .......... .......... .......... .......... 59%  350M 0s
+2026-11-13T09:50:10.8959225Z   2050K .......... .......... .......... .......... .......... 60%  269M 0s
+2026-11-13T09:50:10.8960732Z   2100K .......... .......... .......... .......... .......... 62%  344M 0s
+2026-11-13T09:50:10.8961602Z   2150K .......... .......... .......... .......... .......... 63%  473M 0s
+2026-11-13T09:50:10.8963078Z   2200K .......... .......... .......... .......... .......... 65%  380M 0s
+2026-11-13T09:50:10.8964554Z   2250K .......... .......... .......... .......... .......... 66%  554M 0s
+2026-11-13T09:50:10.8966227Z   2300K .......... .......... .......... .......... .......... 67%  385M 0s
+2026-11-13T09:50:10.8967227Z   2350K .......... .......... .......... .......... .......... 69%  314M 0s
+2026-11-13T09:50:10.8968040Z   2400K .......... .......... .......... .......... .......... 70%  600M 0s
+2026-11-13T09:50:10.8969285Z   2450K .......... .......... .......... .......... .......... 72%  447M 0s
+2026-11-13T09:50:10.8970633Z   2500K .......... .......... .......... .......... .......... 73%  388M 0s
+2026-11-13T09:50:10.8971843Z   2550K .......... .......... .......... .......... .......... 75%  302M 0s
+2026-11-13T09:50:10.8972870Z   2600K .......... .......... .......... .......... .......... 76%  800M 0s
+2026-11-13T09:50:10.8973482Z   2650K .......... .......... .......... .......... .......... 78%  551M 0s
+2026-11-13T09:50:10.8974478Z   2700K .......... .......... .......... .......... .......... 79%  372M 0s
+2026-11-13T09:50:10.8990088Z   2750K .......... .......... .......... .......... .......... 80% 31.3M 0s
+2026-11-13T09:50:10.8992185Z   2800K .......... .......... .......... .......... .......... 82%  200M 0s
+2026-11-13T09:50:10.8994064Z   2850K .......... .......... .......... .......... .......... 83%  801M 0s
+2026-11-13T09:50:10.8995123Z   2900K .......... .......... .......... .......... .......... 85%  334M 0s
+2026-11-13T09:50:10.8995870Z   2950K .......... .......... .......... .......... .......... 86%  701M 0s
+2026-11-13T09:50:10.8996444Z   3000K .......... .......... .......... .......... .......... 88%  641M 0s
+2026-11-13T09:50:10.8997166Z   3050K .......... .......... .......... .......... .......... 89%  540M 0s
+2026-11-13T09:50:10.9003141Z   3100K .......... .......... .......... .......... .......... 91% 81.6M 0s
+2026-11-13T09:50:10.9003637Z   3150K .......... .......... .......... .......... .......... 92%  901M 0s
+2026-11-13T09:50:10.9004556Z   3200K .......... .......... .......... .......... .......... 93%  345M 0s
+2026-11-13T09:50:10.9006235Z   3250K .......... .......... .......... .......... .......... 95%  389M 0s
+2026-11-13T09:50:10.9007963Z   3300K .......... .......... .......... .......... .......... 96%  272M 0s
+2026-11-13T09:50:10.9009270Z   3350K .......... .......... .......... .......... .......... 98%  374M 0s
+2026-11-13T09:50:10.9009945Z   3400K .......... .......... .......... .......... .......... 99%  564M 0s
+2026-11-13T09:50:10.9010441Z   3450K ..........                                            100%  470M=0.04s
+2026-11-13T09:50:10.9011242Z 
+2026-11-13T09:50:10.9011860Z 2026-11-13 09:50:10 (78.7 MB/s) - ‘protoc-32.0-linux-x86_64.zip’ saved [3543178/3543178]
+2026-11-13T09:50:10.9012190Z 
+2026-11-13T09:50:10.9021326Z + unzip -o protoc-32.0-linux-x86_64.zip -d /usr/local
+2026-11-13T09:50:10.9406800Z Archive:  protoc-32.0-linux-x86_64.zip
+2026-11-13T09:50:11.0017137Z   inflating: /usr/local/bin/protoc   
+2026-11-13T09:50:11.0020903Z    creating: /usr/local/include/google/
+2026-11-13T09:50:11.0021497Z    creating: /usr/local/include/google/protobuf/
+2026-11-13T09:50:11.0021994Z   inflating: /usr/local/include/google/protobuf/any.proto  
+2026-11-13T09:50:11.0022890Z   inflating: /usr/local/include/google/protobuf/api.proto  
+2026-11-13T09:50:11.0023418Z    creating: /usr/local/include/google/protobuf/compiler/
+2026-11-13T09:50:11.0024245Z   inflating: /usr/local/include/google/protobuf/compiler/plugin.proto  
+2026-11-13T09:50:11.0024836Z   inflating: /usr/local/include/google/protobuf/cpp_features.proto  
+2026-11-13T09:50:11.0027917Z   inflating: /usr/local/include/google/protobuf/descriptor.proto  
+2026-11-13T09:50:11.0028388Z   inflating: /usr/local/include/google/protobuf/duration.proto  
+2026-11-13T09:50:11.0029131Z   inflating: /usr/local/include/google/protobuf/empty.proto  
+2026-11-13T09:50:11.0029759Z   inflating: /usr/local/include/google/protobuf/field_mask.proto  
+2026-11-13T09:50:11.0030245Z   inflating: /usr/local/include/google/protobuf/go_features.proto  
+2026-11-13T09:50:11.0030749Z   inflating: /usr/local/include/google/protobuf/java_features.proto  
+2026-11-13T09:50:11.0031193Z   inflating: /usr/local/include/google/protobuf/source_context.proto  
+2026-11-13T09:50:11.0031676Z   inflating: /usr/local/include/google/protobuf/struct.proto  
+2026-11-13T09:50:11.0032386Z   inflating: /usr/local/include/google/protobuf/timestamp.proto  
+2026-11-13T09:50:11.0033160Z   inflating: /usr/local/include/google/protobuf/type.proto  
+2026-11-13T09:50:11.0033735Z   inflating: /usr/local/include/google/protobuf/wrappers.proto  
+2026-11-13T09:50:11.0034120Z   inflating: /usr/local/readme.txt   
+2026-11-13T09:50:11.0037866Z + rm -f protoc-32.0-linux-x86_64.zip
+2026-11-13T09:50:11.0050700Z + protoc --version
+2026-11-13T09:50:11.0058081Z libprotoc 32.0
+2026-11-13T09:50:11.0068579Z + bash /home/runner/work/sglang/sglang/scripts/ci/utils/install_rustup.sh
+2026-11-13T09:50:11.0085136Z +++ dirname /home/runner/work/sglang/sglang/scripts/ci/utils/install_rustup.sh
+2026-11-13T09:50:11.0092132Z ++ cd /home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T09:50:11.0092435Z ++ pwd
+2026-11-13T09:50:11.0093542Z + SCRIPT_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T09:50:11.0094107Z + RUST_WORKSPACE_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust
+2026-11-13T09:50:11.0096499Z ++ sed -n 's/^channel *= *"\([^"]*\)".*/\1/p' /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml
+2026-11-13T09:50:11.0108609Z + PINNED_CHANNEL=1.92
+2026-11-13T09:50:11.0108937Z + DEFAULT_CHANNEL=1.92
+2026-11-13T09:50:11.0110392Z + export PATH=/home/runner/.cargo/bin:/opt/hostedtoolcache/Python/3.12.16/x64/bin:/opt/hostedtoolcache/Python/3.12.16/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-11-13T09:50:11.0112282Z + PATH=/home/runner/.cargo/bin:/opt/hostedtoolcache/Python/3.12.16/x64/bin:/opt/hostedtoolcache/Python/3.12.16/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-11-13T09:50:11.0113378Z + '[' -n /home/runner/work/_temp/_runner_file_commands/add_path_4951e87b-f779-4ade-b2d7-30111f803d98 ']'
+2026-11-13T09:50:11.0113962Z ++ dirname /home/runner/work/_temp/_runner_file_commands/add_path_4951e87b-f779-4ade-b2d7-30111f803d98
+2026-11-13T09:50:11.0118285Z + mkdir -p /home/runner/work/_temp/_runner_file_commands
+2026-11-13T09:50:11.0127296Z + echo /home/runner/.cargo/bin
+2026-11-13T09:50:11.0127917Z + '[' -n '' ']'
+2026-11-13T09:50:11.0129452Z + command -v cargo
+2026-11-13T09:50:11.0129790Z + command -v rustc
+2026-11-13T09:50:11.0129993Z + rustc --version
+2026-11-13T09:50:14.3914297Z ++ rustc --version
+2026-11-13T09:50:14.4020260Z ++ cargo --version
+2026-11-13T09:50:15.3830058Z + echo 'rust already installed: rustc 1.99.1 (58cf8f9c3 2026-10-13), cargo 1.99.1 (5f94df478 2026-08-27)'
+2026-11-13T09:50:15.3830782Z + install_workspace_pinned_toolchain
+2026-11-13T09:50:15.3831108Z + command -v rustup
+2026-11-13T09:50:15.3831480Z rust already installed: rustc 1.99.1 (58cf8f9c3 2026-10-13), cargo 1.99.1 (5f94df478 2026-08-27)
+2026-11-13T09:50:15.3832034Z + local toolchain_file=/home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml
+2026-11-13T09:50:15.3832547Z + '[' '!' -f /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml ']'
+2026-11-13T09:50:15.3833374Z + cd /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust
+2026-11-13T09:50:15.3833753Z + rustup toolchain install
+2026-11-13T09:50:15.3956412Z info: syncing channel updates for 1.92-x86_64-unknown-linux-gnu
+2026-11-13T09:50:15.5779830Z info: latest update on 2025-12-11 for version 1.92.0 (ded5c06cf 2025-12-08)
+2026-11-13T09:50:15.5782509Z info: downloading 5 components
+2026-11-13T09:50:22.7787919Z info: the active toolchain `1.92-x86_64-unknown-linux-gnu` has been installed
+2026-11-13T09:50:22.7788868Z info: it's active because: overridden by '/home/runner/work/sglang/sglang/rust/rust-toolchain.toml'
+2026-11-13T09:50:22.7860677Z + return 0
+2026-11-13T09:50:22.7860989Z + export RUSTUP_TOOLCHAIN=1.92
+2026-11-13T09:50:22.7861532Z + RUSTUP_TOOLCHAIN=1.92
+2026-11-13T09:50:22.7861943Z + '[' -n /home/runner/work/_temp/_runner_file_commands/set_env_4951e87b-f779-4ade-b2d7-30111f803d98 ']'
+2026-11-13T09:50:22.7864511Z ++ dirname /home/runner/work/_temp/_runner_file_commands/set_env_4951e87b-f779-4ade-b2d7-30111f803d98
+2026-11-13T09:50:22.7873380Z + mkdir -p /home/runner/work/_temp/_runner_file_commands
+2026-11-13T09:50:22.7882684Z + echo RUSTUP_TOOLCHAIN=1.92
+2026-11-13T09:50:22.7883021Z + rustc --version
+2026-11-13T09:50:22.7970177Z rustc 1.92.0 (ded5c06cf 2025-12-08)
+2026-11-13T09:50:22.7974875Z + cargo --version
+2026-11-13T09:50:22.8033777Z cargo 1.92.0 (344c4567c 2025-10-21)
+2026-11-13T09:50:22.8079871Z ##[group]Run set -o pipefail
+2026-11-13T09:50:22.8080160Z [36;1mset -o pipefail[0m
+2026-11-13T09:50:22.8080650Z [36;1muv pip install -e "python[dev]" --index-strategy unsafe-best-match --prerelease allow 2>&1 | tee sglang-install.log[0m
+2026-11-13T09:50:22.8081172Z [36;1mpython -m pip freeze > sglang-environment.txt[0m
+2026-11-13T09:50:22.8108854Z shell: /usr/bin/bash -e {0}
+2026-11-13T09:50:22.8109119Z env:
+2026-11-13T09:50:22.8109328Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T09:50:22.8109607Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T09:50:22.8109872Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T09:50:22.8110134Z   HF_HUB_OFFLINE: 1
+2026-11-13T09:50:22.8110363Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T09:50:22.8110644Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:50:22.8111034Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T09:50:22.8111428Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:50:22.8111889Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:50:22.8112254Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:50:22.8112601Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T09:50:22.8112908Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T09:50:22.8113159Z   UV_SYSTEM_PYTHON: 1
+2026-11-13T09:50:22.8113399Z ##[endgroup]
+2026-11-13T09:50:22.8542065Z Using Python 3.12.16 environment at: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T09:50:47.8503900Z Resolved 270 packages in 24.99s
+2026-11-13T09:50:47.8641602Z    Building sglang @ file:///home/runner/work/sglang/sglang/python
+2026-11-13T09:50:47.8711396Z Downloading pycountry (7.7MiB)
+2026-11-13T09:50:47.8770832Z Downloading fonttools (5.2MiB)
+2026-11-13T09:50:47.8783921Z Downloading jedi (4.7MiB)
+2026-11-13T09:50:47.8792154Z Downloading cryptography (4.5MiB)
+2026-11-13T09:50:47.8796281Z Downloading uvloop (4.3MiB)
+2026-11-13T09:50:47.8797202Z Downloading hf-xet (4.1MiB)
+2026-11-13T09:50:47.8797873Z Downloading numpy (15.8MiB)
+2026-11-13T09:50:47.8798796Z Downloading grpcio (7.0MiB)
+2026-11-13T09:50:47.8799310Z Downloading scikit-learn (8.7MiB)
+2026-11-13T09:50:47.8799913Z Downloading pandas (11.8MiB)
+2026-11-13T09:50:47.8800459Z Downloading llvmlite (53.7MiB)
+2026-11-13T09:50:47.8801212Z Downloading matplotlib (9.4MiB)
+2026-11-13T09:50:47.8801782Z Downloading modelscope (5.8MiB)
+2026-11-13T09:50:47.8841529Z Downloading nvidia-nvvm (71.7MiB)
+2026-11-13T09:50:47.8842218Z Downloading zstandard (5.3MiB)
+2026-11-13T09:50:47.8844780Z Downloading z3-solver (27.9MiB)
+2026-11-13T09:50:47.8845593Z Downloading onnxruntime (22.7MiB)
+2026-11-13T09:50:47.8846142Z Downloading pillow (6.3MiB)
+2026-11-13T09:50:47.8846514Z Downloading scipy (33.7MiB)
+2026-11-13T09:50:47.8846878Z Downloading polars-runtime-32 (51.4MiB)
+2026-11-13T09:50:47.8868579Z Downloading pyarrow (52.5MiB)
+2026-11-13T09:50:47.8891470Z Downloading pymupdf (65.8MiB)
+2026-11-13T09:50:47.8960646Z Downloading nvshmem4py-cu13 (4.8MiB)
+2026-11-13T09:50:47.9047699Z Downloading sgl-flash-mla (9.7MiB)
+2026-11-13T09:50:47.9065878Z Downloading lxml (5.1MiB)
+2026-11-13T09:50:47.9066476Z Downloading flashinfer-python (96.6MiB)
+2026-11-13T09:50:47.9074234Z Downloading cuda-core (6.3MiB)
+2026-11-13T09:50:47.9075055Z Downloading nvidia-cutlass-dsl-libs-cu13 (87.7MiB)
+2026-11-13T09:50:47.9076006Z Downloading sgl-deep-gemm (4.9MiB)
+2026-11-13T09:50:47.9076518Z Downloading bitsandbytes (41.1MiB)
+2026-11-13T09:50:47.9077303Z Downloading sglang-kernel (355.7MiB)
+2026-11-13T09:50:47.9078132Z Downloading granian (5.1MiB)
+2026-11-13T09:50:47.9079205Z Downloading torchvision (7.2MiB)
+2026-11-13T09:50:47.9079990Z Downloading mistral-common (6.3MiB)
+2026-11-13T09:50:47.9080820Z Downloading av (39.3MiB)
+2026-11-13T09:50:47.9081736Z Downloading nvidia-cutlass-dsl-libs-cu12 (87.5MiB)
+2026-11-13T09:50:47.9082494Z Downloading tml-renderers (4.5MiB)
+2026-11-13T09:50:47.9083274Z Downloading nvidia-cuda-nvcc (44.8MiB)
+2026-11-13T09:50:47.9084476Z Downloading lm-eval (8.4MiB)
+2026-11-13T09:50:47.9085622Z Downloading transformers (12.0MiB)
+2026-11-13T09:50:47.9087124Z Downloading nvidia-mathdx (21.9MiB)
+2026-11-13T09:50:47.9088661Z Downloading sgl-deep-ep (14.7MiB)
+2026-11-13T09:50:47.9090512Z Downloading nccl-extensions (24.0MiB)
+2026-11-13T09:50:47.9092324Z Downloading torchcodec (9.5MiB)
+2026-11-13T09:50:47.9093664Z Downloading nvidia-cudnn-frontend (11.1MiB)
+2026-11-13T09:50:47.9095125Z Downloading deepseek-recipe (12.3MiB)
+2026-11-13T09:50:47.9186503Z Downloading tilelang (48.2MiB)
+2026-11-13T09:50:47.9203055Z Downloading instanttensor (7.0MiB)
+2026-11-13T09:50:47.9399456Z Downloading nvidia-cuda-cccl (3.9MiB)
+2026-11-13T09:50:48.1901350Z Downloading fastokens (3.6MiB)
+2026-11-13T09:50:49.1931858Z  Downloaded hf-xet
+2026-11-13T09:50:49.2296821Z Downloading numba (3.6MiB)
+2026-11-13T09:50:49.2704760Z  Downloaded nvidia-cuda-cccl
+2026-11-13T09:50:49.2943567Z  Downloaded uvloop
+2026-11-13T09:50:49.3076622Z Downloading nccl4py (3.5MiB)
+2026-11-13T09:50:49.3244599Z Downloading cython (3.3MiB)
+2026-11-13T09:50:49.3258925Z  Downloaded fastokens
+2026-11-13T09:50:49.4215553Z  Downloaded cryptography
+2026-11-13T09:50:49.4345636Z Downloading tokenizers (3.2MiB)
+2026-11-13T09:50:49.4753503Z  Downloaded jedi
+2026-11-13T09:50:49.4791418Z Downloading llguidance (2.9MiB)
+2026-11-13T09:50:49.4813424Z  Downloaded tml-renderers
+2026-11-13T09:50:49.5096415Z Downloading openai-harmony (2.9MiB)
+2026-11-13T09:50:49.5478334Z Downloading nvidia-cutlass-dsl-libs-base (2.9MiB)
+2026-11-13T09:50:49.6012158Z  Downloaded nvshmem4py-cu13
+2026-11-13T09:50:49.6033475Z  Downloaded sgl-deep-gemm
+2026-11-13T09:50:49.6296910Z Downloading apache-tvm-ffi (2.6MiB)
+2026-11-13T09:50:49.6358563Z Downloading py-spy (2.8MiB)
+2026-11-13T09:50:49.6445972Z  Downloaded fonttools
+2026-11-13T09:50:49.6769530Z  Downloaded lxml
+2026-11-13T09:50:49.6814376Z Downloading torch-memory-saver (2.5MiB)
+2026-11-13T09:50:49.6935969Z  Downloaded granian
+2026-11-13T09:50:49.7094458Z Downloading timm (2.4MiB)
+2026-11-13T09:50:49.7185864Z Downloading anthropic (2.3MiB)
+2026-11-13T09:50:49.7239865Z  Downloaded zstandard
+2026-11-13T09:50:49.7496061Z Downloading pycryptodomex (2.2MiB)
+2026-11-13T09:50:49.8209038Z  Downloaded modelscope
+2026-11-13T09:50:49.8614258Z Downloading pydantic-core (2.2MiB)
+2026-11-13T09:50:50.0316639Z  Downloaded pillow
+2026-11-13T09:50:50.0577796Z Downloading aiohttp (1.8MiB)
+2026-11-13T09:50:50.0718898Z  Downloaded mistral-common
+2026-11-13T09:50:50.0740635Z  Downloaded cuda-core
+2026-11-13T09:50:50.1001037Z Downloading torchaudio (1.7MiB)
+2026-11-13T09:50:50.1097298Z Downloading nltk (1.6MiB)
+2026-11-13T09:50:50.1572588Z  Downloaded grpcio
+2026-11-13T09:50:50.1922068Z Downloading chardet (1.6MiB)
+2026-11-13T09:50:50.2602529Z  Downloaded instanttensor
+2026-11-13T09:50:50.2811540Z  Downloaded torchvision
+2026-11-13T09:50:50.2882891Z Downloading nvidia-cutlass-dsl-libs-core (1.6MiB)
+2026-11-13T09:50:50.3058745Z Downloading auto-round (1.4MiB)
+2026-11-13T09:50:50.3193680Z  Downloaded llguidance
+2026-11-13T09:50:50.3242845Z  Downloaded nvidia-cutlass-dsl-libs-base
+2026-11-13T09:50:50.3427061Z  Downloaded pycountry
+2026-11-13T09:50:50.3445606Z  Downloaded apache-tvm-ffi
+2026-11-13T09:50:50.3498379Z  Downloaded cython
+2026-11-13T09:50:50.3510572Z Downloading kiwisolver (1.4MiB)
+2026-11-13T09:50:50.3514400Z Downloading sentencepiece (1.3MiB)
+2026-11-13T09:50:50.3533969Z  Downloaded pycryptodomex
+2026-11-13T09:50:50.3540751Z  Downloaded torch-memory-saver
+2026-11-13T09:50:50.3663128Z  Downloaded openai-harmony
+2026-11-13T09:50:50.3719901Z Downloading soundfile (1.3MiB)
+2026-11-13T09:50:50.3720616Z  Downloaded numba
+2026-11-13T09:50:50.3737564Z  Downloaded anthropic
+2026-11-13T09:50:50.5035862Z Downloading pygments (1.2MiB)
+2026-11-13T09:50:50.5036962Z Downloading tiktoken (1.1MiB)
+2026-11-13T09:50:50.5048105Z Downloading xgrammar (1.2MiB)
+2026-11-13T09:50:50.5130200Z  Downloaded nccl4py
+2026-11-13T09:50:50.5136471Z  Downloaded tokenizers
+2026-11-13T09:50:50.5171085Z  Downloaded timm
+2026-11-13T09:50:50.5346075Z  Downloaded py-spy
+2026-11-13T09:50:50.5400808Z  Downloaded pydantic-core
+2026-11-13T09:50:50.6079099Z    Building word2number==1.1
+2026-11-13T09:50:50.6955533Z  Downloaded torchaudio
+2026-11-13T09:50:50.7032316Z  Downloaded nltk
+2026-11-13T09:50:50.7121137Z    Building rouge-score==0.1.2
+2026-11-13T09:50:50.7125274Z  Downloaded aiohttp
+2026-11-13T09:50:50.7237549Z    Building sqlitedict==2.1.0
+2026-11-13T09:50:50.7607696Z  Downloaded lm-eval
+2026-11-13T09:50:50.8142140Z  Downloaded chardet
+2026-11-13T09:50:50.8409795Z  Downloaded scikit-learn
+2026-11-13T09:50:50.9272416Z  Downloaded tiktoken
+2026-11-13T09:50:50.9330155Z  Downloaded auto-round
+2026-11-13T09:50:50.9362298Z  Downloaded pygments
+2026-11-13T09:50:50.9433134Z  Downloaded soundfile
+2026-11-13T09:50:50.9457867Z  Downloaded xgrammar
+2026-11-13T09:50:50.9461130Z  Downloaded sentencepiece
+2026-11-13T09:50:50.9544271Z       Built word2number==1.1
+2026-11-13T09:50:50.9685438Z  Downloaded kiwisolver
+2026-11-13T09:50:51.0130381Z  Downloaded nvidia-cutlass-dsl-libs-core
+2026-11-13T09:50:51.0813303Z  Downloaded matplotlib
+2026-11-13T09:50:51.0900090Z       Built rouge-score==0.1.2
+2026-11-13T09:50:51.1336014Z  Downloaded torchcodec
+2026-11-13T09:50:51.1381291Z       Built sqlitedict==2.1.0
+2026-11-13T09:50:51.1657897Z  Downloaded sgl-flash-mla
+2026-11-13T09:50:51.4147092Z    Building antlr4-python3-runtime==4.9.3
+2026-11-13T09:50:51.5927888Z  Downloaded nvidia-cudnn-frontend
+2026-11-13T09:50:51.8437751Z  Downloaded pandas
+2026-11-13T09:50:51.8492200Z  Downloaded transformers
+2026-11-13T09:50:51.8730704Z  Downloaded deepseek-recipe
+2026-11-13T09:50:51.9348811Z       Built antlr4-python3-runtime==4.9.3
+2026-11-13T09:50:52.3393725Z  Downloaded sgl-deep-ep
+2026-11-13T09:50:52.4880541Z  Downloaded numpy
+2026-11-13T09:50:53.4027486Z  Downloaded nvidia-mathdx
+2026-11-13T09:50:53.4555675Z  Downloaded onnxruntime
+2026-11-13T09:50:53.5918001Z  Downloaded nccl-extensions
+2026-11-13T09:50:54.3245380Z  Downloaded z3-solver
+2026-11-13T09:50:55.3509866Z  Downloaded scipy
+2026-11-13T09:50:57.0558648Z  Downloaded av
+2026-11-13T09:50:57.2346339Z  Downloaded bitsandbytes
+2026-11-13T09:50:57.9787118Z  Downloaded nvidia-cuda-nvcc
+2026-11-13T09:50:58.0954853Z  Downloaded tilelang
+2026-11-13T09:50:58.9206139Z  Downloaded pyarrow
+2026-11-13T09:50:59.3418279Z  Downloaded llvmlite
+2026-11-13T09:50:59.6381946Z  Downloaded polars-runtime-32
+2026-11-13T09:51:00.3760863Z  Downloaded pymupdf
+2026-11-13T09:51:00.9574106Z  Downloaded nvidia-nvvm
+2026-11-13T09:51:02.1876172Z  Downloaded nvidia-cutlass-dsl-libs-cu13
+2026-11-13T09:51:02.6268954Z  Downloaded nvidia-cutlass-dsl-libs-cu12
+2026-11-13T09:51:09.1119712Z  Downloaded flashinfer-python
+2026-11-13T09:51:11.6843961Z  Downloaded sglang-kernel
+2026-11-13T10:03:39.7145596Z       Built sglang @ file:///home/runner/work/sglang/sglang/python
+2026-11-13T10:03:39.7155821Z Prepared 240 packages in 12m 51s
+2026-11-13T10:03:40.1785984Z Installed 267 packages in 462ms
+2026-11-13T10:03:40.1786600Z  + absl-py==2.5.1
+2026-11-13T10:03:40.1787186Z  + accelerate==1.15.0
+2026-11-13T10:03:40.1787543Z  + addict==2.4.0
+2026-11-13T10:03:40.1787863Z  + aiohappyeyeballs==2.7.1
+2026-11-13T10:03:40.1788287Z  + aiohttp==3.14.5
+2026-11-13T10:03:40.1788948Z  + aiosignal==1.4.0
+2026-11-13T10:03:40.1791137Z  + airportsdata==20261103
+2026-11-13T10:03:40.1792178Z  + annotated-doc==0.0.6
+2026-11-13T10:03:40.1792637Z  + annotated-types==0.8.0
+2026-11-13T10:03:40.1793238Z  + anthropic==2.8.0
+2026-11-13T10:03:40.1793586Z  + antlr4-python3-runtime==4.9.3
+2026-11-13T10:03:40.1793987Z  + anyio==4.16.0
+2026-11-13T10:03:40.1794290Z  + apache-tvm-ffi==0.1.11
+2026-11-13T10:03:40.1794626Z  + asttokens==3.0.2
+2026-11-13T10:03:40.1794916Z  + attrs==26.1.0
+2026-11-13T10:03:40.1795188Z  + auto-round==0.16.1
+2026-11-13T10:03:40.1795528Z  + av==16.1.0
+2026-11-13T10:03:40.1795807Z  + bitsandbytes==0.50.2
+2026-11-13T10:03:40.1796106Z  + blake3==1.0.11
+2026-11-13T10:03:40.1796400Z  + blobfile==3.0.0
+2026-11-13T10:03:40.1796691Z  + build==1.6.1
+2026-11-13T10:03:40.1797031Z  + certifi==2026.10.23
+2026-11-13T10:03:40.1797470Z  + cffi==2.1.1
+2026-11-13T10:03:40.1797744Z  + chardet==7.7.0
+2026-11-13T10:03:40.1798049Z  + charset-normalizer==3.5.2
+2026-11-13T10:03:40.1798363Z  + click==8.5.1
+2026-11-13T10:03:40.1798874Z  + cloudpickle==3.1.2
+2026-11-13T10:03:40.1799151Z  + colorama==0.4.6
+2026-11-13T10:03:40.1799420Z  + compressed-tensors==0.18.0
+2026-11-13T10:03:40.1799803Z  + contourpy==1.4.0
+2026-11-13T10:03:40.1800076Z  + coverage==7.17.3
+2026-11-13T10:03:40.1800389Z  + cryptography==50.0.2
+2026-11-13T10:03:40.1800686Z  + cuda-bindings==13.5.0
+2026-11-13T10:03:40.1800965Z  + cuda-core==1.2.2
+2026-11-13T10:03:40.1801277Z  + cuda-pathfinder==1.8.6
+2026-11-13T10:03:40.1801580Z  + cuda-python==13.5.0
+2026-11-13T10:03:40.1801888Z  + cuda-tile==1.8.1
+2026-11-13T10:03:40.1802181Z  + cuda-toolkit==13.0.3.0
+2026-11-13T10:03:40.1802473Z  + cycler==0.12.1
+2026-11-13T10:03:40.1802800Z  + cython==3.3.1
+2026-11-13T10:03:40.1803080Z  + dataproperty==0.37.0
+2026-11-13T10:03:40.1803431Z  + datasets==4.8.5
+2026-11-13T10:03:40.1803720Z  + deepseek-recipe==0.2.0
+2026-11-13T10:03:40.1804013Z  + defusedxml==0.8.0rc2
+2026-11-13T10:03:40.1804341Z  + diff-cover==11.0.1
+2026-11-13T10:03:40.1804637Z  + dill==0.4.1
+2026-11-13T10:03:40.1804944Z  + diskcache==5.6.3
+2026-11-13T10:03:40.1805229Z  + distro==1.9.0
+2026-11-13T10:03:40.1805506Z  + docstring-parser==0.18.0
+2026-11-13T10:03:40.1805858Z  + dominate==3.1.0
+2026-11-13T10:03:40.1806124Z  + easydict==1.14
+2026-11-13T10:03:40.1806424Z  + editdistance==0.8.1
+2026-11-13T10:03:40.1806724Z  + einops==0.9.0.dev0
+2026-11-13T10:03:40.1807007Z  + executing==2.3.0
+2026-11-13T10:03:40.1807292Z  + expecttest==0.3.0
+2026-11-13T10:03:40.1807573Z  + fastapi==0.162.5
+2026-11-13T10:03:40.1807847Z  + fastokens==0.3.6
+2026-11-13T10:03:40.1808162Z  + flashinfer-python==0.7.4
+2026-11-13T10:03:40.1808662Z  + flatbuffers==25.12.19
+2026-11-13T10:03:40.1809002Z  + fonttools==4.68.0
+2026-11-13T10:03:40.1809381Z  + frozenlist==1.8.0
+2026-11-13T10:03:40.1809708Z  + fsspec==2026.2.0
+2026-11-13T10:03:40.1810096Z  + gguf==0.19.0
+2026-11-13T10:03:40.1810372Z  + granian==2.8.8
+2026-11-13T10:03:40.1810657Z  + grpcio==1.85.1
+2026-11-13T10:03:40.1810957Z  + grpcio-health-checking==1.85.1
+2026-11-13T10:03:40.1811313Z  + grpcio-reflection==1.85.1
+2026-11-13T10:03:40.1811652Z  + h11==0.16.0
+2026-11-13T10:03:40.1811948Z  + hf-xet==1.8.0
+2026-11-13T10:03:40.1812232Z  + httpcore==1.0.9
+2026-11-13T10:03:40.1812508Z  + httpcore2==2.16.0
+2026-11-13T10:03:40.1812789Z  + httpx==0.28.1
+2026-11-13T10:03:40.1813085Z  + httpx2==2.16.0
+2026-11-13T10:03:40.1813365Z  + huggingface-hub==1.33.0
+2026-11-13T10:03:40.1814086Z  + humming-kernels==0.1.18
+2026-11-13T10:03:40.1814388Z  + idna==3.20
+2026-11-13T10:03:40.1814679Z  + iniconfig==2.3.1
+2026-11-13T10:03:40.1814972Z  + instanttensor==0.2.3
+2026-11-13T10:03:40.1815294Z  + interegular==0.3.3
+2026-11-13T10:03:40.1815577Z  + ipython==9.18.1
+2026-11-13T10:03:40.1815881Z  + ipython-pygments-lexers==1.1.1
+2026-11-13T10:03:40.1816223Z  + jedi==0.20.1
+2026-11-13T10:03:40.1816502Z  + jinja2==3.1.6
+2026-11-13T10:03:40.1816811Z  + jiter==0.19.0
+2026-11-13T10:03:40.1817063Z  + joblib==1.6.0
+2026-11-13T10:03:40.1817397Z  + jsonlines==4.0.0
+2026-11-13T10:03:40.1817687Z  + jsonschema==4.26.0
+2026-11-13T10:03:40.1818021Z  + jsonschema-specifications==2025.9.1
+2026-11-13T10:03:40.1818358Z  + kiwisolver==1.5.1
+2026-11-13T10:03:40.1818820Z  + lark==1.3.1
+2026-11-13T10:03:40.1819306Z  + latex2sympy2-extended==1.11.0
+2026-11-13T10:03:40.1819624Z  + llguidance==1.9.1
+2026-11-13T10:03:40.1819919Z  + llvmlite==0.47.0
+2026-11-13T10:03:40.1820223Z  + lm-eval==0.5.0.dev1
+2026-11-13T10:03:40.1820484Z  + logbook==1.10.1
+2026-11-13T10:03:40.1820828Z  + loguru==0.8.0
+2026-11-13T10:03:40.1821085Z  + lxml==7.0.0b1
+2026-11-13T10:03:40.1821374Z  + markdown-it-py==4.3.0
+2026-11-13T10:03:40.1821667Z  + markupsafe==3.0.4
+2026-11-13T10:03:40.1821929Z  + math-verify==0.9.0
+2026-11-13T10:03:40.1822257Z  + matplotlib==3.11.2
+2026-11-13T10:03:40.1822541Z  + matplotlib-inline==0.2.2
+2026-11-13T10:03:40.1822854Z  + mbstrdecoder==0.6.1
+2026-11-13T10:03:40.1823220Z  + mdurl==0.1.2
+2026-11-13T10:03:40.1823496Z  + mistral-common==1.13.1
+2026-11-13T10:03:40.1823867Z  + ml-dtypes==0.6.0
+2026-11-13T10:03:40.1824138Z  + modelscope==1.40.3
+2026-11-13T10:03:40.1824426Z  + modelscope-hub==0.7.1
+2026-11-13T10:03:40.1824739Z  + more-itertools==11.2.1
+2026-11-13T10:03:40.1825029Z  + mpmath==1.3.0
+2026-11-13T10:03:40.1825339Z  + msgfy==0.2.1
+2026-11-13T10:03:40.1825601Z  + msgspec==0.22.0
+2026-11-13T10:03:40.1825846Z  + multidict==7.2.1
+2026-11-13T10:03:40.1826164Z  + multiprocess==0.70.19
+2026-11-13T10:03:40.1826441Z  + narwhals==2.28.0
+2026-11-13T10:03:40.1826762Z  + nccl-extensions==0.2.0
+2026-11-13T10:03:40.1827034Z  + nccl4py==0.6.0
+2026-11-13T10:03:40.1827286Z  + nest-asyncio==1.6.0
+2026-11-13T10:03:40.1827591Z  + networkx==3.7
+2026-11-13T10:03:40.1827855Z  + ninja==1.13.2
+2026-11-13T10:03:40.1828134Z  + nltk==3.10.4
+2026-11-13T10:03:40.1828608Z  + numba==0.65.1
+2026-11-13T10:03:40.1828886Z  + numpy==2.3.5
+2026-11-13T10:03:40.1829350Z  + nvidia-cublas==13.1.1.3
+2026-11-13T10:03:40.1829671Z  + nvidia-cuda-cccl==13.3.5.0.6
+2026-11-13T10:03:40.1830050Z  + nvidia-cuda-crt==13.5.37
+2026-11-13T10:03:40.1830370Z  + nvidia-cuda-cupti==13.0.85
+2026-11-13T10:03:40.1830681Z  + nvidia-cuda-nvcc==13.5.37
+2026-11-13T10:03:40.1831072Z  + nvidia-cuda-nvrtc==13.0.88
+2026-11-13T10:03:40.1831384Z  + nvidia-cuda-runtime==13.0.96
+2026-11-13T10:03:40.1831769Z  + nvidia-cudnn-cu13==9.24.0.43
+2026-11-13T10:03:40.1832093Z  + nvidia-cudnn-frontend==1.32.3
+2026-11-13T10:03:40.1832407Z  + nvidia-cufft==12.0.0.61
+2026-11-13T10:03:40.1832724Z  + nvidia-cufile==1.15.1.6
+2026-11-13T10:03:40.1833019Z  + nvidia-curand==10.4.0.35
+2026-11-13T10:03:40.1833329Z  + nvidia-cusolver==12.0.4.66
+2026-11-13T10:03:40.1833670Z  + nvidia-cusparse==12.6.3.3
+2026-11-13T10:03:40.1833987Z  + nvidia-cusparselt-cu13==0.8.1
+2026-11-13T10:03:40.1834324Z  + nvidia-cutlass-dsl==4.8.0
+2026-11-13T10:03:40.1834696Z  + nvidia-cutlass-dsl-libs-base==4.8.0
+2026-11-13T10:03:40.1835065Z  + nvidia-cutlass-dsl-libs-core==4.8.0
+2026-11-13T10:03:40.1835481Z  + nvidia-cutlass-dsl-libs-cu12==4.8.0
+2026-11-13T10:03:40.1835835Z  + nvidia-cutlass-dsl-libs-cu13==4.8.0
+2026-11-13T10:03:40.1836176Z  + nvidia-mathdx==25.6.0
+2026-11-13T10:03:40.1836487Z  + nvidia-ml-py==13.615.71
+2026-11-13T10:03:40.1836815Z  + nvidia-nccl-cu13==2.30.7
+2026-11-13T10:03:40.1837139Z  + nvidia-nvjitlink==13.5.37
+2026-11-13T10:03:40.1837485Z  + nvidia-nvshmem-cu13==3.4.5
+2026-11-13T10:03:40.1837846Z  + nvidia-nvtx==13.0.85
+2026-11-13T10:03:40.1838157Z  + nvidia-nvvm==13.5.37
+2026-11-13T10:03:40.1838676Z  + nvshmem4py-cu13==0.4.1
+2026-11-13T10:03:40.1839020Z  + onnxruntime==1.31.1
+2026-11-13T10:03:40.1839308Z  + openai==2.8.0
+2026-11-13T10:03:40.1839580Z  + openai-harmony==0.0.4
+2026-11-13T10:03:40.1839924Z  + opentelemetry-api==1.45.2
+2026-11-13T10:03:40.1840268Z  + orjson==3.13.0
+2026-11-13T10:03:40.1840565Z  + outlines==0.1.11
+2026-11-13T10:03:40.1840874Z  + outlines-core==0.1.26
+2026-11-13T10:03:40.1841258Z  + pandas==2.3.3
+2026-11-13T10:03:40.1841573Z  + parameterized==0.9.0
+2026-11-13T10:03:40.1841917Z  + parso==0.8.7
+2026-11-13T10:03:40.1842233Z  + partial-json-parser==0.2.1.1.post7
+2026-11-13T10:03:40.1842612Z  + pathvalidate==3.3.1
+2026-11-13T10:03:40.1842918Z  + peft==0.21.2
+2026-11-13T10:03:40.1843223Z  + pexpect==4.9.0
+2026-11-13T10:03:40.1843541Z  + pillow==11.3.0
+2026-11-13T10:03:40.1843795Z  + pluggy==1.7.0
+2026-11-13T10:03:40.1844282Z  + polars==2.1.0
+2026-11-13T10:03:40.1844602Z  + polars-runtime-32==2.1.0
+2026-11-13T10:03:40.1844976Z  + portalocker==4.4.2
+2026-11-13T10:03:40.1845289Z  + prometheus-client==0.26.0
+2026-11-13T10:03:40.1845609Z  + prompt-toolkit==3.0.53
+2026-11-13T10:03:40.1845944Z  + propcache==0.5.4
+2026-11-13T10:03:40.1846258Z  + protobuf==7.37.0rc3
+2026-11-13T10:03:40.1846566Z  + psutil==7.2.2
+2026-11-13T10:03:40.1846893Z  + ptyprocess==0.7.0
+2026-11-13T10:03:40.1847184Z  + pure-eval==0.2.4
+2026-11-13T10:03:40.1847487Z  + py-cpuinfo==9.0.0
+2026-11-13T10:03:40.1847807Z  + py-spy==0.4.3
+2026-11-13T10:03:40.1848089Z  + pyarrow==26.0.1
+2026-11-13T10:03:40.1848730Z  + pybase64==1.5.2
+2026-11-13T10:03:40.1849055Z  + pycountry==26.2.16
+2026-11-13T10:03:40.1849466Z  + pycparser==3.12
+2026-11-13T10:03:40.1849784Z  + pycryptodomex==3.24.2
+2026-11-13T10:03:40.1850116Z  + pydantic==2.14.3
+2026-11-13T10:03:40.1850466Z  + pydantic-core==2.50.4
+2026-11-13T10:03:40.1850815Z  + pydantic-extra-types==2.11.1
+2026-11-13T10:03:40.1851168Z  + pygments==2.21.0
+2026-11-13T10:03:40.1851500Z  + pymupdf==2.1
+2026-11-13T10:03:40.1851800Z  + pymupdf-layout==2.1
+2026-11-13T10:03:40.1852140Z  + pymupdf4llm==2.1
+2026-11-13T10:03:40.1852429Z  + pyparsing==3.3.3
+2026-11-13T10:03:40.1852744Z  + pyproject-hooks==1.3.3
+2026-11-13T10:03:40.1853089Z  + pytablewriter==0.38.0
+2026-11-13T10:03:40.1853432Z  + pytest==9.2.0
+2026-11-13T10:03:40.1853732Z  + pytest-cov==7.1.0
+2026-11-13T10:03:40.1854043Z  + python-dateutil==2.9.0.post0
+2026-11-13T10:03:40.1854384Z  + python-multipart==0.0.33
+2026-11-13T10:03:40.1854782Z  + pytz==2026.6
+2026-11-13T10:03:40.1855101Z  + pyzmq==27.3.0
+2026-11-13T10:03:40.1855414Z  + quack-kernels==0.6.5
+2026-11-13T10:03:40.1855723Z  + referencing==0.37.0
+2026-11-13T10:03:40.1856007Z  + regex==2026.11.9
+2026-11-13T10:03:40.1856323Z  + requests==2.34.2
+2026-11-13T10:03:40.1856630Z  + rich==15.0.0
+2026-11-13T10:03:40.1856934Z  + rouge-score==0.1.2
+2026-11-13T10:03:40.1857253Z  + rpds-py==2026.9.1
+2026-11-13T10:03:40.1857580Z  + sacrebleu==2.6.0
+2026-11-13T10:03:40.1857933Z  + safetensors==0.9.0rc1
+2026-11-13T10:03:40.1858311Z  + scikit-learn==1.9.1
+2026-11-13T10:03:40.1858814Z  + scipy==1.18.1
+2026-11-13T10:03:40.1859122Z  + sentence-transformers==6.3.0
+2026-11-13T10:03:40.1859499Z  + sentencepiece==0.2.1
+2026-11-13T10:03:40.1859827Z  + setproctitle==1.3.8
+2026-11-13T10:03:40.1860155Z  + setuptools==84.2.1
+2026-11-13T10:03:40.1860465Z  + sgl-deep-ep==0.1.2.post1
+2026-11-13T10:03:40.1860857Z  + sgl-deep-gemm==0.2.8
+2026-11-13T10:03:40.1861185Z  + sgl-eval==0.1.3
+2026-11-13T10:03:40.1861512Z  + sgl-flash-mla==1.0.5
+2026-11-13T10:03:40.1862031Z  + sglang==0.0.0.dev2+gb157c3866 (from file:///home/runner/work/sglang/sglang/python)
+2026-11-13T10:03:40.1862547Z  + sglang-kernel==0.4.10
+2026-11-13T10:03:40.1862908Z  + shellingham==1.5.4
+2026-11-13T10:03:40.1863215Z  + six==1.17.0
+2026-11-13T10:03:40.1863558Z  + smg-grpc-proto==0.5.0
+2026-11-13T10:03:40.1863939Z  + smg-grpc-servicer==0.16.0
+2026-11-13T10:03:40.1864273Z  + sniffio==1.3.1
+2026-11-13T10:03:40.1864635Z  + soundfile==0.13.1
+2026-11-13T10:03:40.1864944Z  + sqlitedict==2.1.0
+2026-11-13T10:03:40.1865258Z  + stack-data==0.6.3
+2026-11-13T10:03:40.1865607Z  + starlette==1.10.0
+2026-11-13T10:03:40.1865910Z  + sympy==1.14.0
+2026-11-13T10:03:40.1866243Z  + tabledata==0.0.26
+2026-11-13T10:03:40.1866559Z  + tabulate==0.10.0
+2026-11-13T10:03:40.1866840Z  + tenacity==9.2.1
+2026-11-13T10:03:40.1867208Z  + threadpoolctl==3.8.0
+2026-11-13T10:03:40.1867521Z  + tiktoken==0.14.0
+2026-11-13T10:03:40.1867873Z  + tilelang==0.1.12
+2026-11-13T10:03:40.1868163Z  + timm==1.0.25
+2026-11-13T10:03:40.1868608Z  + tml-renderers==0.1.0
+2026-11-13T10:03:40.1869159Z  + tokenizers==0.23.2
+2026-11-13T10:03:40.1869458Z  + torch==2.14.1
+2026-11-13T10:03:40.1869775Z  + torch-c-dlpack-ext==0.1.5
+2026-11-13T10:03:40.1870135Z  + torch-memory-saver==0.0.10
+2026-11-13T10:03:40.1870477Z  + torchaudio==2.11.0
+2026-11-13T10:03:40.1870827Z  + torchcodec==0.17.0
+2026-11-13T10:03:40.1871138Z  + torchvision==0.29.2
+2026-11-13T10:03:40.1871631Z  + tqdm==4.70.1
+2026-11-13T10:03:40.1871928Z  + traitlets==5.16.1
+2026-11-13T10:03:40.1872247Z  + transformers==5.19.0
+2026-11-13T10:03:40.1872616Z  + triton==3.8.0
+2026-11-13T10:03:40.1872926Z  + truststore==0.10.5
+2026-11-13T10:03:40.1873214Z  + typepy==0.3.1
+2026-11-13T10:03:40.1873541Z  + typer==0.29.1
+2026-11-13T10:03:40.1873849Z  + typing-extensions==4.16.0
+2026-11-13T10:03:40.1874223Z  + typing-inspection==0.4.5
+2026-11-13T10:03:40.1874568Z  + tzdata==2026.6
+2026-11-13T10:03:40.1874878Z  + urllib3==2.8.0
+2026-11-13T10:03:40.1875207Z  + uvicorn==0.54.0
+2026-11-13T10:03:40.1875511Z  + uvloop==0.23.0
+2026-11-13T10:03:40.1875955Z  + watchfiles==1.3.0
+2026-11-13T10:03:40.1876269Z  + wcwidth==0.9.4
+2026-11-13T10:03:40.1876563Z  + word2number==1.1
+2026-11-13T10:03:40.1876869Z  + xgrammar==0.2.7
+2026-11-13T10:03:40.1877183Z  + xxhash==4.1.0
+2026-11-13T10:03:40.1877460Z  + yarl==1.25.1
+2026-11-13T10:03:40.1877796Z  + z3-solver==4.15.4.0
+2026-11-13T10:03:40.1878155Z  + zstandard==0.25.0
+2026-11-13T10:03:40.8756798Z ##[group]Run python - <<'PY'
+2026-11-13T10:03:40.8757126Z [36;1mpython - <<'PY'[0m
+2026-11-13T10:03:40.8757380Z [36;1mimport inspect[0m
+2026-11-13T10:03:40.8757608Z [36;1mfrom pathlib import Path[0m
+2026-11-13T10:03:40.8757883Z [36;1mimport torch[0m
+2026-11-13T10:03:40.8758154Z [36;1mimport sglang.srt.utils.msgpack_utils as common[0m
+2026-11-13T10:03:40.8758834Z [36;1massert Path(inspect.getfile(common)).resolve() == Path("python/sglang/srt/utils/msgpack_utils.py").resolve()[0m
+2026-11-13T10:03:40.8759290Z [36;1massert not torch.cuda.is_available()[0m
+2026-11-13T10:03:40.8759666Z [36;1mprint("Native msgpack codec:", inspect.getfile(common), "Torch:", torch.__version__)[0m
+2026-11-13T10:03:40.8760040Z [36;1mPY[0m
+2026-11-13T10:03:40.8760249Z [36;1mset -o pipefail[0m
+2026-11-13T10:03:40.8761078Z [36;1mpython -m pytest -q -p no:cacheprovider --junitxml=sglang-patched.xml test/registered/unit/utils/test_msgpack_value_faithfulness.py test/registered/unit/managers/test_io_struct.py::TestTokenizedReqInputMsgpack 2>&1 | tee sglang-patched.log[0m
+2026-11-13T10:03:40.9071110Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:03:40.9071435Z env:
+2026-11-13T10:03:40.9071670Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:03:40.9071953Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:03:40.9072234Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:03:40.9072472Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:03:40.9072688Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:03:40.9072957Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:03:40.9073368Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:03:40.9073763Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:03:40.9074114Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:03:40.9074447Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:03:40.9074777Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:03:40.9075134Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:03:40.9075358Z ##[endgroup]
+2026-11-13T10:03:44.5496275Z Native msgpack codec: /home/runner/work/sglang/sglang/python/sglang/srt/utils/msgpack_utils.py Torch: 2.14.1+cu130
+2026-11-13T10:03:59.1483329Z ..........s.s..........                           [100%]
+2026-11-13T10:03:59.1484186Z 21 passed, 2 skipped, 23 subtests passed in 13.25s
+2026-11-13T10:04:00.4284033Z ##[group]Run git show 5792cf6e5e11aebc62d41cf19828f615a8fa7e0a:python/sglang/srt/utils/msgpack_utils.py > python/sglang/srt/utils/msgpack_utils.py
+2026-11-13T10:04:00.4284789Z [36;1mgit show 5792cf6e5e11aebc62d41cf19828f615a8fa7e0a:python/sglang/srt/utils/msgpack_utils.py > python/sglang/srt/utils/msgpack_utils.py[0m
+2026-11-13T10:04:00.4285405Z [36;1mfind python/sglang/srt/utils/__pycache__ -name 'msgpack_utils.*.pyc' -delete[0m
+2026-11-13T10:04:00.4314454Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:04:00.4314745Z env:
+2026-11-13T10:04:00.4315066Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:04:00.4315438Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:04:00.4315692Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:04:00.4315944Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:04:00.4316162Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:04:00.4316464Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:00.4316953Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:04:00.4317331Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:00.4317715Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:00.4318056Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:00.4318771Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:04:00.4319143Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:04:00.4319419Z ##[endgroup]
+2026-11-13T10:04:00.4448172Z ##[group]Run set +e
+2026-11-13T10:04:00.4448610Z [36;1mset +e[0m
+2026-11-13T10:04:00.4449263Z [36;1mpython -m pytest -q -p no:cacheprovider --junitxml=sglang-baseline.xml test/registered/unit/utils/test_msgpack_value_faithfulness.py > sglang-baseline.log 2>&1[0m
+2026-11-13T10:04:00.4449895Z [36;1mstatus=$?[0m
+2026-11-13T10:04:00.4450137Z [36;1mset -e[0m
+2026-11-13T10:04:00.4450366Z [36;1mcat sglang-baseline.log[0m
+2026-11-13T10:04:00.4450637Z [36;1mtest "$status" -eq 1[0m
+2026-11-13T10:04:00.4450881Z [36;1mpython - <<'PY'[0m
+2026-11-13T10:04:00.4451125Z [36;1mimport xml.etree.ElementTree as ET[0m
+2026-11-13T10:04:00.4451493Z [36;1mroot = ET.parse("sglang-baseline.xml").getroot()[0m
+2026-11-13T10:04:00.4451925Z [36;1massert not root.findall(".//error"), "Baseline must fail assertions, not imports."[0m
+2026-11-13T10:04:00.4452444Z [36;1mfailed = {case.attrib["name"] for case in root.findall(".//testcase") if case.find("failure") is not None}[0m
+2026-11-13T10:04:00.4453211Z [36;1mrequired = {"test_integers_outside_msgpack_range_round_trip", "test_structured_arrays_keep_fields_titles_and_layout", "test_real_multimodal_request_survives_forwarding"}[0m
+2026-11-13T10:04:00.4453842Z [36;1massert required <= failed, (required - failed, failed)[0m
+2026-11-13T10:04:00.4454234Z [36;1mprint("Confirmed original value-fidelity failures:", sorted(failed))[0m
+2026-11-13T10:04:00.4454553Z [36;1mPY[0m
+2026-11-13T10:04:00.4479041Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:04:00.4479391Z env:
+2026-11-13T10:04:00.4479613Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:04:00.4479874Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:04:00.4480137Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:04:00.4480378Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:04:00.4480620Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:04:00.4480899Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:00.4481272Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:04:00.4481666Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:00.4482044Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:00.4482423Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:00.4482768Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:04:00.4483077Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:04:00.4483316Z ##[endgroup]
+2026-11-13T10:04:04.1527635Z ..F.F.F.                                          [100%]
+2026-11-13T10:04:04.1528206Z =================================== FAILURES ===================================
+2026-11-13T10:04:04.1529186Z _ TestMsgpackValueFaithfulness.test_dtype_metadata_and_zero_itemsize_arrays (dtype=dtype('float32'), itemsize=4) _
+2026-11-13T10:04:04.1529676Z 
+2026-11-13T10:04:04.1530160Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_dtype_metadata_and_zero_itemsize_arrays>
+2026-11-13T10:04:04.1530704Z 
+2026-11-13T10:04:04.1530966Z     def test_dtype_metadata_and_zero_itemsize_arrays(self):
+2026-11-13T10:04:04.1531437Z         for source in (
+2026-11-13T10:04:04.1531889Z             np.array([1, 2], dtype=np.dtype("f4", metadata={"unit": "score"})),
+2026-11-13T10:04:04.1532701Z             np.empty((2, 3), dtype="V0"),
+2026-11-13T10:04:04.1533114Z         ):
+2026-11-13T10:04:04.1533516Z             with self.subTest(dtype=source.dtype, itemsize=source.dtype.itemsize):
+2026-11-13T10:04:04.1534114Z                 decoded = _round_trip_values([source])[0]
+2026-11-13T10:04:04.1534634Z                 self.assertEqual(decoded.dtype, source.dtype)
+2026-11-13T10:04:04.1535228Z >               self.assertEqual(decoded.dtype.metadata, source.dtype.metadata)
+2026-11-13T10:04:04.1535856Z E               AssertionError: None != mappingproxy({'unit': 'score'})
+2026-11-13T10:04:04.1536215Z 
+2026-11-13T10:04:04.1536505Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:117: AssertionError
+2026-11-13T10:04:04.1537639Z _ TestMsgpackValueFaithfulness.test_dtype_metadata_and_zero_itemsize_arrays (dtype=dtype('V'), itemsize=0) _
+2026-11-13T10:04:04.1538129Z 
+2026-11-13T10:04:04.1538825Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_dtype_metadata_and_zero_itemsize_arrays>
+2026-11-13T10:04:04.1539392Z 
+2026-11-13T10:04:04.1539660Z     def test_dtype_metadata_and_zero_itemsize_arrays(self):
+2026-11-13T10:04:04.1540111Z         for source in (
+2026-11-13T10:04:04.1540527Z             np.array([1, 2], dtype=np.dtype("f4", metadata={"unit": "score"})),
+2026-11-13T10:04:04.1541086Z             np.empty((2, 3), dtype="V0"),
+2026-11-13T10:04:04.1541471Z         ):
+2026-11-13T10:04:04.1542209Z             with self.subTest(dtype=source.dtype, itemsize=source.dtype.itemsize):
+2026-11-13T10:04:04.1542787Z >               decoded = _round_trip_values([source])[0]
+2026-11-13T10:04:04.1543194Z                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1543430Z 
+2026-11-13T10:04:04.1543690Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:115: 
+2026-11-13T10:04:04.1544169Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1544742Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:33: in _round_trip_values
+2026-11-13T10:04:04.1545280Z     forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:04.1545771Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1546058Z 
+2026-11-13T10:04:04.1546228Z code = 3, data = <memory at 0x7fe4c7102ec0>
+2026-11-13T10:04:04.1546450Z 
+2026-11-13T10:04:04.1546674Z     def ext_hook(code: int, data: memoryview) -> object:
+2026-11-13T10:04:04.1547120Z         if code not in (
+2026-11-13T10:04:04.1547456Z             _MSGPACK_EXT_ARRAY,
+2026-11-13T10:04:04.1547804Z             _MSGPACK_EXT_TORCH_TENSOR,
+2026-11-13T10:04:04.1548216Z             _MSGPACK_EXT_NP_ARRAY,
+2026-11-13T10:04:04.1548795Z             _MSGPACK_EXT_SHM_POINTER_MM_DATA,
+2026-11-13T10:04:04.1549229Z         ):
+2026-11-13T10:04:04.1549567Z             return msgspec.msgpack.Ext(code, bytes(data))
+2026-11-13T10:04:04.1549979Z     
+2026-11-13T10:04:04.1550303Z         if code == _MSGPACK_EXT_ARRAY:
+2026-11-13T10:04:04.1550739Z             typecode, raw_data = _unpack_buffer_ext(data)
+2026-11-13T10:04:04.1551160Z             res = array(typecode)
+2026-11-13T10:04:04.1551520Z             res.frombytes(raw_data)
+2026-11-13T10:04:04.1551893Z             return res
+2026-11-13T10:04:04.1552231Z         if code == _MSGPACK_EXT_TORCH_TENSOR:
+2026-11-13T10:04:04.1552687Z             metadata, raw_data = _unpack_buffer_ext(data)
+2026-11-13T10:04:04.1553115Z             shape, dtype, device = metadata
+2026-11-13T10:04:04.1553591Z             return _restore_torch_tensor(shape, dtype, raw_data, device)
+2026-11-13T10:04:04.1554052Z         if code == _MSGPACK_EXT_NP_ARRAY:
+2026-11-13T10:04:04.1554489Z             metadata, raw_data = _unpack_buffer_ext(data)
+2026-11-13T10:04:04.1554898Z             shape, dtype = metadata
+2026-11-13T10:04:04.1555363Z >           return np.frombuffer(raw_data, dtype=np.dtype(dtype)).copy().reshape(shape)
+2026-11-13T10:04:04.1555899Z                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1556595Z E           ValueError: itemsize cannot be zero in type
+2026-11-13T10:04:04.1556833Z 
+2026-11-13T10:04:04.1557090Z python/sglang/srt/utils/msgpack_utils.py:291: ValueError
+2026-11-13T10:04:04.1557880Z _ TestMsgpackValueFaithfulness.test_integers_outside_msgpack_range_round_trip (value=-9223372036854775809, container='scalar') _
+2026-11-13T10:04:04.1558640Z 
+2026-11-13T10:04:04.1559086Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_integers_outside_msgpack_range_round_trip>
+2026-11-13T10:04:04.1559717Z 
+2026-11-13T10:04:04.1559913Z     def test_integers_outside_msgpack_range_round_trip(self):
+2026-11-13T10:04:04.1560603Z         for value in (-(1 << 63) - 1, 1 << 64, -(1 << 200), (1 << 256) - 1):
+2026-11-13T10:04:04.1561350Z             for container in ("scalar", "flat_list", "nested_dict"):
+2026-11-13T10:04:04.1561845Z                 with self.subTest(value=value, container=container):
+2026-11-13T10:04:04.1562279Z                     item = {
+2026-11-13T10:04:04.1562673Z                         "scalar": value,
+2026-11-13T10:04:04.1563051Z                         "flat_list": [0, value, 1],
+2026-11-13T10:04:04.1563475Z                         "nested_dict": {"metadata": [0, {"id": value}]},
+2026-11-13T10:04:04.1563908Z                     }[container]
+2026-11-13T10:04:04.1564312Z >                   self.assertEqual(_round_trip_values([item]), [item])
+2026-11-13T10:04:04.1564818Z                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1565046Z 
+2026-11-13T10:04:04.1565295Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:53: 
+2026-11-13T10:04:04.1565812Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1566137Z 
+2026-11-13T10:04:04.1566273Z values = [-9223372036854775809]
+2026-11-13T10:04:04.1566495Z 
+2026-11-13T10:04:04.1566649Z     def _round_trip_values(values):
+2026-11-13T10:04:04.1567602Z         wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:04.1568035Z         forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:04.1568743Z >           msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:04.1569335Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1569715Z         )
+2026-11-13T10:04:04.1570196Z E       OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1570533Z 
+2026-11-13T10:04:04.1570806Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:34: OverflowError
+2026-11-13T10:04:04.1571658Z _ TestMsgpackValueFaithfulness.test_integers_outside_msgpack_range_round_trip (value=-9223372036854775809, container='flat_list') _
+2026-11-13T10:04:04.1572285Z 
+2026-11-13T10:04:04.1572790Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_integers_outside_msgpack_range_round_trip>
+2026-11-13T10:04:04.1573317Z 
+2026-11-13T10:04:04.1573547Z     def test_integers_outside_msgpack_range_round_trip(self):
+2026-11-13T10:04:04.1574109Z         for value in (-(1 << 63) - 1, 1 << 64, -(1 << 200), (1 << 256) - 1):
+2026-11-13T10:04:04.1574634Z             for container in ("scalar", "flat_list", "nested_dict"):
+2026-11-13T10:04:04.1575138Z                 with self.subTest(value=value, container=container):
+2026-11-13T10:04:04.1575603Z                     item = {
+2026-11-13T10:04:04.1575953Z                         "scalar": value,
+2026-11-13T10:04:04.1576419Z                         "flat_list": [0, value, 1],
+2026-11-13T10:04:04.1576851Z                         "nested_dict": {"metadata": [0, {"id": value}]},
+2026-11-13T10:04:04.1577270Z                     }[container]
+2026-11-13T10:04:04.1577722Z >                   self.assertEqual(_round_trip_values([item]), [item])
+2026-11-13T10:04:04.1578212Z                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1578664Z 
+2026-11-13T10:04:04.1578964Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:53: 
+2026-11-13T10:04:04.1579698Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1580020Z 
+2026-11-13T10:04:04.1580154Z values = [[0, -9223372036854775809, 1]]
+2026-11-13T10:04:04.1580409Z 
+2026-11-13T10:04:04.1580594Z     def _round_trip_values(values):
+2026-11-13T10:04:04.1580990Z         wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:04.1581441Z         forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:04.1581974Z >           msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:04.1582478Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1582872Z         )
+2026-11-13T10:04:04.1583253Z E       OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1583619Z 
+2026-11-13T10:04:04.1584035Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:34: OverflowError
+2026-11-13T10:04:04.1584942Z _ TestMsgpackValueFaithfulness.test_integers_outside_msgpack_range_round_trip (value=-9223372036854775809, container='nested_dict') _
+2026-11-13T10:04:04.1585459Z 
+2026-11-13T10:04:04.1585980Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_integers_outside_msgpack_range_round_trip>
+2026-11-13T10:04:04.1586588Z 
+2026-11-13T10:04:04.1586798Z     def test_integers_outside_msgpack_range_round_trip(self):
+2026-11-13T10:04:04.1587335Z         for value in (-(1 << 63) - 1, 1 << 64, -(1 << 200), (1 << 256) - 1):
+2026-11-13T10:04:04.1587834Z             for container in ("scalar", "flat_list", "nested_dict"):
+2026-11-13T10:04:04.1588644Z                 with self.subTest(value=value, container=container):
+2026-11-13T10:04:04.1589098Z                     item = {
+2026-11-13T10:04:04.1589467Z                         "scalar": value,
+2026-11-13T10:04:04.1589890Z                         "flat_list": [0, value, 1],
+2026-11-13T10:04:04.1590310Z                         "nested_dict": {"metadata": [0, {"id": value}]},
+2026-11-13T10:04:04.1590750Z                     }[container]
+2026-11-13T10:04:04.1591163Z >                   self.assertEqual(_round_trip_values([item]), [item])
+2026-11-13T10:04:04.1591657Z                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1591960Z 
+2026-11-13T10:04:04.1592263Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:53: 
+2026-11-13T10:04:04.1592756Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1593054Z 
+2026-11-13T10:04:04.1593273Z values = [{'metadata': [0, {'id': -9223372036854775809}]}]
+2026-11-13T10:04:04.1593574Z 
+2026-11-13T10:04:04.1593709Z     def _round_trip_values(values):
+2026-11-13T10:04:04.1594103Z         wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:04.1594567Z         forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:04.1595083Z >           msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:04.1595652Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1596032Z         )
+2026-11-13T10:04:04.1596415Z E       OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1596722Z 
+2026-11-13T10:04:04.1597028Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:34: OverflowError
+2026-11-13T10:04:04.1597808Z _ TestMsgpackValueFaithfulness.test_integers_outside_msgpack_range_round_trip (value=18446744073709551616, container='scalar') _
+2026-11-13T10:04:04.1598604Z 
+2026-11-13T10:04:04.1599086Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_integers_outside_msgpack_range_round_trip>
+2026-11-13T10:04:04.1599691Z 
+2026-11-13T10:04:04.1599929Z     def test_integers_outside_msgpack_range_round_trip(self):
+2026-11-13T10:04:04.1600456Z         for value in (-(1 << 63) - 1, 1 << 64, -(1 << 200), (1 << 256) - 1):
+2026-11-13T10:04:04.1601017Z             for container in ("scalar", "flat_list", "nested_dict"):
+2026-11-13T10:04:04.1601525Z                 with self.subTest(value=value, container=container):
+2026-11-13T10:04:04.1602187Z                     item = {
+2026-11-13T10:04:04.1602508Z                         "scalar": value,
+2026-11-13T10:04:04.1602873Z                         "flat_list": [0, value, 1],
+2026-11-13T10:04:04.1603387Z                         "nested_dict": {"metadata": [0, {"id": value}]},
+2026-11-13T10:04:04.1603860Z                     }[container]
+2026-11-13T10:04:04.1604297Z >                   self.assertEqual(_round_trip_values([item]), [item])
+2026-11-13T10:04:04.1604761Z                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1605012Z 
+2026-11-13T10:04:04.1605262Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:53: 
+2026-11-13T10:04:04.1605838Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1606292Z 
+2026-11-13T10:04:04.1606422Z values = [18446744073709551616]
+2026-11-13T10:04:04.1606639Z 
+2026-11-13T10:04:04.1606842Z     def _round_trip_values(values):
+2026-11-13T10:04:04.1607240Z         wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:04.1607664Z         forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:04.1608198Z >           msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:04.1608923Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1609428Z         )
+2026-11-13T10:04:04.1609823Z E       OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1610187Z 
+2026-11-13T10:04:04.1610481Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:34: OverflowError
+2026-11-13T10:04:04.1611540Z _ TestMsgpackValueFaithfulness.test_integers_outside_msgpack_range_round_trip (value=18446744073709551616, container='flat_list') _
+2026-11-13T10:04:04.1612121Z 
+2026-11-13T10:04:04.1612664Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_integers_outside_msgpack_range_round_trip>
+2026-11-13T10:04:04.1613258Z 
+2026-11-13T10:04:04.1613516Z     def test_integers_outside_msgpack_range_round_trip(self):
+2026-11-13T10:04:04.1614067Z         for value in (-(1 << 63) - 1, 1 << 64, -(1 << 200), (1 << 256) - 1):
+2026-11-13T10:04:04.1614628Z             for container in ("scalar", "flat_list", "nested_dict"):
+2026-11-13T10:04:04.1615169Z                 with self.subTest(value=value, container=container):
+2026-11-13T10:04:04.1615636Z                     item = {
+2026-11-13T10:04:04.1615982Z                         "scalar": value,
+2026-11-13T10:04:04.1616387Z                         "flat_list": [0, value, 1],
+2026-11-13T10:04:04.1616842Z                         "nested_dict": {"metadata": [0, {"id": value}]},
+2026-11-13T10:04:04.1617309Z                     }[container]
+2026-11-13T10:04:04.1617722Z >                   self.assertEqual(_round_trip_values([item]), [item])
+2026-11-13T10:04:04.1618190Z                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1618696Z 
+2026-11-13T10:04:04.1618930Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:53: 
+2026-11-13T10:04:04.1619593Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1619867Z 
+2026-11-13T10:04:04.1620077Z values = [[0, 18446744073709551616, 1]]
+2026-11-13T10:04:04.1620297Z 
+2026-11-13T10:04:04.1620471Z     def _round_trip_values(values):
+2026-11-13T10:04:04.1620847Z         wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:04.1621291Z         forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:04.1621811Z >           msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:04.1622355Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1622969Z         )
+2026-11-13T10:04:04.1623326Z E       OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1623659Z 
+2026-11-13T10:04:04.1623978Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:34: OverflowError
+2026-11-13T10:04:04.1624884Z _ TestMsgpackValueFaithfulness.test_integers_outside_msgpack_range_round_trip (value=18446744073709551616, container='nested_dict') _
+2026-11-13T10:04:04.1625638Z 
+2026-11-13T10:04:04.1626146Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_integers_outside_msgpack_range_round_trip>
+2026-11-13T10:04:04.1626761Z 
+2026-11-13T10:04:04.1626984Z     def test_integers_outside_msgpack_range_round_trip(self):
+2026-11-13T10:04:04.1627510Z         for value in (-(1 << 63) - 1, 1 << 64, -(1 << 200), (1 << 256) - 1):
+2026-11-13T10:04:04.1628110Z             for container in ("scalar", "flat_list", "nested_dict"):
+2026-11-13T10:04:04.1628861Z                 with self.subTest(value=value, container=container):
+2026-11-13T10:04:04.1629267Z                     item = {
+2026-11-13T10:04:04.1629593Z                         "scalar": value,
+2026-11-13T10:04:04.1630103Z                         "flat_list": [0, value, 1],
+2026-11-13T10:04:04.1630640Z                         "nested_dict": {"metadata": [0, {"id": value}]},
+2026-11-13T10:04:04.1631074Z                     }[container]
+2026-11-13T10:04:04.1631544Z >                   self.assertEqual(_round_trip_values([item]), [item])
+2026-11-13T10:04:04.1632015Z                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1632255Z 
+2026-11-13T10:04:04.1632514Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:53: 
+2026-11-13T10:04:04.1633079Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1633373Z 
+2026-11-13T10:04:04.1633540Z values = [{'metadata': [0, {'id': 18446744073709551616}]}]
+2026-11-13T10:04:04.1633830Z 
+2026-11-13T10:04:04.1633943Z     def _round_trip_values(values):
+2026-11-13T10:04:04.1634376Z         wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:04.1634850Z         forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:04.1635397Z >           msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:04.1635897Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1636259Z         )
+2026-11-13T10:04:04.1636675Z E       OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1637002Z 
+2026-11-13T10:04:04.1637269Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:34: OverflowError
+2026-11-13T10:04:04.1638222Z _ TestMsgpackValueFaithfulness.test_integers_outside_msgpack_range_round_trip (value=-16069380442589902...2993782792835301376, container='scalar') _
+2026-11-13T10:04:04.1639096Z 
+2026-11-13T10:04:04.1639622Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_integers_outside_msgpack_range_round_trip>
+2026-11-13T10:04:04.1640205Z 
+2026-11-13T10:04:04.1640434Z     def test_integers_outside_msgpack_range_round_trip(self):
+2026-11-13T10:04:04.1641072Z         for value in (-(1 << 63) - 1, 1 << 64, -(1 << 200), (1 << 256) - 1):
+2026-11-13T10:04:04.1641602Z             for container in ("scalar", "flat_list", "nested_dict"):
+2026-11-13T10:04:04.1642159Z                 with self.subTest(value=value, container=container):
+2026-11-13T10:04:04.1642620Z                     item = {
+2026-11-13T10:04:04.1642967Z                         "scalar": value,
+2026-11-13T10:04:04.1643411Z                         "flat_list": [0, value, 1],
+2026-11-13T10:04:04.1643891Z                         "nested_dict": {"metadata": [0, {"id": value}]},
+2026-11-13T10:04:04.1644357Z                     }[container]
+2026-11-13T10:04:04.1644790Z >                   self.assertEqual(_round_trip_values([item]), [item])
+2026-11-13T10:04:04.1645542Z                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1645839Z 
+2026-11-13T10:04:04.1646082Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:53: 
+2026-11-13T10:04:04.1646628Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1646968Z 
+2026-11-13T10:04:04.1647163Z values = [-16069380442589902...2993782792835301376]
+2026-11-13T10:04:04.1647414Z 
+2026-11-13T10:04:04.1647780Z     def _round_trip_values(values):
+2026-11-13T10:04:04.1648160Z         wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:04.1648813Z         forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:04.1649426Z >           msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:04.1649958Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1650385Z         )
+2026-11-13T10:04:04.1650784Z E       OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1651073Z 
+2026-11-13T10:04:04.1651402Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:34: OverflowError
+2026-11-13T10:04:04.1652482Z _ TestMsgpackValueFaithfulness.test_integers_outside_msgpack_range_round_trip (value=-16069380442589902...2993782792835301376, container='flat_list') _
+2026-11-13T10:04:04.1653089Z 
+2026-11-13T10:04:04.1653574Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_integers_outside_msgpack_range_round_trip>
+2026-11-13T10:04:04.1654228Z 
+2026-11-13T10:04:04.1654426Z     def test_integers_outside_msgpack_range_round_trip(self):
+2026-11-13T10:04:04.1654940Z         for value in (-(1 << 63) - 1, 1 << 64, -(1 << 200), (1 << 256) - 1):
+2026-11-13T10:04:04.1655540Z             for container in ("scalar", "flat_list", "nested_dict"):
+2026-11-13T10:04:04.1656047Z                 with self.subTest(value=value, container=container):
+2026-11-13T10:04:04.1656475Z                     item = {
+2026-11-13T10:04:04.1656896Z                         "scalar": value,
+2026-11-13T10:04:04.1657282Z                         "flat_list": [0, value, 1],
+2026-11-13T10:04:04.1657712Z                         "nested_dict": {"metadata": [0, {"id": value}]},
+2026-11-13T10:04:04.1658170Z                     }[container]
+2026-11-13T10:04:04.1658820Z >                   self.assertEqual(_round_trip_values([item]), [item])
+2026-11-13T10:04:04.1809077Z                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1809484Z 
+2026-11-13T10:04:04.1809729Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:53: 
+2026-11-13T10:04:04.1810201Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1810469Z 
+2026-11-13T10:04:04.1810626Z values = [[0, -16069380442589902...2993782792835301376, 1]]
+2026-11-13T10:04:04.1810844Z 
+2026-11-13T10:04:04.1810954Z     def _round_trip_values(values):
+2026-11-13T10:04:04.1811282Z         wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:04.1811624Z         forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:04.1812316Z >           msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:04.1813026Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1813346Z         )
+2026-11-13T10:04:04.1813662Z E       OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1813945Z 
+2026-11-13T10:04:04.1814207Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:34: OverflowError
+2026-11-13T10:04:04.1815080Z _ TestMsgpackValueFaithfulness.test_integers_outside_msgpack_range_round_trip (value=-16069380442589902...2993782792835301376, container='nested_dict') _
+2026-11-13T10:04:04.1815681Z 
+2026-11-13T10:04:04.1816055Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_integers_outside_msgpack_range_round_trip>
+2026-11-13T10:04:04.1816543Z 
+2026-11-13T10:04:04.1816696Z     def test_integers_outside_msgpack_range_round_trip(self):
+2026-11-13T10:04:04.1817156Z         for value in (-(1 << 63) - 1, 1 << 64, -(1 << 200), (1 << 256) - 1):
+2026-11-13T10:04:04.1817599Z             for container in ("scalar", "flat_list", "nested_dict"):
+2026-11-13T10:04:04.1818095Z                 with self.subTest(value=value, container=container):
+2026-11-13T10:04:04.1818708Z                     item = {
+2026-11-13T10:04:04.1818996Z                         "scalar": value,
+2026-11-13T10:04:04.1819541Z                         "flat_list": [0, value, 1],
+2026-11-13T10:04:04.1820232Z                         "nested_dict": {"metadata": [0, {"id": value}]},
+2026-11-13T10:04:04.1820577Z                     }[container]
+2026-11-13T10:04:04.1821064Z >                   self.assertEqual(_round_trip_values([item]), [item])
+2026-11-13T10:04:04.1821558Z                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1821804Z 
+2026-11-13T10:04:04.1822056Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:53: 
+2026-11-13T10:04:04.1822705Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1822975Z 
+2026-11-13T10:04:04.1823176Z values = [{'metadata': [0, {'id': -16069380442589902...2993782792835301376}]}]
+2026-11-13T10:04:04.1823471Z 
+2026-11-13T10:04:04.1823702Z     def _round_trip_values(values):
+2026-11-13T10:04:04.1824148Z         wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:04.1824575Z         forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:04.1825035Z >           msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:04.1825476Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1825814Z         )
+2026-11-13T10:04:04.1826120Z E       OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1826405Z 
+2026-11-13T10:04:04.1826670Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:34: OverflowError
+2026-11-13T10:04:04.1827515Z _ TestMsgpackValueFaithfulness.test_integers_outside_msgpack_range_round_trip (value=115792089237316195...7584007913129639935, container='scalar') _
+2026-11-13T10:04:04.1828171Z 
+2026-11-13T10:04:04.1828989Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_integers_outside_msgpack_range_round_trip>
+2026-11-13T10:04:04.1829698Z 
+2026-11-13T10:04:04.1829891Z     def test_integers_outside_msgpack_range_round_trip(self):
+2026-11-13T10:04:04.1830411Z         for value in (-(1 << 63) - 1, 1 << 64, -(1 << 200), (1 << 256) - 1):
+2026-11-13T10:04:04.1830898Z             for container in ("scalar", "flat_list", "nested_dict"):
+2026-11-13T10:04:04.1831325Z                 with self.subTest(value=value, container=container):
+2026-11-13T10:04:04.1831682Z                     item = {
+2026-11-13T10:04:04.1831946Z                         "scalar": value,
+2026-11-13T10:04:04.1832242Z                         "flat_list": [0, value, 1],
+2026-11-13T10:04:04.1832641Z                         "nested_dict": {"metadata": [0, {"id": value}]},
+2026-11-13T10:04:04.1833121Z                     }[container]
+2026-11-13T10:04:04.1833472Z >                   self.assertEqual(_round_trip_values([item]), [item])
+2026-11-13T10:04:04.1833865Z                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1834087Z 
+2026-11-13T10:04:04.1834306Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:53: 
+2026-11-13T10:04:04.1834764Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1835039Z 
+2026-11-13T10:04:04.1835159Z values = [115792089237316195...7584007913129639935]
+2026-11-13T10:04:04.1835383Z 
+2026-11-13T10:04:04.1835500Z     def _round_trip_values(values):
+2026-11-13T10:04:04.1835830Z         wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:04.1836181Z         forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:04.1836607Z >           msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:04.1837037Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1837334Z         )
+2026-11-13T10:04:04.1837637Z E       OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1837919Z 
+2026-11-13T10:04:04.1838177Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:34: OverflowError
+2026-11-13T10:04:04.1839249Z _ TestMsgpackValueFaithfulness.test_integers_outside_msgpack_range_round_trip (value=115792089237316195...7584007913129639935, container='flat_list') _
+2026-11-13T10:04:04.1839996Z 
+2026-11-13T10:04:04.1840434Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_integers_outside_msgpack_range_round_trip>
+2026-11-13T10:04:04.1840962Z 
+2026-11-13T10:04:04.1841128Z     def test_integers_outside_msgpack_range_round_trip(self):
+2026-11-13T10:04:04.1841538Z         for value in (-(1 << 63) - 1, 1 << 64, -(1 << 200), (1 << 256) - 1):
+2026-11-13T10:04:04.1842012Z             for container in ("scalar", "flat_list", "nested_dict"):
+2026-11-13T10:04:04.1842435Z                 with self.subTest(value=value, container=container):
+2026-11-13T10:04:04.1842778Z                     item = {
+2026-11-13T10:04:04.1843034Z                         "scalar": value,
+2026-11-13T10:04:04.1843421Z                         "flat_list": [0, value, 1],
+2026-11-13T10:04:04.1843907Z                         "nested_dict": {"metadata": [0, {"id": value}]},
+2026-11-13T10:04:04.1844264Z                     }[container]
+2026-11-13T10:04:04.1844567Z >                   self.assertEqual(_round_trip_values([item]), [item])
+2026-11-13T10:04:04.1844975Z                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1845192Z 
+2026-11-13T10:04:04.1845439Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:53: 
+2026-11-13T10:04:04.1845920Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1846166Z 
+2026-11-13T10:04:04.1846308Z values = [[0, 115792089237316195...7584007913129639935, 1]]
+2026-11-13T10:04:04.1846546Z 
+2026-11-13T10:04:04.1846662Z     def _round_trip_values(values):
+2026-11-13T10:04:04.1846978Z         wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:04.1847321Z         forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:04.1847767Z >           msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:04.1848206Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1848734Z         )
+2026-11-13T10:04:04.1849140Z E       OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1849427Z 
+2026-11-13T10:04:04.1849691Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:34: OverflowError
+2026-11-13T10:04:04.1850435Z _ TestMsgpackValueFaithfulness.test_integers_outside_msgpack_range_round_trip (value=115792089237316195...7584007913129639935, container='nested_dict') _
+2026-11-13T10:04:04.1851024Z 
+2026-11-13T10:04:04.1851478Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_integers_outside_msgpack_range_round_trip>
+2026-11-13T10:04:04.1851932Z 
+2026-11-13T10:04:04.1852071Z     def test_integers_outside_msgpack_range_round_trip(self):
+2026-11-13T10:04:04.1852437Z         for value in (-(1 << 63) - 1, 1 << 64, -(1 << 200), (1 << 256) - 1):
+2026-11-13T10:04:04.1852829Z             for container in ("scalar", "flat_list", "nested_dict"):
+2026-11-13T10:04:04.1853192Z                 with self.subTest(value=value, container=container):
+2026-11-13T10:04:04.1853482Z                     item = {
+2026-11-13T10:04:04.1853704Z                         "scalar": value,
+2026-11-13T10:04:04.1853959Z                         "flat_list": [0, value, 1],
+2026-11-13T10:04:04.1854256Z                         "nested_dict": {"metadata": [0, {"id": value}]},
+2026-11-13T10:04:04.1854546Z                     }[container]
+2026-11-13T10:04:04.1854817Z >                   self.assertEqual(_round_trip_values([item]), [item])
+2026-11-13T10:04:04.1855137Z                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1855321Z 
+2026-11-13T10:04:04.1855487Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:53: 
+2026-11-13T10:04:04.1855866Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1856093Z 
+2026-11-13T10:04:04.1856286Z values = [{'metadata': [0, {'id': 115792089237316195...7584007913129639935}]}]
+2026-11-13T10:04:04.1856565Z 
+2026-11-13T10:04:04.1856663Z     def _round_trip_values(values):
+2026-11-13T10:04:04.1857108Z         wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:04.1857426Z         forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:04.1857787Z >           msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:04.1858118Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1858313Z         )
+2026-11-13T10:04:04.1858703Z E       OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1858879Z 
+2026-11-13T10:04:04.1859038Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:34: OverflowError
+2026-11-13T10:04:04.1859416Z ______ TestMsgpackValueFaithfulness.test_object_arrays_keep_python_values ______
+2026-11-13T10:04:04.1859645Z 
+2026-11-13T10:04:04.1859976Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_object_arrays_keep_python_values>
+2026-11-13T10:04:04.1860341Z 
+2026-11-13T10:04:04.1860559Z     def test_object_arrays_keep_python_values(self):
+2026-11-13T10:04:04.1860895Z         source = np.empty((2, 2), dtype=object)
+2026-11-13T10:04:04.1861491Z         source[0, 0] = {"label": "東京", "id": 1 << 100}
+2026-11-13T10:04:04.1861743Z         source[0, 1] = (1, 2)
+2026-11-13T10:04:04.1861949Z         source[1, 0] = None
+2026-11-13T10:04:04.1862156Z         source[1, 1] = ["a", "b"]
+2026-11-13T10:04:04.1862354Z >       decoded = _round_trip_values([source])[0]
+2026-11-13T10:04:04.1862575Z                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1862694Z 
+2026-11-13T10:04:04.1862829Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:101: 
+2026-11-13T10:04:04.1863121Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1863461Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:34: in _round_trip_values
+2026-11-13T10:04:04.1863829Z     msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:04.1864089Z     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1864328Z python/sglang/srt/utils/msgpack_utils.py:223: in enc_hook
+2026-11-13T10:04:04.1864581Z     raw_data = arr.reshape(-1).view(np.uint8).data
+2026-11-13T10:04:04.1864795Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1865014Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1865173Z 
+2026-11-13T10:04:04.1865265Z oldtype = dtype('O'), newtype = dtype('uint8')
+2026-11-13T10:04:04.1865401Z 
+2026-11-13T10:04:04.1865483Z     def _view_is_safe(oldtype, newtype):
+2026-11-13T10:04:04.1865739Z         """ Checks safety of a view involving object arrays, for example when
+2026-11-13T10:04:04.1866012Z         doing::
+2026-11-13T10:04:04.1866144Z     
+2026-11-13T10:04:04.1866311Z             np.zeros(10, dtype=oldtype).view(newtype)
+2026-11-13T10:04:04.1866502Z     
+2026-11-13T10:04:04.1866626Z         Parameters
+2026-11-13T10:04:04.1866775Z         ----------
+2026-11-13T10:04:04.1866932Z         oldtype : data-type
+2026-11-13T10:04:04.1867111Z             Data type of original ndarray
+2026-11-13T10:04:04.1867299Z         newtype : data-type
+2026-11-13T10:04:04.1867461Z             Data type of the view
+2026-11-13T10:04:04.1867622Z     
+2026-11-13T10:04:04.1867742Z         Raises
+2026-11-13T10:04:04.1867873Z         ------
+2026-11-13T10:04:04.1868009Z         TypeError
+2026-11-13T10:04:04.1868197Z             If the new type is incompatible with the old type.
+2026-11-13T10:04:04.1868558Z     
+2026-11-13T10:04:04.1868697Z         """
+2026-11-13T10:04:04.1868828Z     
+2026-11-13T10:04:04.1868996Z         # if the types are equivalent, there is no problem.
+2026-11-13T10:04:04.1869286Z         # for example: dtype((np.record, 'i4,i4')) == dtype((np.void, 'i4,i4'))
+2026-11-13T10:04:04.1869547Z         if oldtype == newtype:
+2026-11-13T10:04:04.1869715Z             return
+2026-11-13T10:04:04.1869853Z     
+2026-11-13T10:04:04.1870013Z         if newtype.hasobject or oldtype.hasobject:
+2026-11-13T10:04:04.1870295Z >           raise TypeError("Cannot change data-type for array of references.")
+2026-11-13T10:04:04.1870702Z E           TypeError: Cannot change data-type for array of references.
+2026-11-13T10:04:04.1870881Z 
+2026-11-13T10:04:04.1871114Z /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/numpy/_core/_internal.py:565: TypeError
+2026-11-13T10:04:04.1871566Z _ TestMsgpackValueFaithfulness.test_real_multimodal_request_survives_forwarding _
+2026-11-13T10:04:04.1871804Z 
+2026-11-13T10:04:04.1872090Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_real_multimodal_request_survives_forwarding>
+2026-11-13T10:04:04.1872431Z 
+2026-11-13T10:04:04.1872542Z     def test_real_multimodal_request_survives_forwarding(self):
+2026-11-13T10:04:04.1872779Z         records = np.array(
+2026-11-13T10:04:04.1873052Z             [(7, 0.25), (9, 0.75)], dtype=[("token", "<i4"), ("score", "<f4")]
+2026-11-13T10:04:04.1873283Z         )
+2026-11-13T10:04:04.1873440Z         source_feature = torch.tensor([[1.0, 2.0]])
+2026-11-13T10:04:04.1873668Z         request = TokenizedGenerateReqInput(
+2026-11-13T10:04:04.1873872Z             input_text="",
+2026-11-13T10:04:04.1874050Z             input_ids=array("q", [1, 2]),
+2026-11-13T10:04:04.1874243Z             input_embeds=None,
+2026-11-13T10:04:04.1874441Z             mm_inputs=MultimodalProcessorOutput(
+2026-11-13T10:04:04.1874642Z                 mm_items=[
+2026-11-13T10:04:04.1874812Z                     MultimodalDataItem(
+2026-11-13T10:04:04.1875020Z                         modality=Modality.IMAGE,
+2026-11-13T10:04:04.1875224Z                         feature=source_feature,
+2026-11-13T10:04:04.1875423Z                         model_specific_data={
+2026-11-13T10:04:04.1875623Z                             "records": records,
+2026-11-13T10:04:04.1875825Z                             "large_id": 1 << 200,
+2026-11-13T10:04:04.1876032Z                             "nested": {"records": records},
+2026-11-13T10:04:04.1876225Z                         },
+2026-11-13T10:04:04.1876375Z                     )
+2026-11-13T10:04:04.1876513Z                 ]
+2026-11-13T10:04:04.1876641Z             ),
+2026-11-13T10:04:04.1876794Z             token_type_ids=[0, 0],
+2026-11-13T10:04:04.1876990Z             sampling_params=SamplingParams(),
+2026-11-13T10:04:04.1877192Z             return_logprob=False,
+2026-11-13T10:04:04.1877373Z             logprob_start_len=0,
+2026-11-13T10:04:04.1877543Z             top_logprobs_num=0,
+2026-11-13T10:04:04.1877716Z             token_ids_logprob=None,
+2026-11-13T10:04:04.1877886Z             stream=False,
+2026-11-13T10:04:04.1878037Z         )
+2026-11-13T10:04:04.1878217Z         with patch.object(io_struct, "_USE_PICKLE_IPC", False):
+2026-11-13T10:04:04.1878630Z             request.wrap_pickle_fields()
+2026-11-13T10:04:04.1878884Z >           forwarded = msgpack_decode(msgpack_encode(request))
+2026-11-13T10:04:04.1879126Z                                        ^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1879258Z 
+2026-11-13T10:04:04.1879395Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:177: 
+2026-11-13T10:04:04.1879683Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:04:04.1879845Z 
+2026-11-13T10:04:04.1880356Z obj = TokenizedGenerateReqInput(rid=None, http_worker_ipc=None, input_text='', input_ids=array('q', [1, 2]), input_embeds=No..., kv_hints=None, pp_prefetch_ticketed=False, sampling_logprobs_mode='selected', lora_name=None, mm_routing_labels=None)
+2026-11-13T10:04:04.1880937Z 
+2026-11-13T10:04:04.1881018Z     def msgpack_encode(obj: Any) -> bytes:
+2026-11-13T10:04:04.1881262Z >       return _msgpack_encoder.encode(_maybe_wrap_pickle(obj))
+2026-11-13T10:04:04.1881510Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:04:04.1881772Z E       OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1881993Z 
+2026-11-13T10:04:04.1882109Z python/sglang/srt/managers/io_struct.py:2978: OverflowError
+2026-11-13T10:04:04.1882505Z ___ TestMsgpackValueFaithfulness.test_shared_fallback_array_keeps_one_object ___
+2026-11-13T10:04:04.1882729Z 
+2026-11-13T10:04:04.1883000Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_shared_fallback_array_keeps_one_object>
+2026-11-13T10:04:04.1883332Z 
+2026-11-13T10:04:04.1883432Z     def test_shared_fallback_array_keeps_one_object(self):
+2026-11-13T10:04:04.1883735Z         source = np.array([(1, 0.25)], dtype=[("token", "<i4"), ("score", "<f4")])
+2026-11-13T10:04:04.1884047Z         decoded = _round_trip_values([source, {"array": source}, source])
+2026-11-13T10:04:04.1884320Z >       self.assertIs(decoded[0], decoded[1]["array"])
+2026-11-13T10:04:04.1884761Z E       AssertionError: array([b'\x01\x00\x00\x00\x00\x00\x80\x3E'], dtype='|V8') is not array([b'\x01\x00\x00\x00\x00\x00\x80\x3E'], dtype='|V8')
+2026-11-13T10:04:04.1885071Z 
+2026-11-13T10:04:04.1885232Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:141: AssertionError
+2026-11-13T10:04:04.1885745Z _ TestMsgpackValueFaithfulness.test_structured_arrays_keep_fields_titles_and_layout (dtype=dtype([('token', '<i8'), ('score', '<f4')])) _
+2026-11-13T10:04:04.1886091Z 
+2026-11-13T10:04:04.1886381Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_structured_arrays_keep_fields_titles_and_layout>
+2026-11-13T10:04:04.1886721Z 
+2026-11-13T10:04:04.1886842Z     def test_structured_arrays_keep_fields_titles_and_layout(self):
+2026-11-13T10:04:04.1887080Z         dtypes = (
+2026-11-13T10:04:04.1887262Z             np.dtype([("token", "<i8"), ("score", "<f4")]),
+2026-11-13T10:04:04.1887476Z             np.dtype(
+2026-11-13T10:04:04.1887685Z                 [("box", "<f4", (4,)), ("stats", [("mean", "<f4"), ("count", "<i2")])]
+2026-11-13T10:04:04.1887919Z             ),
+2026-11-13T10:04:04.1888071Z             np.dtype(
+2026-11-13T10:04:04.1888293Z                 [(("class title", "label"), ">i2"), ("weight", "<f8")], align=True
+2026-11-13T10:04:04.1888688Z             ),
+2026-11-13T10:04:04.1888841Z             np.dtype(
+2026-11-13T10:04:04.1888990Z                 {
+2026-11-13T10:04:04.1889218Z                     "names": ["left", "right"],
+2026-11-13T10:04:04.1889440Z                     "formats": ["u1", "<f8"],
+2026-11-13T10:04:04.1889647Z                     "offsets": [0, 16],
+2026-11-13T10:04:04.1889843Z                     "itemsize": 32,
+2026-11-13T10:04:04.1890020Z                 }
+2026-11-13T10:04:04.1890169Z             ),
+2026-11-13T10:04:04.1890314Z         )
+2026-11-13T10:04:04.1890469Z         for dtype in dtypes:
+2026-11-13T10:04:04.1890661Z             with self.subTest(dtype=dtype):
+2026-11-13T10:04:04.1890879Z                 source = np.zeros(3, dtype=dtype)
+2026-11-13T10:04:04.1891101Z                 source[source.dtype.names[0]] = 2
+2026-11-13T10:04:04.1891335Z                 decoded = _round_trip_values([source])[0]
+2026-11-13T10:04:04.1891592Z >               self.assertEqual(decoded.dtype, source.dtype)
+2026-11-13T10:04:04.1891915Z E               AssertionError: dtype('V12') != dtype([('token', '<i8'), ('score', '<f4')])
+2026-11-13T10:04:04.1892142Z 
+2026-11-13T10:04:04.1892306Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:89: AssertionError
+2026-11-13T10:04:04.1892889Z _ TestMsgpackValueFaithfulness.test_structured_arrays_keep_fields_titles_and_layout (dtype=dtype([('box', '<f4', (4,)), ('stats', [('mean', '<f4'), ('count', '<i2')])])) _
+2026-11-13T10:04:04.1893288Z 
+2026-11-13T10:04:04.1893590Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_structured_arrays_keep_fields_titles_and_layout>
+2026-11-13T10:04:04.1893944Z 
+2026-11-13T10:04:04.1894072Z     def test_structured_arrays_keep_fields_titles_and_layout(self):
+2026-11-13T10:04:04.1894322Z         dtypes = (
+2026-11-13T10:04:04.1894508Z             np.dtype([("token", "<i8"), ("score", "<f4")]),
+2026-11-13T10:04:04.1894723Z             np.dtype(
+2026-11-13T10:04:04.1894935Z                 [("box", "<f4", (4,)), ("stats", [("mean", "<f4"), ("count", "<i2")])]
+2026-11-13T10:04:04.1895244Z             ),
+2026-11-13T10:04:04.1895383Z             np.dtype(
+2026-11-13T10:04:04.1895593Z                 [(("class title", "label"), ">i2"), ("weight", "<f8")], align=True
+2026-11-13T10:04:04.1895835Z             ),
+2026-11-13T10:04:04.1895976Z             np.dtype(
+2026-11-13T10:04:04.1896115Z                 {
+2026-11-13T10:04:04.1896278Z                     "names": ["left", "right"],
+2026-11-13T10:04:04.1896487Z                     "formats": ["u1", "<f8"],
+2026-11-13T10:04:04.1896686Z                     "offsets": [0, 16],
+2026-11-13T10:04:04.1896871Z                     "itemsize": 32,
+2026-11-13T10:04:04.1897049Z                 }
+2026-11-13T10:04:04.1897191Z             ),
+2026-11-13T10:04:04.1897329Z         )
+2026-11-13T10:04:04.1897477Z         for dtype in dtypes:
+2026-11-13T10:04:04.1897750Z             with self.subTest(dtype=dtype):
+2026-11-13T10:04:04.1897975Z                 source = np.zeros(3, dtype=dtype)
+2026-11-13T10:04:04.1898200Z                 source[source.dtype.names[0]] = 2
+2026-11-13T10:04:04.1898576Z                 decoded = _round_trip_values([source])[0]
+2026-11-13T10:04:04.1898844Z >               self.assertEqual(decoded.dtype, source.dtype)
+2026-11-13T10:04:04.1899207Z E               AssertionError: dtype('V22') != dtype([('box', '<f4', (4,)), ('stats', [('mean', '<f4'), ('count', '<i2')])])
+2026-11-13T10:04:04.1899477Z 
+2026-11-13T10:04:04.1899647Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:89: AssertionError
+2026-11-13T10:04:04.1900215Z _ TestMsgpackValueFaithfulness.test_structured_arrays_keep_fields_titles_and_layout (dtype=dtype([(('class title', 'label'), '>i2'), ('weight', '<f8')], align=True)) _
+2026-11-13T10:04:04.1900609Z 
+2026-11-13T10:04:04.1900913Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_structured_arrays_keep_fields_titles_and_layout>
+2026-11-13T10:04:04.1901268Z 
+2026-11-13T10:04:04.1901389Z     def test_structured_arrays_keep_fields_titles_and_layout(self):
+2026-11-13T10:04:04.1901639Z         dtypes = (
+2026-11-13T10:04:04.1901822Z             np.dtype([("token", "<i8"), ("score", "<f4")]),
+2026-11-13T10:04:04.1902042Z             np.dtype(
+2026-11-13T10:04:04.1902250Z                 [("box", "<f4", (4,)), ("stats", [("mean", "<f4"), ("count", "<i2")])]
+2026-11-13T10:04:04.1902484Z             ),
+2026-11-13T10:04:04.1902628Z             np.dtype(
+2026-11-13T10:04:04.1902843Z                 [(("class title", "label"), ">i2"), ("weight", "<f8")], align=True
+2026-11-13T10:04:04.1903081Z             ),
+2026-11-13T10:04:04.1903225Z             np.dtype(
+2026-11-13T10:04:04.1903375Z                 {
+2026-11-13T10:04:04.1903536Z                     "names": ["left", "right"],
+2026-11-13T10:04:04.1903745Z                     "formats": ["u1", "<f8"],
+2026-11-13T10:04:04.1903957Z                     "offsets": [0, 16],
+2026-11-13T10:04:04.1904149Z                     "itemsize": 32,
+2026-11-13T10:04:04.1904323Z                 }
+2026-11-13T10:04:04.1904469Z             ),
+2026-11-13T10:04:04.1904606Z         )
+2026-11-13T10:04:04.1904751Z         for dtype in dtypes:
+2026-11-13T10:04:04.1904936Z             with self.subTest(dtype=dtype):
+2026-11-13T10:04:04.1905145Z                 source = np.zeros(3, dtype=dtype)
+2026-11-13T10:04:04.1905359Z                 source[source.dtype.names[0]] = 2
+2026-11-13T10:04:04.1905588Z                 decoded = _round_trip_values([source])[0]
+2026-11-13T10:04:04.1905847Z >               self.assertEqual(decoded.dtype, source.dtype)
+2026-11-13T10:04:04.1906215Z E               AssertionError: dtype('V16') != dtype([(('class title', 'label'), '>i2'), ('weight', '<f8')], align=True)
+2026-11-13T10:04:04.1906474Z 
+2026-11-13T10:04:04.1906639Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:89: AssertionError
+2026-11-13T10:04:04.1907247Z _ TestMsgpackValueFaithfulness.test_structured_arrays_keep_fields_titles_and_layout (dtype=dtype({'names': ['left', 'right'], 'formats': ['u1', '<f8'], 'offsets': [0, 16], 'itemsize': 32})) _
+2026-11-13T10:04:04.1907759Z 
+2026-11-13T10:04:04.1908055Z self = <test_msgpack_value_faithfulness.TestMsgpackValueFaithfulness testMethod=test_structured_arrays_keep_fields_titles_and_layout>
+2026-11-13T10:04:04.1908549Z 
+2026-11-13T10:04:04.1908679Z     def test_structured_arrays_keep_fields_titles_and_layout(self):
+2026-11-13T10:04:04.1908935Z         dtypes = (
+2026-11-13T10:04:04.1909121Z             np.dtype([("token", "<i8"), ("score", "<f4")]),
+2026-11-13T10:04:04.1909334Z             np.dtype(
+2026-11-13T10:04:04.1909548Z                 [("box", "<f4", (4,)), ("stats", [("mean", "<f4"), ("count", "<i2")])]
+2026-11-13T10:04:04.1909784Z             ),
+2026-11-13T10:04:04.1909940Z             np.dtype(
+2026-11-13T10:04:04.1910263Z                 [(("class title", "label"), ">i2"), ("weight", "<f8")], align=True
+2026-11-13T10:04:04.1910500Z             ),
+2026-11-13T10:04:04.1910643Z             np.dtype(
+2026-11-13T10:04:04.1910804Z                 {
+2026-11-13T10:04:04.1910967Z                     "names": ["left", "right"],
+2026-11-13T10:04:04.1911178Z                     "formats": ["u1", "<f8"],
+2026-11-13T10:04:04.1911378Z                     "offsets": [0, 16],
+2026-11-13T10:04:04.1911570Z                     "itemsize": 32,
+2026-11-13T10:04:04.1911746Z                 }
+2026-11-13T10:04:04.1911889Z             ),
+2026-11-13T10:04:04.1912025Z         )
+2026-11-13T10:04:04.1912168Z         for dtype in dtypes:
+2026-11-13T10:04:04.1912350Z             with self.subTest(dtype=dtype):
+2026-11-13T10:04:04.1912561Z                 source = np.zeros(3, dtype=dtype)
+2026-11-13T10:04:04.1912785Z                 source[source.dtype.names[0]] = 2
+2026-11-13T10:04:04.1913012Z                 decoded = _round_trip_values([source])[0]
+2026-11-13T10:04:04.1913269Z >               self.assertEqual(decoded.dtype, source.dtype)
+2026-11-13T10:04:04.1913619Z E               AssertionError: dtype('V32') != dtype({'names': ['left', 'right'], 'formats': [[45 chars] 32})
+2026-11-13T10:04:04.1913864Z 
+2026-11-13T10:04:04.1914029Z test/registered/unit/utils/test_msgpack_value_faithfulness.py:89: AssertionError
+2026-11-13T10:04:04.1914351Z =========================== short test summary info ============================
+2026-11-13T10:04:04.1915061Z SUBFAILED(dtype=dtype('float32'), itemsize=4) test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_dtype_metadata_and_zero_itemsize_arrays - AssertionError: None != mappingproxy({'unit': 'score'})
+2026-11-13T10:04:04.1916116Z SUBFAILED(dtype=dtype('V'), itemsize=0) test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_dtype_metadata_and_zero_itemsize_arrays - ValueError: itemsize cannot be zero in type
+2026-11-13T10:04:04.1917218Z SUBFAILED(value=-9223372036854775809, container='scalar') test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_integers_outside_msgpack_range_round_trip - OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1918376Z SUBFAILED(value=-9223372036854775809, container='flat_list') test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_integers_outside_msgpack_range_round_trip - OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1919671Z SUBFAILED(value=-9223372036854775809, container='nested_dict') test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_integers_outside_msgpack_range_round_trip - OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1920838Z SUBFAILED(value=18446744073709551616, container='scalar') test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_integers_outside_msgpack_range_round_trip - OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1921997Z SUBFAILED(value=18446744073709551616, container='flat_list') test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_integers_outside_msgpack_range_round_trip - OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1923200Z SUBFAILED(value=18446744073709551616, container='nested_dict') test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_integers_outside_msgpack_range_round_trip - OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1924392Z SUBFAILED(value=-16069380442589902...2993782792835301376, container='scalar') test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_integers_outside_msgpack_range_round_trip - OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1925640Z SUBFAILED(value=-16069380442589902...2993782792835301376, container='flat_list') test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_integers_outside_msgpack_range_round_trip - OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1926887Z SUBFAILED(value=-16069380442589902...2993782792835301376, container='nested_dict') test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_integers_outside_msgpack_range_round_trip - OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1928104Z SUBFAILED(value=115792089237316195...7584007913129639935, container='scalar') test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_integers_outside_msgpack_range_round_trip - OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1929531Z SUBFAILED(value=115792089237316195...7584007913129639935, container='flat_list') test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_integers_outside_msgpack_range_round_trip - OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1930803Z SUBFAILED(value=115792089237316195...7584007913129639935, container='nested_dict') test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_integers_outside_msgpack_range_round_trip - OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1931897Z FAILED test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_object_arrays_keep_python_values - TypeError: Cannot change data-type for array of references.
+2026-11-13T10:04:04.1932847Z FAILED test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_real_multimodal_request_survives_forwarding - OverflowError: can't serialize ints < -2**63 or > 2**64 - 1
+2026-11-13T10:04:04.1933945Z FAILED test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_shared_fallback_array_keeps_one_object - AssertionError: array([b'\x01\x00\x00\x00\x00\x00\x80\x3E'], dtype='|V8') is not array([b'\x01\x00\x00\x00\x00\x00\x80\x3E'], dtype='|V8')
+2026-11-13T10:04:04.1935179Z SUBFAILED(dtype=dtype([('token', '<i8'), ('score', '<f4')])) test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_structured_arrays_keep_fields_titles_and_layout - AssertionError: dtype('V12') != dtype([('token', '<i8'), ('score', '<f4')])
+2026-11-13T10:04:04.1936523Z SUBFAILED(dtype=dtype([('box', '<f4', (4,)), ('stats', [('mean', '<f4'), ('count', '<i2')])])) test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_structured_arrays_keep_fields_titles_and_layout - AssertionError: dtype('V22') != dtype([('box', '<f4', (4,)), ('stats', [('mean', '<f4'), ('count', '<i2')])])
+2026-11-13T10:04:04.1937929Z SUBFAILED(dtype=dtype([(('class title', 'label'), '>i2'), ('weight', '<f8')], align=True)) test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_structured_arrays_keep_fields_titles_and_layout - AssertionError: dtype('V16') != dtype([(('class title', 'label'), '>i2'), ('weight', '<f8')], align=True)
+2026-11-13T10:04:04.1939582Z SUBFAILED(dtype=dtype({'names': ['left', 'right'], 'formats': ['u1', '<f8'], 'offsets': [0, 16], 'itemsize': 32})) test/registered/unit/utils/test_msgpack_value_faithfulness.py::TestMsgpackValueFaithfulness::test_structured_arrays_keep_fields_titles_and_layout - AssertionError: dtype('V32') != dtype({'names': ['left', 'right'], 'formats': [[45 chars] 32})
+2026-11-13T10:04:04.1940446Z 21 failed, 5 passed, 5 subtests passed in 2.95s
+2026-11-13T10:04:04.1941368Z Confirmed original value-fidelity failures: ['test_dtype_metadata_and_zero_itemsize_arrays', 'test_integers_outside_msgpack_range_round_trip', 'test_object_arrays_keep_python_values', 'test_real_multimodal_request_survives_forwarding', 'test_shared_fallback_array_keeps_one_object', 'test_structured_arrays_keep_fields_titles_and_layout']
+2026-11-13T10:04:04.1965021Z ##[group]Run git restore --source=HEAD -- python/sglang/srt/utils/msgpack_utils.py
+2026-11-13T10:04:04.1965434Z [36;1mgit restore --source=HEAD -- python/sglang/srt/utils/msgpack_utils.py[0m
+2026-11-13T10:04:04.1992890Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:04:04.1993095Z env:
+2026-11-13T10:04:04.1993251Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:04:04.1993437Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:04:04.1993634Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:04:04.1993811Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:04:04.1993971Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:04:04.1994188Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:04.1994505Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:04:04.1994819Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:04.1995098Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:04.1995420Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:04.1995696Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:04:04.1995938Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:04:04.1996104Z ##[endgroup]
+2026-11-13T10:04:04.2099952Z ##[group]Run set +e
+2026-11-13T10:04:04.2100143Z [36;1mset +e[0m
+2026-11-13T10:04:04.2100611Z [36;1mpython -m pre_commit run --files python/sglang/srt/utils/msgpack_utils.py test/registered/unit/utils/test_msgpack_value_faithfulness.py > sglang-lint.log 2>&1[0m
+2026-11-13T10:04:04.2101112Z [36;1mresult=$?[0m
+2026-11-13T10:04:04.2101268Z [36;1mset -e[0m
+2026-11-13T10:04:04.2101426Z [36;1mcat sglang-lint.log[0m
+2026-11-13T10:04:04.2101625Z [36;1mgit diff > sglang-format.patch[0m
+2026-11-13T10:04:04.2101843Z [36;1mcat sglang-format.patch[0m
+2026-11-13T10:04:04.2102040Z [36;1mpython - <<'PY'[0m
+2026-11-13T10:04:04.2102223Z [36;1mfrom pathlib import Path[0m
+2026-11-13T10:04:04.2102425Z [36;1mprint("BEGIN_FORMATTED_TEST")[0m
+2026-11-13T10:04:04.2102755Z [36;1mprint(Path("test/registered/unit/utils/test_msgpack_value_faithfulness.py").read_text())[0m
+2026-11-13T10:04:04.2103101Z [36;1mprint("END_FORMATTED_TEST")[0m
+2026-11-13T10:04:04.2103294Z [36;1mPY[0m
+2026-11-13T10:04:04.2103482Z [36;1mtest "$result" -eq 0[0m
+2026-11-13T10:04:04.2103670Z [36;1mgit diff --check[0m
+2026-11-13T10:04:04.2124693Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:04:04.2124887Z env:
+2026-11-13T10:04:04.2125041Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:04:04.2125222Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:04:04.2125416Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:04:04.2125585Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:04:04.2125745Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:04:04.2125994Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:04.2126357Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:04:04.2126659Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:04.2126942Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:04.2127210Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:04.2127594Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:04:04.2127831Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:04:04.2127994Z ##[endgroup]
+2026-11-13T10:04:39.0508719Z [INFO] Initializing environment for https://github.com/pre-commit/pre-commit-hooks.
+2026-11-13T10:04:39.0509337Z [INFO] Initializing environment for https://github.com/PyCQA/isort.
+2026-11-13T10:04:39.0509841Z [INFO] Initializing environment for https://github.com/astral-sh/ruff-pre-commit.
+2026-11-13T10:04:39.0510390Z [INFO] Initializing environment for https://github.com/codespell-project/codespell.
+2026-11-13T10:04:39.0510965Z [INFO] Initializing environment for https://github.com/pre-commit/mirrors-clang-format.
+2026-11-13T10:04:39.0511586Z [INFO] Initializing environment for https://github.com/kynan/nbstripout.
+2026-11-13T10:04:39.0512047Z [INFO] Initializing environment for https://github.com/lycheeverse/lychee.git.
+2026-11-13T10:04:39.0512561Z [INFO] Installing environment for https://github.com/pre-commit/pre-commit-hooks.
+2026-11-13T10:04:39.0513056Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:04:39.0513364Z [INFO] This may take a few minutes...
+2026-11-13T10:04:39.0513702Z [INFO] Installing environment for https://github.com/PyCQA/isort.
+2026-11-13T10:04:39.0514092Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:04:39.0514427Z [INFO] This may take a few minutes...
+2026-11-13T10:04:39.0514718Z [INFO] Installing environment for https://github.com/astral-sh/ruff-pre-commit.
+2026-11-13T10:04:39.0515053Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:04:39.0515281Z [INFO] This may take a few minutes...
+2026-11-13T10:04:39.0515567Z [INFO] Installing environment for https://github.com/codespell-project/codespell.
+2026-11-13T10:04:39.0515885Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:04:39.0516109Z [INFO] This may take a few minutes...
+2026-11-13T10:04:39.0516399Z [INFO] Installing environment for https://github.com/pre-commit/mirrors-clang-format.
+2026-11-13T10:04:39.0517028Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:04:39.0517254Z [INFO] This may take a few minutes...
+2026-11-13T10:04:39.0517510Z [INFO] Installing environment for https://github.com/kynan/nbstripout.
+2026-11-13T10:04:39.0517808Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:04:39.0518026Z [INFO] This may take a few minutes...
+2026-11-13T10:04:39.0518328Z check for broken symlinks...............................................................(no files to check)Skipped
+2026-11-13T10:04:39.0518932Z detect destroyed symlinks...................................................................................Passed
+2026-11-13T10:04:39.0519380Z trim trailing whitespace....................................................................................Passed
+2026-11-13T10:04:39.0519784Z fix end of files............................................................................................Passed
+2026-11-13T10:04:39.0520162Z check yaml..............................................................................(no files to check)Skipped
+2026-11-13T10:04:39.0520535Z check toml..............................................................................(no files to check)Skipped
+2026-11-13T10:04:39.0520910Z check python ast............................................................................................Passed
+2026-11-13T10:04:39.0521305Z check for added large files.................................................................................Passed
+2026-11-13T10:04:39.0521716Z check for merge conflicts...................................................................................Passed
+2026-11-13T10:04:39.0522169Z check that scripts with shebangs are executable.............................................................Passed
+2026-11-13T10:04:39.0522592Z detect private key..........................................................................................Passed
+2026-11-13T10:04:39.0523085Z debug statements (python)...................................................................................Passed
+2026-11-13T10:04:39.0523469Z don't commit to branch......................................................................................Passed
+2026-11-13T10:04:39.0523838Z isort.......................................................................................................Passed
+2026-11-13T10:04:39.0524196Z ruff (legacy alias).........................................................................................Passed
+2026-11-13T10:04:39.0524569Z ruff format.................................................................................................Passed
+2026-11-13T10:04:39.0525103Z codespell...................................................................................................Passed
+2026-11-13T10:04:39.0525605Z clang-format............................................................................(no files to check)Skipped
+2026-11-13T10:04:39.0526036Z nbstripout..............................................................................(no files to check)Skipped
+2026-11-13T10:04:39.0526474Z forbid test/srt/ (use test/registered/ or test/manual/).................................(no files to check)Skipped
+2026-11-13T10:04:39.0526904Z forbid docs_new/ (renamed to docs/).....................................................(no files to check)Skipped
+2026-11-13T10:04:39.0527324Z check chinese characters in multimodal_gen..............................................(no files to check)Skipped
+2026-11-13T10:04:39.0527769Z sort CI_PERMISSIONS.json................................................................(no files to check)Skipped
+2026-11-13T10:04:39.0528211Z sort Cookbook vendor groups in docs/docs.json...........................................(no files to check)Skipped
+2026-11-13T10:04:39.0528826Z check for duplicate workflow job names..................................................(no files to check)Skipped
+2026-11-13T10:04:39.0529508Z check opt-in CI tiers match the workflows that gate on them.............................(no files to check)Skipped
+2026-11-13T10:04:39.0529987Z check rust-ext cache key prefix defaults match..........................................(no files to check)Skipped
+2026-11-13T10:04:39.0530493Z check Dockerfile sgl-deep-gemm/sgl-deep-ep versions match python/pyproject.toml.........(no files to check)Skipped
+2026-11-13T10:04:39.0530994Z reject bare pytest.main calls in __main__ blocks............................................................Passed
+2026-11-13T10:04:39.0531478Z regenerate python/sglang/cli/_commands/ from the Cookbook configs.......................(no files to check)Skipped
+2026-11-13T10:04:39.0531955Z validate registered test CI registries......................................................................Passed
+2026-11-13T10:04:39.0532436Z reject CI-registered tests inside the sglang package........................................................Passed
+2026-11-13T10:04:39.0532923Z reject importing a name through a module that only re-imports it............................................Passed
+2026-11-13T10:04:39.0533422Z reject srt domain imports in sglang.srt.utils and sglang.utils imports in the runtime.......................Passed
+2026-11-13T10:04:39.0533904Z rustfmt sgl-model-gateway (nightly).....................................................(no files to check)Skipped
+2026-11-13T10:04:39.0534326Z rustfmt sgl-router......................................................................(no files to check)Skipped
+2026-11-13T10:04:39.0534787Z clippy rust/ workspace (auto-fix).......................................................(no files to check)Skipped
+2026-11-13T10:04:39.0535219Z rustfmt rust/ workspace.................................................................(no files to check)Skipped
+2026-11-13T10:04:39.0802521Z BEGIN_FORMATTED_TEST
+2026-11-13T10:04:39.0803193Z """Preserve values that need the existing pickle fallback in msgpack IPC."""
+2026-11-13T10:04:39.0803528Z 
+2026-11-13T10:04:39.0803625Z import unittest
+2026-11-13T10:04:39.0804238Z from array import array
+2026-11-13T10:04:39.0804518Z from unittest.mock import patch
+2026-11-13T10:04:39.0804707Z 
+2026-11-13T10:04:39.0804797Z import msgspec
+2026-11-13T10:04:39.0805017Z import numpy as np
+2026-11-13T10:04:39.0805233Z import torch
+2026-11-13T10:04:39.0805363Z 
+2026-11-13T10:04:39.0805492Z from sglang.srt.managers import io_struct
+2026-11-13T10:04:39.0805831Z from sglang.srt.managers.io_struct import (
+2026-11-13T10:04:39.0806162Z     TokenizedGenerateReqInput,
+2026-11-13T10:04:39.0806467Z     msgpack_decode,
+2026-11-13T10:04:39.0806688Z     msgpack_encode,
+2026-11-13T10:04:39.0806904Z )
+2026-11-13T10:04:39.0807296Z from sglang.srt.managers.req_types import MultimodalDataItem, MultimodalProcessorOutput
+2026-11-13T10:04:39.0808020Z from sglang.srt.multimodal.modality import Modality
+2026-11-13T10:04:39.0808780Z from sglang.srt.sampling.sampling_params import SamplingParams
+2026-11-13T10:04:39.0809411Z from sglang.srt.utils.msgpack_utils import (
+2026-11-13T10:04:39.0809740Z     enc_hook,
+2026-11-13T10:04:39.0810000Z     ext_hook,
+2026-11-13T10:04:39.0810303Z     pickle_unfaithful_values,
+2026-11-13T10:04:39.0810595Z     unpickle_values,
+2026-11-13T10:04:39.0810823Z )
+2026-11-13T10:04:39.0811093Z from sglang.test.ci.ci_register import register_cpu_ci
+2026-11-13T10:04:39.0811347Z 
+2026-11-13T10:04:39.0811508Z register_cpu_ci(est_time=5, suite="base-a-test-cpu")
+2026-11-13T10:04:39.0811749Z 
+2026-11-13T10:04:39.0811753Z 
+2026-11-13T10:04:39.0811872Z def _round_trip_values(values):
+2026-11-13T10:04:39.0812185Z     wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:39.0812525Z     forwarded = msgspec.msgpack.decode(
+2026-11-13T10:04:39.0812965Z         msgspec.msgpack.encode(wrapped, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:39.0813386Z     )
+2026-11-13T10:04:39.0813812Z     # A forwarding process re-encodes the packet without unwrapping its values.
+2026-11-13T10:04:39.0814366Z     received = msgspec.msgpack.decode(
+2026-11-13T10:04:39.0814900Z         msgspec.msgpack.encode(forwarded, enc_hook=enc_hook), ext_hook=ext_hook
+2026-11-13T10:04:39.0815547Z     )
+2026-11-13T10:04:39.0815837Z     return unpickle_values(received)
+2026-11-13T10:04:39.0816040Z 
+2026-11-13T10:04:39.0816045Z 
+2026-11-13T10:04:39.0816220Z class TestMsgpackValueFaithfulness(unittest.TestCase):
+2026-11-13T10:04:39.0816670Z     def test_integers_outside_msgpack_range_round_trip(self):
+2026-11-13T10:04:39.0817119Z         for value in (-(1 << 63) - 1, 1 << 64, -(1 << 200), (1 << 256) - 1):
+2026-11-13T10:04:39.0817655Z             for container in ("scalar", "flat_list", "nested_dict"):
+2026-11-13T10:04:39.0818129Z                 with self.subTest(value=value, container=container):
+2026-11-13T10:04:39.0818704Z                     item = {
+2026-11-13T10:04:39.0818982Z                         "scalar": value,
+2026-11-13T10:04:39.0819289Z                         "flat_list": [0, value, 1],
+2026-11-13T10:04:39.0819660Z                         "nested_dict": {"metadata": [0, {"id": value}]},
+2026-11-13T10:04:39.0820037Z                     }[container]
+2026-11-13T10:04:39.0820383Z                     self.assertEqual(_round_trip_values([item]), [item])
+2026-11-13T10:04:39.0820667Z 
+2026-11-13T10:04:39.0820862Z     def test_representable_integers_keep_native_wire_format(self):
+2026-11-13T10:04:39.0821352Z         values = [-(1 << 63), -1, 0, (1 << 63) - 1, (1 << 64) - 1, True, False]
+2026-11-13T10:04:39.0821760Z         wrapped = pickle_unfaithful_values(values)
+2026-11-13T10:04:39.0822102Z         self.assertIs(wrapped, values)
+2026-11-13T10:04:39.0822396Z         self.assertEqual(
+2026-11-13T10:04:39.0822776Z             msgspec.msgpack.encode(wrapped), msgspec.msgpack.encode(values)
+2026-11-13T10:04:39.0823173Z         )
+2026-11-13T10:04:39.0823439Z         self.assertEqual(_round_trip_values(values), values)
+2026-11-13T10:04:39.0823797Z         nested = [{"values": values}, values]
+2026-11-13T10:04:39.0824179Z         self.assertIs(pickle_unfaithful_values(nested), nested)
+2026-11-13T10:04:39.0824693Z 
+2026-11-13T10:04:39.0824951Z     def test_structured_arrays_keep_fields_titles_and_layout(self):
+2026-11-13T10:04:39.0825352Z         dtypes = (
+2026-11-13T10:04:39.0825641Z             np.dtype([("token", "<i8"), ("score", "<f4")]),
+2026-11-13T10:04:39.0825964Z             np.dtype(
+2026-11-13T10:04:39.0826313Z                 [("box", "<f4", (4,)), ("stats", [("mean", "<f4"), ("count", "<i2")])]
+2026-11-13T10:04:39.0826760Z             ),
+2026-11-13T10:04:39.0826994Z             np.dtype(
+2026-11-13T10:04:39.0827314Z                 [(("class title", "label"), ">i2"), ("weight", "<f8")], align=True
+2026-11-13T10:04:39.0827674Z             ),
+2026-11-13T10:04:39.0827906Z             np.dtype(
+2026-11-13T10:04:39.0828127Z                 {
+2026-11-13T10:04:39.0828362Z                     "names": ["left", "right"],
+2026-11-13T10:04:39.0829166Z                     "formats": ["u1", "<f8"],
+2026-11-13T10:04:39.0829473Z                     "offsets": [0, 16],
+2026-11-13T10:04:39.0829761Z                     "itemsize": 32,
+2026-11-13T10:04:39.0830029Z                 }
+2026-11-13T10:04:39.0830431Z             ),
+2026-11-13T10:04:39.0830635Z         )
+2026-11-13T10:04:39.0830849Z         for dtype in dtypes:
+2026-11-13T10:04:39.0831128Z             with self.subTest(dtype=dtype):
+2026-11-13T10:04:39.0831464Z                 source = np.zeros(3, dtype=dtype)
+2026-11-13T10:04:39.0831796Z                 source[source.dtype.names[0]] = 2
+2026-11-13T10:04:39.0832126Z                 decoded = _round_trip_values([source])[0]
+2026-11-13T10:04:39.0832499Z                 self.assertEqual(decoded.dtype, source.dtype)
+2026-11-13T10:04:39.0832927Z                 self.assertEqual(decoded.dtype.descr, source.dtype.descr)
+2026-11-13T10:04:39.0833326Z                 self.assertEqual(decoded.shape, source.shape)
+2026-11-13T10:04:39.0833718Z                 np.testing.assert_array_equal(decoded, source)
+2026-11-13T10:04:39.0834133Z                 self.assertFalse(np.shares_memory(decoded, source))
+2026-11-13T10:04:39.0834405Z 
+2026-11-13T10:04:39.0834700Z     def test_object_arrays_keep_python_values(self):
+2026-11-13T10:04:39.0835004Z         source = np.empty((2, 2), dtype=object)
+2026-11-13T10:04:39.0835649Z         source[0, 0] = {"label": "東京", "id": 1 << 100}
+2026-11-13T10:04:39.0835910Z         source[0, 1] = (1, 2)
+2026-11-13T10:04:39.0836130Z         source[1, 0] = None
+2026-11-13T10:04:39.0836344Z         source[1, 1] = ["a", "b"]
+2026-11-13T10:04:39.0836585Z         decoded = _round_trip_values([source])[0]
+2026-11-13T10:04:39.0836885Z         self.assertEqual(decoded.dtype, source.dtype)
+2026-11-13T10:04:39.0837208Z         self.assertEqual(decoded.shape, source.shape)
+2026-11-13T10:04:39.0837546Z         self.assertEqual(decoded.tolist(), source.tolist())
+2026-11-13T10:04:39.0837874Z         self.assertIsInstance(decoded[0, 1], tuple)
+2026-11-13T10:04:39.0838143Z         source[0, 0]["label"] = "changed"
+2026-11-13T10:04:39.0838707Z         self.assertEqual(decoded[0, 0]["label"], "東京")
+2026-11-13T10:04:39.0838943Z 
+2026-11-13T10:04:39.0839104Z     def test_dtype_metadata_and_zero_itemsize_arrays(self):
+2026-11-13T10:04:39.0839431Z         for source in (
+2026-11-13T10:04:39.0839755Z             np.array([1, 2], dtype=np.dtype("f4", metadata={"unit": "score"})),
+2026-11-13T10:04:39.0840123Z             np.empty((2, 3), dtype="V0"),
+2026-11-13T10:04:39.0840346Z         ):
+2026-11-13T10:04:39.0840637Z             with self.subTest(dtype=source.dtype, itemsize=source.dtype.itemsize):
+2026-11-13T10:04:39.0840946Z                 decoded = _round_trip_values([source])[0]
+2026-11-13T10:04:39.0841200Z                 self.assertEqual(decoded.dtype, source.dtype)
+2026-11-13T10:04:39.0841501Z                 self.assertEqual(decoded.dtype.metadata, source.dtype.metadata)
+2026-11-13T10:04:39.0841798Z                 self.assertEqual(decoded.shape, source.shape)
+2026-11-13T10:04:39.0842052Z                 np.testing.assert_array_equal(decoded, source)
+2026-11-13T10:04:39.0842211Z 
+2026-11-13T10:04:39.0842331Z     def test_plain_arrays_still_use_existing_buffer_extension(self):
+2026-11-13T10:04:39.0842686Z         for source in (
+2026-11-13T10:04:39.0842944Z             np.arange(12, dtype=np.float32).reshape(3, 4)[:, ::2],
+2026-11-13T10:04:39.0843180Z             np.array(2, dtype=np.int64),
+2026-11-13T10:04:39.0843388Z             np.empty((2, 0), dtype=np.float16),
+2026-11-13T10:04:39.0843659Z             np.array(["a", "東京"], dtype="U2"),
+2026-11-13T10:04:39.0843889Z             np.array(["2025-01-02"], dtype="datetime64[D]"),
+2026-11-13T10:04:39.0844099Z         ):
+2026-11-13T10:04:39.0844301Z             with self.subTest(dtype=source.dtype, shape=source.shape):
+2026-11-13T10:04:39.0844554Z                 values = [source]
+2026-11-13T10:04:39.0844787Z                 self.assertIs(pickle_unfaithful_values(values), values)
+2026-11-13T10:04:39.0845044Z                 wrapped = enc_hook(source)
+2026-11-13T10:04:39.0845261Z                 self.assertEqual(wrapped.code, 3)
+2026-11-13T10:04:39.0845492Z                 decoded = _round_trip_values(values)[0]
+2026-11-13T10:04:39.0845749Z                 self.assertEqual(decoded.dtype, source.dtype)
+2026-11-13T10:04:39.0846009Z                 np.testing.assert_array_equal(decoded, source)
+2026-11-13T10:04:39.0846173Z 
+2026-11-13T10:04:39.0846277Z     def test_shared_fallback_array_keeps_one_object(self):
+2026-11-13T10:04:39.0846580Z         source = np.array([(1, 0.25)], dtype=[("token", "<i4"), ("score", "<f4")])
+2026-11-13T10:04:39.0846904Z         decoded = _round_trip_values([source, {"array": source}, source])
+2026-11-13T10:04:39.0847194Z         self.assertIs(decoded[0], decoded[1]["array"])
+2026-11-13T10:04:39.0847427Z         self.assertIs(decoded[0], decoded[2])
+2026-11-13T10:04:39.0847672Z         np.testing.assert_array_equal(decoded[0], source)
+2026-11-13T10:04:39.0847821Z 
+2026-11-13T10:04:39.0847939Z     def test_real_multimodal_request_survives_forwarding(self):
+2026-11-13T10:04:39.0848179Z         records = np.array(
+2026-11-13T10:04:39.0848541Z             [(7, 0.25), (9, 0.75)], dtype=[("token", "<i4"), ("score", "<f4")]
+2026-11-13T10:04:39.0848872Z         )
+2026-11-13T10:04:39.0849043Z         source_feature = torch.tensor([[1.0, 2.0]])
+2026-11-13T10:04:39.0849358Z         request = TokenizedGenerateReqInput(
+2026-11-13T10:04:39.0849593Z             input_text="",
+2026-11-13T10:04:39.0849776Z             input_ids=array("q", [1, 2]),
+2026-11-13T10:04:39.0849973Z             input_embeds=None,
+2026-11-13T10:04:39.0850175Z             mm_inputs=MultimodalProcessorOutput(
+2026-11-13T10:04:39.0850390Z                 mm_items=[
+2026-11-13T10:04:39.0850570Z                     MultimodalDataItem(
+2026-11-13T10:04:39.0850783Z                         modality=Modality.IMAGE,
+2026-11-13T10:04:39.0851001Z                         feature=source_feature,
+2026-11-13T10:04:39.0851206Z                         model_specific_data={
+2026-11-13T10:04:39.0851412Z                             "records": records,
+2026-11-13T10:04:39.0851625Z                             "large_id": 1 << 200,
+2026-11-13T10:04:39.0851852Z                             "nested": {"records": records},
+2026-11-13T10:04:39.0852059Z                         },
+2026-11-13T10:04:39.0852217Z                     )
+2026-11-13T10:04:39.0852365Z                 ]
+2026-11-13T10:04:39.0852509Z             ),
+2026-11-13T10:04:39.0852661Z             token_type_ids=[0, 0],
+2026-11-13T10:04:39.0852862Z             sampling_params=SamplingParams(),
+2026-11-13T10:04:39.0853069Z             return_logprob=False,
+2026-11-13T10:04:39.0853255Z             logprob_start_len=0,
+2026-11-13T10:04:39.0853452Z             top_logprobs_num=0,
+2026-11-13T10:04:39.0853637Z             token_ids_logprob=None,
+2026-11-13T10:04:39.0853826Z             stream=False,
+2026-11-13T10:04:39.0853980Z         )
+2026-11-13T10:04:39.0854172Z         with patch.object(io_struct, "_USE_PICKLE_IPC", False):
+2026-11-13T10:04:39.0854424Z             request.wrap_pickle_fields()
+2026-11-13T10:04:39.0854658Z             forwarded = msgpack_decode(msgpack_encode(request))
+2026-11-13T10:04:39.0854998Z             decoded = msgpack_decode(msgpack_encode(forwarded))
+2026-11-13T10:04:39.0855239Z             decoded.unwrap_pickle_fields()
+2026-11-13T10:04:39.0855451Z         item = decoded.mm_inputs.mm_items[0]
+2026-11-13T10:04:39.0855722Z         self.assertIsInstance(decoded, TokenizedGenerateReqInput)
+2026-11-13T10:04:39.0856043Z         self.assertEqual(item.model_specific_data["large_id"], 1 << 200)
+2026-11-13T10:04:39.0856395Z         self.assertEqual(item.model_specific_data["records"].dtype, records.dtype)
+2026-11-13T10:04:39.0856769Z         np.testing.assert_array_equal(item.model_specific_data["records"], records)
+2026-11-13T10:04:39.0857057Z         self.assertIs(
+2026-11-13T10:04:39.0857235Z             item.model_specific_data["records"],
+2026-11-13T10:04:39.0857459Z             item.model_specific_data["nested"]["records"],
+2026-11-13T10:04:39.0857662Z         )
+2026-11-13T10:04:39.0857876Z         torch.testing.assert_close(item.feature, source_feature, rtol=0, atol=0)
+2026-11-13T10:04:39.0858093Z 
+2026-11-13T10:04:39.0858096Z 
+2026-11-13T10:04:39.0858199Z if __name__ == "__main__":
+2026-11-13T10:04:39.0858365Z     unittest.main()
+2026-11-13T10:04:39.0858608Z 
+2026-11-13T10:04:39.0858682Z END_FORMATTED_TEST
+2026-11-13T10:04:39.0993367Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-11-13T10:04:39.0993660Z with:
+2026-11-13T10:04:39.0993836Z   name: native-cpu-msgpack-fidelity-evidence
+2026-11-13T10:04:39.0994369Z   path: sglang-install.log
+sglang-environment.txt
+sglang-patched.log
+sglang-patched.xml
+sglang-baseline.log
+sglang-baseline.xml
+sglang-lint.log
+sglang-format.patch
+
+2026-11-13T10:04:39.0994887Z   if-no-files-found: warn
+2026-11-13T10:04:39.0995066Z   compression-level: 6
+2026-11-13T10:04:39.0995227Z   overwrite: false
+2026-11-13T10:04:39.0995390Z   include-hidden-files: false
+2026-11-13T10:04:39.0995567Z   archive: true
+2026-11-13T10:04:39.0995706Z env:
+2026-11-13T10:04:39.0995843Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:04:39.0996031Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:04:39.0996222Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:04:39.0996384Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:04:39.0996534Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:04:39.0996784Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:39.0997093Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:04:39.0997392Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:39.0997663Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:39.0997931Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:04:39.0998211Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:04:39.0998735Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:04:39.0998910Z ##[endgroup]
+2026-11-13T10:04:39.2248698Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-13T10:04:39.2251890Z The least common ancestor is /home/runner/work/sglang/sglang. This will be the root directory of the artifact
+2026-11-13T10:04:39.2252701Z With the provided path, there will be 8 files uploaded
+2026-11-13T10:04:39.2255249Z Artifact name is valid!
+2026-11-13T10:04:39.2255724Z Root directory input is valid!
+2026-11-13T10:04:39.6745434Z Uploading artifact: native-cpu-msgpack-fidelity-evidence.zip
+2026-11-13T10:04:39.6772608Z Beginning upload of artifact content to blob storage
+2026-11-13T10:04:40.2041991Z Uploaded bytes 16649
+2026-11-13T10:04:40.2920601Z Finished uploading artifact content to blob storage!
+2026-11-13T10:04:40.2921266Z SHA256 digest of uploaded artifact is 28ce6f0962bbc066e833046e27ccf5d049b787a5555205f6a6b449f3b8a0f827
+2026-11-13T10:04:40.2921803Z Finalizing artifact upload
+2026-11-13T10:04:40.8960440Z Artifact native-cpu-msgpack-fidelity-evidence successfully finalized. Artifact ID 14027721258
+2026-11-13T10:04:40.8961428Z Artifact native-cpu-msgpack-fidelity-evidence has been successfully uploaded! Final size is 16649 bytes. Artifact ID is 14027721258
+2026-11-13T10:04:40.8963536Z Artifact download URL: https://github.com/Afloat16/sglang/actions/runs/43404011360/artifacts/14027721258
+2026-11-13T10:04:40.9105719Z Post job cleanup.
+2026-11-13T10:04:41.0097976Z (node:17376) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T10:04:41.0098714Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T10:04:41.0219136Z Post job cleanup.
+2026-11-13T10:04:41.0922298Z [command]/usr/bin/git version
+2026-11-13T10:04:41.0964116Z git version 2.56.1
+2026-11-13T10:04:41.0994950Z Temporarily overriding HOME='/home/runner/work/_temp/fb5db331-29f5-4119-97c8-142b6eea05cf' before making global git config changes
+2026-11-13T10:04:41.0995523Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T10:04:41.0999857Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sglang/sglang
+2026-11-13T10:04:41.1033884Z Removing SSH command configuration
+2026-11-13T10:04:41.1039376Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T10:04:41.1076146Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T10:04:41.1250063Z Removing HTTP extra header
+2026-11-13T10:04:41.1253586Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T10:04:41.1297130Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T10:04:41.1460714Z Removing includeIf entries pointing to credentials config files
+2026-11-13T10:04:41.1467289Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T10:04:41.1497852Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T10:04:41.1804890Z Cleaning up orphan processes
+2026-11-13T10:04:41.2135544Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
