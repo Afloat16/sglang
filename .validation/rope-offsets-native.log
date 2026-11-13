@@ -1,0 +1,2034 @@
+﻿2026-11-13T10:26:13.1441651Z Current runner version: '2.338.2'
+2026-11-13T10:26:13.1457673Z ##[group]Runner Image Provisioner
+2026-11-13T10:26:13.1458171Z Hosted Compute Agent
+2026-11-13T10:26:13.1458728Z Version: 20261028.624
+2026-11-13T10:26:13.1459157Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-13T10:26:13.1459580Z Build Date: 2026-10-28T21:51:42Z
+2026-11-13T10:26:13.1460326Z Worker ID: {3c89c700-502d-4790-92ea-933392a5aec4}
+2026-11-13T10:26:13.1460737Z Region: westus3
+2026-11-13T10:26:13.1461055Z Cloud: Azure
+2026-11-13T10:26:13.1461417Z ##[endgroup]
+2026-11-13T10:26:13.1462220Z ##[group]Operating System
+2026-11-13T10:26:13.1462598Z Ubuntu
+2026-11-13T10:26:13.1462924Z 24.04.5
+2026-11-13T10:26:13.1463231Z LTS
+2026-11-13T10:26:13.1463568Z ##[endgroup]
+2026-11-13T10:26:13.1463923Z ##[group]Runner Image
+2026-11-13T10:26:13.1464334Z Image: ubuntu-24.04
+2026-11-13T10:26:13.1464682Z Version: 20261101.360.1
+2026-11-13T10:26:13.1465416Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-13T10:26:13.1466304Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-13T10:26:13.1466866Z ##[endgroup]
+2026-11-13T10:26:13.1467506Z ##[group]GITHUB_TOKEN Permissions
+2026-11-13T10:26:13.1468791Z Contents: read
+2026-11-13T10:26:13.1469176Z Metadata: read
+2026-11-13T10:26:13.1469506Z ##[endgroup]
+2026-11-13T10:26:13.1470928Z Secret source: Actions
+2026-11-13T10:26:13.1471476Z Cache mode: write
+2026-11-13T10:26:13.1471917Z Prepare workflow directory
+2026-11-13T10:26:13.1694659Z Prepare all required actions
+2026-11-13T10:26:13.1723800Z Getting action download info
+2026-11-13T10:26:13.4716199Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-13T10:26:13.5676833Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-13T10:26:13.6576100Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-11-13T10:26:13.8074709Z Complete job name: native-cpu
+2026-11-13T10:26:13.8561160Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-11-13T10:26:13.8561647Z with:
+2026-11-13T10:26:13.8561891Z   ref: 0828b0d8d3d097f50e15e7b27d6cca75bc955bb1
+2026-11-13T10:26:13.8562190Z   fetch-depth: 2
+2026-11-13T10:26:13.8562425Z   persist-credentials: false
+2026-11-13T10:26:13.8562688Z   repository: Afloat16/sglang
+2026-11-13T10:26:13.8564585Z   token: ***
+2026-11-13T10:26:13.8564799Z   ssh-strict: true
+2026-11-13T10:26:13.8565025Z   ssh-user: git
+2026-11-13T10:26:13.8565240Z   clean: true
+2026-11-13T10:26:13.8565469Z   sparse-checkout-cone-mode: true
+2026-11-13T10:26:13.8565737Z   fetch-tags: false
+2026-11-13T10:26:13.8565962Z   show-progress: true
+2026-11-13T10:26:13.8566187Z   lfs: false
+2026-11-13T10:26:13.8566395Z   submodules: false
+2026-11-13T10:26:13.8566641Z   set-safe-directory: true
+2026-11-13T10:26:13.8566905Z   allow-unsafe-pr-checkout: false
+2026-11-13T10:26:13.8567232Z env:
+2026-11-13T10:26:13.8567443Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:26:13.8567750Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:26:13.8568023Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:26:13.8568459Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:26:13.8568689Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:26:13.8568923Z ##[endgroup]
+2026-11-13T10:26:14.0774089Z Syncing repository: Afloat16/sglang
+2026-11-13T10:26:14.0775462Z ##[group]Getting Git version info
+2026-11-13T10:26:14.0775856Z Working directory is '/home/runner/work/sglang/sglang'
+2026-11-13T10:26:14.0776391Z [command]/usr/bin/git version
+2026-11-13T10:26:14.0855404Z git version 2.56.0
+2026-11-13T10:26:14.0867339Z ##[endgroup]
+2026-11-13T10:26:14.0873842Z Temporarily overriding HOME='/home/runner/work/_temp/00dae371-efa3-4940-b2b9-a608f6d8fad8' before making global git config changes
+2026-11-13T10:26:14.0875159Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T10:26:14.0877766Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sglang/sglang
+2026-11-13T10:26:14.0922141Z Deleting the contents of '/home/runner/work/sglang/sglang'
+2026-11-13T10:26:14.0924990Z ##[group]Determining repository object format
+2026-11-13T10:26:14.0926089Z ##[endgroup]
+2026-11-13T10:26:14.0926500Z ##[group]Initializing the repository
+2026-11-13T10:26:14.0929581Z [command]/usr/bin/git init /home/runner/work/sglang/sglang
+2026-11-13T10:26:14.1013615Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-13T10:26:14.1014563Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-13T10:26:14.1015086Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-13T10:26:14.1015497Z hint: call:
+2026-11-13T10:26:14.1015721Z hint:
+2026-11-13T10:26:14.1016030Z hint: 	git config --global init.defaultBranch <name>
+2026-11-13T10:26:14.1016400Z hint:
+2026-11-13T10:26:14.1016722Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-13T10:26:14.1017244Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-13T10:26:14.1017652Z hint:
+2026-11-13T10:26:14.1017891Z hint: 	git branch -m <name>
+2026-11-13T10:26:14.1018158Z hint:
+2026-11-13T10:26:14.1018660Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-13T10:26:14.1025201Z Initialized empty Git repository in /home/runner/work/sglang/sglang/.git/
+2026-11-13T10:26:14.1034077Z [command]/usr/bin/git remote add origin https://github.com/Afloat16/sglang
+2026-11-13T10:26:14.1087337Z ##[endgroup]
+2026-11-13T10:26:14.1087946Z ##[group]Disabling automatic garbage collection
+2026-11-13T10:26:14.1090229Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-13T10:26:14.1118855Z ##[endgroup]
+2026-11-13T10:26:14.1119842Z ##[group]Setting up auth
+2026-11-13T10:26:14.1120157Z Removing SSH command configuration
+2026-11-13T10:26:14.1129129Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T10:26:14.1172677Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T10:26:14.1506038Z Removing HTTP extra header
+2026-11-13T10:26:14.1510651Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T10:26:14.1550195Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T10:26:14.1738591Z Removing includeIf entries pointing to credentials config files
+2026-11-13T10:26:14.1741994Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T10:26:14.1786155Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T10:26:14.1982140Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-b94742f9-27c5-43be-8c1e-0d8641d94e84.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-13T10:26:14.2025673Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sglang/sglang/.git.path /home/runner/work/_temp/git-credentials-b94742f9-27c5-43be-8c1e-0d8641d94e84.config
+2026-11-13T10:26:14.2063040Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-b94742f9-27c5-43be-8c1e-0d8641d94e84.config
+2026-11-13T10:26:14.2100138Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-b94742f9-27c5-43be-8c1e-0d8641d94e84.config
+2026-11-13T10:26:14.2139700Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-b94742f9-27c5-43be-8c1e-0d8641d94e84.config
+2026-11-13T10:26:14.2174404Z ##[endgroup]
+2026-11-13T10:26:14.2175093Z ##[group]Fetching the repository
+2026-11-13T10:26:14.2179459Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=2 origin 0828b0d8d3d097f50e15e7b27d6cca75bc955bb1
+2026-11-13T10:26:22.1244741Z From https://github.com/Afloat16/sglang
+2026-11-13T10:26:22.1246548Z  * branch            0828b0d8d3d097f50e15e7b27d6cca75bc955bb1 -> FETCH_HEAD
+2026-11-13T10:26:22.1251696Z [command]/usr/bin/git rev-parse --verify --quiet 0828b0d8d3d097f50e15e7b27d6cca75bc955bb1^{object}
+2026-11-13T10:26:22.1284682Z 0828b0d8d3d097f50e15e7b27d6cca75bc955bb1
+2026-11-13T10:26:22.1288763Z ##[endgroup]
+2026-11-13T10:26:22.1289650Z ##[group]Determining the checkout info
+2026-11-13T10:26:22.1290685Z ##[endgroup]
+2026-11-13T10:26:22.1291316Z [command]/usr/bin/git sparse-checkout disable
+2026-11-13T10:26:22.1347979Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-13T10:26:22.1385451Z ##[group]Checking out the ref
+2026-11-13T10:26:22.1387836Z [command]/usr/bin/git checkout --progress --force 0828b0d8d3d097f50e15e7b27d6cca75bc955bb1
+2026-11-13T10:26:22.8584214Z Note: switching to '0828b0d8d3d097f50e15e7b27d6cca75bc955bb1'.
+2026-11-13T10:26:22.8584525Z 
+2026-11-13T10:26:22.8584721Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-13T10:26:22.8585146Z changes and commit them, and you can discard any commits you make in this
+2026-11-13T10:26:22.8585546Z state without impacting any branches by switching back to a branch.
+2026-11-13T10:26:22.8585764Z 
+2026-11-13T10:26:22.8585909Z If you want to create a new branch to retain commits you create, you may
+2026-11-13T10:26:22.8586281Z do so (now or later) by using -c with the switch command. Example:
+2026-11-13T10:26:22.8586521Z 
+2026-11-13T10:26:22.8586615Z   git switch -c <new-branch-name>
+2026-11-13T10:26:22.8586897Z 
+2026-11-13T10:26:22.8587000Z Or undo this operation with:
+2026-11-13T10:26:22.8587138Z 
+2026-11-13T10:26:22.8587216Z   git switch -
+2026-11-13T10:26:22.8587319Z 
+2026-11-13T10:26:22.8587916Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-13T10:26:22.8588360Z 
+2026-11-13T10:26:22.8588568Z HEAD is now at 0828b0d Apply CPU rotary position offsets once in the selected backend
+2026-11-13T10:26:22.8613689Z ##[endgroup]
+2026-11-13T10:26:22.8664739Z [command]/usr/bin/git log -1 --format=%H
+2026-11-13T10:26:22.8696576Z 0828b0d8d3d097f50e15e7b27d6cca75bc955bb1
+2026-11-13T10:26:22.8703222Z ##[group]Removing auth
+2026-11-13T10:26:22.8703473Z Removing SSH command configuration
+2026-11-13T10:26:22.8706113Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T10:26:22.8741240Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T10:26:22.8935831Z Removing HTTP extra header
+2026-11-13T10:26:22.8937921Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T10:26:22.8973079Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T10:26:22.9162565Z Removing includeIf entries pointing to credentials config files
+2026-11-13T10:26:22.9164375Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T10:26:22.9198707Z includeif.gitdir:/home/runner/work/sglang/sglang/.git.path
+2026-11-13T10:26:22.9199311Z includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path
+2026-11-13T10:26:22.9199659Z includeif.gitdir:/github/workspace/.git.path
+2026-11-13T10:26:22.9199951Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-13T10:26:22.9208917Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sglang/sglang/.git.path
+2026-11-13T10:26:22.9237315Z /home/runner/work/_temp/git-credentials-b94742f9-27c5-43be-8c1e-0d8641d94e84.config
+2026-11-13T10:26:22.9244166Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sglang/sglang/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-b94742f9\-27c5\-43be\-8c1e\-0d8641d94e84\.config
+2026-11-13T10:26:22.9283654Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path
+2026-11-13T10:26:22.9317408Z /home/runner/work/_temp/git-credentials-b94742f9-27c5-43be-8c1e-0d8641d94e84.config
+2026-11-13T10:26:22.9323986Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/sglang/sglang/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-b94742f9\-27c5\-43be\-8c1e\-0d8641d94e84\.config
+2026-11-13T10:26:22.9364904Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-13T10:26:22.9424144Z /github/runner_temp/git-credentials-b94742f9-27c5-43be-8c1e-0d8641d94e84.config
+2026-11-13T10:26:22.9425248Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-b94742f9\-27c5\-43be\-8c1e\-0d8641d94e84\.config
+2026-11-13T10:26:22.9439240Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-13T10:26:22.9468298Z /github/runner_temp/git-credentials-b94742f9-27c5-43be-8c1e-0d8641d94e84.config
+2026-11-13T10:26:22.9473325Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-b94742f9\-27c5\-43be\-8c1e\-0d8641d94e84\.config
+2026-11-13T10:26:22.9509777Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T10:26:22.9698372Z Removing credentials config '/home/runner/work/_temp/git-credentials-b94742f9-27c5-43be-8c1e-0d8641d94e84.config'
+2026-11-13T10:26:22.9706028Z ##[endgroup]
+2026-11-13T10:26:22.9886745Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-11-13T10:26:22.9886973Z with:
+2026-11-13T10:26:22.9887092Z   python-version: 3.12
+2026-11-13T10:26:22.9887219Z   check-latest: false
+2026-11-13T10:26:22.9888642Z   token: ***
+2026-11-13T10:26:22.9888764Z   update-environment: true
+2026-11-13T10:26:22.9888902Z   allow-prereleases: false
+2026-11-13T10:26:22.9889031Z   freethreaded: false
+2026-11-13T10:26:22.9889148Z env:
+2026-11-13T10:26:22.9889258Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:26:22.9889396Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:26:22.9889546Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:26:22.9889671Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:26:22.9889788Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:26:22.9889911Z ##[endgroup]
+2026-11-13T10:26:23.0689675Z ##[group]Installed versions
+2026-11-13T10:26:23.0762232Z (node:2217) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T10:26:23.0762868Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T10:26:23.0763337Z Successfully set up CPython (3.12.16)
+2026-11-13T10:26:23.0763774Z ##[endgroup]
+2026-11-13T10:26:23.0885675Z ##[group]Run python -m pip install uv pre-commit
+2026-11-13T10:26:23.0885951Z [36;1mpython -m pip install uv pre-commit[0m
+2026-11-13T10:26:23.0886149Z [36;1mbash scripts/ci/utils/install_rust_protoc.sh[0m
+2026-11-13T10:26:23.0917382Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:26:23.0917636Z env:
+2026-11-13T10:26:23.0917822Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:26:23.0918044Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:26:23.0918467Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:26:23.0918665Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:26:23.0918869Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:26:23.0919125Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:26:23.0919705Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:26:23.0920060Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:26:23.0920390Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:26:23.0920763Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:26:23.0921098Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:26:23.0921383Z ##[endgroup]
+2026-11-13T10:26:23.9953759Z Collecting uv
+2026-11-13T10:26:24.0297690Z   Downloading uv-0.13.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+2026-11-13T10:26:24.0543938Z Collecting pre-commit
+2026-11-13T10:26:24.0572377Z   Downloading pre_commit-4.7.0-py2.py3-none-any.whl.metadata (1.2 kB)
+2026-11-13T10:26:24.0721882Z Collecting cfgv>=2.0.0 (from pre-commit)
+2026-11-13T10:26:24.0747730Z   Downloading cfgv-3.5.0-py2.py3-none-any.whl.metadata (8.9 kB)
+2026-11-13T10:26:24.0989547Z Collecting identify>=1.0.0 (from pre-commit)
+2026-11-13T10:26:24.1017034Z   Downloading identify-2.6.20-py2.py3-none-any.whl.metadata (4.4 kB)
+2026-11-13T10:26:24.1175643Z Collecting nodeenv>=0.11.1 (from pre-commit)
+2026-11-13T10:26:24.1203791Z   Downloading nodeenv-1.12.0-py3-none-any.whl.metadata (49 kB)
+2026-11-13T10:26:24.1552930Z Collecting pyyaml>=5.1 (from pre-commit)
+2026-11-13T10:26:24.1587116Z   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-11-13T10:26:24.1863003Z Collecting virtualenv>=20.10.0 (from pre-commit)
+2026-11-13T10:26:24.1892784Z   Downloading virtualenv-21.15.6-py3-none-any.whl.metadata (4.1 kB)
+2026-11-13T10:26:24.2049179Z Collecting distlib<1,>=0.4.3 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:26:24.2076415Z   Downloading distlib-0.4.4-py2.py3-none-any.whl.metadata (5.3 kB)
+2026-11-13T10:26:24.2275797Z Collecting filelock<5,>=3.24.2 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:26:24.2305758Z   Downloading filelock-4.2.10-py3-none-any.whl.metadata (2.3 kB)
+2026-11-13T10:26:24.2463935Z Collecting packaging>=26.3 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:26:24.2494007Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-11-13T10:26:24.2678812Z Collecting platformdirs<5,>=4.4 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:26:24.2705411Z   Downloading platformdirs-4.14.5-py3-none-any.whl.metadata (5.7 kB)
+2026-11-13T10:26:24.2949537Z Collecting python-discovery>=1.6.1 (from virtualenv>=20.10.0->pre-commit)
+2026-11-13T10:26:24.2978011Z   Downloading python_discovery-1.9.5-py3-none-any.whl.metadata (4.2 kB)
+2026-11-13T10:26:24.3057200Z Downloading uv-0.13.8-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.4 MB)
+2026-11-13T10:26:24.5099308Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.4/17.4 MB 86.5 MB/s  0:00:00
+2026-11-13T10:26:24.5129881Z Downloading pre_commit-4.7.0-py2.py3-none-any.whl (226 kB)
+2026-11-13T10:26:24.5175475Z Downloading cfgv-3.5.0-py2.py3-none-any.whl (7.4 kB)
+2026-11-13T10:26:24.5217736Z Downloading identify-2.6.20-py2.py3-none-any.whl (99 kB)
+2026-11-13T10:26:24.5259560Z Downloading nodeenv-1.12.0-py3-none-any.whl (39 kB)
+2026-11-13T10:26:24.5301619Z Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-11-13T10:26:24.5337538Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 235.7 MB/s  0:00:00
+2026-11-13T10:26:24.5364980Z Downloading virtualenv-21.15.6-py3-none-any.whl (5.7 MB)
+2026-11-13T10:26:24.5698118Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.7/5.7 MB 169.6 MB/s  0:00:00
+2026-11-13T10:26:24.5728388Z Downloading distlib-0.4.4-py2.py3-none-any.whl (472 kB)
+2026-11-13T10:26:24.5810493Z Downloading filelock-4.2.10-py3-none-any.whl (218 kB)
+2026-11-13T10:26:24.5853811Z Downloading platformdirs-4.14.5-py3-none-any.whl (35 kB)
+2026-11-13T10:26:24.6013356Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-11-13T10:26:24.6055800Z Downloading python_discovery-1.9.5-py3-none-any.whl (44 kB)
+2026-11-13T10:26:24.6711965Z Installing collected packages: distlib, uv, pyyaml, platformdirs, packaging, nodeenv, identify, filelock, cfgv, python-discovery, virtualenv, pre-commit
+2026-11-13T10:26:25.1827813Z 
+2026-11-13T10:26:25.1837832Z Successfully installed cfgv-3.5.0 distlib-0.4.4 filelock-4.2.10 identify-2.6.20 nodeenv-1.12.0 packaging-26.3 platformdirs-4.14.5 pre-commit-4.7.0 python-discovery-1.9.5 pyyaml-6.0.3 uv-0.13.8 virtualenv-21.15.6
+2026-11-13T10:26:25.1843492Z 
+2026-11-13T10:26:25.1843683Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+2026-11-13T10:26:25.1844002Z [notice] To update, run: pip install --upgrade pip
+2026-11-13T10:26:25.2297878Z +++ dirname scripts/ci/utils/install_rust_protoc.sh
+2026-11-13T10:26:25.2304813Z ++ cd scripts/ci/utils
+2026-11-13T10:26:25.2305078Z ++ pwd
+2026-11-13T10:26:25.2306887Z + SCRIPT_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T10:26:25.2309243Z ++ id -u
+2026-11-13T10:26:25.2326296Z + '[' 1001 = 0 ']'
+2026-11-13T10:26:25.2326505Z + command -v sudo
+2026-11-13T10:26:25.2326767Z + SUDO=sudo
+2026-11-13T10:26:25.2327057Z + sudo bash /home/runner/work/sglang/sglang/scripts/ci/utils/install_protoc.sh
+2026-11-13T10:26:25.2379972Z + command -v protoc
+2026-11-13T10:26:25.2380187Z + command -v protoc
+2026-11-13T10:26:25.2380447Z + echo 'protoc not found, installing...'
+2026-11-13T10:26:25.2380704Z protoc not found, installing...
+2026-11-13T10:26:25.2382628Z ++ uname -m
+2026-11-13T10:26:25.2389853Z + ARCH=x86_64
+2026-11-13T10:26:25.2390235Z + command -v apt-get
+2026-11-13T10:26:25.2390552Z + apt-get update
+2026-11-13T10:26:25.2851672Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-13T10:26:25.3162405Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-11-13T10:26:25.3305520Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-11-13T10:26:25.3314589Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-11-13T10:26:25.3351384Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-11-13T10:26:25.3368869Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-11-13T10:26:25.3735087Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [767 kB]
+2026-11-13T10:26:25.3881447Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.6 kB]
+2026-11-13T10:26:25.3923420Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [697 kB]
+2026-11-13T10:26:25.4489189Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1450 kB]
+2026-11-13T10:26:25.4537551Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [315 kB]
+2026-11-13T10:26:25.4557472Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1713 kB]
+2026-11-13T10:26:25.4612503Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [345 kB]
+2026-11-13T10:26:25.4629063Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1883 kB]
+2026-11-13T10:26:25.4691426Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [430 kB]
+2026-11-13T10:26:25.4710403Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [50.7 kB]
+2026-11-13T10:26:25.4718548Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.6 kB]
+2026-11-13T10:26:25.5247210Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1195 kB]
+2026-11-13T10:26:25.5289759Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [238 kB]
+2026-11-13T10:26:25.5733917Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1228 kB]
+2026-11-13T10:26:25.5774607Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [248 kB]
+2026-11-13T10:26:25.5792822Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1788 kB]
+2026-11-13T10:26:25.5852804Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [411 kB]
+2026-11-13T10:26:25.5870273Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [45.4 kB]
+2026-11-13T10:26:25.5877113Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.4 kB]
+2026-11-13T10:26:28.2352800Z Fetched 13.2 MB in 1s (13.9 MB/s)
+2026-11-13T10:26:28.8883918Z Reading package lists...
+2026-11-13T10:26:28.9034106Z + PROTOC_APT_PACKAGES=(wget unzip)
+2026-11-13T10:26:28.9034489Z + apt-get install -y --no-install-recommends wget unzip
+2026-11-13T10:26:28.9149156Z Reading package lists...
+2026-11-13T10:26:29.0674102Z Building dependency tree...
+2026-11-13T10:26:29.0679309Z Reading state information...
+2026-11-13T10:26:29.1831476Z wget is already the newest version (1.21.4-1ubuntu4.5).
+2026-11-13T10:26:29.1831882Z unzip is already the newest version (6.0-28ubuntu4.1).
+2026-11-13T10:26:29.1832199Z 0 upgraded, 0 newly installed, 0 to remove and 54 not upgraded.
+2026-11-13T10:26:29.1840597Z + '[' x86_64 = aarch64 ']'
+2026-11-13T10:26:29.1840818Z + '[' x86_64 = arm64 ']'
+2026-11-13T10:26:29.1840950Z + PROTOC_ARCH=x86_64
+2026-11-13T10:26:29.1841100Z + PROTOC_ZIP=protoc-32.0-linux-x86_64.zip
+2026-11-13T10:26:29.1843137Z + cd /tmp
+2026-11-13T10:26:29.1843645Z + wget https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-x86_64.zip
+2026-11-13T10:26:29.2090417Z --2026-11-13 10:26:29--  https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-x86_64.zip
+2026-11-13T10:26:29.2273199Z Resolving github.com (github.com)... 140.82.112.3
+2026-11-13T10:26:29.2773295Z Connecting to github.com (github.com)|140.82.112.3|:443... connected.
+2026-11-13T10:26:29.5040565Z HTTP request sent, awaiting response... 302 Found
+2026-11-13T10:26:29.5044067Z Location: https://release-assets.githubusercontent.com/github-production-release-asset/23357588/b8f467f9-efcf-428e-8da8-d051740d4252?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-13T11%3A14%3A08Z&rscd=attachment%3B+filename%3Dprotoc-32.0-linux-x86_64.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-13T10%3A13%3A48Z&ske=2026-11-13T11%3A14%3A08Z&sks=b&skv=2018-11-09&sig=eFFhaVy3aythzSHX60DOfGuPsTeGevxy4oEB1hElnko%3D&jwt=*** [following]
+2026-11-13T10:26:29.5046992Z --2026-11-13 10:26:29--  https://release-assets.githubusercontent.com/github-production-release-asset/23357588/b8f467f9-efcf-428e-8da8-d051740d4252?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-13T11%3A14%3A08Z&rscd=attachment%3B+filename%3Dprotoc-32.0-linux-x86_64.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-13T10%3A13%3A48Z&ske=2026-11-13T11%3A14%3A08Z&sks=b&skv=2018-11-09&sig=eFFhaVy3aythzSHX60DOfGuPsTeGevxy4oEB1hElnko%3D&jwt=***
+2026-11-13T10:26:29.5087871Z Resolving release-assets.githubusercontent.com (release-assets.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+2026-11-13T10:26:29.5239775Z Connecting to release-assets.githubusercontent.com (release-assets.githubusercontent.com)|185.199.108.133|:443... connected.
+2026-11-13T10:26:29.5516779Z HTTP request sent, awaiting response... 200 OK
+2026-11-13T10:26:29.5517068Z Length: 3543178 (3.4M) [application/octet-stream]
+2026-11-13T10:26:29.5517841Z Saving to: ‘protoc-32.0-linux-x86_64.zip’
+2026-11-13T10:26:29.5524814Z 
+2026-11-13T10:26:29.5619307Z      0K .......... .......... .......... .......... ..........  1% 4.81M 1s
+2026-11-13T10:26:29.5655113Z     50K .......... .......... .......... .......... ..........  2% 13.6M 0s
+2026-11-13T10:26:29.5694046Z    100K .......... .......... .......... .......... ..........  4% 12.5M 0s
+2026-11-13T10:26:29.5720967Z    150K .......... .......... .......... .......... ..........  5% 18.1M 0s
+2026-11-13T10:26:29.5739967Z    200K .......... .......... .......... .......... ..........  7% 25.7M 0s
+2026-11-13T10:26:29.5774477Z    250K .......... .......... .......... .......... ..........  8% 14.2M 0s
+2026-11-13T10:26:29.5789123Z    300K .......... .......... .......... .......... .......... 10% 33.2M 0s
+2026-11-13T10:26:29.5794355Z    350K .......... .......... .......... .......... .......... 11% 90.9M 0s
+2026-11-13T10:26:29.5808673Z    400K .......... .......... .......... .......... .......... 13% 34.6M 0s
+2026-11-13T10:26:29.5821954Z    450K .......... .......... .......... .......... .......... 14% 36.3M 0s
+2026-11-13T10:26:29.5830357Z    500K .......... .......... .......... .......... .......... 15% 58.2M 0s
+2026-11-13T10:26:29.5835527Z    550K .......... .......... .......... .......... .......... 17% 94.3M 0s
+2026-11-13T10:26:29.5857858Z    600K .......... .......... .......... .......... .......... 18% 21.9M 0s
+2026-11-13T10:26:29.5861400Z    650K .......... .......... .......... .......... .......... 20%  146M 0s
+2026-11-13T10:26:29.5875017Z    700K .......... .......... .......... .......... .......... 21% 35.5M 0s
+2026-11-13T10:26:29.5880333Z    750K .......... .......... .......... .......... .......... 23% 90.6M 0s
+2026-11-13T10:26:29.5889856Z    800K .......... .......... .......... .......... .......... 24% 51.4M 0s
+2026-11-13T10:26:29.5891487Z    850K .......... .......... .......... .......... .......... 26%  297M 0s
+2026-11-13T10:26:29.5893634Z    900K .......... .......... .......... .......... .......... 27%  225M 0s
+2026-11-13T10:26:29.5904982Z    950K .......... .......... .......... .......... .......... 28% 43.4M 0s
+2026-11-13T10:26:29.5907634Z   1000K .......... .......... .......... .......... .......... 30%  205M 0s
+2026-11-13T10:26:29.5914511Z   1050K .......... .......... .......... .......... .......... 31% 69.1M 0s
+2026-11-13T10:26:29.5915683Z   1100K .......... .......... .......... .......... .......... 33%  378M 0s
+2026-11-13T10:26:29.5920001Z   1150K .......... .......... .......... .......... .......... 34%  113M 0s
+2026-11-13T10:26:29.5921456Z   1200K .......... .......... .......... .......... .......... 36%  313M 0s
+2026-11-13T10:26:29.5935666Z   1250K .......... .......... .......... .......... .......... 37% 34.5M 0s
+2026-11-13T10:26:29.5942657Z   1300K .......... .......... .......... .......... .......... 39% 71.3M 0s
+2026-11-13T10:26:29.5945524Z   1350K .......... .......... .......... .......... .......... 40%  181M 0s
+2026-11-13T10:26:29.5947692Z   1400K .......... .......... .......... .......... .......... 41%  224M 0s
+2026-11-13T10:26:29.5958689Z   1450K .......... .......... .......... .......... .......... 43% 44.2M 0s
+2026-11-13T10:26:29.5959628Z   1500K .......... .......... .......... .......... .......... 44%  426M 0s
+2026-11-13T10:26:29.5964102Z   1550K .......... .......... .......... .......... .......... 46%  111M 0s
+2026-11-13T10:26:29.5965655Z   1600K .......... .......... .......... .......... .......... 47%  376M 0s
+2026-11-13T10:26:29.5973326Z   1650K .......... .......... .......... .......... .......... 49% 64.3M 0s
+2026-11-13T10:26:29.5974824Z   1700K .......... .......... .......... .......... .......... 50%  357M 0s
+2026-11-13T10:26:29.5975597Z   1750K .......... .......... .......... .......... .......... 52%  407M 0s
+2026-11-13T10:26:29.5978595Z   1800K .......... .......... .......... .......... .......... 53%  205M 0s
+2026-11-13T10:26:29.5980132Z   1850K .......... .......... .......... .......... .......... 54%  214M 0s
+2026-11-13T10:26:29.5981613Z   1900K .......... .......... .......... .......... .......... 56%  320M 0s
+2026-11-13T10:26:29.5983931Z   1950K .......... .......... .......... .......... .......... 57%  208M 0s
+2026-11-13T10:26:29.5989864Z   2000K .......... .......... .......... .......... .......... 59% 90.7M 0s
+2026-11-13T10:26:29.5990606Z   2050K .......... .......... .......... .......... .......... 60%  540M 0s
+2026-11-13T10:26:29.5993896Z   2100K .......... .......... .......... .......... .......... 62%  154M 0s
+2026-11-13T10:26:29.5996967Z   2150K .......... .......... .......... .......... .......... 63%  139M 0s
+2026-11-13T10:26:29.5998721Z   2200K .......... .......... .......... .......... .......... 65%  327M 0s
+2026-11-13T10:26:29.5999572Z   2250K .......... .......... .......... .......... .......... 66%  402M 0s
+2026-11-13T10:26:29.6001843Z   2300K .......... .......... .......... .......... .......... 67%  233M 0s
+2026-11-13T10:26:29.6003788Z   2350K .......... .......... .......... .......... .......... 69%  298M 0s
+2026-11-13T10:26:29.6005183Z   2400K .......... .......... .......... .......... .......... 70%  265M 0s
+2026-11-13T10:26:29.6006234Z   2450K .......... .......... .......... .......... .......... 72%  436M 0s
+2026-11-13T10:26:29.6018010Z   2500K .......... .......... .......... .......... .......... 73% 43.2M 0s
+2026-11-13T10:26:29.6018901Z   2550K .......... .......... .......... .......... .......... 75%  380M 0s
+2026-11-13T10:26:29.6024386Z   2600K .......... .......... .......... .......... .......... 76% 92.6M 0s
+2026-11-13T10:26:29.6025163Z   2650K .......... .......... .......... .......... .......... 78%  488M 0s
+2026-11-13T10:26:29.6026389Z   2700K .......... .......... .......... .......... .......... 79%  394M 0s
+2026-11-13T10:26:29.6029079Z   2750K .......... .......... .......... .......... .......... 80%  186M 0s
+2026-11-13T10:26:29.6029865Z   2800K .......... .......... .......... .......... .......... 82%  558M 0s
+2026-11-13T10:26:29.6031938Z   2850K .......... .......... .......... .......... .......... 83%  251M 0s
+2026-11-13T10:26:29.6034228Z   2900K .......... .......... .......... .......... .......... 85%  216M 0s
+2026-11-13T10:26:29.6041660Z   2950K .......... .......... .......... .......... .......... 86% 66.2M 0s
+2026-11-13T10:26:29.6042650Z   3000K .......... .......... .......... .......... .......... 88%  417M 0s
+2026-11-13T10:26:29.6044049Z   3050K .......... .......... .......... .......... .......... 89%  538M 0s
+2026-11-13T10:26:29.6045962Z   3100K .......... .......... .......... .......... .......... 91%  259M 0s
+2026-11-13T10:26:29.6046961Z   3150K .......... .......... .......... .......... .......... 92%  313M 0s
+2026-11-13T10:26:29.6049165Z   3200K .......... .......... .......... .......... .......... 93%  340M 0s
+2026-11-13T10:26:29.6049738Z   3250K .......... .......... .......... .......... .......... 95%  476M 0s
+2026-11-13T10:26:29.6050736Z   3300K .......... .......... .......... .......... .......... 96%  453M 0s
+2026-11-13T10:26:29.6051461Z   3350K .......... .......... .......... .......... .......... 98%  539M 0s
+2026-11-13T10:26:29.6052845Z   3400K .......... .......... .......... .......... .......... 99%  362M 0s
+2026-11-13T10:26:29.6053258Z   3450K ..........                                            100%  429M=0.05s
+2026-11-13T10:26:29.6053448Z 
+2026-11-13T10:26:29.6053855Z 2026-11-13 10:26:29 (63.1 MB/s) - ‘protoc-32.0-linux-x86_64.zip’ saved [3543178/3543178]
+2026-11-13T10:26:29.6054037Z 
+2026-11-13T10:26:29.6062161Z + unzip -o protoc-32.0-linux-x86_64.zip -d /usr/local
+2026-11-13T10:26:29.6080068Z Archive:  protoc-32.0-linux-x86_64.zip
+2026-11-13T10:26:29.6595479Z   inflating: /usr/local/bin/protoc   
+2026-11-13T10:26:29.6599363Z    creating: /usr/local/include/google/
+2026-11-13T10:26:29.6599621Z    creating: /usr/local/include/google/protobuf/
+2026-11-13T10:26:29.6600751Z   inflating: /usr/local/include/google/protobuf/any.proto  
+2026-11-13T10:26:29.6601585Z   inflating: /usr/local/include/google/protobuf/api.proto  
+2026-11-13T10:26:29.6601917Z    creating: /usr/local/include/google/protobuf/compiler/
+2026-11-13T10:26:29.6603016Z   inflating: /usr/local/include/google/protobuf/compiler/plugin.proto  
+2026-11-13T10:26:29.6603546Z   inflating: /usr/local/include/google/protobuf/cpp_features.proto  
+2026-11-13T10:26:29.6607095Z   inflating: /usr/local/include/google/protobuf/descriptor.proto  
+2026-11-13T10:26:29.6607772Z   inflating: /usr/local/include/google/protobuf/duration.proto  
+2026-11-13T10:26:29.6608411Z   inflating: /usr/local/include/google/protobuf/empty.proto  
+2026-11-13T10:26:29.6609368Z   inflating: /usr/local/include/google/protobuf/field_mask.proto  
+2026-11-13T10:26:29.6610014Z   inflating: /usr/local/include/google/protobuf/go_features.proto  
+2026-11-13T10:26:29.6610736Z   inflating: /usr/local/include/google/protobuf/java_features.proto  
+2026-11-13T10:26:29.6611306Z   inflating: /usr/local/include/google/protobuf/source_context.proto  
+2026-11-13T10:26:29.6611980Z   inflating: /usr/local/include/google/protobuf/struct.proto  
+2026-11-13T10:26:29.6612848Z   inflating: /usr/local/include/google/protobuf/timestamp.proto  
+2026-11-13T10:26:29.6613724Z   inflating: /usr/local/include/google/protobuf/type.proto  
+2026-11-13T10:26:29.6614460Z   inflating: /usr/local/include/google/protobuf/wrappers.proto  
+2026-11-13T10:26:29.6614840Z   inflating: /usr/local/readme.txt   
+2026-11-13T10:26:29.6617526Z + rm -f protoc-32.0-linux-x86_64.zip
+2026-11-13T10:26:29.6631251Z + protoc --version
+2026-11-13T10:26:29.6637674Z libprotoc 32.0
+2026-11-13T10:26:29.6649318Z + bash /home/runner/work/sglang/sglang/scripts/ci/utils/install_rustup.sh
+2026-11-13T10:26:29.6664768Z +++ dirname /home/runner/work/sglang/sglang/scripts/ci/utils/install_rustup.sh
+2026-11-13T10:26:29.6672213Z ++ cd /home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T10:26:29.6672467Z ++ pwd
+2026-11-13T10:26:29.6674466Z + SCRIPT_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils
+2026-11-13T10:26:29.6674848Z + RUST_WORKSPACE_DIR=/home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust
+2026-11-13T10:26:29.6677149Z ++ sed -n 's/^channel *= *"\([^"]*\)".*/\1/p' /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml
+2026-11-13T10:26:29.6690831Z + PINNED_CHANNEL=1.92
+2026-11-13T10:26:29.6691088Z + DEFAULT_CHANNEL=1.92
+2026-11-13T10:26:29.6692036Z + export PATH=/home/runner/.cargo/bin:/opt/hostedtoolcache/Python/3.12.16/x64/bin:/opt/hostedtoolcache/Python/3.12.16/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-11-13T10:26:29.6693268Z + PATH=/home/runner/.cargo/bin:/opt/hostedtoolcache/Python/3.12.16/x64/bin:/opt/hostedtoolcache/Python/3.12.16/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-11-13T10:26:29.6694156Z + '[' -n /home/runner/work/_temp/_runner_file_commands/add_path_b0707e6e-abfc-489c-ac16-47ac2b563abd ']'
+2026-11-13T10:26:29.6694521Z ++ dirname /home/runner/work/_temp/_runner_file_commands/add_path_b0707e6e-abfc-489c-ac16-47ac2b563abd
+2026-11-13T10:26:29.6701709Z + mkdir -p /home/runner/work/_temp/_runner_file_commands
+2026-11-13T10:26:29.6712342Z + echo /home/runner/.cargo/bin
+2026-11-13T10:26:29.6712682Z + '[' -n '' ']'
+2026-11-13T10:26:29.6714072Z + command -v cargo
+2026-11-13T10:26:29.6714302Z + command -v rustc
+2026-11-13T10:26:29.6714554Z + rustc --version
+2026-11-13T10:26:29.6819124Z ++ rustc --version
+2026-11-13T10:26:29.6914803Z ++ cargo --version
+2026-11-13T10:26:30.1365811Z + echo 'rust already installed: rustc 1.99.1 (58cf8f9c3 2026-10-13), cargo 1.99.1 (5f94df478 2026-08-27)'
+2026-11-13T10:26:30.1366170Z rust already installed: rustc 1.99.1 (58cf8f9c3 2026-10-13), cargo 1.99.1 (5f94df478 2026-08-27)
+2026-11-13T10:26:30.1366474Z + install_workspace_pinned_toolchain
+2026-11-13T10:26:30.1366638Z + command -v rustup
+2026-11-13T10:26:30.1366881Z + local toolchain_file=/home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml
+2026-11-13T10:26:30.1367351Z + '[' '!' -f /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust/rust-toolchain.toml ']'
+2026-11-13T10:26:30.1369008Z + cd /home/runner/work/sglang/sglang/scripts/ci/utils/../../../rust
+2026-11-13T10:26:30.1369406Z + rustup toolchain install
+2026-11-13T10:26:30.1443497Z info: syncing channel updates for 1.92-x86_64-unknown-linux-gnu
+2026-11-13T10:26:30.3062951Z info: latest update on 2025-12-11 for version 1.92.0 (ded5c06cf 2025-12-08)
+2026-11-13T10:26:30.3066910Z info: downloading 5 components
+2026-11-13T10:26:36.7532104Z info: the active toolchain `1.92-x86_64-unknown-linux-gnu` has been installed
+2026-11-13T10:26:36.7532482Z info: it's active because: overridden by '/home/runner/work/sglang/sglang/rust/rust-toolchain.toml'
+2026-11-13T10:26:36.7691980Z + return 0
+2026-11-13T10:26:36.7692514Z + export RUSTUP_TOOLCHAIN=1.92
+2026-11-13T10:26:36.7692767Z + RUSTUP_TOOLCHAIN=1.92
+2026-11-13T10:26:36.7693134Z + '[' -n /home/runner/work/_temp/_runner_file_commands/set_env_b0707e6e-abfc-489c-ac16-47ac2b563abd ']'
+2026-11-13T10:26:36.7696760Z ++ dirname /home/runner/work/_temp/_runner_file_commands/set_env_b0707e6e-abfc-489c-ac16-47ac2b563abd
+2026-11-13T10:26:36.7706501Z + mkdir -p /home/runner/work/_temp/_runner_file_commands
+2026-11-13T10:26:36.7717427Z + echo RUSTUP_TOOLCHAIN=1.92
+2026-11-13T10:26:36.7717775Z + rustc --version
+2026-11-13T10:26:36.7805275Z rustc 1.92.0 (ded5c06cf 2025-12-08)
+2026-11-13T10:26:36.7812605Z + cargo --version
+2026-11-13T10:26:36.7875985Z cargo 1.92.0 (344c4567c 2025-10-21)
+2026-11-13T10:26:36.7919774Z ##[group]Run set -o pipefail
+2026-11-13T10:26:36.7919939Z [36;1mset -o pipefail[0m
+2026-11-13T10:26:36.7920234Z [36;1muv pip install -e "python[dev]" --index-strategy unsafe-best-match --prerelease allow 2>&1 | tee sglang-install.log[0m
+2026-11-13T10:26:36.7920554Z [36;1mpython -m pip freeze > sglang-environment.txt[0m
+2026-11-13T10:26:36.7937122Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:26:36.7937251Z env:
+2026-11-13T10:26:36.7937356Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:26:36.7937490Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:26:36.7937629Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:26:36.7937751Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:26:36.7937861Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:26:36.7938030Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:26:36.7938504Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:26:36.7938727Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:26:36.7938957Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:26:36.7939156Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:26:36.7939360Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:26:36.7939545Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:26:36.7939663Z   UV_SYSTEM_PYTHON: 1
+2026-11-13T10:26:36.7939778Z ##[endgroup]
+2026-11-13T10:26:36.8314085Z Using Python 3.12.16 environment at: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:27:07.0471326Z Resolved 270 packages in 30.21s
+2026-11-13T10:27:07.0669716Z    Building sglang @ file:///home/runner/work/sglang/sglang/python
+2026-11-13T10:27:07.0768334Z Downloading av (39.3MiB)
+2026-11-13T10:27:07.0787575Z Downloading scipy (33.7MiB)
+2026-11-13T10:27:07.0787867Z Downloading z3-solver (27.9MiB)
+2026-11-13T10:27:07.0788104Z Downloading onnxruntime (22.7MiB)
+2026-11-13T10:27:07.0788504Z Downloading numpy (15.8MiB)
+2026-11-13T10:27:07.0796485Z Downloading transformers (12.0MiB)
+2026-11-13T10:27:07.0796750Z Downloading torchcodec (9.5MiB)
+2026-11-13T10:27:07.0797007Z Downloading scikit-learn (8.7MiB)
+2026-11-13T10:27:07.0797239Z Downloading pandas (11.8MiB)
+2026-11-13T10:27:07.0797586Z Downloading pycountry (7.7MiB)
+2026-11-13T10:27:07.0797842Z Downloading torchvision (7.2MiB)
+2026-11-13T10:27:07.0798061Z Downloading grpcio (7.0MiB)
+2026-11-13T10:27:07.0798406Z Downloading fastokens (3.6MiB)
+2026-11-13T10:27:07.0798620Z Downloading pillow (6.3MiB)
+2026-11-13T10:27:07.0798900Z Downloading cuda-core (6.3MiB)
+2026-11-13T10:27:07.0799119Z Downloading zstandard (5.3MiB)
+2026-11-13T10:27:07.0799338Z Downloading fonttools (5.2MiB)
+2026-11-13T10:27:07.0799552Z Downloading jedi (4.7MiB)
+2026-11-13T10:27:07.0800020Z Downloading cryptography (4.5MiB)
+2026-11-13T10:27:07.0800904Z Downloading uvloop (4.3MiB)
+2026-11-13T10:27:07.0801374Z Downloading hf-xet (4.1MiB)
+2026-11-13T10:27:07.0802323Z Downloading polars-runtime-32 (51.4MiB)
+2026-11-13T10:27:07.0825219Z Downloading nvidia-cudnn-frontend (11.1MiB)
+2026-11-13T10:27:07.0828845Z Downloading tilelang (48.2MiB)
+2026-11-13T10:27:07.0843569Z Downloading nvidia-cuda-cccl (3.9MiB)
+2026-11-13T10:27:07.0846822Z Downloading nvidia-nvvm (71.7MiB)
+2026-11-13T10:27:07.0848623Z Downloading sgl-deep-ep (14.7MiB)
+2026-11-13T10:27:07.0848843Z Downloading modelscope (5.8MiB)
+2026-11-13T10:27:07.0849064Z Downloading nccl-extensions (24.0MiB)
+2026-11-13T10:27:07.0853570Z Downloading mistral-common (6.3MiB)
+2026-11-13T10:27:07.0854250Z Downloading pymupdf (65.8MiB)
+2026-11-13T10:27:07.0854638Z Downloading nvidia-cutlass-dsl-libs-cu13 (87.7MiB)
+2026-11-13T10:27:07.0856114Z Downloading nvidia-cutlass-dsl-libs-cu12 (87.5MiB)
+2026-11-13T10:27:07.0870100Z Downloading nvidia-mathdx (21.9MiB)
+2026-11-13T10:27:07.0871752Z Downloading sgl-deep-gemm (4.9MiB)
+2026-11-13T10:27:07.0880443Z Downloading instanttensor (7.0MiB)
+2026-11-13T10:27:07.0892016Z Downloading pyarrow (52.5MiB)
+2026-11-13T10:27:07.0892247Z Downloading nvidia-cuda-nvcc (44.8MiB)
+2026-11-13T10:27:07.0892574Z Downloading bitsandbytes (41.1MiB)
+2026-11-13T10:27:07.0892719Z Downloading lxml (5.1MiB)
+2026-11-13T10:27:07.0892852Z Downloading llvmlite (53.7MiB)
+2026-11-13T10:27:07.0892988Z Downloading tml-renderers (4.5MiB)
+2026-11-13T10:27:07.0900230Z Downloading sgl-flash-mla (9.7MiB)
+2026-11-13T10:27:07.0903047Z Downloading deepseek-recipe (12.3MiB)
+2026-11-13T10:27:07.0903457Z Downloading lm-eval (8.4MiB)
+2026-11-13T10:27:07.0904083Z Downloading matplotlib (9.4MiB)
+2026-11-13T10:27:07.0905788Z Downloading nvshmem4py-cu13 (4.8MiB)
+2026-11-13T10:27:07.0909230Z Downloading flashinfer-python (96.6MiB)
+2026-11-13T10:27:07.0909819Z Downloading sglang-kernel (355.7MiB)
+2026-11-13T10:27:07.0910056Z Downloading granian (5.1MiB)
+2026-11-13T10:27:07.7683444Z  Downloaded fastokens
+2026-11-13T10:27:07.8078028Z Downloading numba (3.6MiB)
+2026-11-13T10:27:07.9249953Z  Downloaded hf-xet
+2026-11-13T10:27:07.9511318Z  Downloaded uvloop
+2026-11-13T10:27:07.9573843Z  Downloaded nvidia-cuda-cccl
+2026-11-13T10:27:08.0667366Z  Downloaded tml-renderers
+2026-11-13T10:27:08.0717812Z Downloading cython (3.3MiB)
+2026-11-13T10:27:08.0785042Z Downloading nccl4py (3.5MiB)
+2026-11-13T10:27:08.0862345Z  Downloaded nvshmem4py-cu13
+2026-11-13T10:27:08.0968757Z  Downloaded cryptography
+2026-11-13T10:27:08.0999956Z Downloading tokenizers (3.2MiB)
+2026-11-13T10:27:08.1000273Z Downloading nvidia-cutlass-dsl-libs-base (2.9MiB)
+2026-11-13T10:27:08.1002326Z Downloading llguidance (2.9MiB)
+2026-11-13T10:27:08.1194623Z  Downloaded sgl-deep-gemm
+2026-11-13T10:27:08.1564274Z  Downloaded lxml
+2026-11-13T10:27:08.1564973Z Downloading openai-harmony (2.9MiB)
+2026-11-13T10:27:08.1639893Z Downloading py-spy (2.8MiB)
+2026-11-13T10:27:08.1802682Z  Downloaded granian
+2026-11-13T10:27:08.2084788Z  Downloaded fonttools
+2026-11-13T10:27:08.2165777Z Downloading apache-tvm-ffi (2.6MiB)
+2026-11-13T10:27:08.2189894Z Downloading torch-memory-saver (2.5MiB)
+2026-11-13T10:27:08.2190226Z Downloading timm (2.4MiB)
+2026-11-13T10:27:08.2190477Z  Downloaded zstandard
+2026-11-13T10:27:08.2741391Z Downloading anthropic (2.3MiB)
+2026-11-13T10:27:08.2842080Z  Downloaded modelscope
+2026-11-13T10:27:08.3299315Z  Downloaded cuda-core
+2026-11-13T10:27:08.3319731Z  Downloaded mistral-common
+2026-11-13T10:27:08.3782593Z  Downloaded jedi
+2026-11-13T10:27:08.3796535Z  Downloaded pillow
+2026-11-13T10:27:08.3846812Z Downloading pydantic-core (2.2MiB)
+2026-11-13T10:27:08.3860091Z Downloading pycryptodomex (2.2MiB)
+2026-11-13T10:27:08.3860534Z Downloading aiohttp (1.8MiB)
+2026-11-13T10:27:08.4596829Z  Downloaded instanttensor
+2026-11-13T10:27:08.5943979Z  Downloaded grpcio
+2026-11-13T10:27:08.6084979Z Downloading chardet (1.6MiB)
+2026-11-13T10:27:08.6097956Z Downloading nltk (1.6MiB)
+2026-11-13T10:27:08.6181583Z Downloading torchaudio (1.7MiB)
+2026-11-13T10:27:08.6596688Z  Downloaded torchvision
+2026-11-13T10:27:08.6648917Z  Downloaded numba
+2026-11-13T10:27:08.6822666Z  Downloaded pycountry
+2026-11-13T10:27:08.6883440Z Downloading nvidia-cutlass-dsl-libs-core (1.6MiB)
+2026-11-13T10:27:08.6973270Z Downloading auto-round (1.4MiB)
+2026-11-13T10:27:08.7067427Z  Downloaded nvidia-cutlass-dsl-libs-base
+2026-11-13T10:27:08.7120838Z  Downloaded llguidance
+2026-11-13T10:27:08.7309172Z  Downloaded cython
+2026-11-13T10:27:08.7309868Z  Downloaded py-spy
+2026-11-13T10:27:08.7310260Z  Downloaded torch-memory-saver
+2026-11-13T10:27:08.7416381Z  Downloaded timm
+2026-11-13T10:27:08.7416694Z  Downloaded openai-harmony
+2026-11-13T10:27:08.7550752Z  Downloaded tokenizers
+2026-11-13T10:27:08.7553900Z  Downloaded apache-tvm-ffi
+2026-11-13T10:27:08.7777097Z  Downloaded nccl4py
+2026-11-13T10:27:08.7942670Z  Downloaded aiohttp
+2026-11-13T10:27:08.8377971Z  Downloaded pydantic-core
+2026-11-13T10:27:08.8460134Z  Downloaded pycryptodomex
+2026-11-13T10:27:08.8559344Z  Downloaded chardet
+2026-11-13T10:27:08.8621591Z Downloading tiktoken (1.1MiB)
+2026-11-13T10:27:08.8666746Z  Downloaded torchaudio
+2026-11-13T10:27:08.8695198Z  Downloaded nltk
+2026-11-13T10:27:08.8695804Z Downloading sentencepiece (1.3MiB)
+2026-11-13T10:27:08.8696581Z Downloading pygments (1.2MiB)
+2026-11-13T10:27:08.8696803Z Downloading soundfile (1.3MiB)
+2026-11-13T10:27:08.8708970Z Downloading xgrammar (1.2MiB)
+2026-11-13T10:27:08.8721248Z Downloading kiwisolver (1.4MiB)
+2026-11-13T10:27:08.8863641Z  Downloaded scikit-learn
+2026-11-13T10:27:09.2484098Z    Building word2number==1.1
+2026-11-13T10:27:09.2576907Z  Downloaded nvidia-cutlass-dsl-libs-core
+2026-11-13T10:27:09.2780576Z  Downloaded sgl-flash-mla
+2026-11-13T10:27:09.2797996Z  Downloaded auto-round
+2026-11-13T10:27:09.2941898Z  Downloaded torchcodec
+2026-11-13T10:27:09.2951068Z  Downloaded matplotlib
+2026-11-13T10:27:09.3352409Z  Downloaded tiktoken
+2026-11-13T10:27:09.3436845Z  Downloaded xgrammar
+2026-11-13T10:27:09.3456793Z  Downloaded anthropic
+2026-11-13T10:27:09.3457042Z  Downloaded soundfile
+2026-11-13T10:27:09.3632523Z  Downloaded sentencepiece
+2026-11-13T10:27:09.3654358Z    Building rouge-score==0.1.2
+2026-11-13T10:27:09.3656457Z    Building sqlitedict==2.1.0
+2026-11-13T10:27:09.3656797Z  Downloaded kiwisolver
+2026-11-13T10:27:09.3657110Z  Downloaded pygments
+2026-11-13T10:27:09.5617543Z       Built word2number==1.1
+2026-11-13T10:27:09.6146403Z  Downloaded nvidia-cudnn-frontend
+2026-11-13T10:27:09.7551271Z  Downloaded pandas
+2026-11-13T10:27:09.7685293Z  Downloaded deepseek-recipe
+2026-11-13T10:27:09.7758278Z  Downloaded transformers
+2026-11-13T10:27:09.8026670Z  Downloaded lm-eval
+2026-11-13T10:27:10.0739867Z       Built sqlitedict==2.1.0
+2026-11-13T10:27:10.1041487Z    Building antlr4-python3-runtime==4.9.3
+2026-11-13T10:27:10.1303136Z       Built rouge-score==0.1.2
+2026-11-13T10:27:10.6047111Z       Built antlr4-python3-runtime==4.9.3
+2026-11-13T10:27:11.2431770Z  Downloaded numpy
+2026-11-13T10:27:11.7933049Z  Downloaded sgl-deep-ep
+2026-11-13T10:27:13.6210599Z  Downloaded onnxruntime
+2026-11-13T10:27:14.7599811Z  Downloaded nccl-extensions
+2026-11-13T10:27:15.0422289Z  Downloaded nvidia-mathdx
+2026-11-13T10:27:15.4912055Z  Downloaded z3-solver
+2026-11-13T10:27:17.2886736Z  Downloaded scipy
+2026-11-13T10:27:18.5250174Z  Downloaded bitsandbytes
+2026-11-13T10:27:19.0211222Z  Downloaded av
+2026-11-13T10:27:19.6606883Z  Downloaded nvidia-cuda-nvcc
+2026-11-13T10:27:20.8456130Z  Downloaded tilelang
+2026-11-13T10:27:22.1897517Z  Downloaded pyarrow
+2026-11-13T10:27:22.5577511Z  Downloaded polars-runtime-32
+2026-11-13T10:27:23.0695429Z  Downloaded llvmlite
+2026-11-13T10:27:23.9620788Z  Downloaded pymupdf
+2026-11-13T10:27:24.8603783Z  Downloaded nvidia-nvvm
+2026-11-13T10:27:26.6924724Z  Downloaded nvidia-cutlass-dsl-libs-cu13
+2026-11-13T10:27:27.3514712Z  Downloaded nvidia-cutlass-dsl-libs-cu12
+2026-11-13T10:27:35.1646132Z  Downloaded flashinfer-python
+2026-11-13T10:27:40.0019428Z  Downloaded sglang-kernel
+2026-11-13T10:37:40.2445973Z       Built sglang @ file:///home/runner/work/sglang/sglang/python
+2026-11-13T10:37:40.2452956Z Prepared 240 packages in 10m 33s
+2026-11-13T10:37:41.3865924Z Installed 267 packages in 1.14s
+2026-11-13T10:37:41.3867823Z  + absl-py==2.5.1
+2026-11-13T10:37:41.3868033Z  + accelerate==1.15.0
+2026-11-13T10:37:41.3868437Z  + addict==2.4.0
+2026-11-13T10:37:41.3868658Z  + aiohappyeyeballs==2.7.1
+2026-11-13T10:37:41.3868842Z  + aiohttp==3.14.5
+2026-11-13T10:37:41.3869002Z  + aiosignal==1.4.0
+2026-11-13T10:37:41.3870105Z  + airportsdata==20261103
+2026-11-13T10:37:41.3870716Z  + annotated-doc==0.0.6
+2026-11-13T10:37:41.3870899Z  + annotated-types==0.8.0
+2026-11-13T10:37:41.3871079Z  + anthropic==2.8.0
+2026-11-13T10:37:41.3871261Z  + antlr4-python3-runtime==4.9.3
+2026-11-13T10:37:41.3871462Z  + anyio==4.16.0
+2026-11-13T10:37:41.3871635Z  + apache-tvm-ffi==0.1.11
+2026-11-13T10:37:41.3871833Z  + asttokens==3.0.2
+2026-11-13T10:37:41.3871999Z  + attrs==26.1.0
+2026-11-13T10:37:41.3872167Z  + auto-round==0.16.1
+2026-11-13T10:37:41.3872346Z  + av==16.1.0
+2026-11-13T10:37:41.3872513Z  + bitsandbytes==0.50.2
+2026-11-13T10:37:41.3872689Z  + blake3==1.0.11
+2026-11-13T10:37:41.3872857Z  + blobfile==3.0.0
+2026-11-13T10:37:41.3873018Z  + build==1.6.1
+2026-11-13T10:37:41.3873187Z  + certifi==2026.10.23
+2026-11-13T10:37:41.3873591Z  + cffi==2.1.1
+2026-11-13T10:37:41.3873751Z  + chardet==7.7.0
+2026-11-13T10:37:41.3873930Z  + charset-normalizer==3.5.2
+2026-11-13T10:37:41.3874124Z  + click==8.5.1
+2026-11-13T10:37:41.3874292Z  + cloudpickle==3.1.2
+2026-11-13T10:37:41.3874468Z  + colorama==0.4.6
+2026-11-13T10:37:41.3874643Z  + compressed-tensors==0.18.0
+2026-11-13T10:37:41.3874839Z  + contourpy==1.4.0
+2026-11-13T10:37:41.3875003Z  + coverage==7.17.3
+2026-11-13T10:37:41.3875175Z  + cryptography==50.0.2
+2026-11-13T10:37:41.3888942Z  + cuda-bindings==13.5.0
+2026-11-13T10:37:41.3889146Z  + cuda-core==1.2.2
+2026-11-13T10:37:41.3889325Z  + cuda-pathfinder==1.8.6
+2026-11-13T10:37:41.3889523Z  + cuda-python==13.5.0
+2026-11-13T10:37:41.3889700Z  + cuda-tile==1.8.1
+2026-11-13T10:37:41.3889882Z  + cuda-toolkit==13.0.3.0
+2026-11-13T10:37:41.3890071Z  + cycler==0.12.1
+2026-11-13T10:37:41.3890234Z  + cython==3.3.1
+2026-11-13T10:37:41.3890399Z  + dataproperty==0.37.0
+2026-11-13T10:37:41.3890576Z  + datasets==4.8.5
+2026-11-13T10:37:41.3890761Z  + deepseek-recipe==0.2.0
+2026-11-13T10:37:41.3890952Z  + defusedxml==0.8.0rc2
+2026-11-13T10:37:41.3891135Z  + diff-cover==11.0.1
+2026-11-13T10:37:41.3891304Z  + dill==0.4.1
+2026-11-13T10:37:41.3891466Z  + diskcache==5.6.3
+2026-11-13T10:37:41.3891634Z  + distro==1.9.0
+2026-11-13T10:37:41.3891807Z  + docstring-parser==0.18.0
+2026-11-13T10:37:41.3892000Z  + dominate==3.1.0
+2026-11-13T10:37:41.3892164Z  + easydict==1.14
+2026-11-13T10:37:41.3892332Z  + editdistance==0.8.1
+2026-11-13T10:37:41.3892510Z  + einops==0.9.0.dev0
+2026-11-13T10:37:41.3892682Z  + executing==2.3.0
+2026-11-13T10:37:41.3892854Z  + expecttest==0.3.0
+2026-11-13T10:37:41.3893026Z  + fastapi==0.162.5
+2026-11-13T10:37:41.3893190Z  + fastokens==0.3.6
+2026-11-13T10:37:41.3893375Z  + flashinfer-python==0.7.4
+2026-11-13T10:37:41.3893570Z  + flatbuffers==25.12.19
+2026-11-13T10:37:41.3893751Z  + fonttools==4.68.0
+2026-11-13T10:37:41.3893922Z  + frozenlist==1.8.0
+2026-11-13T10:37:41.3894092Z  + fsspec==2026.2.0
+2026-11-13T10:37:41.3894255Z  + gguf==0.19.0
+2026-11-13T10:37:41.3894418Z  + granian==2.8.8
+2026-11-13T10:37:41.3894581Z  + grpcio==1.85.1
+2026-11-13T10:37:41.3894766Z  + grpcio-health-checking==1.85.1
+2026-11-13T10:37:41.3894985Z  + grpcio-reflection==1.85.1
+2026-11-13T10:37:41.3895174Z  + h11==0.16.0
+2026-11-13T10:37:41.3895331Z  + hf-xet==1.8.0
+2026-11-13T10:37:41.3895496Z  + httpcore==1.0.9
+2026-11-13T10:37:41.3895664Z  + httpcore2==2.16.0
+2026-11-13T10:37:41.3895832Z  + httpx==0.28.1
+2026-11-13T10:37:41.3895991Z  + httpx2==2.16.0
+2026-11-13T10:37:41.3896162Z  + huggingface-hub==1.33.0
+2026-11-13T10:37:41.3896358Z  + humming-kernels==0.1.18
+2026-11-13T10:37:41.3896525Z  + idna==3.20
+2026-11-13T10:37:41.3896630Z  + iniconfig==2.3.1
+2026-11-13T10:37:41.3896909Z  + instanttensor==0.2.3
+2026-11-13T10:37:41.3897026Z  + interegular==0.3.3
+2026-11-13T10:37:41.3897137Z  + ipython==9.18.1
+2026-11-13T10:37:41.3897252Z  + ipython-pygments-lexers==1.1.1
+2026-11-13T10:37:41.3897381Z  + jedi==0.20.1
+2026-11-13T10:37:41.3897483Z  + jinja2==3.1.6
+2026-11-13T10:37:41.3897587Z  + jiter==0.19.0
+2026-11-13T10:37:41.3897687Z  + joblib==1.6.0
+2026-11-13T10:37:41.3897788Z  + jsonlines==4.0.0
+2026-11-13T10:37:41.3897895Z  + jsonschema==4.26.0
+2026-11-13T10:37:41.3898023Z  + jsonschema-specifications==2025.9.1
+2026-11-13T10:37:41.3898165Z  + kiwisolver==1.5.1
+2026-11-13T10:37:41.3898423Z  + lark==1.3.1
+2026-11-13T10:37:41.3898534Z  + latex2sympy2-extended==1.11.0
+2026-11-13T10:37:41.3898663Z  + llguidance==1.9.1
+2026-11-13T10:37:41.3898771Z  + llvmlite==0.47.0
+2026-11-13T10:37:41.3898876Z  + lm-eval==0.5.0.dev1
+2026-11-13T10:37:41.3898987Z  + logbook==1.10.1
+2026-11-13T10:37:41.3899090Z  + loguru==0.8.0
+2026-11-13T10:37:41.3899191Z  + lxml==7.0.0b1
+2026-11-13T10:37:41.3899296Z  + markdown-it-py==4.3.0
+2026-11-13T10:37:41.3899420Z  + markupsafe==3.0.4
+2026-11-13T10:37:41.3899532Z  + math-verify==0.9.0
+2026-11-13T10:37:41.3899644Z  + matplotlib==3.11.2
+2026-11-13T10:37:41.3899760Z  + matplotlib-inline==0.2.2
+2026-11-13T10:37:41.3899883Z  + mbstrdecoder==0.6.1
+2026-11-13T10:37:41.3900081Z  + mdurl==0.1.2
+2026-11-13T10:37:41.3900190Z  + mistral-common==1.13.1
+2026-11-13T10:37:41.3900308Z  + ml-dtypes==0.6.0
+2026-11-13T10:37:41.3900413Z  + modelscope==1.40.3
+2026-11-13T10:37:41.3900524Z  + modelscope-hub==0.7.1
+2026-11-13T10:37:41.3900644Z  + more-itertools==11.2.1
+2026-11-13T10:37:41.3900759Z  + mpmath==1.3.0
+2026-11-13T10:37:41.3900861Z  + msgfy==0.2.1
+2026-11-13T10:37:41.3900962Z  + msgspec==0.22.0
+2026-11-13T10:37:41.3901066Z  + multidict==7.2.1
+2026-11-13T10:37:41.3901175Z  + multiprocess==0.70.19
+2026-11-13T10:37:41.3901289Z  + narwhals==2.28.0
+2026-11-13T10:37:41.3901397Z  + nccl-extensions==0.2.0
+2026-11-13T10:37:41.3901512Z  + nccl4py==0.6.0
+2026-11-13T10:37:41.3901617Z  + nest-asyncio==1.6.0
+2026-11-13T10:37:41.3901729Z  + networkx==3.7
+2026-11-13T10:37:41.3901829Z  + ninja==1.13.2
+2026-11-13T10:37:41.3901949Z  + nltk==3.10.4
+2026-11-13T10:37:41.3902049Z  + numba==0.65.1
+2026-11-13T10:37:41.3902166Z  + numpy==2.3.5
+2026-11-13T10:37:41.3902274Z  + nvidia-cublas==13.1.1.3
+2026-11-13T10:37:41.3902407Z  + nvidia-cuda-cccl==13.3.5.0.6
+2026-11-13T10:37:41.3902539Z  + nvidia-cuda-crt==13.5.37
+2026-11-13T10:37:41.3902668Z  + nvidia-cuda-cupti==13.0.85
+2026-11-13T10:37:41.3902797Z  + nvidia-cuda-nvcc==13.5.37
+2026-11-13T10:37:41.3902941Z  + nvidia-cuda-nvrtc==13.0.88
+2026-11-13T10:37:41.3903072Z  + nvidia-cuda-runtime==13.0.96
+2026-11-13T10:37:41.3903202Z  + nvidia-cudnn-cu13==9.24.0.43
+2026-11-13T10:37:41.3903333Z  + nvidia-cudnn-frontend==1.32.3
+2026-11-13T10:37:41.3903464Z  + nvidia-cufft==12.0.0.61
+2026-11-13T10:37:41.3903584Z  + nvidia-cufile==1.15.1.6
+2026-11-13T10:37:41.3903704Z  + nvidia-curand==10.4.0.35
+2026-11-13T10:37:41.3903826Z  + nvidia-cusolver==12.0.4.66
+2026-11-13T10:37:41.3903956Z  + nvidia-cusparse==12.6.3.3
+2026-11-13T10:37:41.3904086Z  + nvidia-cusparselt-cu13==0.8.1
+2026-11-13T10:37:41.3904219Z  + nvidia-cutlass-dsl==4.8.0
+2026-11-13T10:37:41.3904356Z  + nvidia-cutlass-dsl-libs-base==4.8.0
+2026-11-13T10:37:41.3904510Z  + nvidia-cutlass-dsl-libs-core==4.8.0
+2026-11-13T10:37:41.3904660Z  + nvidia-cutlass-dsl-libs-cu12==4.8.0
+2026-11-13T10:37:41.3904807Z  + nvidia-cutlass-dsl-libs-cu13==4.8.0
+2026-11-13T10:37:41.3904946Z  + nvidia-mathdx==25.6.0
+2026-11-13T10:37:41.3905067Z  + nvidia-ml-py==13.615.71
+2026-11-13T10:37:41.3905190Z  + nvidia-nccl-cu13==2.30.7
+2026-11-13T10:37:41.3905315Z  + nvidia-nvjitlink==13.5.37
+2026-11-13T10:37:41.3905445Z  + nvidia-nvshmem-cu13==3.4.5
+2026-11-13T10:37:41.3905570Z  + nvidia-nvtx==13.0.85
+2026-11-13T10:37:41.3905686Z  + nvidia-nvvm==13.5.37
+2026-11-13T10:37:41.3905803Z  + nvshmem4py-cu13==0.4.1
+2026-11-13T10:37:41.3905922Z  + onnxruntime==1.31.1
+2026-11-13T10:37:41.3906032Z  + openai==2.8.0
+2026-11-13T10:37:41.3906140Z  + openai-harmony==0.0.4
+2026-11-13T10:37:41.3906361Z  + opentelemetry-api==1.45.2
+2026-11-13T10:37:41.3906482Z  + orjson==3.13.0
+2026-11-13T10:37:41.3906586Z  + outlines==0.1.11
+2026-11-13T10:37:41.3906696Z  + outlines-core==0.1.26
+2026-11-13T10:37:41.3906812Z  + pandas==2.3.3
+2026-11-13T10:37:41.3906920Z  + parameterized==0.9.0
+2026-11-13T10:37:41.3907035Z  + parso==0.8.7
+2026-11-13T10:37:41.3907154Z  + partial-json-parser==0.2.1.1.post7
+2026-11-13T10:37:41.3907292Z  + pathvalidate==3.3.1
+2026-11-13T10:37:41.3907403Z  + peft==0.21.3
+2026-11-13T10:37:41.3907507Z  + pexpect==4.9.0
+2026-11-13T10:37:41.3907610Z  + pillow==11.3.0
+2026-11-13T10:37:41.3907714Z  + pluggy==1.7.0
+2026-11-13T10:37:41.3907817Z  + polars==2.1.0
+2026-11-13T10:37:41.3907925Z  + polars-runtime-32==2.1.0
+2026-11-13T10:37:41.3908050Z  + portalocker==4.4.2
+2026-11-13T10:37:41.3908169Z  + prometheus-client==0.26.0
+2026-11-13T10:37:41.3908525Z  + prompt-toolkit==3.0.53
+2026-11-13T10:37:41.3908710Z  + propcache==0.5.4
+2026-11-13T10:37:41.3908880Z  + protobuf==7.37.0rc3
+2026-11-13T10:37:41.3909064Z  + psutil==7.2.2
+2026-11-13T10:37:41.3909233Z  + ptyprocess==0.7.0
+2026-11-13T10:37:41.3909408Z  + pure-eval==0.2.4
+2026-11-13T10:37:41.3909579Z  + py-cpuinfo==9.0.0
+2026-11-13T10:37:41.3909753Z  + py-spy==0.4.3
+2026-11-13T10:37:41.3909918Z  + pyarrow==26.0.1
+2026-11-13T10:37:41.3910186Z  + pybase64==1.5.2
+2026-11-13T10:37:41.3910358Z  + pycountry==26.2.16
+2026-11-13T10:37:41.3910532Z  + pycparser==3.12
+2026-11-13T10:37:41.3910707Z  + pycryptodomex==3.24.2
+2026-11-13T10:37:41.3910889Z  + pydantic==2.14.3
+2026-11-13T10:37:41.3911064Z  + pydantic-core==2.50.4
+2026-11-13T10:37:41.3911259Z  + pydantic-extra-types==2.11.1
+2026-11-13T10:37:41.3911460Z  + pygments==2.21.0
+2026-11-13T10:37:41.3911627Z  + pymupdf==2.1
+2026-11-13T10:37:41.3911796Z  + pymupdf-layout==2.1
+2026-11-13T10:37:41.3911974Z  + pymupdf4llm==2.1
+2026-11-13T10:37:41.3912160Z  + pyparsing==3.3.3
+2026-11-13T10:37:41.3912338Z  + pyproject-hooks==1.3.3
+2026-11-13T10:37:41.3912531Z  + pytablewriter==0.38.0
+2026-11-13T10:37:41.3912717Z  + pytest==9.2.0
+2026-11-13T10:37:41.3912885Z  + pytest-cov==7.1.0
+2026-11-13T10:37:41.3913069Z  + python-dateutil==2.9.0.post0
+2026-11-13T10:37:41.3913276Z  + python-multipart==0.0.33
+2026-11-13T10:37:41.3913466Z  + pytz==2026.6
+2026-11-13T10:37:41.3913625Z  + pyzmq==27.3.0
+2026-11-13T10:37:41.3913799Z  + quack-kernels==0.6.5
+2026-11-13T10:37:41.3913981Z  + referencing==0.37.0
+2026-11-13T10:37:41.3914159Z  + regex==2026.11.9
+2026-11-13T10:37:41.3914326Z  + requests==2.34.2
+2026-11-13T10:37:41.3914488Z  + rich==15.0.0
+2026-11-13T10:37:41.3914651Z  + rouge-score==0.1.2
+2026-11-13T10:37:41.3914826Z  + rpds-py==2026.9.1
+2026-11-13T10:37:41.3914998Z  + sacrebleu==2.6.0
+2026-11-13T10:37:41.3915170Z  + safetensors==0.9.0rc1
+2026-11-13T10:37:41.3915353Z  + scikit-learn==1.9.1
+2026-11-13T10:37:41.3915529Z  + scipy==1.18.1
+2026-11-13T10:37:41.3915707Z  + sentence-transformers==6.3.0
+2026-11-13T10:37:41.3915912Z  + sentencepiece==0.2.1
+2026-11-13T10:37:41.3916097Z  + setproctitle==1.3.8
+2026-11-13T10:37:41.3916278Z  + setuptools==84.2.1
+2026-11-13T10:37:41.3916460Z  + sgl-deep-ep==0.1.2.post1
+2026-11-13T10:37:41.3916654Z  + sgl-deep-gemm==0.2.8
+2026-11-13T10:37:41.3916833Z  + sgl-eval==0.1.3
+2026-11-13T10:37:41.3917003Z  + sgl-flash-mla==1.0.5
+2026-11-13T10:37:41.3917306Z  + sglang==0.0.0.dev2+g0828b0d8d (from file:///home/runner/work/sglang/sglang/python)
+2026-11-13T10:37:41.3917642Z  + sglang-kernel==0.4.10
+2026-11-13T10:37:41.3917827Z  + shellingham==1.5.4
+2026-11-13T10:37:41.3918001Z  + six==1.17.0
+2026-11-13T10:37:41.3918152Z  + smg-grpc-proto==0.5.0
+2026-11-13T10:37:41.3918465Z  + smg-grpc-servicer==0.16.0
+2026-11-13T10:37:41.3918587Z  + sniffio==1.3.1
+2026-11-13T10:37:41.3918693Z  + soundfile==0.13.1
+2026-11-13T10:37:41.3918804Z  + sqlitedict==2.1.0
+2026-11-13T10:37:41.3918912Z  + stack-data==0.6.3
+2026-11-13T10:37:41.3919019Z  + starlette==1.10.0
+2026-11-13T10:37:41.3919125Z  + sympy==1.14.0
+2026-11-13T10:37:41.3919229Z  + tabledata==0.0.26
+2026-11-13T10:37:41.3919334Z  + tabulate==0.10.0
+2026-11-13T10:37:41.3919539Z  + tenacity==9.2.1
+2026-11-13T10:37:41.3919647Z  + threadpoolctl==3.8.0
+2026-11-13T10:37:41.3919763Z  + tiktoken==0.14.0
+2026-11-13T10:37:41.3919866Z  + tilelang==0.1.12
+2026-11-13T10:37:41.3919969Z  + timm==1.0.25
+2026-11-13T10:37:41.3920074Z  + tml-renderers==0.1.0
+2026-11-13T10:37:41.3920190Z  + tokenizers==0.23.2
+2026-11-13T10:37:41.3920297Z  + torch==2.14.1
+2026-11-13T10:37:41.3920408Z  + torch-c-dlpack-ext==0.1.5
+2026-11-13T10:37:41.3920541Z  + torch-memory-saver==0.0.10
+2026-11-13T10:37:41.3920666Z  + torchaudio==2.11.0
+2026-11-13T10:37:41.3920777Z  + torchcodec==0.17.0
+2026-11-13T10:37:41.3920886Z  + torchvision==0.29.2
+2026-11-13T10:37:41.3920995Z  + tqdm==4.70.1
+2026-11-13T10:37:41.3921100Z  + traitlets==5.16.1
+2026-11-13T10:37:41.3921214Z  + transformers==5.19.0
+2026-11-13T10:37:41.3921324Z  + triton==3.8.0
+2026-11-13T10:37:41.3921429Z  + truststore==0.10.5
+2026-11-13T10:37:41.3921537Z  + typepy==0.3.1
+2026-11-13T10:37:41.3921641Z  + typer==0.29.1
+2026-11-13T10:37:41.3921751Z  + typing-extensions==4.16.0
+2026-11-13T10:37:41.3921887Z  + typing-inspection==0.4.5
+2026-11-13T10:37:41.3922007Z  + tzdata==2026.6
+2026-11-13T10:37:41.3922109Z  + urllib3==2.8.0
+2026-11-13T10:37:41.3922214Z  + uvicorn==0.54.0
+2026-11-13T10:37:41.3922319Z  + uvloop==0.23.0
+2026-11-13T10:37:41.3922503Z  + watchfiles==1.3.0
+2026-11-13T10:37:41.3922612Z  + wcwidth==0.9.4
+2026-11-13T10:37:41.3922717Z  + word2number==1.1
+2026-11-13T10:37:41.3922821Z  + xgrammar==0.2.7
+2026-11-13T10:37:41.3922923Z  + xxhash==4.1.0
+2026-11-13T10:37:41.3923023Z  + yarl==1.25.1
+2026-11-13T10:37:41.3923127Z  + z3-solver==4.15.4.0
+2026-11-13T10:37:41.3923239Z  + zstandard==0.25.0
+2026-11-13T10:37:42.2057087Z ##[group]Run python - <<'PY'
+2026-11-13T10:37:42.2057277Z [36;1mpython - <<'PY'[0m
+2026-11-13T10:37:42.2057406Z [36;1mimport inspect[0m
+2026-11-13T10:37:42.2057534Z [36;1mfrom pathlib import Path[0m
+2026-11-13T10:37:42.2057672Z [36;1mimport torch[0m
+2026-11-13T10:37:42.2057837Z [36;1mimport sglang.srt.layers.rotary_embedding.base as common[0m
+2026-11-13T10:37:42.2058323Z [36;1massert Path(inspect.getfile(common)).resolve() == Path("python/sglang/srt/layers/rotary_embedding/base.py").resolve()[0m
+2026-11-13T10:37:42.2058638Z [36;1massert not torch.cuda.is_available()[0m
+2026-11-13T10:37:42.2058891Z [36;1mprint("Native rotary implementation:", inspect.getfile(common), "Torch:", torch.__version__)[0m
+2026-11-13T10:37:42.2059128Z [36;1mPY[0m
+2026-11-13T10:37:42.2059241Z [36;1mset -o pipefail[0m
+2026-11-13T10:37:42.2059594Z [36;1mpython -m pytest -q -p no:cacheprovider --junitxml=sglang-patched.xml test/registered/unit/layers/test_cpu_rope_offsets.py 2>&1 | tee sglang-patched.log[0m
+2026-11-13T10:37:42.2204724Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:37:42.2204862Z env:
+2026-11-13T10:37:42.2204973Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:37:42.2205106Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:37:42.2205248Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:37:42.2205368Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:37:42.2205481Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:37:42.2205644Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:37:42.2205871Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:37:42.2206089Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:37:42.2206290Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:37:42.2206492Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:37:42.2206695Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:37:42.2206867Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:37:42.2206993Z ##[endgroup]
+2026-11-13T10:37:51.9031165Z Native rotary implementation: /home/runner/work/sglang/sglang/python/sglang/srt/layers/rotary_embedding/base.py Torch: 2.14.1+cu130
+2026-11-13T10:37:57.4921882Z .......                                                [100%]
+2026-11-13T10:37:57.4922216Z 7 passed, 18 subtests passed in 4.07s
+2026-11-13T10:37:58.3005975Z ##[group]Run git show 5792cf6e5e11aebc62d41cf19828f615a8fa7e0a:python/sglang/srt/layers/rotary_embedding/base.py > python/sglang/srt/layers/rotary_embedding/base.py
+2026-11-13T10:37:58.3006688Z [36;1mgit show 5792cf6e5e11aebc62d41cf19828f615a8fa7e0a:python/sglang/srt/layers/rotary_embedding/base.py > python/sglang/srt/layers/rotary_embedding/base.py[0m
+2026-11-13T10:37:58.3007256Z [36;1mgit show 5792cf6e5e11aebc62d41cf19828f615a8fa7e0a:python/sglang/srt/layers/rotary_embedding/rope_variant.py > python/sglang/srt/layers/rotary_embedding/rope_variant.py[0m
+2026-11-13T10:37:58.3007707Z [36;1mfind python/sglang/srt/layers/rotary_embedding/__pycache__ -name '*.pyc' -delete[0m
+2026-11-13T10:37:58.3024859Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:37:58.3024991Z env:
+2026-11-13T10:37:58.3025095Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:37:58.3025225Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:37:58.3025368Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:37:58.3025509Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:37:58.3025621Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:37:58.3025777Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:37:58.3025999Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:37:58.3026219Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:37:58.3026417Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:37:58.3026619Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:37:58.3026822Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:37:58.3026994Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:37:58.3027116Z ##[endgroup]
+2026-11-13T10:37:58.3150506Z ##[group]Run set +e
+2026-11-13T10:37:58.3150641Z [36;1mset +e[0m
+2026-11-13T10:37:58.3150965Z [36;1mpython -m pytest -q -p no:cacheprovider --junitxml=sglang-baseline.xml test/registered/unit/layers/test_cpu_rope_offsets.py > sglang-baseline.log 2>&1[0m
+2026-11-13T10:37:58.3151308Z [36;1mstatus=$?[0m
+2026-11-13T10:37:58.3151416Z [36;1mset -e[0m
+2026-11-13T10:37:58.3151535Z [36;1mcat sglang-baseline.log[0m
+2026-11-13T10:37:58.3151675Z [36;1mtest "$status" -eq 1[0m
+2026-11-13T10:37:58.3151805Z [36;1mpython - <<'PY'[0m
+2026-11-13T10:37:58.3151940Z [36;1mimport xml.etree.ElementTree as ET[0m
+2026-11-13T10:37:58.3152126Z [36;1mroot = ET.parse("sglang-baseline.xml").getroot()[0m
+2026-11-13T10:37:58.3152375Z [36;1massert not root.findall(".//error"), "Baseline must fail assertions, not imports."[0m
+2026-11-13T10:37:58.3152706Z [36;1mfailed = {case.attrib["name"] for case in root.findall(".//testcase") if case.find("failure") is not None}[0m
+2026-11-13T10:37:58.3153305Z [36;1mrequired = {"test_base_vector_offsets_match_selected_rotations", "test_valid_last_cache_position_with_scalar_offset", "test_linear_scaling_cache_offsets", "test_deepseek_offsets_preserve_native_layouts", "test_attention_outputs_and_input_gradients"}[0m
+2026-11-13T10:37:58.3153823Z [36;1massert required <= failed, (required - failed, failed)[0m
+2026-11-13T10:37:58.3154056Z [36;1mprint("Confirmed original CPU offset failures:", sorted(failed))[0m
+2026-11-13T10:37:58.3154246Z [36;1mPY[0m
+2026-11-13T10:37:58.3168459Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:37:58.3168587Z env:
+2026-11-13T10:37:58.3168692Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:37:58.3168826Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:37:58.3168963Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:37:58.3169083Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:37:58.3169192Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:37:58.3169344Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:37:58.3169569Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:37:58.3169787Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:37:58.3169982Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:37:58.3170179Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:37:58.3170379Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:37:58.3170662Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:37:58.3170781Z ##[endgroup]
+2026-11-13T10:38:03.6110189Z F.....F                                                [100%]
+2026-11-13T10:38:03.6110505Z =================================== FAILURES ===================================
+2026-11-13T10:38:03.6110848Z ________ TestCpuRopeOffsets.test_attention_outputs_and_input_gradients _________
+2026-11-13T10:38:03.6111025Z 
+2026-11-13T10:38:03.6111190Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_attention_outputs_and_input_gradients>
+2026-11-13T10:38:03.6111401Z 
+2026-11-13T10:38:03.6111515Z     def test_attention_outputs_and_input_gradients(self):
+2026-11-13T10:38:03.6111789Z         rope = RotaryEmbedding(8, 4, 64, 10000, True, torch.float64)
+2026-11-13T10:38:03.6112096Z         positions = torch.tensor([1, 4, 7, 15])
+2026-11-13T10:38:03.6112336Z         offsets = torch.tensor([1, 5, 0, 3])
+2026-11-13T10:38:03.6112501Z         query, key = tensors(torch.float64, heads=1)
+2026-11-13T10:38:03.6112670Z         query.requires_grad_()
+2026-11-13T10:38:03.6112802Z         key.requires_grad_()
+2026-11-13T10:38:03.6112962Z         reference_query = query.detach().clone().requires_grad_()
+2026-11-13T10:38:03.6113163Z         reference_key = key.detach().clone().requires_grad_()
+2026-11-13T10:38:03.6113383Z         actual_q, actual_k = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:03.6113643Z         expected_q = reference_rotation(reference_query, rope, positions + offsets)
+2026-11-13T10:38:03.6114237Z         expected_k = reference_rotation(reference_key, rope, positions + offsets)
+2026-11-13T10:38:03.6114488Z         values = torch.arange(12, dtype=torch.float64).reshape(1, 4, 3) / 12
+2026-11-13T10:38:03.6114694Z         actual = F.scaled_dot_product_attention(
+2026-11-13T10:38:03.6114882Z             actual_q.transpose(0, 1), actual_k.transpose(0, 1), values
+2026-11-13T10:38:03.6115054Z         )
+2026-11-13T10:38:03.6115172Z         expected = F.scaled_dot_product_attention(
+2026-11-13T10:38:03.6115372Z             expected_q.transpose(0, 1), expected_k.transpose(0, 1), values
+2026-11-13T10:38:03.6115551Z         )
+2026-11-13T10:38:03.6115696Z >       torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+2026-11-13T10:38:03.6115919Z E       AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6116070Z E       
+2026-11-13T10:38:03.6116187Z E       Mismatched elements: 12 / 12 (100.0%)
+2026-11-13T10:38:03.6116380Z E       Greatest absolute difference: 0.05126445434054416 at index (0, 3, 1)
+2026-11-13T10:38:03.6116616Z E       Greatest relative difference: 0.5467066818272756 at index (0, 3, 0)
+2026-11-13T10:38:03.6116755Z 
+2026-11-13T10:38:03.6116864Z test/registered/unit/layers/test_cpu_rope_offsets.py:172: AssertionError
+2026-11-13T10:38:03.6117173Z _ TestCpuRopeOffsets.test_base_vector_offsets_match_selected_rotations (neox=False, dtype=torch.float16) _
+2026-11-13T10:38:03.6117383Z 
+2026-11-13T10:38:03.6117549Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_base_vector_offsets_match_selected_rotations>
+2026-11-13T10:38:03.6117768Z 
+2026-11-13T10:38:03.6117854Z     def test_base_vector_offsets_match_selected_rotations(self):
+2026-11-13T10:38:03.6118041Z         for neox in (False, True):
+2026-11-13T10:38:03.6118356Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:03.6118563Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:03.6118752Z                     rope = RotaryEmbedding(8, 4, 64, 10000, neox, dtype)
+2026-11-13T10:38:03.6118943Z                     positions = torch.tensor([1, 4, 7, 15])
+2026-11-13T10:38:03.6119116Z                     offsets = torch.tensor([2, 1, 0, 3])
+2026-11-13T10:38:03.6119277Z                     query, key = tensors(dtype)
+2026-11-13T10:38:03.6119426Z                     before = [
+2026-11-13T10:38:03.6119600Z                         tensor.clone() for tensor in (query, key, positions, offsets)
+2026-11-13T10:38:03.6119932Z                     ]
+2026-11-13T10:38:03.6120088Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:03.6120293Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:03.6120511Z                         expected = reference_rotation(value, rope, positions + offsets)
+2026-11-13T10:38:03.6120752Z >                       torch.testing.assert_close(result, expected, rtol=0, atol=0)
+2026-11-13T10:38:03.6120967Z E                       AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6121131Z E                       
+2026-11-13T10:38:03.6121267Z E                       Mismatched elements: 36 / 96 (37.5%)
+2026-11-13T10:38:03.6121461Z E                       Greatest absolute difference: 4.1875 at index (3, 2, 0)
+2026-11-13T10:38:03.6121681Z E                       Greatest relative difference: 4.93359375 at index (3, 0, 1)
+2026-11-13T10:38:03.6121816Z 
+2026-11-13T10:38:03.6121919Z test/registered/unit/layers/test_cpu_rope_offsets.py:73: AssertionError
+2026-11-13T10:38:03.6122231Z _ TestCpuRopeOffsets.test_base_vector_offsets_match_selected_rotations (neox=False, dtype=torch.bfloat16) _
+2026-11-13T10:38:03.6122442Z 
+2026-11-13T10:38:03.6122605Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_base_vector_offsets_match_selected_rotations>
+2026-11-13T10:38:03.6122817Z 
+2026-11-13T10:38:03.6122901Z     def test_base_vector_offsets_match_selected_rotations(self):
+2026-11-13T10:38:03.6123080Z         for neox in (False, True):
+2026-11-13T10:38:03.6123283Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:03.6123585Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:03.6123772Z                     rope = RotaryEmbedding(8, 4, 64, 10000, neox, dtype)
+2026-11-13T10:38:03.6123958Z                     positions = torch.tensor([1, 4, 7, 15])
+2026-11-13T10:38:03.6124127Z                     offsets = torch.tensor([2, 1, 0, 3])
+2026-11-13T10:38:03.6124291Z                     query, key = tensors(dtype)
+2026-11-13T10:38:03.6124437Z                     before = [
+2026-11-13T10:38:03.6124609Z                         tensor.clone() for tensor in (query, key, positions, offsets)
+2026-11-13T10:38:03.6124797Z                     ]
+2026-11-13T10:38:03.6124950Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:03.6125154Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:03.6125370Z                         expected = reference_rotation(value, rope, positions + offsets)
+2026-11-13T10:38:03.6125614Z >                       torch.testing.assert_close(result, expected, rtol=0, atol=0)
+2026-11-13T10:38:03.6125830Z E                       AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6125990Z E                       
+2026-11-13T10:38:03.6126124Z E                       Mismatched elements: 36 / 96 (37.5%)
+2026-11-13T10:38:03.6126313Z E                       Greatest absolute difference: 4.1875 at index (3, 2, 0)
+2026-11-13T10:38:03.6126528Z E                       Greatest relative difference: 5.25 at index (3, 0, 1)
+2026-11-13T10:38:03.6126654Z 
+2026-11-13T10:38:03.6126758Z test/registered/unit/layers/test_cpu_rope_offsets.py:73: AssertionError
+2026-11-13T10:38:03.6127064Z _ TestCpuRopeOffsets.test_base_vector_offsets_match_selected_rotations (neox=False, dtype=torch.float32) _
+2026-11-13T10:38:03.6127270Z 
+2026-11-13T10:38:03.6127433Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_base_vector_offsets_match_selected_rotations>
+2026-11-13T10:38:03.6127645Z 
+2026-11-13T10:38:03.6127731Z     def test_base_vector_offsets_match_selected_rotations(self):
+2026-11-13T10:38:03.6127909Z         for neox in (False, True):
+2026-11-13T10:38:03.6128083Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:03.6128443Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:03.6128627Z                     rope = RotaryEmbedding(8, 4, 64, 10000, neox, dtype)
+2026-11-13T10:38:03.6130506Z                     positions = torch.tensor([1, 4, 7, 15])
+2026-11-13T10:38:03.6130749Z                     offsets = torch.tensor([2, 1, 0, 3])
+2026-11-13T10:38:03.6130975Z                     query, key = tensors(dtype)
+2026-11-13T10:38:03.6131185Z                     before = [
+2026-11-13T10:38:03.6131433Z                         tensor.clone() for tensor in (query, key, positions, offsets)
+2026-11-13T10:38:03.6131706Z                     ]
+2026-11-13T10:38:03.6131936Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:03.6132238Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:03.6132567Z                         expected = reference_rotation(value, rope, positions + offsets)
+2026-11-13T10:38:03.6132923Z >                       torch.testing.assert_close(result, expected, rtol=0, atol=0)
+2026-11-13T10:38:03.6133238Z E                       AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6133483Z E                       
+2026-11-13T10:38:03.6133678Z E                       Mismatched elements: 36 / 96 (37.5%)
+2026-11-13T10:38:03.6133988Z E                       Greatest absolute difference: 4.184812545776367 at index (3, 2, 0)
+2026-11-13T10:38:03.6134360Z E                       Greatest relative difference: 4.915424823760986 at index (3, 0, 1)
+2026-11-13T10:38:03.6134585Z 
+2026-11-13T10:38:03.6134744Z test/registered/unit/layers/test_cpu_rope_offsets.py:73: AssertionError
+2026-11-13T10:38:03.6135364Z _ TestCpuRopeOffsets.test_base_vector_offsets_match_selected_rotations (neox=True, dtype=torch.float16) _
+2026-11-13T10:38:03.6135661Z 
+2026-11-13T10:38:03.6135906Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_base_vector_offsets_match_selected_rotations>
+2026-11-13T10:38:03.6136233Z 
+2026-11-13T10:38:03.6136363Z     def test_base_vector_offsets_match_selected_rotations(self):
+2026-11-13T10:38:03.6136649Z         for neox in (False, True):
+2026-11-13T10:38:03.6136927Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:03.6137248Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:03.6137539Z                     rope = RotaryEmbedding(8, 4, 64, 10000, neox, dtype)
+2026-11-13T10:38:03.6137826Z                     positions = torch.tensor([1, 4, 7, 15])
+2026-11-13T10:38:03.6138071Z                     offsets = torch.tensor([2, 1, 0, 3])
+2026-11-13T10:38:03.6138419Z                     query, key = tensors(dtype)
+2026-11-13T10:38:03.6138570Z                     before = [
+2026-11-13T10:38:03.6138749Z                         tensor.clone() for tensor in (query, key, positions, offsets)
+2026-11-13T10:38:03.6138936Z                     ]
+2026-11-13T10:38:03.6139091Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:03.6139323Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:03.6139540Z                         expected = reference_rotation(value, rope, positions + offsets)
+2026-11-13T10:38:03.6139782Z >                       torch.testing.assert_close(result, expected, rtol=0, atol=0)
+2026-11-13T10:38:03.6140001Z E                       AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6140164Z E                       
+2026-11-13T10:38:03.6140300Z E                       Mismatched elements: 36 / 96 (37.5%)
+2026-11-13T10:38:03.6140495Z E                       Greatest absolute difference: 4.234375 at index (3, 2, 0)
+2026-11-13T10:38:03.6140721Z E                       Greatest relative difference: 6.3046875 at index (3, 0, 2)
+2026-11-13T10:38:03.6140862Z 
+2026-11-13T10:38:03.6140967Z test/registered/unit/layers/test_cpu_rope_offsets.py:73: AssertionError
+2026-11-13T10:38:03.6141273Z _ TestCpuRopeOffsets.test_base_vector_offsets_match_selected_rotations (neox=True, dtype=torch.bfloat16) _
+2026-11-13T10:38:03.6141477Z 
+2026-11-13T10:38:03.6141644Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_base_vector_offsets_match_selected_rotations>
+2026-11-13T10:38:03.6141990Z 
+2026-11-13T10:38:03.6142075Z     def test_base_vector_offsets_match_selected_rotations(self):
+2026-11-13T10:38:03.6142254Z         for neox in (False, True):
+2026-11-13T10:38:03.6142427Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:03.6142626Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:03.6142814Z                     rope = RotaryEmbedding(8, 4, 64, 10000, neox, dtype)
+2026-11-13T10:38:03.6143000Z                     positions = torch.tensor([1, 4, 7, 15])
+2026-11-13T10:38:03.6143170Z                     offsets = torch.tensor([2, 1, 0, 3])
+2026-11-13T10:38:03.6143331Z                     query, key = tensors(dtype)
+2026-11-13T10:38:03.6143477Z                     before = [
+2026-11-13T10:38:03.6143648Z                         tensor.clone() for tensor in (query, key, positions, offsets)
+2026-11-13T10:38:03.6143832Z                     ]
+2026-11-13T10:38:03.6143987Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:03.6144191Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:03.6144408Z                         expected = reference_rotation(value, rope, positions + offsets)
+2026-11-13T10:38:03.6144647Z >                       torch.testing.assert_close(result, expected, rtol=0, atol=0)
+2026-11-13T10:38:03.6144860Z E                       AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6145020Z E                       
+2026-11-13T10:38:03.6145342Z E                       Mismatched elements: 35 / 96 (36.5%)
+2026-11-13T10:38:03.6145533Z E                       Greatest absolute difference: 4.25 at index (3, 2, 0)
+2026-11-13T10:38:03.6145748Z E                       Greatest relative difference: 6.71875 at index (3, 0, 2)
+2026-11-13T10:38:03.6145881Z 
+2026-11-13T10:38:03.6145982Z test/registered/unit/layers/test_cpu_rope_offsets.py:73: AssertionError
+2026-11-13T10:38:03.6146288Z _ TestCpuRopeOffsets.test_base_vector_offsets_match_selected_rotations (neox=True, dtype=torch.float32) _
+2026-11-13T10:38:03.6146490Z 
+2026-11-13T10:38:03.6146656Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_base_vector_offsets_match_selected_rotations>
+2026-11-13T10:38:03.6146866Z 
+2026-11-13T10:38:03.6146951Z     def test_base_vector_offsets_match_selected_rotations(self):
+2026-11-13T10:38:03.6147129Z         for neox in (False, True):
+2026-11-13T10:38:03.6147304Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:03.6147503Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:03.6147687Z                     rope = RotaryEmbedding(8, 4, 64, 10000, neox, dtype)
+2026-11-13T10:38:03.6147875Z                     positions = torch.tensor([1, 4, 7, 15])
+2026-11-13T10:38:03.6148042Z                     offsets = torch.tensor([2, 1, 0, 3])
+2026-11-13T10:38:03.6148329Z                     query, key = tensors(dtype)
+2026-11-13T10:38:03.6148484Z                     before = [
+2026-11-13T10:38:03.6148656Z                         tensor.clone() for tensor in (query, key, positions, offsets)
+2026-11-13T10:38:03.6148840Z                     ]
+2026-11-13T10:38:03.6148995Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:03.6149200Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:03.6149417Z                         expected = reference_rotation(value, rope, positions + offsets)
+2026-11-13T10:38:03.6149660Z >                       torch.testing.assert_close(result, expected, rtol=0, atol=0)
+2026-11-13T10:38:03.6149872Z E                       AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6150034Z E                       
+2026-11-13T10:38:03.6150169Z E                       Mismatched elements: 36 / 96 (37.5%)
+2026-11-13T10:38:03.6150375Z E                       Greatest absolute difference: 4.234949111938477 at index (3, 2, 0)
+2026-11-13T10:38:03.6150711Z E                       Greatest relative difference: 6.296871185302734 at index (3, 0, 2)
+2026-11-13T10:38:03.6150860Z 
+2026-11-13T10:38:03.6150960Z test/registered/unit/layers/test_cpu_rope_offsets.py:73: AssertionError
+2026-11-13T10:38:03.6151261Z _ TestCpuRopeOffsets.test_deepseek_offsets_preserve_native_layouts (neox=False, dtype=torch.float16) _
+2026-11-13T10:38:03.6151460Z 
+2026-11-13T10:38:03.6151621Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_deepseek_offsets_preserve_native_layouts>
+2026-11-13T10:38:03.6151826Z 
+2026-11-13T10:38:03.6151910Z     def test_deepseek_offsets_preserve_native_layouts(self):
+2026-11-13T10:38:03.6152083Z         for neox in (False, True):
+2026-11-13T10:38:03.6152258Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:03.6152455Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:03.6152633Z                     rope = DeepseekScalingRotaryEmbedding(
+2026-11-13T10:38:03.6152821Z                         8, 4, 64, 10000, neox, 2.0, dtype, device="cpu"
+2026-11-13T10:38:03.6152981Z                     )
+2026-11-13T10:38:03.6153116Z                     positions = torch.tensor([0, 2, 4, 3, 1, 5])
+2026-11-13T10:38:03.6153293Z                     offsets = torch.tensor([2, 1, 0, 1, 3, 4])
+2026-11-13T10:38:03.6153466Z                     query, key = tensors(dtype, tokens=6)
+2026-11-13T10:38:03.6153667Z                     # The NeoX DeepSeek implementation documents batched positions.
+2026-11-13T10:38:03.6153857Z                     if neox:
+2026-11-13T10:38:03.6154079Z                         positions = positions.reshape(2, 3)
+2026-11-13T10:38:03.6154254Z                         offsets = offsets.reshape(2, 3)
+2026-11-13T10:38:03.6154423Z                         query = query.reshape(2, 3, 3, 8)
+2026-11-13T10:38:03.6154582Z                         key = key.reshape(2, 3, 1, 8)
+2026-11-13T10:38:03.6154770Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:03.6154978Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:03.6155168Z                         self.assertEqual(result.shape, value.shape)
+2026-11-13T10:38:03.6155345Z >                       torch.testing.assert_close(
+2026-11-13T10:38:03.6155498Z                             result,
+2026-11-13T10:38:03.6155669Z                             reference_rotation(value, rope, positions + offsets),
+2026-11-13T10:38:03.6155849Z                             rtol=0,
+2026-11-13T10:38:03.6155980Z                             atol=0,
+2026-11-13T10:38:03.6156110Z                         )
+2026-11-13T10:38:03.6156254Z E                       AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6156416Z E                       
+2026-11-13T10:38:03.6156553Z E                       Mismatched elements: 60 / 144 (41.7%)
+2026-11-13T10:38:03.6156752Z E                       Greatest absolute difference: 3.19921875 at index (4, 2, 1)
+2026-11-13T10:38:03.6156983Z E                       Greatest relative difference: 8.6328125 at index (3, 2, 0)
+2026-11-13T10:38:03.6157120Z 
+2026-11-13T10:38:03.6157220Z test/registered/unit/layers/test_cpu_rope_offsets.py:130: AssertionError
+2026-11-13T10:38:03.6157528Z _ TestCpuRopeOffsets.test_deepseek_offsets_preserve_native_layouts (neox=False, dtype=torch.bfloat16) _
+2026-11-13T10:38:03.6157730Z 
+2026-11-13T10:38:03.6157890Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_deepseek_offsets_preserve_native_layouts>
+2026-11-13T10:38:03.6158093Z 
+2026-11-13T10:38:03.6158175Z     def test_deepseek_offsets_preserve_native_layouts(self):
+2026-11-13T10:38:03.6158554Z         for neox in (False, True):
+2026-11-13T10:38:03.6158772Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:03.6158969Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:03.6159146Z                     rope = DeepseekScalingRotaryEmbedding(
+2026-11-13T10:38:03.6159419Z                         8, 4, 64, 10000, neox, 2.0, dtype, device="cpu"
+2026-11-13T10:38:03.6159573Z                     )
+2026-11-13T10:38:03.6159706Z                     positions = torch.tensor([0, 2, 4, 3, 1, 5])
+2026-11-13T10:38:03.6159883Z                     offsets = torch.tensor([2, 1, 0, 1, 3, 4])
+2026-11-13T10:38:03.6160055Z                     query, key = tensors(dtype, tokens=6)
+2026-11-13T10:38:03.6160254Z                     # The NeoX DeepSeek implementation documents batched positions.
+2026-11-13T10:38:03.6160443Z                     if neox:
+2026-11-13T10:38:03.6160585Z                         positions = positions.reshape(2, 3)
+2026-11-13T10:38:03.6160757Z                         offsets = offsets.reshape(2, 3)
+2026-11-13T10:38:03.6160920Z                         query = query.reshape(2, 3, 3, 8)
+2026-11-13T10:38:03.6161078Z                         key = key.reshape(2, 3, 1, 8)
+2026-11-13T10:38:03.6161267Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:03.6161472Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:03.6161661Z                         self.assertEqual(result.shape, value.shape)
+2026-11-13T10:38:03.6161835Z >                       torch.testing.assert_close(
+2026-11-13T10:38:03.6161983Z                             result,
+2026-11-13T10:38:03.6162151Z                             reference_rotation(value, rope, positions + offsets),
+2026-11-13T10:38:03.6162327Z                             rtol=0,
+2026-11-13T10:38:03.6162457Z                             atol=0,
+2026-11-13T10:38:03.6162584Z                         )
+2026-11-13T10:38:03.6162800Z E                       AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6162961Z E                       
+2026-11-13T10:38:03.6163093Z E                       Mismatched elements: 60 / 144 (41.7%)
+2026-11-13T10:38:03.6163285Z E                       Greatest absolute difference: 3.203125 at index (4, 2, 1)
+2026-11-13T10:38:03.6163503Z E                       Greatest relative difference: 8.625 at index (3, 2, 0)
+2026-11-13T10:38:03.6163636Z 
+2026-11-13T10:38:03.6163738Z test/registered/unit/layers/test_cpu_rope_offsets.py:130: AssertionError
+2026-11-13T10:38:03.6164042Z _ TestCpuRopeOffsets.test_deepseek_offsets_preserve_native_layouts (neox=False, dtype=torch.float32) _
+2026-11-13T10:38:03.6164242Z 
+2026-11-13T10:38:03.6164403Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_deepseek_offsets_preserve_native_layouts>
+2026-11-13T10:38:03.6164607Z 
+2026-11-13T10:38:03.6164688Z     def test_deepseek_offsets_preserve_native_layouts(self):
+2026-11-13T10:38:03.6164864Z         for neox in (False, True):
+2026-11-13T10:38:03.6165040Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:03.6165240Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:03.6165419Z                     rope = DeepseekScalingRotaryEmbedding(
+2026-11-13T10:38:03.6165600Z                         8, 4, 64, 10000, neox, 2.0, dtype, device="cpu"
+2026-11-13T10:38:03.6165760Z                     )
+2026-11-13T10:38:03.6165895Z                     positions = torch.tensor([0, 2, 4, 3, 1, 5])
+2026-11-13T10:38:03.6166071Z                     offsets = torch.tensor([2, 1, 0, 1, 3, 4])
+2026-11-13T10:38:03.6166241Z                     query, key = tensors(dtype, tokens=6)
+2026-11-13T10:38:03.6166440Z                     # The NeoX DeepSeek implementation documents batched positions.
+2026-11-13T10:38:03.6166628Z                     if neox:
+2026-11-13T10:38:03.6166772Z                         positions = positions.reshape(2, 3)
+2026-11-13T10:38:03.6166946Z                         offsets = offsets.reshape(2, 3)
+2026-11-13T10:38:03.6167112Z                         query = query.reshape(2, 3, 3, 8)
+2026-11-13T10:38:03.6167275Z                         key = key.reshape(2, 3, 1, 8)
+2026-11-13T10:38:03.6167465Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:03.6167670Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:03.6167922Z                         self.assertEqual(result.shape, value.shape)
+2026-11-13T10:38:03.6168097Z >                       torch.testing.assert_close(
+2026-11-13T10:38:03.6168376Z                             result,
+2026-11-13T10:38:03.6168670Z                             reference_rotation(value, rope, positions + offsets),
+2026-11-13T10:38:03.6168851Z                             rtol=0,
+2026-11-13T10:38:03.6168982Z                             atol=0,
+2026-11-13T10:38:03.6169110Z                         )
+2026-11-13T10:38:03.6169254Z E                       AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6169415Z E                       
+2026-11-13T10:38:03.6169550Z E                       Mismatched elements: 60 / 144 (41.7%)
+2026-11-13T10:38:03.6169756Z E                       Greatest absolute difference: 3.19826078414917 at index (4, 2, 1)
+2026-11-13T10:38:03.6170002Z E                       Greatest relative difference: 8.675763130187988 at index (3, 2, 0)
+2026-11-13T10:38:03.6170153Z 
+2026-11-13T10:38:03.6170254Z test/registered/unit/layers/test_cpu_rope_offsets.py:130: AssertionError
+2026-11-13T10:38:03.6170617Z _ TestCpuRopeOffsets.test_deepseek_offsets_preserve_native_layouts (neox=True, dtype=torch.float16) _
+2026-11-13T10:38:03.6170816Z 
+2026-11-13T10:38:03.6170977Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_deepseek_offsets_preserve_native_layouts>
+2026-11-13T10:38:03.6171182Z 
+2026-11-13T10:38:03.6171264Z     def test_deepseek_offsets_preserve_native_layouts(self):
+2026-11-13T10:38:03.6171523Z         for neox in (False, True):
+2026-11-13T10:38:03.6171700Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:03.6171898Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:03.6172077Z                     rope = DeepseekScalingRotaryEmbedding(
+2026-11-13T10:38:03.6172259Z                         8, 4, 64, 10000, neox, 2.0, dtype, device="cpu"
+2026-11-13T10:38:03.6172419Z                     )
+2026-11-13T10:38:03.6172561Z                     positions = torch.tensor([0, 2, 4, 3, 1, 5])
+2026-11-13T10:38:03.6172742Z                     offsets = torch.tensor([2, 1, 0, 1, 3, 4])
+2026-11-13T10:38:03.6172914Z                     query, key = tensors(dtype, tokens=6)
+2026-11-13T10:38:03.6173117Z                     # The NeoX DeepSeek implementation documents batched positions.
+2026-11-13T10:38:03.6173305Z                     if neox:
+2026-11-13T10:38:03.6173448Z                         positions = positions.reshape(2, 3)
+2026-11-13T10:38:03.6173621Z                         offsets = offsets.reshape(2, 3)
+2026-11-13T10:38:03.6173785Z                         query = query.reshape(2, 3, 3, 8)
+2026-11-13T10:38:03.6173945Z                         key = key.reshape(2, 3, 1, 8)
+2026-11-13T10:38:03.6174135Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:03.6174478Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:03.6174763Z                         self.assertEqual(result.shape, value.shape)
+2026-11-13T10:38:03.6175063Z >                       torch.testing.assert_close(
+2026-11-13T10:38:03.6185114Z                             result,
+2026-11-13T10:38:03.6185356Z                             reference_rotation(value, rope, positions + offsets),
+2026-11-13T10:38:03.6185626Z                             rtol=0,
+2026-11-13T10:38:03.6185825Z                             atol=0,
+2026-11-13T10:38:03.6185970Z                         )
+2026-11-13T10:38:03.6186165Z E                       AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6186418Z E                       
+2026-11-13T10:38:03.6186626Z E                       Mismatched elements: 60 / 144 (41.7%)
+2026-11-13T10:38:03.6186939Z E                       Greatest absolute difference: 3.23046875 at index (1, 1, 2, 2)
+2026-11-13T10:38:03.6187300Z E                       Greatest relative difference: 7.15625 at index (1, 0, 2, 0)
+2026-11-13T10:38:03.6187667Z 
+2026-11-13T10:38:03.6187779Z test/registered/unit/layers/test_cpu_rope_offsets.py:130: AssertionError
+2026-11-13T10:38:03.6188084Z _ TestCpuRopeOffsets.test_deepseek_offsets_preserve_native_layouts (neox=True, dtype=torch.bfloat16) _
+2026-11-13T10:38:03.6188476Z 
+2026-11-13T10:38:03.6188638Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_deepseek_offsets_preserve_native_layouts>
+2026-11-13T10:38:03.6188848Z 
+2026-11-13T10:38:03.6188928Z     def test_deepseek_offsets_preserve_native_layouts(self):
+2026-11-13T10:38:03.6189103Z         for neox in (False, True):
+2026-11-13T10:38:03.6189282Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:03.6189482Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:03.6189663Z                     rope = DeepseekScalingRotaryEmbedding(
+2026-11-13T10:38:03.6189846Z                         8, 4, 64, 10000, neox, 2.0, dtype, device="cpu"
+2026-11-13T10:38:03.6190005Z                     )
+2026-11-13T10:38:03.6190142Z                     positions = torch.tensor([0, 2, 4, 3, 1, 5])
+2026-11-13T10:38:03.6190318Z                     offsets = torch.tensor([2, 1, 0, 1, 3, 4])
+2026-11-13T10:38:03.6190490Z                     query, key = tensors(dtype, tokens=6)
+2026-11-13T10:38:03.6190691Z                     # The NeoX DeepSeek implementation documents batched positions.
+2026-11-13T10:38:03.6190879Z                     if neox:
+2026-11-13T10:38:03.6191023Z                         positions = positions.reshape(2, 3)
+2026-11-13T10:38:03.6191289Z                         offsets = offsets.reshape(2, 3)
+2026-11-13T10:38:03.6191453Z                         query = query.reshape(2, 3, 3, 8)
+2026-11-13T10:38:03.6191612Z                         key = key.reshape(2, 3, 1, 8)
+2026-11-13T10:38:03.6191801Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:03.6192008Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:03.6192202Z                         self.assertEqual(result.shape, value.shape)
+2026-11-13T10:38:03.6192377Z >                       torch.testing.assert_close(
+2026-11-13T10:38:03.6192529Z                             result,
+2026-11-13T10:38:03.6192702Z                             reference_rotation(value, rope, positions + offsets),
+2026-11-13T10:38:03.6192880Z                             rtol=0,
+2026-11-13T10:38:03.6193009Z                             atol=0,
+2026-11-13T10:38:03.6193137Z                         )
+2026-11-13T10:38:03.6193282Z E                       AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6193445Z E                       
+2026-11-13T10:38:03.6193584Z E                       Mismatched elements: 59 / 144 (41.0%)
+2026-11-13T10:38:03.6193781Z E                       Greatest absolute difference: 3.21875 at index (1, 1, 2, 2)
+2026-11-13T10:38:03.6194005Z E                       Greatest relative difference: 6.90625 at index (1, 0, 2, 0)
+2026-11-13T10:38:03.6194145Z 
+2026-11-13T10:38:03.6194247Z test/registered/unit/layers/test_cpu_rope_offsets.py:130: AssertionError
+2026-11-13T10:38:03.6194545Z _ TestCpuRopeOffsets.test_deepseek_offsets_preserve_native_layouts (neox=True, dtype=torch.float32) _
+2026-11-13T10:38:03.6194743Z 
+2026-11-13T10:38:03.6194903Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_deepseek_offsets_preserve_native_layouts>
+2026-11-13T10:38:03.6195112Z 
+2026-11-13T10:38:03.6195191Z     def test_deepseek_offsets_preserve_native_layouts(self):
+2026-11-13T10:38:03.6195363Z         for neox in (False, True):
+2026-11-13T10:38:03.6195539Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:03.6195737Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:03.6195919Z                     rope = DeepseekScalingRotaryEmbedding(
+2026-11-13T10:38:03.6196098Z                         8, 4, 64, 10000, neox, 2.0, dtype, device="cpu"
+2026-11-13T10:38:03.6196255Z                     )
+2026-11-13T10:38:03.6196530Z                     positions = torch.tensor([0, 2, 4, 3, 1, 5])
+2026-11-13T10:38:03.6196708Z                     offsets = torch.tensor([2, 1, 0, 1, 3, 4])
+2026-11-13T10:38:03.6196880Z                     query, key = tensors(dtype, tokens=6)
+2026-11-13T10:38:03.6197079Z                     # The NeoX DeepSeek implementation documents batched positions.
+2026-11-13T10:38:03.6197267Z                     if neox:
+2026-11-13T10:38:03.6197471Z                         positions = positions.reshape(2, 3)
+2026-11-13T10:38:03.6197721Z                         offsets = offsets.reshape(2, 3)
+2026-11-13T10:38:03.6197964Z                         query = query.reshape(2, 3, 3, 8)
+2026-11-13T10:38:03.6198285Z                         key = key.reshape(2, 3, 1, 8)
+2026-11-13T10:38:03.6198496Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:03.6198702Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:03.6198892Z                         self.assertEqual(result.shape, value.shape)
+2026-11-13T10:38:03.6199066Z >                       torch.testing.assert_close(
+2026-11-13T10:38:03.6199214Z                             result,
+2026-11-13T10:38:03.6199385Z                             reference_rotation(value, rope, positions + offsets),
+2026-11-13T10:38:03.6199561Z                             rtol=0,
+2026-11-13T10:38:03.6199689Z                             atol=0,
+2026-11-13T10:38:03.6199816Z                         )
+2026-11-13T10:38:03.6199958Z E                       AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6200211Z E                       
+2026-11-13T10:38:03.6200350Z E                       Mismatched elements: 60 / 144 (41.7%)
+2026-11-13T10:38:03.6200564Z E                       Greatest absolute difference: 3.2298364639282227 at index (1, 1, 2, 2)
+2026-11-13T10:38:03.6200818Z E                       Greatest relative difference: 7.160296440124512 at index (1, 0, 2, 0)
+2026-11-13T10:38:03.6200974Z 
+2026-11-13T10:38:03.6201077Z test/registered/unit/layers/test_cpu_rope_offsets.py:130: AssertionError
+2026-11-13T10:38:03.6201334Z ______ TestCpuRopeOffsets.test_linear_scaling_cache_offsets (neox=False) _______
+2026-11-13T10:38:03.6201493Z 
+2026-11-13T10:38:03.6201631Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_linear_scaling_cache_offsets>
+2026-11-13T10:38:03.6201817Z 
+2026-11-13T10:38:03.6201880Z     def test_linear_scaling_cache_offsets(self):
+2026-11-13T10:38:03.6202034Z         for neox in (False, True):
+2026-11-13T10:38:03.6202178Z             with self.subTest(neox=neox):
+2026-11-13T10:38:03.6202342Z                 rope = LinearScalingRotaryEmbedding(
+2026-11-13T10:38:03.6202522Z                     8, 8, 32, 10000, neox, [1.0, 2.0], torch.float32
+2026-11-13T10:38:03.6202675Z                 )
+2026-11-13T10:38:03.6202800Z                 positions = torch.tensor([0, 7, 31, 63])
+2026-11-13T10:38:03.6202989Z                 offset = torch.tensor(rope.scaling_factor_to_offset[2.0])
+2026-11-13T10:38:03.6203180Z                 query, key = tensors(torch.float32)
+2026-11-13T10:38:03.6203364Z >               actual = rope.forward_cpu(positions, query, key, offset)
+2026-11-13T10:38:03.6203553Z                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:38:03.6203664Z 
+2026-11-13T10:38:03.6203747Z test/registered/unit/layers/test_cpu_rope_offsets.py:102: 
+2026-11-13T10:38:03.6203947Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:38:03.6204168Z python/sglang/srt/layers/rotary_embedding/base.py:454: in forward_cpu
+2026-11-13T10:38:03.6204366Z     return self.forward_native(
+2026-11-13T10:38:03.6204522Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:38:03.6204643Z 
+2026-11-13T10:38:03.6204834Z self = LinearScalingRotaryEmbedding(head_size=8, rotary_dim=8, max_position_embeddings=32, base=10000, is_neox_style=False)
+2026-11-13T10:38:03.6205119Z positions = tensor([ 64,  71,  95, 127])
+2026-11-13T10:38:03.6205428Z query = tensor([[[-1.3000, -1.2684, -1.2368, -1.2053, -1.1737, -1.1421, -1.1105,
+2026-11-13T10:38:03.6205616Z           -1.0789],
+2026-11-13T10:38:03.6205734Z          [-1.0474, -1.015...158,
+2026-11-13T10:38:03.6205855Z            1.4474],
+2026-11-13T10:38:03.6205995Z          [ 1.4789,  1.5105,  1.5421,  1.5737,  1.6053,  1.6368,  1.6684,
+2026-11-13T10:38:03.6206159Z            1.7000]]])
+2026-11-13T10:38:03.6206315Z key = tensor([[[ 1.1000,  1.0355,  0.9710,  0.9065,  0.8419,  0.7774,  0.7129,
+2026-11-13T10:38:03.6206491Z            0.6484]],
+2026-11-13T10:38:03.6206560Z 
+2026-11-13T10:38:03.6206608Z         [[ 0.5839,  0.5...4,
+2026-11-13T10:38:03.6206728Z           -0.3839]],
+2026-11-13T10:38:03.6206798Z 
+2026-11-13T10:38:03.6206876Z         [[-0.4484, -0.5129, -0.5774, -0.6419, -0.7065, -0.7710, -0.8355,
+2026-11-13T10:38:03.6207043Z           -0.9000]]])
+2026-11-13T10:38:03.6207175Z offsets = tensor(32), fused_set_kv_buffer_arg = None
+2026-11-13T10:38:03.6207290Z 
+2026-11-13T10:38:03.6207339Z     def forward_native(
+2026-11-13T10:38:03.6207452Z         self,
+2026-11-13T10:38:03.6207564Z         positions: torch.Tensor,
+2026-11-13T10:38:03.6207697Z         query: torch.Tensor,
+2026-11-13T10:38:03.6207822Z         key: torch.Tensor,
+2026-11-13T10:38:03.6207961Z         offsets: Optional[torch.Tensor] = None,
+2026-11-13T10:38:03.6208162Z         fused_set_kv_buffer_arg: Optional[FusedSetKVBufferArg] = None,
+2026-11-13T10:38:03.6208435Z     ) -> Tuple[torch.Tensor, torch.Tensor]:
+2026-11-13T10:38:03.6208614Z         """A PyTorch-native implementation of forward()."""
+2026-11-13T10:38:03.6208883Z         assert fused_set_kv_buffer_arg is None, (
+2026-11-13T10:38:03.6209086Z             "fused_set_kv_buffer_arg is not supported for native implementation"
+2026-11-13T10:38:03.6209274Z         )
+2026-11-13T10:38:03.6209367Z     
+2026-11-13T10:38:03.6209471Z         if offsets is not None:
+2026-11-13T10:38:03.6209610Z             positions = positions + offsets
+2026-11-13T10:38:03.6209747Z     
+2026-11-13T10:38:03.6209853Z         positions = positions.flatten()
+2026-11-13T10:38:03.6210002Z         num_tokens = positions.shape[0]
+2026-11-13T10:38:03.6210136Z     
+2026-11-13T10:38:03.6210241Z         if hasattr(self, "sin_cos_cache"):
+2026-11-13T10:38:03.6210387Z             cos_sin = self.sin_cos_cache
+2026-11-13T10:38:03.6210522Z         else:
+2026-11-13T10:38:03.6210660Z >           cos_sin = self.cos_sin_cache.index_select(0, positions)
+2026-11-13T10:38:03.6210844Z                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:38:03.6211013Z E           IndexError: index out of range in self
+2026-11-13T10:38:03.6211121Z 
+2026-11-13T10:38:03.6211214Z python/sglang/srt/layers/rotary_embedding/base.py:348: IndexError
+2026-11-13T10:38:03.6211463Z _______ TestCpuRopeOffsets.test_linear_scaling_cache_offsets (neox=True) _______
+2026-11-13T10:38:03.6211626Z 
+2026-11-13T10:38:03.6211768Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_linear_scaling_cache_offsets>
+2026-11-13T10:38:03.6211953Z 
+2026-11-13T10:38:03.6212017Z     def test_linear_scaling_cache_offsets(self):
+2026-11-13T10:38:03.6212171Z         for neox in (False, True):
+2026-11-13T10:38:03.6212311Z             with self.subTest(neox=neox):
+2026-11-13T10:38:03.6212473Z                 rope = LinearScalingRotaryEmbedding(
+2026-11-13T10:38:03.6212651Z                     8, 8, 32, 10000, neox, [1.0, 2.0], torch.float32
+2026-11-13T10:38:03.6212804Z                 )
+2026-11-13T10:38:03.6212929Z                 positions = torch.tensor([0, 7, 31, 63])
+2026-11-13T10:38:03.6213125Z                 offset = torch.tensor(rope.scaling_factor_to_offset[2.0])
+2026-11-13T10:38:03.6213315Z                 query, key = tensors(torch.float32)
+2026-11-13T10:38:03.6213501Z >               actual = rope.forward_cpu(positions, query, key, offset)
+2026-11-13T10:38:03.6213690Z                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:38:03.6213799Z 
+2026-11-13T10:38:03.6213968Z test/registered/unit/layers/test_cpu_rope_offsets.py:102: 
+2026-11-13T10:38:03.6214166Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:38:03.6214383Z python/sglang/srt/layers/rotary_embedding/base.py:454: in forward_cpu
+2026-11-13T10:38:03.6214578Z     return self.forward_native(
+2026-11-13T10:38:03.6214737Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:38:03.6214860Z 
+2026-11-13T10:38:03.6215041Z self = LinearScalingRotaryEmbedding(head_size=8, rotary_dim=8, max_position_embeddings=32, base=10000, is_neox_style=True)
+2026-11-13T10:38:03.6215321Z positions = tensor([ 64,  71,  95, 127])
+2026-11-13T10:38:03.6215507Z query = tensor([[[-1.3000, -1.2684, -1.2368, -1.2053, -1.1737, -1.1421, -1.1105,
+2026-11-13T10:38:03.6215694Z           -1.0789],
+2026-11-13T10:38:03.6215807Z          [-1.0474, -1.015...158,
+2026-11-13T10:38:03.6215930Z            1.4474],
+2026-11-13T10:38:03.6216067Z          [ 1.4789,  1.5105,  1.5421,  1.5737,  1.6053,  1.6368,  1.6684,
+2026-11-13T10:38:03.6216232Z            1.7000]]])
+2026-11-13T10:38:03.6216388Z key = tensor([[[ 1.1000,  1.0355,  0.9710,  0.9065,  0.8419,  0.7774,  0.7129,
+2026-11-13T10:38:03.6216563Z            0.6484]],
+2026-11-13T10:38:03.6216632Z 
+2026-11-13T10:38:03.6216679Z         [[ 0.5839,  0.5...4,
+2026-11-13T10:38:03.6216794Z           -0.3839]],
+2026-11-13T10:38:03.6216861Z 
+2026-11-13T10:38:03.6216940Z         [[-0.4484, -0.5129, -0.5774, -0.6419, -0.7065, -0.7710, -0.8355,
+2026-11-13T10:38:03.6217104Z           -0.9000]]])
+2026-11-13T10:38:03.6217294Z offsets = tensor(32), fused_set_kv_buffer_arg = None
+2026-11-13T10:38:03.6217409Z 
+2026-11-13T10:38:03.6217458Z     def forward_native(
+2026-11-13T10:38:03.6217571Z         self,
+2026-11-13T10:38:03.6217683Z         positions: torch.Tensor,
+2026-11-13T10:38:03.6217815Z         query: torch.Tensor,
+2026-11-13T10:38:03.6217940Z         key: torch.Tensor,
+2026-11-13T10:38:03.6218076Z         offsets: Optional[torch.Tensor] = None,
+2026-11-13T10:38:03.6218380Z         fused_set_kv_buffer_arg: Optional[FusedSetKVBufferArg] = None,
+2026-11-13T10:38:03.6218604Z     ) -> Tuple[torch.Tensor, torch.Tensor]:
+2026-11-13T10:38:03.6218778Z         """A PyTorch-native implementation of forward()."""
+2026-11-13T10:38:03.6218955Z         assert fused_set_kv_buffer_arg is None, (
+2026-11-13T10:38:03.6219155Z             "fused_set_kv_buffer_arg is not supported for native implementation"
+2026-11-13T10:38:03.6219341Z         )
+2026-11-13T10:38:03.6219434Z     
+2026-11-13T10:38:03.6219534Z         if offsets is not None:
+2026-11-13T10:38:03.6219671Z             positions = positions + offsets
+2026-11-13T10:38:03.6219804Z     
+2026-11-13T10:38:03.6219906Z         positions = positions.flatten()
+2026-11-13T10:38:03.6220049Z         num_tokens = positions.shape[0]
+2026-11-13T10:38:03.6220176Z     
+2026-11-13T10:38:03.6220280Z         if hasattr(self, "sin_cos_cache"):
+2026-11-13T10:38:03.6220427Z             cos_sin = self.sin_cos_cache
+2026-11-13T10:38:03.6220560Z         else:
+2026-11-13T10:38:03.6220696Z >           cos_sin = self.cos_sin_cache.index_select(0, positions)
+2026-11-13T10:38:03.6220879Z                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:38:03.6221039Z E           IndexError: index out of range in self
+2026-11-13T10:38:03.6221145Z 
+2026-11-13T10:38:03.6221237Z python/sglang/srt/layers/rotary_embedding/base.py:348: IndexError
+2026-11-13T10:38:03.6221483Z _____ TestCpuRopeOffsets.test_valid_last_cache_position_with_scalar_offset _____
+2026-11-13T10:38:03.6221642Z 
+2026-11-13T10:38:03.6221811Z self = <test_cpu_rope_offsets.TestCpuRopeOffsets testMethod=test_valid_last_cache_position_with_scalar_offset>
+2026-11-13T10:38:03.6222026Z 
+2026-11-13T10:38:03.6222111Z     def test_valid_last_cache_position_with_scalar_offset(self):
+2026-11-13T10:38:03.6222322Z         rope = RotaryEmbedding(8, 8, 64, 10000, True, torch.float32)
+2026-11-13T10:38:03.6222505Z         positions = torch.tensor([0, 31])
+2026-11-13T10:38:03.6222742Z         offset = torch.tensor(32)
+2026-11-13T10:38:03.6222894Z         query, key = tensors(torch.float32, tokens=2)
+2026-11-13T10:38:03.6223088Z >       actual = rope.forward_cpu(positions, query, key, offset)
+2026-11-13T10:38:03.6223295Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:38:03.6223399Z 
+2026-11-13T10:38:03.6223482Z test/registered/unit/layers/test_cpu_rope_offsets.py:84: 
+2026-11-13T10:38:03.6223678Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:38:03.6223895Z python/sglang/srt/layers/rotary_embedding/base.py:454: in forward_cpu
+2026-11-13T10:38:03.6224091Z     return self.forward_native(
+2026-11-13T10:38:03.6224246Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-11-13T10:38:03.6224368Z 
+2026-11-13T10:38:03.6224523Z self = RotaryEmbedding(head_size=8, rotary_dim=8, max_position_embeddings=64, base=10000, is_neox_style=True)
+2026-11-13T10:38:03.6224775Z positions = tensor([64, 95])
+2026-11-13T10:38:03.6224952Z query = tensor([[[-1.3000, -1.2362, -1.1723, -1.1085, -1.0447, -0.9809, -0.9170,
+2026-11-13T10:38:03.6225139Z           -0.8532],
+2026-11-13T10:38:03.6225250Z          [-0.7894, -0.725...255,
+2026-11-13T10:38:03.6225371Z            1.1894],
+2026-11-13T10:38:03.6225506Z          [ 1.2532,  1.3170,  1.3809,  1.4447,  1.5085,  1.5723,  1.6362,
+2026-11-13T10:38:03.6225666Z            1.7000]]])
+2026-11-13T10:38:03.6225819Z key = tensor([[[ 1.1000,  0.9667,  0.8333,  0.7000,  0.5667,  0.4333,  0.3000,
+2026-11-13T10:38:03.6225994Z            0.1667]],
+2026-11-13T10:38:03.6226061Z 
+2026-11-13T10:38:03.6226218Z         [[ 0.0333, -0.1000, -0.2333, -0.3667, -0.5000, -0.6333, -0.7667,
+2026-11-13T10:38:03.6226384Z           -0.9000]]])
+2026-11-13T10:38:03.6226517Z offsets = tensor(32), fused_set_kv_buffer_arg = None
+2026-11-13T10:38:03.6226629Z 
+2026-11-13T10:38:03.6226679Z     def forward_native(
+2026-11-13T10:38:03.6226789Z         self,
+2026-11-13T10:38:03.6226900Z         positions: torch.Tensor,
+2026-11-13T10:38:03.6227033Z         query: torch.Tensor,
+2026-11-13T10:38:03.6227156Z         key: torch.Tensor,
+2026-11-13T10:38:03.6227291Z         offsets: Optional[torch.Tensor] = None,
+2026-11-13T10:38:03.6227485Z         fused_set_kv_buffer_arg: Optional[FusedSetKVBufferArg] = None,
+2026-11-13T10:38:03.6227677Z     ) -> Tuple[torch.Tensor, torch.Tensor]:
+2026-11-13T10:38:03.6227846Z         """A PyTorch-native implementation of forward()."""
+2026-11-13T10:38:03.6228023Z         assert fused_set_kv_buffer_arg is None, (
+2026-11-13T10:38:03.6228294Z             "fused_set_kv_buffer_arg is not supported for native implementation"
+2026-11-13T10:38:03.6228479Z         )
+2026-11-13T10:38:03.6228571Z     
+2026-11-13T10:38:03.6228670Z         if offsets is not None:
+2026-11-13T10:38:03.6228808Z             positions = positions + offsets
+2026-11-13T10:38:03.6228943Z     
+2026-11-13T10:38:03.6229052Z         positions = positions.flatten()
+2026-11-13T10:38:03.6229200Z         num_tokens = positions.shape[0]
+2026-11-13T10:38:03.6229332Z     
+2026-11-13T10:38:03.6229436Z         if hasattr(self, "sin_cos_cache"):
+2026-11-13T10:38:03.6229580Z             cos_sin = self.sin_cos_cache
+2026-11-13T10:38:03.6229713Z         else:
+2026-11-13T10:38:03.6229848Z >           cos_sin = self.cos_sin_cache.index_select(0, positions)
+2026-11-13T10:38:03.6230030Z                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-13T10:38:03.6230192Z E           IndexError: index out of range in self
+2026-11-13T10:38:03.6230300Z 
+2026-11-13T10:38:03.6230394Z python/sglang/srt/layers/rotary_embedding/base.py:348: IndexError
+2026-11-13T10:38:03.6230609Z =========================== short test summary info ============================
+2026-11-13T10:38:03.6231104Z FAILED test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_attention_outputs_and_input_gradients - AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6231413Z 
+2026-11-13T10:38:03.6231470Z Mismatched elements: 12 / 12 (100.0%)
+2026-11-13T10:38:03.6231743Z Greatest absolute difference: 0.05126445434054416 at index (0, 3, 1)
+2026-11-13T10:38:03.6231965Z Greatest relative difference: 0.5467066818272756 at index (0, 3, 0)
+2026-11-13T10:38:03.6232436Z SUBFAILED(neox=False, dtype=torch.float16) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_base_vector_offsets_match_selected_rotations - AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6232817Z 
+2026-11-13T10:38:03.6232870Z Mismatched elements: 36 / 96 (37.5%)
+2026-11-13T10:38:03.6233032Z Greatest absolute difference: 4.1875 at index (3, 2, 0)
+2026-11-13T10:38:03.6233228Z Greatest relative difference: 4.93359375 at index (3, 0, 1)
+2026-11-13T10:38:03.6233683Z SUBFAILED(neox=False, dtype=torch.bfloat16) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_base_vector_offsets_match_selected_rotations - AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6234058Z 
+2026-11-13T10:38:03.6234110Z Mismatched elements: 36 / 96 (37.5%)
+2026-11-13T10:38:03.6234270Z Greatest absolute difference: 4.1875 at index (3, 2, 0)
+2026-11-13T10:38:03.6234454Z Greatest relative difference: 5.25 at index (3, 0, 1)
+2026-11-13T10:38:03.6234899Z SUBFAILED(neox=False, dtype=torch.float32) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_base_vector_offsets_match_selected_rotations - AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6235271Z 
+2026-11-13T10:38:03.6235324Z Mismatched elements: 36 / 96 (37.5%)
+2026-11-13T10:38:03.6235576Z Greatest absolute difference: 4.184812545776367 at index (3, 2, 0)
+2026-11-13T10:38:03.6235797Z Greatest relative difference: 4.915424823760986 at index (3, 0, 1)
+2026-11-13T10:38:03.6236258Z SUBFAILED(neox=True, dtype=torch.float16) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_base_vector_offsets_match_selected_rotations - AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6236636Z 
+2026-11-13T10:38:03.6236686Z Mismatched elements: 36 / 96 (37.5%)
+2026-11-13T10:38:03.6236852Z Greatest absolute difference: 4.234375 at index (3, 2, 0)
+2026-11-13T10:38:03.6237045Z Greatest relative difference: 6.3046875 at index (3, 0, 2)
+2026-11-13T10:38:03.6237492Z SUBFAILED(neox=True, dtype=torch.bfloat16) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_base_vector_offsets_match_selected_rotations - AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6237863Z 
+2026-11-13T10:38:03.6237916Z Mismatched elements: 35 / 96 (36.5%)
+2026-11-13T10:38:03.6238075Z Greatest absolute difference: 4.25 at index (3, 2, 0)
+2026-11-13T10:38:03.6238332Z Greatest relative difference: 6.71875 at index (3, 0, 2)
+2026-11-13T10:38:03.6238776Z SUBFAILED(neox=True, dtype=torch.float32) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_base_vector_offsets_match_selected_rotations - AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6239150Z 
+2026-11-13T10:38:03.6239204Z Mismatched elements: 36 / 96 (37.5%)
+2026-11-13T10:38:03.6239376Z Greatest absolute difference: 4.234949111938477 at index (3, 2, 0)
+2026-11-13T10:38:03.6239594Z Greatest relative difference: 6.296871185302734 at index (3, 0, 2)
+2026-11-13T10:38:03.6240047Z SUBFAILED(neox=False, dtype=torch.float16) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_deepseek_offsets_preserve_native_layouts - AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6240416Z 
+2026-11-13T10:38:03.6240470Z Mismatched elements: 60 / 144 (41.7%)
+2026-11-13T10:38:03.6240640Z Greatest absolute difference: 3.19921875 at index (4, 2, 1)
+2026-11-13T10:38:03.6240837Z Greatest relative difference: 8.6328125 at index (3, 2, 0)
+2026-11-13T10:38:03.6241283Z SUBFAILED(neox=False, dtype=torch.bfloat16) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_deepseek_offsets_preserve_native_layouts - AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6241731Z 
+2026-11-13T10:38:03.6241785Z Mismatched elements: 60 / 144 (41.7%)
+2026-11-13T10:38:03.6241950Z Greatest absolute difference: 3.203125 at index (4, 2, 1)
+2026-11-13T10:38:03.6242137Z Greatest relative difference: 8.625 at index (3, 2, 0)
+2026-11-13T10:38:03.6242574Z SUBFAILED(neox=False, dtype=torch.float32) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_deepseek_offsets_preserve_native_layouts - AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6242942Z 
+2026-11-13T10:38:03.6242993Z Mismatched elements: 60 / 144 (41.7%)
+2026-11-13T10:38:03.6243169Z Greatest absolute difference: 3.19826078414917 at index (4, 2, 1)
+2026-11-13T10:38:03.6243385Z Greatest relative difference: 8.675763130187988 at index (3, 2, 0)
+2026-11-13T10:38:03.6243835Z SUBFAILED(neox=True, dtype=torch.float16) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_deepseek_offsets_preserve_native_layouts - AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6244205Z 
+2026-11-13T10:38:03.6244257Z Mismatched elements: 60 / 144 (41.7%)
+2026-11-13T10:38:03.6244430Z Greatest absolute difference: 3.23046875 at index (1, 1, 2, 2)
+2026-11-13T10:38:03.6244633Z Greatest relative difference: 7.15625 at index (1, 0, 2, 0)
+2026-11-13T10:38:03.6245078Z SUBFAILED(neox=True, dtype=torch.bfloat16) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_deepseek_offsets_preserve_native_layouts - AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6245447Z 
+2026-11-13T10:38:03.6245500Z Mismatched elements: 59 / 144 (41.0%)
+2026-11-13T10:38:03.6245742Z Greatest absolute difference: 3.21875 at index (1, 1, 2, 2)
+2026-11-13T10:38:03.6245941Z Greatest relative difference: 6.90625 at index (1, 0, 2, 0)
+2026-11-13T10:38:03.6246383Z SUBFAILED(neox=True, dtype=torch.float32) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_deepseek_offsets_preserve_native_layouts - AssertionError: Tensor-likes are not equal!
+2026-11-13T10:38:03.6246752Z 
+2026-11-13T10:38:03.6246803Z Mismatched elements: 60 / 144 (41.7%)
+2026-11-13T10:38:03.6246988Z Greatest absolute difference: 3.2298364639282227 at index (1, 1, 2, 2)
+2026-11-13T10:38:03.6247217Z Greatest relative difference: 7.160296440124512 at index (1, 0, 2, 0)
+2026-11-13T10:38:03.6247615Z SUBFAILED(neox=False) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_linear_scaling_cache_offsets - IndexError: index out of range in self
+2026-11-13T10:38:03.6248245Z SUBFAILED(neox=True) test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_linear_scaling_cache_offsets - IndexError: index out of range in self
+2026-11-13T10:38:03.6248811Z FAILED test/registered/unit/layers/test_cpu_rope_offsets.py::TestCpuRopeOffsets::test_valid_last_cache_position_with_scalar_offset - IndexError: index out of range in self
+2026-11-13T10:38:03.6249184Z 16 failed, 5 passed, 4 subtests passed in 4.08s
+2026-11-13T10:38:03.6296354Z Confirmed original CPU offset failures: ['test_attention_outputs_and_input_gradients', 'test_base_vector_offsets_match_selected_rotations', 'test_deepseek_offsets_preserve_native_layouts', 'test_linear_scaling_cache_offsets', 'test_valid_last_cache_position_with_scalar_offset']
+2026-11-13T10:38:03.6350757Z ##[group]Run git restore --source=HEAD -- python/sglang/srt/layers/rotary_embedding/base.py python/sglang/srt/layers/rotary_embedding/rope_variant.py
+2026-11-13T10:38:03.6351289Z [36;1mgit restore --source=HEAD -- python/sglang/srt/layers/rotary_embedding/base.py python/sglang/srt/layers/rotary_embedding/rope_variant.py[0m
+2026-11-13T10:38:03.6367521Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:38:03.6367652Z env:
+2026-11-13T10:38:03.6367761Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:38:03.6367893Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:38:03.6368033Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:38:03.6368153Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:38:03.6368405Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:38:03.6368562Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:38:03.6368890Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:38:03.6369109Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:38:03.6369329Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:38:03.6369530Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:38:03.6369732Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:38:03.6369904Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:38:03.6370024Z ##[endgroup]
+2026-11-13T10:38:03.6462955Z ##[group]Run set +e
+2026-11-13T10:38:03.6463088Z [36;1mset +e[0m
+2026-11-13T10:38:03.6463515Z [36;1mpython -m pre_commit run --files python/sglang/srt/layers/rotary_embedding/base.py python/sglang/srt/layers/rotary_embedding/rope_variant.py test/registered/unit/layers/test_cpu_rope_offsets.py > sglang-lint.log 2>&1[0m
+2026-11-13T10:38:03.6463973Z [36;1mresult=$?[0m
+2026-11-13T10:38:03.6464089Z [36;1mset -e[0m
+2026-11-13T10:38:03.6464198Z [36;1mcat sglang-lint.log[0m
+2026-11-13T10:38:03.6464336Z [36;1mgit diff > sglang-format.patch[0m
+2026-11-13T10:38:03.6464486Z [36;1mcat sglang-format.patch[0m
+2026-11-13T10:38:03.6464621Z [36;1mpython - <<'PY'[0m
+2026-11-13T10:38:03.6464747Z [36;1mfrom pathlib import Path[0m
+2026-11-13T10:38:03.6464887Z [36;1mprint("BEGIN_FORMATTED_TEST")[0m
+2026-11-13T10:38:03.6465104Z [36;1mprint(Path("test/registered/unit/layers/test_cpu_rope_offsets.py").read_text())[0m
+2026-11-13T10:38:03.6465330Z [36;1mprint("END_FORMATTED_TEST")[0m
+2026-11-13T10:38:03.6465470Z [36;1mPY[0m
+2026-11-13T10:38:03.6465580Z [36;1mtest "$result" -eq 0[0m
+2026-11-13T10:38:03.6465707Z [36;1mgit diff --check[0m
+2026-11-13T10:38:03.6479991Z shell: /usr/bin/bash -e {0}
+2026-11-13T10:38:03.6480114Z env:
+2026-11-13T10:38:03.6480218Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:38:03.6480346Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:38:03.6480483Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:38:03.6480605Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:38:03.6480717Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:38:03.6480871Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:38:03.6481094Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:38:03.6481313Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:38:03.6481513Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:38:03.6481709Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:38:03.6481909Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:38:03.6482082Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:38:03.6482228Z ##[endgroup]
+2026-11-13T10:38:34.1036396Z [INFO] Initializing environment for https://github.com/pre-commit/pre-commit-hooks.
+2026-11-13T10:38:34.1036887Z [INFO] Initializing environment for https://github.com/PyCQA/isort.
+2026-11-13T10:38:34.1037319Z [INFO] Initializing environment for https://github.com/astral-sh/ruff-pre-commit.
+2026-11-13T10:38:34.1037978Z [INFO] Initializing environment for https://github.com/codespell-project/codespell.
+2026-11-13T10:38:34.1038624Z [INFO] Initializing environment for https://github.com/pre-commit/mirrors-clang-format.
+2026-11-13T10:38:34.1039052Z [INFO] Initializing environment for https://github.com/kynan/nbstripout.
+2026-11-13T10:38:34.1039453Z [INFO] Initializing environment for https://github.com/lycheeverse/lychee.git.
+2026-11-13T10:38:34.1039866Z [INFO] Installing environment for https://github.com/pre-commit/pre-commit-hooks.
+2026-11-13T10:38:34.1040245Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:38:34.1040507Z [INFO] This may take a few minutes...
+2026-11-13T10:38:34.1040791Z [INFO] Installing environment for https://github.com/PyCQA/isort.
+2026-11-13T10:38:34.1041079Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:38:34.1041253Z [INFO] This may take a few minutes...
+2026-11-13T10:38:34.1041461Z [INFO] Installing environment for https://github.com/astral-sh/ruff-pre-commit.
+2026-11-13T10:38:34.1041915Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:38:34.1042080Z [INFO] This may take a few minutes...
+2026-11-13T10:38:34.1042283Z [INFO] Installing environment for https://github.com/codespell-project/codespell.
+2026-11-13T10:38:34.1042516Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:38:34.1042680Z [INFO] This may take a few minutes...
+2026-11-13T10:38:34.1043056Z [INFO] Installing environment for https://github.com/pre-commit/mirrors-clang-format.
+2026-11-13T10:38:34.1043293Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:38:34.1043459Z [INFO] This may take a few minutes...
+2026-11-13T10:38:34.1043645Z [INFO] Installing environment for https://github.com/kynan/nbstripout.
+2026-11-13T10:38:34.1043859Z [INFO] Once installed this environment will be reused.
+2026-11-13T10:38:34.1044025Z [INFO] This may take a few minutes...
+2026-11-13T10:38:34.1044264Z check for broken symlinks...............................................................(no files to check)Skipped
+2026-11-13T10:38:34.1044590Z detect destroyed symlinks...................................................................................Passed
+2026-11-13T10:38:34.1044912Z trim trailing whitespace....................................................................................Passed
+2026-11-13T10:38:34.1045214Z fix end of files............................................................................................Passed
+2026-11-13T10:38:34.1045505Z check yaml..............................................................................(no files to check)Skipped
+2026-11-13T10:38:34.1045786Z check toml..............................................................................(no files to check)Skipped
+2026-11-13T10:38:34.1046070Z check python ast............................................................................................Passed
+2026-11-13T10:38:34.1046363Z check for added large files.................................................................................Passed
+2026-11-13T10:38:34.1046674Z check for merge conflicts...................................................................................Passed
+2026-11-13T10:38:34.1047002Z check that scripts with shebangs are executable.............................................................Passed
+2026-11-13T10:38:34.1047319Z detect private key..........................................................................................Passed
+2026-11-13T10:38:34.1047615Z debug statements (python)...................................................................................Passed
+2026-11-13T10:38:34.1047931Z don't commit to branch......................................................................................Passed
+2026-11-13T10:38:34.1048354Z isort.......................................................................................................Passed
+2026-11-13T10:38:34.1048636Z ruff (legacy alias).........................................................................................Passed
+2026-11-13T10:38:34.1048922Z ruff format.................................................................................................Passed
+2026-11-13T10:38:34.1049213Z codespell...................................................................................................Passed
+2026-11-13T10:38:34.1049510Z clang-format............................................................................(no files to check)Skipped
+2026-11-13T10:38:34.1049808Z nbstripout..............................................................................(no files to check)Skipped
+2026-11-13T10:38:34.1050132Z forbid test/srt/ (use test/registered/ or test/manual/).................................(no files to check)Skipped
+2026-11-13T10:38:34.1050462Z forbid docs_new/ (renamed to docs/).....................................................(no files to check)Skipped
+2026-11-13T10:38:34.1050786Z check chinese characters in multimodal_gen..............................................(no files to check)Skipped
+2026-11-13T10:38:34.1051217Z sort CI_PERMISSIONS.json................................................................(no files to check)Skipped
+2026-11-13T10:38:34.1051549Z sort Cookbook vendor groups in docs/docs.json...........................................(no files to check)Skipped
+2026-11-13T10:38:34.1051883Z check for duplicate workflow job names..................................................(no files to check)Skipped
+2026-11-13T10:38:34.1052308Z check opt-in CI tiers match the workflows that gate on them.............................(no files to check)Skipped
+2026-11-13T10:38:34.1052653Z check rust-ext cache key prefix defaults match..........................................(no files to check)Skipped
+2026-11-13T10:38:34.1053025Z check Dockerfile sgl-deep-gemm/sgl-deep-ep versions match python/pyproject.toml.........(no files to check)Skipped
+2026-11-13T10:38:34.1053390Z reject bare pytest.main calls in __main__ blocks............................................................Passed
+2026-11-13T10:38:34.1053750Z regenerate python/sglang/cli/_commands/ from the Cookbook configs.......................(no files to check)Skipped
+2026-11-13T10:38:34.1054102Z validate registered test CI registries......................................................................Passed
+2026-11-13T10:38:34.1054472Z reject CI-registered tests inside the sglang package........................................................Passed
+2026-11-13T10:38:34.1054832Z reject importing a name through a module that only re-imports it............................................Passed
+2026-11-13T10:38:34.1055195Z reject srt domain imports in sglang.srt.utils and sglang.utils imports in the runtime.......................Passed
+2026-11-13T10:38:34.1055542Z rustfmt sgl-model-gateway (nightly).....................................................(no files to check)Skipped
+2026-11-13T10:38:34.1055863Z rustfmt sgl-router......................................................................(no files to check)Skipped
+2026-11-13T10:38:34.1056181Z clippy rust/ workspace (auto-fix).......................................................(no files to check)Skipped
+2026-11-13T10:38:34.1056495Z rustfmt rust/ workspace.................................................................(no files to check)Skipped
+2026-11-13T10:38:34.1309232Z BEGIN_FORMATTED_TEST
+2026-11-13T10:38:34.1309644Z """CPU RoPE delegation must apply each position offset exactly once."""
+2026-11-13T10:38:34.1309901Z 
+2026-11-13T10:38:34.1309984Z import unittest
+2026-11-13T10:38:34.1310200Z from contextlib import ExitStack
+2026-11-13T10:38:34.1310435Z from unittest.mock import patch
+2026-11-13T10:38:34.1310580Z 
+2026-11-13T10:38:34.1310651Z import torch
+2026-11-13T10:38:34.1310837Z import torch.nn.functional as F
+2026-11-13T10:38:34.1310978Z 
+2026-11-13T10:38:34.1311146Z from sglang.srt.layers.rotary_embedding import base, rope_variant
+2026-11-13T10:38:34.1311519Z from sglang.srt.layers.rotary_embedding.base import (
+2026-11-13T10:38:34.1311832Z     LinearScalingRotaryEmbedding,
+2026-11-13T10:38:34.1312068Z     RotaryEmbedding,
+2026-11-13T10:38:34.1312257Z )
+2026-11-13T10:38:34.1312494Z from sglang.srt.layers.rotary_embedding.rope_variant import (
+2026-11-13T10:38:34.1312816Z     DeepseekScalingRotaryEmbedding,
+2026-11-13T10:38:34.1313040Z )
+2026-11-13T10:38:34.1313256Z from sglang.test.ci.ci_register import register_cpu_ci
+2026-11-13T10:38:34.1313457Z 
+2026-11-13T10:38:34.1313575Z register_cpu_ci(est_time=5, suite="base-a-test-cpu")
+2026-11-13T10:38:34.1313767Z 
+2026-11-13T10:38:34.1313771Z 
+2026-11-13T10:38:34.1313875Z def reference_rotation(x, rope, indices):
+2026-11-13T10:38:34.1314226Z     """Build each rotated coordinate independently from the selected cache row."""
+2026-11-13T10:38:34.1314594Z     cache = rope.cos_sin_cache[indices].to(x.dtype)
+2026-11-13T10:38:34.1314869Z     cos, sin = cache.chunk(2, dim=-1)
+2026-11-13T10:38:34.1316384Z     cos, sin = cos.unsqueeze(-2), sin.unsqueeze(-2)
+2026-11-13T10:38:34.1316885Z     half = rope.rotary_dim // 2
+2026-11-13T10:38:34.1317107Z     if rope.is_neox_style:
+2026-11-13T10:38:34.1317369Z         left, right = x[..., :half], x[..., half : rope.rotary_dim]
+2026-11-13T10:38:34.1317727Z     else:
+2026-11-13T10:38:34.1317983Z         left, right = x[..., : rope.rotary_dim : 2], x[..., 1 : rope.rotary_dim : 2]
+2026-11-13T10:38:34.1318467Z     rotated_left = left * cos - right * sin
+2026-11-13T10:38:34.1318735Z     rotated_right = right * cos + left * sin
+2026-11-13T10:38:34.1318981Z     if rope.is_neox_style:
+2026-11-13T10:38:34.1319368Z         rotated = torch.cat((rotated_left, rotated_right), dim=-1)
+2026-11-13T10:38:34.1319655Z     else:
+2026-11-13T10:38:34.1319939Z         rotated = torch.stack((rotated_left, rotated_right), dim=-1).flatten(-2)
+2026-11-13T10:38:34.1320334Z     return torch.cat((rotated, x[..., rope.rotary_dim :]), dim=-1)
+2026-11-13T10:38:34.1320557Z 
+2026-11-13T10:38:34.1320562Z 
+2026-11-13T10:38:34.1320702Z def tensors(dtype, tokens=4, heads=3, head_size=8):
+2026-11-13T10:38:34.1321068Z     query = torch.linspace(-1.3, 1.7, tokens * heads * head_size, dtype=dtype)
+2026-11-13T10:38:34.1321465Z     key = torch.linspace(1.1, -0.9, tokens * head_size, dtype=dtype)
+2026-11-13T10:38:34.1321873Z     return query.reshape(tokens, heads, head_size), key.reshape(tokens, 1, head_size)
+2026-11-13T10:38:34.1322156Z 
+2026-11-13T10:38:34.1322160Z 
+2026-11-13T10:38:34.1322274Z class TestCpuRopeOffsets(unittest.TestCase):
+2026-11-13T10:38:34.1322533Z     def setUp(self):
+2026-11-13T10:38:34.1322737Z         self.backends = ExitStack()
+2026-11-13T10:38:34.1322993Z         self.addCleanup(self.backends.close)
+2026-11-13T10:38:34.1323338Z         # Select the genuine PyTorch CPU fallback, even on an AMX-capable host.
+2026-11-13T10:38:34.1323717Z         # No operator or tensor implementation is replaced.
+2026-11-13T10:38:34.1324122Z         self.backends.enter_context(patch.object(base, "_is_cpu_amx_available", False))
+2026-11-13T10:38:34.1324501Z         self.backends.enter_context(
+2026-11-13T10:38:34.1324804Z             patch.object(rope_variant, "_is_cpu_amx_available", False)
+2026-11-13T10:38:34.1325430Z         )
+2026-11-13T10:38:34.1325633Z 
+2026-11-13T10:38:34.1325810Z     def test_base_vector_offsets_match_selected_rotations(self):
+2026-11-13T10:38:34.1326210Z         for neox in (False, True):
+2026-11-13T10:38:34.1326692Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:34.1327142Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:34.1327630Z                     rope = RotaryEmbedding(8, 4, 64, 10000, neox, dtype)
+2026-11-13T10:38:34.1328059Z                     positions = torch.tensor([1, 4, 7, 15])
+2026-11-13T10:38:34.1328557Z                     offsets = torch.tensor([2, 1, 0, 3])
+2026-11-13T10:38:34.1328965Z                     query, key = tensors(dtype)
+2026-11-13T10:38:34.1329317Z                     before = [
+2026-11-13T10:38:34.1329735Z                         tensor.clone() for tensor in (query, key, positions, offsets)
+2026-11-13T10:38:34.1340237Z                     ]
+2026-11-13T10:38:34.1340510Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:34.1340851Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:34.1341207Z                         expected = reference_rotation(value, rope, positions + offsets)
+2026-11-13T10:38:34.1341594Z                         torch.testing.assert_close(result, expected, rtol=0, atol=0)
+2026-11-13T10:38:34.1341895Z                     for tensor, original in zip(
+2026-11-13T10:38:34.1342077Z                         (query, key, positions, offsets), before
+2026-11-13T10:38:34.1342246Z                     ):
+2026-11-13T10:38:34.1342415Z                         torch.testing.assert_close(tensor, original, rtol=0, atol=0)
+2026-11-13T10:38:34.1342568Z 
+2026-11-13T10:38:34.1342654Z     def test_valid_last_cache_position_with_scalar_offset(self):
+2026-11-13T10:38:34.1342871Z         rope = RotaryEmbedding(8, 8, 64, 10000, True, torch.float32)
+2026-11-13T10:38:34.1343205Z         positions = torch.tensor([0, 31])
+2026-11-13T10:38:34.1343440Z         offset = torch.tensor(32)
+2026-11-13T10:38:34.1343680Z         query, key = tensors(torch.float32, tokens=2)
+2026-11-13T10:38:34.1343978Z         actual = rope.forward_cpu(positions, query, key, offset)
+2026-11-13T10:38:34.1344284Z         for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:34.1344546Z             torch.testing.assert_close(
+2026-11-13T10:38:34.1344766Z                 result,
+2026-11-13T10:38:34.1345112Z                 reference_rotation(value, rope, positions + offset),
+2026-11-13T10:38:34.1345379Z                 rtol=0,
+2026-11-13T10:38:34.1345560Z                 atol=0,
+2026-11-13T10:38:34.1345733Z             )
+2026-11-13T10:38:34.1345829Z 
+2026-11-13T10:38:34.1345932Z     def test_linear_scaling_cache_offsets(self):
+2026-11-13T10:38:34.1346188Z         for neox in (False, True):
+2026-11-13T10:38:34.1346414Z             with self.subTest(neox=neox):
+2026-11-13T10:38:34.1346816Z                 rope = LinearScalingRotaryEmbedding(
+2026-11-13T10:38:34.1347099Z                     8, 8, 32, 10000, neox, [1.0, 2.0], torch.float32
+2026-11-13T10:38:34.1347346Z                 )
+2026-11-13T10:38:34.1347548Z                 positions = torch.tensor([0, 7, 31, 63])
+2026-11-13T10:38:34.1347913Z                 offset = torch.tensor(rope.scaling_factor_to_offset[2.0])
+2026-11-13T10:38:34.1348350Z                 query, key = tensors(torch.float32)
+2026-11-13T10:38:34.1348662Z                 actual = rope.forward_cpu(positions, query, key, offset)
+2026-11-13T10:38:34.1348988Z                 for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:34.1349275Z                     torch.testing.assert_close(
+2026-11-13T10:38:34.1349520Z                         result,
+2026-11-13T10:38:34.1349787Z                         reference_rotation(value, rope, positions + offset),
+2026-11-13T10:38:34.1350081Z                         rtol=0,
+2026-11-13T10:38:34.1350284Z                         atol=0,
+2026-11-13T10:38:34.1350479Z                     )
+2026-11-13T10:38:34.1350589Z 
+2026-11-13T10:38:34.1350721Z     def test_deepseek_offsets_preserve_native_layouts(self):
+2026-11-13T10:38:34.1351005Z         for neox in (False, True):
+2026-11-13T10:38:34.1351283Z             for dtype in (torch.float16, torch.bfloat16, torch.float32):
+2026-11-13T10:38:34.1351601Z                 with self.subTest(neox=neox, dtype=dtype):
+2026-11-13T10:38:34.1351892Z                     rope = DeepseekScalingRotaryEmbedding(
+2026-11-13T10:38:34.1352193Z                         8, 4, 64, 10000, neox, 2.0, dtype, device="cpu"
+2026-11-13T10:38:34.1352445Z                     )
+2026-11-13T10:38:34.1352663Z                     positions = torch.tensor([0, 2, 4, 3, 1, 5])
+2026-11-13T10:38:34.1352948Z                     offsets = torch.tensor([2, 1, 0, 1, 3, 4])
+2026-11-13T10:38:34.1353221Z                     query, key = tensors(dtype, tokens=6)
+2026-11-13T10:38:34.1353547Z                     # The NeoX DeepSeek implementation documents batched positions.
+2026-11-13T10:38:34.1353853Z                     if neox:
+2026-11-13T10:38:34.1354082Z                         positions = positions.reshape(2, 3)
+2026-11-13T10:38:34.1354359Z                         offsets = offsets.reshape(2, 3)
+2026-11-13T10:38:34.1354627Z                         query = query.reshape(2, 3, 3, 8)
+2026-11-13T10:38:34.1354888Z                         key = key.reshape(2, 3, 1, 8)
+2026-11-13T10:38:34.1355193Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:34.1355521Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:34.1355832Z                         self.assertEqual(result.shape, value.shape)
+2026-11-13T10:38:34.1356116Z                         torch.testing.assert_close(
+2026-11-13T10:38:34.1356368Z                             result,
+2026-11-13T10:38:34.1356648Z                             reference_rotation(value, rope, positions + offsets),
+2026-11-13T10:38:34.1357091Z                             rtol=0,
+2026-11-13T10:38:34.1357302Z                             atol=0,
+2026-11-13T10:38:34.1357510Z                         )
+2026-11-13T10:38:34.1357632Z 
+2026-11-13T10:38:34.1357751Z     def test_no_offset_and_zero_offset_controls(self):
+2026-11-13T10:38:34.1358020Z         for neox in (False, True):
+2026-11-13T10:38:34.1358438Z             rope = RotaryEmbedding(8, 4, 64, 10000, neox, torch.float32)
+2026-11-13T10:38:34.1358757Z             positions = torch.tensor([1, 4, 7, 15])
+2026-11-13T10:38:34.1359132Z             query, key = tensors(torch.float32)
+2026-11-13T10:38:34.1359422Z             for offsets in (None, torch.zeros_like(positions)):
+2026-11-13T10:38:34.1359737Z                 with self.subTest(neox=neox, offsets=offsets):
+2026-11-13T10:38:34.1360073Z                     actual = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:34.1360416Z                     for result, value in zip(actual, (query, key)):
+2026-11-13T10:38:34.1360712Z                         torch.testing.assert_close(
+2026-11-13T10:38:34.1360956Z                             result,
+2026-11-13T10:38:34.1361213Z                             reference_rotation(value, rope, positions),
+2026-11-13T10:38:34.1361490Z                             rtol=0,
+2026-11-13T10:38:34.1361704Z                             atol=0,
+2026-11-13T10:38:34.1361912Z                         )
+2026-11-13T10:38:34.1362031Z 
+2026-11-13T10:38:34.1362153Z     def test_attention_outputs_and_input_gradients(self):
+2026-11-13T10:38:34.1362491Z         rope = RotaryEmbedding(8, 4, 64, 10000, True, torch.float64)
+2026-11-13T10:38:34.1362798Z         positions = torch.tensor([1, 4, 7, 15])
+2026-11-13T10:38:34.1363058Z         offsets = torch.tensor([1, 5, 0, 3])
+2026-11-13T10:38:34.1363323Z         query, key = tensors(torch.float64, heads=1)
+2026-11-13T10:38:34.1363585Z         query.requires_grad_()
+2026-11-13T10:38:34.1363799Z         key.requires_grad_()
+2026-11-13T10:38:34.1364067Z         reference_query = query.detach().clone().requires_grad_()
+2026-11-13T10:38:34.1364400Z         reference_key = key.detach().clone().requires_grad_()
+2026-11-13T10:38:34.1364760Z         actual_q, actual_k = rope.forward_cpu(positions, query, key, offsets)
+2026-11-13T10:38:34.1365187Z         expected_q = reference_rotation(reference_query, rope, positions + offsets)
+2026-11-13T10:38:34.1365626Z         expected_k = reference_rotation(reference_key, rope, positions + offsets)
+2026-11-13T10:38:34.1366043Z         values = torch.arange(12, dtype=torch.float64).reshape(1, 4, 3) / 12
+2026-11-13T10:38:34.1366379Z         actual = F.scaled_dot_product_attention(
+2026-11-13T10:38:34.1366686Z             actual_q.transpose(0, 1), actual_k.transpose(0, 1), values
+2026-11-13T10:38:34.1366968Z         )
+2026-11-13T10:38:34.1367159Z         expected = F.scaled_dot_product_attention(
+2026-11-13T10:38:34.1367485Z             expected_q.transpose(0, 1), expected_k.transpose(0, 1), values
+2026-11-13T10:38:34.1367783Z         )
+2026-11-13T10:38:34.1368014Z         torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+2026-11-13T10:38:34.1368428Z         actual.square().sum().backward()
+2026-11-13T10:38:34.1368678Z         expected.square().sum().backward()
+2026-11-13T10:38:34.1369029Z         torch.testing.assert_close(query.grad, reference_query.grad, rtol=0, atol=0)
+2026-11-13T10:38:34.1369477Z         torch.testing.assert_close(key.grad, reference_key.grad, rtol=0, atol=0)
+2026-11-13T10:38:34.1369734Z 
+2026-11-13T10:38:34.1369892Z     def test_unsupported_fused_cache_argument_still_rejected(self):
+2026-11-13T10:38:34.1370253Z         rope = RotaryEmbedding(8, 4, 64, 10000, True, torch.float32)
+2026-11-13T10:38:34.1370557Z         query, key = tensors(torch.float32)
+2026-11-13T10:38:34.1370897Z         with self.assertRaisesRegex(AssertionError, "not supported for cpu"):
+2026-11-13T10:38:34.1371236Z             rope.forward_cpu(
+2026-11-13T10:38:34.1371519Z                 torch.arange(4), query, key, fused_set_kv_buffer_arg=object()
+2026-11-13T10:38:34.1371928Z             )
+2026-11-13T10:38:34.1372024Z 
+2026-11-13T10:38:34.1372032Z 
+2026-11-13T10:38:34.1372112Z if __name__ == "__main__":
+2026-11-13T10:38:34.1372314Z     unittest.main()
+2026-11-13T10:38:34.1372428Z 
+2026-11-13T10:38:34.1372501Z END_FORMATTED_TEST
+2026-11-13T10:38:34.1530421Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-11-13T10:38:34.1530801Z with:
+2026-11-13T10:38:34.1531001Z   name: native-cpu-rope-offsets-evidence
+2026-11-13T10:38:34.1531649Z   path: sglang-install.log
+sglang-environment.txt
+sglang-patched.log
+sglang-patched.xml
+sglang-baseline.log
+sglang-baseline.xml
+sglang-lint.log
+sglang-format.patch
+
+2026-11-13T10:38:34.1532303Z   if-no-files-found: warn
+2026-11-13T10:38:34.1532515Z   compression-level: 6
+2026-11-13T10:38:34.1532709Z   overwrite: false
+2026-11-13T10:38:34.1532903Z   include-hidden-files: false
+2026-11-13T10:38:34.1533119Z   archive: true
+2026-11-13T10:38:34.1533291Z env:
+2026-11-13T10:38:34.1533471Z   OPENBLAS_NUM_THREADS: 1
+2026-11-13T10:38:34.1533689Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-13T10:38:34.1533928Z   SGLANG_USE_CPU_ENGINE: 1
+2026-11-13T10:38:34.1534133Z   HF_HUB_OFFLINE: 1
+2026-11-13T10:38:34.1534317Z   HF_DATASETS_OFFLINE: 1
+2026-11-13T10:38:34.1534597Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:38:34.1534984Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-13T10:38:34.1535359Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:38:34.1535695Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:38:34.1536032Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-13T10:38:34.1536373Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-13T10:38:34.1536667Z   RUSTUP_TOOLCHAIN: 1.92
+2026-11-13T10:38:34.1536869Z ##[endgroup]
+2026-11-13T10:38:34.2564709Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-13T10:38:34.2566255Z The least common ancestor is /home/runner/work/sglang/sglang. This will be the root directory of the artifact
+2026-11-13T10:38:34.2566700Z With the provided path, there will be 8 files uploaded
+2026-11-13T10:38:34.2569691Z Artifact name is valid!
+2026-11-13T10:38:34.2570284Z Root directory input is valid!
+2026-11-13T10:38:34.6047563Z Uploading artifact: native-cpu-rope-offsets-evidence.zip
+2026-11-13T10:38:34.6070874Z Beginning upload of artifact content to blob storage
+2026-11-13T10:38:34.9104495Z Uploaded bytes 14797
+2026-11-13T10:38:34.9685675Z Finished uploading artifact content to blob storage!
+2026-11-13T10:38:34.9686145Z SHA256 digest of uploaded artifact is 201d7e12047876d552473d788848c0b78ce561731eda70f65269790ea63151a5
+2026-11-13T10:38:34.9686554Z Finalizing artifact upload
+2026-11-13T10:38:35.4348660Z Artifact native-cpu-rope-offsets-evidence successfully finalized. Artifact ID 14028932764
+2026-11-13T10:38:35.4349116Z Artifact native-cpu-rope-offsets-evidence has been successfully uploaded! Final size is 14797 bytes. Artifact ID is 14028932764
+2026-11-13T10:38:35.4351223Z Artifact download URL: https://github.com/Afloat16/sglang/actions/runs/43408946377/artifacts/14028932764
+2026-11-13T10:38:35.4503009Z Post job cleanup.
+2026-11-13T10:38:35.5258736Z (node:17348) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-13T10:38:35.5259283Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-13T10:38:35.5366793Z Post job cleanup.
+2026-11-13T10:38:35.5930278Z [command]/usr/bin/git version
+2026-11-13T10:38:35.5963710Z git version 2.56.0
+2026-11-13T10:38:35.5984353Z Temporarily overriding HOME='/home/runner/work/_temp/616fae0c-3235-4c53-8723-bf42a4ad3f7c' before making global git config changes
+2026-11-13T10:38:35.5985027Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-13T10:38:35.5986948Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sglang/sglang
+2026-11-13T10:38:35.6015143Z Removing SSH command configuration
+2026-11-13T10:38:35.6019305Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-13T10:38:35.6051447Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-13T10:38:35.6256982Z Removing HTTP extra header
+2026-11-13T10:38:35.6262018Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-13T10:38:35.6295949Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-13T10:38:35.6523000Z Removing includeIf entries pointing to credentials config files
+2026-11-13T10:38:35.6530070Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-13T10:38:35.6583555Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-13T10:38:35.6940760Z Cleaning up orphan processes
+2026-11-13T10:38:35.7275106Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
